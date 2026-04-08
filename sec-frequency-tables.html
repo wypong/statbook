@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Frequency Tables and Relative Frequency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Statistics">
+<meta property="book:author" content="Wai Yan Pong">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="elementarystatistics" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></h1>
+<p class="byline">Wai Yan Pong</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-organizing-data.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-organizing-data.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-graphs-for-data.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\pgfplotsset{compat=1.18}
+\tcbset{divisionexercisestyle/.append style={lines before break=8}}
+\tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
+\tcbset{imagestyle/.append style={lines before break=3}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-overview.html" class="internal"><span class="codenumber">0</span> <span class="title">What Statistics Is About</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch0-exercises.html" class="internal"><span class="codenumber">0</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-data-types.html" class="internal"><span class="codenumber">1</span> <span class="title">Data Types</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classifying-data.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Classifying Data</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-levels-of-measurement.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Levels of Measurement</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-organizing-data.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Displays</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-frequency-tables.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Frequency Tables and Relative Frequency</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphs-for-data.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Graphs for Displaying Data</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-central-tendency.html" class="internal"><span class="codenumber">3</span> <span class="title">Central Tendency</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mean-median-mode.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Mean, Median, and Mode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-center-from-tables-and-shape.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Center from Frequency Tables and the Shape of a Distribution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-spread-of-data.html" class="internal"><span class="codenumber">4</span> <span class="title">Spread of Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-quartiles-iqr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Quartiles and the Interquartile Range</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-boxplots-outliers.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Five-Number Summary, Boxplots, and Outliers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-variance-sd-zscores.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Variance, Standard Deviation, and z-Scores</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-linear-regression.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Regression</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scatterplots-correlation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Scatterplots and Correlation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regression-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Regression Lines and Prediction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-probability.html" class="internal"><span class="codenumber">6</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-conditional-probability.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Conditional Probability and Independence</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-random-variables.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-random-variables-pmf.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Random Variables, CDFs, Expectation, and Variance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cdf-expected-value.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Properties of Expectation and Variance</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-binomial-distribution.html" class="internal"><span class="codenumber">8</span> <span class="title">Binomial Distributions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bernoulli-binomial.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Bernoulli Trials and Binomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-pdf-cdf.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Binomial Probabilities and the Cumulative Distribution</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-normal-distributions.html" class="internal"><span class="codenumber">9</span> <span class="title">Normal Distributions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-continuous-uniform.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Continuous Random Variables and the Uniform Model</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-distributions.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Normal Distributions and Z-Scores</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-z-alpha-notation.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The z-Alpha Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-probabilities-percentiles.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Normal Probabilities and Percentiles</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-confidence-intervals.html" class="internal"><span class="codenumber">10</span> <span class="title">Confidence Intervals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-hypothesis-testing.html" class="internal"><span class="codenumber">11</span> <span class="title">Hypothesis Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-frequency-tables"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Frequency Tables and Relative Frequency</span>
+</h2>
+<div class="para" id="sec-frequency-tables-2">A <dfn class="terminology">frequency table</dfn> organizes data by listing each value or category together with its <dfn class="terminology">frequency</dfn>, which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the <dfn class="terminology">relative frequency</dfn>. Relative frequency tells us the share of the data in each category.<div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/tbl-commute-frequency.html ./knowl/xref/tbl-wait-time-frequency.html" id="sec-frequency-tables-3">
+\begin{equation*}
+\text{relative frequency} = \frac{\text{frequency}}{\text{total number of observations}}
+\end{equation*}
+</div>
+<div class="para" id="sec-frequency-tables-4">Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to <span class="process-math">\(1\text{,}\)</span> or equivalently to <span class="process-math">\(100\%\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-commute-frequency-table" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How Students Get to Campus.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-commute-frequency-table-2">Suppose a class records how 12 students usually travel to campus: auto, auto, metro, bike, auto, walk, metro, auto, bike, walk, metro, auto. A frequency table for this data is shown in <a href="sec-frequency-tables.html#tbl-commute-frequency" class="xref" data-knowl="./knowl/xref/tbl-commute-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.2: Frequency and relative frequency for commuting to campus">Table 2.1.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-commute-frequency-table-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.1: How Students Get to Campus"><a href="#ex-commute-frequency-table" title="Copy heading and permalink for Example 2.1.1: How Students Get to Campus" aria-label="Copy heading and permalink for Example 2.1.1: How Students Get to Campus">🔗</a></div></article></details><figure class="table table-like" id="tbl-commute-frequency"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Frequency and relative frequency for commuting to campus<div class="autopermalink" data-description="Table 2.1.2: Frequency and relative frequency for commuting to campus"><a href="#tbl-commute-frequency" title="Copy heading and permalink for Table 2.1.2: Frequency and relative frequency for commuting to campus" aria-label="Copy heading and permalink for Table 2.1.2: Frequency and relative frequency for commuting to campus">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Mode of transportation</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Frequency</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Relative frequency</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Auto</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{5}{12}\approx 0.417\)</span> or <span class="process-math">\(41.7\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Metro</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{3}{12}=0.25\)</span> or <span class="process-math">\(25\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Bike</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{2}{12}\approx 0.167\)</span> or <span class="process-math">\(16.7\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines">Walk</td>
+<td class="c m b3 r0 l0 t0 lines">2</td>
+<td class="c m b3 r0 l0 t0 lines">
+<span class="process-math">\(\frac{2}{12}\approx 0.167\)</span> or <span class="process-math">\(16.7\%\)</span>
+</td>
+</tr>
+</table></div></figure><div class="para" id="sec-frequency-tables-7">This table says more than the raw list did. We can immediately see that auto is the most common commuting method, and we can compare categories with either counts or percentages. If the class size changed next semester, the percentages would still make comparison easy.<div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-frequency-tables-8">Sometimes a variable has many possible values, or it is measured on a continuous scale. In that situation a row for every single value would not be very useful. Instead we group nearby values into <dfn class="terminology">class intervals</dfn>. A table built from intervals is called a <dfn class="terminology">grouped frequency table</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-wait-time-grouped" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Customer Wait Times.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-wait-time-grouped-2">A coffee shop records the waiting time, in minutes, for 50 customers during a busy hour. Rather than listing every separate time, the manager groups the data into intervals. The grouped frequency table appears in <a href="sec-frequency-tables.html#tbl-wait-time-frequency" class="xref" data-knowl="./knowl/xref/tbl-wait-time-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.4: Grouped frequency table for customer wait times">Table 2.1.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-wait-time-grouped-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.3: Customer Wait Times"><a href="#ex-wait-time-grouped" title="Copy heading and permalink for Example 2.1.3: Customer Wait Times" aria-label="Copy heading and permalink for Example 2.1.3: Customer Wait Times">🔗</a></div></article></details><figure class="table table-like" id="tbl-wait-time-frequency"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Grouped frequency table for customer wait times<div class="autopermalink" data-description="Table 2.1.4: Grouped frequency table for customer wait times"><a href="#tbl-wait-time-frequency" title="Copy heading and permalink for Table 2.1.4: Grouped frequency table for customer wait times" aria-label="Copy heading and permalink for Table 2.1.4: Grouped frequency table for customer wait times">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Wait time (minutes)</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Frequency</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Relative frequency</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\([0,2)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{6}{50}=0.12\)</span> or <span class="process-math">\(12\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\([2,4)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">14</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{14}{50}=0.28\)</span> or <span class="process-math">\(28\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\([4,6)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">18</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{18}{50}=0.36\)</span> or <span class="process-math">\(36\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\([6,8)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\frac{9}{50}=0.18\)</span> or <span class="process-math">\(18\%\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\([8,10)\)</span></td>
+<td class="c m b3 r0 l0 t0 lines">3</td>
+<td class="c m b3 r0 l0 t0 lines">
+<span class="process-math">\(\frac{3}{50}=0.06\)</span> or <span class="process-math">\(6\%\)</span>
+</td>
+</tr>
+</table></div></figure><div class="para" id="sec-frequency-tables-11">From this table we can see that the most common waiting times fall in the interval from 4 to 6 minutes. We can also say that <span class="process-math">\(36\%\)</span> of the customers waited between 4 and 6 minutes, and only <span class="process-math">\(6\%\)</span> waited between 8 and 10 minutes.<div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-frequency-tables-12">Frequency tables are simple, but they do a lot of work. They help us summarize the data, compare categories, and prepare for the graphs we will make next.<div class="autopermalink" data-description="Paragraph"><a href="#sec-frequency-tables-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 2.1: Frequency Tables and Relative Frequency"><a href="#sec-frequency-tables" title="Copy heading and permalink for Section 2.1: Frequency Tables and Relative Frequency" aria-label="Copy heading and permalink for Section 2.1: Frequency Tables and Relative Frequency">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-organizing-data.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-graphs-for-data.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
