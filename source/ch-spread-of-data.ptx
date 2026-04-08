@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-spread-of-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Spread of Data</title>
+
+  <introduction>
+    <p>A measure of center by itself does not tell the whole story of a data set. Two data sets can have the same mean and the same median, but one can be tightly clustered while the other is all over the place. To describe data well, we need a way to talk about variation as well as center.</p>
+    <p>In this chapter we study several measures of <term>spread<idx><h>summaries</h><h>spread</h></idx></term>. We begin with quartiles and the interquartile range, which focus on the middle part of the data. Then we look at boxplots and outliers. Finally, we study variance, standard deviation, relative standard deviation, and <term>z-score<idx><h>summaries</h><h>z-score</h></idx></term>, which measure spread in a more numerical way.</p>
+  </introduction>
+
+  <section xml:id="sec-quartiles-iqr">
+    <title>Quartiles and the Interquartile Range</title>
+
+    <p><term>Quartiles<idx><h>summaries</h><h>quartiles</h></idx></term> divide an ordered data set into four parts with about the same number of observations in each part. The <term>first quartile<idx><h>summaries</h><h>first quartile</h></idx></term>, written <m>Q_1</m>, is the median of the lower half of the data. The <term>second quartile<idx><h>summaries</h><h>second quartile</h></idx></term> is the overall median, so <m>Q_2</m> is just the median. The <term>third quartile<idx><h>summaries</h><h>third quartile</h></idx></term>, written <m>Q_3</m>, is the median of the upper half of the data.</p>
+
+    <p>In this book we will use the same convention as the lecture notes: if the number of observations is odd, remove the overall median before finding <m>Q_1</m> and <m>Q_3</m>. If the number of observations is even, split the ordered data set into two equal halves and find the median of each half.</p>
+
+    <example xml:id="ex-quartiles-odd">
+      <title>Quartiles for an Odd-Sized Data Set</title>
+      <p>Consider the ordered data set 4, 6, 7, 9, 10, 12, 15, 18, 20. Since there are 9 values, the median is the fifth value, so <m>Q_2=10</m>. After removing the median, the lower half is 4, 6, 7, 9 and the upper half is 12, 15, 18, 20. Therefore</p>
+      <me>
+        Q_1 = \frac{6+7}{2}=6.5
+        \qquad\text{and}\qquad
+        Q_3 = \frac{15+18}{2}=16.5.
+      </me>
+    </example>
+
+    <example xml:id="ex-quartiles-even">
+      <title>Quartiles for an Even-Sized Data Set</title>
+      <p>Now consider the ordered data set 3, 5, 6, 7, 9, 12, 14, 18. Since there are 8 values, the median is</p>
+      <me>
+        Q_2=\frac{7+9}{2}=8.
+      </me>
+      <p>The lower half is 3, 5, 6, 7 and the upper half is 9, 12, 14, 18, so</p>
+      <me>
+        Q_1=\frac{5+6}{2}=5.5
+        \qquad\text{and}\qquad
+        Q_3=\frac{12+14}{2}=13.
+      </me>
+    </example>
+
+    <p>The <term>interquartile range<idx><h>summaries</h><h>interquartile range</h></idx></term>, or <term>IQR<idx><h>summaries</h><h>IQR</h></idx></term>, measures the spread of the middle half of the data.</p>
+
+    <me>
+      \text{IQR}=Q_3-Q_1
+    </me>
+
+    <p>The IQR is useful because it ignores the most extreme observations and focuses on the central 50% of the distribution. In the previous example with <m>Q_1=5.5</m> and <m>Q_3=13</m>, the IQR is</p>
+    <me>
+      13-5.5=7.5.
+    </me>
+
+    <p>A small IQR means the middle half of the data is fairly concentrated. A large IQR means the middle half is more spread out.</p>
+  </section>
+
+  <section xml:id="sec-boxplots-outliers">
+    <title>Five-Number Summary, Boxplots, and Outliers</title>
+
+    <p>The <term>five-number summary<idx><h>summaries</h><h>five-number summary</h></idx></term> of a data set consists of</p>
+
+    <me>
+      \min,\quad Q_1,\quad Q_2,\quad Q_3,\quad \max.
+    </me>
+
+    <p>These five values give a compact description of both center and spread. The minimum and maximum show the full range of the data, the quartiles show the middle structure, and the median marks the center.</p>
+
+    <example xml:id="ex-five-number-summary">
+      <title>A Five-Number Summary</title>
+      <p>For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found <m>Q_1=5.5</m>, <m>Q_2=8</m>, and <m>Q_3=13</m>. Since the minimum is 3 and the maximum is 18, the five-number summary is</p>
+      <me>
+        3,\ 5.5,\ 8,\ 13,\ 18.
+      </me>
+    </example>
+
+    <p>A <term>boxplot<idx><h>graphs</h><h>boxplot</h></idx></term>, also called a <term>box-and-whisker plot<idx><h>graphs</h><h>box-and-whisker plot</h></idx></term>, turns the five-number summary into a picture. The box stretches from <m>Q_1</m> to <m>Q_3</m>, a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.</p>
+
+    <figure xml:id="fig-boxplot-spread-example">
+      <caption>Boxplot based on the five-number summary 3, 5.5, 8, 13, 18</caption>
+      <image width="84%" margins="8%">
+        <shortdescription>A horizontal boxplot on a scale from 0 to 20. The left whisker reaches 3, the box runs from 5.5 to 13, the median is marked at 8, and the right whisker reaches 18.</shortdescription>
+        <description>The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew.</description>
+        <latex-image>
+          \begin{tikzpicture}[x=0.5cm,y=0.7cm]
+            \draw[->] (0,0) -- (20.8,0);
+            \foreach \x in {0,2,4,6,8,10,12,14,16,18,20} {
+              \draw (\x,0.12) -- (\x,-0.12) node[below=5pt] {\small \x};
+            }
+            \node[below=18pt] at (10,0) {Data value};
+
+            \draw[line width=0.8pt] (3,1) -- (5.5,1);
+            \draw[line width=0.8pt] (13,1) -- (18,1);
+            \draw[line width=0.8pt] (3,0.55) -- (3,1.45);
+            \draw[line width=0.8pt] (18,0.55) -- (18,1.45);
+
+            \draw[line width=0.8pt] (5.5,0.55) rectangle (13,1.45);
+            \draw[line width=0.8pt] (8,0.55) -- (8,1.45);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>A boxplot does not show every data value, but it is very good at showing center, spread, and possible asymmetry. If the box and whiskers are roughly balanced on both sides of the median, the distribution may be fairly symmetric. If one side is stretched out more than the other, the distribution may be skewed. A histogram is still the best tool for judging shape in detail, but a boxplot gives a quick summary.</p>
+
+    <p>An <term>outlier<idx><h>summaries</h><h>outlier</h></idx></term> is a value that does not fit the general pattern of the data. One common rule for identifying possible outliers is the <term>1.5 times IQR rule<idx><h>summaries</h><h>1.5 times IQR rule</h></idx></term>. First compute the two <term>fences<idx><h>summaries</h><h>fence</h></idx></term>:</p>
+
+    <me>
+      \text{Lower fence}=Q_1-1.5(\text{IQR})
+      \qquad\text{and}\qquad
+      \text{Upper fence}=Q_3+1.5(\text{IQR}).
+    </me>
+
+    <p>Any observation below the lower fence or above the upper fence is called a possible outlier according to this rule. The fences themselves are not data values. They are only cutoffs.</p>
+
+    <example xml:id="ex-iqr-outlier-rule">
+      <title>Using the 1.5 Times IQR Rule</title>
+      <p>Suppose a data set has <m>Q_1=12</m> and <m>Q_3=20</m>. Then the IQR is</p>
+      <me>
+        20-12=8.
+      </me>
+      <p>So the fences are</p>
+      <me>
+        12-1.5(8)=0
+        \qquad\text{and}\qquad
+        20+1.5(8)=32.
+      </me>
+      <p>Any data value less than 0 or greater than 32 would be flagged as a possible outlier.</p>
+    </example>
+  </section>
+
+  <section xml:id="sec-variance-sd-zscores">
+    <title>Variance, Standard Deviation, and z-Scores</title>
+
+    <p>The IQR is useful, but it only looks at the middle half of the data. Another important family of measures uses every observation and asks how far the data tends to fall from the mean.</p>
+
+    <p>The <term>variance<idx><h>summaries</h><h>variance</h></idx></term> measures the average squared distance from the mean. For a population, the variance is</p>
+
+    <me>
+      \sigma^2=\frac{\sum (x-\mu)^2}{N},
+    </me>
+
+    <p>where <m>\mu</m> is the population mean and <m>N</m> is the population size. The <term>standard deviation<idx><h>summaries</h><h>standard deviation</h></idx></term> is the square root of the variance:</p>
+
+    <me>
+      \sigma=\sqrt{\frac{\sum (x-\mu)^2}{N}}.
+    </me>
+
+    <p>The standard deviation is easier to interpret than the variance because it is measured in the same units as the original data.</p>
+
+    <example xml:id="ex-sd-small-data">
+      <title>Comparing Two Small Data Sets</title>
+      <p>Consider the data sets 1, 2, 3, 4, 5 and 3, 3, 3, 3, 3. Both have mean 3, but they do not have the same spread. The second set has no variation at all, so its standard deviation is 0. The first set has values spread around the mean, so its standard deviation is greater than 0.</p>
+      <p>This example shows why center alone is not enough. Two distributions can share the same mean and still behave very differently.</p>
+    </example>
+
+    <p>When we work with a sample rather than a whole population, we use the <term>sample standard deviation<idx><h>summaries</h><h>sample standard deviation</h></idx></term>, written <m>s</m>:</p>
+
+    <me>
+      s=\sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}.
+    </me>
+
+    <p>The denominator is <m>n-1</m>, not <m>n</m>. That adjustment makes <m>s</m> a better estimator of the population standard deviation.</p>
+
+    <p>The <term>relative standard deviation<idx><h>summaries</h><h>relative standard deviation</h></idx></term>, or <term>RSD<idx><h>summaries</h><h>RSD</h></idx></term>, compares the standard deviation to the mean:</p>
+
+    <me>
+      \text{RSD}=\frac{\text{standard deviation}}{\text{mean}}\cdot 100\%.
+    </me>
+
+    <p>RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.</p>
+
+    <example xml:id="ex-rsd">
+      <title>Why Relative Standard Deviation Can Help</title>
+      <p>Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because</p>
+      <me>
+        \frac{5}{500}=1\%
+        \qquad\text{while}\qquad
+        \frac{12}{2000}=0.6\%.
+      </me>
+    </example>
+
+    <p>A <term>z-score<idx><h>summaries</h><h>standard score</h></idx></term>, also called a standard score, tells how many standard deviations a value lies above or below the mean:</p>
+
+    <me>
+      z=\frac{x-\bar{x}}{s}
+    </me>
+
+    <p>if we are working with sample data, or</p>
+
+    <me>
+      z=\frac{x-\mu}{\sigma}
+    </me>
+
+    <p>for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.</p>
+
+    <example xml:id="ex-zscore-test">
+      <title>Interpreting a z-Score</title>
+      <p>A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is</p>
+      <me>
+        z=\frac{82-74}{4}=2.
+      </me>
+      <p>This means the score of 82 is 2 standard deviations above the mean.</p>
+    </example>
+
+    <p>Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with <m>|z| &gt; 2</m> may deserve a closer look. That rule is not universal, but it is often used as a quick screen.</p>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>This chapter introduced several ways to describe how spread out a data set is. Some measures, such as the IQR, focus on the middle portion of the data. Others, such as variance and standard deviation, use every observation.</p>
+
+    <ul>
+      <li><p>Quartiles divide an ordered data set into four parts.</p></li>
+      <li><p>The interquartile range is <m>Q_3-Q_1</m> and measures the spread of the middle 50% of the data.</p></li>
+      <li><p>The five-number summary is <m>\min, Q_1, Q_2, Q_3, \max</m>.</p></li>
+      <li><p>A boxplot gives a compact picture of center, spread, and possible skewness.</p></li>
+      <li><p>The 1.5 times IQR rule identifies possible outliers using lower and upper fences.</p></li>
+      <li><p>Variance measures average squared distance from the mean, and standard deviation is the square root of the variance.</p></li>
+      <li><p>The sample standard deviation uses <m>n-1</m> in the denominator.</p></li>
+      <li><p>Relative standard deviation compares spread to the size of the mean.</p></li>
+      <li><p>A z-score shows how many standard deviations a value lies from the mean.</p></li>
+    </ul>
+
+    <p>Together with the measures of center from the previous chapter, these measures give a much fuller picture of a distribution. Center tells us where the data is located. Spread tells us how tightly or loosely it is packed.</p>
+  </conclusion>
+
+  <exercises xml:id="ch4-exercises">
+    <title>Exercises</title>
+
+    <exercisegroup cols="2">
+      <introduction>
+        <p>For Exercises 1-4, find the requested quartiles, IQRs, or fences.</p>
+      </introduction>
+
+      <exercise xml:id="ch4-ex-1">
+        <p>Find <m>Q_1</m>, <m>Q_2</m>, and <m>Q_3</m> for 2, 4, 5, 7, 8, 10, 12, 14, 18.</p>
+      </exercise>
+
+      <exercise xml:id="ch4-ex-2">
+        <p>Find the quartiles and IQR for 6, 7, 9, 10, 12, 14, 16, 18.</p>
+      </exercise>
+
+      <exercise xml:id="ch4-ex-3">
+        <p>The five-number summary of a data set is 3, 8, 11, 17, 24. What is the IQR?</p>
+      </exercise>
+
+      <exercise xml:id="ch4-ex-4">
+        <p>A data set has <m>Q_1=15</m> and <m>Q_3=27</m>. Find the 1.5 IQR fences.</p>
+      </exercise>
+    </exercisegroup>
+
+    <exercise xml:id="ch4-ex-5">
+      <p>A data set has <m>Q_1=10</m>, <m>Q_3=18</m>, and includes 1, 6, 12, 15, 19, and 33. Which values are possible outliers by the 1.5 IQR rule?</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-6">
+      <p>Explain in words what the interquartile range tells you about a distribution.</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-7">
+      <p>Two data sets both have mean 20. One has standard deviation 2 and the other has standard deviation 9. Which data set is more spread out?</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-8">
+      <p>For the population data set 2, 4, 6, 8, compute the population mean, the population variance, and the population standard deviation.</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-9">
+      <p>For the sample data set 5, 7, 9, 11, compute the sample mean and the sample standard deviation.</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-10">
+      <p>A data set has mean 50 and standard deviation 8. Find the z-score of 62.</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-11">
+      <p>A data value has z-score <m>-1.5</m>. Explain what this tells you about the value relative to the mean.</p>
+    </exercise>
+
+    <exercise xml:id="ch4-ex-12">
+      <p>Machine A has mean 40 and standard deviation 4. Machine B has mean 120 and standard deviation 6. Find the relative standard deviation for each machine and decide which machine has greater spread relative to its mean.</p>
+    </exercise>
+  </exercises>
+</chapter>

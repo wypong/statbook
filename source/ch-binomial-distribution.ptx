@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-binomial-distribution" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Binomial Distributions</title>
+
+  <introduction>
+    <p>The <term>binomial distribution<idx><h>probability</h><h>binomial distribution</h></idx></term> is probably the most common discrete probability distribution in an introductory statistics course. It appears whenever we repeat the same yes-or-no kind of trial and count how many successes occur. Did a shot go in or not? Did a customer buy the product or not? Did a tested item pass inspection or fail?</p>
+    <p>This chapter explains where the binomial distribution comes from, how to compute its probabilities, how to use its cumulative distribution, and how to find its mean and standard deviation. Along the way we will keep one main idea in view: a binomial random variable is just a count of successes in repeated independent trials.</p>
+  </introduction>
+
+  <section xml:id="sec-bernoulli-binomial">
+    <title>Bernoulli Trials and Binomial Coefficients</title>
+
+    <p>A <term>Bernoulli trial<idx><h>probability</h><h>Bernoulli trial</h></idx></term> is an experiment with exactly two outcomes, which we usually call <em>success</em> and <em>failure</em>. A made free throw versus a missed free throw is one example. A person who does or does not respond to a survey is another.</p>
+
+    <p>If a single Bernoulli trial has success probability <m>p</m>, then the corresponding <term>Bernoulli random variable<idx><h>probability</h><h>Bernoulli random variable</h></idx></term> <m>Y</m> is defined by</p>
+
+    <me>
+      Y=
+      \begin{cases}
+        1 &amp; \text{if the trial is a success},\\
+        0 &amp; \text{if the trial is a failure}.
+      \end{cases}
+    </me>
+
+    <p>So <m>P(Y=1)=p</m> and <m>P(Y=0)=1-p</m>.</p>
+
+    <p>Now suppose we repeat the same Bernoulli trial <m>n</m> times, independently, with the same success probability <m>p</m> each time. Let <m>X</m> be the number of successes. Then <m>X</m> follows a binomial distribution.</p>
+
+    <p>A situation is binomial when these four conditions hold:</p>
+
+    <ul>
+      <li><p>There is a fixed number <m>n</m> of trials.</p></li>
+      <li><p>Each trial has only two outcomes: success or failure.</p></li>
+      <li><p>The trials are independent.</p></li>
+      <li><p>The probability of success is the same on every trial.</p></li>
+    </ul>
+
+    <exercise xml:id="binom-inline-ex-1">
+      <p>Decide whether each situation can reasonably be modeled by a binomial random variable.</p>
+      <ol>
+        <li><p>A student guesses on 8 true-false questions and we count the number answered correctly.</p></li>
+        <li><p>Five cards are drawn without replacement from a standard deck and we count the number of hearts.</p></li>
+        <li><p>A basketball player takes 12 free throws and we count the number made, assuming the player's success probability stays the same from shot to shot.</p></li>
+      </ol>
+    </exercise>
+
+    <p>To compute binomial probabilities, we also need the <term>binomial coefficient<idx><h>probability</h><h>binomial coefficient</h></idx></term></p>
+
+    <me>
+      \binom{n}{k}=\frac{n!}{k!(n-k)!},
+    </me>
+
+    <p>which is read “<m>n</m> choose <m>k</m>.” It counts the number of ways to choose <m>k</m> objects from <m>n</m> objects, without regard to order.</p>
+
+    <example xml:id="ex-binom-coefficient">
+      <title>Computing a Binomial Coefficient</title>
+      <p>The number of ways to choose 3 students from a group of 5 is</p>
+      <me>
+        \binom{5}{3}=\frac{5!}{3!\,2!}=\frac{5\cdot 4}{2\cdot 1}=10.
+      </me>
+    </example>
+  </section>
+
+  <section xml:id="sec-binomial-pdf-cdf">
+    <title>Binomial Probabilities and the Cumulative Distribution</title>
+
+    <p>If <m>X</m> counts the number of successes in <m>n</m> independent Bernoulli trials with success probability <m>p</m>, then we write</p>
+
+    <me>
+      X\sim B(n,p).
+    </me>
+
+    <p>The possible values of <m>X</m> are</p>
+
+    <me>
+      0,1,2,\dots,n.
+    </me>
+
+    <p>The probability that exactly <m>k</m> successes occur is</p>
+
+    <me>
+      P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+    </me>
+
+    <p>This formula makes sense for a simple reason. A particular sequence with exactly <m>k</m> successes has probability <m>p^k(1-p)^{n-k}</m>. Then <m>\binom{n}{k}</m> counts how many such sequences there are.</p>
+
+    <example xml:id="ex-penalty-kicks">
+      <title>Exactly Three Goals in Five Penalty Kicks</title>
+      <p>Suppose a soccer player makes a penalty kick with probability <m>0.75</m>. Let <m>X</m> be the number of goals in 5 penalty kicks. Then <m>X\sim B(5,0.75)</m>.</p>
+      <p>The probability of exactly 3 goals is</p>
+      <me>
+        P(X=3)=\binom{5}{3}(0.75)^3(0.25)^2.
+      </me>
+      <p>Since <m>\binom{5}{3}=10</m>,</p>
+      <me>
+        P(X=3)=10(0.75)^3(0.25)^2\approx 0.2637.
+      </me>
+      <p>So the chance of scoring exactly 3 times is about 0.264.</p>
+    </example>
+
+    <example xml:id="ex-binom-at-least-one">
+      <title>Using the Complement</title>
+      <p>A factory knows that 2% of the items it produces are defective. Suppose 20 items are selected independently, and let <m>X</m> be the number of defective items. Then <m>X\sim B(20,0.02)</m>.</p>
+      <p>The probability of getting at least one defective item is easier to compute by using the complement:</p>
+      <me>
+        P(X\ge 1)=1-P(X=0)=1-\binom{20}{0}(0.02)^0(0.98)^{20}=1-(0.98)^{20}\approx 0.3324.
+      </me>
+    </example>
+
+    <p>The <term>cumulative distribution function<idx><h>probability</h><h>cumulative distribution function</h></idx></term>, or CDF, of a binomial random variable is</p>
+
+    <me>
+      F_X(k)=P(X\le k).
+    </me>
+
+    <p>For a binomial random variable, the CDF is found by adding the probabilities from 0 up to <m>k</m>.</p>
+
+    <example xml:id="ex-binom-cdf">
+      <title>At Most Three Goals</title>
+      <p>Continue with <m>X\sim B(5,0.75)</m>. Then</p>
+      <me>
+        F_X(3)=P(X\le 3)=P(X=0)+P(X=1)+P(X=2)+P(X=3).
+      </me>
+      <p>Computing the four terms gives</p>
+      <me>
+        F_X(3)\approx 0.3672.
+      </me>
+      <p>So the probability of scoring at most 3 goals in 5 kicks is about 0.367.</p>
+    </example>
+
+    <p>The CDF is useful because many probability questions can be rewritten in terms of “at most.” For example,</p>
+
+    <me>
+      P(X\ge 3)=1-P(X\le 2)=1-F_X(2),
+    </me>
+
+    <p>and if <m>a&lt;b</m>, then</p>
+
+    <me>
+      P(a&lt;X\le b)=F_X(b)-F_X(a).
+    </me>
+
+    <exercise xml:id="binom-inline-ex-2">
+      <p>A multiple-choice quiz has 6 questions, each with 4 answer choices, and a student guesses on every question. Let <m>X</m> be the number answered correctly.</p>
+      <ol>
+        <li><p>State the values of <m>n</m> and <m>p</m>.</p></li>
+        <li><p>Write a formula for <m>P(X=2)</m>.</p></li>
+        <li><p>Write a formula for <m>P(X\le 1)</m>.</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-binomial-mean-variance">
+    <title>Mean, Variance, and Standard Deviation</title>
+
+    <p>The binomial distribution is especially nice because its center and spread have simple formulas.</p>
+
+    <p>Think of a binomial random variable as a sum of Bernoulli random variables:</p>
+
+    <me>
+      X=Y_1+Y_2+\cdots+Y_n,
+    </me>
+
+    <p>where each <m>Y_i</m> equals 1 for success and 0 for failure. For one Bernoulli random variable,</p>
+
+    <me>
+      E(Y_i)=p
+      \qquad\text{and}\qquad
+      \operatorname{Var}(Y_i)=p(1-p).
+    </me>
+
+    <p>Because expectation adds and independent variances add, a binomial random variable <m>X\sim B(n,p)</m> satisfies</p>
+
+    <me>
+      E(X)=np,
+    </me>
+
+    <me>
+      \operatorname{Var}(X)=np(1-p),
+    </me>
+
+    <p>and therefore the <term>standard deviation<idx><h>probability</h><h>standard deviation of a binomial distribution</h></idx></term> is</p>
+
+    <me>
+      \sigma_X=\sqrt{np(1-p)}.
+    </me>
+
+    <p>The mean <m>np</m> gives the long-run average number of successes. The standard deviation tells us how much the actual count typically varies around that average.</p>
+
+    <example xml:id="ex-binom-mean-variance">
+      <title>Free Throws</title>
+      <p>A player makes free throws with probability <m>0.8</m>. Suppose the player takes 20 free throws, and let <m>X</m> be the number made. Then <m>X\sim B(20,0.8)</m>.</p>
+      <p>The mean number of made shots is</p>
+      <me>
+        E(X)=np=20(0.8)=16.
+      </me>
+      <p>The variance is</p>
+      <me>
+        \operatorname{Var}(X)=20(0.8)(0.2)=3.2,
+      </me>
+      <p>so the standard deviation is</p>
+      <me>
+        \sigma_X=\sqrt{3.2}\approx 1.789.
+      </me>
+      <p>In other words, over many such 20-shot sessions, the player would average about 16 made shots, with typical variation of about 1.8 shots.</p>
+    </example>
+
+    <p>These formulas are worth remembering because they come up constantly in applications.</p>
+
+    <exercise xml:id="binom-inline-ex-3">
+      <p>If <m>X\sim B(10,0.3)</m>, find <m>E(X)</m>, <m>\operatorname{Var}(X)</m>, and <m>\sigma_X</m>.</p>
+    </exercise>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>The binomial distribution models a very common kind of random process: repeated independent trials with the same success probability. Because of that, it shows up all over statistics, quality control, polling, biology, and the social sciences.</p>
+
+    <ul>
+      <li><p>A binomial random variable counts the number of successes in <m>n</m> independent Bernoulli trials.</p></li>
+      <li><p>The binomial setting requires a fixed number of trials, two outcomes per trial, independence, and a constant success probability <m>p</m>.</p></li>
+      <li><p>The probability formula is <m>P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}</m>.</p></li>
+      <li><p>The binomial coefficient <m>\binom{n}{k}</m> counts the number of ways to place <m>k</m> successes among <m>n</m> trials.</p></li>
+      <li><p>The CDF is <m>F_X(k)=P(X\le k)</m>, and it helps with “at most,” “at least,” and interval probabilities.</p></li>
+      <li><p>For <m>X\sim B(n,p)</m>, the mean is <m>np</m>, the variance is <m>np(1-p)</m>, and the standard deviation is <m>\sqrt{np(1-p)}</m>.</p></li>
+    </ul>
+
+    <p>Once you can recognize a binomial situation, most calculations reduce to choosing the right value of <m>n</m>, the right value of <m>p</m>, and the right way to phrase the event you want.</p>
+  </conclusion>
+
+  <exercises xml:id="ch8-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch8-ex-1">
+      <p>Decide whether each setting is binomial. If it is, state <m>n</m> and <m>p</m>.</p>
+      <ol>
+        <li><p>A fair coin is flipped 12 times and the number of heads is counted.</p></li>
+        <li><p>Four cards are drawn without replacement from a deck and the number of aces is counted.</p></li>
+        <li><p>A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch8-ex-2">
+      <p>Let <m>X\sim B(8,0.4)</m>.</p>
+      <ol>
+        <li><p>Find <m>P(X=3)</m>.</p></li>
+        <li><p>Find <m>P(X=0)</m>.</p></li>
+        <li><p>Find <m>P(X\ge 1)</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch8-ex-3">
+      <p>A basketball player makes free throws with probability <m>0.7</m>. If the player takes 6 free throws, what is the probability of making exactly 4 of them?</p>
+    </exercise>
+
+    <exercise xml:id="ch8-ex-4">
+      <p>A quiz has 10 true-false questions, and a student guesses on every question. Let <m>X</m> be the number answered correctly.</p>
+      <ol>
+        <li><p>Find <m>P(X\le 3)</m>.</p></li>
+        <li><p>Find <m>P(X\ge 8)</m>.</p></li>
+        <li><p>Find <m>P(4\le X\le 7)</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch8-ex-5">
+      <p>If <m>X\sim B(25,0.12)</m>, find the mean, variance, and standard deviation.</p>
+    </exercise>
+
+    <exercise xml:id="ch8-ex-6">
+      <p>In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let <m>X</m> be the number that have a dog.</p>
+      <ol>
+        <li><p>Find <m>P(X=5)</m>.</p></li>
+        <li><p>Find <m>P(X\le 2)</m>.</p></li>
+        <li><p>What is the expected number of selected households that have a dog?</p></li>
+      </ol>
+    </exercise>
+  </exercises>
+</chapter>

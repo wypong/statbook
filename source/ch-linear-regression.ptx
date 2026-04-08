@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-linear-regression" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear Regression</title>
+
+  <introduction>
+    <p>So far we have mostly studied one variable at a time. But in practice, statistics often asks whether two variables move together. Do students who study more hours tend to earn higher exam scores? Do larger apartments usually cost more rent? Does a car with more mileage usually sell for less?</p>
+    <p>Questions like these lead to <term>two-variable statistics<idx><h>data</h><h>two-variable statistics</h></idx></term>. In this chapter we look at how to display paired data with a <term>scatterplot<idx><h>graphs</h><h>scatterplot</h></idx></term>, how to describe the direction and strength of a linear relationship, and how to model that relationship with a <term>linear regression line<idx><h>regression</h><h>linear regression line</h></idx></term>.</p>
+  </introduction>
+
+  <section xml:id="sec-scatterplots-correlation">
+    <title>Scatterplots and Correlation</title>
+
+    <p>When each observation comes as a pair of numbers, we often label the two variables <m>x</m> and <m>y</m>. Usually <m>x</m> is the <term>independent variable<idx><h>regression</h><h>independent variable</h></idx></term> and <m>y</m> is the <term>dependent variable<idx><h>regression</h><h>dependent variable</h></idx></term>. That means we use <m>x</m> to help explain or predict <m>y</m>.</p>
+
+    <p>A scatterplot places each data pair <m>(x,y)</m> as a point in the plane. Once the points are plotted, we look for an overall pattern.</p>
+
+    <example xml:id="ex-study-hours-data">
+      <title>Study Hours and Exam Scores</title>
+      <p>Suppose we record the hours studied and exam scores for eight students:</p>
+    </example>
+
+    <table xml:id="tbl-study-hours-score">
+      <title>Study hours and exam scores</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Hours studied</cell>
+          <cell>Exam score</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>58</cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>62</cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>67</cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>71</cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>76</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>79</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>85</cell>
+        </row>
+        <row bottom="major">
+          <cell>8</cell>
+          <cell>88</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <figure xml:id="fig-study-hours-scatter">
+      <caption>Scatterplot of study hours and exam scores</caption>
+      <image width="70%" margins="15%">
+        <shortdescription>A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study hours and exam score.</shortdescription>
+        <description>The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=9.2cm,
+              height=6.1cm,
+              xmin=0,
+              xmax=9,
+              ymin=50,
+              ymax=95,
+              xlabel={Hours studied},
+              ylabel={Exam score},
+              xtick={0,1,2,3,4,5,6,7,8,9},
+              ytick={50,60,70,80,90},
+              enlargelimits=false
+            ]
+              \addplot[
+                only marks,
+                mark=*,
+                mark size=2.3pt,
+                color=blue
+              ] coordinates {(1,58) (2,62) (3,67) (4,71) (5,76) (6,79) (7,85) (8,88)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>The scatterplot in <xref ref="fig-study-hours-scatter"/> shows an upward trend. As study time increases, exam score also tends to increase. That is an example of a <term>positive association<idx><h>regression</h><h>positive association</h></idx></term>.</p>
+
+    <p>In general, a scatterplot may suggest one of three broad patterns.</p>
+
+    <ul>
+      <li><p><term>Positive correlation<idx><h>regression</h><h>positive correlation</h></idx></term>: larger <m>x</m> values tend to go with larger <m>y</m> values.</p></li>
+      <li><p><term>Negative correlation<idx><h>regression</h><h>negative correlation</h></idx></term>: larger <m>x</m> values tend to go with smaller <m>y</m> values.</p></li>
+      <li><p><term>No clear correlation<idx><h>regression</h><h>no correlation</h></idx></term>: the points do not show a clear upward or downward trend.</p></li>
+    </ul>
+
+    <p>A useful visual trick is to mark the point <m>(\bar{x},\bar{y})</m>, where <m>\bar{x}</m> is the mean of the <m>x</m>-values and <m>\bar{y}</m> is the mean of the <m>y</m>-values. The vertical line through <m>\bar{x}</m> and the horizontal line through <m>\bar{y}</m> form a <term>mean cross<idx><h>regression</h><h>mean cross</h></idx></term>.</p>
+
+    <p>If most of the points lie in the first and third quadrants relative to that cross, then the variables tend to increase together, which suggests positive correlation. If most of the points lie in the second and fourth quadrants, then one variable tends to increase as the other decreases, which suggests negative correlation. If the points are spread more evenly among all four quadrants, the data may have little or no linear correlation.</p>
+
+    <figure xml:id="fig-mean-cross-cases">
+      <caption>Using the mean cross to read the direction of correlation</caption>
+      <image width="92%" margins="4%">
+        <shortdescription>Three small scatterplots side by side. In the first, most points lie in the first and third quadrants relative to the mean cross, showing positive correlation. In the second, most points lie in the second and fourth quadrants, showing negative correlation. In the third, the points are spread around all four quadrants, showing little or no correlation.</shortdescription>
+        <description>The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              at={(0cm,0cm)},
+              anchor=south west,
+              width=4.2cm,
+              height=4.2cm,
+              xmin=0,
+              xmax=10,
+              ymin=0,
+              ymax=10,
+              xtick={5},
+              xticklabels={$\bar{x}$},
+              ytick={5},
+              yticklabels={$\bar{y}$},
+              title={Positive correlation},
+              title style={font=\small},
+              enlargelimits=false
+            ]
+              \addplot[dashed, gray] coordinates {(5,0) (5,10)};
+              \addplot[dashed, gray] coordinates {(0,5) (10,5)};
+              \addplot[only marks, mark=*, mark size=2pt, color=blue]
+                coordinates {(1.5,2.0) (2.4,3.1) (3.2,3.9) (4.0,4.4) (6.1,6.0) (7.0,7.4) (7.7,8.2) (8.6,8.7)};
+            \end{axis}
+
+            \begin{axis}[
+              at={(5.2cm,0cm)},
+              anchor=south west,
+              width=4.2cm,
+              height=4.2cm,
+              xmin=0,
+              xmax=10,
+              ymin=0,
+              ymax=10,
+              xtick={5},
+              xticklabels={$\bar{x}$},
+              ytick={5},
+              yticklabels={$\bar{y}$},
+              title={Negative correlation},
+              title style={font=\small},
+              enlargelimits=false
+            ]
+              \addplot[dashed, gray] coordinates {(5,0) (5,10)};
+              \addplot[dashed, gray] coordinates {(0,5) (10,5)};
+              \addplot[only marks, mark=*, mark size=2pt, color=red]
+                coordinates {(1.6,8.5) (2.4,7.7) (3.1,6.8) (4.0,5.9) (6.0,4.1) (6.8,3.2) (7.7,2.6) (8.6,1.7)};
+            \end{axis}
+
+            \begin{axis}[
+              at={(10.4cm,0cm)},
+              anchor=south west,
+              width=4.2cm,
+              height=4.2cm,
+              xmin=0,
+              xmax=10,
+              ymin=0,
+              ymax=10,
+              xtick={5},
+              xticklabels={$\bar{x}$},
+              ytick={5},
+              yticklabels={$\bar{y}$},
+              title={Little or no correlation},
+              title style={font=\small},
+              enlargelimits=false
+            ]
+              \addplot[dashed, gray] coordinates {(5,0) (5,10)};
+              \addplot[dashed, gray] coordinates {(0,5) (10,5)};
+              \addplot[only marks, mark=*, mark size=2pt, color=black]
+                coordinates {(1.7,8.0) (2.6,3.0) (3.1,6.9) (4.1,2.2) (5.8,7.4) (6.5,4.0) (7.5,8.1) (8.3,2.7)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>The mean cross is a quick visual guide, not a substitute for a full scatterplot or the actual value of <m>r</m>. Still, it is a nice way to see why positive correlation puts many points in quadrants one and three, while negative correlation puts many points in quadrants two and four.</p>
+
+    <p>The <term>correlation coefficient<idx><h>regression</h><h>correlation coefficient</h></idx></term>, written <m>r</m>, measures the strength and direction of a linear relationship. Its value always satisfies</p>
+
+    <me>
+      -1 \le r \le 1.
+    </me>
+
+    <p>The sign of <m>r</m> gives the direction, and the size of <m>|r|</m> gives the strength.</p>
+
+    <ul>
+      <li><p>If <m>r&gt;0</m>, the linear relationship is positive.</p></li>
+      <li><p>If <m>r&lt;0</m>, the linear relationship is negative.</p></li>
+      <li><p>If <m>r</m> is close to 0, there is little or no linear relationship.</p></li>
+      <li><p>If <m>|r|</m> is close to 1, the points lie close to a line and the linear relationship is strong.</p></li>
+    </ul>
+
+    <p>One common formula for <m>r</m> is</p>
+
+    <me>
+      r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar{y})^2}}.
+    </me>
+
+    <p>In practice, technology usually computes <m>r</m> for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.</p>
+
+    <example xml:id="ex-r-interpretation">
+      <title>Interpreting Correlation</title>
+      <p>If a data set has <m>r=0.91</m>, then it has a strong positive linear relationship. If another data set has <m>r=-0.84</m>, then it has a strong negative linear relationship. If a third data set has <m>r=0.08</m>, then it has almost no linear relationship.</p>
+    </example>
+  </section>
+
+  <section xml:id="sec-regression-line">
+    <title>Regression Lines and Prediction</title>
+
+    <p>A <term>linear relation<idx><h>regression</h><h>linear relation</h></idx></term> has the form</p>
+
+    <me>
+      y=ax+b,
+    </me>
+
+    <p>where <m>a</m> is the <term>slope<idx><h>regression</h><h>slope</h></idx></term> and <m>b</m> is the <term>y-intercept<idx><h>regression</h><h>y-intercept</h></idx></term>. If <m>a&gt;0</m>, the line goes up as <m>x</m> increases. If <m>a&lt;0</m>, the line goes down as <m>x</m> increases.</p>
+
+    <p>In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the <term>best-fit line<idx><h>regression</h><h>best-fit line</h></idx></term> or <term>regression line<idx><h>regression</h><h>regression line</h></idx></term>. Its equation is often written</p>
+
+    <me>
+      \hat{y}=a+bx.
+    </me>
+
+    <p>Here <m>\hat{y}</m> is the predicted value of <m>y</m> for a given value of <m>x</m>.</p>
+
+    <figure xml:id="fig-study-hours-regression">
+      <caption>Scatterplot with a regression line</caption>
+      <image width="76%" margins="12%">
+        <shortdescription>A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the points.</shortdescription>
+        <description>The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10.5cm,
+              height=7cm,
+              xmin=0,
+              xmax=9,
+              ymin=50,
+              ymax=95,
+              xlabel={Hours studied},
+              ylabel={Exam score},
+              xtick={0,1,2,3,4,5,6,7,8,9},
+              ytick={50,60,70,80,90},
+              enlargelimits=false
+            ]
+              \addplot[
+                only marks,
+                mark=*,
+                mark size=2.3pt,
+                color=blue
+              ] coordinates {(1,58) (2,62) (3,67) (4,71) (5,76) (6,79) (7,85) (8,88)};
+              \addplot[
+                domain=0.5:8.5,
+                samples=2,
+                color=red,
+                thick
+              ] {53.5 + 4.4*x};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <example xml:id="ex-regression-prediction">
+      <title>Using a Regression Equation</title>
+      <p>Suppose a regression line for study hours and exam score is</p>
+      <me>
+        \hat{y}=53.5+4.4x.
+      </me>
+      <p>If a student studies for 5 hours, the predicted exam score is</p>
+      <me>
+        \hat{y}=53.5+4.4(5)=75.5.
+      </me>
+      <p>So the model predicts a score of about 76.</p>
+    </example>
+
+    <p>The slope tells us how much the predicted <m>y</m> changes when <m>x</m> increases by 1 unit. In the example above, the slope is 4.4, so the model predicts that each additional hour of study is associated with about 4.4 more exam points.</p>
+
+    <p>The sign of the slope matches the sign of the correlation coefficient <m>r</m>. That is useful, but the two numbers are not the same. The slope measures change in the original units, while <m>r</m> is a unit-free measure of linear strength and always stays between <m>-1</m> and <m>1</m>.</p>
+
+    <p>Regression is helpful for prediction, but it should be used with care. Predicting for an <m>x</m> value inside the range of the observed data is called <term>interpolation<idx><h>regression</h><h>interpolation</h></idx></term>. Predicting far outside the observed range is called <term>extrapolation<idx><h>regression</h><h>extrapolation</h></idx></term>, and that is usually much less reliable.</p>
+
+    <example xml:id="ex-extrapolation-warning">
+      <title>Interpolation Versus Extrapolation</title>
+      <p>If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.</p>
+    </example>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>This chapter introduced linear regression through two-variable data. The first step is to display paired data with a scatterplot. The next step is to describe whether the pattern is positive, negative, weak, or strong. Finally, we can use a regression line to summarize the linear trend and make predictions.</p>
+
+    <ul>
+      <li><p>Two-variable statistics studies pairs of observations <m>(x,y)</m>.</p></li>
+      <li><p>A scatterplot is the standard graph for paired numerical data.</p></li>
+      <li><p>Positive correlation means larger <m>x</m> values tend to go with larger <m>y</m> values. Negative correlation means larger <m>x</m> values tend to go with smaller <m>y</m> values.</p></li>
+      <li><p>The correlation coefficient <m>r</m> measures the direction and strength of a linear relationship.</p></li>
+      <li><p>The value of <m>r</m> always lies between <m>-1</m> and <m>1</m>.</p></li>
+      <li><p>A regression line has the form <m>\hat{y}=a+bx</m> and is used to model and predict <m>y</m> from <m>x</m>.</p></li>
+      <li><p>The slope describes how the predicted value changes when <m>x</m> increases by 1 unit.</p></li>
+      <li><p>Interpolation is usually safer than extrapolation.</p></li>
+    </ul>
+
+    <p>Linear regression is one of the simplest modeling tools in statistics, but it is also one of the most useful. It helps us move from description to prediction, while reminding us to look carefully at the data before trusting a formula.</p>
+  </conclusion>
+
+  <exercises xml:id="ch5-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch5-ex-1">
+      <p>State whether each situation involves one-variable data or two-variable data.</p>
+      <ol>
+        <li><p>The heights of 20 students</p></li>
+        <li><p>The heights and weights of 20 students</p></li>
+        <li><p>The daily high temperatures in a city for one month</p></li>
+        <li><p>The number of hours studied and the final exam scores for a class</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-2">
+      <p>For each pair of variables, decide which one is more naturally treated as the independent variable and which one is more naturally treated as the dependent variable.</p>
+      <ol>
+        <li><p>Hours worked and weekly pay</p></li>
+        <li><p>Outdoor temperature and electricity used for air conditioning</p></li>
+        <li><p>Age of a used car and its selling price</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-3">
+      <p>Use the data in <xref ref="tbl-study-hours-score"/> to make a scatterplot by hand or with software. Describe whether the association appears positive, negative, or unclear.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-4">
+      <p>Suppose a data set has correlation coefficient <m>r=0.94</m>. Describe the direction and strength of the linear relationship.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-5">
+      <p>Suppose a data set has correlation coefficient <m>r=-0.77</m>. Describe the direction and strength of the linear relationship.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-6">
+      <p>Suppose a data set has correlation coefficient <m>r=0.03</m>. What does this suggest about the linear relationship?</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-7">
+      <p>Explain why the correlation coefficient must always lie between <m>-1</m> and <m>1</m>, at least at the level of interpretation.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-8">
+      <p>A regression line is given by</p>
+      <me>
+        \hat{y}=12+3.5x.
+      </me>
+      <p>Find the predicted value of <m>y</m> when <m>x=4</m>.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-9">
+      <p>A regression equation is</p>
+      <me>
+        \hat{y}=85-2.1x.
+      </me>
+      <p>What is the slope? What does it mean in context if <m>x</m> is age of a car in years and <m>y</m> is selling price in thousands of dollars?</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-10">
+      <p>A regression equation for predicting quiz score from hours of review is</p>
+      <me>
+        \hat{y}=48+6x.
+      </me>
+      <p>Use the equation to predict the quiz score for a student who reviews for 5 hours.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-11">
+      <p>Explain the difference between interpolation and extrapolation. Then give one example of each.</p>
+    </exercise>
+
+    <exercise xml:id="ch5-ex-12">
+      <p>A data set has a strong positive correlation. Does that prove that changes in <m>x</m> cause changes in <m>y</m>? Explain briefly.</p>
+    </exercise>
+  </exercises>
+</chapter>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-central-tendency" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Central Tendency</title>
+
+  <introduction>
+    <p>Once data has been organized into tables or graphs, we usually want a shorter summary. If you had to describe a whole data set with just one number, what number would you choose? That question leads to the idea of center.</p>
+    <p>In statistics, numbers that describe the center of a distribution are called measures of <term>central tendency<idx><h>summaries</h><h>central tendency</h></idx></term>. The three most common are the <term>mean<idx><h>summaries</h><h>mean</h></idx></term>, the <term>median<idx><h>summaries</h><h>median</h></idx></term>, and the <term>mode<idx><h>summaries</h><h>mode</h></idx></term>. They do not always agree, and that is part of the point. Different measures of center respond differently to the shape of the data.</p>
+  </introduction>
+
+  <section xml:id="sec-mean-median-mode">
+    <title>Mean, Median, and Mode</title>
+
+    <p>The <term>mean<idx><h>summaries</h><h>arithmetic mean</h></idx></term> of a data set is what most people call the average. We add the data values and divide by the number of observations.</p>
+
+    <me>
+      \bar{x} = \frac{\text{sum of the data values}}{n}
+    </me>
+
+    <p>Here <m>n</m> is the size of the data set. The mean uses every value in the set, so it reacts to changes anywhere in the data. It also does not have to be one of the observed data values.</p>
+
+    <example xml:id="ex-mean-commute-time">
+      <title>Computing a Mean</title>
+      <p>Suppose five students report commute times of 12, 15, 18, 20, and 25 minutes. The mean commute time is</p>
+      <me>
+        \bar{x} = \frac{12+15+18+20+25}{5} = \frac{90}{5} = 18.
+      </me>
+      <p>So the average commute time is 18 minutes.</p>
+    </example>
+
+    <p>The <term>median<idx><h>summaries</h><h>median</h></idx></term> is the middle value when the data is listed in order from smallest to largest. If there is an odd number of observations, the median is the single middle value. If there is an even number of observations, the median is the average of the two middle values.</p>
+
+    <example xml:id="ex-median-odd-even">
+      <title>Odd and Even Cases for the Median</title>
+      <p>For the ordered data set 4, 7, 9, 12, 15, the median is 9 because it is the middle value. For the ordered data set 4, 7, 9, 12, 15, 20, the median is</p>
+      <me>
+        \frac{9+12}{2}=10.5.
+      </me>
+      <p>That second median is not one of the original data values, and that is completely normal.</p>
+    </example>
+
+    <p>The <term>mode<idx><h>summaries</h><h>mode</h></idx></term> is the value that occurs most often. Unlike the mean and median, the mode must be an actual data value or category. A data set can have one mode, more than one mode, or no mode at all if every value occurs equally often.</p>
+
+    <example xml:id="ex-mode-bimodal">
+      <title>One Mode, Two Modes, or No Mode</title>
+      <p>In the data set 2, 3, 3, 4, 6, the mode is 3 because it appears most often. In the data set red, blue, blue, green, green, there are two modes, blue and green, so the distribution is <term>bimodal<idx><h>summaries</h><h>bimodal distribution</h></idx></term>. In the data set 1, 2, 3, 4, each value appears once, so by convention the data set has no mode.</p>
+    </example>
+
+    <p>These three measures answer slightly different questions.</p>
+
+    <ul>
+      <li><p>The mean balances the whole data set.</p></li>
+      <li><p>The median marks the middle position.</p></li>
+      <li><p>The mode identifies the most common value or category.</p></li>
+    </ul>
+
+    <p>Because they capture different ideas of center, they can tell different stories about the same data.</p>
+
+    <example xml:id="ex-salary-mean-median">
+      <title>When Mean and Median Pull Apart</title>
+      <p>Suppose six hourly wages are 16, 17, 18, 18, 19, and 40 dollars. The mean is</p>
+      <me>
+        \bar{x}=\frac{16+17+18+18+19+40}{6}=\frac{128}{6}\approx 21.33,
+      </me>
+      <p>while the median is</p>
+      <me>
+        \frac{18+18}{2}=18.
+      </me>
+      <p>The high wage of 40 pulls the mean upward, but it does not move the median very much. This is one reason the median is often preferred for income data.</p>
+    </example>
+  </section>
+
+  <section xml:id="sec-center-from-tables-and-shape">
+    <title>Center from Frequency Tables and the Shape of a Distribution</title>
+
+    <p>We can also compute mean, median, and mode from a frequency table. This is helpful when the raw data has already been summarized.</p>
+
+    <p>For a frequency table, the mean is a weighted average:</p>
+
+    <me>
+      \bar{x} = \frac{\sum x f}{\sum f}
+    </me>
+
+    <p>Here <m>x</m> is a data value and <m>f</m> is its frequency. To find the mode, we look for the value with the highest frequency. To find the median, we locate the middle observation or middle two observations by using the <term>cumulative frequency<idx><h>tables</h><h>cumulative frequency</h></idx></term>.</p>
+
+    <example xml:id="ex-frequency-table-center">
+      <title>Finding Center from a Frequency Table</title>
+      <p>A quiz is graded out of 10 points. The results are summarized in <xref ref="tbl-quiz-frequency-center"/>.</p>
+    </example>
+
+    <table xml:id="tbl-quiz-frequency-center">
+      <title>Quiz scores with frequencies and cumulative frequencies</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Score <m>x</m></cell>
+          <cell>Frequency <m>f</m></cell>
+          <cell><m>x f</m></cell>
+          <cell>Cumulative frequency</cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>2</cell>
+          <cell>8</cell>
+          <cell>2</cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>3</cell>
+          <cell>15</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>5</cell>
+          <cell>30</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>4</cell>
+          <cell>28</cell>
+          <cell>14</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>3</cell>
+          <cell>24</cell>
+          <cell>17</cell>
+        </row>
+        <row bottom="major">
+          <cell>9</cell>
+          <cell>3</cell>
+          <cell>27</cell>
+          <cell>20</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>Since the total frequency is <m>20</m>, the mean is</p>
+    <me>
+      \bar{x}=\frac{8+15+30+28+24+27}{20}=\frac{132}{20}=6.6.
+    </me>
+
+    <p>The mode is 6 because 6 has the highest frequency. To find the median, we note that the 10th observation is 6 and the 11th observation is 7, so the median is</p>
+    <me>
+      \frac{6+7}{2}=6.5.
+    </me>
+
+    <p>Frequency tables are also useful because they connect naturally to the overall <term>distribution<idx><h>graphs</h><h>distribution</h></idx></term> of the data. When we look at a histogram or similar graph, we often describe the shape as symmetric, skewed right, or skewed left.</p>
+
+    <p>A <term>symmetric distribution<idx><h>graphs</h><h>symmetric distribution</h></idx></term> has roughly the same shape on the left and right of its center. In a perfectly symmetric distribution, the mean and median are equal.</p>
+
+    <p>A distribution is <term>skewed right<idx><h>graphs</h><h>right-skewed distribution</h></idx></term>, or positively skewed, if most of the data is on the left and a longer tail stretches to the right. In that case, a few large values tend to pull the mean above the median.</p>
+
+    <p>A distribution is <term>skewed left<idx><h>graphs</h><h>left-skewed distribution</h></idx></term>, or negatively skewed, if most of the data is on the right and a longer tail stretches to the left. In that case, a few small values tend to pull the mean below the median.</p>
+
+    <example xml:id="ex-skewness-interpretation">
+      <title>Reading Shape from Mean and Median</title>
+      <p>A set of apartment rents has mean 1850 dollars and median 1725 dollars. Since the mean is larger than the median, this suggests the distribution is skewed right. That would make sense if most rents are moderate but a few luxury apartments are much more expensive.</p>
+      <p>This kind of comparison is useful, but it should not replace looking at a graph. In practice, the best way to judge skewness is to inspect a histogram or another graph of the distribution.</p>
+    </example>
+
+    <p>So which measure of center should we use? There is no universal winner. The mean is informative when we want every observation to count fully, while the median is often more resistant to extreme values. The mode is especially useful for categorical data or for identifying the most common case.</p>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>This chapter introduced the three most common measures of central tendency: mean, median, and mode. Each one describes center in a different way, so a good summary depends on what you want the number to say.</p>
+
+    <ul>
+      <li><p>The mean is the sum of the data values divided by the number of observations.</p></li>
+      <li><p>The median is the middle value in ordered data, or the average of the two middle values when the number of observations is even.</p></li>
+      <li><p>The mode is the most frequently occurring value or category.</p></li>
+      <li><p>For a frequency table, the mean is computed by dividing <m>\sum x f</m> by <m>\sum f</m>.</p></li>
+      <li><p>Cumulative frequency helps us locate the median in a frequency table.</p></li>
+      <li><p>In a symmetric distribution, mean and median are about the same.</p></li>
+      <li><p>In a right-skewed distribution, the mean is usually greater than the median. In a left-skewed distribution, the mean is usually less than the median.</p></li>
+    </ul>
+
+    <p>Mean, median, and mode are simple ideas, but they already tell us a lot about a distribution. They also prepare us for the next topic, which is how to describe spread as well as center.</p>
+  </conclusion>
+
+  <exercises xml:id="ch3-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch3-ex-1">
+      <p>Find the mean, median, and mode of the data set 6, 8, 8, 9, 10, 12, 12, 12, 15.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-2">
+      <p>Find the mean and median of the ordered data set 3, 5, 7, 9, 12, 18.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-3">
+      <p>Decide whether each data set has one mode, more than one mode, or no mode.</p>
+      <ol>
+        <li><p>2, 2, 3, 4, 5, 5</p></li>
+        <li><p>red, blue, green, yellow</p></li>
+        <li><p>7, 7, 7, 8, 9</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-4">
+      <p>The weekly hours worked by six students are 8, 10, 12, 14, 16, and 40.</p>
+      <p>Find the mean and median. Which measure seems to represent the typical student better, and why?</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-5">
+      <p>The following frequency table summarizes the number of books read over the summer.</p>
+      <table>
+        <title>Books read over the summer</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Books</cell>
+            <cell>Frequency</cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>3</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>5</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>4</cell>
+          </row>
+          <row bottom="major">
+            <cell>4</cell>
+            <cell>2</cell>
+          </row>
+        </tabular>
+      </table>
+      <p>Find the mean, median, and mode.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-6">
+      <p>Create a cumulative frequency column for the table in Exercise <xref ref="ch3-ex-5"/> and use it to confirm the median.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-7">
+      <p>For each situation, choose the measure of center that seems most useful: mean, median, or mode.</p>
+      <ol>
+        <li><p>Favorite ice cream flavor in a class</p></li>
+        <li><p>House prices in a city with a few extremely expensive homes</p></li>
+        <li><p>The average score on a final exam</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-8">
+      <p>A distribution is described as right-skewed. State whether the mean is usually less than, about equal to, or greater than the median.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-9">
+      <p>A distribution is described as left-skewed. State whether the mean is usually less than, about equal to, or greater than the median.</p>
+    </exercise>
+
+    <exercise xml:id="ch3-ex-10">
+      <p>Give an example of a small data set for which the mean is larger than the median. Then give an example of a small data set for which the mean is smaller than the median.</p>
+    </exercise>
+  </exercises>
+</chapter>

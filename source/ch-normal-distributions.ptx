@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-normal-distributions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Normal Distributions</title>
+
+  <introduction>
+    <p>Up to now, our random variables have mostly been discrete. They took values like 0, 1, 2, 3, or perhaps the sum of two dice. But many real measurements do not behave that way. Height, weight, time, distance, and temperature can all vary along a continuum.</p>
+    <p>This chapter introduces <term>continuous random variables<idx><h>probability</h><h>continuous random variable</h></idx></term>. We begin with the uniform distribution, because it gives a clean way to see why probabilities for single points must be zero. Then we move to the much more important <term>normal distribution<idx><h>probability</h><h>normal distribution</h></idx></term>, the bell-shaped model that shows up everywhere in statistics.</p>
+  </introduction>
+
+  <section xml:id="sec-continuous-uniform">
+    <title>Continuous Random Variables and the Uniform Model</title>
+
+    <p>A random variable is <term>continuous<idx><h>probability</h><h>continuous random variable</h></idx></term> if its possible values fill an interval instead of landing in a countable list. A person's height is a standard example. So is the amount of time until the next customer arrives.</p>
+
+    <p>For a continuous random variable, probabilities come from intervals, not isolated points. The easiest model to start with is the <term>uniform distribution<idx><h>probability</h><h>uniform distribution</h></idx></term>.</p>
+
+    <example xml:id="ex-office-hours-uniform">
+      <title>An Arrival Time During Office Hours</title>
+      <p>Suppose a student arrives to office hours at a completely random time between noon and 1:00 p.m., and every time in that hour is equally likely. Let <m>X</m> be the arrival time, measured in minutes after noon.</p>
+      <p>Then <m>X</m> is uniformly distributed on the interval <m>[0,60]</m>.</p>
+      <p>Now ask a sequence of questions.</p>
+      <ol>
+        <li><p>What is <m>P(0\le X\le 30)</m>? Since this interval has length 30 out of a total length of 60, the probability is <m>30/60=0.5</m>.</p></li>
+        <li><p>What is <m>P(15\le X\le 45)</m>? This interval also has length 30, so its probability is again <m>0.5</m>.</p></li>
+        <li><p>What is <m>P(20\le X\le 35)</m>? Now the interval has length 15, so the probability is <m>15/60=0.25</m>.</p></li>
+        <li><p>What is <m>P(X=30)</m>, meaning the student arrives exactly at 12:30?</p></li>
+      </ol>
+      <p>The first three questions suggest the right idea: in a uniform model, probability depends on the <em>length</em> of an interval. But a single point has length 0. So</p>
+      <me>
+        P(X=30)=0.
+      </me>
+      <p>The same reasoning shows that <m>P(X=a)=0</m> for every specific value <m>a</m>. A continuous random variable can certainly take the value <m>a</m>; it is just that one exact point carries no area and therefore no probability mass by itself.</p>
+    </example>
+
+    <p>More generally, if <m>X</m> is uniformly distributed on <m>[a,b]</m>, then for any interval <m>[c,d]</m> inside <m>[a,b]</m>,</p>
+
+    <me>
+      P(c\le X\le d)=\frac{d-c}{b-a}.
+    </me>
+
+    <p>This formula says exactly what the office-hours example suggested: probability is proportional to interval length.</p>
+
+    <p>A <term>probability density function<idx><h>probability</h><h>probability density function</h></idx></term>, or PDF, is a function whose area over an interval gives probability. For the uniform distribution on <m>[a,b]</m>, the density is constant:</p>
+
+    <me>
+      f(x)=\frac{1}{b-a}\qquad\text{for }a\le x\le b.
+    </me>
+
+    <p>That is why the graph is just a rectangle. Probability is area, so for a continuous random variable, a single point has probability 0.</p>
+
+    <exercise xml:id="normal-inline-ex-1">
+      <p>A bus arrives at a stop at a time chosen uniformly at random between 8:00 and 8:20. Let <m>X</m> be the arrival time in minutes after 8:00.</p>
+      <ol>
+        <li><p>Find <m>P(0\le X\le 5)</m>.</p></li>
+        <li><p>Find <m>P(7\le X\le 12)</m>.</p></li>
+        <li><p>Explain why <m>P(X=10)=0</m>.</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-normal-distributions">
+    <title>Normal Distributions and Z-Scores</title>
+
+    <p>The most important continuous model in elementary statistics is the <term>normal distribution<idx><h>probability</h><h>normal distribution</h></idx></term>. Its graph is the familiar bell-shaped curve.</p>
+
+    <p>A normal distribution is determined by two numbers:</p>
+
+    <ul>
+      <li><p>the mean <m>\mu</m>, which tells us where the center is, and</p></li>
+      <li><p>the standard deviation <m>\sigma</m>, which tells us how spread out the distribution is.</p></li>
+    </ul>
+
+    <p>If <m>X</m> has a normal distribution with mean <m>\mu</m> and standard deviation <m>\sigma</m>, we write</p>
+
+    <me>
+      X\sim N(\mu,\sigma).
+    </me>
+
+    <example xml:id="ex-women-height-normal">
+      <title>A Normal Model for Heights</title>
+      <p>Suppose the heights of adult women in a population are modeled by a normal distribution with mean 64 inches and standard deviation 2.8 inches. Then</p>
+      <me>
+        X\sim N(64,2.8).
+      </me>
+      <p>This says the distribution is centered at 64 inches, and typical distances from the center are about 2.8 inches.</p>
+    </example>
+
+    <p>One of the nicest features of the normal curve is its symmetry. Values equally far above and below the mean have the same density, so the left half of the curve is a mirror image of the right half. The mean <m>\mu</m> sits right in the middle.</p>
+
+    <figure xml:id="fig-normal-mu-sigma">
+      <caption>The mean and standard deviation on a normal curve</caption>
+      <image width="76%" margins="12%">
+        <shortdescription>A bell-shaped normal curve with a dotted vertical line through the center labeled mu. The points of inflection are marked on both sides, and the horizontal distance from mu to the right inflection point is labeled sigma.</shortdescription>
+        <description>The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=11cm,
+              height=6.4cm,
+              xmin=-3.5,
+              xmax=3.5,
+              ymin=0,
+              ymax=0.46,
+              axis lines=left,
+              xlabel={$x$},
+              ylabel={},
+              xtick={-1,0,1},
+              xticklabels={$\mu-\sigma$,$\mu$,$\mu+\sigma$},
+              ytick=\empty,
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                thick,
+                domain=-3.5:3.5,
+                samples=240,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[
+                dotted,
+                thick,
+                color=black
+              ]
+              coordinates {(0,0) (0,0.42)};
+
+              \addplot[
+                only marks,
+                mark=*,
+                mark size=2pt,
+                color=black
+              ]
+              coordinates {
+                (-1,{1/sqrt(2*3.14159)*exp(-(-1)^2/2)})
+                (1,{1/sqrt(2*3.14159)*exp(-(1)^2/2)})
+              };
+
+              \draw[&lt;-&gt;,thick] (axis cs:0,{1/sqrt(2*3.14159)*exp(-(1)^2/2)}) -- (axis cs:1,{1/sqrt(2*3.14159)*exp(-(1)^2/2)});
+              \node at (axis cs:0.5,0.285) {$\sigma$};
+              \node at (axis cs:0.23,0.435) {$\mu$};
+              \node at (axis cs:-2.1,0.18) {\small symmetric};
+              \node at (axis cs:2.15,0.18) {\small symmetric};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>In <xref ref="fig-normal-mu-sigma"/>, the dotted line marks the mean <m>\mu</m>. The curve changes concavity at the inflection points, and each one is exactly one standard deviation from the center. So the horizontal distance from <m>\mu</m> to either inflection point is <m>\sigma</m>.</p>
+
+    <p>In the family of normal distributions, the one with mean 0 and standard deviation 1 is called the <term>standard normal distribution<idx><h>probability</h><h>standard normal distribution</h></idx></term>. It is customary to use <m>Z</m> to denote a random variable with the standard normal distribution <m>N(0,1)</m>.</p>
+
+    <p>A useful standardization is the <term>z-score<idx><h>probability</h><h>z-score</h></idx></term></p>
+
+    <me>
+      z=\frac{x-\mu}{\sigma}.
+    </me>
+
+    <p>The z-score tells us how many standard deviations a value <m>x</m> is above or below the mean. A positive z-score means the value is above the mean. A negative z-score means it is below the mean.</p>
+
+    <p>If <m>X\sim N(\mu,\sigma)</m>, then the transformation</p>
+
+    <me>
+      Z=\frac{X-\mu}{\sigma}
+    </me>
+
+    <p>recenters the distribution at 0 and rescales the horizontal axis so that one standard deviation becomes length 1. In that way, the normal curve for <m>X</m> is converted into the standard normal curve for <m>Z</m>. The important point is that probabilities are preserved under this relabeling of the axis. In particular, for any cutoff value <m>a</m>,</p>
+
+    <me>
+      P(X&lt;a)=P(Z&lt;z(a)),
+      \qquad\text{where}\qquad
+      z(a)=\frac{a-\mu}{\sigma}.
+    </me>
+
+    <p>So the area to the left of <m>a</m> under the curve for <m>X</m> is exactly the same as the area to the left of the corresponding z-score under the standard normal curve.</p>
+
+    <figure xml:id="fig-standardization-area">
+      <caption>Standardizing a normal random variable preserves left-tail area</caption>
+      <image width="94%" margins="3%">
+        <shortdescription>Two bell-shaped curves shown side by side. On the left, a normal curve for X has the region to the left of a shaded. On the right, the standard normal curve for Z has the region to the left of z(a) shaded. The shaded areas represent the same probability.</shortdescription>
+        <description>The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              at={(0cm,0cm)},
+              anchor=south west,
+              width=6.6cm,
+              height=5.8cm,
+              xmin=-4.2,
+              xmax=4.2,
+              ymin=0,
+              ymax=0.38,
+              axis lines=left,
+              xlabel={$x$},
+              ylabel={},
+              xtick={0,1.3},
+              xticklabels={$\mu$,$a$},
+              ytick=\empty,
+              title={$X\sim N(\mu,\sigma)$},
+              title style={font=\small},
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!25,
+                domain=-4.2:1.3,
+                samples=200
+              ]
+              {1/(1.3*sqrt(2*3.14159))*exp(-x^2/(2*1.3^2))} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-4.2:4.2,
+                samples=240,
+                color=black
+              ]
+              {1/(1.3*sqrt(2*3.14159))*exp(-x^2/(2*1.3^2))};
+
+              \addplot[dashed, color=black] coordinates {(0,0) (0,{1/(1.3*sqrt(2*3.14159))})};
+              \addplot[dashed, color=black] coordinates {(1.3,0) (1.3,{1/(1.3*sqrt(2*3.14159))*exp(-(1.3)^2/(2*1.3^2))})};
+              \node at (axis cs:-2.2,0.09) {$P(X&lt;a)$};
+            \end{axis}
+
+            \begin{axis}[
+              at={(8.0cm,0cm)},
+              anchor=south west,
+              width=6.6cm,
+              height=5.8cm,
+              xmin=-3.8,
+              xmax=3.8,
+              ymin=0,
+              ymax=0.46,
+              axis lines=left,
+              xlabel={$z$},
+              ylabel={},
+              xtick={0,1},
+              xticklabels={$0$,$z(a)$},
+              ytick=\empty,
+              title={$Z\sim N(0,1)$},
+              title style={font=\small},
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!25,
+                domain=-3.8:1,
+                samples=200
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-3.8:3.8,
+                samples=240,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[dashed, color=black] coordinates {(0,0) (0,{1/sqrt(2*3.14159)})};
+              \addplot[dashed, color=black] coordinates {(1,0) (1,{1/sqrt(2*3.14159)*exp(-1/2)})};
+              \node at (axis cs:-2.0,0.11) {$P(Z&lt;z(a))$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <example xml:id="ex-zscore-height">
+      <title>Interpreting a Z-Score</title>
+      <p>Using <m>X\sim N(64,2.8)</m>, the z-score of 62 inches is</p>
+      <me>
+        z=\frac{62-64}{2.8}\approx -0.714.
+      </me>
+      <p>So a height of 62 inches is about 0.71 standard deviations below the mean.</p>
+    </example>
+
+    <p>This matters because probability tables and technology are usually organized around the standard normal distribution.</p>
+  </section>
+
+  <section xml:id="sec-z-alpha-notation">
+    <title>The z-Alpha Notation</title>
+    <shorttitle>The z-Alpha Notation</shorttitle>
+
+    <p>When working with the standard normal distribution, we often use the notation <m>z_{\alpha}</m>. This is especially important later when we study confidence intervals and hypothesis tests.</p>
+
+    <p>By convention, <m>z_{\alpha}</m> is the value on the horizontal axis so that the area <em>to the right</em> under the standard normal curve is <m>\alpha</m>. In symbols,</p>
+
+    <me>
+      P(Z&gt;z_{\alpha})=\alpha.
+    </me>
+
+    <p>Since the total area under the curve is 1, the area to the left of <m>z_{\alpha}</m> is therefore <m>1-\alpha</m>:</p>
+
+    <me>
+      P(Z\le z_{\alpha})=1-\alpha.
+    </me>
+
+    <p>This is the standard convention used in statistics. For example, <m>z_{0.025}\approx 1.96</m> because the area to the right of 1.96 under the standard normal curve is 0.025.</p>
+
+    <figure xml:id="fig-z-alpha-right-tail">
+      <caption>The notation <m>z_{\alpha}</m> for the standard normal distribution</caption>
+      <image width="72%" margins="14%">
+        <shortdescription>A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area to the right of that line shaded and labeled alpha.</shortdescription>
+        <description>The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10cm,
+              height=6cm,
+              xmin=-3.5,
+              xmax=3.5,
+              ymin=0,
+              ymax=0.45,
+              axis lines=left,
+              xlabel={$z$},
+              ylabel={},
+              xtick={0,1.96},
+              xticklabels={$0$,$z_{\alpha}$},
+              ytick=\empty,
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!25,
+                domain=1.96:3.5,
+                samples=120
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-3.5:3.5,
+                samples=200,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(1.96,0) (1.96,{1/sqrt(2*3.14159)*exp(-(1.96)^2/2)})};
+
+              \node at (axis cs:2.55,0.11) {$\alpha$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate <m>z_{\alpha}</m>.</p>
+  </section>
+
+  <section xml:id="sec-normal-probabilities-percentiles">
+    <title>Normal Probabilities and Percentiles</title>
+
+    <p>For a continuous random variable, probability is area. So for a normal random variable, <m>P(a\le X\le b)</m> is the area under the normal curve between <m>a</m> and <m>b</m>.</p>
+
+    <p>Because <m>P(X=a)=0</m>, it does not matter whether the endpoints are included:</p>
+
+    <me>
+      P(a\le X\le b)=P(a&lt;X\le b)=P(a\le X&lt;b)=P(a&lt;X&lt;b).
+    </me>
+
+    <p>In practice, we usually convert the problem to z-scores and use technology or a table for the standard normal distribution.</p>
+
+    <example xml:id="ex-height-at-most-62">
+      <title>At Most 62 Inches</title>
+      <p>Continue with <m>X\sim N(64,2.8)</m>. To find the probability that a randomly selected woman is at most 62 inches tall, we standardize:</p>
+      <me>
+        z=\frac{62-64}{2.8}\approx -0.714.
+      </me>
+      <p>So</p>
+      <me>
+        P(X\le 62)=P(Z\le -0.714)\approx 0.2375.
+      </me>
+      <p>About 23.75% of the population is modeled as being 62 inches or shorter.</p>
+    </example>
+
+    <example xml:id="ex-height-between-60-and-70">
+      <title>Between 60 and 70 Inches</title>
+      <p>Again using <m>X\sim N(64,2.8)</m>, we find</p>
+      <me>
+        P(60\le X\le 70)=P(X\le 70)-P(X\le 60).
+      </me>
+      <p>Standardizing gives</p>
+      <me>
+        P(60\le X\le 70)=P\!\left(Z\le \frac{70-64}{2.8}\right)-P\!\left(Z\le \frac{60-64}{2.8}\right).
+      </me>
+      <p>Using technology,</p>
+      <me>
+        P(60\le X\le 70)\approx 0.9074.
+      </me>
+      <p>So about 90.74% of the population falls between 60 and 70 inches.</p>
+    </example>
+
+    <p>A <term>percentile<idx><h>data</h><h>percentile</h></idx></term> is a value below which a given percentage of the distribution lies.</p>
+
+    <example xml:id="ex-60th-percentile-height">
+      <title>The 60th Percentile</title>
+      <p>What height cuts off the lowest 60% of the distribution? In symbols, we want the value <m>x</m> such that</p>
+      <me>
+        P(X\le x)=0.60.
+      </me>
+      <p>Using inverse normal technology for <m>X\sim N(64,2.8)</m>, we get</p>
+      <me>
+        x\approx 64.71.
+      </me>
+      <p>So the 60th percentile is about 64.71 inches.</p>
+    </example>
+
+    <exercise xml:id="normal-inline-ex-2">
+      <p>Suppose test scores are modeled by <m>X\sim N(72,8)</m>.</p>
+      <ol>
+        <li><p>Find the z-score of 84.</p></li>
+        <li><p>Write the standardized form of <m>P(X\le 84)</m>.</p></li>
+        <li><p>Explain in words what the 90th percentile of this distribution means.</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>Continuous random variables are handled differently from discrete ones. Instead of adding probabilities for individual points, we measure probability by area over intervals.</p>
+
+    <ul>
+      <li><p>For a continuous random variable, <m>P(X=a)=0</m> for every single value <m>a</m>.</p></li>
+      <li><p>The uniform distribution is a simple model where probability is proportional to interval length.</p></li>
+      <li><p>A normal distribution is written <m>N(\mu,\sigma)</m> and is determined by its mean and standard deviation.</p></li>
+      <li><p>Z-scores convert any normal problem into a standard normal problem.</p></li>
+      <li><p>Normal probabilities are areas, and percentiles are cutoffs based on cumulative area.</p></li>
+    </ul>
+
+    <p>These ideas are not just about one more probability model. They are the bridge to statistical inference, where normal distributions describe the behavior of sample means, confidence intervals, and hypothesis tests.</p>
+  </conclusion>
+
+  <exercises xml:id="ch9-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch9-ex-1">
+      <p>A phone call arrives uniformly at random between 2:00 and 2:40 p.m. Let <m>X</m> be the arrival time in minutes after 2:00.</p>
+      <ol>
+        <li><p>Find <m>P(0\le X\le 10)</m>.</p></li>
+        <li><p>Find <m>P(12\le X\le 20)</m>.</p></li>
+        <li><p>Find <m>P(X=18)</m> and explain why.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch9-ex-2">
+      <p>The lifetime of a certain light bulb is modeled by <m>X\sim N(1200,150)</m>, where the units are hours.</p>
+      <ol>
+        <li><p>Find the z-score of 1350 hours.</p></li>
+        <li><p>Write the standardized form of <m>P(X\le 1350)</m>.</p></li>
+        <li><p>Write the standardized form of <m>P(1100\le X\le 1400)</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch9-ex-3">
+      <p>Exam scores are modeled by <m>X\sim N(78,10)</m>.</p>
+      <ol>
+        <li><p>What does it mean to say that 85 is the 76th percentile?</p></li>
+        <li><p>Would the 90th percentile be above or below the mean? Explain.</p></li>
+        <li><p>Would a score with z-score <m>-1.2</m> be above or below the mean? By about how many standard deviations?</p></li>
+      </ol>
+    </exercise>
+  </exercises>
+</chapter>

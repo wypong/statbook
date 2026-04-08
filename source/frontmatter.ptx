@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <bibinfo>
+    <author>
+      <personname>Wai Yan Pong</personname>
+    </author>
+    <date>
+      <today />
+    </date>
+
+    <website>
+      <url href="https://math.csudh.edu/~pong/">https://math.csudh.edu/~pong/</url>
+    </website>
+
+    <copyright>
+      <year>2026</year>
+      <holder>Wai Yan Pong</holder>
+      <shortlicense>This work is being developed as an open PreTeXt textbook.</shortlicense>
+    </copyright>
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items/>
+  </titlepage>
+
+  <colophon xml:id="front-colophon">
+    <p>This book is authored in <pretext /> and developed collaboratively over time.</p>
+    <p>The HTML version uses the <c>denver</c> theme.</p>
+  </colophon>
+</frontmatter>

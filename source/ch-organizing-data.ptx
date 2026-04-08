@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-organizing-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data Displays</title>
+  <shorttitle>Data Displays</shorttitle>
+
+  <introduction>
+    <p>Once we know what kind of data we have, the next question is how to present it so that someone can actually read it. A raw list of observations is often messy and hard to interpret. A good table or graph can turn that raw list into a pattern we can talk about.</p>
+    <p>In this chapter we start with tables, because tables are the most direct way to organize data. Then we move to graphs, which help us notice shape, clusters, gaps, and comparisons much faster. The main goal is not to decorate the data. The goal is to make the important features easier to see.</p>
+  </introduction>
+
+  <section xml:id="sec-frequency-tables">
+    <title>Frequency Tables and Relative Frequency</title>
+
+    <p>A <term>frequency table<idx><h>tables</h><h>frequency table</h></idx></term> organizes data by listing each value or category together with its <term>frequency<idx><h>tables</h><h>frequency</h></idx></term>, which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the <term>relative frequency<idx><h>tables</h><h>relative frequency</h></idx></term>. Relative frequency tells us the share of the data in each category.</p>
+
+    <me>
+      \text{relative frequency} = \frac{\text{frequency}}{\text{total number of observations}}
+    </me>
+
+    <p>Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to <m>1</m>, or equivalently to <m>100\%</m>.</p>
+
+    <example xml:id="ex-commute-frequency-table">
+      <title>How Students Get to Campus</title>
+      <p>Suppose a class records how 12 students usually travel to campus: auto, auto, metro, bike, auto, walk, metro, auto, bike, walk, metro, auto. A frequency table for this data is shown in <xref ref="tbl-commute-frequency"/>.</p>
+    </example>
+
+    <table xml:id="tbl-commute-frequency">
+      <title>Frequency and relative frequency for commuting to campus</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Mode of transportation</cell>
+          <cell>Frequency</cell>
+          <cell>Relative frequency</cell>
+        </row>
+        <row>
+          <cell>Auto</cell>
+          <cell>5</cell>
+          <cell><m>\frac{5}{12}\approx 0.417</m> or <m>41.7\%</m></cell>
+        </row>
+        <row>
+          <cell>Metro</cell>
+          <cell>3</cell>
+          <cell><m>\frac{3}{12}=0.25</m> or <m>25\%</m></cell>
+        </row>
+        <row>
+          <cell>Bike</cell>
+          <cell>2</cell>
+          <cell><m>\frac{2}{12}\approx 0.167</m> or <m>16.7\%</m></cell>
+        </row>
+        <row bottom="major">
+          <cell>Walk</cell>
+          <cell>2</cell>
+          <cell><m>\frac{2}{12}\approx 0.167</m> or <m>16.7\%</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>This table says more than the raw list did. We can immediately see that auto is the most common commuting method, and we can compare categories with either counts or percentages. If the class size changed next semester, the percentages would still make comparison easy.</p>
+
+    <p>Sometimes a variable has many possible values, or it is measured on a continuous scale. In that situation a row for every single value would not be very useful. Instead we group nearby values into <term>class intervals<idx><h>tables</h><h>class interval</h></idx></term>. A table built from intervals is called a <term>grouped frequency table<idx><h>tables</h><h>grouped frequency table</h></idx></term>.</p>
+
+    <example xml:id="ex-wait-time-grouped">
+      <title>Customer Wait Times</title>
+      <p>A coffee shop records the waiting time, in minutes, for 50 customers during a busy hour. Rather than listing every separate time, the manager groups the data into intervals. The grouped frequency table appears in <xref ref="tbl-wait-time-frequency"/>.</p>
+    </example>
+
+    <table xml:id="tbl-wait-time-frequency">
+      <title>Grouped frequency table for customer wait times</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Wait time (minutes)</cell>
+          <cell>Frequency</cell>
+          <cell>Relative frequency</cell>
+        </row>
+        <row>
+          <cell><m>[0,2)</m></cell>
+          <cell>6</cell>
+          <cell><m>\frac{6}{50}=0.12</m> or <m>12\%</m></cell>
+        </row>
+        <row>
+          <cell><m>[2,4)</m></cell>
+          <cell>14</cell>
+          <cell><m>\frac{14}{50}=0.28</m> or <m>28\%</m></cell>
+        </row>
+        <row>
+          <cell><m>[4,6)</m></cell>
+          <cell>18</cell>
+          <cell><m>\frac{18}{50}=0.36</m> or <m>36\%</m></cell>
+        </row>
+        <row>
+          <cell><m>[6,8)</m></cell>
+          <cell>9</cell>
+          <cell><m>\frac{9}{50}=0.18</m> or <m>18\%</m></cell>
+        </row>
+        <row bottom="major">
+          <cell><m>[8,10)</m></cell>
+          <cell>3</cell>
+          <cell><m>\frac{3}{50}=0.06</m> or <m>6\%</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>From this table we can see that the most common waiting times fall in the interval from 4 to 6 minutes. We can also say that <m>36\%</m> of the customers waited between 4 and 6 minutes, and only <m>6\%</m> waited between 8 and 10 minutes.</p>
+
+    <p>Frequency tables are simple, but they do a lot of work. They help us summarize the data, compare categories, and prepare for the graphs we will make next.</p>
+  </section>
+
+  <section xml:id="sec-graphs-for-data">
+    <title>Graphs for Displaying Data</title>
+
+    <p>Graphs are often faster to read than tables because they turn numerical information into shape and height. Different graphs are useful for different kinds of data. A <term>dot plot<idx><h>graphs</h><h>dot plot</h></idx></term> works well for small sets of discrete numerical data. A <term>bar chart<idx><h>graphs</h><h>bar chart</h></idx></term> is good for comparing categories. A <term>stem-and-leaf plot<idx><h>graphs</h><h>stem-and-leaf plot</h></idx></term> keeps the original data values visible. A <term>histogram<idx><h>graphs</h><h>histogram</h></idx></term> and a <term>frequency polygon<idx><h>graphs</h><h>frequency polygon</h></idx></term> are especially useful for grouped quantitative data.</p>
+
+    <example xml:id="ex-dot-plot">
+      <title>A Dot Plot of Siblings</title>
+      <p>Suppose 12 students report the number of siblings they have: 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4. The dot plot in <xref ref="fig-dotplot-siblings"/> stacks one dot for each student above the corresponding number of siblings.</p>
+    </example>
+
+    <figure xml:id="fig-dotplot-siblings">
+      <caption>Dot plot for number of siblings</caption>
+      <image width="70%">
+        <shortdescription>A dot plot with sibling counts from 0 through 4. There is one dot above 0, three above 1, three above 2, three above 3, and two above 4.</shortdescription>
+        <description>The horizontal axis is labeled Number of siblings and is marked at 0, 1, 2, 3, and 4. One dot is stacked above 0. Three dots are stacked above 1. Three dots are stacked above 2. Three dots are stacked above 3. Two dots are stacked above 4. The tallest stacks occur at 1, 2, and 3, each with frequency 3.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (-0.5,0) -- (4.6,0) node[right] {Number of siblings};
+            \foreach \x in {0,1,2,3,4} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\x};
+            }
+            \foreach \y in {1} {\filldraw[blue] (0,\y*0.45) circle (2.3pt);}
+            \foreach \y in {1,2,3} {\filldraw[blue] (1,\y*0.45) circle (2.3pt);}
+            \foreach \y in {1,2,3} {\filldraw[blue] (2,\y*0.45) circle (2.3pt);}
+            \foreach \y in {1,2,3} {\filldraw[blue] (3,\y*0.45) circle (2.3pt);}
+            \foreach \y in {1,2} {\filldraw[blue] (4,\y*0.45) circle (2.3pt);}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>A dot plot is compact and honest. It shows every observation while still making the distribution easy to read. For small data sets, that is a nice combination.</p>
+
+    <p>For categorical data, a bar chart is usually the better choice. The categories are placed on one axis, and the height of each bar shows its frequency or relative frequency.</p>
+
+    <figure xml:id="fig-bar-chart-commute">
+      <caption>Bar chart for commuting to campus</caption>
+      <image width="80%">
+        <shortdescription>A vertical bar chart with four categories: Auto at height 5, Metro at height 3, Bike at height 2, and Walk at height 2.</shortdescription>
+        <description>The horizontal axis lists Auto, Metro, Bike, and Walk. The vertical axis is labeled Frequency and runs from 0 to 6. The Auto bar reaches 5, the Metro bar reaches 3, and the Bike and Walk bars each reach 2. Auto is the tallest bar.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              ybar,
+              ymin=0,
+              ymax=6,
+              symbolic x coords={Auto,Metro,Bike,Walk},
+              xtick=data,
+              ylabel={Frequency},
+              width=11cm,
+              height=6.5cm,
+              bar width=16pt,
+              enlarge x limits=0.2,
+              nodes near coords,
+              every axis plot/.append style={fill=teal!70}
+            ]
+              \addplot coordinates {(Auto,5) (Metro,3) (Bike,2) (Walk,2)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>The bar chart in <xref ref="fig-bar-chart-commute"/> shows the same information as <xref ref="tbl-commute-frequency"/>, but now the comparisons are visual. We can tell right away that auto is the most common category and that bike and walk are tied.</p>
+
+    <example xml:id="ex-stem-leaf">
+      <title>A Stem-and-Leaf Plot</title>
+      <p>Consider these quiz scores: 72, 74, 76, 78, 80, 81, 83, 83, 85, 88, 91, 94. A stem-and-leaf plot separates each score into a stem and a leaf. In this case the tens digits are stems and the ones digits are leaves, as shown in <xref ref="tbl-stem-leaf-scores"/>.</p>
+    </example>
+
+    <table xml:id="tbl-stem-leaf-scores">
+      <title>Stem-and-leaf plot for quiz scores</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Stem</cell>
+          <cell>Leaves</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>2, 4, 6, 8</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0, 1, 3, 3, 5, 8</cell>
+        </row>
+        <row bottom="major">
+          <cell>9</cell>
+          <cell>1, 4</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>The key idea is that the plot still contains the original data values. For example, the leaf 3 on stem 8 represents a score of 83. A stem-and-leaf plot is handy when the data set is not too large and you want both a picture and the exact values.</p>
+
+    <p>When the data is grouped into intervals, a histogram is often the natural graph. The bars in a histogram touch because the intervals sit next to each other on a number line. The histogram in <xref ref="fig-histogram-wait-time"/> uses the grouped wait-time data from <xref ref="tbl-wait-time-frequency"/>.</p>
+
+    <figure xml:id="fig-histogram-wait-time">
+      <caption>Histogram for customer wait times</caption>
+      <image width="80%">
+        <shortdescription>A histogram with five touching bars for the intervals 0 to 2, 2 to 4, 4 to 6, 6 to 8, and 8 to 10 minutes. Their heights are 6, 14, 18, 9, and 3.</shortdescription>
+        <description>The horizontal axis is labeled Wait time in minutes and is marked at 0, 2, 4, 6, 8, and 10. The vertical axis is labeled Frequency and runs from 0 to 20. Five adjacent bars represent the intervals [0,2), [2,4), [4,6), [6,8), and [8,10). Their heights are 6, 14, 18, 9, and 3 respectively. The tallest bar is the interval from 4 to 6 minutes.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (0,0) -- (10.8,0) node[right] {Wait time (minutes)};
+            \draw[->] (0,0) -- (0,4.7) node[above] {Frequency};
+            \foreach \x/\label in {0/0,2/2,4/4,6/6,8/8,10/10} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\label};
+            }
+            \foreach \y/\label in {0/0,1/5,2/10,3/15,4/20} {
+              \draw (0.08,\y) -- (-0.08,\y) node[left] {\label};
+            }
+            \filldraw[fill=orange!45, draw=black] (0,0) rectangle (2,1.2);
+            \filldraw[fill=orange!45, draw=black] (2,0) rectangle (4,2.8);
+            \filldraw[fill=orange!45, draw=black] (4,0) rectangle (6,3.6);
+            \filldraw[fill=orange!45, draw=black] (6,0) rectangle (8,1.8);
+            \filldraw[fill=orange!45, draw=black] (8,0) rectangle (10,0.6);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>A <term>frequency polygon<idx><h>graphs</h><h>frequency polygon</h></idx></term> is built from the same grouped data, but instead of bars we plot the class <term>midpoints<idx><h>graphs</h><h>midpoint</h></idx></term> against the frequencies and join the points with line segments. This is especially helpful when we want to compare shapes or place more than one distribution on the same set of axes.</p>
+
+    <figure xml:id="fig-frequency-polygon-wait-time">
+      <caption>Frequency polygon for customer wait times</caption>
+      <image width="80%">
+        <shortdescription>A line graph formed by connecting the points at midpoints 1, 3, 5, 7, and 9 with frequencies 6, 14, 18, 9, and 3, together with zero-frequency endpoints at -1 and 11.</shortdescription>
+        <description>The horizontal axis is labeled Wait time in minutes and the vertical axis is labeled Frequency. A polyline starts at the point (-1,0), rises to (1,6), then to (3,14), peaks at (5,18), drops to (7,9), then to (9,3), and returns to (11,0). The highest point occurs at the midpoint 5, corresponding to the interval from 4 to 6 minutes. The two endpoints lie one class width beyond the first and last class midpoints.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (-1.4,0) -- (11.6,0) node[right] {Wait time (minutes)};
+            \draw[->] (0,0) -- (0,4.7) node[above] {Frequency};
+            \foreach \x/\label in {-1/-1,1/1,3/3,5/5,7/7,9/9,11/11} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\label};
+            }
+            \foreach \y/\label in {0/0,1/5,2/10,3/15,4/20} {
+              \draw (0.08,\y) -- (-0.08,\y) node[left] {\label};
+            }
+            \draw[thick, blue] (-1,0) -- (1,1.2) -- (3,2.8) -- (5,3.6) -- (7,1.8) -- (9,0.6) -- (11,0);
+            \foreach \x/\y in {-1/0,1/1.2,3/2.8,5/3.6,7/1.8,9/0.6,11/0} {
+              \filldraw[blue] (\x,\y) circle (2.2pt);
+            }
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>Each graph has its own job. The trick is not to memorize names blindly, but to match the graph to the kind of data you have and the question you want to answer.</p>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>This chapter focused on two basic jobs: organizing data in tables and displaying data with graphs. Both jobs are part of descriptive statistics, and both help us see what the data is saying before we start computing more detailed summaries.</p>
+
+    <ul>
+      <li><p>A frequency table lists values or categories together with how often they occur.</p></li>
+      <li><p>Relative frequency is the frequency divided by the total number of observations, often written as a percentage.</p></li>
+      <li><p>Grouped frequency tables use class intervals when the data has many values or is measured on a continuous scale.</p></li>
+      <li><p>Dot plots work well for small sets of discrete numerical data.</p></li>
+      <li><p>Bar charts are used to compare categories.</p></li>
+      <li><p>Stem-and-leaf plots show the distribution while preserving the original data values.</p></li>
+      <li><p>Histograms and frequency polygons are useful for grouped quantitative data.</p></li>
+    </ul>
+
+    <p>If you can choose a sensible table or graph, you are already doing an important part of statistical thinking. You are deciding how to make the data readable.</p>
+  </conclusion>
+
+  <exercises xml:id="ch2-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch2-ex-1">
+      <p>A survey asks 20 students which streaming platform they use most often. The results are: Netflix, Hulu, Netflix, Disney+, Netflix, Hulu, Max, Netflix, Disney+, Hulu, Netflix, Max, Hulu, Hulu, Disney+, Netflix, Max, Hulu, Netflix, Disney+.</p>
+      <p>Construct a frequency table and a relative frequency table for this data.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-2">
+      <p>A bakery records the number of muffins sold in an hour on 15 different mornings: 8, 11, 10, 12, 9, 10, 8, 13, 11, 10, 12, 9, 10, 11, 8.</p>
+      <p>Make a frequency table for the data and identify the most common value.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-3">
+      <p>A grouped frequency table shows the frequencies 4, 9, 15, 8, and 4 for five consecutive classes, and there are 40 observations in all.</p>
+      <p>Find the relative frequency of each class and check that the relative frequencies sum to <m>1</m>.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-4">
+      <p>A gym measures workout time in minutes for 60 members and reports the grouped frequencies below.</p>
+      <p><m>[0,20)</m>: 6, <m>[20,40)</m>: 18, <m>[40,60)</m>: 21, <m>[60,80)</m>: 11, <m>[80,100)</m>: 4.</p>
+      <p>Which interval has the greatest frequency? Which interval has the smallest relative frequency?</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-5">
+      <p>Which display would be most appropriate in each situation: dot plot, bar chart, stem-and-leaf plot, histogram, or frequency polygon?</p>
+      <ol>
+        <li><p>The blood types of patients in a clinic.</p></li>
+        <li><p>The number of text messages sent yesterday by each student in a small class.</p></li>
+        <li><p>A large set of waiting times measured to the nearest tenth of a minute.</p></li>
+        <li><p>A short list of quiz scores where you want to keep the original scores visible.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-6">
+      <p>Draw a dot plot for the data set 0, 1, 1, 2, 2, 2, 3, 4, 4, 5.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-7">
+      <p>Use the commuting data from <xref ref="tbl-commute-frequency"/> to draw a bar chart by hand or with software. Then write one sentence comparing the categories.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-8">
+      <p>Construct a stem-and-leaf plot for the following exam scores: 61, 64, 66, 70, 72, 72, 75, 78, 81, 84, 88, 90.</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-9">
+      <p>Use the wait-time data in <xref ref="tbl-wait-time-frequency"/> to sketch a histogram. Which class interval contains the modal class (the class with the greatest frequency)?</p>
+    </exercise>
+
+    <exercise xml:id="ch2-ex-10">
+      <p>Using the same grouped wait-time data in <xref ref="tbl-wait-time-frequency"/>, list the class midpoints and use them to sketch a frequency polygon.</p>
+    </exercise>
+  </exercises>
+</chapter>

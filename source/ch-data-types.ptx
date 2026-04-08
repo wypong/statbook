@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-data-types" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data Types</title>
+
+  <introduction>
+    <p>When people say they have data, that does not tell us very much. A list of blood types, a collection of exam scores, and a set of daily temperatures are all data, but they are not the same kind of data. Before we make graphs, compute averages, or carry out statistical analysis, we need to understand what kind of information we are looking at. That first step matters because the type of data affects which summaries make sense and which conclusions are reasonable.</p>
+    <p>In this chapter we will sort data into useful categories. We will begin with the broad distinction between qualitative and quantitative data, then break those ideas into smaller subtypes, and finally connect them to the four traditional levels of measurement.</p>
+  </introduction>
+
+  <section xml:id="sec-classifying-data">
+    <title>Classifying Data</title>
+
+    <p>A useful way to organize the main data types is to think of them as a classification tree. We first decide whether the data is qualitative or quantitative. Then we refine the classification one more step.</p>
+
+    <ul>
+      <li>
+        <p><term>Qualitative data<idx><h>data</h><h>qualitative</h></idx></term>, also called <term>categorical data<idx><h>data</h><h>categorical</h></idx></term>, records labels, names, or categories.</p>
+        <ul>
+          <li><p><term>Nominal data<idx><h>data</h><h>nominal</h></idx></term>: categories with no natural order.</p></li>
+          <li><p><term>Ordinal data<idx><h>data</h><h>ordinal</h></idx></term>: categories with a meaningful order, but without equal numerical gaps.</p></li>
+        </ul>
+      </li>
+      <li>
+        <p><term>Quantitative data<idx><h>data</h><h>quantitative</h></idx></term>, also called <term>numerical data<idx><h>data</h><h>numerical</h></idx></term>, records counts or measurements.</p>
+        <ul>
+          <li><p><term>Discrete data<idx><h>data</h><h>discrete</h></idx></term>: values obtained by counting.</p></li>
+          <li><p><term>Continuous data<idx><h>data</h><h>continuous</h></idx></term>: values obtained by measuring.</p></li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>This tree is simple, but it is powerful. Once we know where a variable belongs, we already know a lot about how to describe it. Category labels are usually summarized by counts or percentages, while numerical data can often be summarized by averages, spreads, and graphs built around number lines.</p>
+
+    <example xml:id="ex-gym-checkin">
+      <title>Gym Check-In Data</title>
+      <p>A gym records each member's membership plan, locker preference, number of visits this month, and time spent on the treadmill today. The membership plan is qualitative because it is a category label. Locker preference such as upper, middle, or lower is qualitative and ordinal because the choices have an order. The number of visits is quantitative and discrete because it is counted. Time spent on the treadmill is quantitative and continuous because it is measured.</p>
+    </example>
+
+    <example xml:id="ex-online-store">
+      <title>Online Store Data</title>
+      <p>An online store keeps track of payment method, customer satisfaction rating, number of items in an order, and delivery time in hours. Payment method is nominal. Customer satisfaction on a five-star scale is ordinal. Number of items is discrete. Delivery time is continuous.</p>
+    </example>
+
+    <exercise xml:id="cp-classification-tree">
+      <title>Checkpoint</title>
+      <p>Classify each variable as nominal, ordinal, discrete, or continuous: type of housing, finish level in a video game (beginner, intermediate, advanced), number of classes missed, and amount of sleep last night.</p>
+    </exercise>
+
+    <p>Qualitative data answers questions like “Which group?” or “What kind?” Quantitative data answers questions like “How many?” or “How much?” Within qualitative data, nominal and ordinal variables differ by whether order matters. Within quantitative data, discrete and continuous variables differ by whether the values arise from counting or measuring.</p>
+
+    <ul>
+      <li><p>Nominal examples: browser type, favorite fruit, blood type, and airline carrier.</p></li>
+      <li><p>Ordinal examples: hotel ratings, course grades, pain level, and military rank.</p></li>
+      <li><p>Discrete examples: number of logins, goals scored, books checked out, and children in a family.</p></li>
+      <li><p>Continuous examples: rainfall, waiting time, blood pressure, and distance run.</p></li>
+    </ul>
+
+    <example xml:id="ex-hospital-triage">
+      <title>Hospital Triage</title>
+      <p>In an emergency room, a patient's triage level might be coded as immediate, urgent, less urgent, or nonurgent. That variable is ordinal because the levels have a clear order. The patient's pulse rate is quantitative. If it is recorded as beats per minute, it is usually treated as discrete because it is based on a count. The patient's body mass is continuous because it is measured.</p>
+    </example>
+
+    <exercise xml:id="cp-mixed-classification">
+      <title>Checkpoint</title>
+      <p>A music app records subscription type, playlist mood label, number of songs skipped in a session, and total listening time. Classify each variable as nominal, ordinal, discrete, or continuous.</p>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-levels-of-measurement">
+    <title>Levels of Measurement</title>
+
+    <p>The four traditional <term>levels of measurement<idx><h>measurement</h><h>levels</h></idx></term> are nominal, ordinal, interval, and ratio. These levels tell us not only whether the data is categorical or numerical, but also how much information the values carry.</p>
+
+    <p>The <term>nominal scale<idx><h>measurement</h><h>nominal scale</h></idx></term> groups observations into categories with no order. The <term>ordinal scale<idx><h>measurement</h><h>ordinal scale</h></idx></term> places observations in order, but the differences between categories are not measured evenly. The <term>interval scale<idx><h>measurement</h><h>interval scale</h></idx></term> has equal intervals, but no true zero, so differences are meaningful while ratios are not. The <term>ratio scale<idx><h>measurement</h><h>ratio scale</h></idx></term> has equal intervals and a true zero, so both differences and ratios are meaningful.</p>
+
+    <example xml:id="ex-levels-of-measurement">
+      <title>Comparing Temperature and Length</title>
+      <p>Temperature measured in Celsius is interval data. The difference between 10 degrees and 20 degrees is the same size as the difference between 20 degrees and 30 degrees, but 20 degrees Celsius is not twice as hot as 10 degrees Celsius because zero does not mean the complete absence of temperature. By contrast, length is ratio data: 10 feet really is twice as long as 5 feet, and 0 feet means no length at all.</p>
+    </example>
+
+    <exercise xml:id="cp-levels-of-measurement">
+      <title>Checkpoint</title>
+      <p>Identify the level of measurement for each variable: jersey number, finishing place in a race, temperature in Fahrenheit, and monthly rent in dollars.</p>
+    </exercise>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>The main goal of this chapter was to sort variables into useful types before doing any serious analysis. A good first question is whether a variable is qualitative or quantitative.</p>
+
+    <ul>
+      <li><p>Qualitative data describes categories. It is split into nominal data and ordinal data.</p></li>
+      <li><p>Quantitative data describes counts or measurements. It is split into discrete data and continuous data.</p></li>
+      <li><p>Nominal data has no natural order, while ordinal data does have an order.</p></li>
+      <li><p>Discrete data usually comes from counting, while continuous data usually comes from measuring.</p></li>
+      <li><p>The four levels of measurement are nominal, ordinal, interval, and ratio.</p></li>
+      <li><p>Interval data has equal differences but no true zero. Ratio data has equal differences and a true zero.</p></li>
+    </ul>
+
+    <p>If you can classify a variable correctly, then you are already in a much better position to choose appropriate graphs, summaries, and methods of analysis.</p>
+  </conclusion>
+
+  <exercises xml:id="ch1-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch1-ex-1">
+      <p>Classify each variable as qualitative or quantitative: favorite season, age of a used car, student ID number, and number of courses completed.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-2">
+      <p>Classify each variable as nominal or ordinal: medal type in a competition, brand of cereal, customer satisfaction level, and blood type.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-3">
+      <p>Classify each variable as discrete or continuous: number of customers in line, amount of gasoline in a tank, number of goals scored by a team, and height of a sunflower plant.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-4">
+      <p>Identify the level of measurement for each variable: postal ZIP code, class rank, temperature in Celsius, and annual salary.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-5">
+      <p>A university records the following information about students: housing type, GPA, number of clubs joined, and academic standing. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-6">
+      <p>A weather station reports sky condition, wind speed, number of rainy days this month, and temperature in Fahrenheit. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-7">
+      <p>Give one example of your own for each of the following: nominal data, ordinal data, discrete data, and continuous data.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-8">
+      <p>Explain why a movie rating system such as one star through five stars is usually treated as ordinal rather than interval data.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-9">
+      <p>Explain why temperature measured in Kelvin is ratio data, while temperature measured in Celsius is interval data.</p>
+    </exercise>
+
+    <exercise xml:id="ch1-ex-10">
+      <p>A hospital records patient blood type, pain score from 1 to 10, number of previous surgeries, and body temperature. Classify each variable as carefully as you can and justify any choice that might be debatable.</p>
+    </exercise>
+  </exercises>
+</chapter>

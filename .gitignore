@@ -1,0 +1,11 @@
+.cache/
+.error_schema.log
+logs/
+output/
+AGENTS.md
+
+# Common editor/system clutter
+.DS_Store
+*~
+*.swp
+*.swo

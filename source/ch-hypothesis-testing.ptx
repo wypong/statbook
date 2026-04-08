@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-hypothesis-testing" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Hypothesis Testing</title>
+
+  <introduction>
+    <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test<idx><h>inference</h><h>hypothesis test</h></idx></term> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
+    <p>This chapter introduces the basic logic of testing a population mean. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
+  </introduction>
+
+  <section xml:id="sec-hypothesis-tests-basics">
+    <title>Null Hypotheses and P-Values</title>
+    <shorttitle>Null Hypotheses and P-Values</shorttitle>
+
+    <p>A hypothesis test begins with two competing statements.</p>
+
+    <ul>
+      <li><p>The <term>null hypothesis<idx><h>inference</h><h>null hypothesis</h></idx></term>, written <m>H_0</m>, is the claim we test against.</p></li>
+      <li><p>The <term>alternative hypothesis<idx><h>inference</h><h>alternative hypothesis</h></idx></term>, written <m>H_a</m>, is what we will support if the data give enough evidence against <m>H_0</m>.</p></li>
+    </ul>
+
+    <p>For tests about a population mean, the null hypothesis usually has the form</p>
+
+    <me>
+      H_0:\mu=\mu_0.
+    </me>
+
+    <p>The alternative can take one of three common forms:</p>
+
+    <me>
+      H_a:\mu&lt;\mu_0,\qquad
+      H_a:\mu&gt;\mu_0,\qquad
+      H_a:\mu\ne\mu_0.
+    </me>
+
+    <p>These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.</p>
+
+    <p>The next ingredient is the <term>test statistic<idx><h>inference</h><h>test statistic</h></idx></term>, a standardized number that measures how far the sample result is from the null value. For one-sample tests of a mean, we use</p>
+
+    <me>
+      z=\frac{\overline{x}-\mu_0}{\sigma/\sqrt{n}}
+      \qquad\text{or}\qquad
+      t=\frac{\overline{x}-\mu_0}{s/\sqrt{n}},
+    </me>
+
+    <p>depending on whether a z-test or t-test is appropriate.</p>
+
+    <p>The <term>significance level<idx><h>inference</h><h>significance level</h></idx></term>, written <m>\alpha</m>, is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.</p>
+
+    <p>One way to make the decision is by using a <term>p-value<idx><h>inference</h><h>p-value</h></idx></term>. The p-value is the probability, assuming <m>H_0</m> is true, of getting a test statistic at least as extreme as the one observed.</p>
+
+    <p>The smaller the p-value, the stronger the evidence against <m>H_0</m>. The decision rule is simple:</p>
+
+    <ul>
+      <li><p>If the p-value is less than <m>\alpha</m>, reject <m>H_0</m>.</p></li>
+      <li><p>If the p-value is at least <m>\alpha</m>, fail to reject <m>H_0</m>.</p></li>
+    </ul>
+
+    <p>Notice the wording. We say <em>fail to reject</em>, not “accept <m>H_0</m>.” A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.</p>
+
+    <example xml:id="ex-battery-setup">
+      <title>Setting Up a Test</title>
+      <p>A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are</p>
+      <me>
+        H_0:\mu=22
+        \qquad\text{and}\qquad
+        H_a:\mu&lt;22.
+      </me>
+      <p>Because the alternative says “less than,” this is a left-tailed test.</p>
+    </example>
+  </section>
+
+  <section xml:id="sec-type1-type2-errors">
+    <title>Type I and Type II Errors</title>
+
+    <p>Any hypothesis test can make two different kinds of mistakes.</p>
+
+    <ul>
+      <li><p>A <term>Type I error<idx><h>inference</h><h>Type I error</h></idx></term> happens when we reject <m>H_0</m> even though <m>H_0</m> is actually true.</p></li>
+      <li><p>A <term>Type II error<idx><h>inference</h><h>Type II error</h></idx></term> happens when we fail to reject <m>H_0</m> even though <m>H_0</m> is actually false.</p></li>
+    </ul>
+
+    <table xml:id="tbl-type1-type2">
+      <title>Possible decisions in a hypothesis test</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell><m>H_0</m> true</cell>
+          <cell><m>H_0</m> false</cell>
+        </row>
+        <row>
+          <cell>Reject <m>H_0</m></cell>
+          <cell>Type I error</cell>
+          <cell>Correct decision</cell>
+        </row>
+        <row bottom="major">
+          <cell>Fail to reject <m>H_0</m></cell>
+          <cell>Correct decision</cell>
+          <cell>Type II error</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>The significance level <m>\alpha</m> is the probability of a Type I error:</p>
+
+    <me>
+      \alpha=P(\text{Type I error}).
+    </me>
+
+    <p>That is why choosing a smaller significance level makes the test more cautious about rejecting the null hypothesis.</p>
+
+    <example xml:id="ex-type-errors-batteries">
+      <title>Reading the Errors in Context</title>
+      <p>Return to the battery example with</p>
+      <me>
+        H_0:\mu=22,\qquad H_a:\mu&lt;22.
+      </me>
+      <p>In context:</p>
+      <ul>
+        <li><p>A Type I error means we conclude the mean battery life is less than 22 hours when in fact the true mean is really 22 hours.</p></li>
+        <li><p>A Type II error means we fail to detect a drop in battery life and keep the 22-hour claim even though the true mean is actually less than 22 hours.</p></li>
+      </ul>
+    </example>
+
+    <p>The two error types pull in opposite directions. If we make <m>\alpha</m> smaller, Type I errors become less likely, but it usually becomes harder to reject <m>H_0</m>, so Type II errors can become more likely unless we also increase the sample size.</p>
+
+    <p>The probability of a Type II error is often written <m>\beta</m>. The quantity</p>
+
+    <me>
+      1-\beta
+    </me>
+
+    <p>is called the <term>power<idx><h>inference</h><h>power of a test</h></idx></term> of the test. Power is the probability that the test successfully detects a false null hypothesis.</p>
+
+    <p>In practice, larger samples improve power. With more data, the test statistic has a better chance to separate real effects from ordinary random variation.</p>
+
+    <exercise xml:id="ht-inline-ex-1">
+      <p>A school tests whether the mean math score has increased from 70 points. The hypotheses are <m>H_0:\mu=70</m> and <m>H_a:\mu&gt;70</m>.</p>
+      <ol>
+        <li><p>Describe a Type I error in context.</p></li>
+        <li><p>Describe a Type II error in context.</p></li>
+        <li><p>Which error would the school want to avoid more strongly if a new program is very expensive?</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-one-sample-mean-tests">
+    <title>One-Sample Tests for a Mean</title>
+
+    <p>For a one-sample test of a mean, the test statistic depends on the setting:</p>
+
+    <ul>
+      <li><p>Use a z-test when the population standard deviation is known, or when the sample is large enough that using <m>s</m> in its place is reasonable.</p></li>
+      <li><p>Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.</p></li>
+    </ul>
+
+    <example xml:id="ex-battery-test">
+      <title>A Left-Tailed Test for Battery Life</title>
+      <p>A sample of 50 batteries has mean lifetime <m>\overline{x}=21.8</m> hours and sample standard deviation <m>s=0.9</m> hours. Test</p>
+      <me>
+        H_0:\mu=22
+        \qquad\text{versus}\qquad
+        H_a:\mu&lt;22
+      </me>
+      <p>at significance level <m>\alpha=0.10</m>.</p>
+      <p>Because the sample is large, we use the z statistic</p>
+      <me>
+        z=\frac{21.8-22}{0.9/\sqrt{50}}\approx -1.57.
+      </me>
+      <p>The p-value is</p>
+      <me>
+        P(Z\le -1.57)\approx 0.0582.
+      </me>
+      <p>Since <m>0.0582&lt;0.10</m>, we reject <m>H_0</m>. At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.</p>
+    </example>
+
+    <example xml:id="ex-distance-t-test">
+      <title>A Two-Tailed T-Test</title>
+      <p>Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean <m>\overline{x}=2.3</m> and sample standard deviation <m>s=0.2449</m>. We test</p>
+      <me>
+        H_0:\mu=2.5
+        \qquad\text{versus}\qquad
+        H_a:\mu\ne 2.5
+      </me>
+      <p>at the 5% significance level.</p>
+      <p>Because the sample is small and <m>\sigma</m> is unknown, we use a t-test with <m>df=9</m>:</p>
+      <me>
+        t=\frac{2.3-2.5}{0.2449/\sqrt{10}}\approx -2.582.
+      </me>
+      <p>For a two-tailed test with <m>\alpha=0.05</m> and <m>df=9</m>, the critical values are about <m>\pm 2.262</m>. Since <m>-2.582</m> falls beyond the left critical value, we reject <m>H_0</m>. The data suggest that the true mean estimate differs from 2.5 feet.</p>
+    </example>
+
+    <p>Whether we use a critical-value method or a p-value method, the logic is the same: a test statistic far from what <m>H_0</m> predicts counts as evidence against <m>H_0</m>.</p>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>Hypothesis testing is the formal side of statistical decision-making.</p>
+
+    <ul>
+      <li><p>The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.</p></li>
+      <li><p>A p-value measures how surprising the sample would be if the null hypothesis were true.</p></li>
+      <li><p>Reject <m>H_0</m> when the p-value is smaller than the significance level <m>\alpha</m>.</p></li>
+      <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
+      <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
+      <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
+    </ul>
+
+    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation.</p>
+  </conclusion>
+
+  <exercises xml:id="ch11-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch11-ex-1">
+      <p>For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.</p>
+      <ol>
+        <li><p><m>H_0:\mu=18</m>, <m>H_a:\mu&gt;18</m></p></li>
+        <li><p><m>H_0:\mu=45</m>, <m>H_a:\mu&lt;45</m></p></li>
+        <li><p><m>H_0:\mu=100</m>, <m>H_a:\mu\ne 100</m></p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-2">
+      <p>A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests <m>H_0:\mu=16</m> against <m>H_a:\mu\ne 16</m>.</p>
+      <ol>
+        <li><p>Describe a Type I error in context.</p></li>
+        <li><p>Describe a Type II error in context.</p></li>
+        <li><p>What does it mean if the test uses <m>\alpha=0.05</m>?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-3">
+      <p>A sample of size 64 has mean <m>\overline{x}=29.4</m> and sample standard deviation <m>s=3.2</m>. Test <m>H_0:\mu=30</m> against <m>H_a:\mu&lt;30</m> at the 5% significance level.</p>
+      <ol>
+        <li><p>Compute the test statistic.</p></li>
+        <li><p>State whether the test is a z-test or a t-test.</p></li>
+        <li><p>Would you reject <m>H_0</m> or fail to reject <m>H_0</m>?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-4">
+      <p>Why is “fail to reject <m>H_0</m>” a better phrase than “accept <m>H_0</m>”?</p>
+    </exercise>
+  </exercises>
+</chapter>

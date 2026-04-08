@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="170" viewBox="0 0 720 170" role="img" aria-labelledby="title desc">
+  <title id="title">Boxplot based on the five-number summary 3, 5.5, 8, 13, 18</title>
+  <desc id="desc">A horizontal boxplot on a scale from 0 to 20. The left whisker reaches 3, the box runs from 5.5 to 13, the median is marked at 8, and the right whisker reaches 18.</desc>
+  <style>
+    .axis { stroke: #000; stroke-width: 2; }
+    .tick { stroke: #000; stroke-width: 2; }
+    .plot { stroke: #000; stroke-width: 3; fill: none; }
+    .label { font: 16px serif; fill: #000; }
+    .xlabel { font: 18px serif; fill: #000; }
+  </style>
+  <line class="axis" x1="55" y1="120" x2="665" y2="120"/>
+  <polygon points="665,120 654,115 654,125" fill="#000"/>
+
+  <g>
+    <line class="tick" x1="55" y1="114" x2="55" y2="126"/>
+    <text class="label" x="55" y="146" text-anchor="middle">0</text>
+    <line class="tick" x1="116" y1="114" x2="116" y2="126"/>
+    <text class="label" x="116" y="146" text-anchor="middle">2</text>
+    <line class="tick" x1="177" y1="114" x2="177" y2="126"/>
+    <text class="label" x="177" y="146" text-anchor="middle">4</text>
+    <line class="tick" x1="238" y1="114" x2="238" y2="126"/>
+    <text class="label" x="238" y="146" text-anchor="middle">6</text>
+    <line class="tick" x1="299" y1="114" x2="299" y2="126"/>
+    <text class="label" x="299" y="146" text-anchor="middle">8</text>
+    <line class="tick" x1="360" y1="114" x2="360" y2="126"/>
+    <text class="label" x="360" y="146" text-anchor="middle">10</text>
+    <line class="tick" x1="421" y1="114" x2="421" y2="126"/>
+    <text class="label" x="421" y="146" text-anchor="middle">12</text>
+    <line class="tick" x1="482" y1="114" x2="482" y2="126"/>
+    <text class="label" x="482" y="146" text-anchor="middle">14</text>
+    <line class="tick" x1="543" y1="114" x2="543" y2="126"/>
+    <text class="label" x="543" y="146" text-anchor="middle">16</text>
+    <line class="tick" x1="604" y1="114" x2="604" y2="126"/>
+    <text class="label" x="604" y="146" text-anchor="middle">18</text>
+    <line class="tick" x1="665" y1="114" x2="665" y2="126"/>
+    <text class="label" x="665" y="146" text-anchor="middle">20</text>
+  </g>
+
+  <text class="xlabel" x="690" y="125">Data value</text>
+
+  <line class="plot" x1="146.5" y1="70" x2="222.75" y2="70"/>
+  <line class="plot" x1="451.5" y1="70" x2="604" y2="70"/>
+  <line class="plot" x1="146.5" y1="48" x2="146.5" y2="92"/>
+  <line class="plot" x1="604" y1="48" x2="604" y2="92"/>
+  <rect class="plot" x="222.75" y="42" width="228.75" height="56"/>
+  <line class="plot" x1="299" y1="42" x2="299" y2="98"/>
+</svg>

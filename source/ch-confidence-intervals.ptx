@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-confidence-intervals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Confidence Intervals</title>
+
+  <introduction>
+    <p>In statistics, we usually care about a whole population but only get
+    to see a sample. That means we need methods for using sample information
+    to say something sensible about unknown population quantities.</p>
+    <p>This chapter focuses on estimating a population mean. The main tool
+    is the <term>confidence interval<idx><h>inference</h><h>confidence
+    interval</h></idx></term>, which gives a range of plausible values for
+    the parameter. To justify that method, we first need to understand how
+    sample means behave.</p>
+  </introduction>
+
+  <section xml:id="sec-sampling-distributions-clt">
+    <title>Sampling Distributions and the CLT</title>
+    <shorttitle>Sampling Distributions and the CLT</shorttitle>
+
+    <p>Suppose a population has mean <m>\mu</m> and standard deviation
+    <m>\sigma</m>. If we draw a sample of size <m>n</m>, then the <term>sample
+    mean<idx><h>data</h><h>sample mean</h></idx></term> is</p>
+
+    <me>
+      \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n}.
+    </me>
+
+    <p>The variable <m>\overline{X}</m> is itself a random
+    variable. Its distribution is called a <term>sampling
+    distribution<idx><h>inference</h><h>sampling
+    distribution</h></idx></term>.</p>
+
+    <p>Two facts are especially important:</p>
+
+    <me>
+      E(\overline{X})=\mu \qquad\text{and}\qquad
+      \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
+    </me>
+
+    <p>These formulas follow directly from the properties of expectation
+    and variance from <xref ref="sec-cdf-expected-value"/>. Since</p>
+
+    <me>
+      \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n},
+    </me>
+
+    <p>linearity of expectation gives</p>
+
+    <me>
+      E(\overline{X}) =E\left(\frac{X_1+\cdots+X_n}{n}\right)
+      =\frac{1}{n}\bigl(E(X_1)+\cdots+E(X_n)\bigr) =\frac{1}{n}(n\mu) =\mu.
+    </me>
+
+    <p>So the sample mean is an unbiased estimate of the population mean.</p>
+
+    <p>For the variance, independence lets us add variances:</p>
+
+    <md alignment="align">
+      <mrow>\operatorname{Var}(\overline{X})&amp;=\operatorname{Var}\left(\frac{X_1+\cdots+X_n}{n}\right)</mrow>
+      <mrow>&amp;=\frac{1}{n^2}\operatorname{Var}(X_1+\cdots+X_n)</mrow>
+      <mrow>&amp;=\frac{1}{n^2}\bigl(\operatorname{Var}(X_1)+\cdots+\operatorname{Var}(X_n)\bigr).</mrow>
+    </md>
+
+    <p>Because each <m>X_i</m> has variance <m>\sigma^2</m>,</p>
+
+    <me>
+      \operatorname{Var}(\overline{X})
+      =\frac{1}{n^2}(n\sigma^2)
+      =\frac{\sigma^2}{n}.
+    </me>
+
+    <p>Taking square roots gives</p>
+
+    <me>
+      \sigma_{\overline{X}}=\sqrt{\operatorname{Var}(\overline{X})}
+      =\sqrt{\frac{\sigma^2}{n}}
+      =\frac{\sigma}{\sqrt{n}}.
+    </me>
+
+    <p>The first fact says that the sample mean is centered at the population
+    mean. The second says that larger samples give less variation. Averaging
+    many observations produces a more stable estimate than using just one
+    observation.</p>
+
+    <p>The real breakthrough is the <term>Central Limit
+    Theorem<idx><h>inference</h><h>Central Limit Theorem</h></idx></term>,
+    usually shortened to CLT. In plain language, it says this:</p>
+
+    <p>If we repeatedly take independent samples from the same population,
+    then for large <m>n</m> the distribution of the sample means becomes
+    approximately normal, even if the original population is not normal.</p>
+
+    <p>More precisely, when the observations are independent and identically
+    distributed with mean <m>\mu</m> and standard deviation <m>\sigma</m>,
+    the sample mean <m>\overline{X}</m> is approximately distributed as</p>
+
+    <me>
+      \overline{X}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)
+    </me>
+
+    <p>for large enough <m>n</m>.</p>
+
+    <p>This theorem is a big deal. It explains why the normal distribution
+    keeps showing up in statistics. Even when the raw data are skewed or
+    irregular, the average of a reasonably large sample often behaves in a
+    nearly normal way.</p>
+
+    <p>A common rule of thumb is that <m>n\ge 30</m> is often enough, though
+    very skewed populations may need larger samples. The sample should also
+    come from an independent process, which is usually reasonable when we
+    sample with replacement or sample from a population much larger than
+    the sample size.</p>
+
+    <example xml:id="ex-clt-wait-times">
+      <title>Using the CLT for a Sample Mean</title> <p>Suppose customer
+      wait times have population mean 18 minutes and population standard
+      deviation 6 minutes. The shape of the population distribution is not
+      known. If we take a random sample of <m>n=36</m> customers, then by
+      the CLT the sample mean is approximately normal:</p> <me>
+        \overline{X}\sim N\left(18,\frac{6}{\sqrt{36}}\right)=N(18,1).
+      </me> <p>The probability that the sample mean is less than 17 minutes
+      is therefore</p> <me>
+        P(\overline{X}&lt;17)=P\!\left(Z&lt;\frac{17-18}{1}\right)=P(Z&lt;-1)\approx
+        0.1587.
+      </me>
+    </example>
+
+    <exercise xml:id="ci-inline-ex-1">
+      <p>A population has mean 50 and standard deviation 12. A sample of size 36 is taken.</p>
+      <ol>
+        <li><p>Find the mean of <m>\overline{X}</m>.</p></li>
+        <li><p>Find the standard deviation of <m>\overline{X}</m>.</p></li>
+        <li><p>State the approximate distribution of <m>\overline{X}</m> using the CLT.</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-confidence-intervals-mean">
+    <title>Confidence Intervals for the Mean</title>
+
+    <p>A sample mean <m>\overline{x}</m> is a <term>point
+    estimate<idx><h>inference</h><h>point estimate</h></idx></term> of
+    the population mean <m>\mu</m>. But a single number does not tell us
+    how much uncertainty comes from sampling. A <m>C</m> <term>confidence
+    interval<idx><h>inference</h><h>confidence interval</h></idx></term> adds a
+    margin of error to the point estimate and gives a range of plausible
+    values for <m>\mu</m>, where <m>0 \lt C \lt 1</m> is the <term>confidence
+    level<idx><h>inference</h><h>confidence level</h></idx></term>. In
+    informal language, we say we are <m>C</m> confident that the resulting
+    interval captures the true mean.</p>
+
+    <p>To see where the formula comes from, suppose <m>X_1,\ldots,X_n</m> are
+    iid with mean <m>\mu</m> and standard deviation <m>\sigma</m>, and
+    suppose the standardized sample mean has a standard normal distribution
+    (exactly when the population is normal, or approximately for large
+    samples by the CLT):</p>
+
+    <me>
+      \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1).
+    </me>
+
+    <p>Let <m>\alpha=1-C</m>. To capture the middle proportion <m>C</m> of the
+    standard normal curve, we leave total area <m>\alpha</m> outside and split
+    it evenly between the two tails. That is, each tail has area
+    <m>\alpha/2</m>.</p>
+
+    <figure xml:id="fig-ci-central-area">
+      <caption>The middle <m>C</m> of the standard normal curve</caption>
+      <image width="76%" margins="12%">
+        
+      <shortdescription>A standard normal curve with the central region
+      between negative z-alpha-over-2 and positive z-alpha-over-2 shaded
+      and labeled C. Each tail outside that region is labeled alpha over
+      2.</shortdescription>
+        <description>The graphic shows the standard normal density curve
+        centered at 0. Vertical dashed lines mark the cutoff points at negative
+        z-alpha-over-2 and positive z-alpha-over-2. The region under the curve
+        between these two lines is shaded and labeled C. The two unshaded tails
+        outside the dashed lines are each labeled alpha over 2, showing that
+        the total area outside the center is alpha.</description> 
+	<latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10cm,
+              height=6cm,
+              xmin=-3.5,
+              xmax=3.5,
+              ymin=0,
+              ymax=0.45,
+              axis lines=left,
+              xlabel={$z$},
+              ylabel={},
+              xtick={-1.96,0,1.96},
+              xticklabels={$-z_{\alpha/2}$,$0$,$z_{\alpha/2}$},
+              ytick=\empty,
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!25,
+                domain=-1.96:1.96,
+                samples=160
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-3.5:3.5,
+                samples=240,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(-1.96,0) (-1.96,{1/sqrt(2*3.14159)*exp(-(1.96)^2/2)})};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(1.96,0) (1.96,{1/sqrt(2*3.14159)*exp(-(1.96)^2/2)})};
+
+              \node at (axis cs:0,0.17) {$C$};
+              \node at (axis cs:-2.65,0.06) {$\alpha/2$};
+              \node at (axis cs:2.65,0.06) {$\alpha/2$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>So the corresponding probability statement is</p>
+
+    <me>
+      P\left(-z_{\alpha/2} \lt \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \lt z_{\alpha/2}\right)=C.
+    </me>
+
+    <p>After we collect the sample and observe <m>\overline{x}</m>, we solve
+    that inequality for <m>\mu</m>. The result is the z-interval</p>
+
+    <me>
+      \overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}},
+    </me>
+
+    <p>or, written as an interval,</p>
+
+    <me>
+      \left(\overline{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\;
+      \overline{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right).
+    </me>
+
+    <p>In practice, <m>\sigma</m> is often unknown. When the sample is large,
+    we usually replace <m>\sigma</m> by the sample standard deviation
+    <m>s</m> and still use the z critical value as an approximation. When the
+    sample is small and the population is normal, we use a z-interval if
+    <m>\sigma</m> is known, but if <m>\sigma</m> is unknown and we replace it
+    by <m>s</m>, then</p>
+
+    <me>
+      \frac{\overline{X}-\mu}{s/\sqrt{n}} \sim t[n-1].
+    </me>
+
+    <p>In every case, the confidence interval has the form
+    point estimate <m>\pm</m> margin of error. For the population mean, that
+    means</p>
+
+    <me>
+    (\overline{x}-\text{margin of error},\overline{x}+\text{margin of error}),
+    </me>
+
+    <p>So the interval is centered at a sample mean, and its total width is
+    twice the margin of error.</p>
+
+    <p>We summarize the confidence-interval settings for a population mean
+    in <xref ref="tbl-ci-summary"/>.</p>
+
+    <table xml:id="tbl-ci-summary">
+      <title>Sampling distributions and confidence intervals for a mean</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Setting</cell>
+          <cell>Statistic</cell>
+          <cell>Margin</cell>
+        </row>
+        <row>
+          <cell><m>n\ge 30</m>, <m>\sigma</m> known</cell>
+          <cell><m>\frac{\overline{x}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)</m></cell>
+          <cell><m>z_{\alpha/2}\frac{\sigma}{\sqrt{n}}</m></cell>
+        </row>
+        <row>
+          <cell><m>n\ge 30</m>, <m>\sigma</m> unknown</cell>
+          <cell><m>\frac{\overline{x}-\mu}{s/\sqrt{n}}\sim N(0,1)</m></cell>
+          <cell><m>z_{\alpha/2}\frac{s}{\sqrt{n}}</m></cell>
+        </row>
+        <row>
+          <cell><m>n&lt;30</m>, normal, <m>\sigma</m> known</cell>
+          <cell><m>\frac{\overline{x}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)</m></cell>
+          <cell><m>z_{\alpha/2}\frac{\sigma}{\sqrt{n}}</m></cell>
+        </row>
+        <row bottom="major">
+          <cell><m>n&lt;30</m>, normal, <m>\sigma</m> unknown</cell>
+          <cell><m>\frac{\overline{x}-\mu}{s/\sqrt{n}}\sim t[n-1]</m></cell>
+          <cell><m>t_{\alpha/2}[n-1]\frac{s}{\sqrt{n}}</m></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>The next four examples illustrate these four cases.</p>
+
+    <example xml:id="ex-z-ci-height">
+      <title>Case 1: Large Sample, <m>\sigma</m> Known</title>
+      <p>Suppose a sample of 36 women has mean height <m>\overline{x}=65.1</m> inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is</p>
+      <me>
+        65.1\pm 1.96\frac{2.8}{\sqrt{36}}=65.1\pm 0.9147.
+      </me>
+      <p>So the interval is</p>
+      <me>
+        (64.1853,66.0147).
+      </me>
+    </example>
+
+    <example xml:id="ex-z-ci-large-unknown">
+      <title>Case 2: Large Sample, <m>\sigma</m> Unknown</title>
+      <p>A random sample of 64 delivery times has mean <m>\overline{x}=72.4</m> minutes and sample standard deviation <m>s=12</m> minutes. Find a 95% confidence interval for the population mean.</p>
+      <p>Because the sample is large, we use the z critical value and replace <m>\sigma</m> by <m>s</m>:</p>
+      <me>
+        \overline{x}\pm z_{0.025}\frac{s}{\sqrt{n}}
+        =72.4\pm 1.96\frac{12}{\sqrt{64}}
+        =72.4\pm 2.94.
+      </me>
+      <p>So the confidence interval is</p>
+      <me>
+        (69.46,75.34).
+      </me>
+    </example>
+
+    <example xml:id="ex-z-ci-small-known">
+      <title>Case 3: Small Sample, Population Normal, <m>\sigma</m> Known</title>
+      <p>Assume the population distribution is normal. A sample of size 16 has mean <m>\overline{x}=50</m>, and the population standard deviation is known to be <m>\sigma=4</m>. Find a 90% confidence interval for the population mean.</p>
+      <p>Because the population is normal and <m>\sigma</m> is known, we use a z interval:</p>
+      <me>
+        \overline{x}\pm z_{0.05}\frac{\sigma}{\sqrt{n}}
+        =50\pm 1.645\frac{4}{\sqrt{16}}
+        =50\pm 1.645.
+      </me>
+      <p>So the confidence interval is</p>
+      <me>
+        (48.355,51.645).
+      </me>
+    </example>
+
+    <example xml:id="ex-t-ci-small-sample">
+      <title>Case 4: Small Sample, Population Normal, <m>\sigma</m> Unknown</title>
+      <p>Assume the population is normal. A sample of 11 observations has sample mean <m>\overline{x}=8.8636</m> and sample standard deviation <m>s=1.3223</m>. For a 95% confidence interval, we use <m>df=10</m> and <m>t_{0.025}[10]=2.228</m>.</p>
+      <p>The margin of error is</p>
+      <me>
+        2.228\frac{1.3223}{\sqrt{11}}\approx 0.8883.
+      </me>
+      <p>So the confidence interval is</p>
+      <me>
+        (8.8636-0.8883,\;8.8636+0.8883)=(7.9753,9.7519).
+      </me>
+    </example>
+
+    <p>Interpreting a confidence interval takes some care. A 95% confidence
+    level does not mean there is a 95% chance that <m>\mu</m> is in the one
+    interval we already computed. Instead, it means that if we repeated the
+    same sampling process many times and built an interval each time, about
+    95% of those intervals would capture the true mean. The parameter
+    <m>\mu</m> is fixed; the interval is what changes from sample to sample.</p>
+
+    <exercise xml:id="ci-inline-ex-2">
+      <p>A sample of size 49 has mean <m>\overline{x}=82</m>. Assume the population standard deviation is known to be 14.</p>
+      <ol>
+        <li><p>Write the formula for a 90% confidence interval for <m>\mu</m>.</p></li>
+        <li><p>Find the margin of error.</p></li>
+        <li><p>Find the interval.</p></li>
+      </ol>
+    </exercise>
+  </section>
+
+  <section xml:id="sec-sample-size-margin-error">
+    <title>Margin of Error and Sample Size</title>
+
+    <p>The margin of error in a z-interval is</p>
+
+    <me>
+      E=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+    </me>
+
+    <p>This formula shows two basic truths:</p>
+
+    <ul>
+      <li><p>Higher confidence means a larger critical value and therefore a larger margin of error.</p></li>
+      <li><p>Larger samples make the denominator bigger and therefore shrink the margin of error.</p></li>
+    </ul>
+
+    <p>If we want the margin of error to be at most some target value <m>E</m>, then we solve for <m>n</m>:</p>
+
+    <me>
+      n\ge \left(\frac{z_{\alpha/2}\sigma}{E}\right)^2.
+    </me>
+
+    <p>Since sample size must be a whole number, we always round up.</p>
+
+    <example xml:id="ex-sample-size-women-height">
+      <title>Finding a Required Sample Size</title>
+      
+      <p>Suppose we want to estimate the mean height of women with 98%
+      confidence and margin of error at most 0.5 inches. Assume <m>\sigma=2.8</m>.</p>
+      
+      <p>Here <m>\alpha=0.02</m>, so <m>z_{\alpha/2}=z_{0.01}=2.326</m>. Therefore</p>
+      <me>
+        n\ge \left(\frac{2.326(2.8)}{0.5}\right)^2\approx 169.67.
+      </me>
+      <p>We round up, so the least acceptable sample size is</p>
+      <me>
+        n=170.
+      </me>
+    </example>
+
+    <p>This is one of the most practical formulas in the course. It tells
+    us how much data we need before we even begin sampling.</p>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>Confidence intervals are built on the sampling behavior of the sample mean.</p>
+
+    <ul>
+      <li><p>The sampling distribution of <m>\overline{X}</m> has mean <m>\mu</m> and standard deviation <m>\sigma/\sqrt{n}</m>.</p></li>
+      <li><p>The Central Limit Theorem says that for large samples, the sample mean is approximately normal.</p></li>
+      <li><p>A confidence interval estimates the population mean by giving a range of plausible values.</p></li>
+      <li><p>Its basic form is point estimate plus or minus margin of error.</p></li>
+      <li><p>For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.</p></li>
+      <li><p>Sample-size formulas come from solving the margin-of-error formula for <m>n</m>.</p></li>
+    </ul>
+
+    <p>The next chapter turns estimation into decision-making. Instead of
+    asking which values of <m>\mu</m> are plausible, we will ask whether
+    the data give strong enough evidence to reject a claimed value of
+    <m>\mu</m>.</p>
+  </conclusion>
+
+  <exercises xml:id="ch10-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch10-ex-1">
+      <p>A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.</p>
+      <ol>
+        <li><p>Find the mean of <m>\overline{X}</m>.</p></li>
+        <li><p>Find the standard deviation of <m>\overline{X}</m>.</p></li>
+        <li><p>Use the CLT to state an approximate distribution for <m>\overline{X}</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-2">
+      <p>A sample of size 64 has mean <m>\overline{x}=41.5</m>. Assume the
+      population standard deviation is known to be 8.</p> <ol>
+        <li><p>Find a 95% confidence interval for the population mean.</p></li>
+        <li><p>Find the margin of error.</p></li>
+        <li><p>Explain what the 95% confidence level means.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-3">
+      <p>Assume the population is normal. A sample of size 16 has mean
+      <m>\overline{x}=12.4</m> and sample standard deviation <m>s=2.0</m>.</p>
+      <ol>
+        <li><p>Write the form of the 95% t-interval for the mean.</p></li>
+        <li><p>What are the degrees of freedom?</p></li> <li><p>Why is a t
+        critical value used instead of a z critical value?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-4">
+      <p>How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?</p>
+    </exercise>
+  </exercises>
+</chapter>
