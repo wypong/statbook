@@ -1,6 +1,15 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
+  "id": "preface",
+  "level": "1",
+  "url": "preface.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Preface",
+  "body": " Preface  This book grew out of my course notes for an elementary statistics course that I teach at California State University, Dominguez Hills. It is written for students who are seeing statistics for the first time and want a text that explains ideas plainly, works through examples carefully, and does not lose sight of what the numbers mean.  The main goal of the book is to help students build statistical judgment, not just memorize formulas. We begin with the basic language of data, then move through tables, graphs, measures of center and spread, probability, random variables, and the main ideas of statistical inference. The progression is meant to feel natural: first describe data clearly, then model randomness, and finally use sample information to make decisions about a larger population.  Some features of this book are worth pointing out:   The writing style is direct and conversational, with an emphasis on explaining why a method is used and what its result tells us.  New ideas are introduced with concrete examples drawn from familiar settings such as campus life, health, business, sports, and everyday decision-making.  Each chapter includes exercises so students can practice both basic skills and interpretation.  The book moves from descriptive statistics to probability and then to inference, so later topics rest on ideas students have already seen and used.  Because the text is developed in PreTeXt , it is designed to grow over time and remain easy to revise, improve, and share.   This is still a developing book, and it will continue to change as the course evolves. My hope is that it stays useful to students at Cal State Dominguez Hills while also being clear and practical for anyone learning elementary statistics in a first course.  "
+},
+{
   "id": "front-colophon",
   "level": "1",
   "url": "front-colophon.html",
