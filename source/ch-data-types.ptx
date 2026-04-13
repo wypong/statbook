@@ -32,6 +32,57 @@
 
     <p>This tree is simple, but it is powerful. Once we know where a variable belongs, we already know a lot about how to describe it. Category labels are usually summarized by counts or percentages, while numerical data can often be summarized by averages, spreads, and graphs built around number lines.</p>
 
+    <p>A good classroom data set can show all of these ideas at once. If you are collecting information from students, useful choices include first name, last name initial, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, distance from school, commute time, shoe size, handedness, favorite subject, and number of pets. Some of these are categories and some are measurements, and some of them look numerical even though they are really labels.</p>
+
+    <activity xml:id="act-collect-class-data">
+      <title>Collecting Class Data</title>
+      <introduction>
+        <p>Work with the class to build one data set that includes several different variables. Try to include both categories and measurements so that the class data will cover all of the main data types later on.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a small set of variables to record for each student. A good starting list is first name, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, and distance from school.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If you want a wider data set, add a few more variables such as handedness, favorite subject, commute time, shoe size, number of pets, or favorite music genre.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Put the information into a neat table. As you do, note which variables are really labels, which ones have an order, and which ones are true measurements.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-classify-data-types">
+      <title>Classifying the Data Types</title>
+      <introduction>
+        <p>Use the data set from the previous activity. The goal is to decide whether each variable is qualitative or quantitative, and then to refine the classification one step further.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Classify each variable as qualitative or quantitative.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the qualitative variables, decide whether each one is nominal or ordinal.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the quantitative variables, decide whether each one is discrete or continuous.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Check that your list includes at least one nominal variable, one ordinal variable, one discrete variable, and one continuous variable. If one of those types is missing, add another variable and try again.</p>
+        </statement>
+      </task>
+    </activity>
+
     <example xml:id="ex-gym-checkin">
       <title>Gym Check-In Data</title>
       <p>A gym records each member's membership plan, locker preference, number of visits this month, and time spent on the treadmill today. The membership plan is qualitative because it is a category label. Locker preference such as upper, middle, or lower is qualitative and ordinal because the choices have an order. The number of visits is quantitative and discrete because it is counted. Time spent on the treadmill is quantitative and continuous because it is measured.</p>
@@ -74,10 +125,48 @@
 
     <p>The <term>nominal scale<idx><h>measurement</h><h>nominal scale</h></idx></term> groups observations into categories with no order. The <term>ordinal scale<idx><h>measurement</h><h>ordinal scale</h></idx></term> places observations in order, but the differences between categories are not measured evenly. The <term>interval scale<idx><h>measurement</h><h>interval scale</h></idx></term> has equal intervals, but no true zero, so differences are meaningful while ratios are not. The <term>ratio scale<idx><h>measurement</h><h>ratio scale</h></idx></term> has equal intervals and a true zero, so both differences and ratios are meaningful.</p>
 
+    <p>It helps to think about what the number is really doing. If it is just a label, the level is nominal. If it gives an order, but not a reliable size of the gap between values, the level is ordinal. If equal differences matter but zero is only a point on the scale, the level is interval. If zero means none of the quantity, the level is ratio.</p>
+
+    <ul>
+      <li><p>Nominal examples: eye color, major, whether a student wears glasses, and student ID numbers.</p></li>
+      <li><p>Ordinal examples: year in school, class rank, pain level, and finishing place in a race.</p></li>
+      <li><p>Interval examples: birth year, temperature in Celsius, temperature in Fahrenheit, and calendar year.</p></li>
+      <li><p>Ratio examples: height, distance from school, number of siblings, commute time, and amount of money spent on lunch.</p></li>
+    </ul>
+
+    <p>Some variables are easy to misread at first. Jersey numbers and ZIP codes look numerical, but they are usually nominal because they are labels rather than measurements. By contrast, height and distance are ratio variables because zero means none of the quantity and ratios make sense.</p>
+
     <example xml:id="ex-levels-of-measurement">
       <title>Comparing Temperature and Length</title>
       <p>Temperature measured in Celsius is interval data. The difference between 10 degrees and 20 degrees is the same size as the difference between 20 degrees and 30 degrees, but 20 degrees Celsius is not twice as hot as 10 degrees Celsius because zero does not mean the complete absence of temperature. By contrast, length is ratio data: 10 feet really is twice as long as 5 feet, and 0 feet means no length at all.</p>
     </example>
+
+    <example xml:id="ex-levels-class-data">
+      <title>Levels in the Class Data</title>
+      <p>In the class data set from the previous section, first name, eye color, and whether a student wears glasses are nominal. Year in school is ordinal. Birth year is interval. Height, distance from school, number of siblings, and commute time are ratio. That mix is useful because it shows why the level of measurement matters before we choose a summary or graph.</p>
+    </example>
+
+    <activity xml:id="act-levels-class-data">
+      <title>Classifying Levels of Measurement</title>
+      <introduction>
+        <p>Return to the class data set you collected earlier. Now classify each variable by its level of measurement.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Label each variable as nominal, ordinal, interval, or ratio.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For each one, explain briefly why that level fits. Ask whether the variable is only a label, whether order matters, whether differences matter, or whether zero means none of the quantity.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Check that your data set includes examples of all four levels of measurement. If one level is missing, add another variable that fills the gap.</p>
+        </statement>
+      </task>
+    </activity>
 
     <exercise xml:id="cp-levels-of-measurement">
       <title>Checkpoint</title>

@@ -284,6 +284,50 @@
       \sigma_X=\sqrt{2.9433}\approx 1.7156.
     </me>
     </example>
+
+    <activity xml:id="act-ch7-arcade-dice-game">
+      <title>Arcade Dice Game</title>
+      <introduction>
+        <p>Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Roll one fair die. Let <m>X</m> be the number of tickets earned, where 1, 2, and 3 earn 0 tickets, 4 earns 2 tickets, 5 earns 5 tickets, and 6 earns 10 tickets. Write the probability distribution of <m>X</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>F_X(2)</m> and <m>F_X(5)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute <m>E(X)</m> and explain what that value means if the game is played many times.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch7-prize-wheel-distribution">
+      <title>Prize Wheel Distribution</title>
+      <introduction>
+        <p>Practice checking a distribution and using it to compute the mean and variance of a random variable.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A prize wheel gives 0, 1, 2, or 4 tokens with probabilities 0.25, 0.35, 0.25, and 0.15. Verify that this is a valid probability distribution and sketch its bar chart.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>E(X)</m> and <m>E(X^2)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use those values to find <m>\operatorname{Var}(X)</m> and <m>\sigma_X</m>.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-cdf-expected-value">
@@ -334,6 +378,50 @@
     </example>
 
     <p>These properties are handy when units change. For example, converting from meters to centimeters multiplies both the expected value and the standard deviation by 100, but it multiplies the variance by <m>100^2</m>.</p>
+
+    <activity xml:id="act-ch7-stretch-the-score">
+      <title>Stretch the Score</title>
+      <introduction>
+        <p>See how adding and multiplying a random variable change its mean and spread.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose a game score has <m>E(X)=6</m> and <m>\operatorname{Var}(X)=4</m>. Find <m>E(3X-2)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>\operatorname{Var}(3X-2)</m> and the standard deviation of <m>3X-2</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain why shifting changes the mean but not the spread, while multiplying changes both.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch7-two-games-total">
+      <title>Two Games, One Total</title>
+      <introduction>
+        <p>Combine two independent random variables and see how expectation and variance behave.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose game A gives a random score <m>X</m> with <m>E(X)=5</m> and <m>\operatorname{Var}(X)=1</m>. Game B gives a random score <m>Y</m> with <m>E(Y)=7</m> and <m>\operatorname{Var}(Y)=9</m>. Assuming the games are independent, find <m>E(X+Y)</m> and <m>\operatorname{Var}(X+Y)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>E(2X-Y)</m> and <m>\operatorname{Var}(2X-Y)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which game contributes more to the variability of the total, and why?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

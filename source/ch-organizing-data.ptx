@@ -20,6 +20,52 @@
 
     <p>Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to <m>1</m>, or equivalently to <m>100\%</m>.</p>
 
+    <p>A quick way to practice these ideas is with data from the class itself. The point is not to make the numbers fancy. The point is to get comfortable turning a raw list into a table, then reading that table a little more carefully.</p>
+
+    <activity xml:id="act-last-name-initials">
+      <title>Last-Name Initials</title>
+      <introduction>
+        <p>Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-name-lengths">
+      <title>Length of Student Names</title>
+      <introduction>
+        <p>Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Add a relative frequency column. Which name length is most common? Which lengths are rare?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?</p>
+        </statement>
+      </task>
+    </activity>
+
     <example xml:id="ex-commute-frequency-table">
       <title>How Students Get to Campus</title>
       <p>Suppose a class records how 12 students usually travel to campus: auto, auto, metro, bike, auto, walk, metro, auto, bike, walk, metro, auto. A frequency table for this data is shown in <xref ref="tbl-commute-frequency"/>.</p>
@@ -254,6 +300,94 @@
     </figure>
 
     <p>Each graph has its own job. The trick is not to memorize names blindly, but to match the graph to the kind of data you have and the question you want to answer.</p>
+
+    <activity xml:id="act-choose-graph">
+      <title>Choosing the Right Graph</title>
+      <introduction>
+        <p>Before drawing anything, the first job is to choose a graph that matches the data. The same data set can often be shown in more than one way, but some displays fit the variable much better than others.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For each variable below, decide which graph would be most appropriate: bar chart, dot plot, stem-and-leaf plot, histogram, or frequency polygon.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain your choice in a sentence or two. Think about whether the data is categorical or numerical, and whether the values are individual observations or grouped into classes.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use these examples: eye color, number of siblings, height, and grouped commute times.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-class-data-bar-chart">
+      <title>Bar Charts from Class Data</title>
+      <introduction>
+        <p>Use the data set collected in <xref ref="sec-classifying-data"/>. Categorical variables are often easiest to understand when they are shown in a bar chart.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose one nominal variable from the class data, such as eye color, whether a student wears glasses, handedness, or favorite subject. Make a frequency table and then draw a bar chart.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If the variable has a natural order, such as year in school, make sure the bars are arranged in that order.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write two observations from the graph. Which category is most common? Which category is least common?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-class-data-dotplot-stem">
+      <title>Dot Plots and Stem-and-Leaf Plots</title>
+      <introduction>
+        <p>Use the quantitative data from the class collection. Small data sets work especially well for displays that keep the individual values visible.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a discrete variable from the class data, such as number of siblings or number of pets. Make a dot plot and describe the shape of the distribution.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Choose another quantitative variable, such as height or commute time. If the data values are not too many, make a stem-and-leaf plot. If there are too many repeated values, use a dot plot instead.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compare the two graphs. Which one makes it easier to see the exact values? Which one makes it easier to see the overall pattern?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-class-data-grouped-graphs">
+      <title>Grouped Graphs from Class Data</title>
+      <introduction>
+        <p>If the class data include a continuous measurement like height or commute time, you can group the values into classes and make a histogram or frequency polygon. That is the natural next step when the raw values are too spread out to show clearly one by one.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose one continuous variable from the class data, such as height, commute time, or distance from school. Group the values into a reasonable set of class intervals.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use the grouped data to draw a histogram. Then sketch a frequency polygon using the class midpoints.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compare the histogram and the frequency polygon. Which one is better for seeing the shape of the data? Which one makes the class intervals easier to read?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

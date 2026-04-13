@@ -68,6 +68,50 @@
       </me>
       <p>Because the alternative says “less than,” this is a left-tailed test.</p>
     </example>
+
+    <activity xml:id="act-ch11-hypothesis-claims">
+      <title>Hypothesis Claim Match-Up</title>
+      <introduction>
+        <p>Translate informal claims into null and alternative hypotheses, then identify the tail of the test.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write <m>H_0</m> and <m>H_a</m>, and say whether the test is left-tailed, right-tailed, or two-tailed.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write <m>H_0</m> and <m>H_a</m>, and identify the tail type.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch11-pvalue-verdict">
+      <title>P-Value Verdict</title>
+      <introduction>
+        <p>Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>At significance level <m>\alpha=0.05</m>, decide what to do with p-values 0.12, 0.03, and 0.001.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For each p-value, explain in one sentence what the decision means in plain language.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which result gives the strongest evidence against the null hypothesis?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-type1-type2-errors">
@@ -142,6 +186,50 @@
         <li><p>Which error would the school want to avoid more strongly if a new program is very expensive?</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch11-error-detective">
+      <title>Error Detective</title>
+      <introduction>
+        <p>Identify Type I and Type II errors in a few familiar settings.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A hospital uses a screening test to detect a disease. If the test says a healthy patient is positive, what type of error is that? What if the test says a sick patient is negative?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Give a Type I and a Type II error for a smoke alarm.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Give a Type I and a Type II error for a spam filter on an email account.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch11-which-error-hurts-more">
+      <title>Which Error Hurts More?</title>
+      <introduction>
+        <p>Decide which kind of mistake is more serious in a few real-world decisions.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For a smoke alarm, which error is worse: a false alarm or missing a real fire? Explain briefly.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For a medical screening test, which error is worse in general, and why?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Why do Type I and Type II errors usually pull in opposite directions when you change the significance level?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-one-sample-mean-tests">
@@ -191,6 +279,50 @@
     </example>
 
     <p>Whether we use a critical-value method or a p-value method, the logic is the same: a test statistic far from what <m>H_0</m> predicts counts as evidence against <m>H_0</m>.</p>
+
+    <activity xml:id="act-ch11-run-the-test">
+      <title>Run the Test</title>
+      <introduction>
+        <p>Carry out a one-sample mean test from start to finish.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A sample of 64 students has mean study time <m>\overline{x}=41.5</m> minutes. Assume the population standard deviation is known to be 8 minutes. Test <m>H_0:\mu=40</m> against <m>H_a:\mu&gt;40</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute the test statistic and p-value.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>At <m>\alpha=0.05</m>, decide whether to reject <m>H_0</m> and write the conclusion in context.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch11-test-translation">
+      <title>Test Result Translator</title>
+      <introduction>
+        <p>Turn a test output into a plain-language conclusion.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A test reports <m>p=0.018</m> at significance level <m>\alpha=0.05</m>. What decision should be made?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write a one-sentence conclusion in context for a result like this.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain why a p-value of 0.018 is considered statistically significant at the 5% level.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

@@ -57,6 +57,50 @@
         <li><p>Explain why <m>P(X=10)=0</m>.</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch9-uniform-food-truck">
+      <title>Food Truck Arrival Window</title>
+      <introduction>
+        <p>Use a simple arrival-time model to practice probability on a uniform interval.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A food truck arrives uniformly at random between 11:00 and 11:30. Let <m>X</m> be the number of minutes after 11:00. Find <m>P(0\le X\le 6)</m> and <m>P(10\le X\le 18)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>P(X=12)</m> and explain why the answer is zero.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compare <m>P(2\le X\le 8)</m> and <m>P(20\le X\le 26)</m>. What do the two probabilities have in common?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch9-uniform-equal-length">
+      <title>Equal-Length Interval Challenge</title>
+      <introduction>
+        <p>See why equal-length intervals have equal probability in a uniform model.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose <m>X</m> is uniformly distributed on <m>[0,60]</m>. Find the probability of any interval of length 10, such as <m>[5,15]</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the probability of another interval of length 10, such as <m>[30,40]</m>. Compare your answer with the first one.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain the general rule for probabilities in a uniform distribution.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-normal-distributions">
@@ -279,6 +323,50 @@
     </example>
 
     <p>This matters because probability tables and technology are usually organized around the standard normal distribution.</p>
+
+    <activity xml:id="act-ch9-height-detective">
+      <title>Height Detective</title>
+      <introduction>
+        <p>Compare heights using z-scores instead of raw inches.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Using <m>X\sim N(64,2.8)</m>, find the z-scores for 61 inches, 67 inches, and 70 inches.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which of those three heights is most unusual relative to the model?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For each z-score, say whether the height is above or below the mean and by about how many standard deviations.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch9-score-comparison">
+      <title>Same Raw Score, Different Crowd</title>
+      <introduction>
+        <p>Use z-scores to compare a raw score across two different normal distributions.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A score of 85 occurs on Exam A, where scores are modeled by <m>N(72,8)</m>. Find its z-score.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>The same score of 85 occurs on Exam B, where scores are modeled by <m>N(80,4)</m>. Find its z-score.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which score is better relative to its own group, and why?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-z-alpha-notation">
@@ -354,6 +442,50 @@
     </figure>
 
     <p>So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate <m>z_{\alpha}</m>.</p>
+
+    <activity xml:id="act-ch9-zalpha-hunt">
+      <title>Critical Value Hunt</title>
+      <introduction>
+        <p>Find and compare a few standard normal cutoffs used in confidence intervals and tests.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Find approximate values of <m>z_{0.10}</m>, <m>z_{0.05}</m>, and <m>z_{0.01}</m> using technology or a z-table.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which of these cutoffs is farthest from 0? Explain why that makes sense.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If a test uses a smaller right-tail area, what happens to the critical value?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch9-tail-area-match">
+      <title>Tail-Area Match-Up</title>
+      <introduction>
+        <p>Translate between right-tail area, left-tail area, and the <m>z_{\alpha}</m> notation.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>If the right-tail area is 0.025, what notation is used for the corresponding critical value?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If <m>P(Z&gt;z_{\alpha})=0.20</m>, what is the area to the left of <m>z_{\alpha}</m>?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain what happens to <m>z_{\alpha}</m> as <m>\alpha</m> gets smaller.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-normal-probabilities-percentiles">
@@ -422,6 +554,50 @@
         <li><p>Explain in words what the 90th percentile of this distribution means.</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch9-normal-score-area">
+      <title>Exam Score Area Hunt</title>
+      <introduction>
+        <p>Practice turning normal probability questions into z-scores and areas under the curve.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose test scores are modeled by <m>X\sim N(72,8)</m>. Find <m>P(64\le X\le 84)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write the standardized form of <m>P(X\le 84)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>What does the 90th percentile mean in this context?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch9-percentile-cutoff">
+      <title>Prize Cutoff Percentile</title>
+      <introduction>
+        <p>Find a percentile cutoff and interpret it as a prize threshold.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose a scholarship goes to the top 5% of scores in a normal model <m>X\sim N(72,8)</m>. Find the cutoff score.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether a score of 80 would earn the scholarship.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain in one sentence what it means for a value to be a percentile cutoff.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

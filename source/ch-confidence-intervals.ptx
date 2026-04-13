@@ -134,6 +134,50 @@
         <li><p>State the approximate distribution of <m>\overline{X}</m> using the CLT.</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch10-sample-mean-sprint">
+      <title>Sample Mean Sprint</title>
+      <introduction>
+        <p>See how the spread of sample means changes as the sample size grows.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A population has mean 50 and standard deviation 12. Find the mean and standard deviation of <m>\overline{X}</m> for sample sizes <m>n=4</m>, <m>n=16</m>, and <m>n=36</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which sample size gives the most stable sample mean, and why?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If the population is strongly skewed, what does the CLT say about the shape of the sampling distribution when <m>n</m> is large?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch10-clt-sketchbook">
+      <title>CLT Sketchbook</title>
+      <introduction>
+        <p>Draw the idea of the Central Limit Theorem instead of only writing formulas.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Sketch a population distribution that is strongly right-skewed. Label the sketch with a few sample values that might come from it.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Sketch what the distribution of sample means might look like for samples of size 5 and for samples of size 40.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain in words how the center and spread of the sampling distribution compare with the original population.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-confidence-intervals-mean">
@@ -382,6 +426,50 @@
         <li><p>Find the interval.</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch10-confidence-builder">
+      <title>Confidence Interval Builder</title>
+      <introduction>
+        <p>Build a confidence interval from a sample mean and a known population standard deviation.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A sample of size 49 has mean <m>\overline{x}=82</m>. Assume the population standard deviation is 14. Find a 90% confidence interval for <m>\mu</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the margin of error and interpret it in context.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain what the confidence level means in this situation.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch10-interval-faceoff">
+      <title>Interval Face-Off</title>
+      <introduction>
+        <p>Compare confidence intervals made from the same sample but with different confidence levels.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which interval is wider, and why does that happen?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If a student wants a narrower interval, should they ask for higher confidence or lower confidence?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-sample-size-margin-error">
@@ -426,6 +514,50 @@
 
     <p>This is one of the most practical formulas in the course. It tells
     us how much data we need before we even begin sampling.</p>
+
+    <activity xml:id="act-ch10-survey-planner">
+      <title>Survey Planner</title>
+      <introduction>
+        <p>Plan a sample size before collecting data so the margin of error stays under control.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>You want to estimate the mean amount of weekly screen time with 95% confidence and margin of error at most 3 hours. Assume <m>\sigma=12</m>. Find the minimum sample size.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Suppose the margin of error is cut in half. What happens to the required sample size?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain why larger samples are useful when precision matters.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch10-budget-vs-precision">
+      <title>Budget vs Precision</title>
+      <introduction>
+        <p>Compare two sampling plans and decide which one gives the better estimate.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A campus poll can survey either 100 students or 196 students. If the same population standard deviation is used, which plan gives the smaller margin of error?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If the confidence level increases from 90% to 99%, what happens to the margin of error when the sample size stays the same?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain the tradeoff between wanting high confidence and wanting a small margin of error.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

@@ -68,6 +68,50 @@
       </me>
       <p>The high wage of 40 pulls the mean upward, but it does not move the median very much. This is one reason the median is often preferred for income data.</p>
     </example>
+
+    <activity xml:id="act-ch3-central-measures-generated">
+      <title>Mean, Median, and Mode Practice</title>
+      <introduction>
+        <p>Work with short data sets so you can focus on the definitions of the mean, median, and mode.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the data set 5, 7, 7, 8, 10, find the mean, median, and mode.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the data set 3, 4, 6, 6, 9, 12, find the mean and median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the data set red, blue, blue, green, green, green, find the mode and state whether the data set is unimodal, bimodal, or has no mode.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch3-central-measures-class-data">
+      <title>Center from Class Data</title>
+      <introduction>
+        <p>Use the data set collected in <xref ref="sec-classifying-data"/>. Choose a quantitative variable that was recorded for the class.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a variable such as number of siblings, height, commute time, or distance from school. Compute the mean and median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If the variable is discrete and repeats values often, identify the mode as well.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write one sentence comparing the mean and median. If they are different, say which one seems more typical for the data and why.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-center-from-tables-and-shape">
@@ -154,11 +198,204 @@
 
     <p>A distribution is <term>skewed left<idx><h>graphs</h><h>left-skewed distribution</h></idx></term>, or negatively skewed, if most of the data is on the right and a longer tail stretches to the left. In that case, a few small values tend to pull the mean below the median.</p>
 
+    <p>The sketches below show the basic shapes. They are not meant to be exact data sets. They are meant to make the idea of skewness easier to see at a glance.</p>
+
+    <figure xml:id="fig-symmetric-distribution">
+      <caption>An idealized symmetric distribution</caption>
+      <image width="75%">
+        <shortdescription>A histogram-like sketch with bars rising toward the middle and then falling at the same rate on the other side.</shortdescription>
+        <description>An idealized distribution is centered in the middle of the axis. The bars on the left and right mirror each other, with heights 1, 3, 5, 5, 3, and 1. The shape is roughly balanced around the center.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (0,0) -- (7,0) node[right] {Value};
+            \draw[->] (0,0) -- (0,5.6) node[above] {Frequency};
+            \foreach \x in {1,2,3,4,5,6} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\x};
+            }
+            \foreach \y in {1,2,3,4,5} {
+              \draw (0.08,\y) -- (-0.08,\y) node[left] {\y};
+            }
+            \filldraw[fill=blue!35, draw=black] (0.6,0) rectangle (1.4,1);
+            \filldraw[fill=blue!35, draw=black] (1.6,0) rectangle (2.4,3);
+            \filldraw[fill=blue!35, draw=black] (2.6,0) rectangle (3.4,5);
+            \filldraw[fill=blue!35, draw=black] (3.6,0) rectangle (4.4,5);
+            \filldraw[fill=blue!35, draw=black] (4.6,0) rectangle (5.4,3);
+            \filldraw[fill=blue!35, draw=black] (5.6,0) rectangle (6.4,1);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <figure xml:id="fig-right-skewed-distribution">
+      <caption>An idealized right-skewed distribution</caption>
+      <image width="75%">
+        <shortdescription>A histogram-like sketch with most of the mass on the left and a long tail stretching to the right.</shortdescription>
+        <description>An idealized distribution has most of its bars on the left side of the axis, with heights 6, 5, 4, 2, 1, and 1 from left to right. The bars taper off toward the right, creating a long right tail.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (0,0) -- (7,0) node[right] {Value};
+            \draw[->] (0,0) -- (0,6.6) node[above] {Frequency};
+            \foreach \x in {1,2,3,4,5,6} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\x};
+            }
+            \foreach \y in {1,2,3,4,5,6} {
+              \draw (0.08,\y) -- (-0.08,\y) node[left] {\y};
+            }
+            \filldraw[fill=orange!45, draw=black] (0.6,0) rectangle (1.4,6);
+            \filldraw[fill=orange!45, draw=black] (1.6,0) rectangle (2.4,5);
+            \filldraw[fill=orange!45, draw=black] (2.6,0) rectangle (3.4,4);
+            \filldraw[fill=orange!45, draw=black] (3.6,0) rectangle (4.4,2);
+            \filldraw[fill=orange!45, draw=black] (4.6,0) rectangle (5.4,1);
+            \filldraw[fill=orange!45, draw=black] (5.6,0) rectangle (6.4,1);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <figure xml:id="fig-left-skewed-distribution">
+      <caption>An idealized left-skewed distribution</caption>
+      <image width="75%">
+        <shortdescription>A histogram-like sketch with most of the mass on the right and a long tail stretching to the left.</shortdescription>
+        <description>An idealized distribution has most of its bars on the right side of the axis, with heights 1, 1, 2, 4, 5, and 6 from left to right. The bars taper off toward the left, creating a long left tail.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw[->] (0,0) -- (7,0) node[right] {Value};
+            \draw[->] (0,0) -- (0,6.6) node[above] {Frequency};
+            \foreach \x in {1,2,3,4,5,6} {
+              \draw (\x,0.08) -- (\x,-0.08) node[below] {\x};
+            }
+            \foreach \y in {1,2,3,4,5,6} {
+              \draw (0.08,\y) -- (-0.08,\y) node[left] {\y};
+            }
+            \filldraw[fill=green!40, draw=black] (0.6,0) rectangle (1.4,1);
+            \filldraw[fill=green!40, draw=black] (1.6,0) rectangle (2.4,1);
+            \filldraw[fill=green!40, draw=black] (2.6,0) rectangle (3.4,2);
+            \filldraw[fill=green!40, draw=black] (3.6,0) rectangle (4.4,4);
+            \filldraw[fill=green!40, draw=black] (4.6,0) rectangle (5.4,5);
+            \filldraw[fill=green!40, draw=black] (5.6,0) rectangle (6.4,6);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
     <example xml:id="ex-skewness-interpretation">
       <title>Reading Shape from Mean and Median</title>
       <p>A set of apartment rents has mean 1850 dollars and median 1725 dollars. Since the mean is larger than the median, this suggests the distribution is skewed right. That would make sense if most rents are moderate but a few luxury apartments are much more expensive.</p>
       <p>This kind of comparison is useful, but it should not replace looking at a graph. In practice, the best way to judge skewness is to inspect a histogram or another graph of the distribution.</p>
     </example>
+
+    <activity xml:id="act-ch3-right-skewed-mean-median">
+      <title>Mean and Median for Right-Skewed Data</title>
+      <introduction>
+        <p>Use a class-style data set for commute times, in minutes. The values are right-skewed, so a few larger times pull the mean upward.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the commute times 8, 9, 10, 10, 11, 12, 12, 13, 14, 30 minutes, find the mean and median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether the mean or the median is a better description of the typical commute time.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>State whether the distribution is skewed right, skewed left, or roughly symmetric, and check whether that matches the relationship between the mean and median.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch3-center-from-table">
+      <title>Center from a Frequency Table</title>
+      <introduction>
+        <p>Use a frequency table to practice the weighted-mean formula and the cumulative-frequency method for the median.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>The frequency table in <xref ref="tbl-pets-owned"/> shows the number of pets owned by students in a small class. Find the mean number of pets.</p>
+        </statement>
+      </task>
+      <table xml:id="tbl-pets-owned">
+        <title>Frequency table for pets owned by students</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Pets</cell>
+            <cell>Frequency</cell>
+          </row>
+          <row>
+            <cell>0</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>5</cell>
+          </row>
+          <row bottom="major">
+            <cell>3</cell>
+            <cell>1</cell>
+          </row>
+        </tabular>
+      </table>
+      <task>
+        <statement>
+          <p>Use the same table to identify the mode and median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the cumulative frequencies and use them to show how you located the median.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch3-center-shape-class-data">
+      <title>Center and Shape from Class Data</title>
+      <introduction>
+        <p>Use a quantitative variable from the class data and compare its center with the shape of the distribution.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose one quantitative class variable and compute the mean and median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether the distribution seems roughly symmetric, skewed right, or skewed left.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Check whether the mean is greater than, less than, or about equal to the median. Does that match the shape you saw?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch3-skewness-practice">
+      <title>Skewness Practice</title>
+      <introduction>
+        <p>These short data sets are designed to make the effect of outliers easy to see.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the data set 2, 3, 4, 4, 5, 6, 20, find the mean and median. Then decide whether the distribution is skewed left, skewed right, or roughly symmetric.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the data set 12, 13, 13, 14, 15, 15, 16, find the mean and median. Then decide whether the distribution is skewed left, skewed right, or roughly symmetric.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain why the mean is pulled toward the tail in the first data set but not much in the second.</p>
+        </statement>
+      </task>
+    </activity>
 
     <p>So which measure of center should we use? There is no universal winner. The mean is informative when we want every observation to count fully, while the median is often more resistant to extreme values. The mode is especially useful for categorical data or for identifying the most common case.</p>
   </section>

@@ -217,6 +217,72 @@
       <title>Interpreting Correlation</title>
       <p>If a data set has <m>r=0.91</m>, then it has a strong positive linear relationship. If another data set has <m>r=-0.84</m>, then it has a strong negative linear relationship. If a third data set has <m>r=0.08</m>, then it has almost no linear relationship.</p>
     </example>
+
+    <activity xml:id="act-ch5-scatterplot-read-relationship">
+      <title>Reading a Scatterplot</title>
+      <introduction>
+        <p>Use the study-hours data set to practice reading a scatterplot and describing the overall pattern in words.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Make a scatterplot of the study-hours data from <xref ref="tbl-study-hours-score"/>. If you use software, label the axes clearly.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Describe the direction of the association and tell whether it looks weak, moderate, or strong.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain whether the plot suggests a positive correlation, a negative correlation, or no clear correlation.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch5-correlation-interpretation">
+      <title>Interpreting Correlation Coefficients</title>
+      <introduction>
+        <p>Practice translating the value of <m>r</m> into a plain-language description of the relationship.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose <m>r=0.88</m>. Describe the direction and strength of the linear relationship.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Suppose <m>r=-0.64</m>. Describe the direction and strength of the linear relationship.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Suppose <m>r=0.12</m>. Explain what this says about the linear relationship, if anything.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch5-mean-cross">
+      <title>Using the Mean Cross</title>
+      <introduction>
+        <p>Use the study-hours and exam-scores data to connect the mean cross with the direction of correlation.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Find the mean of the hours studied and the mean of the exam scores.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Plot the point <m>(\bar{x},\bar{y})</m> on the scatterplot and draw the mean cross.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Count how many data points lie in quadrants one and three relative to the mean cross, then explain why that supports the direction of the correlation.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-regression-line">
@@ -299,6 +365,72 @@
       <title>Interpolation Versus Extrapolation</title>
       <p>If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.</p>
     </example>
+
+    <activity xml:id="act-ch5-regression-prediction">
+      <title>Using a Regression Equation</title>
+      <introduction>
+        <p>Practice using a regression equation to make predictions in context.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose a regression line for study hours and exam score is <m>\hat{y}=53.5+4.4x</m>. Find the predicted score for a student who studies for 4 hours.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use the same equation to predict the score for a student who studies for 7 hours.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>In one sentence, explain what the prediction means in the context of the data.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch5-slope-meaning">
+      <title>Interpreting Slope and Intercept</title>
+      <introduction>
+        <p>Focus on the meaning of the slope and intercept rather than just the arithmetic.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the equation <m>\hat{y}=53.5+4.4x</m>, identify the slope and the y-intercept.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain what the slope means if <m>x</m> is hours studied and <m>y</m> is exam score.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain why the y-intercept may or may not have a sensible interpretation in this situation.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch5-interpolation-extrapolation">
+      <title>Interpolation or Extrapolation?</title>
+      <introduction>
+        <p>Decide whether each prediction stays within the observed data or goes beyond it.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>If the study-hours data only includes values from 1 to 8 hours, decide whether predicting a score for 5 hours is interpolation or extrapolation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether predicting a score for 10 hours is interpolation or extrapolation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain why one of these predictions is usually more trustworthy than the other.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

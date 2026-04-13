@@ -45,6 +45,50 @@
       </ol>
     </exercise>
 
+    <activity xml:id="act-ch8-binomial-or-not">
+      <title>Binomial or Not?</title>
+      <introduction>
+        <p>Use a few quick examples to check whether the four binomial conditions really hold.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Decide whether guessing on 8 true-false questions can be modeled by a binomial random variable. If it can, state <m>n</m> and <m>p</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether drawing 5 cards without replacement from a standard deck and counting the number of hearts is binomial. If not, say which condition fails.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether 12 free throws with the same success probability on every shot can be modeled by a binomial random variable.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch8-pattern-hunt">
+      <title>Counting Success Patterns</title>
+      <introduction>
+        <p>See how binomial coefficients count the different ways to place successes among trials.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>List all sequences of 5 Bernoulli trials with exactly 2 successes. Use <m>S</m> for success and <m>F</m> for failure.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Count the sequences you listed and verify that the answer matches <m>\binom{5}{2}</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For 6 trials with exactly 3 successes, how many success patterns are possible? Explain briefly why the order of the successes does not matter in the coefficient.</p>
+        </statement>
+      </task>
+    </activity>
+
     <p>To compute binomial probabilities, we also need the <term>binomial coefficient<idx><h>probability</h><h>binomial coefficient</h></idx></term></p>
 
     <me>
@@ -149,6 +193,50 @@
         <li><p>Write a formula for <m>P(X\le 1)</m>.</p></li>
       </ol>
     </exercise>
+
+    <activity xml:id="act-ch8-quiz-guessing">
+      <title>Quiz Guessing Challenge</title>
+      <introduction>
+        <p>Work with a short quiz and practice exact, at-most, and at-least binomial probabilities.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A 6-question true-false quiz is answered by guessing. Let <m>X</m> be the number correct. State <m>n</m> and <m>p</m>, and write a formula for <m>P(X=3)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write a formula for <m>P(X\ge 1)</m>. Then explain why the complement is the quickest way to compute it.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write a formula for <m>P(X\le 2)</m>.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch8-factory-defects">
+      <title>Factory Fault Finder</title>
+      <introduction>
+        <p>Use a defect-rate model to practice the binomial CDF and the complement rule.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A factory inspects 20 items, and each item has defect probability <m>0.05</m>. Let <m>X</m> be the number of defective items. State the binomial model for <m>X</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>P(X=0)</m> and <m>P(X\ge 1)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>P(X\le 2)</m> and explain why the result is small or large in context.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-binomial-mean-variance">
@@ -207,6 +295,50 @@
     </example>
 
     <p>These formulas are worth remembering because they come up constantly in applications.</p>
+
+    <activity xml:id="act-ch8-free-throw-forecast">
+      <title>Free-Throw Forecast</title>
+      <introduction>
+        <p>Practice the binomial mean and variance formulas with a sports context.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A player makes free throws with probability <m>0.7</m> and takes 12 shots. Let <m>X\sim B(12,0.7)</m>. Find the mean number of made shots.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the variance and standard deviation of <m>X</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain what the mean and standard deviation say about the player's long-run performance.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch8-compare-binomial-spread">
+      <title>Which Binomial is More Spread Out?</title>
+      <introduction>
+        <p>Compare two binomial models that have the same mean but different variability.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For <m>X\sim B(20,0.5)</m>, find the mean and standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For <m>Y\sim B(100,0.1)</m>, find the mean and standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Both random variables have the same mean. Which one is more spread out, and what does that say about the game or process it models?</p>
+        </statement>
+      </task>
+    </activity>
 
     <exercise xml:id="binom-inline-ex-3">
       <p>If <m>X\sim B(10,0.3)</m>, find <m>E(X)</m>, <m>\operatorname{Var}(X)</m>, and <m>\sigma_X</m>.</p>

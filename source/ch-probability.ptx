@@ -57,6 +57,50 @@
       <p>When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.</p>
       <p>On the other hand, the events “the outcome is even” and “the outcome is greater than 3” are not mutually exclusive, because 4 and 6 belong to both events.</p>
     </example>
+
+    <activity xml:id="act-ch6-sample-spaces-events">
+      <title>Sample Spaces and Events</title>
+      <introduction>
+        <p>Practice writing sample spaces and identifying events for simple random experiments.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event “the number is at least 4.”</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write the sample space for one coin flip and list the outcomes for the event “heads occurs.” Then do the same for the event “tails occurs.”</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For two coin flips, write the event “exactly one head occurs” as a set of outcomes.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch6-set-operations">
+      <title>Complements, Unions, and Intersections</title>
+      <introduction>
+        <p>Use the language of sets to describe common probability events.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Using the sample space for one die roll, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Write <m>A^c</m>, <m>A\cup B</m>, and <m>A\cap B</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For two coin flips, let <m>A</m> be the event “the first flip is a head” and let <m>B</m> be the event “exactly one head occurs.” Find <m>A\cap B</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Decide whether the events “the number is 1” and “the number is 6” are mutually exclusive. Explain your answer.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-probability-rules">
@@ -160,6 +204,50 @@
     </me>
 
     <p>Notice what happens here: the event <m>\{3,5\}</m> contains two outcomes, but its probability is not <m>2/6</m>. That is why the formula <m>|A|/|S|</m> cannot be used unless the outcomes are equally likely.</p>
+
+    <activity xml:id="act-ch6-probability-rules">
+      <title>Using the Probability Rules</title>
+      <introduction>
+        <p>Practice computing probabilities from equally likely outcomes and from a probability table.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For a fair die, let <m>A</m> be the event “the outcome is prime” and let <m>B</m> be the event “the outcome is odd.” Find <m>P(A)</m>, <m>P(B)</m>, <m>P(A\cap B)</m>, and <m>P(A\cup B)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Using the loaded die in <xref ref="tbl-loaded-die"/>, find the probability of rolling a number less than 4.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Using the same table, find the complement of the event “rolling a 1 or a 2.” Then explain why the complement rule is useful here.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch6-fair-vs-loaded">
+      <title>Fair and Loaded Dice</title>
+      <introduction>
+        <p>Compare a fair die with the loaded die to see how probability laws depend on the model.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For a fair die, find the probability of rolling a 6 and the probability of rolling an even number.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the loaded die in <xref ref="tbl-loaded-die"/>, find the probability of rolling a 6 and the probability of rolling an even number.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compare the two answers and explain what makes the loaded die different from the fair die.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-conditional-probability">
@@ -236,6 +324,72 @@
     </ul>
 
     <p>If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product <m>P(A)P(B)</m> is positive.</p>
+
+    <activity xml:id="act-ch6-conditional-die">
+      <title>Conditional Probability with a Die</title>
+      <introduction>
+        <p>Use a die roll to practice the conditional probability formula and the multiplication rule.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Let <m>A</m> be the event “the outcome is odd” and let <m>B</m> be the event “the outcome is greater than 2.” Find <m>P(B\mid A)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find <m>P(A\mid B)</m> for the same events.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use the multiplication rule to find <m>P(A\cap B)</m> and check that it matches the direct count.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch6-card-sample-conditional">
+      <title>Conditional Probability with a Card Sample</title>
+      <introduction>
+        <p>Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch6-independence-check">
+      <title>Independent or Not?</title>
+      <introduction>
+        <p>Decide whether pairs of events are independent, mutually exclusive, or neither.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For a fair die, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Decide whether the events are independent.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the same die, let <m>C</m> be the event “the outcome is 1” and let <m>D</m> be the event “the outcome is 6.” Decide whether the events are mutually exclusive.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain in one or two sentences why independence and mutual exclusivity are different ideas.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>

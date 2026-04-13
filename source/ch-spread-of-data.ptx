@@ -51,6 +51,72 @@
     </me>
 
     <p>A small IQR means the middle half of the data is fairly concentrated. A large IQR means the middle half is more spread out.</p>
+
+    <activity xml:id="act-ch4-quartiles-generated">
+      <title>Quartiles and IQR Practice</title>
+      <introduction>
+        <p>Use a short ordered data set so you can practice finding quartiles and the interquartile range by hand.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the ordered data set 4, 6, 7, 8, 9, 11, 12, 15, 18, find <m>Q_1</m>, <m>Q_2</m>, and <m>Q_3</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute the interquartile range.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Tell whether the middle 50% of the data is tightly clustered or fairly spread out.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-quartiles-class-data">
+      <title>Quartiles from Class Data</title>
+      <introduction>
+        <p>Use one quantitative variable from the class data set collected earlier in the book.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a class variable such as height, distance from school, commute time, or number of siblings. Order the data and find the quartiles and IQR.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write one sentence describing the spread of the middle half of the data.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>If another student chose a different quantitative variable from the class data, compare the two IQRs and say which data set is more spread out in the middle.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-quartiles-compare">
+      <title>Comparing Interquartile Ranges</title>
+      <introduction>
+        <p>Compare two generated data sets with different amounts of spread in the middle half.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Find the IQR for the data set 10, 11, 11, 12, 13, 14, 14, 15, 16.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the IQR for the data set 2, 5, 6, 8, 10, 13, 16, 20, 24.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which data set has the larger IQR, and what does that tell you about the spread of the middle 50%?</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-boxplots-outliers">
@@ -125,6 +191,72 @@
       </me>
       <p>Any data value less than 0 or greater than 32 would be flagged as a possible outlier.</p>
     </example>
+
+    <activity xml:id="act-ch4-boxplot-generated">
+      <title>Five-Number Summary and Boxplot</title>
+      <introduction>
+        <p>Use a short data set to practice the five-number summary and the shape of a boxplot.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, find the five-number summary.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Draw the boxplot for the data set.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>State whether the distribution looks symmetric or skewed, and explain your answer from the boxplot.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-boxplot-class-data">
+      <title>Boxplot from Class Data</title>
+      <introduction>
+        <p>Use the class data set from earlier in the book.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a quantitative variable such as height, commute time, distance from school, or number of siblings. Find the five-number summary and draw a boxplot.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Look for possible outliers using the 1.5 times IQR rule.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Say whether the data seem roughly symmetric or skewed, and use the boxplot to justify your answer.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-outlier-rule">
+      <title>Outlier Rule Practice</title>
+      <introduction>
+        <p>Use the 1.5 times IQR rule on a small data set with one possible outlier.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the data set 4, 6, 7, 8, 8, 9, 10, 11, 24, find <m>Q_1</m>, <m>Q_3</m>, and the IQR.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute the lower and upper fences.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Identify any possible outliers.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-variance-sd-zscores">
@@ -202,6 +334,72 @@
     </example>
 
     <p>Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with <m>|z| &gt; 2</m> may deserve a closer look. That rule is not universal, but it is often used as a quick screen.</p>
+
+    <activity xml:id="act-ch4-variance-generated">
+      <title>Variance and Standard Deviation Practice</title>
+      <introduction>
+        <p>Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For the population data set 2, 4, 6, 8, 10, compute the population mean, variance, and standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For the sample data set 2, 4, 6, 8, 10, compute the sample mean and sample standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compare the two standard deviations. Why are they close, and why are they not exactly the same?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-sd-class-data">
+      <title>Spread from Class Data</title>
+      <introduction>
+        <p>Use one quantitative variable from the class data set collected earlier in the book.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a variable such as height, commute time, distance from school, or number of siblings. Compute the sample mean and sample standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Describe the spread in one sentence using the standard deviation.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find one data value that is about one standard deviation above or below the mean, if such a value exists.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch4-zscores">
+      <title>Z-Score Practice</title>
+      <introduction>
+        <p>Practice interpreting z-scores and comparing values on a standardized scale.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A test score has mean 70 and standard deviation 5. Find the z-score for a score of 80.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>A value has z-score <m>-2</m> in a distribution with mean 50 and standard deviation 8. Find the value.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>State whether each z-score is above or below the mean: <m>1.5</m>, <m>0</m>, and <m>-0.75</m>.</p>
+        </statement>
+      </task>
+    </activity>
   </section>
 
   <conclusion>
