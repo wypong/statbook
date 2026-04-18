@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="app-binomial-table">
+  <title>Binomial Distribution</title>
+
+  <p>This appendix gives a compact <term>binomial table<idx><h>appendices</h><h>binomial table</h></idx></term> of exact probabilities <m>P(X=k)</m> for <m>X\sim B(n,p)</m>, with <m>n</m> from 1 to 10 and several common values of <m>p</m>. If <m>p&gt;0.5</m>, use the symmetry relation <m>P_p(X=k)=P_{1-p}(X=n-k)</m>.</p>
+  <p>Each table lists probabilities rounded to four decimal places. To make the print version easier to read, each value of <m>p</m> is split into a lower-<m>k</m> table and an upper-<m>k</m> table. For larger values of <m>n</m> or for parameters not shown here, use technology.</p>
+
+  <section xml:id="sec-binomial-table-p01">
+    <title>Success Probability 0.10</title>
+
+    <table xml:id="tbl-binomial-p01-low">
+      <title>Exact probabilities for <m>X\sim B(n,0.10)</m> with <m>k=0,1,2,3,4,5</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>0.9000</cell>
+          <cell>0.1000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>0.8100</cell>
+          <cell>0.1800</cell>
+          <cell>0.0100</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>0.7290</cell>
+          <cell>0.2430</cell>
+          <cell>0.0270</cell>
+          <cell>0.0010</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>0.6561</cell>
+          <cell>0.2916</cell>
+          <cell>0.0486</cell>
+          <cell>0.0036</cell>
+          <cell>0.0001</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>0.5905</cell>
+          <cell>0.3281</cell>
+          <cell>0.0729</cell>
+          <cell>0.0081</cell>
+          <cell>0.0005</cell>
+          <cell>0.0000</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.5314</cell>
+          <cell>0.3543</cell>
+          <cell>0.0984</cell>
+          <cell>0.0146</cell>
+          <cell>0.0012</cell>
+          <cell>0.0001</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.4783</cell>
+          <cell>0.3720</cell>
+          <cell>0.1240</cell>
+          <cell>0.0230</cell>
+          <cell>0.0026</cell>
+          <cell>0.0002</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.4305</cell>
+          <cell>0.3826</cell>
+          <cell>0.1488</cell>
+          <cell>0.0331</cell>
+          <cell>0.0046</cell>
+          <cell>0.0004</cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.3874</cell>
+          <cell>0.3874</cell>
+          <cell>0.1722</cell>
+          <cell>0.0446</cell>
+          <cell>0.0074</cell>
+          <cell>0.0008</cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.3487</cell>
+          <cell>0.3874</cell>
+          <cell>0.1937</cell>
+          <cell>0.0574</cell>
+          <cell>0.0112</cell>
+          <cell>0.0015</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tbl-binomial-p01-high">
+      <title>Exact probabilities for <m>X\sim B(n,0.10)</m> with <m>k=6,7,8,9,10</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0001</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0001</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-binomial-table-p02">
+    <title>Success Probability 0.20</title>
+
+    <table xml:id="tbl-binomial-p02-low">
+      <title>Exact probabilities for <m>X\sim B(n,0.20)</m> with <m>k=0,1,2,3,4,5</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>0.8000</cell>
+          <cell>0.2000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>0.6400</cell>
+          <cell>0.3200</cell>
+          <cell>0.0400</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>0.5120</cell>
+          <cell>0.3840</cell>
+          <cell>0.0960</cell>
+          <cell>0.0080</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>0.4096</cell>
+          <cell>0.4096</cell>
+          <cell>0.1536</cell>
+          <cell>0.0256</cell>
+          <cell>0.0016</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>0.3277</cell>
+          <cell>0.4096</cell>
+          <cell>0.2048</cell>
+          <cell>0.0512</cell>
+          <cell>0.0064</cell>
+          <cell>0.0003</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.2621</cell>
+          <cell>0.3932</cell>
+          <cell>0.2458</cell>
+          <cell>0.0819</cell>
+          <cell>0.0154</cell>
+          <cell>0.0015</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.2097</cell>
+          <cell>0.3670</cell>
+          <cell>0.2753</cell>
+          <cell>0.1147</cell>
+          <cell>0.0287</cell>
+          <cell>0.0043</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.1678</cell>
+          <cell>0.3355</cell>
+          <cell>0.2936</cell>
+          <cell>0.1468</cell>
+          <cell>0.0459</cell>
+          <cell>0.0092</cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.1342</cell>
+          <cell>0.3020</cell>
+          <cell>0.3020</cell>
+          <cell>0.1762</cell>
+          <cell>0.0661</cell>
+          <cell>0.0165</cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.1074</cell>
+          <cell>0.2684</cell>
+          <cell>0.3020</cell>
+          <cell>0.2013</cell>
+          <cell>0.0881</cell>
+          <cell>0.0264</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tbl-binomial-p02-high">
+      <title>Exact probabilities for <m>X\sim B(n,0.20)</m> with <m>k=6,7,8,9,10</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0001</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0004</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0011</cell>
+          <cell>0.0001</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0028</cell>
+          <cell>0.0003</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0055</cell>
+          <cell>0.0008</cell>
+          <cell>0.0001</cell>
+          <cell>0.0000</cell>
+          <cell>0.0000</cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-binomial-table-p03">
+    <title>Success Probability 0.30</title>
+
+    <table xml:id="tbl-binomial-p03-low">
+      <title>Exact probabilities for <m>X\sim B(n,0.30)</m> with <m>k=0,1,2,3,4,5</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>0.7000</cell>
+          <cell>0.3000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>0.4900</cell>
+          <cell>0.4200</cell>
+          <cell>0.0900</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>0.3430</cell>
+          <cell>0.4410</cell>
+          <cell>0.1890</cell>
+          <cell>0.0270</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>0.2401</cell>
+          <cell>0.4116</cell>
+          <cell>0.2646</cell>
+          <cell>0.0756</cell>
+          <cell>0.0081</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>0.1681</cell>
+          <cell>0.3601</cell>
+          <cell>0.3087</cell>
+          <cell>0.1323</cell>
+          <cell>0.0283</cell>
+          <cell>0.0024</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.1176</cell>
+          <cell>0.3025</cell>
+          <cell>0.3241</cell>
+          <cell>0.1852</cell>
+          <cell>0.0595</cell>
+          <cell>0.0102</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0824</cell>
+          <cell>0.2471</cell>
+          <cell>0.3177</cell>
+          <cell>0.2269</cell>
+          <cell>0.0972</cell>
+          <cell>0.0250</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0576</cell>
+          <cell>0.1977</cell>
+          <cell>0.2965</cell>
+          <cell>0.2541</cell>
+          <cell>0.1361</cell>
+          <cell>0.0467</cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0404</cell>
+          <cell>0.1556</cell>
+          <cell>0.2668</cell>
+          <cell>0.2668</cell>
+          <cell>0.1715</cell>
+          <cell>0.0735</cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0282</cell>
+          <cell>0.1211</cell>
+          <cell>0.2335</cell>
+          <cell>0.2668</cell>
+          <cell>0.2001</cell>
+          <cell>0.1029</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tbl-binomial-p03-high">
+      <title>Exact probabilities for <m>X\sim B(n,0.30)</m> with <m>k=6,7,8,9,10</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0007</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0036</cell>
+          <cell>0.0002</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0100</cell>
+          <cell>0.0012</cell>
+          <cell>0.0001</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0210</cell>
+          <cell>0.0039</cell>
+          <cell>0.0004</cell>
+          <cell>0.0000</cell>
+          <cell></cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0368</cell>
+          <cell>0.0090</cell>
+          <cell>0.0014</cell>
+          <cell>0.0001</cell>
+          <cell>0.0000</cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-binomial-table-p04">
+    <title>Success Probability 0.40</title>
+
+    <table xml:id="tbl-binomial-p04-low">
+      <title>Exact probabilities for <m>X\sim B(n,0.40)</m> with <m>k=0,1,2,3,4,5</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>0.6000</cell>
+          <cell>0.4000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>0.3600</cell>
+          <cell>0.4800</cell>
+          <cell>0.1600</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>0.2160</cell>
+          <cell>0.4320</cell>
+          <cell>0.2880</cell>
+          <cell>0.0640</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>0.1296</cell>
+          <cell>0.3456</cell>
+          <cell>0.3456</cell>
+          <cell>0.1536</cell>
+          <cell>0.0256</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>0.0778</cell>
+          <cell>0.2592</cell>
+          <cell>0.3456</cell>
+          <cell>0.2304</cell>
+          <cell>0.0768</cell>
+          <cell>0.0102</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0467</cell>
+          <cell>0.1866</cell>
+          <cell>0.3110</cell>
+          <cell>0.2765</cell>
+          <cell>0.1382</cell>
+          <cell>0.0369</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0280</cell>
+          <cell>0.1306</cell>
+          <cell>0.2613</cell>
+          <cell>0.2903</cell>
+          <cell>0.1935</cell>
+          <cell>0.0774</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0168</cell>
+          <cell>0.0896</cell>
+          <cell>0.2090</cell>
+          <cell>0.2787</cell>
+          <cell>0.2322</cell>
+          <cell>0.1239</cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0101</cell>
+          <cell>0.0605</cell>
+          <cell>0.1612</cell>
+          <cell>0.2508</cell>
+          <cell>0.2508</cell>
+          <cell>0.1672</cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0060</cell>
+          <cell>0.0403</cell>
+          <cell>0.1209</cell>
+          <cell>0.2150</cell>
+          <cell>0.2508</cell>
+          <cell>0.2007</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tbl-binomial-p04-high">
+      <title>Exact probabilities for <m>X\sim B(n,0.40)</m> with <m>k=6,7,8,9,10</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0041</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0172</cell>
+          <cell>0.0016</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0413</cell>
+          <cell>0.0079</cell>
+          <cell>0.0007</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0743</cell>
+          <cell>0.0212</cell>
+          <cell>0.0035</cell>
+          <cell>0.0003</cell>
+          <cell></cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.1115</cell>
+          <cell>0.0425</cell>
+          <cell>0.0106</cell>
+          <cell>0.0016</cell>
+          <cell>0.0001</cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-binomial-table-p05">
+    <title>Success Probability 0.50</title>
+
+    <table xml:id="tbl-binomial-p05-low">
+      <title>Exact probabilities for <m>X\sim B(n,0.50)</m> with <m>k=0,1,2,3,4,5</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>0.5000</cell>
+          <cell>0.5000</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>0.2500</cell>
+          <cell>0.5000</cell>
+          <cell>0.2500</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>0.1250</cell>
+          <cell>0.3750</cell>
+          <cell>0.3750</cell>
+          <cell>0.1250</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>0.0625</cell>
+          <cell>0.2500</cell>
+          <cell>0.3750</cell>
+          <cell>0.2500</cell>
+          <cell>0.0625</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>5</cell>
+          <cell>0.0312</cell>
+          <cell>0.1562</cell>
+          <cell>0.3125</cell>
+          <cell>0.3125</cell>
+          <cell>0.1562</cell>
+          <cell>0.0312</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0156</cell>
+          <cell>0.0938</cell>
+          <cell>0.2344</cell>
+          <cell>0.3125</cell>
+          <cell>0.2344</cell>
+          <cell>0.0938</cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0078</cell>
+          <cell>0.0547</cell>
+          <cell>0.1641</cell>
+          <cell>0.2734</cell>
+          <cell>0.2734</cell>
+          <cell>0.1641</cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.0039</cell>
+          <cell>0.0312</cell>
+          <cell>0.1094</cell>
+          <cell>0.2188</cell>
+          <cell>0.2734</cell>
+          <cell>0.2188</cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.0020</cell>
+          <cell>0.0176</cell>
+          <cell>0.0703</cell>
+          <cell>0.1641</cell>
+          <cell>0.2461</cell>
+          <cell>0.2461</cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.0010</cell>
+          <cell>0.0098</cell>
+          <cell>0.0439</cell>
+          <cell>0.1172</cell>
+          <cell>0.2051</cell>
+          <cell>0.2461</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tbl-binomial-p05-high">
+      <title>Exact probabilities for <m>X\sim B(n,0.50)</m> with <m>k=6,7,8,9,10</m></title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell><m>n\backslash k</m></cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+        </row>
+        <row>
+          <cell>6</cell>
+          <cell>0.0156</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>7</cell>
+          <cell>0.0547</cell>
+          <cell>0.0078</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>8</cell>
+          <cell>0.1094</cell>
+          <cell>0.0312</cell>
+          <cell>0.0039</cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>9</cell>
+          <cell>0.1641</cell>
+          <cell>0.0703</cell>
+          <cell>0.0176</cell>
+          <cell>0.0020</cell>
+          <cell></cell>
+        </row>
+        <row bottom="major">
+          <cell>10</cell>
+          <cell>0.2051</cell>
+          <cell>0.1172</cell>
+          <cell>0.0439</cell>
+          <cell>0.0098</cell>
+          <cell>0.0010</cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+</appendix>

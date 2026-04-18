@@ -12,6 +12,12 @@
     <p> This book was authored in <pretext />. </p>
   </colophon>
 
+  <xi:include href="./app-binomial-table.ptx" />
+  <xi:include href="./app-normal-table.ptx" />
+  <xi:include href="./app-t-table.ptx" />
+  <xi:include href="./app-chi-square-table.ptx" />
+  <xi:include href="./app-f-table.ptx" />
+
   <index>
     <title>Index</title>
     <index-list/>
