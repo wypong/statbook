@@ -2521,20 +2521,65 @@ var ptx_lunr_docs = [
   "body": " If , find , , and .  "
 },
 {
+  "id": "sec-binomial-normal-approximation",
+  "level": "1",
+  "url": "sec-binomial-normal-approximation.html",
+  "type": "Section",
+  "number": "8.4",
+  "title": "Binomial Approximation of Normal Distribution",
+  "body": " Binomial Approximation of Normal Distribution  The previous section showed that if , then the mean of is and the standard deviation is . Those same two numbers will guide us here.  We have not formally studied the normal distribution yet. That happens in . For now, think of a normal distribution as a smooth bell-shaped curve determined by its center and its spread.  When is fairly large and is not too close to 0 or 1, the graph of a binomial distribution begins to look bell-shaped instead of strongly skewed. A common rule of thumb is that the binomial model is reasonably approximated by a normal distribution when   These conditions say that we expect at least about 5 successes and at least about 5 failures. If one side is too small, then the binomial distribution is usually too lopsided for a normal curve to match it well.  When the rule of thumb is satisfied, we match the binomial model with the normal model   In other words, we use a normal distribution with the same mean and the same standard deviation as the binomial distribution. So the formulas from the previous section are exactly what make this approximation possible.  For now, exact binomial probabilities still come from the binomial formula or technology. The point of this section is to see the shape connection. In the next chapter, once area under a normal curve has been introduced, we will be able to use this idea more fully.   A Binomial Model That Looks Nearly Normal  Let . Then   Since and , the rule of thumb is satisfied. So should be approximated reasonably well by the normal model   overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.    The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red bell-shaped curve over them. The curve is centered at 10 and closely follows the overall shape of the bars.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.     In , the binomial bars and the normal curve line up at the same center, and their spreads are very similar. That is exactly what we expect, because both models use mean 10 and standard deviation .   For each binomial model below, decide whether a normal approximation is reasonable. If it is, write the matching normal model.        When Does the Bell Curve Fit?   Use the rule of thumb together with the mean and standard deviation formulas from the previous section.     For , compute and . Should a normal approximation be reasonable?      If the approximation is reasonable, write the matching normal model and identify its mean and standard deviation.      Now consider . Repeat the check. Why should this distribution look less like a normal curve?     "
+},
+{
+  "id": "ex-binom-normal-approximation",
+  "level": "2",
+  "url": "sec-binomial-normal-approximation.html#ex-binom-normal-approximation",
+  "type": "Example",
+  "number": "8.4.1",
+  "title": "A Binomial Model That Looks Nearly Normal.",
+  "body": " A Binomial Model That Looks Nearly Normal  Let . Then   Since and , the rule of thumb is satisfied. So should be approximated reasonably well by the normal model   overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.  "
+},
+{
+  "id": "fig-binom-normal-approximation",
+  "level": "2",
+  "url": "sec-binomial-normal-approximation.html#fig-binom-normal-approximation",
+  "type": "Figure",
+  "number": "8.4.2",
+  "title": "",
+  "body": " The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red bell-shaped curve over them. The curve is centered at 10 and closely follows the overall shape of the bars.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.    "
+},
+{
+  "id": "binom-inline-ex-4",
+  "level": "2",
+  "url": "sec-binomial-normal-approximation.html#binom-inline-ex-4",
+  "type": "Checkpoint",
+  "number": "8.4.3",
+  "title": "",
+  "body": " For each binomial model below, decide whether a normal approximation is reasonable. If it is, write the matching normal model.      "
+},
+{
+  "id": "act-ch8-normal-preview",
+  "level": "2",
+  "url": "sec-binomial-normal-approximation.html#act-ch8-normal-preview",
+  "type": "Activity",
+  "number": "8.4.1",
+  "title": "When Does the Bell Curve Fit?",
+  "body": " When Does the Bell Curve Fit?   Use the rule of thumb together with the mean and standard deviation formulas from the previous section.     For , compute and . Should a normal approximation be reasonable?      If the approximation is reasonable, write the matching normal model and identify its mean and standard deviation.      Now consider . Repeat the check. Why should this distribution look less like a normal curve?    "
+},
+{
   "id": "ch8-exercises",
   "level": "1",
   "url": "ch8-exercises.html",
   "type": "Exercises",
-  "number": "8.4",
+  "number": "8.5",
   "title": "Exercises",
-  "body": " Exercises   Decide whether each setting is binomial. If it is, state and .   A fair coin is flipped 12 times and the number of heads is counted.  Four cards are drawn without replacement from a deck and the number of aces is counted.  A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.     Let .   Find .  Find .  Find .     A basketball player makes free throws with probability . If the player takes 6 free throws, what is the probability of making exactly 4 of them?    A quiz has 10 true-false questions, and a student guesses on every question. Let be the number answered correctly.   Find .  Find .  Find .     If , find the mean, variance, and standard deviation.    In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let be the number that have a dog.   Find .  Find .  What is the expected number of selected households that have a dog?    "
+  "body": " Exercises   Decide whether each setting is binomial. If it is, state and .   A fair coin is flipped 12 times and the number of heads is counted.  Four cards are drawn without replacement from a deck and the number of aces is counted.  A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.     Let .   Find .  Find .  Find .     A basketball player makes free throws with probability . If the player takes 6 free throws, what is the probability of making exactly 4 of them?    A quiz has 10 true-false questions, and a student guesses on every question. Let be the number answered correctly.   Find .  Find .  Find .     If , find the mean, variance, and standard deviation.    In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let be the number that have a dog.   Find .  Find .  What is the expected number of selected households that have a dog?     For each binomial model below, decide whether a normal approximation is reasonable. Explain your decision using and .         Let .   Show that a normal approximation is reasonable.  Find the mean and standard deviation of .  Write the matching normal model.     Explain why should be approximated better by a normal curve than , even though both models have the same value of . In your explanation, discuss both the rule of thumb and the shape of the distribution.   "
 },
 {
   "id": "ch8-ex-1",
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-1",
   "type": "Exercise",
-  "number": "8.4.1",
+  "number": "8.5.1",
   "title": "",
   "body": " Decide whether each setting is binomial. If it is, state and .   A fair coin is flipped 12 times and the number of heads is counted.  Four cards are drawn without replacement from a deck and the number of aces is counted.  A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.   "
 },
@@ -2543,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-2",
   "type": "Exercise",
-  "number": "8.4.2",
+  "number": "8.5.2",
   "title": "",
   "body": " Let .   Find .  Find .  Find .   "
 },
@@ -2552,7 +2597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-3",
   "type": "Exercise",
-  "number": "8.4.3",
+  "number": "8.5.3",
   "title": "",
   "body": " A basketball player makes free throws with probability . If the player takes 6 free throws, what is the probability of making exactly 4 of them?  "
 },
@@ -2561,7 +2606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-4",
   "type": "Exercise",
-  "number": "8.4.4",
+  "number": "8.5.4",
   "title": "",
   "body": " A quiz has 10 true-false questions, and a student guesses on every question. Let be the number answered correctly.   Find .  Find .  Find .   "
 },
@@ -2570,7 +2615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-5",
   "type": "Exercise",
-  "number": "8.4.5",
+  "number": "8.5.5",
   "title": "",
   "body": " If , find the mean, variance, and standard deviation.  "
 },
@@ -2579,9 +2624,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch8-exercises.html#ch8-ex-6",
   "type": "Exercise",
-  "number": "8.4.6",
+  "number": "8.5.6",
   "title": "",
   "body": " In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let be the number that have a dog.   Find .  Find .  What is the expected number of selected households that have a dog?   "
+},
+{
+  "id": "ch8-ex-7",
+  "level": "2",
+  "url": "ch8-exercises.html#ch8-ex-7",
+  "type": "Exercise",
+  "number": "8.5.7",
+  "title": "",
+  "body": " For each binomial model below, decide whether a normal approximation is reasonable. Explain your decision using and .       "
+},
+{
+  "id": "ch8-ex-8",
+  "level": "2",
+  "url": "ch8-exercises.html#ch8-ex-8",
+  "type": "Exercise",
+  "number": "8.5.8",
+  "title": "",
+  "body": " Let .   Show that a normal approximation is reasonable.  Find the mean and standard deviation of .  Write the matching normal model.   "
+},
+{
+  "id": "ch8-ex-9",
+  "level": "2",
+  "url": "ch8-exercises.html#ch8-ex-9",
+  "type": "Exercise",
+  "number": "8.5.9",
+  "title": "",
+  "body": " Explain why should be approximated better by a normal curve than , even though both models have the same value of . In your explanation, discuss both the rule of thumb and the shape of the distribution.  "
 },
 {
   "id": "sec-continuous-uniform",
