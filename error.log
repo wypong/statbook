@@ -1,0 +1,23 @@
+[2026-04-22T02:05:32.844306505+00:00] startup: base_url=https://chatgpt.com/backend-api path_style=wham
+[2026-04-22T02:05:32.873700970+00:00] auth: mode=ChatGPT account_id=22aae3c8-7f0c-4cb0-a57c-5b7db5155526
+[2026-04-22T02:05:32.873738258+00:00] auth: set ChatGPT-Account-Id header: 22aae3c8-7f0c-4cb0-a57c-5b7db5155526
+[2026-04-22T02:05:32.886637396+00:00] startup: wham_force_internal=false ua=codex_cli_rs/0.122.0 (Ubuntu 24.4.0; x86_64) st-256color (codex_cloud_tasks_tui)
+[2026-04-22T02:05:32.939349617+00:00] env: git origins: ["git@github.com:wypong/statbook.git"]
+[2026-04-22T02:05:32.939384515+00:00] env: parsed SSH GitHub origin => wypong/statbook
+[2026-04-22T02:05:32.939404076+00:00] env: GET https://chatgpt.com/backend-api/wham/environments/by-repo/github/wypong/statbook
+[2026-04-22T02:05:32.940209725+00:00] env: parsed SSH GitHub origin => wypong/statbook
+[2026-04-22T02:05:34.425899140+00:00] refresh load_tasks failed: http error: list_tasks failed: GET https://chatgpt.com/backend-api/wham/tasks/list failed: 403 Forbidden; content-type=application/json; body={"detail":"Codex is not enabled for your account"}
+[2026-04-22T02:05:34.472752694+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:05:34.472893535+00:00] env: by-repo fetch failed for wypong/statbook: GET https://chatgpt.com/backend-api/wham/environments/by-repo/github/wypong/statbook failed: 403 Forbidden; content-type=application/json; body={"detail":"Codex is not enabled for your account"}
+[2026-04-22T02:05:34.472955982+00:00] env: GET https://chatgpt.com/backend-api/wham/environments
+[2026-04-22T02:05:34.476332027+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:05:34.631074127+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:05:34.649563336+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:05:34.649762470+00:00] env: /environments JSON (pretty):
+{
+  "detail": "Codex is not enabled for your account"
+}
+[2026-04-22T02:06:07.350389078+00:00] env: parsed SSH GitHub origin => wypong/statbook
+[2026-04-22T02:06:07.546198141+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:06:07.699529408+00:00] env: status=403 Forbidden content-type=application/json
+[2026-04-22T02:06:11.658304220+00:00] refresh load_tasks failed: http error: list_tasks failed: GET https://chatgpt.com/backend-api/wham/tasks/list failed: 403 Forbidden; content-type=application/json; body={"detail":"Codex is not enabled for your account"}

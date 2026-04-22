@@ -7,11 +7,12 @@
     <p>In statistics, we usually care about a whole population but only get
     to see a sample. That means we need methods for using sample information
     to say something sensible about unknown population quantities.</p>
-    <p>This chapter focuses on estimating a population mean. The main tool
+    <p>This chapter focuses on estimating two very common kinds of
+    parameters: a population mean and a population proportion. The main tool
     is the <term>confidence interval<idx><h>inference</h><h>confidence
     interval</h></idx></term>, which gives a range of plausible values for
-    the parameter. To justify that method, we first need to understand how
-    sample means behave.</p>
+    the parameter. To justify those formulas, we first need to understand
+    how sample means and sample proportions behave.</p>
   </introduction>
 
   <section xml:id="sec-sampling-distributions-clt">
@@ -411,12 +412,20 @@
       </me>
     </example>
 
-    <p>Interpreting a confidence interval takes some care. A 95% confidence
-    level does not mean there is a 95% chance that <m>\mu</m> is in the one
-    interval we already computed. Instead, it means that if we repeated the
-    same sampling process many times and built an interval each time, about
-    95% of those intervals would capture the true mean. The parameter
-    <m>\mu</m> is fixed; the interval is what changes from sample to sample.</p>
+    <p>Interpreting a confidence interval takes some care. Before we collect
+    the data, the sample mean <m>\overline{X}</m> is random, so the interval
+    built from it is random too. In that stage, it is correct to say that the
+    interval procedure has probability 0.95 of capturing <m>\mu</m>.</p>
+
+    <p>After we collect the sample and get a specific value
+    <m>\overline{x}</m>, the interval becomes a fixed interval with fixed
+    endpoints. At that point, the true mean <m>\mu</m> is either inside the
+    interval or it is not. So a 95% confidence level does not mean there is a
+    95% chance that <m>\mu</m> is in this one computed interval. It means that
+    if we repeated the same sampling process many times and built an interval
+    each time, about 95% of those intervals would capture the true mean. The
+    parameter <m>\mu</m> is fixed; the interval is what changes from sample to
+    sample.</p>
 
     <exercise xml:id="ci-inline-ex-2">
       <p>A sample of size 49 has mean <m>\overline{x}=82</m>. Assume the population standard deviation is known to be 14.</p>
@@ -467,6 +476,265 @@
       <task>
         <statement>
           <p>If a student wants a narrower interval, should they ask for higher confidence or lower confidence?</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <section xml:id="sec-confidence-intervals-proportion">
+    <title>Confidence Intervals for a Population Proportion</title>
+
+    <p>Many statistical questions are really yes-or-no questions. What
+    proportion of voters support a ballot measure? What proportion of
+    products coming off an assembly line are defective? What proportion of
+    students at a college work more than 20 hours per week? In settings like
+    these, the parameter we want is the <term>population
+    proportion<idx><h>inference</h><h>population proportion</h></idx></term>,
+    usually written <m>p</m>.</p>
+
+    <p>If we take a random sample of size <m>n</m> and count the number of
+    successes, say <m>X</m>, then a natural estimate of <m>p</m> is the
+    <term>sample proportion<idx><h>data</h><h>sample
+    proportion</h></idx></term>:</p>
+
+    <me>
+      \widehat{p}=\frac{X}{n}.
+    </me>
+
+    <p>This section is built directly on the binomial model from
+    <xref ref="sec-binomial-normal-approximation"/>. If each observation is a
+    success or failure, and the success probability is <m>p</m>, then the
+    count <m>X</m> of successes in <m>n</m> independent trials has a binomial
+    distribution:</p>
+
+    <me>
+      X\sim B(n,p).
+    </me>
+
+    <p>From the binomial chapter, for large enough <m>n</m> we can approximate
+    this binomial count by a normal random variable with the same mean and
+    standard deviation:</p>
+
+    <me>
+      X \approx N(np,\sqrt{np(1-p)}),
+    </me>
+
+    <p>provided the expected numbers of successes and failures are both at
+    least about 5:</p>
+
+    <me>
+      np\ge 5
+      \qquad\text{and}\qquad
+      n(1-p)\ge 5.
+    </me>
+
+    <p>Now divide everything by <m>n</m>. Since <m>\widehat{p}=X/n</m>, the
+    sample proportion is approximately normal with mean</p>
+
+    <me>
+      E(\widehat{p})=E\left(\frac{X}{n}\right)=\frac{E(X)}{n}=\frac{np}{n}=p
+    </me>
+
+    <p>and standard deviation</p>
+
+    <me>
+      \sigma_{\widehat{p}}
+      =\frac{\sigma_X}{n}
+      =\frac{\sqrt{np(1-p)}}{n}
+      =\sqrt{\frac{p(1-p)}{n}}.
+    </me>
+
+    <p>So for large samples,</p>
+
+    <me>
+      \widehat{p}\approx N\left(p,\sqrt{\frac{p(1-p)}{n}}\right).
+    </me>
+
+    <p>That is the key fact behind a one-proportion confidence interval. Once
+    we standardize, we get the approximate z-statistic</p>
+
+    <me>
+      \frac{\widehat{p}-p}{\sqrt{p(1-p)/n}} \approx N(0,1).
+    </me>
+
+    <p>Let <m>\alpha=1-C</m> as before. Then the middle proportion <m>C</m> of
+    the standard normal curve gives</p>
+
+    <me>
+      P\left(
+      -z_{\alpha/2}
+      \lt
+      \frac{\widehat{p}-p}{\sqrt{p(1-p)/n}}
+      \lt
+      z_{\alpha/2}
+      \right)\approx C.
+    </me>
+
+    <p>Solving that inequality for <m>p</m> suggests the interval</p>
+
+    <me>
+      \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{p(1-p)}{n}}.
+    </me>
+
+    <p>There is one catch: the standard deviation still contains the unknown
+    parameter <m>p</m>. In practice we plug in the sample proportion
+    <m>\widehat{p}</m> in its place. That gives the usual large-sample
+    confidence interval for a population proportion:</p>
+
+    <me>
+      \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
+    </me>
+
+    <p>So the margin of error for a proportion is</p>
+
+    <me>
+      E=z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
+    </me>
+
+    <p>This method works well when the sample is random or otherwise
+    independent, and when the sample is large enough that the observed counts
+    of successes and failures are both at least about 5:</p>
+
+    <me>
+      n\widehat{p}\ge 5
+      \qquad\text{and}\qquad
+      n(1-\widehat{p})\ge 5.
+    </me>
+
+    <p>If sampling is done without replacement from a finite population, a
+    common rule of thumb is that the population should be at least 10 times as
+    large as the sample so the observations are close to independent.</p>
+
+    <example xml:id="ex-ci-proportion-campus-poll">
+      <title>A Confidence Interval for Support in a Campus Poll</title>
+      <p>A random sample of 200 students is asked whether they support a new
+      campus tutoring center. Suppose 124 students say yes. Estimate the
+      population proportion <m>p</m> of all students who support the plan with
+      95% confidence.</p>
+
+      <p>Here <m>x=124</m>, <m>n=200</m>, so</p>
+
+      <me>
+        \widehat{p}=\frac{124}{200}=0.62.
+      </me>
+
+      <p>The large-sample conditions are met because</p>
+
+      <me>
+        n\widehat{p}=200(0.62)=124
+        \qquad\text{and}\qquad
+        n(1-\widehat{p})=200(0.38)=76,
+      </me>
+
+      <p>and both numbers are much larger than 5. For 95% confidence,
+      <m>z_{0.025}=1.96</m>. The margin of error is</p>
+
+      <me>
+        E=1.96\sqrt{\frac{0.62(0.38)}{200}}\approx 0.0673.
+      </me>
+
+      <p>So the confidence interval is</p>
+
+      <me>
+        0.62\pm 0.0673=(0.5527,0.6873).
+      </me>
+
+      <p>So we estimate that between about 55.3% and 68.7% of all students
+      support the tutoring center.</p>
+    </example>
+
+    <example xml:id="ex-ci-proportion-defects">
+      <title>A Confidence Interval for a Defect Rate</title>
+      <p>A quality-control inspector checks 400 light bulbs and finds 18
+      defective ones. Find a 90% confidence interval for the population
+      proportion of defective bulbs.</p>
+
+      <p>First compute the sample proportion:</p>
+
+      <me>
+        \widehat{p}=\frac{18}{400}=0.045.
+      </me>
+
+      <p>The large-sample conditions are satisfied because</p>
+
+      <me>
+        n\widehat{p}=400(0.045)=18
+        \qquad\text{and}\qquad
+        n(1-\widehat{p})=400(0.955)=382.
+      </me>
+
+      <p>For 90% confidence, <m>z_{0.05}=1.645</m>. The margin of error is</p>
+
+      <me>
+        E=1.645\sqrt{\frac{0.045(0.955)}{400}}\approx 0.0170.
+      </me>
+
+      <p>So the confidence interval is</p>
+
+      <me>
+        0.045\pm 0.0170=(0.0280,0.0620).
+      </me>
+
+      <p>That puts the defect rate at about 2.8% to 6.2%.</p>
+    </example>
+
+    <p>The interpretation follows the same pattern as for means. A 95%
+    confidence interval for <m>p</m> does not mean there is a 95% chance that
+    the fixed population proportion is inside the one interval we already
+    computed. It means that if we repeated the sampling process many times and
+    built an interval each time, about 95% of those intervals would capture
+    the true proportion.</p>
+
+    <exercise xml:id="ci-inline-ex-3">
+      <p>In a random sample of 150 customers, 57 say they used a store coupon
+      that week.</p>
+      <ol>
+        <li><p>Find <m>\widehat{p}</m>.</p></li>
+        <li><p>Check whether the large-sample conditions for a one-proportion z-interval are met.</p></li>
+        <li><p>Write the formula for a 95% confidence interval for <m>p</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <activity xml:id="act-ch10-proportion-builder">
+      <title>Proportion Interval Builder</title>
+      <introduction>
+        <p>Build a confidence interval for a population proportion from a sample count.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A random sample of 120 students finds that 48 prefer digital notes to printed notes. Compute <m>\widehat{p}</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Check whether the conditions for a one-proportion z-interval are satisfied.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find a 95% confidence interval for the population proportion and interpret it in context.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch10-approximation-check">
+      <title>Can We Trust the Approximation?</title>
+      <introduction>
+        <p>Decide when the normal approximation behind a proportion interval is reasonable.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>For each pair <m>(n,\widehat{p})</m>, compute <m>n\widehat{p}</m> and <m>n(1-\widehat{p})</m>: <m>(40,0.10)</m>, <m>(80,0.55)</m>, and <m>(25,0.92)</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For which cases would a one-proportion z-interval be reasonable? Explain briefly.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Why is it a problem when the sample has very few observed successes or very few observed failures?</p>
         </statement>
       </task>
     </activity>
@@ -563,21 +831,23 @@
   <conclusion>
     <title>Summary</title>
 
-    <p>Confidence intervals are built on the sampling behavior of the sample mean.</p>
+    <p>Confidence intervals are built on the sampling behavior of sample means
+    and sample proportions.</p>
 
     <ul>
       <li><p>The sampling distribution of <m>\overline{X}</m> has mean <m>\mu</m> and standard deviation <m>\sigma/\sqrt{n}</m>.</p></li>
       <li><p>The Central Limit Theorem says that for large samples, the sample mean is approximately normal.</p></li>
-      <li><p>A confidence interval estimates the population mean by giving a range of plausible values.</p></li>
+      <li><p>A confidence interval estimates a population parameter by giving a range of plausible values.</p></li>
       <li><p>Its basic form is point estimate plus or minus margin of error.</p></li>
       <li><p>For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.</p></li>
+      <li><p>If <m>X\sim B(n,p)</m>, then for large samples the binomial model leads to the approximation <m>\widehat{p}\approx N\left(p,\sqrt{p(1-p)/n}\right)</m>.</p></li>
+      <li><p>A large-sample confidence interval for a population proportion is <m>\widehat{p}\pm z_{\alpha/2}\sqrt{\widehat{p}(1-\widehat{p})/n}</m>.</p></li>
       <li><p>Sample-size formulas come from solving the margin-of-error formula for <m>n</m>.</p></li>
     </ul>
 
     <p>The next chapter turns estimation into decision-making. Instead of
-    asking which values of <m>\mu</m> are plausible, we will ask whether
-    the data give strong enough evidence to reject a claimed value of
-    <m>\mu</m>.</p>
+    asking which parameter values are plausible, we will ask whether the
+    data give strong enough evidence to reject a claimed value.</p>
   </conclusion>
 
   <exercises xml:id="ch10-exercises">
@@ -613,6 +883,37 @@
 
     <exercise xml:id="ch10-ex-4">
       <p>How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?</p>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-5">
+      <p>Explain how the confidence-interval formula for a population
+      proportion comes from the normal approximation to a binomial random
+      variable.</p>
+      <ol>
+        <li><p>Start with <m>X\sim B(n,p)</m> and write its approximate normal model for large <m>n</m>.</p></li>
+        <li><p>Use <m>\widehat{p}=X/n</m> to find the approximate mean and standard deviation of <m>\widehat{p}</m>.</p></li>
+        <li><p>Write the resulting z-based confidence-interval formula for <m>p</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-6">
+      <p>In a random sample of 250 voters, 140 say they support a local park
+      bond measure.</p>
+      <ol>
+        <li><p>Find <m>\widehat{p}</m>.</p></li>
+        <li><p>Check whether the large-sample conditions are satisfied.</p></li>
+        <li><p>Find a 95% confidence interval for the population proportion of voters who support the measure.</p></li>
+        <li><p>Interpret the interval in context.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-7">
+      <p>A manufacturer samples 80 batteries and finds that 6 are defective.</p>
+      <ol>
+        <li><p>Is a one-proportion z-interval appropriate here? Check the large-sample conditions.</p></li>
+        <li><p>If it is appropriate, find a 90% confidence interval for the population defect proportion.</p></li>
+        <li><p>If it is not appropriate, explain what goes wrong with the normal approximation.</p></li>
+      </ol>
     </exercise>
   </exercises>
 </chapter>

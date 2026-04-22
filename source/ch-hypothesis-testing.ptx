@@ -242,6 +242,260 @@
       <li><p>Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.</p></li>
     </ul>
 
+    <p>To see why the decision rule makes sense, it helps to focus on one
+    concrete case first: a right-tailed z-test. Suppose we want to test</p>
+
+    <me>
+      H_0:\mu=\mu_0
+      \qquad\text{versus}\qquad
+      H_a:\mu&gt;\mu_0.
+    </me>
+
+    <p>Assume the population standard deviation <m>\sigma</m> is known, so the
+    test statistic is</p>
+
+    <me>
+      Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}.
+    </me>
+
+    <p>If <m>H_0</m> is true, then the sample mean is centered at
+    <m>\mu_0</m>, so</p>
+
+    <me>
+      Z\sim N(0,1).
+    </me>
+
+    <p>That tells us what ordinary sampling variation looks like when the null
+    hypothesis is true. Values of <m>Z</m> near 0 are routine. Moderately
+    positive values can happen by chance. But very large positive values are
+    rare under <m>H_0</m>.</p>
+
+    <p>This is why a right-tailed test rejects only for large positive
+    statistics. If the alternative says <m>\mu&gt;\mu_0</m>, then evidence
+    against <m>H_0</m> should come from a sample mean that is unusually high,
+    not from one that is low or merely a little above <m>\mu_0</m>. The word
+    “large” here means large relative to the null distribution, or in more
+    practical language, many standard errors above <m>\mu_0</m>.</p>
+
+    <p>At significance level <m>\alpha</m>, we agree in advance to reject
+    <m>H_0</m> only when the observed statistic lands in the most extreme
+    right-tail area <m>\alpha</m> of the null distribution. That cutoff is the
+    <term>critical value<idx><h>inference</h><h>critical
+    value</h></idx></term> <m>z_{\alpha}</m>, defined by</p>
+
+    <me>
+      P(Z&gt;z_{\alpha})=\alpha.
+    </me>
+
+    <p>So the rejection rule for a right-tailed z-test is</p>
+
+    <me>
+      \text{reject }H_0 \text{ if } z&gt;z_{\alpha}.
+    </me>
+
+    <p>This rule is sensible for two reasons. First, it rejects only when the
+    sample mean is unusually large under <m>H_0</m>. Second, if
+    <m>H_0</m> really is true, the probability of rejecting is exactly the
+    chosen significance level <m>\alpha</m>. In other words, the rule controls
+    the Type I error rate.</p>
+
+    <figure xml:id="fig-right-tailed-z-critical-region">
+      <caption>The rejection region for a right-tailed z-test</caption>
+      <image width="74%" margins="13%">
+        <shortdescription>A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.</shortdescription>
+        <description>The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10cm,
+              height=6cm,
+              xmin=-3.5,
+              xmax=3.5,
+              ymin=0,
+              ymax=0.45,
+              axis lines=left,
+              xlabel={$z$},
+              ylabel={},
+              xtick={0,1.645},
+              xticklabels={$0$,$z_{\alpha}$},
+              ytick=\empty,
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!25,
+                domain=1.645:3.5,
+                samples=160
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-3.5:3.5,
+                samples=240,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(1.645,0) (1.645,{1/sqrt(2*3.14159)*exp(-(1.645)^2/2)})};
+
+              \node at (axis cs:2.55,0.10) {$\alpha$};
+              \node at (axis cs:2.15,0.19) {\small reject $H_0$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <example xml:id="ex-right-tailed-z-test-logic">
+      <title>Why the Critical-Value and P-Value Rules Agree</title>
+      <p>Suppose a school wants to know whether the mean weekly study time is
+      greater than 40 hours. Assume the population standard deviation is known
+      to be 8 hours, and a random sample of <m>n=64</m> students gives sample
+      mean <m>\overline{x}=42</m>. We test</p>
+      <me>
+        H_0:\mu=40
+        \qquad\text{versus}\qquad
+        H_a:\mu&gt;40
+      </me>
+      <p>at significance level <m>\alpha=0.05</m>.</p>
+
+      <p>If <m>H_0</m> is true, then</p>
+
+      <me>
+        Z=\frac{\overline{X}-40}{8/\sqrt{64}}
+        =\frac{\overline{X}-40}{1}
+        \sim N(0,1).
+      </me>
+
+      <p>The observed test statistic is</p>
+
+      <me>
+        z=\frac{42-40}{8/\sqrt{64}}=2.
+      </me>
+
+      <p>Using the critical-value method, the right-tailed cutoff is
+      <m>z_{0.05}=1.645</m>. Since <m>2&gt;1.645</m>, the observed statistic
+      lies in the rejection region shown in
+      <xref ref="fig-right-tailed-z-critical-region"/>, so we reject
+      <m>H_0</m>.</p>
+
+      <p>Now look at the same decision through the p-value method. The
+      <term>p-value<idx><h>inference</h><h>p-value</h></idx></term> is the
+      probability, assuming <m>H_0</m> is true, of getting a test statistic at
+      least as large as the one observed:</p>
+
+      <me>
+        \text{p-value}=P(Z\ge 2)\approx 0.0228.
+      </me>
+
+      <p>This means that if the true mean really were 40, then a sample mean
+      this high or higher would occur only about 2.28% of the time. Since
+      <m>0.0228&lt;0.05</m>, the sample is too unusual under <m>H_0</m>, so we
+      again reject <m>H_0</m>.</p>
+    </example>
+
+    <figure xml:id="fig-right-tailed-z-pvalue">
+      <caption>The p-value is the tail area beyond the observed statistic</caption>
+      <image width="76%" margins="12%">
+        <shortdescription>A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.</shortdescription>
+        <description>The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=10.5cm,
+              height=6cm,
+              xmin=-3.5,
+              xmax=3.5,
+              ymin=0,
+              ymax=0.45,
+              axis lines=left,
+              xlabel={$z$},
+              ylabel={},
+              xtick={0,1.645,2.0},
+              xticklabels={$0$,$z_{\alpha}$,$z_{\text{obs}}$},
+              ytick=\empty,
+              enlargelimits=false,
+              clip=false
+            ]
+              \addplot[
+                draw=none,
+                fill=blue!20,
+                domain=1.645:3.5,
+                samples=160
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                draw=none,
+                fill=red!40,
+                domain=2.0:3.5,
+                samples=160
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)} \closedcycle;
+
+              \addplot[
+                thick,
+                domain=-3.5:3.5,
+                samples=240,
+                color=black
+              ]
+              {1/sqrt(2*3.14159)*exp(-x^2/2)};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(1.645,0) (1.645,{1/sqrt(2*3.14159)*exp(-(1.645)^2/2)})};
+
+              \addplot[
+                dashed,
+                color=black
+              ]
+              coordinates {(2.0,0) (2.0,{1/sqrt(2*3.14159)*exp(-(2.0)^2/2)})};
+
+              \node at (axis cs:2.05,0.13) {$\alpha$};
+              \node at (axis cs:2.7,0.055) {\small p-value};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p><xref ref="fig-right-tailed-z-pvalue"/> explains why the p-value
+    method says the same thing as the critical-value method. In a right-tailed
+    z-test, if the observed statistic is <m>z_{\text{obs}}</m>, then</p>
+
+    <me>
+      \text{p-value}=P(Z\ge z_{\text{obs}}).
+    </me>
+
+    <p>The farther to the right <m>z_{\text{obs}}</m> is, the smaller this
+    tail area becomes. Therefore, for a right-tailed test,</p>
+
+    <me>
+      z_{\text{obs}}&gt;z_{\alpha}
+      \qquad\Longleftrightarrow\qquad
+      P(Z\ge z_{\text{obs}})&lt;P(Z\ge z_{\alpha})=\alpha.
+    </me>
+
+    <p>So the two rules are really the same comparison written in two
+    different ways:</p>
+
+    <ul>
+      <li><p>The critical-value method compares the observed statistic with a cutoff chosen in advance.</p></li>
+      <li><p>The p-value method compares the observed tail area with the significance level <m>\alpha</m>.</p></li>
+    </ul>
+
+    <p>Both methods ask the same question: if <m>H_0</m> were true, would this
+    sample result be so far out in the right tail that it should count as
+    unusually strong evidence for <m>H_a</m>?</p>
+
     <example xml:id="ex-battery-test">
       <title>A Left-Tailed Test for Battery Life</title>
       <p>A sample of 50 batteries has mean lifetime <m>\overline{x}=21.8</m> hours and sample standard deviation <m>s=0.9</m> hours. Test</p>
@@ -278,7 +532,20 @@
       <p>For a two-tailed test with <m>\alpha=0.05</m> and <m>df=9</m>, the critical values are about <m>\pm 2.262</m>. Since <m>-2.582</m> falls beyond the left critical value, we reject <m>H_0</m>. The data suggest that the true mean estimate differs from 2.5 feet.</p>
     </example>
 
-    <p>Whether we use a critical-value method or a p-value method, the logic is the same: a test statistic far from what <m>H_0</m> predicts counts as evidence against <m>H_0</m>.</p>
+    <p>Whether we use a critical-value method or a p-value method, the logic
+    is always the same: compare the observed statistic with what the null
+    hypothesis predicts, then decide whether the result is too extreme to be
+    explained by ordinary sampling variation alone.</p>
+
+    <exercise xml:id="ht-inline-ex-2">
+      <p>Consider a right-tailed z-test with significance level
+      <m>\alpha=0.05</m>.</p>
+      <ol>
+        <li><p>If the observed statistic is <m>z=1.20</m>, is it in the rejection region?</p></li>
+        <li><p>Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.</p></li>
+        <li><p>What decision should be made about <m>H_0</m>?</p></li>
+      </ol>
+    </exercise>
 
     <activity xml:id="act-ch11-run-the-test">
       <title>Run the Test</title>
@@ -334,6 +601,7 @@
       <li><p>The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.</p></li>
       <li><p>A p-value measures how surprising the sample would be if the null hypothesis were true.</p></li>
       <li><p>Reject <m>H_0</m> when the p-value is smaller than the significance level <m>\alpha</m>.</p></li>
+      <li><p>For a right-tailed z-test, rejecting when <m>z&gt;z_{\alpha}</m> is equivalent to rejecting when the p-value is less than <m>\alpha</m>.</p></li>
       <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
       <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
       <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
@@ -374,6 +642,16 @@
 
     <exercise xml:id="ch11-ex-4">
       <p>Why is “fail to reject <m>H_0</m>” a better phrase than “accept <m>H_0</m>”?</p>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-5">
+      <p>Consider a right-tailed z-test of <m>H_0:\mu=\mu_0</m> versus
+      <m>H_a:\mu&gt;\mu_0</m>.</p>
+      <ol>
+        <li><p>Explain why large positive z-values count as evidence against <m>H_0</m>.</p></li>
+        <li><p>Explain why the rejection region has the form <m>z&gt;z_{\alpha}</m>.</p></li>
+        <li><p>Explain why the rule <m>z&gt;z_{\alpha}</m> is equivalent to the rule p-value <m>&lt;\alpha</m>.</p></li>
+      </ol>
     </exercise>
   </exercises>
 </chapter>
