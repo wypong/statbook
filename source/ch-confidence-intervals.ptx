@@ -7,12 +7,15 @@
     <p>In statistics, we usually care about a whole population but only get
     to see a sample. That means we need methods for using sample information
     to say something sensible about unknown population quantities.</p>
-    <p>This chapter focuses on estimating two very common kinds of
-    parameters: a population mean and a population proportion. The main tool
-    is the <term>confidence interval<idx><h>inference</h><h>confidence
+    <p>This chapter focuses on estimating three common kinds of
+    parameters: a population mean, a population proportion, and a population
+    variance. The main tool is the <term>confidence interval<idx><h>inference</h><h>confidence
     interval</h></idx></term>, which gives a range of plausible values for
     the parameter. To justify those formulas, we first need to understand
-    how sample means and sample proportions behave.</p>
+    how sample means, sample proportions, and sample variances behave.</p>
+    <p>For means and proportions, the normal distribution does most of the
+    work. For variance and standard deviation from a normal population, the
+    chi-square distribution is the key player instead.</p>
   </introduction>
 
   <section xml:id="sec-sampling-distributions-clt">
@@ -740,10 +743,237 @@
     </activity>
   </section>
 
+  <section xml:id="sec-confidence-intervals-variance">
+    <title>Confidence Intervals for a Population Variance and Standard Deviation</title>
+    <shorttitle>Confidence Intervals for Variance and Standard Deviation</shorttitle>
+
+    <p>Sometimes the main question is about spread rather than center. A
+    manufacturer may want to estimate how much bottle fills vary. A coach may
+    care about the variability of race times, not just the average time. In
+    problems like these, the parameter of interest is the <term>population
+    variance<idx><h>inference</h><h>population variance</h></idx></term>
+    <m>\sigma^2</m>, or equivalently the population standard deviation
+    <m>\sigma</m>.</p>
+
+    <p>From <xref ref="sec-variance-sd-zscores"/>, the <term>sample
+    variance<idx><h>summaries</h><h>sample variance</h></idx></term> is based
+    on squared deviations from the sample mean. Before the data are collected,
+    the random sample variance is</p>
+
+    <me>
+      S^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\overline{X})^2.
+    </me>
+
+    <p>After the sample is observed, its value is written <m>s^2</m>.</p>
+
+    <p>The reason the chi-square distribution appears is that this formula is
+    built from squared normal quantities. Suppose
+    <m>X_1,\ldots,X_n</m> is a random sample from a normal population
+    <m>N(\mu,\sigma^2)</m>. If we standardize each observation,</p>
+
+    <me>
+      Z_i=\frac{X_i-\mu}{\sigma},
+    </me>
+
+    <p>then each <m>Z_i</m> is standard normal. A sum of squares of
+    independent standard normal random variables has a <term>chi-square
+    distribution<idx><h>inference</h><h>chi-square
+    distribution</h></idx></term>.</p>
+
+    <p>If the population mean <m>\mu</m> were known, then</p>
+
+    <me>
+      \sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma}\right)^2\sim \chi^2_n.
+    </me>
+
+    <p>But in practice <m>\mu</m> is usually unknown, so we replace it by the
+    sample mean <m>\overline{X}</m>. That uses up one <term>degree of
+    freedom<idx><h>inference</h><h>degrees of freedom</h></idx></term>,
+    because once <m>n-1</m> of the deviations
+    <m>X_i-\overline{X}</m> are known, the last one is forced by the fact that
+    they add up to 0. So</p>
+
+    <me>
+      \sum_{i=1}^n\left(\frac{X_i-\overline{X}}{\sigma}\right)^2\sim \chi^2_{n-1}.
+    </me>
+
+    <p>Since</p>
+
+    <me>
+      \sum_{i=1}^n (X_i-\overline{X})^2=(n-1)S^2,
+    </me>
+
+    <p>the key result becomes</p>
+
+    <me>
+      \frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}.
+    </me>
+
+    <p>That one fact is what makes a confidence interval for
+    <m>\sigma^2</m> possible.</p>
+
+    <p>The assumptions need to be stated carefully.</p>
+
+    <ul>
+      <li><p>The data should come from a random sample or a similarly independent sampling process.</p></li>
+      <li><p>The observations should be independent. If sampling is done without replacement from a finite population, a common rule of thumb is that the population should be at least 10 times as large as the sample.</p></li>
+      <li><p>The population itself should be normal. This is the crucial assumption.</p></li>
+    </ul>
+
+    <p>That last point matters more here than it did for intervals about a
+    mean. The CLT helps sample means become approximately normal for large
+    samples, but it does not make the chi-square interval for variance exact.
+    For variance and standard deviation, this method is justified only when
+    the population distribution is normal or very close to normal.</p>
+
+    <p>Let <m>C=1-\alpha</m>. Using the critical-value notation from
+    <xref ref="app-chi-square-table"/>, where
+    <m>\chi^2_{\alpha}[n-1]</m> leaves right-tail area <m>\alpha</m> for a
+    chi-square distribution with <m>n-1</m> degrees of freedom, we have</p>
+
+    <me>
+      P\left(
+      \chi^2_{1-\alpha/2}[n-1]
+      \le
+      \frac{(n-1)S^2}{\sigma^2}
+      \le
+      \chi^2_{\alpha/2}[n-1]
+      \right)=C.
+    </me>
+
+    <p>Solving that inequality for <m>\sigma^2</m> gives the confidence
+    interval for the population variance:</p>
+
+    <me>
+      \left(
+      \frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]},
+      \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}
+      \right).
+    </me>
+
+    <p>If we want an interval for the population standard deviation instead,
+    we simply take square roots of both endpoints:</p>
+
+    <me>
+      \left(
+      \sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]}},
+      \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}}
+      \right).
+    </me>
+
+    <example xml:id="ex-ci-variance-delivery-times">
+      <title>An Interval for Variation in Delivery Times</title>
+      <p>Suppose delivery times on a short route are well modeled by a normal
+      distribution. A random sample of 12 deliveries has sample standard
+      deviation <m>s=4</m> minutes. Find a 95% confidence interval for the
+      population variance and the population standard deviation.</p>
+
+      <p>Here <m>n=12</m>, so the degrees of freedom are
+      <m>n-1=11</m>. For 95% confidence, <m>\alpha=0.05</m>. From
+      <xref ref="app-chi-square-table"/>,</p>
+
+      <me>
+        \chi^2_{0.025}[11]\approx 21.920
+        \qquad\text{and}\qquad
+        \chi^2_{0.975}[11]\approx 3.816.
+      </me>
+
+      <p>Since <m>s^2=16</m>, the variance interval is</p>
+
+      <me>
+        \left(
+        \frac{11(16)}{21.920},
+        \frac{11(16)}{3.816}
+        \right)
+        \approx
+        (8.03,46.12).
+      </me>
+
+      <p>Now take square roots to get an interval for the population standard
+      deviation:</p>
+
+      <me>
+        (\sqrt{8.03},\sqrt{46.12})\approx (2.83,6.79).
+      </me>
+
+      <p>So a reasonable estimate for the route-to-route spread is that the
+      population standard deviation is between about 2.83 and 6.79 minutes.</p>
+    </example>
+
+    <example xml:id="ex-ci-variance-normality-warning">
+      <title>Why Large Sample Size Is Not the Main Issue</title>
+      <p>A researcher takes a random sample of 50 household incomes and wants
+      a confidence interval for the population variance. Even though
+      <m>n=50</m> is not small, household incomes are usually strongly
+      right-skewed.</p>
+
+      <p>So a chi-square interval for <m>\sigma^2</m> is not automatically
+      justified. The key result
+      <m>(n-1)S^2/\sigma^2\sim\chi^2_{n-1}</m> depends on a normal population,
+      not just on a large sample. For variance intervals, the shape of the
+      population matters a lot.</p>
+    </example>
+
+    <exercise xml:id="ci-inline-ex-4">
+      <p>Assume a population is normal. A random sample of size 16 has sample
+      variance <m>s^2=9</m>.</p>
+      <ol>
+        <li><p>What are the degrees of freedom?</p></li>
+        <li><p>Write the formula for a 90% confidence interval for <m>\sigma^2</m>.</p></li>
+        <li><p>Write the corresponding interval for <m>\sigma</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <activity xml:id="act-ch10-variance-builder">
+      <title>Variance Interval Builder</title>
+      <introduction>
+        <p>Build a confidence interval for a population variance and standard deviation from a sample standard deviation.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Suppose a normal population is sampled with <m>n=15</m> and the sample standard deviation is <m>s=3.2</m>. Find the degrees of freedom.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Using the chi-square table, find a 90% confidence interval for the population variance <m>\sigma^2</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Convert the interval to a 90% confidence interval for the population standard deviation <m>\sigma</m>.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch10-variance-assumption-check">
+      <title>Can We Trust the Chi-Square Method?</title>
+      <introduction>
+        <p>Check the assumptions before using a confidence interval for variance.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A random sample of bolt lengths comes from a manufacturing process that is known to be close to normal. Is a chi-square interval for <m>\sigma^2</m> reasonable?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>A random sample of 40 household incomes is strongly right-skewed. Should we be comfortable using the chi-square interval here? Explain.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Why does a large sample size help more for intervals about a mean than for intervals about a variance?</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
   <section xml:id="sec-sample-size-margin-error">
     <title>Margin of Error and Sample Size</title>
 
-    <p>The margin of error in a z-interval is</p>
+    <p>This section returns to the z-interval for a population mean. In that
+    setting, the margin of error is</p>
 
     <me>
       E=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
@@ -832,7 +1062,8 @@
     <title>Summary</title>
 
     <p>Confidence intervals are built on the sampling behavior of sample means
-    and sample proportions.</p>
+    and sample proportions, and in one important case on sample variances as
+    well.</p>
 
     <ul>
       <li><p>The sampling distribution of <m>\overline{X}</m> has mean <m>\mu</m> and standard deviation <m>\sigma/\sqrt{n}</m>.</p></li>
@@ -842,6 +1073,8 @@
       <li><p>For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.</p></li>
       <li><p>If <m>X\sim B(n,p)</m>, then for large samples the binomial model leads to the approximation <m>\widehat{p}\approx N\left(p,\sqrt{p(1-p)/n}\right)</m>.</p></li>
       <li><p>A large-sample confidence interval for a population proportion is <m>\widehat{p}\pm z_{\alpha/2}\sqrt{\widehat{p}(1-\widehat{p})/n}</m>.</p></li>
+      <li><p>For a normal population, <m>\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}</m>, which leads to a confidence interval for the population variance and standard deviation.</p></li>
+      <li><p>The chi-square interval for variance requires a normal population; large sample size by itself is not the main justification.</p></li>
       <li><p>Sample-size formulas come from solving the margin-of-error formula for <m>n</m>.</p></li>
     </ul>
 
@@ -913,6 +1146,36 @@
         <li><p>Is a one-proportion z-interval appropriate here? Check the large-sample conditions.</p></li>
         <li><p>If it is appropriate, find a 90% confidence interval for the population defect proportion.</p></li>
         <li><p>If it is not appropriate, explain what goes wrong with the normal approximation.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-8">
+      <p>Assume a normal population. A random sample of size 12 has sample
+      standard deviation <m>s=4</m>.</p>
+      <ol>
+        <li><p>Find the degrees of freedom.</p></li>
+        <li><p>Find a 95% confidence interval for the population variance <m>\sigma^2</m>.</p></li>
+        <li><p>Convert the result to a 95% confidence interval for the population standard deviation <m>\sigma</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-9">
+      <p>Explain carefully why the chi-square distribution appears in a
+      confidence interval for a population variance.</p>
+      <ol>
+        <li><p>Start with a random sample from a normal population and standardize each observation.</p></li>
+        <li><p>Explain why squaring and adding leads to a chi-square distribution.</p></li>
+        <li><p>Explain why replacing <m>\mu</m> by <m>\overline{X}</m> changes the degrees of freedom from <m>n</m> to <m>n-1</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch10-ex-10">
+      <p>State the assumptions for using a chi-square confidence interval for
+      the population variance.</p>
+      <ol>
+        <li><p>Why is independence needed?</p></li>
+        <li><p>Why is normality the crucial assumption?</p></li>
+        <li><p>Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?</p></li>
       </ol>
     </exercise>
   </exercises>

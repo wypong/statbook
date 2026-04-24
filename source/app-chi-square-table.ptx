@@ -5,6 +5,7 @@
 
   <p>This appendix gives right-tail critical values for the <term>chi-square distribution<idx><h>appendices</h><h>chi-square table</h></idx></term>. Each entry <m>\chi^2_\alpha</m> satisfies <m>P(\chi^2 \gt \chi^2_\alpha)=\alpha</m> for the stated degrees of freedom.</p>
   <p>The left-side columns are useful for lower-tail cutoffs, while the right-side columns are the ones most often used for hypothesis tests and confidence intervals.</p>
+  <p>In this book, these values are used most directly for confidence intervals and hypothesis tests for a population variance or standard deviation from a normal population.</p>
   <p>To keep the print layout centered and readable, the columns are split into two related tables.</p>
 
   <table xml:id="tbl-chi-square-critical-values-left">

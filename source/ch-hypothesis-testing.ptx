@@ -5,7 +5,8 @@
 
   <introduction>
     <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test<idx><h>inference</h><h>hypothesis test</h></idx></term> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
-    <p>This chapter introduces the basic logic of testing a population mean. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
+    <p>This chapter introduces the basic logic of testing a population mean, a population proportion, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
+    <p>As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model, while variance tests use the chi-square distribution that comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.</p>
   </introduction>
 
   <section xml:id="sec-hypothesis-tests-basics">
@@ -35,7 +36,7 @@
 
     <p>These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.</p>
 
-    <p>The next ingredient is the <term>test statistic<idx><h>inference</h><h>test statistic</h></idx></term>, a standardized number that measures how far the sample result is from the null value. For one-sample tests of a mean, we use</p>
+    <p>The next ingredient is the <term>test statistic<idx><h>inference</h><h>test statistic</h></idx></term>, a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use</p>
 
     <me>
       z=\frac{\overline{x}-\mu_0}{\sigma/\sqrt{n}}
@@ -592,6 +593,439 @@
     </activity>
   </section>
 
+  <section xml:id="sec-one-proportion-tests">
+    <title>Tests for a Population Proportion</title>
+
+    <p>This section is the testing counterpart to
+    <xref ref="sec-confidence-intervals-proportion"/>. The setup is the same:
+    each observation is a success or failure, the population proportion of
+    success is <m>p</m>, and the sample proportion is
+    <m>\widehat{p}=X/n</m>.</p>
+
+    <p>The normal model behind proportion tests comes from
+    <xref ref="sec-binomial-normal-approximation"/>. If <m>X\sim B(n,p)</m>,
+    then for large enough <m>n</m>, the count <m>X</m> is approximately
+    normal. Dividing by <m>n</m> gives an approximate normal model for
+    <m>\widehat{p}</m>.</p>
+
+    <p>To test a claim about a population proportion, we begin with
+    hypotheses such as</p>
+
+    <me>
+      H_0:p=p_0
+      \qquad\text{and}\qquad
+      H_a:p&lt;p_0,\quad p&gt;p_0,\quad\text{or}\quad p\ne p_0.
+    </me>
+
+    <p>Under the null hypothesis, the sample proportion is approximately
+    normal with mean <m>p_0</m> and standard deviation</p>
+
+    <me>
+      \sqrt{\frac{p_0(1-p_0)}{n}},
+    </me>
+
+    <p>provided the expected counts under <m>H_0</m> are both at least about
+    5:</p>
+
+    <me>
+      np_0\ge 5
+      \qquad\text{and}\qquad
+      n(1-p_0)\ge 5.
+    </me>
+
+    <p>That leads to the <term>one-proportion z-test<idx><h>inference</h><h>one-proportion z-test</h></idx></term> statistic</p>
+
+    <me>
+      z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}.
+    </me>
+
+    <p>This looks a lot like the z-interval from
+    <xref ref="sec-confidence-intervals-proportion"/>, but there is an
+    important difference. In a confidence interval, the unknown proportion
+    <m>p</m> is replaced by <m>\widehat{p}</m> in the standard error. In a
+    hypothesis test, the null hypothesis tells us exactly which value to use,
+    so the standard error is built from <m>p_0</m>.</p>
+
+    <p>Once the z statistic is computed, the rest is familiar:</p>
+
+    <ul>
+      <li><p>For <m>H_a:p&lt;p_0</m>, use the left-tail p-value <m>P(Z\le z)</m>.</p></li>
+      <li><p>For <m>H_a:p&gt;p_0</m>, use the right-tail p-value <m>P(Z\ge z)</m>.</p></li>
+      <li><p>For <m>H_a:p\ne p_0</m>, use the two-tail p-value <m>2P(Z\ge |z|)</m>.</p></li>
+    </ul>
+
+    <p>As before, reject <m>H_0</m> when the p-value is less than the chosen
+    significance level <m>\alpha</m>.</p>
+
+    <example xml:id="ex-one-proportion-defect-test">
+      <title>Testing a Claimed Defect Rate</title>
+      <p>A manufacturer claims that at most 4% of its light bulbs are
+      defective. A quality-control inspector checks 250 bulbs and finds 18
+      defectives. Is there evidence at the 5% significance level that the
+      true defect rate is higher than 4%?</p>
+
+      <p>Let <m>p</m> be the population proportion of defective bulbs. Then</p>
+
+      <me>
+        H_0:p=0.04
+        \qquad\text{and}\qquad
+        H_a:p&gt;0.04.
+      </me>
+
+      <p>The sample proportion is</p>
+
+      <me>
+        \widehat{p}=\frac{18}{250}=0.072.
+      </me>
+
+      <p>The large-sample conditions under the null are satisfied because</p>
+
+      <me>
+        np_0=250(0.04)=10
+        \qquad\text{and}\qquad
+        n(1-p_0)=250(0.96)=240.
+      </me>
+
+      <p>So the test statistic is</p>
+
+      <me>
+        z=\frac{0.072-0.04}{\sqrt{0.04(0.96)/250}}\approx 2.58.
+      </me>
+
+      <p>Because this is a right-tailed test, the p-value is</p>
+
+      <me>
+        P(Z\ge 2.58)\approx 0.0049.
+      </me>
+
+      <p>Since <m>0.0049&lt;0.05</m>, we reject <m>H_0</m>. The sample gives
+      strong evidence that the defect rate is greater than 4%.</p>
+    </example>
+
+    <example xml:id="ex-one-proportion-campus-plan">
+      <title>Testing a Claimed Support Level</title>
+      <p>A college newspaper reports that 60% of students support a new
+      parking plan. A random sample of 200 students finds that 108 support
+      the plan. Test the newspaper’s claim at the 5% significance level.</p>
+
+      <p>Let <m>p</m> be the true proportion of all students who support the
+      plan. Since we want to know whether the reported value is off in either
+      direction, we test</p>
+
+      <me>
+        H_0:p=0.60
+        \qquad\text{and}\qquad
+        H_a:p\ne 0.60.
+      </me>
+
+      <p>The sample proportion is</p>
+
+      <me>
+        \widehat{p}=\frac{108}{200}=0.54.
+      </me>
+
+      <p>The null-model counts are</p>
+
+      <me>
+        np_0=200(0.60)=120
+        \qquad\text{and}\qquad
+        n(1-p_0)=200(0.40)=80,
+      </me>
+
+      <p>so the normal approximation is reasonable. The test statistic is</p>
+
+      <me>
+        z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
+      </me>
+
+      <p>For a two-tailed test, the p-value is</p>
+
+      <me>
+        2P(Z\ge 1.73)\approx 0.0836.
+      </me>
+
+      <p>Since <m>0.0836&gt;0.05</m>, we fail to reject <m>H_0</m>. At the 5%
+      level, the sample does not give enough evidence to conclude that the
+      true support level differs from 60%.</p>
+    </example>
+
+    <p>The connection with confidence intervals is worth noticing. If a
+    hypothesized value <m>p_0</m> sits far outside a confidence interval for
+    <m>p</m>, then it is also likely to be rejected by a hypothesis test at a
+    matching significance level. So intervals and tests are two ways of
+    looking at the same sample evidence.</p>
+
+    <exercise xml:id="ht-inline-ex-3">
+      <p>A random sample of 160 customers finds that 68 used a self-checkout
+      lane. Test <m>H_0:p=0.50</m> against <m>H_a:p&lt;0.50</m> at the 5%
+      significance level.</p>
+      <ol>
+        <li><p>Compute the sample proportion.</p></li>
+        <li><p>Check the large-sample conditions under the null hypothesis.</p></li>
+        <li><p>Find the z statistic and state the conclusion.</p></li>
+      </ol>
+    </exercise>
+
+    <activity xml:id="act-ch11-proportion-test-builder">
+      <title>Run a Proportion Test</title>
+      <introduction>
+        <p>Carry out a one-proportion z-test from the claim to the final conclusion.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test <m>H_0:p=0.60</m> against <m>H_a:p&gt;0.60</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute <m>\widehat{p}</m>, check the null-model conditions, and find the z statistic.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>At <m>\alpha=0.05</m>, decide whether to reject <m>H_0</m> and write the conclusion in context.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch11-test-and-interval-link">
+      <title>Connect the Test and the Interval</title>
+      <introduction>
+        <p>Compare the logic of a one-proportion test with the matching confidence interval.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Return to the campus sample with <m>n=200</m> and <m>\widehat{p}=0.54</m>. Use the interval method from <xref ref="sec-confidence-intervals-proportion"/> to build a 95% confidence interval for <m>p</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Does the claimed value <m>p_0=0.60</m> fall inside that interval?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain how that interval result matches the hypothesis-test conclusion from <xref ref="ex-one-proportion-campus-plan"/>.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <section xml:id="sec-one-variance-tests">
+    <title>Tests for a Population Variance and Standard Deviation</title>
+    <shorttitle>Tests for Variance and Standard Deviation</shorttitle>
+
+    <p>This section is the testing counterpart to
+    <xref ref="sec-confidence-intervals-variance"/>. The goal is to decide
+    whether the sample spread gives enough evidence against a claimed value of
+    the population variance <m>\sigma^2</m> or the population standard
+    deviation <m>\sigma</m>.</p>
+
+    <p>If a claim is written in terms of standard deviation, we can square
+    both sides and test variance instead. So</p>
+
+    <me>
+      H_0:\sigma=\sigma_0
+      \qquad\Longleftrightarrow\qquad
+      H_0:\sigma^2=\sigma_0^2.
+    </me>
+
+    <p>The alternative can again be left-tailed, right-tailed, or
+    two-tailed:</p>
+
+    <me>
+      H_a:\sigma^2&lt;\sigma_0^2,\qquad
+      H_a:\sigma^2&gt;\sigma_0^2,\qquad
+      H_a:\sigma^2\ne \sigma_0^2.
+    </me>
+
+    <p>These tests require careful assumptions.</p>
+
+    <ul>
+      <li><p>The data should come from a random sample or a similarly independent process.</p></li>
+      <li><p>The observations should be independent.</p></li>
+      <li><p>The population should be normal. This is the crucial assumption.</p></li>
+    </ul>
+
+    <p>That last condition matters much more here than it does for tests
+    about a mean. A large sample by itself does not justify the chi-square
+    test for variance. The method depends on the population distribution being
+    normal, not just on the sample size being large.</p>
+
+    <p>From <xref ref="sec-confidence-intervals-variance"/>, if
+    <m>H_0:\sigma^2=\sigma_0^2</m> is true and the population is normal, then</p>
+
+    <me>
+      \chi^2=\frac{(n-1)S^2}{\sigma_0^2}\sim \chi^2_{n-1}.
+    </me>
+
+    <p>This gives the <term>chi-square test for a population
+    variance<idx><h>inference</h><h>chi-square test for variance</h></idx></term>.
+    The interpretation is straightforward:</p>
+
+    <ul>
+      <li><p>If the sample variance <m>s^2</m> is much larger than the null value <m>\sigma_0^2</m>, then the observed chi-square statistic will be large.</p></li>
+      <li><p>If the sample variance <m>s^2</m> is much smaller than the null value <m>\sigma_0^2</m>, then the observed chi-square statistic will be small.</p></li>
+    </ul>
+
+    <p>So the tail of the test matches the direction of the alternative.</p>
+
+    <p>Let <m>W\sim \chi^2[n-1]</m> when <m>H_0</m> is true, and let
+    <m>\chi^2_{\text{obs}}</m> be the observed test statistic.</p>
+
+    <ul>
+      <li><p>For <m>H_a:\sigma^2&gt;\sigma_0^2</m>, use the right-tail p-value <m>P(W\ge \chi^2_{\text{obs}})</m>.</p></li>
+      <li><p>For <m>H_a:\sigma^2&lt;\sigma_0^2</m>, use the left-tail p-value <m>P(W\le \chi^2_{\text{obs}})</m>.</p></li>
+      <li><p>For <m>H_a:\sigma^2\ne \sigma_0^2</m>, reject at significance level <m>\alpha</m> when <m>\chi^2_{\text{obs}}&lt;\chi^2_{1-\alpha/2}[n-1]</m> or <m>\chi^2_{\text{obs}}&gt;\chi^2_{\alpha/2}[n-1]</m>. Because the chi-square distribution is not symmetric, technology is often the easiest way to find a two-sided p-value.</p></li>
+    </ul>
+
+    <example xml:id="ex-variance-test-deliveries">
+      <title>Testing Whether Delivery Times Have Become More Variable</title>
+      <p>Suppose delivery times on a short route are well modeled by a normal
+      distribution. A company claims the population standard deviation is
+      2 minutes. A random sample of 16 deliveries gives sample standard
+      deviation <m>s=2.9</m> minutes. Test at the 5% significance level
+      whether the true standard deviation is greater than 2 minutes.</p>
+
+      <p>Let <m>\sigma</m> be the population standard deviation of delivery
+      times. Then</p>
+
+      <me>
+        H_0:\sigma=2
+        \qquad\text{and}\qquad
+        H_a:\sigma&gt;2.
+      </me>
+
+      <p>Equivalently, we are testing <m>H_0:\sigma^2=4</m> against
+      <m>H_a:\sigma^2&gt;4</m>. Because the population is assumed normal, we
+      use the chi-square statistic with <m>df=16-1=15</m>:</p>
+
+      <me>
+        \chi^2=\frac{(16-1)(2.9)^2}{2^2}=31.5375\approx 31.54.
+      </me>
+
+      <p>If <m>H_0</m> is true, then <m>W\sim \chi^2[15]</m>. Since this is a
+      right-tailed test, the p-value is</p>
+
+      <me>
+        P(W\ge 31.54)\approx 0.0074.
+      </me>
+
+      <p>Because <m>0.0074&lt;0.05</m>, we reject <m>H_0</m>. The sample gives
+      strong evidence that delivery times vary more than the claimed
+      2 minutes.</p>
+    </example>
+
+    <example xml:id="ex-variance-test-bottles">
+      <title>Testing Whether a Machine's Variation Has Changed</title>
+      <p>Assume bottle fill amounts are normally distributed. A machine is
+      supposed to have population standard deviation 1.2 ounces. A random
+      sample of 12 bottles gives sample standard deviation
+      <m>s=1.8</m> ounces. Test at the 5% significance level whether the
+      standard deviation differs from 1.2 ounces.</p>
+
+      <p>We test</p>
+
+      <me>
+        H_0:\sigma=1.2
+        \qquad\text{and}\qquad
+        H_a:\sigma\ne 1.2.
+      </me>
+
+      <p>Equivalently, <m>H_0:\sigma^2=1.44</m> and
+      <m>H_a:\sigma^2\ne 1.44</m>. The test statistic has
+      <m>df=12-1=11</m>:</p>
+
+      <me>
+        \chi^2=\frac{(12-1)(1.8)^2}{(1.2)^2}=24.75.
+      </me>
+
+      <p>For a two-tailed test with <m>\alpha=0.05</m> and
+      <m>df=11</m>, the rejection region is</p>
+
+      <me>
+        \chi^2&lt;\chi^2_{0.975}[11]
+        \qquad\text{or}\qquad
+        \chi^2&gt;\chi^2_{0.025}[11].
+      </me>
+
+      <p>From <xref ref="app-chi-square-table"/>,</p>
+
+      <me>
+        \chi^2_{0.975}[11]\approx 3.816
+        \qquad\text{and}\qquad
+        \chi^2_{0.025}[11]\approx 21.920.
+      </me>
+
+      <p>Since <m>24.75&gt;21.920</m>, the observed statistic falls in the
+      rejection region, so we reject <m>H_0</m>. The data suggest that the
+      machine's standard deviation differs from 1.2 ounces, and in fact it
+      appears to be larger.</p>
+    </example>
+
+    <p>The connection with confidence intervals is the same as before. If a
+    claimed value of <m>\sigma</m> or <m>\sigma^2</m> falls outside the
+    matching confidence interval from
+    <xref ref="sec-confidence-intervals-variance"/>, then that claim is also
+    likely to be rejected by a hypothesis test at the corresponding
+    significance level.</p>
+
+    <exercise xml:id="ht-inline-ex-4">
+      <p>Assume a normal population. A random sample of size 12 has sample
+      standard deviation <m>s=2.0</m>. Test <m>H_0:\sigma=3</m> against
+      <m>H_a:\sigma&lt;3</m> at the 10% significance level.</p>
+      <ol>
+        <li><p>Find the degrees of freedom.</p></li>
+        <li><p>Compute the chi-square test statistic.</p></li>
+        <li><p>Find the p-value and state the conclusion.</p></li>
+      </ol>
+    </exercise>
+
+    <activity xml:id="act-ch11-variance-test-builder">
+      <title>Run a Variance Test</title>
+      <introduction>
+        <p>Carry out a chi-square test for a population standard deviation from start to finish.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation <m>s=3.2</m> millimeters. Test <m>H_0:\sigma=2.5</m> against <m>H_a:\sigma&gt;2.5</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the degrees of freedom, compute the chi-square statistic, and find the p-value.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>At <m>\alpha=0.05</m>, decide whether to reject <m>H_0</m> and write the conclusion in context.</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-ch11-variance-test-interval-link">
+      <title>Connect the Test and the Interval</title>
+      <introduction>
+        <p>Compare a chi-square test for spread with the matching confidence interval.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Return to the bottle-fill sample with <m>n=12</m> and <m>s=1.8</m>. Use the method from <xref ref="sec-confidence-intervals-variance"/> to build a 95% confidence interval for <m>\sigma</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Does the claimed value <m>\sigma_0=1.2</m> fall inside that interval?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain how that interval result matches the hypothesis-test conclusion from <xref ref="ex-variance-test-bottles"/>.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
   <conclusion>
     <title>Summary</title>
 
@@ -605,9 +1039,13 @@
       <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
       <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
       <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
+      <li><p>A one-proportion z-test uses <m>z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}</m> when the expected numbers of successes and failures under <m>H_0</m> are large enough.</p></li>
+      <li><p>Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.</p></li>
+      <li><p>A chi-square test for variance uses <m>\chi^2=(n-1)s^2/\sigma_0^2</m> when the population is normal.</p></li>
+      <li><p>Tests for variance and standard deviation are closely tied to the matching chi-square confidence interval, and normality of the population is the key assumption.</p></li>
     </ul>
 
-    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation.</p>
+    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.</p>
   </conclusion>
 
   <exercises xml:id="ch11-exercises">
@@ -651,6 +1089,66 @@
         <li><p>Explain why large positive z-values count as evidence against <m>H_0</m>.</p></li>
         <li><p>Explain why the rejection region has the form <m>z&gt;z_{\alpha}</m>.</p></li>
         <li><p>Explain why the rule <m>z&gt;z_{\alpha}</m> is equivalent to the rule p-value <m>&lt;\alpha</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-6">
+      <p>A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.</p>
+      <ol>
+        <li><p>Write the hypotheses for testing whether the true proportion is greater than 45%.</p></li>
+        <li><p>Check the large-sample conditions under the null hypothesis.</p></li>
+        <li><p>Compute the z statistic.</p></li>
+        <li><p>At <m>\alpha=0.05</m>, state the conclusion in context.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-7">
+      <p>A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.</p>
+      <ol>
+        <li><p>Test <m>H_0:p=0.70</m> against <m>H_a:p\ne 0.70</m> at the 10% significance level.</p></li>
+        <li><p>Compute the p-value.</p></li>
+        <li><p>Would the conclusion change at the 5% significance level?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-8">
+      <p>Explain why a one-proportion confidence interval uses
+      <m>\widehat{p}</m> in the standard error, while a one-proportion
+      hypothesis test uses <m>p_0</m> in the standard error.</p>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-9">
+      <p>Assume a normal manufacturing process is supposed to have standard
+      deviation 5 units. A random sample of 20 items gives sample standard
+      deviation <m>s=6.5</m> units.</p>
+      <ol>
+        <li><p>Test <m>H_0:\sigma=5</m> against <m>H_a:\sigma&gt;5</m> at the 5% significance level.</p></li>
+        <li><p>Compute the chi-square test statistic.</p></li>
+        <li><p>State the p-value or compare with an appropriate critical value.</p></li>
+        <li><p>Write the conclusion in context.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-10">
+      <p>Assume coating thicknesses from a process are normally distributed.
+      The process is supposed to have standard deviation 1.2 millimeters. A
+      random sample of 18 items gives sample standard deviation
+      <m>s=1.6</m> millimeters.</p>
+      <ol>
+        <li><p>Test <m>H_0:\sigma=1.2</m> against <m>H_a:\sigma\ne 1.2</m> at the 5% significance level.</p></li>
+        <li><p>Find the degrees of freedom and the chi-square test statistic.</p></li>
+        <li><p>Use two-tailed critical values to decide whether to reject <m>H_0</m>.</p></li>
+        <li><p>State the conclusion in context.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-11">
+      <p>State the assumptions for using a chi-square test for a population
+      variance or standard deviation.</p>
+      <ol>
+        <li><p>Why is normality the crucial assumption?</p></li>
+        <li><p>Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?</p></li>
+        <li><p>How is this test connected to the confidence interval in <xref ref="sec-confidence-intervals-variance"/>?</p></li>
       </ol>
     </exercise>
   </exercises>

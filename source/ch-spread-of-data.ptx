@@ -284,7 +284,13 @@
       <p>This example shows why center alone is not enough. Two distributions can share the same mean and still behave very differently.</p>
     </example>
 
-    <p>When we work with a sample rather than a whole population, we use the <term>sample standard deviation<idx><h>summaries</h><h>sample standard deviation</h></idx></term>, written <m>s</m>:</p>
+    <p>When we work with a sample rather than a whole population, we use the <term>sample variance<idx><h>summaries</h><h>sample variance</h></idx></term>, written <m>s^2</m>:</p>
+
+    <me>
+      s^2=\frac{\sum (x-\bar{x})^2}{n-1},
+    </me>
+
+    <p>and the <term>sample standard deviation<idx><h>summaries</h><h>sample standard deviation</h></idx></term>, written <m>s</m>:</p>
 
     <me>
       s=\sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}.
