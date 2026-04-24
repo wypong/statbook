@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-boxplots-outliers"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-boxplots-outliers">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Five-Number Summary, Boxplots, and Outliers</span>
 </h2>
 <div class="para" id="sec-boxplots-outliers-2">The <dfn class="terminology">five-number summary</dfn> of a data set consists of<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -295,17 +301,23 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-five-number-summary" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Five-Number Summary.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-five-number-summary-2">For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found <span class="process-math">\(Q_1=5.5\text{,}\)</span> <span class="process-math">\(Q_2=8\text{,}\)</span> and <span class="process-math">\(Q_3=13\text{.}\)</span> Since the minimum is 3 and the maximum is 18, the five-number summary is<div class="autopermalink" data-description="Paragraph"><a href="#ex-five-number-summary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-five-number-summary-2">For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found <span class="process-math">\(Q_1=5.5\text{,}\)</span> <span class="process-math">\(Q_2=8\text{,}\)</span> and <span class="process-math">\(Q_3=13\text{.}\)</span> Since the minimum is 3 and the maximum is 18, the five-number summary is<div class="autopermalink" data-description="Paragraph"><a href="#ex-five-number-summary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-five-number-summary-3">
 \begin{equation*}
 3,\ 5.5,\ 8,\ 13,\ 18.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 4.2.1: A Five-Number Summary"><a href="#ex-five-number-summary" title="Copy heading and permalink for Example 4.2.1: A Five-Number Summary" aria-label="Copy heading and permalink for Example 4.2.1: A Five-Number Summary">🔗</a></div></article></details><div class="para" id="sec-boxplots-outliers-6">A <dfn class="terminology">boxplot</dfn>, also called a <dfn class="terminology">box-and-whisker plot</dfn>, turns the five-number summary into a picture. The box stretches from <span class="process-math">\(Q_1\)</span> to <span class="process-math">\(Q_3\text{,}\)</span> a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.2.1: A Five-Number Summary"><a href="#ex-five-number-summary" title="Copy heading and permalink for Example 4.2.1: A Five-Number Summary" aria-label="Copy heading and permalink for Example 4.2.1: A Five-Number Summary">🔗</a></div>
+</article></details>
+<div class="para" id="sec-boxplots-outliers-6">A <dfn class="terminology">boxplot</dfn>, also called a <dfn class="terminology">box-and-whisker plot</dfn>, turns the five-number summary into a picture. The box stretches from <span class="process-math">\(Q_1\)</span> to <span class="process-math">\(Q_3\text{,}\)</span> a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-boxplot-spread-example"><div class="image-box" style="width: 84%; margin-left: 8%; margin-right: 8%;"><img src="generated/latex-image/fig-boxplot-spread-example-2.svg" role="img" class="contained" alt="A horizontal boxplot on a scale from 0 to 20. The left whisker reaches 3, the box runs from 5.5 to 13, the median is marked at 8, and the right whisker reaches 18.The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Boxplot based on the five-number summary 3, 5.5, 8, 13, 18<div class="autopermalink" data-description="Figure 4.2.2"><a href="#fig-boxplot-spread-example" title="Copy heading and permalink for Figure 4.2.2" aria-label="Copy heading and permalink for Figure 4.2.2">🔗</a></div></figcaption></figure><div class="para" id="sec-boxplots-outliers-8">A boxplot does not show every data value, but it is very good at showing center, spread, and possible asymmetry. If the box and whiskers are roughly balanced on both sides of the median, the distribution may be fairly symmetric. If one side is stretched out more than the other, the distribution may be skewed. A histogram is still the best tool for judging shape in detail, but a boxplot gives a quick summary.<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Boxplot based on the five-number summary 3, 5.5, 8, 13, 18<div class="autopermalink" data-description="Figure 4.2.2"><a href="#fig-boxplot-spread-example" title="Copy heading and permalink for Figure 4.2.2" aria-label="Copy heading and permalink for Figure 4.2.2">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec-boxplots-outliers-8">A boxplot does not show every data value, but it is very good at showing center, spread, and possible asymmetry. If the box and whiskers are roughly balanced on both sides of the median, the distribution may be fairly symmetric. If one side is stretched out more than the other, the distribution may be skewed. A histogram is still the best tool for judging shape in detail, but a boxplot gives a quick summary.<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-boxplots-outliers-9">An <dfn class="terminology">outlier</dfn> is a value that does not fit the general pattern of the data. One common rule for identifying possible outliers is the <dfn class="terminology">1.5 times IQR rule</dfn>. First compute the two <dfn class="terminology">fences</dfn>:<div class="autopermalink" data-description="Paragraph"><a href="#sec-boxplots-outliers-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -320,7 +332,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-iqr-outlier-rule" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the 1.5 Times IQR Rule.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-iqr-outlier-rule-2">Suppose a data set has <span class="process-math">\(Q_1=12\)</span> and <span class="process-math">\(Q_3=20\text{.}\)</span> Then the IQR is<div class="autopermalink" data-description="Paragraph"><a href="#ex-iqr-outlier-rule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-iqr-outlier-rule-2">Suppose a data set has <span class="process-math">\(Q_1=12\)</span> and <span class="process-math">\(Q_3=20\text{.}\)</span> Then the IQR is<div class="autopermalink" data-description="Paragraph"><a href="#ex-iqr-outlier-rule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-iqr-outlier-rule-3">
 \begin{equation*}
@@ -338,49 +352,79 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="ex-iqr-outlier-rule-6">Any data value less than 0 or greater than 32 would be flagged as a possible outlier.<div class="autopermalink" data-description="Paragraph"><a href="#ex-iqr-outlier-rule-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.2.3: Using the 1.5 Times IQR Rule"><a href="#ex-iqr-outlier-rule" title="Copy heading and permalink for Example 4.2.3: Using the 1.5 Times IQR Rule" aria-label="Copy heading and permalink for Example 4.2.3: Using the 1.5 Times IQR Rule">🔗</a></div></article></details><article class="activity project-like" id="act-ch4-boxplot-generated"><h3 class="heading">
+<div class="autopermalink" data-description="Example 4.2.3: Using the 1.5 Times IQR Rule"><a href="#ex-iqr-outlier-rule" title="Copy heading and permalink for Example 4.2.3: Using the 1.5 Times IQR Rule" aria-label="Copy heading and permalink for Example 4.2.3: Using the 1.5 Times IQR Rule">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-ch4-boxplot-generated"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Five-Number Summary and Boxplot.</span>
 </h3>
-<div class="introduction" id="act-ch4-boxplot-generated-2"><div class="para" id="act-ch4-boxplot-generated-2-1">Use a short data set to practice the five-number summary and the shape of a boxplot.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-boxplot-generated-2">
+<div class="para" id="act-ch4-boxplot-generated-2-1">Use a short data set to practice the five-number summary and the shape of a boxplot.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-boxplot-generated-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-boxplot-generated-3-1-1">For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, find the five-number summary.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-generated-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.1.a"><a href="#act-ch4-boxplot-generated-3" title="Copy heading and permalink for Task 4.2.1.a" aria-label="Copy heading and permalink for Task 4.2.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-boxplot-generated-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.1.a"><a href="#act-ch4-boxplot-generated-3" title="Copy heading and permalink for Task 4.2.1.a" aria-label="Copy heading and permalink for Task 4.2.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-boxplot-generated-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-boxplot-generated-4-1-1">Draw the boxplot for the data set.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-generated-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.1.b"><a href="#act-ch4-boxplot-generated-4" title="Copy heading and permalink for Task 4.2.1.b" aria-label="Copy heading and permalink for Task 4.2.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-boxplot-generated-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.1.b"><a href="#act-ch4-boxplot-generated-4" title="Copy heading and permalink for Task 4.2.1.b" aria-label="Copy heading and permalink for Task 4.2.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-boxplot-generated-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-boxplot-generated-5-1-1">State whether the distribution looks symmetric or skewed, and explain your answer from the boxplot.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-generated-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.1.c"><a href="#act-ch4-boxplot-generated-5" title="Copy heading and permalink for Task 4.2.1.c" aria-label="Copy heading and permalink for Task 4.2.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.2.1: Five-Number Summary and Boxplot"><a href="#act-ch4-boxplot-generated" title="Copy heading and permalink for Activity 4.2.1: Five-Number Summary and Boxplot" aria-label="Copy heading and permalink for Activity 4.2.1: Five-Number Summary and Boxplot">🔗</a></div></article><article class="activity project-like" id="act-ch4-boxplot-class-data"><h3 class="heading">
+<div class="autopermalink" data-description="Task 4.2.1.c"><a href="#act-ch4-boxplot-generated-5" title="Copy heading and permalink for Task 4.2.1.c" aria-label="Copy heading and permalink for Task 4.2.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.2.1: Five-Number Summary and Boxplot"><a href="#act-ch4-boxplot-generated" title="Copy heading and permalink for Activity 4.2.1: Five-Number Summary and Boxplot" aria-label="Copy heading and permalink for Activity 4.2.1: Five-Number Summary and Boxplot">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch4-boxplot-class-data"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Boxplot from Class Data.</span>
 </h3>
-<div class="introduction" id="act-ch4-boxplot-class-data-2"><div class="para" id="act-ch4-boxplot-class-data-2-1">Use the class data set from earlier in the book.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-boxplot-class-data-2">
+<div class="para" id="act-ch4-boxplot-class-data-2-1">Use the class data set from earlier in the book.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-boxplot-class-data-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-boxplot-class-data-3-1-1">Choose a quantitative variable such as height, commute time, distance from school, or number of siblings. Find the five-number summary and draw a boxplot.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-class-data-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.2.a"><a href="#act-ch4-boxplot-class-data-3" title="Copy heading and permalink for Task 4.2.2.a" aria-label="Copy heading and permalink for Task 4.2.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-boxplot-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.2.a"><a href="#act-ch4-boxplot-class-data-3" title="Copy heading and permalink for Task 4.2.2.a" aria-label="Copy heading and permalink for Task 4.2.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-boxplot-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-boxplot-class-data-4-1-1">Look for possible outliers using the 1.5 times IQR rule.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-class-data-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.2.b"><a href="#act-ch4-boxplot-class-data-4" title="Copy heading and permalink for Task 4.2.2.b" aria-label="Copy heading and permalink for Task 4.2.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-boxplot-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.2.b"><a href="#act-ch4-boxplot-class-data-4" title="Copy heading and permalink for Task 4.2.2.b" aria-label="Copy heading and permalink for Task 4.2.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-boxplot-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-boxplot-class-data-5-1-1">Say whether the data seem roughly symmetric or skewed, and use the boxplot to justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-boxplot-class-data-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.2.c"><a href="#act-ch4-boxplot-class-data-5" title="Copy heading and permalink for Task 4.2.2.c" aria-label="Copy heading and permalink for Task 4.2.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.2.2: Boxplot from Class Data"><a href="#act-ch4-boxplot-class-data" title="Copy heading and permalink for Activity 4.2.2: Boxplot from Class Data" aria-label="Copy heading and permalink for Activity 4.2.2: Boxplot from Class Data">🔗</a></div></article><article class="activity project-like" id="act-ch4-outlier-rule"><h3 class="heading">
+<div class="autopermalink" data-description="Task 4.2.2.c"><a href="#act-ch4-boxplot-class-data-5" title="Copy heading and permalink for Task 4.2.2.c" aria-label="Copy heading and permalink for Task 4.2.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.2.2: Boxplot from Class Data"><a href="#act-ch4-boxplot-class-data" title="Copy heading and permalink for Activity 4.2.2: Boxplot from Class Data" aria-label="Copy heading and permalink for Activity 4.2.2: Boxplot from Class Data">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch4-outlier-rule"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Outlier Rule Practice.</span>
 </h3>
-<div class="introduction" id="act-ch4-outlier-rule-2"><div class="para" id="act-ch4-outlier-rule-2-1">Use the 1.5 times IQR rule on a small data set with one possible outlier.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-outlier-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-outlier-rule-2">
+<div class="para" id="act-ch4-outlier-rule-2-1">Use the 1.5 times IQR rule on a small data set with one possible outlier.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-outlier-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-outlier-rule-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-outlier-rule-3-1-1">For the data set 4, 6, 7, 8, 8, 9, 10, 11, 24, find <span class="process-math">\(Q_1\text{,}\)</span> <span class="process-math">\(Q_3\text{,}\)</span> and the IQR.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-outlier-rule-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.3.a"><a href="#act-ch4-outlier-rule-3" title="Copy heading and permalink for Task 4.2.3.a" aria-label="Copy heading and permalink for Task 4.2.3.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-outlier-rule-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.3.a"><a href="#act-ch4-outlier-rule-3" title="Copy heading and permalink for Task 4.2.3.a" aria-label="Copy heading and permalink for Task 4.2.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-outlier-rule-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-outlier-rule-4-1-1">Compute the lower and upper fences.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-outlier-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.3.b"><a href="#act-ch4-outlier-rule-4" title="Copy heading and permalink for Task 4.2.3.b" aria-label="Copy heading and permalink for Task 4.2.3.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-outlier-rule-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.2.3.b"><a href="#act-ch4-outlier-rule-4" title="Copy heading and permalink for Task 4.2.3.b" aria-label="Copy heading and permalink for Task 4.2.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-outlier-rule-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-outlier-rule-5-1-1">Identify any possible outliers.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-outlier-rule-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.2.3.c"><a href="#act-ch4-outlier-rule-5" title="Copy heading and permalink for Task 4.2.3.c" aria-label="Copy heading and permalink for Task 4.2.3.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.2.3: Outlier Rule Practice"><a href="#act-ch4-outlier-rule" title="Copy heading and permalink for Activity 4.2.3: Outlier Rule Practice" aria-label="Copy heading and permalink for Activity 4.2.3: Outlier Rule Practice">🔗</a></div></article><div class="autopermalink" data-description="Section 4.2: Five-Number Summary, Boxplots, and Outliers"><a href="#sec-boxplots-outliers" title="Copy heading and permalink for Section 4.2: Five-Number Summary, Boxplots, and Outliers" aria-label="Copy heading and permalink for Section 4.2: Five-Number Summary, Boxplots, and Outliers">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 4.2.3.c"><a href="#act-ch4-outlier-rule-5" title="Copy heading and permalink for Task 4.2.3.c" aria-label="Copy heading and permalink for Task 4.2.3.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.2.3: Outlier Rule Practice"><a href="#act-ch4-outlier-rule" title="Copy heading and permalink for Activity 4.2.3: Outlier Rule Practice" aria-label="Copy heading and permalink for Activity 4.2.3: Outlier Rule Practice">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 4.2: Five-Number Summary, Boxplots, and Outliers"><a href="#sec-boxplots-outliers" title="Copy heading and permalink for Section 4.2: Five-Number Summary, Boxplots, and Outliers" aria-label="Copy heading and permalink for Section 4.2: Five-Number Summary, Boxplots, and Outliers">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-quartiles-iqr.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-variance-sd-zscores.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

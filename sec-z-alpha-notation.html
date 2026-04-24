@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-z-alpha-notation"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-z-alpha-notation">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The z-Alpha Notation</span>
 </h2>
 <div class="para" id="sec-z-alpha-notation-3">When working with the standard normal distribution, we often use the notation <span class="process-math">\(z_{\alpha}\text{.}\)</span> This is especially important later when we study confidence intervals and hypothesis tests.<div class="autopermalink" data-description="Paragraph"><a href="#sec-z-alpha-notation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -303,37 +309,58 @@ P(Z\le z_{\alpha})=1-\alpha.
 <div class="para" id="sec-z-alpha-notation-8">This is the standard convention used in statistics. For example, <span class="process-math">\(z_{0.025}\approx 1.96\)</span> because the area to the right of 1.96 under the standard normal curve is 0.025.<div class="autopermalink" data-description="Paragraph"><a href="#sec-z-alpha-notation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-z-alpha-right-tail"><div class="image-box" style="width: 72%; margin-left: 14%; margin-right: 14%;"><img src="generated/latex-image/fig-z-alpha-right-tail-2.svg" role="img" class="contained" alt="A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area to the right of that line shaded and labeled alpha.The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The notation <span class="process-math">\(z_{\alpha}\)</span> for the standard normal distribution<div class="autopermalink" data-description="Figure 9.3.1"><a href="#fig-z-alpha-right-tail" title="Copy heading and permalink for Figure 9.3.1" aria-label="Copy heading and permalink for Figure 9.3.1">🔗</a></div></figcaption></figure><div class="para" id="sec-z-alpha-notation-10">So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate <span class="process-math">\(z_{\alpha}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-z-alpha-notation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The notation <span class="process-math">\(z_{\alpha}\)</span> for the standard normal distribution<div class="autopermalink" data-description="Figure 9.3.1"><a href="#fig-z-alpha-right-tail" title="Copy heading and permalink for Figure 9.3.1" aria-label="Copy heading and permalink for Figure 9.3.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec-z-alpha-notation-10">So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate <span class="process-math">\(z_{\alpha}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-z-alpha-notation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="act-ch9-zalpha-hunt"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Critical Value Hunt.</span>
 </h3>
-<div class="introduction" id="act-ch9-zalpha-hunt-2"><div class="para" id="act-ch9-zalpha-hunt-2-1">Find and compare a few standard normal cutoffs used in confidence intervals and tests.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-zalpha-hunt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch9-zalpha-hunt-2">
+<div class="para" id="act-ch9-zalpha-hunt-2-1">Find and compare a few standard normal cutoffs used in confidence intervals and tests.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-zalpha-hunt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch9-zalpha-hunt-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch9-zalpha-hunt-3-1-1">Find approximate values of <span class="process-math">\(z_{0.10}\text{,}\)</span> <span class="process-math">\(z_{0.05}\text{,}\)</span> and <span class="process-math">\(z_{0.01}\)</span> using technology or a z-table.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-zalpha-hunt-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.1.a"><a href="#act-ch9-zalpha-hunt-3" title="Copy heading and permalink for Task 9.3.1.a" aria-label="Copy heading and permalink for Task 9.3.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch9-zalpha-hunt-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 9.3.1.a"><a href="#act-ch9-zalpha-hunt-3" title="Copy heading and permalink for Task 9.3.1.a" aria-label="Copy heading and permalink for Task 9.3.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch9-zalpha-hunt-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch9-zalpha-hunt-4-1-1">Which of these cutoffs is farthest from 0? Explain why that makes sense.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-zalpha-hunt-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.1.b"><a href="#act-ch9-zalpha-hunt-4" title="Copy heading and permalink for Task 9.3.1.b" aria-label="Copy heading and permalink for Task 9.3.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch9-zalpha-hunt-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 9.3.1.b"><a href="#act-ch9-zalpha-hunt-4" title="Copy heading and permalink for Task 9.3.1.b" aria-label="Copy heading and permalink for Task 9.3.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch9-zalpha-hunt-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch9-zalpha-hunt-5-1-1">If a test uses a smaller right-tail area, what happens to the critical value?<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-zalpha-hunt-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.1.c"><a href="#act-ch9-zalpha-hunt-5" title="Copy heading and permalink for Task 9.3.1.c" aria-label="Copy heading and permalink for Task 9.3.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.3.1: Critical Value Hunt"><a href="#act-ch9-zalpha-hunt" title="Copy heading and permalink for Activity 9.3.1: Critical Value Hunt" aria-label="Copy heading and permalink for Activity 9.3.1: Critical Value Hunt">🔗</a></div></article><article class="activity project-like" id="act-ch9-tail-area-match"><h3 class="heading">
+<div class="autopermalink" data-description="Task 9.3.1.c"><a href="#act-ch9-zalpha-hunt-5" title="Copy heading and permalink for Task 9.3.1.c" aria-label="Copy heading and permalink for Task 9.3.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 9.3.1: Critical Value Hunt"><a href="#act-ch9-zalpha-hunt" title="Copy heading and permalink for Activity 9.3.1: Critical Value Hunt" aria-label="Copy heading and permalink for Activity 9.3.1: Critical Value Hunt">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch9-tail-area-match"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tail-Area Match-Up.</span>
 </h3>
-<div class="introduction" id="act-ch9-tail-area-match-2"><div class="para" id="act-ch9-tail-area-match-2-1">Translate between right-tail area, left-tail area, and the <span class="process-math">\(z_{\alpha}\)</span> notation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-tail-area-match-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch9-tail-area-match-2">
+<div class="para" id="act-ch9-tail-area-match-2-1">Translate between right-tail area, left-tail area, and the <span class="process-math">\(z_{\alpha}\)</span> notation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-tail-area-match-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch9-tail-area-match-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch9-tail-area-match-3-1-1">If the right-tail area is 0.025, what notation is used for the corresponding critical value?<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-tail-area-match-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.2.a"><a href="#act-ch9-tail-area-match-3" title="Copy heading and permalink for Task 9.3.2.a" aria-label="Copy heading and permalink for Task 9.3.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch9-tail-area-match-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 9.3.2.a"><a href="#act-ch9-tail-area-match-3" title="Copy heading and permalink for Task 9.3.2.a" aria-label="Copy heading and permalink for Task 9.3.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch9-tail-area-match-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch9-tail-area-match-4-1-1">If <span class="process-math">\(P(Z&gt;z_{\alpha})=0.20\text{,}\)</span> what is the area to the left of <span class="process-math">\(z_{\alpha}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-tail-area-match-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.2.b"><a href="#act-ch9-tail-area-match-4" title="Copy heading and permalink for Task 9.3.2.b" aria-label="Copy heading and permalink for Task 9.3.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch9-tail-area-match-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 9.3.2.b"><a href="#act-ch9-tail-area-match-4" title="Copy heading and permalink for Task 9.3.2.b" aria-label="Copy heading and permalink for Task 9.3.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch9-tail-area-match-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch9-tail-area-match-5-1-1">In one sentence, explain what happens to <span class="process-math">\(z_{\alpha}\)</span> as <span class="process-math">\(\alpha\)</span> gets smaller.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch9-tail-area-match-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 9.3.2.c"><a href="#act-ch9-tail-area-match-5" title="Copy heading and permalink for Task 9.3.2.c" aria-label="Copy heading and permalink for Task 9.3.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.3.2: Tail-Area Match-Up"><a href="#act-ch9-tail-area-match" title="Copy heading and permalink for Activity 9.3.2: Tail-Area Match-Up" aria-label="Copy heading and permalink for Activity 9.3.2: Tail-Area Match-Up">🔗</a></div></article><div class="autopermalink" data-description="Section 9.3: The z-Alpha Notation"><a href="#sec-z-alpha-notation" title="Copy heading and permalink for Section 9.3: The z-Alpha Notation" aria-label="Copy heading and permalink for Section 9.3: The z-Alpha Notation">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 9.3.2.c"><a href="#act-ch9-tail-area-match-5" title="Copy heading and permalink for Task 9.3.2.c" aria-label="Copy heading and permalink for Task 9.3.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 9.3.2: Tail-Area Match-Up"><a href="#act-ch9-tail-area-match" title="Copy heading and permalink for Activity 9.3.2: Tail-Area Match-Up" aria-label="Copy heading and permalink for Activity 9.3.2: Tail-Area Match-Up">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 9.3: The z-Alpha Notation"><a href="#sec-z-alpha-notation" title="Copy heading and permalink for Section 9.3: The z-Alpha Notation" aria-label="Copy heading and permalink for Section 9.3: The z-Alpha Notation">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-normal-distributions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-normal-probabilities-percentiles.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

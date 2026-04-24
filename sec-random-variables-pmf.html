@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-random-variables-pmf"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-random-variables-pmf">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Random Variables, CDFs, Expectation, and Variance</span>
 </h2>
 <div class="para" id="sec-random-variables-pmf-2">A <dfn class="terminology">random variable</dfn> is a function that assigns a real number to each outcome in a sample space. We often use a capital letter such as <span class="process-math">\(X\)</span> to name a random variable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -290,7 +296,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-two-dice-sum-rv" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Sum of Two Dice.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-two-dice-sum-rv-2">Suppose two fair dice are rolled. The sample space consists of the 36 ordered pairs<div class="autopermalink" data-description="Paragraph"><a href="#ex-two-dice-sum-rv-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-two-dice-sum-rv-2">Suppose two fair dice are rolled. The sample space consists of the 36 ordered pairs<div class="autopermalink" data-description="Paragraph"><a href="#ex-two-dice-sum-rv-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-two-dice-sum-rv-3">
 \begin{equation*}
@@ -304,7 +312,9 @@ eBookConfig.enable_chatcodes =  false;
 R_X=\{2,3,4,5,6,7,8,9,10,11,12\}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 7.1.1: The Sum of Two Dice"><a href="#ex-two-dice-sum-rv" title="Copy heading and permalink for Example 7.1.1: The Sum of Two Dice" aria-label="Copy heading and permalink for Example 7.1.1: The Sum of Two Dice">🔗</a></div></article></details><div class="para" id="sec-random-variables-pmf-5">The probability function of a discrete random variable <span class="process-math">\(X\)</span> is called its <dfn class="terminology">probability distribution function</dfn>. In many statistics books this is also called the probability mass function.<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 7.1.1: The Sum of Two Dice"><a href="#ex-two-dice-sum-rv" title="Copy heading and permalink for Example 7.1.1: The Sum of Two Dice" aria-label="Copy heading and permalink for Example 7.1.1: The Sum of Two Dice">🔗</a></div>
+</article></details>
+<div class="para" id="sec-random-variables-pmf-5">The probability function of a discrete random variable <span class="process-math">\(X\)</span> is called its <dfn class="terminology">probability distribution function</dfn>. In many statistics books this is also called the probability mass function.<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="table table-like" id="tbl-two-dice-pmf"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Probability distribution of the sum of two fair dice<div class="autopermalink" data-description="Table 7.1.2: Probability distribution of the sum of two fair dice"><a href="#tbl-two-dice-pmf" title="Copy heading and permalink for Table 7.1.2: Probability distribution of the sum of two fair dice" aria-label="Copy heading and permalink for Table 7.1.2: Probability distribution of the sum of two fair dice">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -335,7 +345,9 @@ R_X=\{2,3,4,5,6,7,8,9,10,11,12\}.
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{36}\)</span></td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{36}\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="sec-random-variables-pmf-7">For example, <span class="process-math">\(P(X=5)=4/36=1/9\)</span> because four ordered pairs produce a total of 5: <span class="process-math">\((1,4)\text{,}\)</span> <span class="process-math">\((2,3)\text{,}\)</span> <span class="process-math">\((3,2)\text{,}\)</span> and <span class="process-math">\((4,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
+<div class="para" id="sec-random-variables-pmf-7">For example, <span class="process-math">\(P(X=5)=4/36=1/9\)</span> because four ordered pairs produce a total of 5: <span class="process-math">\((1,4)\text{,}\)</span> <span class="process-math">\((2,3)\text{,}\)</span> <span class="process-math">\((3,2)\text{,}\)</span> and <span class="process-math">\((4,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-random-variables-pmf-8">Every discrete probability distribution satisfies two basic properties:<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -367,12 +379,16 @@ F_X(x)=P(X\le x).
 <div class="para" id="sec-random-variables-pmf-13">For a discrete random variable, the CDF is found by adding the probabilities of all values up to <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-pmf-cdf-side-by-side"><div class="image-box" style="width: 94%; margin-left: 3%; margin-right: 3%;"><img src="generated/latex-image/fig-pmf-cdf-side-by-side-2.svg" role="img" class="contained" alt="Two graphs shown side by side for the same discrete random variable. The left graph is a bar chart for the probability mass function at x equals 0, 1, 2, and 3 with heights 0.1, 0.3, 0.4, and 0.2. The right graph is a step graph for the cumulative distribution function with levels 0.1, 0.4, 0.8, and 1.0.The figure has two panels. In the left panel, labeled PMF, a discrete random variable takes the values 0, 1, 2, and 3 with probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical bars. In the right panel, labeled CDF, the cumulative distribution function starts at 0 to the left of 0, jumps to 0.1 at x equals 0, then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x equals 3. The picture shows that the CDF is built by accumulating the PMF values from left to right."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A probability mass function and its corresponding cumulative distribution function<div class="autopermalink" data-description="Figure 7.1.3"><a href="#fig-pmf-cdf-side-by-side" title="Copy heading and permalink for Figure 7.1.3" aria-label="Copy heading and permalink for Figure 7.1.3">🔗</a></div></figcaption></figure><div class="para" id="sec-random-variables-pmf-15">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A probability mass function and its corresponding cumulative distribution function<div class="autopermalink" data-description="Figure 7.1.3"><a href="#fig-pmf-cdf-side-by-side" title="Copy heading and permalink for Figure 7.1.3" aria-label="Copy heading and permalink for Figure 7.1.3">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec-random-variables-pmf-15">
 <a href="sec-random-variables-pmf.html#fig-pmf-cdf-side-by-side" class="xref" data-knowl="./knowl/xref/fig-pmf-cdf-side-by-side.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.3">Figure 7.1.3</a> shows the difference in how these two functions look. The PMF records the probability at each individual value, while the CDF keeps a running total and therefore has a step-like shape for a discrete random variable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-cdf-two-dice" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing a CDF Value.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-cdf-two-dice-2">For the random variable <span class="process-math">\(X\)</span> equal to the sum of two fair dice,<div class="autopermalink" data-description="Paragraph"><a href="#ex-cdf-two-dice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-cdf-two-dice-2">For the random variable <span class="process-math">\(X\)</span> equal to the sum of two fair dice,<div class="autopermalink" data-description="Paragraph"><a href="#ex-cdf-two-dice-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/tbl-two-dice-pmf.html" id="ex-cdf-two-dice-3">
 \begin{equation*}
@@ -386,7 +402,9 @@ F_X(4)=P(X\le 4)=P(X=2)+P(X=3)+P(X=4).
 F_X(4)=\frac{1}{36}+\frac{2}{36}+\frac{3}{36}=\frac{6}{36}=\frac{1}{6}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 7.1.4: Computing a CDF Value"><a href="#ex-cdf-two-dice" title="Copy heading and permalink for Example 7.1.4: Computing a CDF Value" aria-label="Copy heading and permalink for Example 7.1.4: Computing a CDF Value">🔗</a></div></article></details><div class="para" id="sec-random-variables-pmf-17">The CDF and the probability distribution contain the same information. For instance, if 5 is the next possible value after 4, then<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 7.1.4: Computing a CDF Value"><a href="#ex-cdf-two-dice" title="Copy heading and permalink for Example 7.1.4: Computing a CDF Value" aria-label="Copy heading and permalink for Example 7.1.4: Computing a CDF Value">🔗</a></div>
+</article></details>
+<div class="para" id="sec-random-variables-pmf-17">The CDF and the probability distribution contain the same information. For instance, if 5 is the next possible value after 4, then<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-pmf-cdf-side-by-side.html ./knowl/xref/tbl-two-dice-pmf.html ./knowl/xref/tbl-score-distribution.html ./knowl/xref/tbl-score-distribution.html" id="sec-random-variables-pmf-18">
 \begin{equation*}
@@ -411,9 +429,13 @@ E(X)=\int_{-\infty}^{\infty} xf(x)\,dx.
 </div>
 <details id="ex-score-distribution-mean" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expected Value from a Relative Frequency Table.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-score-distribution-mean-2">Suppose the score of a randomly selected student from a class has the distribution shown in <a href="sec-random-variables-pmf.html#tbl-score-distribution" class="xref" data-knowl="./knowl/xref/tbl-score-distribution.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.6: Probability distribution for a student’s score">Table 7.1.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-score-distribution-mean-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-score-distribution-mean-2">Suppose the score of a randomly selected student from a class has the distribution shown in <a href="sec-random-variables-pmf.html#tbl-score-distribution" class="xref" data-knowl="./knowl/xref/tbl-score-distribution.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.6: Probability distribution for a student’s score">Table 7.1.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-score-distribution-mean-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 7.1.5: Expected Value from a Relative Frequency Table"><a href="#ex-score-distribution-mean" title="Copy heading and permalink for Example 7.1.5: Expected Value from a Relative Frequency Table" aria-label="Copy heading and permalink for Example 7.1.5: Expected Value from a Relative Frequency Table">🔗</a></div></article></details><figure class="table table-like" id="tbl-score-distribution"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Probability distribution for a student’s score<div class="autopermalink" data-description="Table 7.1.6: Probability distribution for a student’s score"><a href="#tbl-score-distribution" title="Copy heading and permalink for Table 7.1.6: Probability distribution for a student’s score" aria-label="Copy heading and permalink for Table 7.1.6: Probability distribution for a student’s score">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="autopermalink" data-description="Example 7.1.5: Expected Value from a Relative Frequency Table"><a href="#ex-score-distribution-mean" title="Copy heading and permalink for Example 7.1.5: Expected Value from a Relative Frequency Table" aria-label="Copy heading and permalink for Example 7.1.5: Expected Value from a Relative Frequency Table">🔗</a></div>
+</article></details>
+<figure class="table table-like" id="tbl-score-distribution"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Probability distribution for a student’s score<div class="autopermalink" data-description="Table 7.1.6: Probability distribution for a student’s score"><a href="#tbl-score-distribution" title="Copy heading and permalink for Table 7.1.6: Probability distribution for a student’s score" aria-label="Copy heading and permalink for Table 7.1.6: Probability distribution for a student’s score">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r0 l0 t0 lines">Score <span class="process-math">\(x\)</span>
 </th>
@@ -435,7 +457,9 @@ E(X)=\int_{-\infty}^{\infty} xf(x)\,dx.
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{30}\)</span></td>
 <td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{30}\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="sec-random-variables-pmf-26">The expected score is<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</figure>
+<div class="para" id="sec-random-variables-pmf-26">The expected score is<div class="autopermalink" data-description="Paragraph"><a href="#sec-random-variables-pmf-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-pmf-cdf-side-by-side.html ./knowl/xref/tbl-two-dice-pmf.html ./knowl/xref/tbl-score-distribution.html ./knowl/xref/tbl-score-distribution.html" id="sec-random-variables-pmf-27">
 \begin{align*}
@@ -470,7 +494,9 @@ E(X^2)=\sum_{x\in R_X} x^2P(X=x).
 </div>
 <details id="ex-score-distribution-variance" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variance and Standard Deviation from a Distribution.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-score-distribution-variance-2">Using the score distribution in <a href="sec-random-variables-pmf.html#tbl-score-distribution" class="xref" data-knowl="./knowl/xref/tbl-score-distribution.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.6: Probability distribution for a student’s score">Table 7.1.6</a>, we already know that <span class="process-math">\(E(X)=17.3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-score-distribution-variance-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-score-distribution-variance-2">Using the score distribution in <a href="sec-random-variables-pmf.html#tbl-score-distribution" class="xref" data-knowl="./knowl/xref/tbl-score-distribution.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.1.6: Probability distribution for a student’s score">Table 7.1.6</a>, we already know that <span class="process-math">\(E(X)=17.3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-score-distribution-variance-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-score-distribution-variance-3">Now compute<div class="autopermalink" data-description="Paragraph"><a href="#ex-score-distribution-variance-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -495,35 +521,56 @@ E(X^2)&amp;=13^2\left(\frac{1}{30}\right)+15^2\left(\frac{5}{30}\right)+16^2\lef
 \sigma_X=\sqrt{2.9433}\approx 1.7156.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 7.1.7: Variance and Standard Deviation from a Distribution"><a href="#ex-score-distribution-variance" title="Copy heading and permalink for Example 7.1.7: Variance and Standard Deviation from a Distribution" aria-label="Copy heading and permalink for Example 7.1.7: Variance and Standard Deviation from a Distribution">🔗</a></div></article></details><article class="activity project-like" id="act-ch7-arcade-dice-game"><h3 class="heading">
+<div class="autopermalink" data-description="Example 7.1.7: Variance and Standard Deviation from a Distribution"><a href="#ex-score-distribution-variance" title="Copy heading and permalink for Example 7.1.7: Variance and Standard Deviation from a Distribution" aria-label="Copy heading and permalink for Example 7.1.7: Variance and Standard Deviation from a Distribution">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-ch7-arcade-dice-game"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arcade Dice Game.</span>
 </h3>
-<div class="introduction" id="act-ch7-arcade-dice-game-2"><div class="para" id="act-ch7-arcade-dice-game-2-1">Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-arcade-dice-game-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch7-arcade-dice-game-2">
+<div class="para" id="act-ch7-arcade-dice-game-2-1">Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-arcade-dice-game-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch7-arcade-dice-game-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch7-arcade-dice-game-3-1-1">Roll one fair die. Let <span class="process-math">\(X\)</span> be the number of tickets earned, where 1, 2, and 3 earn 0 tickets, 4 earns 2 tickets, 5 earns 5 tickets, and 6 earns 10 tickets. Write the probability distribution of <span class="process-math">\(X\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-arcade-dice-game-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.1.a"><a href="#act-ch7-arcade-dice-game-3" title="Copy heading and permalink for Task 7.1.1.a" aria-label="Copy heading and permalink for Task 7.1.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch7-arcade-dice-game-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 7.1.1.a"><a href="#act-ch7-arcade-dice-game-3" title="Copy heading and permalink for Task 7.1.1.a" aria-label="Copy heading and permalink for Task 7.1.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch7-arcade-dice-game-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch7-arcade-dice-game-4-1-1">Find <span class="process-math">\(F_X(2)\)</span> and <span class="process-math">\(F_X(5)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-arcade-dice-game-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.1.b"><a href="#act-ch7-arcade-dice-game-4" title="Copy heading and permalink for Task 7.1.1.b" aria-label="Copy heading and permalink for Task 7.1.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch7-arcade-dice-game-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 7.1.1.b"><a href="#act-ch7-arcade-dice-game-4" title="Copy heading and permalink for Task 7.1.1.b" aria-label="Copy heading and permalink for Task 7.1.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch7-arcade-dice-game-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch7-arcade-dice-game-5-1-1">Compute <span class="process-math">\(E(X)\)</span> and explain what that value means if the game is played many times.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-arcade-dice-game-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.1.c"><a href="#act-ch7-arcade-dice-game-5" title="Copy heading and permalink for Task 7.1.1.c" aria-label="Copy heading and permalink for Task 7.1.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 7.1.1: Arcade Dice Game"><a href="#act-ch7-arcade-dice-game" title="Copy heading and permalink for Activity 7.1.1: Arcade Dice Game" aria-label="Copy heading and permalink for Activity 7.1.1: Arcade Dice Game">🔗</a></div></article><article class="activity project-like" id="act-ch7-prize-wheel-distribution"><h3 class="heading">
+<div class="autopermalink" data-description="Task 7.1.1.c"><a href="#act-ch7-arcade-dice-game-5" title="Copy heading and permalink for Task 7.1.1.c" aria-label="Copy heading and permalink for Task 7.1.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 7.1.1: Arcade Dice Game"><a href="#act-ch7-arcade-dice-game" title="Copy heading and permalink for Activity 7.1.1: Arcade Dice Game" aria-label="Copy heading and permalink for Activity 7.1.1: Arcade Dice Game">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch7-prize-wheel-distribution"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prize Wheel Distribution.</span>
 </h3>
-<div class="introduction" id="act-ch7-prize-wheel-distribution-2"><div class="para" id="act-ch7-prize-wheel-distribution-2-1">Practice checking a distribution and using it to compute the mean and variance of a random variable.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-prize-wheel-distribution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch7-prize-wheel-distribution-2">
+<div class="para" id="act-ch7-prize-wheel-distribution-2-1">Practice checking a distribution and using it to compute the mean and variance of a random variable.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-prize-wheel-distribution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch7-prize-wheel-distribution-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch7-prize-wheel-distribution-3-1-1">A prize wheel gives 0, 1, 2, or 4 tokens with probabilities 0.25, 0.35, 0.25, and 0.15. Verify that this is a valid probability distribution and sketch its bar chart.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-prize-wheel-distribution-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.2.a"><a href="#act-ch7-prize-wheel-distribution-3" title="Copy heading and permalink for Task 7.1.2.a" aria-label="Copy heading and permalink for Task 7.1.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch7-prize-wheel-distribution-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 7.1.2.a"><a href="#act-ch7-prize-wheel-distribution-3" title="Copy heading and permalink for Task 7.1.2.a" aria-label="Copy heading and permalink for Task 7.1.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch7-prize-wheel-distribution-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch7-prize-wheel-distribution-4-1-1">Find <span class="process-math">\(E(X)\)</span> and <span class="process-math">\(E(X^2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-prize-wheel-distribution-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.2.b"><a href="#act-ch7-prize-wheel-distribution-4" title="Copy heading and permalink for Task 7.1.2.b" aria-label="Copy heading and permalink for Task 7.1.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch7-prize-wheel-distribution-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 7.1.2.b"><a href="#act-ch7-prize-wheel-distribution-4" title="Copy heading and permalink for Task 7.1.2.b" aria-label="Copy heading and permalink for Task 7.1.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch7-prize-wheel-distribution-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch7-prize-wheel-distribution-5-1-1">Use those values to find <span class="process-math">\(\operatorname{Var}(X)\)</span> and <span class="process-math">\(\sigma_X\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch7-prize-wheel-distribution-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 7.1.2.c"><a href="#act-ch7-prize-wheel-distribution-5" title="Copy heading and permalink for Task 7.1.2.c" aria-label="Copy heading and permalink for Task 7.1.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 7.1.2: Prize Wheel Distribution"><a href="#act-ch7-prize-wheel-distribution" title="Copy heading and permalink for Activity 7.1.2: Prize Wheel Distribution" aria-label="Copy heading and permalink for Activity 7.1.2: Prize Wheel Distribution">🔗</a></div></article><div class="autopermalink" data-description="Section 7.1: Random Variables, CDFs, Expectation, and Variance"><a href="#sec-random-variables-pmf" title="Copy heading and permalink for Section 7.1: Random Variables, CDFs, Expectation, and Variance" aria-label="Copy heading and permalink for Section 7.1: Random Variables, CDFs, Expectation, and Variance">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 7.1.2.c"><a href="#act-ch7-prize-wheel-distribution-5" title="Copy heading and permalink for Task 7.1.2.c" aria-label="Copy heading and permalink for Task 7.1.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 7.1.2: Prize Wheel Distribution"><a href="#act-ch7-prize-wheel-distribution" title="Copy heading and permalink for Activity 7.1.2: Prize Wheel Distribution" aria-label="Copy heading and permalink for Activity 7.1.2: Prize Wheel Distribution">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 7.1: Random Variables, CDFs, Expectation, and Variance"><a href="#sec-random-variables-pmf" title="Copy heading and permalink for Section 7.1: Random Variables, CDFs, Expectation, and Variance" aria-label="Copy heading and permalink for Section 7.1: Random Variables, CDFs, Expectation, and Variance">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-random-variables.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-cdf-expected-value.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

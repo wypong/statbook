@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-variance-sd-zscores"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-variance-sd-zscores">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variance, Standard Deviation, and z-Scores</span>
 </h2>
 <div class="para" id="sec-variance-sd-zscores-2">The IQR is useful, but it only looks at the middle half of the data. Another important family of measures uses every observation and asks how far the data tends to fall from the mean.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -304,31 +310,44 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-sd-small-data" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Two Small Data Sets.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-sd-small-data-2">Consider the data sets 1, 2, 3, 4, 5 and 3, 3, 3, 3, 3. Both have mean 3, but they do not have the same spread. The second set has no variation at all, so its standard deviation is 0. The first set has values spread around the mean, so its standard deviation is greater than 0.<div class="autopermalink" data-description="Paragraph"><a href="#ex-sd-small-data-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-sd-small-data-2">Consider the data sets 1, 2, 3, 4, 5 and 3, 3, 3, 3, 3. Both have mean 3, but they do not have the same spread. The second set has no variation at all, so its standard deviation is 0. The first set has values spread around the mean, so its standard deviation is greater than 0.<div class="autopermalink" data-description="Paragraph"><a href="#ex-sd-small-data-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-sd-small-data-3">This example shows why center alone is not enough. Two distributions can share the same mean and still behave very differently.<div class="autopermalink" data-description="Paragraph"><a href="#ex-sd-small-data-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.1: Comparing Two Small Data Sets"><a href="#ex-sd-small-data" title="Copy heading and permalink for Example 4.3.1: Comparing Two Small Data Sets" aria-label="Copy heading and permalink for Example 4.3.1: Comparing Two Small Data Sets">🔗</a></div></article></details><div class="para" id="sec-variance-sd-zscores-9">When we work with a sample rather than a whole population, we use the <dfn class="terminology">sample standard deviation</dfn>, written <span class="process-math">\(s\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.1: Comparing Two Small Data Sets"><a href="#ex-sd-small-data" title="Copy heading and permalink for Example 4.3.1: Comparing Two Small Data Sets" aria-label="Copy heading and permalink for Example 4.3.1: Comparing Two Small Data Sets">🔗</a></div>
+</article></details>
+<div class="para" id="sec-variance-sd-zscores-9">When we work with a sample rather than a whole population, we use the <dfn class="terminology">sample variance</dfn>, written <span class="process-math">\(s^2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec-variance-sd-zscores-10">
+\begin{equation*}
+s^2=\frac{\sum (x-\bar{x})^2}{n-1},
+\end{equation*}
+</div>
+<div class="para" id="sec-variance-sd-zscores-11">and the <dfn class="terminology">sample standard deviation</dfn>, written <span class="process-math">\(s\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-variance-sd-zscores-12">
 \begin{equation*}
 s=\sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}.
 \end{equation*}
 </div>
-<div class="para" id="sec-variance-sd-zscores-11">The denominator is <span class="process-math">\(n-1\text{,}\)</span> not <span class="process-math">\(n\text{.}\)</span> That adjustment makes <span class="process-math">\(s\)</span> a better estimator of the population standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-variance-sd-zscores-13">The denominator is <span class="process-math">\(n-1\text{,}\)</span> not <span class="process-math">\(n\text{.}\)</span> That adjustment makes <span class="process-math">\(s\)</span> a better estimator of the population standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-variance-sd-zscores-12">The <dfn class="terminology">relative standard deviation</dfn>, or <dfn class="terminology">RSD</dfn>, compares the standard deviation to the mean:<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-variance-sd-zscores-14">The <dfn class="terminology">relative standard deviation</dfn>, or <dfn class="terminology">RSD</dfn>, compares the standard deviation to the mean:<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-variance-sd-zscores-13">
+<div class="displaymath process-math" id="sec-variance-sd-zscores-15">
 \begin{equation*}
 \text{RSD}=\frac{\text{standard deviation}}{\text{mean}}\cdot 100\%.
 \end{equation*}
 </div>
-<div class="para" id="sec-variance-sd-zscores-14">RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-variance-sd-zscores-16">RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-rsd" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why Relative Standard Deviation Can Help.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-rsd-2">Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because<div class="autopermalink" data-description="Paragraph"><a href="#ex-rsd-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-rsd-2">Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because<div class="autopermalink" data-description="Paragraph"><a href="#ex-rsd-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-rsd-3">
 \begin{equation*}
@@ -337,25 +356,29 @@ s=\sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}.
 \frac{12}{2000}=0.6\%.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 4.3.2: Why Relative Standard Deviation Can Help"><a href="#ex-rsd" title="Copy heading and permalink for Example 4.3.2: Why Relative Standard Deviation Can Help" aria-label="Copy heading and permalink for Example 4.3.2: Why Relative Standard Deviation Can Help">🔗</a></div></article></details><div class="para" id="sec-variance-sd-zscores-16">A <dfn class="terminology">z-score</dfn>, also called a standard score, tells how many standard deviations a value lies above or below the mean:<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.2: Why Relative Standard Deviation Can Help"><a href="#ex-rsd" title="Copy heading and permalink for Example 4.3.2: Why Relative Standard Deviation Can Help" aria-label="Copy heading and permalink for Example 4.3.2: Why Relative Standard Deviation Can Help">🔗</a></div>
+</article></details>
+<div class="para" id="sec-variance-sd-zscores-18">A <dfn class="terminology">z-score</dfn>, also called a standard score, tells how many standard deviations a value lies above or below the mean:<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-variance-sd-zscores-17">
+<div class="displaymath process-math" id="sec-variance-sd-zscores-19">
 \begin{equation*}
 z=\frac{x-\bar{x}}{s}
 \end{equation*}
 </div>
-<div class="para" id="sec-variance-sd-zscores-18">if we are working with sample data, or<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-variance-sd-zscores-20">if we are working with sample data, or<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-variance-sd-zscores-19">
+<div class="displaymath process-math" id="sec-variance-sd-zscores-21">
 \begin{equation*}
 z=\frac{x-\mu}{\sigma}
 \end{equation*}
 </div>
-<div class="para" id="sec-variance-sd-zscores-20">for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-variance-sd-zscores-22">for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-zscore-test" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting a z-Score.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-zscore-test-2">A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is<div class="autopermalink" data-description="Paragraph"><a href="#ex-zscore-test-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-zscore-test-2">A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is<div class="autopermalink" data-description="Paragraph"><a href="#ex-zscore-test-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-zscore-test-3">
 \begin{equation*}
@@ -364,51 +387,81 @@ z=\frac{82-74}{4}=2.
 </div>
 <div class="para" id="ex-zscore-test-4">This means the score of 82 is 2 standard deviations above the mean.<div class="autopermalink" data-description="Paragraph"><a href="#ex-zscore-test-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.3: Interpreting a z-Score"><a href="#ex-zscore-test" title="Copy heading and permalink for Example 4.3.3: Interpreting a z-Score" aria-label="Copy heading and permalink for Example 4.3.3: Interpreting a z-Score">🔗</a></div></article></details><div class="para" id="sec-variance-sd-zscores-22">Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with <span class="process-math">\(|z| &gt; 2\)</span> may deserve a closer look. That rule is not universal, but it is often used as a quick screen.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.3: Interpreting a z-Score"><a href="#ex-zscore-test" title="Copy heading and permalink for Example 4.3.3: Interpreting a z-Score" aria-label="Copy heading and permalink for Example 4.3.3: Interpreting a z-Score">🔗</a></div>
+</article></details>
+<div class="para" id="sec-variance-sd-zscores-24">Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with <span class="process-math">\(|z| &gt; 2\)</span> may deserve a closer look. That rule is not universal, but it is often used as a quick screen.<div class="autopermalink" data-description="Paragraph"><a href="#sec-variance-sd-zscores-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="act-ch4-variance-generated"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variance and Standard Deviation Practice.</span>
 </h3>
-<div class="introduction" id="act-ch4-variance-generated-2"><div class="para" id="act-ch4-variance-generated-2-1">Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-variance-generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-variance-generated-2">
+<div class="para" id="act-ch4-variance-generated-2-1">Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-variance-generated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-variance-generated-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-variance-generated-3-1-1">For the population data set 2, 4, 6, 8, 10, compute the population mean, variance, and standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-variance-generated-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.1.a"><a href="#act-ch4-variance-generated-3" title="Copy heading and permalink for Task 4.3.1.a" aria-label="Copy heading and permalink for Task 4.3.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-variance-generated-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.1.a"><a href="#act-ch4-variance-generated-3" title="Copy heading and permalink for Task 4.3.1.a" aria-label="Copy heading and permalink for Task 4.3.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-variance-generated-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-variance-generated-4-1-1">For the sample data set 2, 4, 6, 8, 10, compute the sample mean and sample standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-variance-generated-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.1.b"><a href="#act-ch4-variance-generated-4" title="Copy heading and permalink for Task 4.3.1.b" aria-label="Copy heading and permalink for Task 4.3.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-variance-generated-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.1.b"><a href="#act-ch4-variance-generated-4" title="Copy heading and permalink for Task 4.3.1.b" aria-label="Copy heading and permalink for Task 4.3.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-variance-generated-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-variance-generated-5-1-1">Compare the two standard deviations. Why are they close, and why are they not exactly the same?<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-variance-generated-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.1.c"><a href="#act-ch4-variance-generated-5" title="Copy heading and permalink for Task 4.3.1.c" aria-label="Copy heading and permalink for Task 4.3.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.3.1: Variance and Standard Deviation Practice"><a href="#act-ch4-variance-generated" title="Copy heading and permalink for Activity 4.3.1: Variance and Standard Deviation Practice" aria-label="Copy heading and permalink for Activity 4.3.1: Variance and Standard Deviation Practice">🔗</a></div></article><article class="activity project-like" id="act-ch4-sd-class-data"><h3 class="heading">
+<div class="autopermalink" data-description="Task 4.3.1.c"><a href="#act-ch4-variance-generated-5" title="Copy heading and permalink for Task 4.3.1.c" aria-label="Copy heading and permalink for Task 4.3.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.3.1: Variance and Standard Deviation Practice"><a href="#act-ch4-variance-generated" title="Copy heading and permalink for Activity 4.3.1: Variance and Standard Deviation Practice" aria-label="Copy heading and permalink for Activity 4.3.1: Variance and Standard Deviation Practice">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch4-sd-class-data"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spread from Class Data.</span>
 </h3>
-<div class="introduction" id="act-ch4-sd-class-data-2"><div class="para" id="act-ch4-sd-class-data-2-1">Use one quantitative variable from the class data set collected earlier in the book.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-sd-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-sd-class-data-2">
+<div class="para" id="act-ch4-sd-class-data-2-1">Use one quantitative variable from the class data set collected earlier in the book.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-sd-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-sd-class-data-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-sd-class-data-3-1-1">Choose a variable such as height, commute time, distance from school, or number of siblings. Compute the sample mean and sample standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-sd-class-data-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.2.a"><a href="#act-ch4-sd-class-data-3" title="Copy heading and permalink for Task 4.3.2.a" aria-label="Copy heading and permalink for Task 4.3.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-sd-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.2.a"><a href="#act-ch4-sd-class-data-3" title="Copy heading and permalink for Task 4.3.2.a" aria-label="Copy heading and permalink for Task 4.3.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-sd-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-sd-class-data-4-1-1">Describe the spread in one sentence using the standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-sd-class-data-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.2.b"><a href="#act-ch4-sd-class-data-4" title="Copy heading and permalink for Task 4.3.2.b" aria-label="Copy heading and permalink for Task 4.3.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-sd-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.2.b"><a href="#act-ch4-sd-class-data-4" title="Copy heading and permalink for Task 4.3.2.b" aria-label="Copy heading and permalink for Task 4.3.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-sd-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-sd-class-data-5-1-1">Find one data value that is about one standard deviation above or below the mean, if such a value exists.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-sd-class-data-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.2.c"><a href="#act-ch4-sd-class-data-5" title="Copy heading and permalink for Task 4.3.2.c" aria-label="Copy heading and permalink for Task 4.3.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.3.2: Spread from Class Data"><a href="#act-ch4-sd-class-data" title="Copy heading and permalink for Activity 4.3.2: Spread from Class Data" aria-label="Copy heading and permalink for Activity 4.3.2: Spread from Class Data">🔗</a></div></article><article class="activity project-like" id="act-ch4-zscores"><h3 class="heading">
+<div class="autopermalink" data-description="Task 4.3.2.c"><a href="#act-ch4-sd-class-data-5" title="Copy heading and permalink for Task 4.3.2.c" aria-label="Copy heading and permalink for Task 4.3.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.3.2: Spread from Class Data"><a href="#act-ch4-sd-class-data" title="Copy heading and permalink for Activity 4.3.2: Spread from Class Data" aria-label="Copy heading and permalink for Activity 4.3.2: Spread from Class Data">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch4-zscores"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Z-Score Practice.</span>
 </h3>
-<div class="introduction" id="act-ch4-zscores-2"><div class="para" id="act-ch4-zscores-2-1">Practice interpreting z-scores and comparing values on a standardized scale.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-zscores-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch4-zscores-2">
+<div class="para" id="act-ch4-zscores-2-1">Practice interpreting z-scores and comparing values on a standardized scale.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-zscores-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch4-zscores-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch4-zscores-3-1-1">A test score has mean 70 and standard deviation 5. Find the z-score for a score of 80.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-zscores-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.3.a"><a href="#act-ch4-zscores-3" title="Copy heading and permalink for Task 4.3.3.a" aria-label="Copy heading and permalink for Task 4.3.3.a">🔗</a></div></article><article class="task exercise-like" id="act-ch4-zscores-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.3.a"><a href="#act-ch4-zscores-3" title="Copy heading and permalink for Task 4.3.3.a" aria-label="Copy heading and permalink for Task 4.3.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-zscores-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch4-zscores-4-1-1">A value has z-score <span class="process-math">\(-2\)</span> in a distribution with mean 50 and standard deviation 8. Find the value.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-zscores-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.3.b"><a href="#act-ch4-zscores-4" title="Copy heading and permalink for Task 4.3.3.b" aria-label="Copy heading and permalink for Task 4.3.3.b">🔗</a></div></article><article class="task exercise-like" id="act-ch4-zscores-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 4.3.3.b"><a href="#act-ch4-zscores-4" title="Copy heading and permalink for Task 4.3.3.b" aria-label="Copy heading and permalink for Task 4.3.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch4-zscores-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch4-zscores-5-1-1">State whether each z-score is above or below the mean: <span class="process-math">\(1.5\text{,}\)</span> <span class="process-math">\(0\text{,}\)</span> and <span class="process-math">\(-0.75\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch4-zscores-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 4.3.3.c"><a href="#act-ch4-zscores-5" title="Copy heading and permalink for Task 4.3.3.c" aria-label="Copy heading and permalink for Task 4.3.3.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.3.3: Z-Score Practice"><a href="#act-ch4-zscores" title="Copy heading and permalink for Activity 4.3.3: Z-Score Practice" aria-label="Copy heading and permalink for Activity 4.3.3: Z-Score Practice">🔗</a></div></article><div class="autopermalink" data-description="Section 4.3: Variance, Standard Deviation, and z-Scores"><a href="#sec-variance-sd-zscores" title="Copy heading and permalink for Section 4.3: Variance, Standard Deviation, and z-Scores" aria-label="Copy heading and permalink for Section 4.3: Variance, Standard Deviation, and z-Scores">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 4.3.3.c"><a href="#act-ch4-zscores-5" title="Copy heading and permalink for Task 4.3.3.c" aria-label="Copy heading and permalink for Task 4.3.3.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 4.3.3: Z-Score Practice"><a href="#act-ch4-zscores" title="Copy heading and permalink for Activity 4.3.3: Z-Score Practice" aria-label="Copy heading and permalink for Activity 4.3.3: Z-Score Practice">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 4.3: Variance, Standard Deviation, and z-Scores"><a href="#sec-variance-sd-zscores" title="Copy heading and permalink for Section 4.3: Variance, Standard Deviation, and z-Scores" aria-label="Copy heading and permalink for Section 4.3: Variance, Standard Deviation, and z-Scores">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-boxplots-outliers.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-linear-regression.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

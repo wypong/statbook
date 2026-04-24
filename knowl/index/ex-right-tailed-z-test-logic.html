@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Why the Critical-Value and P-Value Rules Agree.</span>
+</h3>
+<div class="para">Suppose a school wants to know whether the mean weekly study time is greater than 40 hours. Assume the population standard deviation is known to be 8 hours, and a random sample of <span class="process-math">\(n=64\)</span> students gives sample mean <span class="process-math">\(\overline{x}=42\text{.}\)</span> We test<div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-right-tailed-z-critical-region.html">
+\begin{equation*}
+H_0:\mu=40
+\qquad\text{versus}\qquad
+H_a:\mu&gt;40
+\end{equation*}
+</div>
+<div class="para">at significance level <span class="process-math">\(\alpha=0.05\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">If <span class="process-math">\(H_0\)</span> is true, then<div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-right-tailed-z-critical-region.html">
+\begin{equation*}
+Z=\frac{\overline{X}-40}{8/\sqrt{64}}
+=\frac{\overline{X}-40}{1}
+\sim N(0,1).
+\end{equation*}
+</div>
+<div class="para">The observed test statistic is<div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-right-tailed-z-critical-region.html">
+\begin{equation*}
+z=\frac{42-40}{8/\sqrt{64}}=2.
+\end{equation*}
+</div>
+<div class="para">Using the critical-value method, the right-tailed cutoff is <span class="process-math">\(z_{0.05}=1.645\text{.}\)</span> Since <span class="process-math">\(2&gt;1.645\text{,}\)</span> the observed statistic lies in the rejection region shown in <a href="sec-one-sample-mean-tests.html#fig-right-tailed-z-critical-region" class="xref" data-knowl="./knowl/xref/fig-right-tailed-z-critical-region.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.1">Figure 11.3.1</a>, so we reject <span class="process-math">\(H_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now look at the same decision through the p-value method. The <dfn class="terminology">p-value</dfn> is the probability, assuming <span class="process-math">\(H_0\)</span> is true, of getting a test statistic at least as large as the one observed:<div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-right-tailed-z-critical-region.html">
+\begin{equation*}
+\text{p-value}=P(Z\ge 2)\approx 0.0228.
+\end{equation*}
+</div>
+<div class="para">This means that if the true mean really were 40, then a sample mean this high or higher would occur only about 2.28% of the time. Since <span class="process-math">\(0.0228&lt;0.05\text{,}\)</span> the sample is too unusual under <span class="process-math">\(H_0\text{,}\)</span> so we again reject <span class="process-math">\(H_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-right-tailed-z-test-logic-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 11.3.2: Why the Critical-Value and P-Value Rules Agree"><a href="#ex-right-tailed-z-test-logic" title="Copy heading and permalink for Example 11.3.2: Why the Critical-Value and P-Value Rules Agree" aria-label="Copy heading and permalink for Example 11.3.2: Why the Critical-Value and P-Value Rules Agree">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec-one-sample-mean-tests.html#ex-right-tailed-z-test-logic">In Context</a></span>
+</body>
+</html>

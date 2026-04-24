@@ -1186,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Variance, Standard Deviation, and z-Scores",
-  "body": " Variance, Standard Deviation, and z-Scores  The IQR is useful, but it only looks at the middle half of the data. Another important family of measures uses every observation and asks how far the data tends to fall from the mean.  The variance summaries variance measures the average squared distance from the mean. For a population, the variance is   where is the population mean and is the population size. The standard deviation summaries standard deviation is the square root of the variance:   The standard deviation is easier to interpret than the variance because it is measured in the same units as the original data.   Comparing Two Small Data Sets  Consider the data sets 1, 2, 3, 4, 5 and 3, 3, 3, 3, 3. Both have mean 3, but they do not have the same spread. The second set has no variation at all, so its standard deviation is 0. The first set has values spread around the mean, so its standard deviation is greater than 0.  This example shows why center alone is not enough. Two distributions can share the same mean and still behave very differently.   When we work with a sample rather than a whole population, we use the sample standard deviation summaries sample standard deviation , written :   The denominator is , not . That adjustment makes a better estimator of the population standard deviation.  The relative standard deviation summaries relative standard deviation , or RSD summaries RSD , compares the standard deviation to the mean:   RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.   Why Relative Standard Deviation Can Help  Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because    A z-score summaries standard score , also called a standard score, tells how many standard deviations a value lies above or below the mean:   if we are working with sample data, or   for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.   Interpreting a z-Score  A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is   This means the score of 82 is 2 standard deviations above the mean.   Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with may deserve a closer look. That rule is not universal, but it is often used as a quick screen.   Variance and Standard Deviation Practice   Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.     For the population data set 2, 4, 6, 8, 10, compute the population mean, variance, and standard deviation.      For the sample data set 2, 4, 6, 8, 10, compute the sample mean and sample standard deviation.      Compare the two standard deviations. Why are they close, and why are they not exactly the same?      Spread from Class Data   Use one quantitative variable from the class data set collected earlier in the book.     Choose a variable such as height, commute time, distance from school, or number of siblings. Compute the sample mean and sample standard deviation.      Describe the spread in one sentence using the standard deviation.      Find one data value that is about one standard deviation above or below the mean, if such a value exists.      Z-Score Practice   Practice interpreting z-scores and comparing values on a standardized scale.     A test score has mean 70 and standard deviation 5. Find the z-score for a score of 80.      A value has z-score in a distribution with mean 50 and standard deviation 8. Find the value.      State whether each z-score is above or below the mean: , , and .     "
+  "body": " Variance, Standard Deviation, and z-Scores  The IQR is useful, but it only looks at the middle half of the data. Another important family of measures uses every observation and asks how far the data tends to fall from the mean.  The variance summaries variance measures the average squared distance from the mean. For a population, the variance is   where is the population mean and is the population size. The standard deviation summaries standard deviation is the square root of the variance:   The standard deviation is easier to interpret than the variance because it is measured in the same units as the original data.   Comparing Two Small Data Sets  Consider the data sets 1, 2, 3, 4, 5 and 3, 3, 3, 3, 3. Both have mean 3, but they do not have the same spread. The second set has no variation at all, so its standard deviation is 0. The first set has values spread around the mean, so its standard deviation is greater than 0.  This example shows why center alone is not enough. Two distributions can share the same mean and still behave very differently.   When we work with a sample rather than a whole population, we use the sample variance summaries sample variance , written :   and the sample standard deviation summaries sample standard deviation , written :   The denominator is , not . That adjustment makes a better estimator of the population standard deviation.  The relative standard deviation summaries relative standard deviation , or RSD summaries RSD , compares the standard deviation to the mean:   RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.   Why Relative Standard Deviation Can Help  Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because    A z-score summaries standard score , also called a standard score, tells how many standard deviations a value lies above or below the mean:   if we are working with sample data, or   for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.   Interpreting a z-Score  A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is   This means the score of 82 is 2 standard deviations above the mean.   Z-scores are especially useful for comparing observations from different distributions. They also provide another informal way to flag unusual values. A common rough rule is that values with may deserve a closer look. That rule is not universal, but it is often used as a quick screen.   Variance and Standard Deviation Practice   Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.     For the population data set 2, 4, 6, 8, 10, compute the population mean, variance, and standard deviation.      For the sample data set 2, 4, 6, 8, 10, compute the sample mean and sample standard deviation.      Compare the two standard deviations. Why are they close, and why are they not exactly the same?      Spread from Class Data   Use one quantitative variable from the class data set collected earlier in the book.     Choose a variable such as height, commute time, distance from school, or number of siblings. Compute the sample mean and sample standard deviation.      Describe the spread in one sentence using the standard deviation.      Find one data value that is about one standard deviation above or below the mean, if such a value exists.      Z-Score Practice   Practice interpreting z-scores and comparing values on a standardized scale.     A test score has mean 70 and standard deviation 5. Find the z-score for a score of 80.      A value has z-score in a distribution with mean 50 and standard deviation 8. Find the value.      State whether each z-score is above or below the mean: , , and .     "
 },
 {
   "id": "sec-variance-sd-zscores-3",
@@ -1222,12 +1222,21 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "sample variance summaries sample variance "
+},
+{
+  "id": "sec-variance-sd-zscores-11",
+  "level": "2",
+  "url": "sec-variance-sd-zscores.html#sec-variance-sd-zscores-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "sample standard deviation summaries sample standard deviation "
 },
 {
-  "id": "sec-variance-sd-zscores-12",
+  "id": "sec-variance-sd-zscores-14",
   "level": "2",
-  "url": "sec-variance-sd-zscores.html#sec-variance-sd-zscores-12",
+  "url": "sec-variance-sd-zscores.html#sec-variance-sd-zscores-14",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1243,9 +1252,9 @@ var ptx_lunr_docs = [
   "body": " Why Relative Standard Deviation Can Help  Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because   "
 },
 {
-  "id": "sec-variance-sd-zscores-16",
+  "id": "sec-variance-sd-zscores-18",
   "level": "2",
-  "url": "sec-variance-sd-zscores.html#sec-variance-sd-zscores-16",
+  "url": "sec-variance-sd-zscores.html#sec-variance-sd-zscores-18",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3040,7 +3049,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Confidence Intervals for the Mean",
-  "body": " Confidence Intervals for the Mean  A sample mean is a point estimate inference point estimate of the population mean . But a single number does not tell us how much uncertainty comes from sampling. A  confidence interval inference confidence interval adds a margin of error to the point estimate and gives a range of plausible values for , where is the confidence level inference confidence level . In informal language, we say we are confident that the resulting interval captures the true mean.  To see where the formula comes from, suppose are iid with mean and standard deviation , and suppose the standardized sample mean has a standard normal distribution (exactly when the population is normal, or approximately for large samples by the CLT):   Let . To capture the middle proportion of the standard normal curve, we leave total area outside and split it evenly between the two tails. That is, each tail has area .   The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and labeled C. Each tail outside that region is labeled alpha over 2.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.     So the corresponding probability statement is   After we collect the sample and observe , we solve that inequality for . The result is the z-interval   or, written as an interval,   In practice, is often unknown. When the sample is large, we usually replace by the sample standard deviation and still use the z critical value as an approximation. When the sample is small and the population is normal, we use a z-interval if is known, but if is unknown and we replace it by , then   In every case, the confidence interval has the form point estimate margin of error. For the population mean, that means   So the interval is centered at a sample mean, and its total width is twice the margin of error.  We summarize the confidence-interval settings for a population mean in .   Sampling distributions and confidence intervals for a mean    Setting  Statistic  Margin    , known      , unknown      , normal, known      , normal, unknown       The next four examples illustrate these four cases.   Case 1: Large Sample, Known  Suppose a sample of 36 women has mean height inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is   So the interval is     Case 2: Large Sample, Unknown  A random sample of 64 delivery times has mean minutes and sample standard deviation minutes. Find a 95% confidence interval for the population mean.  Because the sample is large, we use the z critical value and replace by :   So the confidence interval is     Case 3: Small Sample, Population Normal, Known  Assume the population distribution is normal. A sample of size 16 has mean , and the population standard deviation is known to be . Find a 90% confidence interval for the population mean.  Because the population is normal and is known, we use a z interval:   So the confidence interval is     Case 4: Small Sample, Population Normal, Unknown  Assume the population is normal. A sample of 11 observations has sample mean and sample standard deviation . For a 95% confidence interval, we use and .  The margin of error is   So the confidence interval is    Interpreting a confidence interval takes some care. A 95% confidence level does not mean there is a 95% chance that is in the one interval we already computed. Instead, it means that if we repeated the same sampling process many times and built an interval each time, about 95% of those intervals would capture the true mean. The parameter is fixed; the interval is what changes from sample to sample.   A sample of size 49 has mean . Assume the population standard deviation is known to be 14.   Write the formula for a 90% confidence interval for .  Find the margin of error.  Find the interval.     Confidence Interval Builder   Build a confidence interval from a sample mean and a known population standard deviation.     A sample of size 49 has mean . Assume the population standard deviation is 14. Find a 90% confidence interval for .      Find the margin of error and interpret it in context.      Explain what the confidence level means in this situation.      Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?     "
+  "body": " Confidence Intervals for the Mean  A sample mean is a point estimate inference point estimate of the population mean . But a single number does not tell us how much uncertainty comes from sampling. A  confidence interval inference confidence interval adds a margin of error to the point estimate and gives a range of plausible values for , where is the confidence level inference confidence level . In informal language, we say we are confident that the resulting interval captures the true mean.  To see where the formula comes from, suppose are iid with mean and standard deviation , and suppose the standardized sample mean has a standard normal distribution (exactly when the population is normal, or approximately for large samples by the CLT):   Let . To capture the middle proportion of the standard normal curve, we leave total area outside and split it evenly between the two tails. That is, each tail has area .   The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and labeled C. Each tail outside that region is labeled alpha over 2.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.     So the corresponding probability statement is   After we collect the sample and observe , we solve that inequality for . The result is the z-interval   or, written as an interval,   In practice, is often unknown. When the sample is large, we usually replace by the sample standard deviation and still use the z critical value as an approximation. When the sample is small and the population is normal, we use a z-interval if is known, but if is unknown and we replace it by , then   In every case, the confidence interval has the form point estimate margin of error. For the population mean, that means   So the interval is centered at a sample mean, and its total width is twice the margin of error.  We summarize the confidence-interval settings for a population mean in .   Sampling distributions and confidence intervals for a mean    Setting  Statistic  Margin    , known      , unknown      , normal, known      , normal, unknown       The next four examples illustrate these four cases.   Case 1: Large Sample, Known  Suppose a sample of 36 women has mean height inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is   So the interval is     Case 2: Large Sample, Unknown  A random sample of 64 delivery times has mean minutes and sample standard deviation minutes. Find a 95% confidence interval for the population mean.  Because the sample is large, we use the z critical value and replace by :   So the confidence interval is     Case 3: Small Sample, Population Normal, Known  Assume the population distribution is normal. A sample of size 16 has mean , and the population standard deviation is known to be . Find a 90% confidence interval for the population mean.  Because the population is normal and is known, we use a z interval:   So the confidence interval is     Case 4: Small Sample, Population Normal, Unknown  Assume the population is normal. A sample of 11 observations has sample mean and sample standard deviation . For a 95% confidence interval, we use and .  The margin of error is   So the confidence interval is    Interpreting a confidence interval takes some care. Before we collect the data, the sample mean is random, so the interval built from it is random too. In that stage, it is correct to say that the interval procedure has probability 0.95 of capturing .  After we collect the sample and get a specific value , the interval becomes a fixed interval with fixed endpoints. At that point, the true mean is either inside the interval or it is not. So a 95% confidence level does not mean there is a 95% chance that is in this one computed interval. It means that if we repeated the same sampling process many times and built an interval each time, about 95% of those intervals would capture the true mean. The parameter is fixed; the interval is what changes from sample to sample.   A sample of size 49 has mean . Assume the population standard deviation is known to be 14.   Write the formula for a 90% confidence interval for .  Find the margin of error.  Find the interval.     Confidence Interval Builder   Build a confidence interval from a sample mean and a known population standard deviation.     A sample of size 49 has mean . Assume the population standard deviation is 14. Find a 90% confidence interval for .      Find the margin of error and interpret it in context.      Explain what the confidence level means in this situation.      Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?     "
 },
 {
   "id": "sec-confidence-intervals-mean-2",
@@ -3133,20 +3142,182 @@ var ptx_lunr_docs = [
   "body": " Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?    "
 },
 {
+  "id": "sec-confidence-intervals-proportion",
+  "level": "1",
+  "url": "sec-confidence-intervals-proportion.html",
+  "type": "Section",
+  "number": "10.3",
+  "title": "Confidence Intervals for a Population Proportion",
+  "body": " Confidence Intervals for a Population Proportion  Many statistical questions are really yes-or-no questions. What proportion of voters support a ballot measure? What proportion of products coming off an assembly line are defective? What proportion of students at a college work more than 20 hours per week? In settings like these, the parameter we want is the population proportion inference population proportion , usually written .  If we take a random sample of size and count the number of successes, say , then a natural estimate of is the sample proportion data sample proportion :   This section is built directly on the binomial model from . If each observation is a success or failure, and the success probability is , then the count of successes in independent trials has a binomial distribution:   From the binomial chapter, for large enough we can approximate this binomial count by a normal random variable with the same mean and standard deviation:   provided the expected numbers of successes and failures are both at least about 5:   Now divide everything by . Since , the sample proportion is approximately normal with mean   and standard deviation   So for large samples,   That is the key fact behind a one-proportion confidence interval. Once we standardize, we get the approximate z-statistic   Let as before. Then the middle proportion of the standard normal curve gives   Solving that inequality for suggests the interval   There is one catch: the standard deviation still contains the unknown parameter . In practice we plug in the sample proportion in its place. That gives the usual large-sample confidence interval for a population proportion:   So the margin of error for a proportion is   This method works well when the sample is random or otherwise independent, and when the sample is large enough that the observed counts of successes and failures are both at least about 5:   If sampling is done without replacement from a finite population, a common rule of thumb is that the population should be at least 10 times as large as the sample so the observations are close to independent.   A Confidence Interval for Support in a Campus Poll  A random sample of 200 students is asked whether they support a new campus tutoring center. Suppose 124 students say yes. Estimate the population proportion of all students who support the plan with 95% confidence.  Here , , so   The large-sample conditions are met because   and both numbers are much larger than 5. For 95% confidence, . The margin of error is   So the confidence interval is   So we estimate that between about 55.3% and 68.7% of all students support the tutoring center.    A Confidence Interval for a Defect Rate  A quality-control inspector checks 400 light bulbs and finds 18 defective ones. Find a 90% confidence interval for the population proportion of defective bulbs.  First compute the sample proportion:   The large-sample conditions are satisfied because   For 90% confidence, . The margin of error is   So the confidence interval is   That puts the defect rate at about 2.8% to 6.2%.   The interpretation follows the same pattern as for means. A 95% confidence interval for does not mean there is a 95% chance that the fixed population proportion is inside the one interval we already computed. It means that if we repeated the sampling process many times and built an interval each time, about 95% of those intervals would capture the true proportion.   In a random sample of 150 customers, 57 say they used a store coupon that week.   Find .  Check whether the large-sample conditions for a one-proportion z-interval are met.  Write the formula for a 95% confidence interval for .     Proportion Interval Builder   Build a confidence interval for a population proportion from a sample count.     A random sample of 120 students finds that 48 prefer digital notes to printed notes. Compute .      Check whether the conditions for a one-proportion z-interval are satisfied.      Find a 95% confidence interval for the population proportion and interpret it in context.      Can We Trust the Approximation?   Decide when the normal approximation behind a proportion interval is reasonable.     For each pair , compute and : , , and .      For which cases would a one-proportion z-interval be reasonable? Explain briefly.      Why is it a problem when the sample has very few observed successes or very few observed failures?     "
+},
+{
+  "id": "sec-confidence-intervals-proportion-2",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#sec-confidence-intervals-proportion-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "population proportion inference population proportion "
+},
+{
+  "id": "sec-confidence-intervals-proportion-3",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#sec-confidence-intervals-proportion-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "sample proportion data sample proportion "
+},
+{
+  "id": "ex-ci-proportion-campus-poll",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#ex-ci-proportion-campus-poll",
+  "type": "Example",
+  "number": "10.3.1",
+  "title": "A Confidence Interval for Support in a Campus Poll.",
+  "body": " A Confidence Interval for Support in a Campus Poll  A random sample of 200 students is asked whether they support a new campus tutoring center. Suppose 124 students say yes. Estimate the population proportion of all students who support the plan with 95% confidence.  Here , , so   The large-sample conditions are met because   and both numbers are much larger than 5. For 95% confidence, . The margin of error is   So the confidence interval is   So we estimate that between about 55.3% and 68.7% of all students support the tutoring center.  "
+},
+{
+  "id": "ex-ci-proportion-defects",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#ex-ci-proportion-defects",
+  "type": "Example",
+  "number": "10.3.2",
+  "title": "A Confidence Interval for a Defect Rate.",
+  "body": " A Confidence Interval for a Defect Rate  A quality-control inspector checks 400 light bulbs and finds 18 defective ones. Find a 90% confidence interval for the population proportion of defective bulbs.  First compute the sample proportion:   The large-sample conditions are satisfied because   For 90% confidence, . The margin of error is   So the confidence interval is   That puts the defect rate at about 2.8% to 6.2%.  "
+},
+{
+  "id": "ci-inline-ex-3",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#ci-inline-ex-3",
+  "type": "Checkpoint",
+  "number": "10.3.3",
+  "title": "",
+  "body": " In a random sample of 150 customers, 57 say they used a store coupon that week.   Find .  Check whether the large-sample conditions for a one-proportion z-interval are met.  Write the formula for a 95% confidence interval for .   "
+},
+{
+  "id": "act-ch10-proportion-builder",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#act-ch10-proportion-builder",
+  "type": "Activity",
+  "number": "10.3.1",
+  "title": "Proportion Interval Builder.",
+  "body": " Proportion Interval Builder   Build a confidence interval for a population proportion from a sample count.     A random sample of 120 students finds that 48 prefer digital notes to printed notes. Compute .      Check whether the conditions for a one-proportion z-interval are satisfied.      Find a 95% confidence interval for the population proportion and interpret it in context.    "
+},
+{
+  "id": "act-ch10-approximation-check",
+  "level": "2",
+  "url": "sec-confidence-intervals-proportion.html#act-ch10-approximation-check",
+  "type": "Activity",
+  "number": "10.3.2",
+  "title": "Can We Trust the Approximation?",
+  "body": " Can We Trust the Approximation?   Decide when the normal approximation behind a proportion interval is reasonable.     For each pair , compute and : , , and .      For which cases would a one-proportion z-interval be reasonable? Explain briefly.      Why is it a problem when the sample has very few observed successes or very few observed failures?    "
+},
+{
+  "id": "sec-confidence-intervals-variance",
+  "level": "1",
+  "url": "sec-confidence-intervals-variance.html",
+  "type": "Section",
+  "number": "10.4",
+  "title": "Confidence Intervals for a Population Variance and Standard Deviation",
+  "body": " Confidence Intervals for a Population Variance and Standard Deviation  Confidence Intervals for Variance and Standard Deviation  Sometimes the main question is about spread rather than center. A manufacturer may want to estimate how much bottle fills vary. A coach may care about the variability of race times, not just the average time. In problems like these, the parameter of interest is the population variance inference population variance  , or equivalently the population standard deviation .  From , the sample variance summaries sample variance is based on squared deviations from the sample mean. Before the data are collected, the random sample variance is   After the sample is observed, its value is written .  The reason the chi-square distribution appears is that this formula is built from squared normal quantities. Suppose is a random sample from a normal population . If we standardize each observation,   then each is standard normal. A sum of squares of independent standard normal random variables has a chi-square distribution inference chi-square distribution .  If the population mean were known, then   But in practice is usually unknown, so we replace it by the sample mean . That uses up one degree of freedom inference degrees of freedom , because once of the deviations are known, the last one is forced by the fact that they add up to 0. So   Since   the key result becomes   That one fact is what makes a confidence interval for possible.  The assumptions need to be stated carefully.   The data should come from a random sample or a similarly independent sampling process.  The observations should be independent. If sampling is done without replacement from a finite population, a common rule of thumb is that the population should be at least 10 times as large as the sample.  The population itself should be normal. This is the crucial assumption.   That last point matters more here than it did for intervals about a mean. The CLT helps sample means become approximately normal for large samples, but it does not make the chi-square interval for variance exact. For variance and standard deviation, this method is justified only when the population distribution is normal or very close to normal.  Let . Using the critical-value notation from , where leaves right-tail area for a chi-square distribution with degrees of freedom, we have   Solving that inequality for gives the confidence interval for the population variance:   If we want an interval for the population standard deviation instead, we simply take square roots of both endpoints:    An Interval for Variation in Delivery Times  Suppose delivery times on a short route are well modeled by a normal distribution. A random sample of 12 deliveries has sample standard deviation minutes. Find a 95% confidence interval for the population variance and the population standard deviation.  Here , so the degrees of freedom are . For 95% confidence, . From ,   Since , the variance interval is   Now take square roots to get an interval for the population standard deviation:   So a reasonable estimate for the route-to-route spread is that the population standard deviation is between about 2.83 and 6.79 minutes.    Why Large Sample Size Is Not the Main Issue  A researcher takes a random sample of 50 household incomes and wants a confidence interval for the population variance. Even though is not small, household incomes are usually strongly right-skewed.  So a chi-square interval for is not automatically justified. The key result depends on a normal population, not just on a large sample. For variance intervals, the shape of the population matters a lot.    Assume a population is normal. A random sample of size 16 has sample variance .   What are the degrees of freedom?  Write the formula for a 90% confidence interval for .  Write the corresponding interval for .     Variance Interval Builder   Build a confidence interval for a population variance and standard deviation from a sample standard deviation.     Suppose a normal population is sampled with and the sample standard deviation is . Find the degrees of freedom.      Using the chi-square table, find a 90% confidence interval for the population variance .      Convert the interval to a 90% confidence interval for the population standard deviation .      Can We Trust the Chi-Square Method?   Check the assumptions before using a confidence interval for variance.     A random sample of bolt lengths comes from a manufacturing process that is known to be close to normal. Is a chi-square interval for reasonable?      A random sample of 40 household incomes is strongly right-skewed. Should we be comfortable using the chi-square interval here? Explain.      Why does a large sample size help more for intervals about a mean than for intervals about a variance?     "
+},
+{
+  "id": "sec-confidence-intervals-variance-3",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#sec-confidence-intervals-variance-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "population variance inference population variance "
+},
+{
+  "id": "sec-confidence-intervals-variance-4",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#sec-confidence-intervals-variance-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "sample variance summaries sample variance "
+},
+{
+  "id": "sec-confidence-intervals-variance-9",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#sec-confidence-intervals-variance-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "chi-square distribution inference chi-square distribution "
+},
+{
+  "id": "sec-confidence-intervals-variance-12",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#sec-confidence-intervals-variance-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "degree of freedom inference degrees of freedom "
+},
+{
+  "id": "ex-ci-variance-delivery-times",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#ex-ci-variance-delivery-times",
+  "type": "Example",
+  "number": "10.4.1",
+  "title": "An Interval for Variation in Delivery Times.",
+  "body": " An Interval for Variation in Delivery Times  Suppose delivery times on a short route are well modeled by a normal distribution. A random sample of 12 deliveries has sample standard deviation minutes. Find a 95% confidence interval for the population variance and the population standard deviation.  Here , so the degrees of freedom are . For 95% confidence, . From ,   Since , the variance interval is   Now take square roots to get an interval for the population standard deviation:   So a reasonable estimate for the route-to-route spread is that the population standard deviation is between about 2.83 and 6.79 minutes.  "
+},
+{
+  "id": "ex-ci-variance-normality-warning",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#ex-ci-variance-normality-warning",
+  "type": "Example",
+  "number": "10.4.2",
+  "title": "Why Large Sample Size Is Not the Main Issue.",
+  "body": " Why Large Sample Size Is Not the Main Issue  A researcher takes a random sample of 50 household incomes and wants a confidence interval for the population variance. Even though is not small, household incomes are usually strongly right-skewed.  So a chi-square interval for is not automatically justified. The key result depends on a normal population, not just on a large sample. For variance intervals, the shape of the population matters a lot.  "
+},
+{
+  "id": "ci-inline-ex-4",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#ci-inline-ex-4",
+  "type": "Checkpoint",
+  "number": "10.4.3",
+  "title": "",
+  "body": " Assume a population is normal. A random sample of size 16 has sample variance .   What are the degrees of freedom?  Write the formula for a 90% confidence interval for .  Write the corresponding interval for .   "
+},
+{
+  "id": "act-ch10-variance-builder",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#act-ch10-variance-builder",
+  "type": "Activity",
+  "number": "10.4.1",
+  "title": "Variance Interval Builder.",
+  "body": " Variance Interval Builder   Build a confidence interval for a population variance and standard deviation from a sample standard deviation.     Suppose a normal population is sampled with and the sample standard deviation is . Find the degrees of freedom.      Using the chi-square table, find a 90% confidence interval for the population variance .      Convert the interval to a 90% confidence interval for the population standard deviation .    "
+},
+{
+  "id": "act-ch10-variance-assumption-check",
+  "level": "2",
+  "url": "sec-confidence-intervals-variance.html#act-ch10-variance-assumption-check",
+  "type": "Activity",
+  "number": "10.4.2",
+  "title": "Can We Trust the Chi-Square Method?",
+  "body": " Can We Trust the Chi-Square Method?   Check the assumptions before using a confidence interval for variance.     A random sample of bolt lengths comes from a manufacturing process that is known to be close to normal. Is a chi-square interval for reasonable?      A random sample of 40 household incomes is strongly right-skewed. Should we be comfortable using the chi-square interval here? Explain.      Why does a large sample size help more for intervals about a mean than for intervals about a variance?    "
+},
+{
   "id": "sec-sample-size-margin-error",
   "level": "1",
   "url": "sec-sample-size-margin-error.html",
   "type": "Section",
-  "number": "10.3",
+  "number": "10.5",
   "title": "Margin of Error and Sample Size",
-  "body": " Margin of Error and Sample Size  The margin of error in a z-interval is   This formula shows two basic truths:   Higher confidence means a larger critical value and therefore a larger margin of error.  Larger samples make the denominator bigger and therefore shrink the margin of error.   If we want the margin of error to be at most some target value , then we solve for :   Since sample size must be a whole number, we always round up.   Finding a Required Sample Size  Suppose we want to estimate the mean height of women with 98% confidence and margin of error at most 0.5 inches. Assume .  Here , so . Therefore   We round up, so the least acceptable sample size is    This is one of the most practical formulas in the course. It tells us how much data we need before we even begin sampling.   Survey Planner   Plan a sample size before collecting data so the margin of error stays under control.     You want to estimate the mean amount of weekly screen time with 95% confidence and margin of error at most 3 hours. Assume . Find the minimum sample size.      Suppose the margin of error is cut in half. What happens to the required sample size?      In one sentence, explain why larger samples are useful when precision matters.      Budget vs Precision   Compare two sampling plans and decide which one gives the better estimate.     A campus poll can survey either 100 students or 196 students. If the same population standard deviation is used, which plan gives the smaller margin of error?      If the confidence level increases from 90% to 99%, what happens to the margin of error when the sample size stays the same?      Explain the tradeoff between wanting high confidence and wanting a small margin of error.     "
+  "body": " Margin of Error and Sample Size  This section returns to the z-interval for a population mean. In that setting, the margin of error is   This formula shows two basic truths:   Higher confidence means a larger critical value and therefore a larger margin of error.  Larger samples make the denominator bigger and therefore shrink the margin of error.   If we want the margin of error to be at most some target value , then we solve for :   Since sample size must be a whole number, we always round up.   Finding a Required Sample Size  Suppose we want to estimate the mean height of women with 98% confidence and margin of error at most 0.5 inches. Assume .  Here , so . Therefore   We round up, so the least acceptable sample size is    This is one of the most practical formulas in the course. It tells us how much data we need before we even begin sampling.   Survey Planner   Plan a sample size before collecting data so the margin of error stays under control.     You want to estimate the mean amount of weekly screen time with 95% confidence and margin of error at most 3 hours. Assume . Find the minimum sample size.      Suppose the margin of error is cut in half. What happens to the required sample size?      In one sentence, explain why larger samples are useful when precision matters.      Budget vs Precision   Compare two sampling plans and decide which one gives the better estimate.     A campus poll can survey either 100 students or 196 students. If the same population standard deviation is used, which plan gives the smaller margin of error?      If the confidence level increases from 90% to 99%, what happens to the margin of error when the sample size stays the same?      Explain the tradeoff between wanting high confidence and wanting a small margin of error.     "
 },
 {
   "id": "ex-sample-size-women-height",
   "level": "2",
   "url": "sec-sample-size-margin-error.html#ex-sample-size-women-height",
   "type": "Example",
-  "number": "10.3.1",
+  "number": "10.5.1",
   "title": "Finding a Required Sample Size.",
   "body": " Finding a Required Sample Size  Suppose we want to estimate the mean height of women with 98% confidence and margin of error at most 0.5 inches. Assume .  Here , so . Therefore   We round up, so the least acceptable sample size is   "
 },
@@ -3155,7 +3326,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sample-size-margin-error.html#act-ch10-survey-planner",
   "type": "Activity",
-  "number": "10.3.1",
+  "number": "10.5.1",
   "title": "Survey Planner.",
   "body": " Survey Planner   Plan a sample size before collecting data so the margin of error stays under control.     You want to estimate the mean amount of weekly screen time with 95% confidence and margin of error at most 3 hours. Assume . Find the minimum sample size.      Suppose the margin of error is cut in half. What happens to the required sample size?      In one sentence, explain why larger samples are useful when precision matters.    "
 },
@@ -3164,7 +3335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sample-size-margin-error.html#act-ch10-budget-vs-precision",
   "type": "Activity",
-  "number": "10.3.2",
+  "number": "10.5.2",
   "title": "Budget vs Precision.",
   "body": " Budget vs Precision   Compare two sampling plans and decide which one gives the better estimate.     A campus poll can survey either 100 students or 196 students. If the same population standard deviation is used, which plan gives the smaller margin of error?      If the confidence level increases from 90% to 99%, what happens to the margin of error when the sample size stays the same?      Explain the tradeoff between wanting high confidence and wanting a small margin of error.    "
 },
@@ -3173,16 +3344,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "ch10-exercises.html",
   "type": "Exercises",
-  "number": "10.4",
+  "number": "10.6",
   "title": "Exercises",
-  "body": " Exercises   A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.   Find the mean of .  Find the standard deviation of .  Use the CLT to state an approximate distribution for .     A sample of size 64 has mean . Assume the population standard deviation is known to be 8.   Find a 95% confidence interval for the population mean.  Find the margin of error.  Explain what the 95% confidence level means.     Assume the population is normal. A sample of size 16 has mean and sample standard deviation .   Write the form of the 95% t-interval for the mean.  What are the degrees of freedom?  Why is a t critical value used instead of a z critical value?     How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?   "
+  "body": " Exercises   A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.   Find the mean of .  Find the standard deviation of .  Use the CLT to state an approximate distribution for .     A sample of size 64 has mean . Assume the population standard deviation is known to be 8.   Find a 95% confidence interval for the population mean.  Find the margin of error.  Explain what the 95% confidence level means.     Assume the population is normal. A sample of size 16 has mean and sample standard deviation .   Write the form of the 95% t-interval for the mean.  What are the degrees of freedom?  Why is a t critical value used instead of a z critical value?     How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?    Explain how the confidence-interval formula for a population proportion comes from the normal approximation to a binomial random variable.   Start with and write its approximate normal model for large .  Use to find the approximate mean and standard deviation of .  Write the resulting z-based confidence-interval formula for .     In a random sample of 250 voters, 140 say they support a local park bond measure.   Find .  Check whether the large-sample conditions are satisfied.  Find a 95% confidence interval for the population proportion of voters who support the measure.  Interpret the interval in context.     A manufacturer samples 80 batteries and finds that 6 are defective.   Is a one-proportion z-interval appropriate here? Check the large-sample conditions.  If it is appropriate, find a 90% confidence interval for the population defect proportion.  If it is not appropriate, explain what goes wrong with the normal approximation.     Assume a normal population. A random sample of size 12 has sample standard deviation .   Find the degrees of freedom.  Find a 95% confidence interval for the population variance .  Convert the result to a 95% confidence interval for the population standard deviation .     Explain carefully why the chi-square distribution appears in a confidence interval for a population variance.   Start with a random sample from a normal population and standardize each observation.  Explain why squaring and adding leads to a chi-square distribution.  Explain why replacing by changes the degrees of freedom from to .     State the assumptions for using a chi-square confidence interval for the population variance.   Why is independence needed?  Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?    "
 },
 {
   "id": "ch10-ex-1",
   "level": "2",
   "url": "ch10-exercises.html#ch10-ex-1",
   "type": "Exercise",
-  "number": "10.4.1",
+  "number": "10.6.1",
   "title": "",
   "body": " A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.   Find the mean of .  Find the standard deviation of .  Use the CLT to state an approximate distribution for .   "
 },
@@ -3191,7 +3362,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch10-exercises.html#ch10-ex-2",
   "type": "Exercise",
-  "number": "10.4.2",
+  "number": "10.6.2",
   "title": "",
   "body": " A sample of size 64 has mean . Assume the population standard deviation is known to be 8.   Find a 95% confidence interval for the population mean.  Find the margin of error.  Explain what the 95% confidence level means.   "
 },
@@ -3200,7 +3371,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch10-exercises.html#ch10-ex-3",
   "type": "Exercise",
-  "number": "10.4.3",
+  "number": "10.6.3",
   "title": "",
   "body": " Assume the population is normal. A sample of size 16 has mean and sample standard deviation .   Write the form of the 95% t-interval for the mean.  What are the degrees of freedom?  Why is a t critical value used instead of a z critical value?   "
 },
@@ -3209,9 +3380,63 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch10-exercises.html#ch10-ex-4",
   "type": "Exercise",
-  "number": "10.4.4",
+  "number": "10.6.4",
   "title": "",
   "body": " How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?  "
+},
+{
+  "id": "ch10-ex-5",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-5",
+  "type": "Exercise",
+  "number": "10.6.5",
+  "title": "",
+  "body": " Explain how the confidence-interval formula for a population proportion comes from the normal approximation to a binomial random variable.   Start with and write its approximate normal model for large .  Use to find the approximate mean and standard deviation of .  Write the resulting z-based confidence-interval formula for .   "
+},
+{
+  "id": "ch10-ex-6",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-6",
+  "type": "Exercise",
+  "number": "10.6.6",
+  "title": "",
+  "body": " In a random sample of 250 voters, 140 say they support a local park bond measure.   Find .  Check whether the large-sample conditions are satisfied.  Find a 95% confidence interval for the population proportion of voters who support the measure.  Interpret the interval in context.   "
+},
+{
+  "id": "ch10-ex-7",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-7",
+  "type": "Exercise",
+  "number": "10.6.7",
+  "title": "",
+  "body": " A manufacturer samples 80 batteries and finds that 6 are defective.   Is a one-proportion z-interval appropriate here? Check the large-sample conditions.  If it is appropriate, find a 90% confidence interval for the population defect proportion.  If it is not appropriate, explain what goes wrong with the normal approximation.   "
+},
+{
+  "id": "ch10-ex-8",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-8",
+  "type": "Exercise",
+  "number": "10.6.8",
+  "title": "",
+  "body": " Assume a normal population. A random sample of size 12 has sample standard deviation .   Find the degrees of freedom.  Find a 95% confidence interval for the population variance .  Convert the result to a 95% confidence interval for the population standard deviation .   "
+},
+{
+  "id": "ch10-ex-9",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-9",
+  "type": "Exercise",
+  "number": "10.6.9",
+  "title": "",
+  "body": " Explain carefully why the chi-square distribution appears in a confidence interval for a population variance.   Start with a random sample from a normal population and standardize each observation.  Explain why squaring and adding leads to a chi-square distribution.  Explain why replacing by changes the degrees of freedom from to .   "
+},
+{
+  "id": "ch10-ex-10",
+  "level": "2",
+  "url": "ch10-exercises.html#ch10-ex-10",
+  "type": "Exercise",
+  "number": "10.6.10",
+  "title": "",
+  "body": " State the assumptions for using a chi-square confidence interval for the population variance.   Why is independence needed?  Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?   "
 },
 {
   "id": "sec-hypothesis-tests-basics",
@@ -3220,7 +3445,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.1",
   "title": "Null Hypotheses and P-Values",
-  "body": " Null Hypotheses and P-Values  Null Hypotheses and P-Values  A hypothesis test begins with two competing statements.   The null hypothesis inference null hypothesis , written , is the claim we test against.  The alternative hypothesis inference alternative hypothesis , written , is what we will support if the data give enough evidence against .   For tests about a population mean, the null hypothesis usually has the form   The alternative can take one of three common forms:   These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.  The next ingredient is the test statistic inference test statistic , a standardized number that measures how far the sample result is from the null value. For one-sample tests of a mean, we use   depending on whether a z-test or t-test is appropriate.  The significance level inference significance level , written , is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.  One way to make the decision is by using a p-value inference p-value . The p-value is the probability, assuming is true, of getting a test statistic at least as extreme as the one observed.  The smaller the p-value, the stronger the evidence against . The decision rule is simple:   If the p-value is less than , reject .  If the p-value is at least , fail to reject .   Notice the wording. We say fail to reject , not “accept .” A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.   Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says “less than,” this is a left-tailed test.    Hypothesis Claim Match-Up   Translate informal claims into null and alternative hypotheses, then identify the tail of the test.     A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write and , and say whether the test is left-tailed, right-tailed, or two-tailed.      A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write and , and identify the tail type.      A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.      P-Value Verdict   Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.     At significance level , decide what to do with p-values 0.12, 0.03, and 0.001.      For each p-value, explain in one sentence what the decision means in plain language.      Which result gives the strongest evidence against the null hypothesis?     "
+  "body": " Null Hypotheses and P-Values  Null Hypotheses and P-Values  A hypothesis test begins with two competing statements.   The null hypothesis inference null hypothesis , written , is the claim we test against.  The alternative hypothesis inference alternative hypothesis , written , is what we will support if the data give enough evidence against .   For tests about a population mean, the null hypothesis usually has the form   The alternative can take one of three common forms:   These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.  The next ingredient is the test statistic inference test statistic , a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use   depending on whether a z-test or t-test is appropriate.  The significance level inference significance level , written , is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.  One way to make the decision is by using a p-value inference p-value . The p-value is the probability, assuming is true, of getting a test statistic at least as extreme as the one observed.  The smaller the p-value, the stronger the evidence against . The decision rule is simple:   If the p-value is less than , reject .  If the p-value is at least , fail to reject .   Notice the wording. We say fail to reject , not “accept .” A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.   Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says “less than,” this is a left-tailed test.    Hypothesis Claim Match-Up   Translate informal claims into null and alternative hypotheses, then identify the tail of the test.     A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write and , and say whether the test is left-tailed, right-tailed, or two-tailed.      A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write and , and identify the tail type.      A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.      P-Value Verdict   Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.     At significance level , decide what to do with p-values 0.12, 0.03, and 0.001.      For each p-value, explain in one sentence what the decision means in plain language.      Which result gives the strongest evidence against the null hypothesis?     "
 },
 {
   "id": "sec-hypothesis-tests-basics-4-1-1",
@@ -3382,14 +3607,50 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.3",
   "title": "One-Sample Tests for a Mean",
-  "body": " One-Sample Tests for a Mean  For a one-sample test of a mean, the test statistic depends on the setting:   Use a z-test when the population standard deviation is known, or when the sample is large enough that using in its place is reasonable.  Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.    A Left-Tailed Test for Battery Life  A sample of 50 batteries has mean lifetime hours and sample standard deviation hours. Test   at significance level .  Because the sample is large, we use the z statistic   The p-value is   Since , we reject . At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.    A Two-Tailed T-Test  Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean and sample standard deviation . We test   at the 5% significance level.  Because the sample is small and is unknown, we use a t-test with :   For a two-tailed test with and , the critical values are about . Since falls beyond the left critical value, we reject . The data suggest that the true mean estimate differs from 2.5 feet.   Whether we use a critical-value method or a p-value method, the logic is the same: a test statistic far from what predicts counts as evidence against .   Run the Test   Carry out a one-sample mean test from start to finish.     A sample of 64 students has mean study time minutes. Assume the population standard deviation is known to be 8 minutes. Test against .      Compute the test statistic and p-value.      At , decide whether to reject and write the conclusion in context.      Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.     "
+  "body": " One-Sample Tests for a Mean  For a one-sample test of a mean, the test statistic depends on the setting:   Use a z-test when the population standard deviation is known, or when the sample is large enough that using in its place is reasonable.  Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.   To see why the decision rule makes sense, it helps to focus on one concrete case first: a right-tailed z-test. Suppose we want to test   Assume the population standard deviation is known, so the test statistic is   If is true, then the sample mean is centered at , so   That tells us what ordinary sampling variation looks like when the null hypothesis is true. Values of near 0 are routine. Moderately positive values can happen by chance. But very large positive values are rare under .  This is why a right-tailed test rejects only for large positive statistics. If the alternative says , then evidence against should come from a sample mean that is unusually high, not from one that is low or merely a little above . The word “large” here means large relative to the null distribution, or in more practical language, many standard errors above .  At significance level , we agree in advance to reject only when the observed statistic lands in the most extreme right-tail area of the null distribution. That cutoff is the critical value inference critical value  , defined by   So the rejection rule for a right-tailed z-test is   This rule is sensible for two reasons. First, it rejects only when the sample mean is unusually large under . Second, if really is true, the probability of rejecting is exactly the chosen significance level . In other words, the rule controls the Type I error rate.   The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.      Why the Critical-Value and P-Value Rules Agree  Suppose a school wants to know whether the mean weekly study time is greater than 40 hours. Assume the population standard deviation is known to be 8 hours, and a random sample of students gives sample mean . We test   at significance level .  If is true, then   The observed test statistic is   Using the critical-value method, the right-tailed cutoff is . Since , the observed statistic lies in the rejection region shown in , so we reject .  Now look at the same decision through the p-value method. The p-value inference p-value is the probability, assuming is true, of getting a test statistic at least as large as the one observed:   This means that if the true mean really were 40, then a sample mean this high or higher would occur only about 2.28% of the time. Since , the sample is too unusual under , so we again reject .    The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.     explains why the p-value method says the same thing as the critical-value method. In a right-tailed z-test, if the observed statistic is , then   The farther to the right is, the smaller this tail area becomes. Therefore, for a right-tailed test,   So the two rules are really the same comparison written in two different ways:   The critical-value method compares the observed statistic with a cutoff chosen in advance.  The p-value method compares the observed tail area with the significance level .   Both methods ask the same question: if were true, would this sample result be so far out in the right tail that it should count as unusually strong evidence for ?   A Left-Tailed Test for Battery Life  A sample of 50 batteries has mean lifetime hours and sample standard deviation hours. Test   at significance level .  Because the sample is large, we use the z statistic   The p-value is   Since , we reject . At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.    A Two-Tailed T-Test  Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean and sample standard deviation . We test   at the 5% significance level.  Because the sample is small and is unknown, we use a t-test with :   For a two-tailed test with and , the critical values are about . Since falls beyond the left critical value, we reject . The data suggest that the true mean estimate differs from 2.5 feet.   Whether we use a critical-value method or a p-value method, the logic is always the same: compare the observed statistic with what the null hypothesis predicts, then decide whether the result is too extreme to be explained by ordinary sampling variation alone.   Consider a right-tailed z-test with significance level .   If the observed statistic is , is it in the rejection region?  Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.  What decision should be made about ?     Run the Test   Carry out a one-sample mean test from start to finish.     A sample of 64 students has mean study time minutes. Assume the population standard deviation is known to be 8 minutes. Test against .      Compute the test statistic and p-value.      At , decide whether to reject and write the conclusion in context.      Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.     "
+},
+{
+  "id": "sec-one-sample-mean-tests-12",
+  "level": "2",
+  "url": "sec-one-sample-mean-tests.html#sec-one-sample-mean-tests-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "critical value inference critical value "
+},
+{
+  "id": "fig-right-tailed-z-critical-region",
+  "level": "2",
+  "url": "sec-one-sample-mean-tests.html#fig-right-tailed-z-critical-region",
+  "type": "Figure",
+  "number": "11.3.1",
+  "title": "",
+  "body": " The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.    "
+},
+{
+  "id": "ex-right-tailed-z-test-logic",
+  "level": "2",
+  "url": "sec-one-sample-mean-tests.html#ex-right-tailed-z-test-logic",
+  "type": "Example",
+  "number": "11.3.2",
+  "title": "Why the Critical-Value and P-Value Rules Agree.",
+  "body": " Why the Critical-Value and P-Value Rules Agree  Suppose a school wants to know whether the mean weekly study time is greater than 40 hours. Assume the population standard deviation is known to be 8 hours, and a random sample of students gives sample mean . We test   at significance level .  If is true, then   The observed test statistic is   Using the critical-value method, the right-tailed cutoff is . Since , the observed statistic lies in the rejection region shown in , so we reject .  Now look at the same decision through the p-value method. The p-value inference p-value is the probability, assuming is true, of getting a test statistic at least as large as the one observed:   This means that if the true mean really were 40, then a sample mean this high or higher would occur only about 2.28% of the time. Since , the sample is too unusual under , so we again reject .  "
+},
+{
+  "id": "fig-right-tailed-z-pvalue",
+  "level": "2",
+  "url": "sec-one-sample-mean-tests.html#fig-right-tailed-z-pvalue",
+  "type": "Figure",
+  "number": "11.3.3",
+  "title": "",
+  "body": " The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.    "
 },
 {
   "id": "ex-battery-test",
   "level": "2",
   "url": "sec-one-sample-mean-tests.html#ex-battery-test",
   "type": "Example",
-  "number": "11.3.1",
+  "number": "11.3.4",
   "title": "A Left-Tailed Test for Battery Life.",
   "body": " A Left-Tailed Test for Battery Life  A sample of 50 batteries has mean lifetime hours and sample standard deviation hours. Test   at significance level .  Because the sample is large, we use the z statistic   The p-value is   Since , we reject . At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.  "
 },
@@ -3398,9 +3659,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-sample-mean-tests.html#ex-distance-t-test",
   "type": "Example",
-  "number": "11.3.2",
+  "number": "11.3.5",
   "title": "A Two-Tailed T-Test.",
   "body": " A Two-Tailed T-Test  Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean and sample standard deviation . We test   at the 5% significance level.  Because the sample is small and is unknown, we use a t-test with :   For a two-tailed test with and , the critical values are about . Since falls beyond the left critical value, we reject . The data suggest that the true mean estimate differs from 2.5 feet.  "
+},
+{
+  "id": "ht-inline-ex-2",
+  "level": "2",
+  "url": "sec-one-sample-mean-tests.html#ht-inline-ex-2",
+  "type": "Checkpoint",
+  "number": "11.3.6",
+  "title": "",
+  "body": " Consider a right-tailed z-test with significance level .   If the observed statistic is , is it in the rejection region?  Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.  What decision should be made about ?   "
 },
 {
   "id": "act-ch11-run-the-test",
@@ -3421,20 +3691,146 @@ var ptx_lunr_docs = [
   "body": " Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.    "
 },
 {
+  "id": "sec-one-proportion-tests",
+  "level": "1",
+  "url": "sec-one-proportion-tests.html",
+  "type": "Section",
+  "number": "11.4",
+  "title": "Tests for a Population Proportion",
+  "body": " Tests for a Population Proportion  This section is the testing counterpart to . The setup is the same: each observation is a success or failure, the population proportion of success is , and the sample proportion is .  The normal model behind proportion tests comes from . If , then for large enough , the count is approximately normal. Dividing by gives an approximate normal model for .  To test a claim about a population proportion, we begin with hypotheses such as   Under the null hypothesis, the sample proportion is approximately normal with mean and standard deviation   provided the expected counts under are both at least about 5:   That leads to the one-proportion z-test inference one-proportion z-test statistic   This looks a lot like the z-interval from , but there is an important difference. In a confidence interval, the unknown proportion is replaced by in the standard error. In a hypothesis test, the null hypothesis tells us exactly which value to use, so the standard error is built from .  Once the z statistic is computed, the rest is familiar:   For , use the left-tail p-value .  For , use the right-tail p-value .  For , use the two-tail p-value .   As before, reject when the p-value is less than the chosen significance level .   Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.    Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.   The connection with confidence intervals is worth noticing. If a hypothesized value sits far outside a confidence interval for , then it is also likely to be rejected by a hypothesis test at a matching significance level. So intervals and tests are two ways of looking at the same sample evidence.   A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.     Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
+},
+{
+  "id": "sec-one-proportion-tests-10",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#sec-one-proportion-tests-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "one-proportion z-test inference one-proportion z-test "
+},
+{
+  "id": "ex-one-proportion-defect-test",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#ex-one-proportion-defect-test",
+  "type": "Example",
+  "number": "11.4.1",
+  "title": "Testing a Claimed Defect Rate.",
+  "body": " Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.  "
+},
+{
+  "id": "ex-one-proportion-campus-plan",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#ex-one-proportion-campus-plan",
+  "type": "Example",
+  "number": "11.4.2",
+  "title": "Testing a Claimed Support Level.",
+  "body": " Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.  "
+},
+{
+  "id": "ht-inline-ex-3",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#ht-inline-ex-3",
+  "type": "Checkpoint",
+  "number": "11.4.3",
+  "title": "",
+  "body": " A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.   "
+},
+{
+  "id": "act-ch11-proportion-test-builder",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#act-ch11-proportion-test-builder",
+  "type": "Activity",
+  "number": "11.4.1",
+  "title": "Run a Proportion Test.",
+  "body": " Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.    "
+},
+{
+  "id": "act-ch11-test-and-interval-link",
+  "level": "2",
+  "url": "sec-one-proportion-tests.html#act-ch11-test-and-interval-link",
+  "type": "Activity",
+  "number": "11.4.2",
+  "title": "Connect the Test and the Interval.",
+  "body": " Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
+},
+{
+  "id": "sec-one-variance-tests",
+  "level": "1",
+  "url": "sec-one-variance-tests.html",
+  "type": "Section",
+  "number": "11.5",
+  "title": "Tests for a Population Variance and Standard Deviation",
+  "body": " Tests for a Population Variance and Standard Deviation  Tests for Variance and Standard Deviation  This section is the testing counterpart to . The goal is to decide whether the sample spread gives enough evidence against a claimed value of the population variance or the population standard deviation .  If a claim is written in terms of standard deviation, we can square both sides and test variance instead. So   The alternative can again be left-tailed, right-tailed, or two-tailed:   These tests require careful assumptions.   The data should come from a random sample or a similarly independent process.  The observations should be independent.  The population should be normal. This is the crucial assumption.   That last condition matters much more here than it does for tests about a mean. A large sample by itself does not justify the chi-square test for variance. The method depends on the population distribution being normal, not just on the sample size being large.  From , if is true and the population is normal, then   This gives the chi-square test for a population variance inference chi-square test for variance . The interpretation is straightforward:   If the sample variance is much larger than the null value , then the observed chi-square statistic will be large.  If the sample variance is much smaller than the null value , then the observed chi-square statistic will be small.   So the tail of the test matches the direction of the alternative.  Let when is true, and let be the observed test statistic.   For , use the right-tail p-value .  For , use the left-tail p-value .  For , reject at significance level when or . Because the chi-square distribution is not symmetric, technology is often the easiest way to find a two-sided p-value.    Testing Whether Delivery Times Have Become More Variable  Suppose delivery times on a short route are well modeled by a normal distribution. A company claims the population standard deviation is 2 minutes. A random sample of 16 deliveries gives sample standard deviation minutes. Test at the 5% significance level whether the true standard deviation is greater than 2 minutes.  Let be the population standard deviation of delivery times. Then   Equivalently, we are testing against . Because the population is assumed normal, we use the chi-square statistic with :   If is true, then . Since this is a right-tailed test, the p-value is   Because , we reject . The sample gives strong evidence that delivery times vary more than the claimed 2 minutes.    Testing Whether a Machine's Variation Has Changed  Assume bottle fill amounts are normally distributed. A machine is supposed to have population standard deviation 1.2 ounces. A random sample of 12 bottles gives sample standard deviation ounces. Test at the 5% significance level whether the standard deviation differs from 1.2 ounces.  We test   Equivalently, and . The test statistic has :   For a two-tailed test with and , the rejection region is   From ,   Since , the observed statistic falls in the rejection region, so we reject . The data suggest that the machine's standard deviation differs from 1.2 ounces, and in fact it appears to be larger.   The connection with confidence intervals is the same as before. If a claimed value of or falls outside the matching confidence interval from , then that claim is also likely to be rejected by a hypothesis test at the corresponding significance level.   Assume a normal population. A random sample of size 12 has sample standard deviation . Test against at the 10% significance level.   Find the degrees of freedom.  Compute the chi-square test statistic.  Find the p-value and state the conclusion.     Run a Variance Test   Carry out a chi-square test for a population standard deviation from start to finish.     Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation millimeters. Test against .      Find the degrees of freedom, compute the chi-square statistic, and find the p-value.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare a chi-square test for spread with the matching confidence interval.     Return to the bottle-fill sample with and . Use the method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
+},
+{
+  "id": "sec-one-variance-tests-13",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#sec-one-variance-tests-13",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "chi-square test for a population variance inference chi-square test for variance "
+},
+{
+  "id": "ex-variance-test-deliveries",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#ex-variance-test-deliveries",
+  "type": "Example",
+  "number": "11.5.1",
+  "title": "Testing Whether Delivery Times Have Become More Variable.",
+  "body": " Testing Whether Delivery Times Have Become More Variable  Suppose delivery times on a short route are well modeled by a normal distribution. A company claims the population standard deviation is 2 minutes. A random sample of 16 deliveries gives sample standard deviation minutes. Test at the 5% significance level whether the true standard deviation is greater than 2 minutes.  Let be the population standard deviation of delivery times. Then   Equivalently, we are testing against . Because the population is assumed normal, we use the chi-square statistic with :   If is true, then . Since this is a right-tailed test, the p-value is   Because , we reject . The sample gives strong evidence that delivery times vary more than the claimed 2 minutes.  "
+},
+{
+  "id": "ex-variance-test-bottles",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#ex-variance-test-bottles",
+  "type": "Example",
+  "number": "11.5.2",
+  "title": "Testing Whether a Machine’s Variation Has Changed.",
+  "body": " Testing Whether a Machine's Variation Has Changed  Assume bottle fill amounts are normally distributed. A machine is supposed to have population standard deviation 1.2 ounces. A random sample of 12 bottles gives sample standard deviation ounces. Test at the 5% significance level whether the standard deviation differs from 1.2 ounces.  We test   Equivalently, and . The test statistic has :   For a two-tailed test with and , the rejection region is   From ,   Since , the observed statistic falls in the rejection region, so we reject . The data suggest that the machine's standard deviation differs from 1.2 ounces, and in fact it appears to be larger.  "
+},
+{
+  "id": "ht-inline-ex-4",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#ht-inline-ex-4",
+  "type": "Checkpoint",
+  "number": "11.5.3",
+  "title": "",
+  "body": " Assume a normal population. A random sample of size 12 has sample standard deviation . Test against at the 10% significance level.   Find the degrees of freedom.  Compute the chi-square test statistic.  Find the p-value and state the conclusion.   "
+},
+{
+  "id": "act-ch11-variance-test-builder",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#act-ch11-variance-test-builder",
+  "type": "Activity",
+  "number": "11.5.1",
+  "title": "Run a Variance Test.",
+  "body": " Run a Variance Test   Carry out a chi-square test for a population standard deviation from start to finish.     Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation millimeters. Test against .      Find the degrees of freedom, compute the chi-square statistic, and find the p-value.      At , decide whether to reject and write the conclusion in context.    "
+},
+{
+  "id": "act-ch11-variance-test-interval-link",
+  "level": "2",
+  "url": "sec-one-variance-tests.html#act-ch11-variance-test-interval-link",
+  "type": "Activity",
+  "number": "11.5.2",
+  "title": "Connect the Test and the Interval.",
+  "body": " Connect the Test and the Interval   Compare a chi-square test for spread with the matching confidence interval.     Return to the bottle-fill sample with and . Use the method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
+},
+{
   "id": "ch11-exercises",
   "level": "1",
   "url": "ch11-exercises.html",
   "type": "Exercises",
-  "number": "11.4",
+  "number": "11.6",
   "title": "Exercises",
-  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is “fail to reject ” a better phrase than “accept ”?   "
+  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is “fail to reject ” a better phrase than “accept ”?    Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .     A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.     A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?     Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.    Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.     Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.     State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?    "
 },
 {
   "id": "ch11-ex-1",
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-1",
   "type": "Exercise",
-  "number": "11.4.1",
+  "number": "11.6.1",
   "title": "",
   "body": " For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,   "
 },
@@ -3443,7 +3839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-2",
   "type": "Exercise",
-  "number": "11.4.2",
+  "number": "11.6.2",
   "title": "",
   "body": " A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?   "
 },
@@ -3452,7 +3848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-3",
   "type": "Exercise",
-  "number": "11.4.3",
+  "number": "11.6.3",
   "title": "",
   "body": " A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?   "
 },
@@ -3461,9 +3857,72 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-4",
   "type": "Exercise",
-  "number": "11.4.4",
+  "number": "11.6.4",
   "title": "",
   "body": " Why is “fail to reject ” a better phrase than “accept ”?  "
+},
+{
+  "id": "ch11-ex-5",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-5",
+  "type": "Exercise",
+  "number": "11.6.5",
+  "title": "",
+  "body": " Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .   "
+},
+{
+  "id": "ch11-ex-6",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-6",
+  "type": "Exercise",
+  "number": "11.6.6",
+  "title": "",
+  "body": " A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.   "
+},
+{
+  "id": "ch11-ex-7",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-7",
+  "type": "Exercise",
+  "number": "11.6.7",
+  "title": "",
+  "body": " A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?   "
+},
+{
+  "id": "ch11-ex-8",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-8",
+  "type": "Exercise",
+  "number": "11.6.8",
+  "title": "",
+  "body": " Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.  "
+},
+{
+  "id": "ch11-ex-9",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-9",
+  "type": "Exercise",
+  "number": "11.6.9",
+  "title": "",
+  "body": " Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.   "
+},
+{
+  "id": "ch11-ex-10",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-10",
+  "type": "Exercise",
+  "number": "11.6.10",
+  "title": "",
+  "body": " Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.   "
+},
+{
+  "id": "ch11-ex-11",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-11",
+  "type": "Exercise",
+  "number": "11.6.11",
+  "title": "",
+  "body": " State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?   "
 },
 {
   "id": "backmatter-2",
@@ -3679,7 +4138,7 @@ var ptx_lunr_docs = [
   "type": "Appendix",
   "number": "D",
   "title": "The Chi-Square Distribution",
-  "body": " The Chi-Square Distribution  This appendix gives right-tail critical values for the chi-square distribution appendices chi-square table . Each entry satisfies for the stated degrees of freedom.  The left-side columns are useful for lower-tail cutoffs, while the right-side columns are the ones most often used for hypothesis tests and confidence intervals.  To keep the print layout centered and readable, the columns are split into two related tables.   Columns for larger right-tail areas for the distribution    df         1  0.000  0.000  0.001  0.004  0.016    2  0.010  0.020  0.051  0.103  0.211    3  0.072  0.115  0.216  0.352  0.584    4  0.207  0.297  0.484  0.711  1.064    5  0.412  0.554  0.831  1.145  1.610    6  0.676  0.872  1.237  1.635  2.204    7  0.989  1.239  1.690  2.167  2.833    8  1.344  1.646  2.180  2.733  3.490    9  1.735  2.088  2.700  3.325  4.168    10  2.156  2.558  3.247  3.940  4.865    11  2.603  3.053  3.816  4.575  5.578    12  3.074  3.571  4.404  5.226  6.304    13  3.565  4.107  5.009  5.892  7.042    14  4.075  4.660  5.629  6.571  7.790    15  4.601  5.229  6.262  7.261  8.547    16  5.142  5.812  6.908  7.962  9.312    17  5.697  6.408  7.564  8.672  10.085    18  6.265  7.015  8.231  9.390  10.865    19  6.844  7.633  8.907  10.117  11.651    20  7.434  8.260  9.591  10.851  12.443    21  8.034  8.897  10.283  11.591  13.240    22  8.643  9.542  10.982  12.338  14.041    23  9.260  10.196  11.689  13.091  14.848    24  9.886  10.856  12.401  13.848  15.659    25  10.520  11.524  13.120  14.611  16.473    26  11.160  12.198  13.844  15.379  17.292    27  11.808  12.879  14.573  16.151  18.114    28  12.461  13.565  15.308  16.928  18.939    29  13.121  14.256  16.047  17.708  19.768    30  13.787  14.953  16.791  18.493  20.599    40  20.707  22.164  24.433  26.509  29.051    60  35.534  37.485  40.482  43.188  46.459    80  51.172  53.540  57.153  60.391  64.278    100  67.328  70.065  74.222  77.929  82.358      Columns for smaller right-tail areas for the distribution    df         1  2.706  3.841  5.024  6.635  7.879    2  4.605  5.991  7.378  9.210  10.597    3  6.251  7.815  9.348  11.345  12.838    4  7.779  9.488  11.143  13.277  14.860    5  9.236  11.070  12.833  15.086  16.750    6  10.645  12.592  14.449  16.812  18.548    7  12.017  14.067  16.013  18.475  20.278    8  13.362  15.507  17.535  20.090  21.955    9  14.684  16.919  19.023  21.666  23.589    10  15.987  18.307  20.483  23.209  25.188    11  17.275  19.675  21.920  24.725  26.757    12  18.549  21.026  23.337  26.217  28.300    13  19.812  22.362  24.736  27.688  29.819    14  21.064  23.685  26.119  29.141  31.319    15  22.307  24.996  27.488  30.578  32.801    16  23.542  26.296  28.845  32.000  34.267    17  24.769  27.587  30.191  33.409  35.718    18  25.989  28.869  31.526  34.805  37.156    19  27.204  30.144  32.852  36.191  38.582    20  28.412  31.410  34.170  37.566  39.997    21  29.615  32.671  35.479  38.932  41.401    22  30.813  33.924  36.781  40.289  42.796    23  32.007  35.172  38.076  41.638  44.181    24  33.196  36.415  39.364  42.980  45.559    25  34.382  37.652  40.646  44.314  46.928    26  35.563  38.885  41.923  45.642  48.290    27  36.741  40.113  43.195  46.963  49.645    28  37.916  41.337  44.461  48.278  50.993    29  39.087  42.557  45.722  49.588  52.336    30  40.256  43.773  46.979  50.892  53.672    40  51.805  55.758  59.342  63.691  66.766    60  74.397  79.082  83.298  88.379  91.952    80  96.578  101.879  106.629  112.329  116.321    100  118.498  124.342  129.561  135.807  140.169     "
+  "body": " The Chi-Square Distribution  This appendix gives right-tail critical values for the chi-square distribution appendices chi-square table . Each entry satisfies for the stated degrees of freedom.  The left-side columns are useful for lower-tail cutoffs, while the right-side columns are the ones most often used for hypothesis tests and confidence intervals.  In this book, these values are used most directly for confidence intervals and hypothesis tests for a population variance or standard deviation from a normal population.  To keep the print layout centered and readable, the columns are split into two related tables.   Columns for larger right-tail areas for the distribution    df         1  0.000  0.000  0.001  0.004  0.016    2  0.010  0.020  0.051  0.103  0.211    3  0.072  0.115  0.216  0.352  0.584    4  0.207  0.297  0.484  0.711  1.064    5  0.412  0.554  0.831  1.145  1.610    6  0.676  0.872  1.237  1.635  2.204    7  0.989  1.239  1.690  2.167  2.833    8  1.344  1.646  2.180  2.733  3.490    9  1.735  2.088  2.700  3.325  4.168    10  2.156  2.558  3.247  3.940  4.865    11  2.603  3.053  3.816  4.575  5.578    12  3.074  3.571  4.404  5.226  6.304    13  3.565  4.107  5.009  5.892  7.042    14  4.075  4.660  5.629  6.571  7.790    15  4.601  5.229  6.262  7.261  8.547    16  5.142  5.812  6.908  7.962  9.312    17  5.697  6.408  7.564  8.672  10.085    18  6.265  7.015  8.231  9.390  10.865    19  6.844  7.633  8.907  10.117  11.651    20  7.434  8.260  9.591  10.851  12.443    21  8.034  8.897  10.283  11.591  13.240    22  8.643  9.542  10.982  12.338  14.041    23  9.260  10.196  11.689  13.091  14.848    24  9.886  10.856  12.401  13.848  15.659    25  10.520  11.524  13.120  14.611  16.473    26  11.160  12.198  13.844  15.379  17.292    27  11.808  12.879  14.573  16.151  18.114    28  12.461  13.565  15.308  16.928  18.939    29  13.121  14.256  16.047  17.708  19.768    30  13.787  14.953  16.791  18.493  20.599    40  20.707  22.164  24.433  26.509  29.051    60  35.534  37.485  40.482  43.188  46.459    80  51.172  53.540  57.153  60.391  64.278    100  67.328  70.065  74.222  77.929  82.358      Columns for smaller right-tail areas for the distribution    df         1  2.706  3.841  5.024  6.635  7.879    2  4.605  5.991  7.378  9.210  10.597    3  6.251  7.815  9.348  11.345  12.838    4  7.779  9.488  11.143  13.277  14.860    5  9.236  11.070  12.833  15.086  16.750    6  10.645  12.592  14.449  16.812  18.548    7  12.017  14.067  16.013  18.475  20.278    8  13.362  15.507  17.535  20.090  21.955    9  14.684  16.919  19.023  21.666  23.589    10  15.987  18.307  20.483  23.209  25.188    11  17.275  19.675  21.920  24.725  26.757    12  18.549  21.026  23.337  26.217  28.300    13  19.812  22.362  24.736  27.688  29.819    14  21.064  23.685  26.119  29.141  31.319    15  22.307  24.996  27.488  30.578  32.801    16  23.542  26.296  28.845  32.000  34.267    17  24.769  27.587  30.191  33.409  35.718    18  25.989  28.869  31.526  34.805  37.156    19  27.204  30.144  32.852  36.191  38.582    20  28.412  31.410  34.170  37.566  39.997    21  29.615  32.671  35.479  38.932  41.401    22  30.813  33.924  36.781  40.289  42.796    23  32.007  35.172  38.076  41.638  44.181    24  33.196  36.415  39.364  42.980  45.559    25  34.382  37.652  40.646  44.314  46.928    26  35.563  38.885  41.923  45.642  48.290    27  36.741  40.113  43.195  46.963  49.645    28  37.916  41.337  44.461  48.278  50.993    29  39.087  42.557  45.722  49.588  52.336    30  40.256  43.773  46.979  50.892  53.672    40  51.805  55.758  59.342  63.691  66.766    60  74.397  79.082  83.298  88.379  91.952    80  96.578  101.879  106.629  112.329  116.321    100  118.498  124.342  129.561  135.807  140.169     "
 },
 {
   "id": "app-chi-square-table-2",

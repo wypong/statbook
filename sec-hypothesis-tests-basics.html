@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-hypothesis-tests-basics"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-hypothesis-tests-basics">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Null Hypotheses and P-Values</span>
 </h2>
 <div class="para" id="sec-hypothesis-tests-basics-3">A hypothesis test begins with two competing statements.<div class="autopermalink" data-description="Paragraph"><a href="#sec-hypothesis-tests-basics-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -316,7 +322,7 @@ H_a:\mu\ne\mu_0.
 </div>
 <div class="para" id="sec-hypothesis-tests-basics-9">These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.<div class="autopermalink" data-description="Paragraph"><a href="#sec-hypothesis-tests-basics-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-hypothesis-tests-basics-10">The next ingredient is the <dfn class="terminology">test statistic</dfn>, a standardized number that measures how far the sample result is from the null value. For one-sample tests of a mean, we use<div class="autopermalink" data-description="Paragraph"><a href="#sec-hypothesis-tests-basics-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-hypothesis-tests-basics-10">The next ingredient is the <dfn class="terminology">test statistic</dfn>, a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use<div class="autopermalink" data-description="Paragraph"><a href="#sec-hypothesis-tests-basics-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="sec-hypothesis-tests-basics-11">
 \begin{equation*}
@@ -349,7 +355,9 @@ t=\frac{\overline{x}-\mu_0}{s/\sqrt{n}},
 </div>
 <details id="ex-battery-setup" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Setting Up a Test.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-battery-setup-2">A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are<div class="autopermalink" data-description="Paragraph"><a href="#ex-battery-setup-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-battery-setup-2">A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are<div class="autopermalink" data-description="Paragraph"><a href="#ex-battery-setup-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-battery-setup-3">
 \begin{equation*}
@@ -360,35 +368,56 @@ H_a:\mu&lt;22.
 </div>
 <div class="para" id="ex-battery-setup-4">Because the alternative says “less than,” this is a left-tailed test.<div class="autopermalink" data-description="Paragraph"><a href="#ex-battery-setup-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 11.1.1: Setting Up a Test"><a href="#ex-battery-setup" title="Copy heading and permalink for Example 11.1.1: Setting Up a Test" aria-label="Copy heading and permalink for Example 11.1.1: Setting Up a Test">🔗</a></div></article></details><article class="activity project-like" id="act-ch11-hypothesis-claims"><h3 class="heading">
+<div class="autopermalink" data-description="Example 11.1.1: Setting Up a Test"><a href="#ex-battery-setup" title="Copy heading and permalink for Example 11.1.1: Setting Up a Test" aria-label="Copy heading and permalink for Example 11.1.1: Setting Up a Test">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-ch11-hypothesis-claims"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hypothesis Claim Match-Up.</span>
 </h3>
-<div class="introduction" id="act-ch11-hypothesis-claims-2"><div class="para" id="act-ch11-hypothesis-claims-2-1">Translate informal claims into null and alternative hypotheses, then identify the tail of the test.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-hypothesis-claims-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch11-hypothesis-claims-2">
+<div class="para" id="act-ch11-hypothesis-claims-2-1">Translate informal claims into null and alternative hypotheses, then identify the tail of the test.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-hypothesis-claims-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch11-hypothesis-claims-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-hypothesis-claims-3-1-1">A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write <span class="process-math">\(H_0\)</span> and <span class="process-math">\(H_a\text{,}\)</span> and say whether the test is left-tailed, right-tailed, or two-tailed.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-hypothesis-claims-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.1.a"><a href="#act-ch11-hypothesis-claims-3" title="Copy heading and permalink for Task 11.1.1.a" aria-label="Copy heading and permalink for Task 11.1.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch11-hypothesis-claims-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 11.1.1.a"><a href="#act-ch11-hypothesis-claims-3" title="Copy heading and permalink for Task 11.1.1.a" aria-label="Copy heading and permalink for Task 11.1.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-hypothesis-claims-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-hypothesis-claims-4-1-1">A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write <span class="process-math">\(H_0\)</span> and <span class="process-math">\(H_a\text{,}\)</span> and identify the tail type.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-hypothesis-claims-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.1.b"><a href="#act-ch11-hypothesis-claims-4" title="Copy heading and permalink for Task 11.1.1.b" aria-label="Copy heading and permalink for Task 11.1.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch11-hypothesis-claims-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 11.1.1.b"><a href="#act-ch11-hypothesis-claims-4" title="Copy heading and permalink for Task 11.1.1.b" aria-label="Copy heading and permalink for Task 11.1.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-hypothesis-claims-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch11-hypothesis-claims-5-1-1">A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-hypothesis-claims-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.1.c"><a href="#act-ch11-hypothesis-claims-5" title="Copy heading and permalink for Task 11.1.1.c" aria-label="Copy heading and permalink for Task 11.1.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 11.1.1: Hypothesis Claim Match-Up"><a href="#act-ch11-hypothesis-claims" title="Copy heading and permalink for Activity 11.1.1: Hypothesis Claim Match-Up" aria-label="Copy heading and permalink for Activity 11.1.1: Hypothesis Claim Match-Up">🔗</a></div></article><article class="activity project-like" id="act-ch11-pvalue-verdict"><h3 class="heading">
+<div class="autopermalink" data-description="Task 11.1.1.c"><a href="#act-ch11-hypothesis-claims-5" title="Copy heading and permalink for Task 11.1.1.c" aria-label="Copy heading and permalink for Task 11.1.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 11.1.1: Hypothesis Claim Match-Up"><a href="#act-ch11-hypothesis-claims" title="Copy heading and permalink for Activity 11.1.1: Hypothesis Claim Match-Up" aria-label="Copy heading and permalink for Activity 11.1.1: Hypothesis Claim Match-Up">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch11-pvalue-verdict"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">P-Value Verdict.</span>
 </h3>
-<div class="introduction" id="act-ch11-pvalue-verdict-2"><div class="para" id="act-ch11-pvalue-verdict-2-1">Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-pvalue-verdict-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch11-pvalue-verdict-2">
+<div class="para" id="act-ch11-pvalue-verdict-2-1">Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-pvalue-verdict-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch11-pvalue-verdict-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-pvalue-verdict-3-1-1">At significance level <span class="process-math">\(\alpha=0.05\text{,}\)</span> decide what to do with p-values 0.12, 0.03, and 0.001.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-pvalue-verdict-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.2.a"><a href="#act-ch11-pvalue-verdict-3" title="Copy heading and permalink for Task 11.1.2.a" aria-label="Copy heading and permalink for Task 11.1.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch11-pvalue-verdict-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 11.1.2.a"><a href="#act-ch11-pvalue-verdict-3" title="Copy heading and permalink for Task 11.1.2.a" aria-label="Copy heading and permalink for Task 11.1.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-pvalue-verdict-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-pvalue-verdict-4-1-1">For each p-value, explain in one sentence what the decision means in plain language.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-pvalue-verdict-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.2.b"><a href="#act-ch11-pvalue-verdict-4" title="Copy heading and permalink for Task 11.1.2.b" aria-label="Copy heading and permalink for Task 11.1.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch11-pvalue-verdict-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 11.1.2.b"><a href="#act-ch11-pvalue-verdict-4" title="Copy heading and permalink for Task 11.1.2.b" aria-label="Copy heading and permalink for Task 11.1.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-pvalue-verdict-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch11-pvalue-verdict-5-1-1">Which result gives the strongest evidence against the null hypothesis?<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-pvalue-verdict-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.1.2.c"><a href="#act-ch11-pvalue-verdict-5" title="Copy heading and permalink for Task 11.1.2.c" aria-label="Copy heading and permalink for Task 11.1.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 11.1.2: P-Value Verdict"><a href="#act-ch11-pvalue-verdict" title="Copy heading and permalink for Activity 11.1.2: P-Value Verdict" aria-label="Copy heading and permalink for Activity 11.1.2: P-Value Verdict">🔗</a></div></article><div class="autopermalink" data-description="Section 11.1: Null Hypotheses and P-Values"><a href="#sec-hypothesis-tests-basics" title="Copy heading and permalink for Section 11.1: Null Hypotheses and P-Values" aria-label="Copy heading and permalink for Section 11.1: Null Hypotheses and P-Values">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 11.1.2.c"><a href="#act-ch11-pvalue-verdict-5" title="Copy heading and permalink for Task 11.1.2.c" aria-label="Copy heading and permalink for Task 11.1.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 11.1.2: P-Value Verdict"><a href="#act-ch11-pvalue-verdict" title="Copy heading and permalink for Activity 11.1.2: P-Value Verdict" aria-label="Copy heading and permalink for Activity 11.1.2: P-Value Verdict">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 11.1: Null Hypotheses and P-Values"><a href="#sec-hypothesis-tests-basics" title="Copy heading and permalink for Section 11.1: Null Hypotheses and P-Values" aria-label="Copy heading and permalink for Section 11.1: Null Hypotheses and P-Values">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-hypothesis-testing.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-type1-type2-errors.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

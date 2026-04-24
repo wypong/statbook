@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-levels-of-measurement"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-levels-of-measurement">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Levels of Measurement</span>
 </h2>
 <div class="para" id="sec-levels-of-measurement-2">The four traditional <dfn class="terminology">levels of measurement</dfn> are nominal, ordinal, interval, and ratio. These levels tell us not only whether the data is categorical or numerical, but also how much information the values carry.<div class="autopermalink" data-description="Paragraph"><a href="#sec-levels-of-measurement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -316,31 +322,53 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-levels-of-measurement" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Temperature and Length.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-levels-of-measurement-2">Temperature measured in Celsius is interval data. The difference between 10 degrees and 20 degrees is the same size as the difference between 20 degrees and 30 degrees, but 20 degrees Celsius is not twice as hot as 10 degrees Celsius because zero does not mean the complete absence of temperature. By contrast, length is ratio data: 10 feet really is twice as long as 5 feet, and 0 feet means no length at all.<div class="autopermalink" data-description="Paragraph"><a href="#ex-levels-of-measurement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-levels-of-measurement-2">Temperature measured in Celsius is interval data. The difference between 10 degrees and 20 degrees is the same size as the difference between 20 degrees and 30 degrees, but 20 degrees Celsius is not twice as hot as 10 degrees Celsius because zero does not mean the complete absence of temperature. By contrast, length is ratio data: 10 feet really is twice as long as 5 feet, and 0 feet means no length at all.<div class="autopermalink" data-description="Paragraph"><a href="#ex-levels-of-measurement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.2.1: Comparing Temperature and Length"><a href="#ex-levels-of-measurement" title="Copy heading and permalink for Example 1.2.1: Comparing Temperature and Length" aria-label="Copy heading and permalink for Example 1.2.1: Comparing Temperature and Length">🔗</a></div></article></details><details id="ex-levels-class-data" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Example 1.2.1: Comparing Temperature and Length"><a href="#ex-levels-of-measurement" title="Copy heading and permalink for Example 1.2.1: Comparing Temperature and Length" aria-label="Copy heading and permalink for Example 1.2.1: Comparing Temperature and Length">🔗</a></div>
+</article></details>
+<details id="ex-levels-class-data" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Levels in the Class Data.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-levels-class-data-2">In the class data set from the previous section, first name, eye color, and whether a student wears glasses are nominal. Year in school is ordinal. Birth year is interval. Height, distance from school, number of siblings, and commute time are ratio. That mix is useful because it shows why the level of measurement matters before we choose a summary or graph.<div class="autopermalink" data-description="Paragraph"><a href="#ex-levels-class-data-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-levels-class-data-2">In the class data set from the previous section, first name, eye color, and whether a student wears glasses are nominal. Year in school is ordinal. Birth year is interval. Height, distance from school, number of siblings, and commute time are ratio. That mix is useful because it shows why the level of measurement matters before we choose a summary or graph.<div class="autopermalink" data-description="Paragraph"><a href="#ex-levels-class-data-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.2.2: Levels in the Class Data"><a href="#ex-levels-class-data" title="Copy heading and permalink for Example 1.2.2: Levels in the Class Data" aria-label="Copy heading and permalink for Example 1.2.2: Levels in the Class Data">🔗</a></div></article></details><article class="activity project-like" id="act-levels-class-data"><h3 class="heading">
+<div class="autopermalink" data-description="Example 1.2.2: Levels in the Class Data"><a href="#ex-levels-class-data" title="Copy heading and permalink for Example 1.2.2: Levels in the Class Data" aria-label="Copy heading and permalink for Example 1.2.2: Levels in the Class Data">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-levels-class-data"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Classifying Levels of Measurement.</span>
 </h3>
-<div class="introduction" id="act-levels-class-data-2"><div class="para" id="act-levels-class-data-2-1">Return to the class data set you collected earlier. Now classify each variable by its level of measurement.<div class="autopermalink" data-description="Paragraph"><a href="#act-levels-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-levels-class-data-2">
+<div class="para" id="act-levels-class-data-2-1">Return to the class data set you collected earlier. Now classify each variable by its level of measurement.<div class="autopermalink" data-description="Paragraph"><a href="#act-levels-class-data-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-levels-class-data-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-levels-class-data-3-1-1">Label each variable as nominal, ordinal, interval, or ratio.<div class="autopermalink" data-description="Paragraph"><a href="#act-levels-class-data-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 1.2.1.a"><a href="#act-levels-class-data-3" title="Copy heading and permalink for Task 1.2.1.a" aria-label="Copy heading and permalink for Task 1.2.1.a">🔗</a></div></article><article class="task exercise-like" id="act-levels-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 1.2.1.a"><a href="#act-levels-class-data-3" title="Copy heading and permalink for Task 1.2.1.a" aria-label="Copy heading and permalink for Task 1.2.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-levels-class-data-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-levels-class-data-4-1-1">For each one, explain briefly why that level fits. Ask whether the variable is only a label, whether order matters, whether differences matter, or whether zero means none of the quantity.<div class="autopermalink" data-description="Paragraph"><a href="#act-levels-class-data-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 1.2.1.b"><a href="#act-levels-class-data-4" title="Copy heading and permalink for Task 1.2.1.b" aria-label="Copy heading and permalink for Task 1.2.1.b">🔗</a></div></article><article class="task exercise-like" id="act-levels-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 1.2.1.b"><a href="#act-levels-class-data-4" title="Copy heading and permalink for Task 1.2.1.b" aria-label="Copy heading and permalink for Task 1.2.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-levels-class-data-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-levels-class-data-5-1-1">Check that your data set includes examples of all four levels of measurement. If one level is missing, add another variable that fills the gap.<div class="autopermalink" data-description="Paragraph"><a href="#act-levels-class-data-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 1.2.1.c"><a href="#act-levels-class-data-5" title="Copy heading and permalink for Task 1.2.1.c" aria-label="Copy heading and permalink for Task 1.2.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.2.1: Classifying Levels of Measurement"><a href="#act-levels-class-data" title="Copy heading and permalink for Activity 1.2.1: Classifying Levels of Measurement" aria-label="Copy heading and permalink for Activity 1.2.1: Classifying Levels of Measurement">🔗</a></div></article><details id="cp-levels-of-measurement" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Task 1.2.1.c"><a href="#act-levels-class-data-5" title="Copy heading and permalink for Task 1.2.1.c" aria-label="Copy heading and permalink for Task 1.2.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 1.2.1: Classifying Levels of Measurement"><a href="#act-levels-class-data" title="Copy heading and permalink for Activity 1.2.1: Classifying Levels of Measurement" aria-label="Copy heading and permalink for Activity 1.2.1: Classifying Levels of Measurement">🔗</a></div>
+</article>
+<details id="cp-levels-of-measurement" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Checkpoint.</span>
-</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="cp-levels-of-measurement-2">Identify the level of measurement for each variable: jersey number, finishing place in a race, temperature in Fahrenheit, and monthly rent in dollars.<div class="autopermalink" data-description="Paragraph"><a href="#cp-levels-of-measurement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="cp-levels-of-measurement-2">Identify the level of measurement for each variable: jersey number, finishing place in a race, temperature in Fahrenheit, and monthly rent in dollars.<div class="autopermalink" data-description="Paragraph"><a href="#cp-levels-of-measurement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 1.2.3: Checkpoint"><a href="#cp-levels-of-measurement" title="Copy heading and permalink for Checkpoint 1.2.3: Checkpoint" aria-label="Copy heading and permalink for Checkpoint 1.2.3: Checkpoint">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.2: Levels of Measurement"><a href="#sec-levels-of-measurement" title="Copy heading and permalink for Section 1.2: Levels of Measurement" aria-label="Copy heading and permalink for Section 1.2: Levels of Measurement">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.3: Checkpoint"><a href="#cp-levels-of-measurement" title="Copy heading and permalink for Checkpoint 1.2.3: Checkpoint" aria-label="Copy heading and permalink for Checkpoint 1.2.3: Checkpoint">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Section 1.2: Levels of Measurement"><a href="#sec-levels-of-measurement" title="Copy heading and permalink for Section 1.2: Levels of Measurement" aria-label="Copy heading and permalink for Section 1.2: Levels of Measurement">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-classifying-data.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-organizing-data.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

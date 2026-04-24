@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-regression-line"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-regression-line">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Regression Lines and Prediction</span>
 </h2>
 <div class="para" id="sec-regression-line-2">A <dfn class="terminology">linear relation</dfn> has the form<div class="autopermalink" data-description="Paragraph"><a href="#sec-regression-line-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -303,9 +309,13 @@ y=ax+b,
 <div class="para" id="sec-regression-line-7">Here <span class="process-math">\(\hat{y}\)</span> is the predicted value of <span class="process-math">\(y\)</span> for a given value of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-regression-line-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-study-hours-regression"><div class="image-box" style="width: 76%; margin-left: 12%; margin-right: 12%;"><img src="generated/latex-image/fig-study-hours-regression-2.svg" role="img" class="contained" alt="A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the points.The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Scatterplot with a regression line<div class="autopermalink" data-description="Figure 5.2.1"><a href="#fig-study-hours-regression" title="Copy heading and permalink for Figure 5.2.1" aria-label="Copy heading and permalink for Figure 5.2.1">🔗</a></div></figcaption></figure><details id="ex-regression-prediction" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Scatterplot with a regression line<div class="autopermalink" data-description="Figure 5.2.1"><a href="#fig-study-hours-regression" title="Copy heading and permalink for Figure 5.2.1" aria-label="Copy heading and permalink for Figure 5.2.1">🔗</a></div></figcaption>
+</figure>
+<details id="ex-regression-prediction" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using a Regression Equation.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-regression-prediction-2">Suppose a regression line for study hours and exam score is<div class="autopermalink" data-description="Paragraph"><a href="#ex-regression-prediction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-regression-prediction-2">Suppose a regression line for study hours and exam score is<div class="autopermalink" data-description="Paragraph"><a href="#ex-regression-prediction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-regression-prediction-3">
 \begin{equation*}
@@ -321,7 +331,9 @@ y=ax+b,
 </div>
 <div class="para" id="ex-regression-prediction-6">So the model predicts a score of about 76.<div class="autopermalink" data-description="Paragraph"><a href="#ex-regression-prediction-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 5.2.2: Using a Regression Equation"><a href="#ex-regression-prediction" title="Copy heading and permalink for Example 5.2.2: Using a Regression Equation" aria-label="Copy heading and permalink for Example 5.2.2: Using a Regression Equation">🔗</a></div></article></details><div class="para" id="sec-regression-line-10">The slope tells us how much the predicted <span class="process-math">\(y\)</span> changes when <span class="process-math">\(x\)</span> increases by 1 unit. In the example above, the slope is 4.4, so the model predicts that each additional hour of study is associated with about 4.4 more exam points.<div class="autopermalink" data-description="Paragraph"><a href="#sec-regression-line-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 5.2.2: Using a Regression Equation"><a href="#ex-regression-prediction" title="Copy heading and permalink for Example 5.2.2: Using a Regression Equation" aria-label="Copy heading and permalink for Example 5.2.2: Using a Regression Equation">🔗</a></div>
+</article></details>
+<div class="para" id="sec-regression-line-10">The slope tells us how much the predicted <span class="process-math">\(y\)</span> changes when <span class="process-math">\(x\)</span> increases by 1 unit. In the example above, the slope is 4.4, so the model predicts that each additional hour of study is associated with about 4.4 more exam points.<div class="autopermalink" data-description="Paragraph"><a href="#sec-regression-line-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-regression-line-11">The sign of the slope matches the sign of the correlation coefficient <span class="process-math">\(r\text{.}\)</span> That is useful, but the two numbers are not the same. The slope measures change in the original units, while <span class="process-math">\(r\)</span> is a unit-free measure of linear strength and always stays between <span class="process-math">\(-1\)</span> and <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-regression-line-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -329,51 +341,83 @@ y=ax+b,
 </div>
 <details id="ex-extrapolation-warning" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpolation Versus Extrapolation.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-extrapolation-warning-2">If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.<div class="autopermalink" data-description="Paragraph"><a href="#ex-extrapolation-warning-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-extrapolation-warning-2">If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.<div class="autopermalink" data-description="Paragraph"><a href="#ex-extrapolation-warning-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 5.2.3: Interpolation Versus Extrapolation"><a href="#ex-extrapolation-warning" title="Copy heading and permalink for Example 5.2.3: Interpolation Versus Extrapolation" aria-label="Copy heading and permalink for Example 5.2.3: Interpolation Versus Extrapolation">🔗</a></div></article></details><article class="activity project-like" id="act-ch5-regression-prediction"><h3 class="heading">
+<div class="autopermalink" data-description="Example 5.2.3: Interpolation Versus Extrapolation"><a href="#ex-extrapolation-warning" title="Copy heading and permalink for Example 5.2.3: Interpolation Versus Extrapolation" aria-label="Copy heading and permalink for Example 5.2.3: Interpolation Versus Extrapolation">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-ch5-regression-prediction"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using a Regression Equation.</span>
 </h3>
-<div class="introduction" id="act-ch5-regression-prediction-2"><div class="para" id="act-ch5-regression-prediction-2-1">Practice using a regression equation to make predictions in context.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-regression-prediction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch5-regression-prediction-2">
+<div class="para" id="act-ch5-regression-prediction-2-1">Practice using a regression equation to make predictions in context.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-regression-prediction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch5-regression-prediction-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch5-regression-prediction-3-1-1">Suppose a regression line for study hours and exam score is <span class="process-math">\(\hat{y}=53.5+4.4x\text{.}\)</span> Find the predicted score for a student who studies for 4 hours.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-regression-prediction-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.1.a"><a href="#act-ch5-regression-prediction-3" title="Copy heading and permalink for Task 5.2.1.a" aria-label="Copy heading and permalink for Task 5.2.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch5-regression-prediction-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.1.a"><a href="#act-ch5-regression-prediction-3" title="Copy heading and permalink for Task 5.2.1.a" aria-label="Copy heading and permalink for Task 5.2.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-regression-prediction-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch5-regression-prediction-4-1-1">Use the same equation to predict the score for a student who studies for 7 hours.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-regression-prediction-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.1.b"><a href="#act-ch5-regression-prediction-4" title="Copy heading and permalink for Task 5.2.1.b" aria-label="Copy heading and permalink for Task 5.2.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch5-regression-prediction-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.1.b"><a href="#act-ch5-regression-prediction-4" title="Copy heading and permalink for Task 5.2.1.b" aria-label="Copy heading and permalink for Task 5.2.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-regression-prediction-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch5-regression-prediction-5-1-1">In one sentence, explain what the prediction means in the context of the data.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-regression-prediction-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.1.c"><a href="#act-ch5-regression-prediction-5" title="Copy heading and permalink for Task 5.2.1.c" aria-label="Copy heading and permalink for Task 5.2.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.2.1: Using a Regression Equation"><a href="#act-ch5-regression-prediction" title="Copy heading and permalink for Activity 5.2.1: Using a Regression Equation" aria-label="Copy heading and permalink for Activity 5.2.1: Using a Regression Equation">🔗</a></div></article><article class="activity project-like" id="act-ch5-slope-meaning"><h3 class="heading">
+<div class="autopermalink" data-description="Task 5.2.1.c"><a href="#act-ch5-regression-prediction-5" title="Copy heading and permalink for Task 5.2.1.c" aria-label="Copy heading and permalink for Task 5.2.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 5.2.1: Using a Regression Equation"><a href="#act-ch5-regression-prediction" title="Copy heading and permalink for Activity 5.2.1: Using a Regression Equation" aria-label="Copy heading and permalink for Activity 5.2.1: Using a Regression Equation">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch5-slope-meaning"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting Slope and Intercept.</span>
 </h3>
-<div class="introduction" id="act-ch5-slope-meaning-2"><div class="para" id="act-ch5-slope-meaning-2-1">Focus on the meaning of the slope and intercept rather than just the arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-slope-meaning-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch5-slope-meaning-2">
+<div class="para" id="act-ch5-slope-meaning-2-1">Focus on the meaning of the slope and intercept rather than just the arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-slope-meaning-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch5-slope-meaning-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch5-slope-meaning-3-1-1">For the equation <span class="process-math">\(\hat{y}=53.5+4.4x\text{,}\)</span> identify the slope and the y-intercept.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-slope-meaning-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.2.a"><a href="#act-ch5-slope-meaning-3" title="Copy heading and permalink for Task 5.2.2.a" aria-label="Copy heading and permalink for Task 5.2.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch5-slope-meaning-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.2.a"><a href="#act-ch5-slope-meaning-3" title="Copy heading and permalink for Task 5.2.2.a" aria-label="Copy heading and permalink for Task 5.2.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-slope-meaning-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch5-slope-meaning-4-1-1">Explain what the slope means if <span class="process-math">\(x\)</span> is hours studied and <span class="process-math">\(y\)</span> is exam score.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-slope-meaning-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.2.b"><a href="#act-ch5-slope-meaning-4" title="Copy heading and permalink for Task 5.2.2.b" aria-label="Copy heading and permalink for Task 5.2.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch5-slope-meaning-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.2.b"><a href="#act-ch5-slope-meaning-4" title="Copy heading and permalink for Task 5.2.2.b" aria-label="Copy heading and permalink for Task 5.2.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-slope-meaning-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch5-slope-meaning-5-1-1">Explain why the y-intercept may or may not have a sensible interpretation in this situation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-slope-meaning-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.2.c"><a href="#act-ch5-slope-meaning-5" title="Copy heading and permalink for Task 5.2.2.c" aria-label="Copy heading and permalink for Task 5.2.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.2.2: Interpreting Slope and Intercept"><a href="#act-ch5-slope-meaning" title="Copy heading and permalink for Activity 5.2.2: Interpreting Slope and Intercept" aria-label="Copy heading and permalink for Activity 5.2.2: Interpreting Slope and Intercept">🔗</a></div></article><article class="activity project-like" id="act-ch5-interpolation-extrapolation"><h3 class="heading">
+<div class="autopermalink" data-description="Task 5.2.2.c"><a href="#act-ch5-slope-meaning-5" title="Copy heading and permalink for Task 5.2.2.c" aria-label="Copy heading and permalink for Task 5.2.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 5.2.2: Interpreting Slope and Intercept"><a href="#act-ch5-slope-meaning" title="Copy heading and permalink for Activity 5.2.2: Interpreting Slope and Intercept" aria-label="Copy heading and permalink for Activity 5.2.2: Interpreting Slope and Intercept">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch5-interpolation-extrapolation"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpolation or Extrapolation?</span>
 </h3>
-<div class="introduction" id="act-ch5-interpolation-extrapolation-2"><div class="para" id="act-ch5-interpolation-extrapolation-2-1">Decide whether each prediction stays within the observed data or goes beyond it.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-interpolation-extrapolation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch5-interpolation-extrapolation-2">
+<div class="para" id="act-ch5-interpolation-extrapolation-2-1">Decide whether each prediction stays within the observed data or goes beyond it.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-interpolation-extrapolation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch5-interpolation-extrapolation-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch5-interpolation-extrapolation-3-1-1">If the study-hours data only includes values from 1 to 8 hours, decide whether predicting a score for 5 hours is interpolation or extrapolation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-interpolation-extrapolation-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.3.a"><a href="#act-ch5-interpolation-extrapolation-3" title="Copy heading and permalink for Task 5.2.3.a" aria-label="Copy heading and permalink for Task 5.2.3.a">🔗</a></div></article><article class="task exercise-like" id="act-ch5-interpolation-extrapolation-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.3.a"><a href="#act-ch5-interpolation-extrapolation-3" title="Copy heading and permalink for Task 5.2.3.a" aria-label="Copy heading and permalink for Task 5.2.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-interpolation-extrapolation-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch5-interpolation-extrapolation-4-1-1">Decide whether predicting a score for 10 hours is interpolation or extrapolation.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-interpolation-extrapolation-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.3.b"><a href="#act-ch5-interpolation-extrapolation-4" title="Copy heading and permalink for Task 5.2.3.b" aria-label="Copy heading and permalink for Task 5.2.3.b">🔗</a></div></article><article class="task exercise-like" id="act-ch5-interpolation-extrapolation-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.2.3.b"><a href="#act-ch5-interpolation-extrapolation-4" title="Copy heading and permalink for Task 5.2.3.b" aria-label="Copy heading and permalink for Task 5.2.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch5-interpolation-extrapolation-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch5-interpolation-extrapolation-5-1-1">Explain why one of these predictions is usually more trustworthy than the other.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch5-interpolation-extrapolation-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.2.3.c"><a href="#act-ch5-interpolation-extrapolation-5" title="Copy heading and permalink for Task 5.2.3.c" aria-label="Copy heading and permalink for Task 5.2.3.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.2.3: Interpolation or Extrapolation?"><a href="#act-ch5-interpolation-extrapolation" title="Copy heading and permalink for Activity 5.2.3: Interpolation or Extrapolation?" aria-label="Copy heading and permalink for Activity 5.2.3: Interpolation or Extrapolation?">🔗</a></div></article><div class="autopermalink" data-description="Section 5.2: Regression Lines and Prediction"><a href="#sec-regression-line" title="Copy heading and permalink for Section 5.2: Regression Lines and Prediction" aria-label="Copy heading and permalink for Section 5.2: Regression Lines and Prediction">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 5.2.3.c"><a href="#act-ch5-interpolation-extrapolation-5" title="Copy heading and permalink for Task 5.2.3.c" aria-label="Copy heading and permalink for Task 5.2.3.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 5.2.3: Interpolation or Extrapolation?"><a href="#act-ch5-interpolation-extrapolation" title="Copy heading and permalink for Activity 5.2.3: Interpolation or Extrapolation?" aria-label="Copy heading and permalink for Activity 5.2.3: Interpolation or Extrapolation?">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 5.2: Regression Lines and Prediction"><a href="#sec-regression-line" title="Copy heading and permalink for Section 5.2: Regression Lines and Prediction" aria-label="Copy heading and permalink for Section 5.2: Regression Lines and Prediction">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-scatterplots-correlation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-probability.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

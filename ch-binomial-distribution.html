@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,10 +285,12 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-binomial-distribution"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-binomial-distribution">
+<h2 class="heading">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Binomial Distributions</span>
 </h2>
-<section class="introduction" id="ch-binomial-distribution-2"><div class="para" id="ch-binomial-distribution-2-1">The <dfn class="terminology">binomial distribution</dfn> is probably the most common discrete probability distribution in an introductory statistics course. It appears whenever we repeat the same yes-or-no kind of trial and count how many successes occur. Did a shot go in or not? Did a customer buy the product or not? Did a tested item pass inspection or fail?<div class="autopermalink" data-description="Paragraph"><a href="#ch-binomial-distribution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-binomial-distribution-2">
+<div class="para" id="ch-binomial-distribution-2-1">The <dfn class="terminology">binomial distribution</dfn> is probably the most common discrete probability distribution in an introductory statistics course. It appears whenever we repeat the same yes-or-no kind of trial and count how many successes occur. Did a shot go in or not? Did a customer buy the product or not? Did a tested item pass inspection or fail?<div class="autopermalink" data-description="Paragraph"><a href="#ch-binomial-distribution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch-binomial-distribution-2-2">This chapter explains where the binomial distribution comes from, how to compute its probabilities, how to use its cumulative distribution, how to find its mean and standard deviation, and when a binomial model starts to look like a normal one. Along the way we will keep one main idea in view: a binomial random variable is just a count of successes in repeated independent trials.<div class="autopermalink" data-description="Paragraph"><a href="#ch-binomial-distribution-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
@@ -293,7 +299,8 @@ eBookConfig.enable_chatcodes =  false;
 <li><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></li>
 <li><a href="sec-binomial-normal-approximation.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Binomial Approximation of Normal Distribution</span></a></li>
 <li><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></li>
-</ul></nav><section class="conclusion" id="ch-binomial-distribution-7"><h2 class="heading">Summary.<span></span>
+</ul></nav>
+<section class="conclusion" id="ch-binomial-distribution-7"><h2 class="heading">Summary.<span></span>
 </h2>
 <div class="para" id="ch-binomial-distribution-7-2">The binomial distribution models a very common kind of random process: repeated independent trials with the same success probability. Because of that, it shows up all over statistics, quality control, polling, biology, and the social sciences. It also gives us a first glimpse of why bell-shaped normal curves will matter in the next chapter.<div class="autopermalink" data-description="Paragraph"><a href="#ch-binomial-distribution-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

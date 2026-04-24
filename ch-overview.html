@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,10 +285,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-overview"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="chapter" id="ch-overview">
+<h2 class="heading">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">0</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">What Statistics Is About</span>
 </h2>
-<section class="introduction" id="ch-overview-2"><div class="para" id="ch-overview-2-1">Statistics is the study of how we learn from data. It gives us a way to collect information, organize it, summarize it, analyze it, and then use it to make decisions. In everyday life, raw data by itself is often just a pile of numbers, labels, or measurements. Statistics helps turn that pile into a story we can understand.<div class="autopermalink" data-description="Paragraph"><a href="#ch-overview-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-overview-2">
+<div class="para" id="ch-overview-2-1">Statistics is the study of how we learn from data. It gives us a way to collect information, organize it, summarize it, analyze it, and then use it to make decisions. In everyday life, raw data by itself is often just a pile of numbers, labels, or measurements. Statistics helps turn that pile into a story we can understand.<div class="autopermalink" data-description="Paragraph"><a href="#ch-overview-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch-overview-2-2">That story matters because modern life runs on data. Doctors compare treatments, businesses track sales, schools study student success, sports teams evaluate performance, and governments use surveys to understand communities. In each of these settings, the goal is not just to gather data, but to ask sensible questions and to draw conclusions without being fooled by randomness, bias, or incomplete information.<div class="autopermalink" data-description="Paragraph"><a href="#ch-overview-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -294,25 +301,42 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-campus-survey" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">0.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Campus Survey.</span>
-</h2></summary><article class="example example-like knowl__content"><div class="para" id="ex-campus-survey-2">Suppose a college wants to know how students feel about parking on campus. Asking every student may be too expensive or too slow, so the college surveys 400 students chosen from the student body. The percentage of those 400 students who say parking is a serious problem is a statistic. The true percentage for all students is a parameter. The sample gives useful information, but the sample result will usually not match the population value exactly.<div class="autopermalink" data-description="Paragraph"><a href="#ex-campus-survey-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-campus-survey-2">Suppose a college wants to know how students feel about parking on campus. Asking every student may be too expensive or too slow, so the college surveys 400 students chosen from the student body. The percentage of those 400 students who say parking is a serious problem is a statistic. The true percentage for all students is a parameter. The sample gives useful information, but the sample result will usually not match the population value exactly.<div class="autopermalink" data-description="Paragraph"><a href="#ex-campus-survey-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 0.0.1: A Campus Survey"><a href="#ex-campus-survey" title="Copy heading and permalink for Example 0.0.1: A Campus Survey" aria-label="Copy heading and permalink for Example 0.0.1: A Campus Survey">🔗</a></div></article></details><details id="ex-basketball-free-throws" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<div class="autopermalink" data-description="Example 0.0.1: A Campus Survey"><a href="#ex-campus-survey" title="Copy heading and permalink for Example 0.0.1: A Campus Survey" aria-label="Copy heading and permalink for Example 0.0.1: A Campus Survey">🔗</a></div>
+</article></details>
+<details id="ex-basketball-free-throws" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">0.0.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Describing Data Versus Making a Prediction.</span>
-</h2></summary><article class="example example-like knowl__content"><div class="para" id="ex-basketball-free-throws-2">A basketball player takes 50 free throws in practice and makes 41 of them. Saying that the player made 82% of the practice shots is descriptive statistics. Using that practice result to predict how the player will perform in future games is inferential statistics. The same data can support both description and prediction, but those are not the same task.<div class="autopermalink" data-description="Paragraph"><a href="#ex-basketball-free-throws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-basketball-free-throws-2">A basketball player takes 50 free throws in practice and makes 41 of them. Saying that the player made 82% of the practice shots is descriptive statistics. Using that practice result to predict how the player will perform in future games is inferential statistics. The same data can support both description and prediction, but those are not the same task.<div class="autopermalink" data-description="Paragraph"><a href="#ex-basketball-free-throws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 0.0.2: Describing Data Versus Making a Prediction"><a href="#ex-basketball-free-throws" title="Copy heading and permalink for Example 0.0.2: Describing Data Versus Making a Prediction" aria-label="Copy heading and permalink for Example 0.0.2: Describing Data Versus Making a Prediction">🔗</a></div></article></details></section><section class="exercises" id="ch0-exercises"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 0.0.2: Describing Data Versus Making a Prediction"><a href="#ex-basketball-free-throws" title="Copy heading and permalink for Example 0.0.2: Describing Data Versus Making a Prediction" aria-label="Copy heading and permalink for Example 0.0.2: Describing Data Versus Making a Prediction">🔗</a></div>
+</article></details></section>
+<section class="exercises" id="ch0-exercises">
+<h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="ch0-ex-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ch0-ex-1-1">A city wants to estimate the average commute time of all workers in the city. It studies 600 randomly selected workers. Identify the population, the sample, and the kind of quantity that would be a parameter.<div class="autopermalink" data-description="Paragraph"><a href="#ch0-ex-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 0.1"><a href="#ch0-ex-1" title="Copy heading and permalink for Exercise 0.1" aria-label="Copy heading and permalink for Exercise 0.1">🔗</a></div></article><article class="exercise exercise-like" id="ch0-ex-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Exercise 0.1"><a href="#ch0-ex-1" title="Copy heading and permalink for Exercise 0.1" aria-label="Copy heading and permalink for Exercise 0.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch0-ex-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ch0-ex-2-1">A streaming service reports that 63% of the users in a test group watched at least one documentary last month. Give one statement about this situation that is descriptive and one that is inferential.<div class="autopermalink" data-description="Paragraph"><a href="#ch0-ex-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 0.2"><a href="#ch0-ex-2" title="Copy heading and permalink for Exercise 0.2" aria-label="Copy heading and permalink for Exercise 0.2">🔗</a></div></article><article class="exercise exercise-like" id="ch0-ex-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Exercise 0.2"><a href="#ch0-ex-2" title="Copy heading and permalink for Exercise 0.2" aria-label="Copy heading and permalink for Exercise 0.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch0-ex-3"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ch0-ex-3-1">Write down a real-life question from your own experience that could be answered with data. Then say what kind of data you would collect and what decision you hope the data would help you make.<div class="autopermalink" data-description="Paragraph"><a href="#ch0-ex-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 0.3"><a href="#ch0-ex-3" title="Copy heading and permalink for Exercise 0.3" aria-label="Copy heading and permalink for Exercise 0.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 0: Exercises"><a href="#ch0-exercises" title="Copy heading and permalink for Exercises 0: Exercises" aria-label="Copy heading and permalink for Exercises 0: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Chapter 0: What Statistics Is About"><a href="#ch-overview" title="Copy heading and permalink for Chapter 0: What Statistics Is About" aria-label="Copy heading and permalink for Chapter 0: What Statistics Is About">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Exercise 0.3"><a href="#ch0-ex-3" title="Copy heading and permalink for Exercise 0.3" aria-label="Copy heading and permalink for Exercise 0.3">🔗</a></div>
+</article><div class="autopermalink" data-description="Exercises 0: Exercises"><a href="#ch0-exercises" title="Copy heading and permalink for Exercises 0: Exercises" aria-label="Copy heading and permalink for Exercises 0: Exercises">🔗</a></div>
+</section><div class="autopermalink" data-description="Chapter 0: What Statistics Is About"><a href="#ch-overview" title="Copy heading and permalink for Chapter 0: What Statistics Is About" aria-label="Copy heading and permalink for Chapter 0: What Statistics Is About">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="front-colophon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-data-types.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

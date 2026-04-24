@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter contains-active">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-f-alpha-001"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-f-alpha-001">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Right-Tail Area 0.01</span>
 </h2>
 <figure class="table table-like" id="tbl-f-alpha-001-g1a"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Critical values for <span class="process-math">\(\alpha=0.01\)</span> with numerator degrees of freedom <span class="process-math">\(d_1\)</span> equal to 1, 2, 3, 4, 5<div class="autopermalink" data-description="Table E.2.1: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 1, 2, 3, 4, 5"><a href="#tbl-f-alpha-001-g1a" title="Copy heading and permalink for Table E.2.1: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 1, 2, 3, 4, 5" aria-label="Copy heading and permalink for Table E.2.1: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 1, 2, 3, 4, 5">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -445,7 +451,9 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b3 r0 l0 t0 lines">3.319</td>
 <td class="c m b3 r0 l0 t0 lines">3.017</td>
 </tr>
-</table></div></figure><figure class="table table-like" id="tbl-f-alpha-001-g1b"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Critical values for <span class="process-math">\(\alpha=0.01\)</span> with numerator degrees of freedom <span class="process-math">\(d_1\)</span> equal to 6, 7, 8, 9, 10<div class="autopermalink" data-description="Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10"><a href="#tbl-f-alpha-001-g1b" title="Copy heading and permalink for Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10" aria-label="Copy heading and permalink for Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div>
+</figure>
+<figure class="table table-like" id="tbl-f-alpha-001-g1b"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Critical values for <span class="process-math">\(\alpha=0.01\)</span> with numerator degrees of freedom <span class="process-math">\(d_1\)</span> equal to 6, 7, 8, 9, 10<div class="autopermalink" data-description="Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10"><a href="#tbl-f-alpha-001-g1b" title="Copy heading and permalink for Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10" aria-label="Copy heading and permalink for Table E.2.2: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 6, 7, 8, 9, 10">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(d_2 \backslash d_1\)</span></th>
 <th scope="col" class="c m b1 r0 l0 t0 lines">6</th>
@@ -606,7 +614,9 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b3 r0 l0 t0 lines">2.407</td>
 <td class="c m b3 r0 l0 t0 lines">2.321</td>
 </tr>
-</table></div></figure><figure class="table table-like" id="tbl-f-alpha-001-g2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Critical values for <span class="process-math">\(\alpha=0.01\)</span> with numerator degrees of freedom <span class="process-math">\(d_1\)</span> equal to 12, 15, 20, 24, 30, 40, 60, 120<div class="autopermalink" data-description="Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120"><a href="#tbl-f-alpha-001-g2" title="Copy heading and permalink for Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120" aria-label="Copy heading and permalink for Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div>
+</figure>
+<figure class="table table-like" id="tbl-f-alpha-001-g2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">E.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Critical values for <span class="process-math">\(\alpha=0.01\)</span> with numerator degrees of freedom <span class="process-math">\(d_1\)</span> equal to 12, 15, 20, 24, 30, 40, 60, 120<div class="autopermalink" data-description="Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120"><a href="#tbl-f-alpha-001-g2" title="Copy heading and permalink for Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120" aria-label="Copy heading and permalink for Table E.2.3: Critical values for \alpha=0.01 with numerator degrees of freedom d_1 equal to 12, 15, 20, 24, 30, 40, 60, 120">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r0 l0 t0 lines"><span class="process-math">\(d_2 \backslash d_1\)</span></th>
 <th scope="col" class="c m b1 r0 l0 t0 lines">12</th>
@@ -827,7 +837,10 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b3 r0 l0 t0 lines">1.473</td>
 <td class="c m b3 r0 l0 t0 lines">1.325</td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Section E.2: Right-Tail Area 0.01"><a href="#sec-f-alpha-001" title="Copy heading and permalink for Section E.2: Right-Tail Area 0.01" aria-label="Copy heading and permalink for Section E.2: Right-Tail Area 0.01">🔗</a></div></section></div>
+</table></div>
+</figure><div class="autopermalink" data-description="Section E.2: Right-Tail Area 0.01"><a href="#sec-f-alpha-001" title="Copy heading and permalink for Section E.2: Right-Tail Area 0.01" aria-label="Copy heading and permalink for Section E.2: Right-Tail Area 0.01">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-f-alpha-005.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,7 +285,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-sample-spaces-events"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-sample-spaces-events">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sample Spaces and Events</span>
 </h2>
 <div class="para" id="sec-sample-spaces-events-2">A <dfn class="terminology">random experiment</dfn> is a process with a known collection of possible outcomes, but the outcome of one trial is not known ahead of time. Flipping a coin, rolling a die, and selecting a student at random are all random experiments.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -290,7 +296,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="ex-sample-space-die" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Sample Space for a Die Roll.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-sample-space-die-2">If a fair six-sided die is rolled once, then the sample space is<div class="autopermalink" data-description="Paragraph"><a href="#ex-sample-space-die-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-sample-space-die-2">If a fair six-sided die is rolled once, then the sample space is<div class="autopermalink" data-description="Paragraph"><a href="#ex-sample-space-die-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-sample-space-die-3">
 \begin{equation*}
@@ -311,7 +319,9 @@ E=\{2,4,6\},
 G=\{5,6\}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 6.1.1: A Sample Space for a Die Roll"><a href="#ex-sample-space-die" title="Copy heading and permalink for Example 6.1.1: A Sample Space for a Die Roll" aria-label="Copy heading and permalink for Example 6.1.1: A Sample Space for a Die Roll">🔗</a></div></article></details><div class="para" id="sec-sample-spaces-events-5">Once we treat events as sets, we can use ordinary set operations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 6.1.1: A Sample Space for a Die Roll"><a href="#ex-sample-space-die" title="Copy heading and permalink for Example 6.1.1: A Sample Space for a Die Roll" aria-label="Copy heading and permalink for Example 6.1.1: A Sample Space for a Die Roll">🔗</a></div>
+</article></details>
+<div class="para" id="sec-sample-spaces-events-5">Once we treat events as sets, we can use ordinary set operations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-sample-spaces-events-6">The <dfn class="terminology">complement</dfn> of an event <span class="process-math">\(A\text{,}\)</span> written <span class="process-math">\(A^c\text{,}\)</span> consists of all outcomes in the sample space that are not in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -319,7 +329,9 @@ G=\{5,6\}.
 </div>
 <details id="ex-coin-set-operations" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Set Operations with Two Coin Flips.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-coin-set-operations-2">If a coin is flipped twice, then the sample space is<div class="autopermalink" data-description="Paragraph"><a href="#ex-coin-set-operations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-coin-set-operations-2">If a coin is flipped twice, then the sample space is<div class="autopermalink" data-description="Paragraph"><a href="#ex-coin-set-operations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-coin-set-operations-3">
 \begin{equation*}
@@ -335,43 +347,68 @@ S=\{HH,HT,TH,TT\}.
 A^c=\{HH,TT\},\qquad A\cup B=\{HH,HT,TH\},\qquad A\cap B=\{HT\}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 6.1.2: Set Operations with Two Coin Flips"><a href="#ex-coin-set-operations" title="Copy heading and permalink for Example 6.1.2: Set Operations with Two Coin Flips" aria-label="Copy heading and permalink for Example 6.1.2: Set Operations with Two Coin Flips">🔗</a></div></article></details><div class="para" id="sec-sample-spaces-events-9">Two events are <dfn class="terminology">mutually exclusive</dfn> if they cannot happen at the same time. In set language, that means their intersection is empty.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 6.1.2: Set Operations with Two Coin Flips"><a href="#ex-coin-set-operations" title="Copy heading and permalink for Example 6.1.2: Set Operations with Two Coin Flips" aria-label="Copy heading and permalink for Example 6.1.2: Set Operations with Two Coin Flips">🔗</a></div>
+</article></details>
+<div class="para" id="sec-sample-spaces-events-9">Two events are <dfn class="terminology">mutually exclusive</dfn> if they cannot happen at the same time. In set language, that means their intersection is empty.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sample-spaces-events-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-mutually-exclusive-die" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mutually Exclusive Events.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-mutually-exclusive-die-2">When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.<div class="autopermalink" data-description="Paragraph"><a href="#ex-mutually-exclusive-die-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-mutually-exclusive-die-2">When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.<div class="autopermalink" data-description="Paragraph"><a href="#ex-mutually-exclusive-die-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-mutually-exclusive-die-3">On the other hand, the events “the outcome is even” and “the outcome is greater than 3” are not mutually exclusive, because 4 and 6 belong to both events.<div class="autopermalink" data-description="Paragraph"><a href="#ex-mutually-exclusive-die-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 6.1.3: Mutually Exclusive Events"><a href="#ex-mutually-exclusive-die" title="Copy heading and permalink for Example 6.1.3: Mutually Exclusive Events" aria-label="Copy heading and permalink for Example 6.1.3: Mutually Exclusive Events">🔗</a></div></article></details><article class="activity project-like" id="act-ch6-sample-spaces-events"><h3 class="heading">
+<div class="autopermalink" data-description="Example 6.1.3: Mutually Exclusive Events"><a href="#ex-mutually-exclusive-die" title="Copy heading and permalink for Example 6.1.3: Mutually Exclusive Events" aria-label="Copy heading and permalink for Example 6.1.3: Mutually Exclusive Events">🔗</a></div>
+</article></details>
+<article class="activity project-like" id="act-ch6-sample-spaces-events"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sample Spaces and Events.</span>
 </h3>
-<div class="introduction" id="act-ch6-sample-spaces-events-2"><div class="para" id="act-ch6-sample-spaces-events-2-1">Practice writing sample spaces and identifying events for simple random experiments.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-sample-spaces-events-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch6-sample-spaces-events-2">
+<div class="para" id="act-ch6-sample-spaces-events-2-1">Practice writing sample spaces and identifying events for simple random experiments.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-sample-spaces-events-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch6-sample-spaces-events-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch6-sample-spaces-events-3-1-1">Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event “the number is at least 4.”<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-sample-spaces-events-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.1.a"><a href="#act-ch6-sample-spaces-events-3" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div></article><article class="task exercise-like" id="act-ch6-sample-spaces-events-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 6.1.1.a"><a href="#act-ch6-sample-spaces-events-3" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch6-sample-spaces-events-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch6-sample-spaces-events-4-1-1">Write the sample space for one coin flip and list the outcomes for the event “heads occurs.” Then do the same for the event “tails occurs.”<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-sample-spaces-events-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.1.b"><a href="#act-ch6-sample-spaces-events-4" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div></article><article class="task exercise-like" id="act-ch6-sample-spaces-events-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 6.1.1.b"><a href="#act-ch6-sample-spaces-events-4" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch6-sample-spaces-events-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch6-sample-spaces-events-5-1-1">For two coin flips, write the event “exactly one head occurs” as a set of outcomes.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-sample-spaces-events-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.1.c"><a href="#act-ch6-sample-spaces-events-5" title="Copy heading and permalink for Task 6.1.1.c" aria-label="Copy heading and permalink for Task 6.1.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.1.1: Sample Spaces and Events"><a href="#act-ch6-sample-spaces-events" title="Copy heading and permalink for Activity 6.1.1: Sample Spaces and Events" aria-label="Copy heading and permalink for Activity 6.1.1: Sample Spaces and Events">🔗</a></div></article><article class="activity project-like" id="act-ch6-set-operations"><h3 class="heading">
+<div class="autopermalink" data-description="Task 6.1.1.c"><a href="#act-ch6-sample-spaces-events-5" title="Copy heading and permalink for Task 6.1.1.c" aria-label="Copy heading and permalink for Task 6.1.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 6.1.1: Sample Spaces and Events"><a href="#act-ch6-sample-spaces-events" title="Copy heading and permalink for Activity 6.1.1: Sample Spaces and Events" aria-label="Copy heading and permalink for Activity 6.1.1: Sample Spaces and Events">🔗</a></div>
+</article>
+<article class="activity project-like" id="act-ch6-set-operations"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complements, Unions, and Intersections.</span>
 </h3>
-<div class="introduction" id="act-ch6-set-operations-2"><div class="para" id="act-ch6-set-operations-2-1">Use the language of sets to describe common probability events.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-set-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="introduction" id="act-ch6-set-operations-2">
+<div class="para" id="act-ch6-set-operations-2-1">Use the language of sets to describe common probability events.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-set-operations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="act-ch6-set-operations-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch6-set-operations-3-1-1">Using the sample space for one die roll, let <span class="process-math">\(A\)</span> be the event “the outcome is even” and let <span class="process-math">\(B\)</span> be the event “the outcome is greater than 3.” Write <span class="process-math">\(A^c\text{,}\)</span> <span class="process-math">\(A\cup B\text{,}\)</span> and <span class="process-math">\(A\cap B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-set-operations-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.2.a"><a href="#act-ch6-set-operations-3" title="Copy heading and permalink for Task 6.1.2.a" aria-label="Copy heading and permalink for Task 6.1.2.a">🔗</a></div></article><article class="task exercise-like" id="act-ch6-set-operations-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 6.1.2.a"><a href="#act-ch6-set-operations-3" title="Copy heading and permalink for Task 6.1.2.a" aria-label="Copy heading and permalink for Task 6.1.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch6-set-operations-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch6-set-operations-4-1-1">For two coin flips, let <span class="process-math">\(A\)</span> be the event “the first flip is a head” and let <span class="process-math">\(B\)</span> be the event “exactly one head occurs.” Find <span class="process-math">\(A\cap B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-set-operations-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.2.b"><a href="#act-ch6-set-operations-4" title="Copy heading and permalink for Task 6.1.2.b" aria-label="Copy heading and permalink for Task 6.1.2.b">🔗</a></div></article><article class="task exercise-like" id="act-ch6-set-operations-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 6.1.2.b"><a href="#act-ch6-set-operations-4" title="Copy heading and permalink for Task 6.1.2.b" aria-label="Copy heading and permalink for Task 6.1.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch6-set-operations-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch6-set-operations-5-1-1">Decide whether the events “the number is 1” and “the number is 6” are mutually exclusive. Explain your answer.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch6-set-operations-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.1.2.c"><a href="#act-ch6-set-operations-5" title="Copy heading and permalink for Task 6.1.2.c" aria-label="Copy heading and permalink for Task 6.1.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.1.2: Complements, Unions, and Intersections"><a href="#act-ch6-set-operations" title="Copy heading and permalink for Activity 6.1.2: Complements, Unions, and Intersections" aria-label="Copy heading and permalink for Activity 6.1.2: Complements, Unions, and Intersections">🔗</a></div></article><div class="autopermalink" data-description="Section 6.1: Sample Spaces and Events"><a href="#sec-sample-spaces-events" title="Copy heading and permalink for Section 6.1: Sample Spaces and Events" aria-label="Copy heading and permalink for Section 6.1: Sample Spaces and Events">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 6.1.2.c"><a href="#act-ch6-set-operations-5" title="Copy heading and permalink for Task 6.1.2.c" aria-label="Copy heading and permalink for Task 6.1.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 6.1.2: Complements, Unions, and Intersections"><a href="#act-ch6-set-operations" title="Copy heading and permalink for Activity 6.1.2: Complements, Unions, and Intersections" aria-label="Copy heading and permalink for Activity 6.1.2: Complements, Unions, and Intersections">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 6.1: Sample Spaces and Events"><a href="#sec-sample-spaces-events" title="Copy heading and permalink for Section 6.1: Sample Spaces and Events" aria-label="Copy heading and permalink for Section 6.1: Sample Spaces and Events">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-probability.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-probability-rules.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

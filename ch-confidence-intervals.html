@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,54 +285,81 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-confidence-intervals"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-confidence-intervals">
+<h2 class="heading">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Confidence Intervals</span>
 </h2>
-<section class="introduction" id="ch-confidence-intervals-2"><div class="para" id="ch-confidence-intervals-2-1">In statistics, we usually care about a whole population but only get to see a sample. That means we need methods for using sample information to say something sensible about unknown population quantities.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-confidence-intervals-2">
+<div class="para" id="ch-confidence-intervals-2-1">In statistics, we usually care about a whole population but only get to see a sample. That means we need methods for using sample information to say something sensible about unknown population quantities.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch-confidence-intervals-2-2">This chapter focuses on estimating a population mean. The main tool is the <dfn class="terminology">confidence interval</dfn>, which gives a range of plausible values for the parameter. To justify that method, we first need to understand how sample means behave.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-confidence-intervals-2-2">This chapter focuses on estimating three common kinds of parameters: a population mean, a population proportion, and a population variance. The main tool is the <dfn class="terminology">confidence interval</dfn>, which gives a range of plausible values for the parameter. To justify those formulas, we first need to understand how sample means, sample proportions, and sample variances behave.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-confidence-intervals-2-3">For means and proportions, the normal distribution does most of the work. For variance and standard deviation from a normal population, the chi-square distribution is the key player instead.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
 <li><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></li>
 <li><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></li>
-<li><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></li>
-<li><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></li>
-</ul></nav><section class="conclusion" id="ch-confidence-intervals-6"><h2 class="heading">Summary.<span></span>
+<li><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></li>
+<li><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></li>
+<li><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></li>
+<li><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></li>
+</ul></nav>
+<section class="conclusion" id="ch-confidence-intervals-8"><h2 class="heading">Summary.<span></span>
 </h2>
-<div class="para" id="ch-confidence-intervals-6-2">Confidence intervals are built on the sampling behavior of the sample mean.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-confidence-intervals-8-2">Confidence intervals are built on the sampling behavior of sample means and sample proportions, and in one important case on sample variances as well.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="ch-confidence-intervals-6-3">
-<li id="ch-confidence-intervals-6-3-1">
-<div class="para" id="ch-confidence-intervals-6-3-1-1">The sampling distribution of <span class="process-math">\(\overline{X}\)</span> has mean <span class="process-math">\(\mu\)</span> and standard deviation <span class="process-math">\(\sigma/\sqrt{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="ch-confidence-intervals-8-3">
+<li id="ch-confidence-intervals-8-3-1">
+<div class="para" id="ch-confidence-intervals-8-3-1-1">The sampling distribution of <span class="process-math">\(\overline{X}\)</span> has mean <span class="process-math">\(\mu\)</span> and standard deviation <span class="process-math">\(\sigma/\sqrt{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-confidence-intervals-6-3-2">
-<div class="para" id="ch-confidence-intervals-6-3-2-1">The Central Limit Theorem says that for large samples, the sample mean is approximately normal.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-confidence-intervals-8-3-2">
+<div class="para" id="ch-confidence-intervals-8-3-2-1">The Central Limit Theorem says that for large samples, the sample mean is approximately normal.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-confidence-intervals-6-3-3">
-<div class="para" id="ch-confidence-intervals-6-3-3-1">A confidence interval estimates the population mean by giving a range of plausible values.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-confidence-intervals-8-3-3">
+<div class="para" id="ch-confidence-intervals-8-3-3-1">A confidence interval estimates a population parameter by giving a range of plausible values.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-confidence-intervals-6-3-4">
-<div class="para" id="ch-confidence-intervals-6-3-4-1">Its basic form is point estimate plus or minus margin of error.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-confidence-intervals-8-3-4">
+<div class="para" id="ch-confidence-intervals-8-3-4-1">Its basic form is point estimate plus or minus margin of error.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-confidence-intervals-6-3-5">
-<div class="para" id="ch-confidence-intervals-6-3-5-1">For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-confidence-intervals-8-3-5">
+<div class="para" id="ch-confidence-intervals-8-3-5-1">For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-confidence-intervals-6-3-6">
-<div class="para" id="ch-confidence-intervals-6-3-6-1">Sample-size formulas come from solving the margin-of-error formula for <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-confidence-intervals-8-3-6">
+<div class="para" id="ch-confidence-intervals-8-3-6-1">If <span class="process-math">\(X\sim B(n,p)\text{,}\)</span> then for large samples the binomial model leads to the approximation <span class="process-math">\(\widehat{p}\approx N\left(p,\sqrt{p(1-p)/n}\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-6-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-confidence-intervals-8-3-7">
+<div class="para" id="ch-confidence-intervals-8-3-7-1">A large-sample confidence interval for a population proportion is <span class="process-math">\(\widehat{p}\pm z_{\alpha/2}\sqrt{\widehat{p}(1-\widehat{p})/n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-confidence-intervals-8-3-8">
+<div class="para" id="ch-confidence-intervals-8-3-8-1">For a normal population, <span class="process-math">\(\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}\text{,}\)</span> which leads to a confidence interval for the population variance and standard deviation.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-confidence-intervals-8-3-9">
+<div class="para" id="ch-confidence-intervals-8-3-9-1">The chi-square interval for variance requires a normal population; large sample size by itself is not the main justification.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-confidence-intervals-8-3-10">
+<div class="para" id="ch-confidence-intervals-8-3-10-1">Sample-size formulas come from solving the margin-of-error formula for <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-confidence-intervals-8-3-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para" id="ch-confidence-intervals-6-4">The next chapter turns estimation into decision-making. Instead of asking which values of <span class="process-math">\(\mu\)</span> are plausible, we will ask whether the data give strong enough evidence to reject a claimed value of <span class="process-math">\(\mu\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-confidence-intervals-8-4">The next chapter turns estimation into decision-making. Instead of asking which parameter values are plausible, we will ask whether the data give strong enough evidence to reject a claimed value.<div class="autopermalink" data-description="Paragraph"><a href="#ch-confidence-intervals-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Chapter 10: Confidence Intervals"><a href="#ch-confidence-intervals" title="Copy heading and permalink for Chapter 10: Confidence Intervals" aria-label="Copy heading and permalink for Chapter 10: Confidence Intervals">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch9-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-sampling-distributions-clt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

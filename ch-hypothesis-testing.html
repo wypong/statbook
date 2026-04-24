@@ -240,8 +240,10 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -250,7 +252,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -281,54 +285,86 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-hypothesis-testing"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-hypothesis-testing">
+<h2 class="heading">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hypothesis Testing</span>
 </h2>
-<section class="introduction" id="ch-hypothesis-testing-2"><div class="para" id="ch-hypothesis-testing-2-1">A confidence interval asks which parameter values are plausible. A <dfn class="terminology">hypothesis test</dfn> asks a different question: does the sample provide strong enough evidence against a particular claim?<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-hypothesis-testing-2">
+<div class="para" id="ch-hypothesis-testing-2-1">A confidence interval asks which parameter values are plausible. A <dfn class="terminology">hypothesis test</dfn> asks a different question: does the sample provide strong enough evidence against a particular claim?<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch-hypothesis-testing-2-2">This chapter introduces the basic logic of testing a population mean. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-hypothesis-testing-2-2">This chapter introduces the basic logic of testing a population mean, a population proportion, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-hypothesis-testing-2-3">As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model, while variance tests use the chi-square distribution that comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
 <li><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></li>
 <li><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></li>
 <li><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></li>
-<li><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></li>
-</ul></nav><section class="conclusion" id="ch-hypothesis-testing-6"><h2 class="heading">Summary.<span></span>
+<li><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></li>
+<li><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></li>
+<li><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></li>
+</ul></nav>
+<section class="conclusion" id="ch-hypothesis-testing-8"><h2 class="heading">Summary.<span></span>
 </h2>
-<div class="para" id="ch-hypothesis-testing-6-2">Hypothesis testing is the formal side of statistical decision-making.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-hypothesis-testing-8-2">Hypothesis testing is the formal side of statistical decision-making.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="ch-hypothesis-testing-6-3">
-<li id="ch-hypothesis-testing-6-3-1">
-<div class="para" id="ch-hypothesis-testing-6-3-1-1">The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="ch-hypothesis-testing-8-3">
+<li id="ch-hypothesis-testing-8-3-1">
+<div class="para" id="ch-hypothesis-testing-8-3-1-1">The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-hypothesis-testing-6-3-2">
-<div class="para" id="ch-hypothesis-testing-6-3-2-1">A p-value measures how surprising the sample would be if the null hypothesis were true.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-hypothesis-testing-8-3-2">
+<div class="para" id="ch-hypothesis-testing-8-3-2-1">A p-value measures how surprising the sample would be if the null hypothesis were true.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-hypothesis-testing-6-3-3">
-<div class="para" id="ch-hypothesis-testing-6-3-3-1">Reject <span class="process-math">\(H_0\)</span> when the p-value is smaller than the significance level <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-hypothesis-testing-8-3-3">
+<div class="para" id="ch-hypothesis-testing-8-3-3-1">Reject <span class="process-math">\(H_0\)</span> when the p-value is smaller than the significance level <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-hypothesis-testing-6-3-4">
-<div class="para" id="ch-hypothesis-testing-6-3-4-1">A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-hypothesis-testing-8-3-4">
+<div class="para" id="ch-hypothesis-testing-8-3-4-1">For a right-tailed z-test, rejecting when <span class="process-math">\(z&gt;z_{\alpha}\)</span> is equivalent to rejecting when the p-value is less than <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-hypothesis-testing-6-3-5">
-<div class="para" id="ch-hypothesis-testing-6-3-5-1">The significance level controls the Type I error rate, and larger samples generally improve power.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-hypothesis-testing-8-3-5">
+<div class="para" id="ch-hypothesis-testing-8-3-5-1">A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ch-hypothesis-testing-6-3-6">
-<div class="para" id="ch-hypothesis-testing-6-3-6-1">Z-tests and t-tests are the main tools for one-sample tests of a mean.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="ch-hypothesis-testing-8-3-6">
+<div class="para" id="ch-hypothesis-testing-8-3-6-1">The significance level controls the Type I error rate, and larger samples generally improve power.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-6-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-hypothesis-testing-8-3-7">
+<div class="para" id="ch-hypothesis-testing-8-3-7-1">Z-tests and t-tests are the main tools for one-sample tests of a mean.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-hypothesis-testing-8-3-8">
+<div class="para" id="ch-hypothesis-testing-8-3-8-1">A one-proportion z-test uses <span class="process-math">\(z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}\)</span> when the expected numbers of successes and failures under <span class="process-math">\(H_0\)</span> are large enough.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-hypothesis-testing-8-3-9">
+<div class="para" id="ch-hypothesis-testing-8-3-9-1">Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-hypothesis-testing-8-3-10">
+<div class="para" id="ch-hypothesis-testing-8-3-10-1">A chi-square test for variance uses <span class="process-math">\(\chi^2=(n-1)s^2/\sigma_0^2\)</span> when the population is normal.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch-hypothesis-testing-8-3-11">
+<div class="para" id="ch-hypothesis-testing-8-3-11-1">Tests for variance and standard deviation are closely tied to the matching chi-square confidence interval, and normality of the population is the key assumption.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-3-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ch-hypothesis-testing-8-3-11" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para" id="ch-hypothesis-testing-6-4">As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-hypothesis-testing-8-4">As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.<div class="autopermalink" data-description="Paragraph"><a href="#ch-hypothesis-testing-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><div class="autopermalink" data-description="Chapter 11: Hypothesis Testing"><a href="#ch-hypothesis-testing" title="Copy heading and permalink for Chapter 11: Hypothesis Testing" aria-label="Copy heading and permalink for Chapter 11: Hypothesis Testing">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch10-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-hypothesis-tests-basics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
