@@ -313,34 +313,34 @@
       </introduction>
       <task>
         <statement>
-          <p>The frequency table in <xref ref="tbl-pets-owned"/> shows the number of pets owned by students in a small class. Find the mean number of pets.</p>
+          <p>The frequency table shows the number of pets owned by students in a small class. Find the mean number of pets.</p>
+          <table xml:id="tbl-pets-owned">
+            <title>Frequency table for pets owned by students</title>
+            <tabular halign="center">
+              <row header="yes" bottom="minor">
+                <cell>Pets</cell>
+                <cell>Frequency</cell>
+              </row>
+              <row>
+                <cell>0</cell>
+                <cell>4</cell>
+              </row>
+              <row>
+                <cell>1</cell>
+                <cell>6</cell>
+              </row>
+              <row>
+                <cell>2</cell>
+                <cell>5</cell>
+              </row>
+              <row bottom="major">
+                <cell>3</cell>
+                <cell>1</cell>
+              </row>
+            </tabular>
+          </table>
         </statement>
       </task>
-      <table xml:id="tbl-pets-owned">
-        <title>Frequency table for pets owned by students</title>
-        <tabular halign="center">
-          <row header="yes" bottom="minor">
-            <cell>Pets</cell>
-            <cell>Frequency</cell>
-          </row>
-          <row>
-            <cell>0</cell>
-            <cell>4</cell>
-          </row>
-          <row>
-            <cell>1</cell>
-            <cell>6</cell>
-          </row>
-          <row>
-            <cell>2</cell>
-            <cell>5</cell>
-          </row>
-          <row bottom="major">
-            <cell>3</cell>
-            <cell>1</cell>
-          </row>
-        </tabular>
-      </table>
       <task>
         <statement>
           <p>Use the same table to identify the mode and median.</p>

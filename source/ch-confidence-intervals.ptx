@@ -769,7 +769,7 @@
     <p>The reason the chi-square distribution appears is that this formula is
     built from squared normal quantities. Suppose
     <m>X_1,\ldots,X_n</m> is a random sample from a normal population
-    <m>N(\mu,\sigma^2)</m>. If we standardize each observation,</p>
+    <m>N(\mu,\sigma)</m>. If we standardize each observation,</p>
 
     <me>
       Z_i=\frac{X_i-\mu}{\sigma},

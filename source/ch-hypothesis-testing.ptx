@@ -5,7 +5,7 @@
 
   <introduction>
     <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test<idx><h>inference</h><h>hypothesis test</h></idx></term> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
-    <p>This chapter introduces the basic logic of testing a population mean, a population proportion, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
+    <p>This chapter introduces the basic logic of testing a population mean, a difference of two population means, a mean paired difference, a population proportion, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
     <p>As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model, while variance tests use the chi-square distribution that comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.</p>
   </introduction>
 
@@ -593,6 +593,453 @@
     </activity>
   </section>
 
+  <section xml:id="sec-two-sample-mean-tests">
+    <title>Two-Sample Mean Tests</title>
+
+    <introduction>
+    <p>Many questions compare two population means rather than one. For example, we might compare the mean exam score for two teaching methods, the mean wait time at two clinics, or the mean amount spent by two groups of customers.</p>
+
+    <p>Let <m>\mu_1</m> and <m>\mu_2</m> be the two population means. The parameter we care about is the <term>difference of means<idx><h>inference</h><h>difference of means</h></idx></term></p>
+
+    <me>
+      \mu_1-\mu_2.
+    </me>
+
+    <p>The natural estimate of this difference is</p>
+
+    <me>
+      \overline{x}_1-\overline{x}_2.
+    </me>
+
+    <p>So a typical null hypothesis is</p>
+
+    <me>
+      H_0:\mu_1-\mu_2=0,
+    </me>
+
+    <p>which says the two population means are equal. The alternative can be left-tailed, right-tailed, or two-tailed:</p>
+
+    <me>
+      H_a:\mu_1-\mu_2&lt;0,\qquad
+      H_a:\mu_1-\mu_2&gt;0,\qquad
+      H_a:\mu_1-\mu_2\ne 0.
+    </me>
+    </introduction>
+
+    <subsection xml:id="subsec-two-sample-large-samples">
+      <title>Large Samples: A Two-Sample Z-Test</title>
+
+    <p>To see where the test statistic comes from, start with the sampling distributions of the two sample means. For large samples, the CLT gives</p>
+
+    <me>
+      \overline{X}_1\sim N\left(\mu_1,\frac{\sigma_1}{\sqrt{n_1}}\right)
+      \qquad\text{and}\qquad
+      \overline{X}_2\sim N\left(\mu_2,\frac{\sigma_2}{\sqrt{n_2}}\right)
+    </me>
+
+    <p>approximately. Here the second input in <m>N(\mu,\sigma)</m> is the standard deviation, so the variances are <m>\sigma_1^2/n_1</m> and <m>\sigma_2^2/n_2</m>.</p>
+
+    <p>Now use two facts from earlier chapters. First, sums and differences of independent normal random variables are normal. Second, from <xref ref="sec-cdf-expected-value"/>, expectation is linear and variances add for independent random variables. Therefore the difference</p>
+
+    <me>
+      \overline{X}_1-\overline{X}_2
+    </me>
+
+    <p>is approximately normal. Its mean is</p>
+
+    <md alignment="align">
+      <mrow>E(\overline{X}_1-\overline{X}_2)&amp;=E(\overline{X}_1)+E(-\overline{X}_2)</mrow>
+      <mrow>&amp;=E(\overline{X}_1)-E(\overline{X}_2)</mrow>
+      <mrow>&amp;=\mu_1-\mu_2.</mrow>
+    </md>
+
+    <p>Because the two samples are independent, the variance is</p>
+
+    <md alignment="align">
+      <mrow>\operatorname{Var}(\overline{X}_1-\overline{X}_2)&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(-\overline{X}_2)</mrow>
+      <mrow>&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(\overline{X}_2)</mrow>
+      <mrow>&amp;=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}.</mrow>
+    </md>
+
+    <p>So, for large independent samples, the difference is approximately</p>
+
+    <me>
+      \overline{X}_1-\overline{X}_2
+      \sim
+      N\left(\mu_1-\mu_2,\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}\right)
+    </me>
+
+    <p>approximately. This is the key reason the standard error for a difference of sample means is</p>
+
+    <me>
+      \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}.
+    </me>
+
+    <p>In practice, the population standard deviations <m>\sigma_1</m> and <m>\sigma_2</m> are usually unknown. For large samples, we estimate them with <m>s_1</m> and <m>s_2</m>. That gives the large-sample <term>two-sample z-test<idx><h>inference</h><h>two-sample z-test</h></idx></term> statistic</p>
+
+    <me>
+      z=\frac{(\overline{x}_1-\overline{x}_2)-D_0}
+      {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}},
+    </me>
+
+    <p>where <m>D_0</m> is the difference claimed by the null hypothesis. For the common null hypothesis <m>H_0:\mu_1-\mu_2=0</m>, this becomes</p>
+
+    <me>
+      z=\frac{\overline{x}_1-\overline{x}_2}
+      {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}.
+    </me>
+
+    <table xml:id="tbl-two-sample-mean-test-pieces">
+      <title>Pieces of a large-sample two-sample mean test</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Piece</cell>
+          <cell>Meaning</cell>
+        </row>
+        <row>
+          <cell>sample difference</cell>
+          <cell>observed gap</cell>
+        </row>
+        <row>
+          <cell><m>D_0</m></cell>
+          <cell>null value</cell>
+        </row>
+        <row>
+          <cell>standard error</cell>
+          <cell>estimated spread</cell>
+        </row>
+        <row bottom="major">
+          <cell><m>z</m></cell>
+          <cell>standardized distance</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>As usual, the z statistic tells us how far the observed result is from the null value, measured in standard errors. A large positive z-value supports an alternative such as <m>\mu_1-\mu_2&gt;0</m>. A large negative z-value supports an alternative such as <m>\mu_1-\mu_2&lt;0</m>. Values far from 0 in either direction support a two-tailed alternative.</p>
+
+    <p>The main conditions are that the two samples are random or otherwise representative, the two samples are independent of each other, and both sample sizes are large enough for the CLT to make the sample means approximately normal. A common rule of thumb is that both <m>n_1</m> and <m>n_2</m> should be at least 30, though strongly skewed populations may require larger samples.</p>
+
+    <example xml:id="ex-two-sample-mean-test-teaching">
+      <title>Comparing Two Teaching Methods</title>
+      <p>A department compares exam scores from two large independent classes. Method 1 has <m>n_1=64</m>, <m>\overline{x}_1=78</m>, and <m>s_1=10</m>. Method 2 has <m>n_2=49</m>, <m>\overline{x}_2=74</m>, and <m>s_2=9</m>. Test whether Method 1 has the higher mean score:</p>
+
+      <me>
+        H_0:\mu_1-\mu_2=0
+        \qquad\text{versus}\qquad
+        H_a:\mu_1-\mu_2&gt;0.
+      </me>
+
+      <p>The estimated standard error is</p>
+
+      <me>
+        \sqrt{\frac{10^2}{64}+\frac{9^2}{49}}
+        \approx 1.79.
+      </me>
+
+      <p>The observed difference is <m>78-74=4</m>, so</p>
+
+      <me>
+        z=\frac{4-0}{1.79}\approx 2.23.
+      </me>
+
+      <p>For a right-tailed test, the p-value is</p>
+
+      <me>
+        P(Z\ge 2.23)\approx 0.0129.
+      </me>
+
+      <p>At the 5% significance level, <m>0.0129&lt;0.05</m>, so we reject <m>H_0</m>. The sample gives evidence that Method 1 has the higher population mean exam score.</p>
+    </example>
+
+    <exercise xml:id="ht-inline-ex-two-sample-means">
+      <p>Two independent large samples give <m>n_1=50</m>, <m>\overline{x}_1=32.4</m>, <m>s_1=6.0</m>, and <m>n_2=60</m>, <m>\overline{x}_2=30.1</m>, <m>s_2=5.5</m>.</p>
+      <ol>
+        <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
+        <li><p>For <m>H_0:\mu_1-\mu_2=0</m>, compute the z statistic.</p></li>
+        <li><p>For <m>H_a:\mu_1-\mu_2&gt;0</m>, decide whether the result is significant at <m>\alpha=0.05</m>.</p></li>
+      </ol>
+    </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-two-sample-small-samples">
+      <title>Small Samples: A Two-Sample T-Test</title>
+
+      <p>When one or both samples are small, the same basic comparison is still natural:</p>
+
+      <me>
+        \text{observed difference} - \text{null difference}.
+      </me>
+
+      <p>So the numerator stays</p>
+
+      <me>
+        (\overline{x}_1-\overline{x}_2)-D_0.
+      </me>
+
+      <p>The standard error idea also stays the same. The spread of <m>\overline{X}_1-\overline{X}_2</m> comes from the spread of both sample means, so we still use</p>
+
+      <me>
+        \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}.
+      </me>
+
+      <p>The difference is the reference distribution. With large samples, replacing <m>\sigma_1</m> and <m>\sigma_2</m> by <m>s_1</m> and <m>s_2</m> barely changes the shape, so a standard normal model works well. With small samples, that extra uncertainty matters more. The test statistic</p>
+
+      <me>
+        t=\frac{(\overline{x}_1-\overline{x}_2)-D_0}
+        {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
+      </me>
+
+      <p>is compared with a t distribution instead of a standard normal distribution.</p>
+
+      <p>There is one complication: this statistic does not usually have a t distribution with a simple degree of freedom like <m>n_1+n_2-2</m>. Because the denominator uses two separate sample variances, the degrees of freedom are estimated. A common choice is the Welch approximation:</p>
+
+      <me>
+        df\approx
+        \frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}
+        {\frac{\left(s_1^2/n_1\right)^2}{n_1-1}
+        +\frac{\left(s_2^2/n_2\right)^2}{n_2-1}}.
+      </me>
+
+      <p>This formula looks unpleasant, but its purpose is reasonable: it adjusts the t curve for the fact that two sample standard deviations are being estimated, possibly from samples of different sizes and different spreads. In practice, technology usually computes the degrees of freedom. The important idea is that small samples need a t reference curve because the estimated standard error is less stable.</p>
+
+      <p>This method is often called <term>Welch's two-sample t-test<idx><h>inference</h><h>Welch's two-sample t-test</h></idx></term>. It is a good default because it does not require us to assume the two population variances are equal.</p>
+
+      <p>The conditions are stricter than in the large-sample case. The samples should be random or otherwise representative, the two samples should be independent of each other, and each population distribution should be approximately normal or at least not strongly skewed with serious outliers. For very small samples, the normality condition matters a lot.</p>
+
+      <example xml:id="ex-two-sample-small-t-test">
+        <title>Comparing Two Small Samples</title>
+        <p>A tutor compares quiz scores from two small independent groups. Group 1 has <m>n_1=12</m>, <m>\overline{x}_1=84</m>, and <m>s_1=6</m>. Group 2 has <m>n_2=10</m>, <m>\overline{x}_2=79</m>, and <m>s_2=7</m>. Test whether the first group has the higher population mean score:</p>
+
+        <me>
+          H_0:\mu_1-\mu_2=0
+          \qquad\text{versus}\qquad
+          H_a:\mu_1-\mu_2&gt;0.
+        </me>
+
+        <p>The estimated standard error is</p>
+
+        <me>
+          \sqrt{\frac{6^2}{12}+\frac{7^2}{10}}
+          =\sqrt{7.9}\approx 2.81.
+        </me>
+
+        <p>The test statistic is</p>
+
+        <me>
+          t=\frac{(84-79)-0}{2.81}\approx 1.78.
+        </me>
+
+        <p>Using the Welch formula gives about <m>df=18</m>. For a right-tailed test, technology gives</p>
+
+        <me>
+          \text{p-value}\approx P(T\ge 1.78)\approx 0.046.
+        </me>
+
+        <p>At the 5% significance level, this is just small enough to reject <m>H_0</m>. The sample gives some evidence that the first group has the higher population mean score, assuming the small-sample conditions are reasonable.</p>
+      </example>
+
+      <exercise xml:id="ht-inline-ex-two-sample-small-t">
+        <p>Two independent small samples give <m>n_1=9</m>, <m>\overline{x}_1=42.1</m>, <m>s_1=4.2</m>, and <m>n_2=11</m>, <m>\overline{x}_2=38.7</m>, <m>s_2=5.1</m>.</p>
+        <ol>
+          <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
+          <li><p>For <m>H_0:\mu_1-\mu_2=0</m>, compute the t statistic.</p></li>
+          <li><p>Why should this statistic be compared with a t distribution rather than a standard normal distribution?</p></li>
+        </ol>
+      </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-two-sample-choosing-method">
+      <title>Choosing a Two-Sample Mean Test</title>
+
+    <activity xml:id="act-ch11-two-sample-mean-setup">
+      <title>Two Groups, One Difference</title>
+      <introduction>
+        <p>Practice setting up a two-sample test before doing calculations.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>A counselor compares mean weekly study hours for students who use tutoring and students who do not. Identify <m>\mu_1</m>, <m>\mu_2</m>, and the parameter <m>\mu_1-\mu_2</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write null and alternative hypotheses for testing whether the tutoring group has a higher mean study time.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>List the conditions you would check before deciding whether a large-sample z-test or a small-sample t-test is appropriate.</p>
+        </statement>
+      </task>
+    </activity>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-paired-sample-mean-tests">
+    <title>Paired-Sample Tests for a Mean Difference</title>
+
+    <introduction>
+      <p>Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are <term>paired data<idx><h>inference</h><h>paired data</h></idx></term>, and treating the two columns as independent samples would throw away useful information.</p>
+
+      <p>The fix is simple: subtract within each pair first. If the paired observations are</p>
+
+      <me>
+        (x_1,y_1), (x_2,y_2),\ldots,(x_n,y_n),
+      </me>
+
+      <p>define the individual differences</p>
+
+      <me>
+        d_i=x_i-y_i.
+      </me>
+
+      <p>Now the parameter is the population mean difference <m>\mu_d</m>. The usual null hypothesis is</p>
+
+      <me>
+        H_0:\mu_d=0,
+      </me>
+
+      <p>which says there is no average difference between the two paired measurements. More generally, we may test <m>H_0:\mu_d=d_0</m>.</p>
+    </introduction>
+
+    <subsection xml:id="subsec-paired-large-samples">
+      <title>Large Samples: A Z-Test on Differences</title>
+
+      <p>Once we form the differences, this is just a one-sample problem. The sample mean of the differences is</p>
+
+      <me>
+        \overline{d}=\frac{d_1+d_2+\cdots+d_n}{n},
+      </me>
+
+      <p>and the sample standard deviation of the differences is <m>s_d</m>. For large <m>n</m>, the CLT says that <m>\overline{D}</m> is approximately normal with mean <m>\mu_d</m> and standard deviation <m>\sigma_d/\sqrt{n}</m>. Since <m>\sigma_d</m> is usually unknown, we estimate it with <m>s_d</m>.</p>
+
+      <p>That gives the large-sample paired z statistic</p>
+
+      <me>
+        z=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
+      </me>
+
+      <p>For the common null hypothesis <m>H_0:\mu_d=0</m>, this becomes</p>
+
+      <me>
+        z=\frac{\overline{d}}{s_d/\sqrt{n}}
+        =\frac{\overline{d}\sqrt{n}}{s_d}.
+      </me>
+
+      <p>This formula has the same shape as every other test statistic in this chapter: observed estimate minus null value, divided by its estimated standard error. The only new step is that the observed estimate is the mean of the within-pair differences, not the difference between two independent sample means.</p>
+
+      <example xml:id="ex-paired-large-sample-commute">
+        <title>A Large-Sample Paired Test</title>
+        <p>A transit planner records commute times for 40 riders before and after a route change. For each rider, let <m>d=\text{before}-\text{after}</m>, so positive differences mean the commute became shorter. The sample has <m>\overline{d}=3.2</m> minutes and <m>s_d=9.0</m> minutes. Test whether the route change reduced average commute time:</p>
+
+        <me>
+          H_0:\mu_d=0
+          \qquad\text{versus}\qquad
+          H_a:\mu_d&gt;0.
+        </me>
+
+        <p>Because the sample of differences is large, we use</p>
+
+        <me>
+          z=\frac{3.2-0}{9.0/\sqrt{40}}\approx 2.25.
+        </me>
+
+        <p>The right-tailed p-value is <m>P(Z\ge 2.25)\approx 0.0122</m>. At the 5% significance level, we reject <m>H_0</m>. The paired data give evidence that the route change reduced the mean commute time.</p>
+      </example>
+
+      <exercise xml:id="ht-inline-ex-paired-large">
+        <p>A large paired sample has <m>n=50</m>, <m>\overline{d}=1.8</m>, and <m>s_d=6.5</m>. Test <m>H_0:\mu_d=0</m> against <m>H_a:\mu_d&gt;0</m>.</p>
+        <ol>
+          <li><p>Compute the estimated standard error of <m>\overline{d}</m>.</p></li>
+          <li><p>Compute the z statistic.</p></li>
+          <li><p>State whether the result is significant at <m>\alpha=0.05</m>.</p></li>
+        </ol>
+      </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-paired-small-samples">
+      <title>Small Samples: A Paired T-Test</title>
+
+      <p>For small paired samples, we still subtract within each pair and test the mean of the differences. The statistic is</p>
+
+      <me>
+        t=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
+      </me>
+
+      <p>For <m>H_0:\mu_d=0</m>, this is</p>
+
+      <me>
+        t=\frac{\overline{d}\sqrt{n}}{s_d}.
+      </me>
+
+      <p>The reason for the t distribution is the same as in a one-sample t-test. With a small sample, <m>s_d</m> is a noisy estimate of the true standard deviation of the differences, so the standardized statistic has heavier tails than the standard normal curve. Since there are <m>n</m> differences, the degrees of freedom are</p>
+
+      <me>
+        df=n-1.
+      </me>
+
+      <p>This is called a <term>paired-sample t-test<idx><h>inference</h><h>paired-sample t-test</h></idx></term>. It is not a two-sample t-test. After forming the differences, we have one sample: <m>d_1,\ldots,d_n</m>.</p>
+
+      <p>The conditions are that the pairs are randomly selected or otherwise representative, the pairs are independent of each other, and the distribution of differences is approximately normal. For larger samples, the CLT makes the normality condition less strict. For small samples, strong skewness or serious outliers in the differences can make the paired t-test unreliable.</p>
+
+      <example xml:id="ex-paired-small-sample-blood-pressure">
+        <title>A Small-Sample Paired T-Test</title>
+        <p>A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let <m>d=\text{before}-\text{after}</m>, so positive differences mean blood pressure decreased. The differences have <m>\overline{d}=4.6</m> and <m>s_d=5.8</m>. Test whether the exercise lowers the mean blood pressure:</p>
+
+        <me>
+          H_0:\mu_d=0
+          \qquad\text{versus}\qquad
+          H_a:\mu_d&gt;0.
+        </me>
+
+        <p>The test statistic is</p>
+
+        <me>
+          t=\frac{4.6-0}{5.8/\sqrt{10}}\approx 2.51.
+        </me>
+
+        <p>There are <m>df=10-1=9</m> degrees of freedom. For a right-tailed test, technology gives a p-value of about <m>0.017</m>. At the 5% significance level, we reject <m>H_0</m>. The sample gives evidence that the exercise lowers mean systolic blood pressure, assuming the differences are reasonably close to normal.</p>
+      </example>
+
+      <exercise xml:id="ht-inline-ex-paired-small">
+        <p>For a small paired study, the differences have <m>n=12</m>, <m>\overline{d}=-2.4</m>, and <m>s_d=3.6</m>.</p>
+        <ol>
+          <li><p>Compute the paired t statistic for <m>H_0:\mu_d=0</m>.</p></li>
+          <li><p>Find the degrees of freedom.</p></li>
+          <li><p>If the alternative is <m>H_a:\mu_d&lt;0</m>, explain what a negative t statistic means in context.</p></li>
+        </ol>
+      </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-paired-or-independent">
+      <title>Paired or Independent?</title>
+
+      <p>The choice between a paired test and an independent two-sample test is not about sample size. It is about how the data were collected. If each observation in one group is naturally linked to one observation in the other group, use the paired differences. If the two groups are separate and unrelated, use an independent two-sample test.</p>
+
+      <activity xml:id="act-ch11-paired-or-independent">
+        <title>Paired or Independent?</title>
+        <introduction>
+          <p>Decide whether a study should use paired differences or two independent samples.</p>
+        </introduction>
+        <task>
+          <statement>
+            <p>Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>For the paired case, define a useful difference <m>d</m> and write the hypotheses for testing whether the second measurement is higher on average.</p>
+          </statement>
+        </task>
+      </activity>
+    </subsection>
+  </section>
+
   <section xml:id="sec-one-proportion-tests">
     <title>Tests for a Population Proportion</title>
 
@@ -1039,6 +1486,11 @@
       <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
       <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
       <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
+      <li><p>For large independent samples, <m>\overline{X}_1-\overline{X}_2</m> is approximately normal with mean <m>\mu_1-\mu_2</m> and variance <m>\sigma_1^2/n_1+\sigma_2^2/n_2</m>.</p></li>
+      <li><p>A large-sample two-sample z-test for <m>H_0:\mu_1-\mu_2=D_0</m> uses <m>z=((\overline{x}_1-\overline{x}_2)-D_0)/\sqrt{s_1^2/n_1+s_2^2/n_2}</m>.</p></li>
+      <li><p>For small independent samples, the same standardized difference is compared with a t distribution, often using Welch's approximate degrees of freedom.</p></li>
+      <li><p>For paired data, first form differences <m>d_i=x_i-y_i</m>, then test the mean difference <m>\mu_d</m> as a one-sample mean problem.</p></li>
+      <li><p>A paired-sample t-test uses <m>t=(\overline{d}-d_0)/(s_d/\sqrt{n})</m> with <m>df=n-1</m>; when <m>d_0=0</m>, this is <m>t=\overline{d}\sqrt{n}/s_d</m>.</p></li>
       <li><p>A one-proportion z-test uses <m>z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}</m> when the expected numbers of successes and failures under <m>H_0</m> are large enough.</p></li>
       <li><p>Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.</p></li>
       <li><p>A chi-square test for variance uses <m>\chi^2=(n-1)s^2/\sigma_0^2</m> when the population is normal.</p></li>
@@ -1089,6 +1541,55 @@
         <li><p>Explain why large positive z-values count as evidence against <m>H_0</m>.</p></li>
         <li><p>Explain why the rejection region has the form <m>z&gt;z_{\alpha}</m>.</p></li>
         <li><p>Explain why the rule <m>z&gt;z_{\alpha}</m> is equivalent to the rule p-value <m>&lt;\alpha</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-12">
+      <p>Two independent large samples give <m>n_1=80</m>, <m>\overline{x}_1=15.2</m>, <m>s_1=4.0</m>, and <m>n_2=75</m>, <m>\overline{x}_2=13.9</m>, <m>s_2=3.5</m>.</p>
+      <ol>
+        <li><p>Write the hypotheses for testing whether the first population mean is greater than the second.</p></li>
+        <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
+        <li><p>Compute the z statistic for <m>H_0:\mu_1-\mu_2=0</m>.</p></li>
+        <li><p>State the conclusion at the 5% significance level.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-13">
+      <p>Explain why, for large independent samples, the statistic <m>\overline{X}_1-\overline{X}_2</m> is approximately normal with variance <m>\sigma_1^2/n_1+\sigma_2^2/n_2</m>.</p>
+      <ol>
+        <li><p>Which theorem explains why each sample mean is approximately normal?</p></li>
+        <li><p>Why is the mean of the difference <m>\mu_1-\mu_2</m>?</p></li>
+        <li><p>Why do the variances add instead of subtract?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-14">
+      <p>Two independent small samples give <m>n_1=8</m>, <m>\overline{x}_1=27.5</m>, <m>s_1=3.4</m>, and <m>n_2=10</m>, <m>\overline{x}_2=24.9</m>, <m>s_2=4.1</m>.</p>
+      <ol>
+        <li><p>Write hypotheses for testing whether the first population mean is greater than the second.</p></li>
+        <li><p>Compute the estimated standard error and the two-sample t statistic.</p></li>
+        <li><p>Explain why a t distribution is used instead of the standard normal distribution.</p></li>
+        <li><p>State the small-sample conditions that should be checked before trusting the test.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-15">
+      <p>A study records resting heart rate for 36 students before and after a four-week exercise program. Let <m>d=\text{before}-\text{after}</m>. The sample of differences has <m>\overline{d}=2.6</m> beats per minute and <m>s_d=7.8</m> beats per minute.</p>
+      <ol>
+        <li><p>Explain why this is a paired-sample problem.</p></li>
+        <li><p>Write hypotheses for testing whether the program lowers mean resting heart rate.</p></li>
+        <li><p>Compute the large-sample paired z statistic.</p></li>
+        <li><p>At <m>\alpha=0.05</m>, state the conclusion in context.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-16">
+      <p>Eight students take a short skills test before and after a workshop. Let <m>d=\text{after}-\text{before}</m>. The differences have <m>\overline{d}=5.5</m> points and <m>s_d=6.2</m> points.</p>
+      <ol>
+        <li><p>Write hypotheses for testing whether the workshop improves the mean score.</p></li>
+        <li><p>Compute the paired t statistic.</p></li>
+        <li><p>Find the degrees of freedom.</p></li>
+        <li><p>State the condition about the distribution of differences that matters most for this small sample.</p></li>
       </ol>
     </exercise>
 

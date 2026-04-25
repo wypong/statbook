@@ -5,7 +5,7 @@
 
   <introduction>
     <p>Up to this point, we have mostly summarized data that has already been collected. Probability asks a different question: what might happen before the data is observed? If we flip a coin, draw a card, or count the number of customers who arrive in the next hour, we do not know the outcome in advance, but we can still talk sensibly about the possible outcomes and how likely they are.</p>
-    <p>In this chapter we build the basic language of <term>probability<idx><h>probability</h><h>basic probability</h></idx></term>. We begin with sample spaces and events, then study the main probability rules, and finally look at conditional probability and independence.</p>
+    <p>In this chapter we build the basic language of <term>probability<idx><h>probability</h><h>basic probability</h></idx></term>. We begin with sample spaces and events, then study the main probability rules, and finally look at conditional probability, contingency tables, and independence.</p>
   </introduction>
 
   <section xml:id="sec-sample-spaces-events">
@@ -253,143 +253,242 @@
   <section xml:id="sec-conditional-probability">
     <title>Conditional Probability and Independence</title>
 
-    <p>Sometimes the probability of an event changes once we learn extra information. That idea leads to <term>conditional probability<idx><h>probability</h><h>conditional probability</h></idx></term>.</p>
+    <introduction>
+      <p>Sometimes the probability of an event changes once we learn extra information. That idea leads to <term>conditional probability<idx><h>probability</h><h>conditional probability</h></idx></term>. In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.</p>
+    </introduction>
 
-    <p>The probability of <m>B</m> given <m>A</m> is written <m>P(B\mid A)</m>. It means the probability that the outcome is in <m>B</m> once we already know the outcome is in <m>A</m>. If <m>P(A)\ne 0</m>, then</p>
+    <subsection xml:id="subsec-conditional-probability-formula">
+      <title>Conditional Probability</title>
 
-    <me>
-      P(B\mid A)=\frac{P(A\cap B)}{P(A)}.
-    </me>
+      <p>The probability of <m>B</m> given <m>A</m> is written <m>P(B\mid A)</m>. It means the probability that the outcome is in <m>B</m> once we already know the outcome is in <m>A</m>. If <m>P(A)\ne 0</m>, then</p>
 
-    <p>This formula can be rearranged into the <term>multiplication rule<idx><h>probability</h><h>multiplication rule</h></idx></term>:</p>
-
-    <me>
-      P(A\cap B)=P(B\mid A)P(A).
-    </me>
-
-    <example xml:id="ex-conditional-die">
-      <title>Conditional Probability on a Die Roll</title>
-      <p>Suppose a fair die is rolled. Let <m>A=\{1,3,5\}</m> be the event “the outcome is odd,” and let <m>B=\{3,4,5\}</m>.</p>
-      <p>Without extra information,</p>
       <me>
-        P(B)=\frac{3}{6}=\frac{1}{2}.
+        P(B\mid A)=\frac{P(A\cap B)}{P(A)}.
       </me>
-      <p>But if we know the outcome is in <m>A</m>, then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in <m>B</m>. So</p>
+
+      <p>This formula can be rearranged into the <term>multiplication rule<idx><h>probability</h><h>multiplication rule</h></idx></term>:</p>
+
       <me>
-        P(B\mid A)=\frac{2}{3}.
+        P(A\cap B)=P(B\mid A)P(A).
       </me>
-      <p>Using the formula gives the same answer:</p>
+
+      <example xml:id="ex-conditional-die">
+        <title>Conditional Probability on a Die Roll</title>
+        <p>Suppose a fair die is rolled. Let <m>A=\{1,3,5\}</m> be the event “the outcome is odd,” and let <m>B=\{3,4,5\}</m>.</p>
+        <p>Without extra information,</p>
+        <me>
+          P(B)=\frac{3}{6}=\frac{1}{2}.
+        </me>
+        <p>But if we know the outcome is in <m>A</m>, then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in <m>B</m>. So</p>
+        <me>
+          P(B\mid A)=\frac{2}{3}.
+        </me>
+        <p>Using the formula gives the same answer:</p>
+        <me>
+          P(B\mid A)=\frac{P(A\cap B)}{P(A)}=\frac{2/6}{3/6}=\frac{2}{3}.
+        </me>
+      </example>
+
+      <activity xml:id="act-ch6-conditional-die">
+        <title>Conditional Probability with a Die</title>
+        <introduction>
+          <p>Use a die roll to practice the conditional probability formula and the multiplication rule.</p>
+        </introduction>
+        <task>
+          <statement>
+            <p>Let <m>A</m> be the event “the outcome is odd” and let <m>B</m> be the event “the outcome is greater than 2.” Find <m>P(B\mid A)</m>.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>Find <m>P(A\mid B)</m> for the same events.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>Use the multiplication rule to find <m>P(A\cap B)</m> and check that it matches the direct count.</p>
+          </statement>
+        </task>
+      </activity>
+
+      <activity xml:id="act-ch6-card-sample-conditional">
+        <title>Conditional Probability with a Card Sample</title>
+        <introduction>
+          <p>Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.</p>
+        </introduction>
+        <task>
+          <statement>
+            <p>Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.</p>
+          </statement>
+        </task>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="subsec-independence">
+      <title>Independence</title>
+
+      <p>Two events <m>A</m> and <m>B</m> are <term>independent<idx><h>probability</h><h>independent events</h></idx></term> if knowing that one occurred does not change the probability of the other. In symbols, independence means</p>
+
       <me>
-        P(B\mid A)=\frac{P(A\cap B)}{P(A)}=\frac{2/6}{3/6}=\frac{2}{3}.
+        P(B\mid A)=P(B),
       </me>
-    </example>
 
-    <p>Two events <m>A</m> and <m>B</m> are <term>independent<idx><h>probability</h><h>independent events</h></idx></term> if knowing that one occurred does not change the probability of the other. In symbols, independence means</p>
+      <p>which is equivalent to</p>
 
-    <me>
-      P(B\mid A)=P(B),
-    </me>
-
-    <p>which is equivalent to</p>
-
-    <me>
-      P(A\cap B)=P(A)P(B).
-    </me>
-
-    <example xml:id="ex-independent-die">
-      <title>Checking Independence</title>
-      <p>Let <m>A=\{1,3,5\}</m> be the event “the die shows an odd number,” and let <m>B=\{1,2,3,4\}</m> be the event “the die shows a number at most 4.”</p>
-      <p>Then</p>
       <me>
-        P(A)=\frac{3}{6}=\frac{1}{2}
-        \qquad\text{and}\qquad
-        P(B)=\frac{4}{6}=\frac{2}{3}.
+        P(A\cap B)=P(A)P(B).
       </me>
-      <p>The intersection is <m>A\cap B=\{1,3\}</m>, so</p>
+
+      <example xml:id="ex-independent-die">
+        <title>Checking Independence</title>
+        <p>Let <m>A=\{1,3,5\}</m> be the event “the die shows an odd number,” and let <m>B=\{1,2,3,4\}</m> be the event “the die shows a number at most 4.”</p>
+        <p>Then</p>
+        <me>
+          P(A)=\frac{3}{6}=\frac{1}{2}
+          \qquad\text{and}\qquad
+          P(B)=\frac{4}{6}=\frac{2}{3}.
+        </me>
+        <p>The intersection is <m>A\cap B=\{1,3\}</m>, so</p>
+        <me>
+          P(A\cap B)=\frac{2}{6}=\frac{1}{3}.
+        </me>
+        <p>Because</p>
+        <me>
+          P(A)P(B)=\frac{1}{2}\cdot\frac{2}{3}=\frac{1}{3}=P(A\cap B),
+        </me>
+        <p>the events are independent.</p>
+      </example>
+
+      <p>It is important not to mix up independence and mutual exclusivity. They are different ideas.</p>
+
+      <ul>
+        <li><p>Mutually exclusive events cannot happen together.</p></li>
+        <li><p>Independent events can happen together, but one does not affect the probability of the other.</p></li>
+      </ul>
+
+      <p>If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product <m>P(A)P(B)</m> is positive.</p>
+
+      <activity xml:id="act-ch6-independence-check">
+        <title>Independent or Not?</title>
+        <introduction>
+          <p>Decide whether pairs of events are independent, mutually exclusive, or neither.</p>
+        </introduction>
+        <task>
+          <statement>
+            <p>For a fair die, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Decide whether the events are independent.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>For the same die, let <m>C</m> be the event “the outcome is 1” and let <m>D</m> be the event “the outcome is 6.” Decide whether the events are mutually exclusive.</p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>Explain in one or two sentences why independence and mutual exclusivity are different ideas.</p>
+          </statement>
+        </task>
+      </activity>
+    </subsection>
+
+    <subsection xml:id="subsec-contingency-tables">
+      <title>Contingency Tables</title>
+
+      <p>A <term>contingency table<idx><h>tables</h><h>contingency table</h></idx></term>, also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.</p>
+
+      <p>The counts inside the table are <term>joint frequencies<idx><h>tables</h><h>joint frequency</h></idx></term> because each count belongs to a combination of two categories. The totals along the edges are <term>marginal totals<idx><h>tables</h><h>marginal total</h></idx></term>. The grand total is the total number of observations.</p>
+
+      <example xml:id="ex-contingency-table-commute">
+        <title>Conditional Probability from a Contingency Table</title>
+        <p>A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in <xref ref="tbl-commute-contingency"/>.</p>
+      </example>
+
+      <table xml:id="tbl-commute-contingency">
+        <title>Commute length and public transportation use</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Public transit</cell>
+            <cell>No transit</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>At least 30 min</cell>
+            <cell>18</cell>
+            <cell>22</cell>
+            <cell>40</cell>
+          </row>
+          <row>
+            <cell>Under 30 min</cell>
+            <cell>12</cell>
+            <cell>28</cell>
+            <cell>40</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>30</cell>
+            <cell>50</cell>
+            <cell>80</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Let <m>L</m> be the event “the commute is at least 30 minutes” and let <m>T</m> be the event “the student uses public transportation.” From the table,</p>
+
       <me>
-        P(A\cap B)=\frac{2}{6}=\frac{1}{3}.
+        P(L)=\frac{40}{80},\qquad
+        P(T)=\frac{30}{80},\qquad
+        P(L\cap T)=\frac{18}{80}.
       </me>
-      <p>Because</p>
+
+      <p>To find <m>P(T\mid L)</m>, restrict attention to the row for commutes at least 30 minutes. Out of those 40 students, 18 use public transportation, so</p>
+
       <me>
-        P(A)P(B)=\frac{1}{2}\cdot\frac{2}{3}=\frac{1}{3}=P(A\cap B),
+        P(T\mid L)=\frac{18}{40}=0.45.
       </me>
-      <p>the events are independent.</p>
-    </example>
 
-    <p>It is important not to mix up independence and mutual exclusivity. They are different ideas.</p>
+      <p>To find <m>P(L\mid T)</m>, restrict attention to the column for public transportation. Out of those 30 students, 18 have commutes at least 30 minutes, so</p>
 
-    <ul>
-      <li><p>Mutually exclusive events cannot happen together.</p></li>
-      <li><p>Independent events can happen together, but one does not affect the probability of the other.</p></li>
-    </ul>
+      <me>
+        P(L\mid T)=\frac{18}{30}=0.60.
+      </me>
 
-    <p>If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product <m>P(A)P(B)</m> is positive.</p>
+      <p>This is a good reminder that <m>P(T\mid L)</m> and <m>P(L\mid T)</m> usually answer different questions. The condition tells us which row or column becomes the new total.</p>
 
-    <activity xml:id="act-ch6-conditional-die">
-      <title>Conditional Probability with a Die</title>
+      <p>Contingency tables also help us check independence. In this example, <m>P(T)=30/80=0.375</m>, but <m>P(T\mid L)=0.45</m>. Since knowing that the commute is at least 30 minutes changes the probability that a student uses public transportation, the events <m>L</m> and <m>T</m> are not independent.</p>
+
+    <activity xml:id="act-ch6-contingency-table">
+      <title>Reading a Contingency Table</title>
       <introduction>
-        <p>Use a die roll to practice the conditional probability formula and the multiplication rule.</p>
+        <p>Use a two-way table to compute conditional probabilities and check whether two events appear independent.</p>
       </introduction>
       <task>
         <statement>
-          <p>Let <m>A</m> be the event “the outcome is odd” and let <m>B</m> be the event “the outcome is greater than 2.” Find <m>P(B\mid A)</m>.</p>
+          <p>Use <xref ref="tbl-commute-contingency"/> to find the probability that a randomly selected student uses public transportation.</p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>Find <m>P(A\mid B)</m> for the same events.</p>
+          <p>Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.</p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>Use the multiplication rule to find <m>P(A\cap B)</m> and check that it matches the direct count.</p>
+          <p>Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?</p>
         </statement>
       </task>
     </activity>
-
-    <activity xml:id="act-ch6-card-sample-conditional">
-      <title>Conditional Probability with a Card Sample</title>
-      <introduction>
-        <p>Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.</p>
-      </introduction>
-      <task>
-        <statement>
-          <p>Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.</p>
-        </statement>
-      </task>
-    </activity>
-
-    <activity xml:id="act-ch6-independence-check">
-      <title>Independent or Not?</title>
-      <introduction>
-        <p>Decide whether pairs of events are independent, mutually exclusive, or neither.</p>
-      </introduction>
-      <task>
-        <statement>
-          <p>For a fair die, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Decide whether the events are independent.</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>For the same die, let <m>C</m> be the event “the outcome is 1” and let <m>D</m> be the event “the outcome is 6.” Decide whether the events are mutually exclusive.</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Explain in one or two sentences why independence and mutual exclusivity are different ideas.</p>
-        </statement>
-      </task>
-    </activity>
+    </subsection>
   </section>
 
   <conclusion>
@@ -404,6 +503,7 @@
       <li><p>For equally likely outcomes, <m>P(A)=|A|/|S|</m>.</p></li>
       <li><p>In general, <m>P(A^c)=1-P(A)</m> and <m>P(A\cup B)=P(A)+P(B)-P(A\cap B)</m>.</p></li>
       <li><p>Conditional probability is given by <m>P(B\mid A)=P(A\cap B)/P(A)</m>.</p></li>
+      <li><p>A contingency table organizes joint frequencies and marginal totals, which makes it easier to compute conditional probabilities from categorical data.</p></li>
       <li><p>Independent events satisfy <m>P(A\cap B)=P(A)P(B)</m>.</p></li>
       <li><p>Mutually exclusive and independent are not the same thing.</p></li>
     </ul>
@@ -470,6 +570,44 @@
 
     <exercise xml:id="ch6-ex-7">
       <p>Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.</p>
+    </exercise>
+
+    <exercise xml:id="ch6-ex-8">
+      <p>A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.</p>
+      <table xml:id="tbl-ch6-ex-work-online">
+        <title>Work schedule and online classes</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Online class</cell>
+            <cell>No online class</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>Works at least 10 hours</cell>
+            <cell>32</cell>
+            <cell>18</cell>
+            <cell>50</cell>
+          </row>
+          <row>
+            <cell>Works under 10 hours</cell>
+            <cell>20</cell>
+            <cell>30</cell>
+            <cell>50</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>52</cell>
+            <cell>48</cell>
+            <cell>100</cell>
+          </row>
+        </tabular>
+      </table>
+      <ol>
+        <li><p>Find the probability that a randomly selected student is taking an online class.</p></li>
+        <li><p>Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.</p></li>
+        <li><p>Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.</p></li>
+      </ol>
     </exercise>
   </exercises>
 </chapter>
