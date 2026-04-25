@@ -129,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-one-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-hypothesis-testing.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-one-variance-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-paired-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-hypothesis-testing.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-one-variance-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -203,7 +203,14 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-conditional-probability.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Conditional Probability and Independence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conditional-probability.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Conditional Probability and Independence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-conditional-probability-formula" class="internal"><span class="title">Conditional Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-independence" class="internal"><span class="title">Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-contingency-tables" class="internal"><span class="title">Contingency Tables</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -252,9 +259,25 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-two-sample-mean-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Two-Sample Tests for the Difference of Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-large-samples" class="internal"><span class="title">Large Samples: A Two-Sample Z-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-small-samples" class="internal"><span class="title">Small Samples: A Two-Sample T-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-choosing-method" class="internal"><span class="title">Choosing a Two-Sample Mean Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Paired-Sample Tests for a Mean Difference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-large-samples" class="internal"><span class="title">Large Samples: A Z-Test on Differences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-small-samples" class="internal"><span class="title">Small Samples: A Paired T-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-or-independent" class="internal"><span class="title">Paired or Independent?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -288,7 +311,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec-one-proportion-tests">
 <h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tests for a Population Proportion</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tests for a Population Proportion</span>
 </h2>
 <div class="para" id="sec-one-proportion-tests-2">This section is the testing counterpart to <a href="sec-confidence-intervals-proportion.html" class="internal" title="Section 10.3: Confidence Intervals for a Population Proportion">Section 10.3</a>. The setup is the same: each observation is a success or failure, the population proportion of success is <span class="process-math">\(p\text{,}\)</span> and the sample proportion is <span class="process-math">\(\widehat{p}=X/n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-one-proportion-tests-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -350,7 +373,7 @@ z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}.
 <div class="para" id="sec-one-proportion-tests-15">As before, reject <span class="process-math">\(H_0\)</span> when the p-value is less than the chosen significance level <span class="process-math">\(\alpha\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-one-proportion-tests-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-one-proportion-defect-test" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing a Claimed Defect Rate.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing a Claimed Defect Rate.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-one-proportion-defect-test-2">A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?<div class="autopermalink" data-description="Paragraph"><a href="#ex-one-proportion-defect-test-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -396,10 +419,10 @@ P(Z\ge 2.58)\approx 0.0049.
 </div>
 <div class="para" id="ex-one-proportion-defect-test-13">Since <span class="process-math">\(0.0049&lt;0.05\text{,}\)</span> we reject <span class="process-math">\(H_0\text{.}\)</span> The sample gives strong evidence that the defect rate is greater than 4%.<div class="autopermalink" data-description="Paragraph"><a href="#ex-one-proportion-defect-test-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 11.4.1: Testing a Claimed Defect Rate"><a href="#ex-one-proportion-defect-test" title="Copy heading and permalink for Example 11.4.1: Testing a Claimed Defect Rate" aria-label="Copy heading and permalink for Example 11.4.1: Testing a Claimed Defect Rate">🔗</a></div>
+<div class="autopermalink" data-description="Example 11.6.1: Testing a Claimed Defect Rate"><a href="#ex-one-proportion-defect-test" title="Copy heading and permalink for Example 11.6.1: Testing a Claimed Defect Rate" aria-label="Copy heading and permalink for Example 11.6.1: Testing a Claimed Defect Rate">🔗</a></div>
 </article></details>
 <details id="ex-one-proportion-campus-plan" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing a Claimed Support Level.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Testing a Claimed Support Level.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-one-proportion-campus-plan-2">A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.<div class="autopermalink" data-description="Paragraph"><a href="#ex-one-proportion-campus-plan-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -445,12 +468,12 @@ z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
 </div>
 <div class="para" id="ex-one-proportion-campus-plan-13">Since <span class="process-math">\(0.0836&gt;0.05\text{,}\)</span> we fail to reject <span class="process-math">\(H_0\text{.}\)</span> At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.<div class="autopermalink" data-description="Paragraph"><a href="#ex-one-proportion-campus-plan-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 11.4.2: Testing a Claimed Support Level"><a href="#ex-one-proportion-campus-plan" title="Copy heading and permalink for Example 11.4.2: Testing a Claimed Support Level" aria-label="Copy heading and permalink for Example 11.4.2: Testing a Claimed Support Level">🔗</a></div>
+<div class="autopermalink" data-description="Example 11.6.2: Testing a Claimed Support Level"><a href="#ex-one-proportion-campus-plan" title="Copy heading and permalink for Example 11.6.2: Testing a Claimed Support Level" aria-label="Copy heading and permalink for Example 11.6.2: Testing a Claimed Support Level">🔗</a></div>
 </article></details>
 <div class="para" id="sec-one-proportion-tests-18">The connection with confidence intervals is worth noticing. If a hypothesized value <span class="process-math">\(p_0\)</span> sits far outside a confidence interval for <span class="process-math">\(p\text{,}\)</span> then it is also likely to be rejected by a hypothesis test at a matching significance level. So intervals and tests are two ways of looking at the same sample evidence.<div class="autopermalink" data-description="Paragraph"><a href="#sec-one-proportion-tests-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ht-inline-ex-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ht-inline-ex-3-1">A random sample of 160 customers finds that 68 used a self-checkout lane. Test <span class="process-math">\(H_0:p=0.50\)</span> against <span class="process-math">\(H_a:p&lt;0.50\)</span> at the 5% significance level.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -459,23 +482,23 @@ z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
 <li id="ht-inline-ex-3-2-1">
 <div class="para" id="ht-inline-ex-3-2-1-1">Compute the sample proportion.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 11.4.3.1"><a href="#ht-inline-ex-3-2-1" title="Copy heading and permalink for Item 11.4.3.1" aria-label="Copy heading and permalink for Item 11.4.3.1">🔗</a></div>
+<div class="autopermalink" data-description="Item 11.6.3.1"><a href="#ht-inline-ex-3-2-1" title="Copy heading and permalink for Item 11.6.3.1" aria-label="Copy heading and permalink for Item 11.6.3.1">🔗</a></div>
 </li>
 <li id="ht-inline-ex-3-2-2">
 <div class="para" id="ht-inline-ex-3-2-2-1">Check the large-sample conditions under the null hypothesis.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 11.4.3.2"><a href="#ht-inline-ex-3-2-2" title="Copy heading and permalink for Item 11.4.3.2" aria-label="Copy heading and permalink for Item 11.4.3.2">🔗</a></div>
+<div class="autopermalink" data-description="Item 11.6.3.2"><a href="#ht-inline-ex-3-2-2" title="Copy heading and permalink for Item 11.6.3.2" aria-label="Copy heading and permalink for Item 11.6.3.2">🔗</a></div>
 </li>
 <li id="ht-inline-ex-3-2-3">
 <div class="para" id="ht-inline-ex-3-2-3-1">Find the z statistic and state the conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 11.4.3.3"><a href="#ht-inline-ex-3-2-3" title="Copy heading and permalink for Item 11.4.3.3" aria-label="Copy heading and permalink for Item 11.4.3.3">🔗</a></div>
+<div class="autopermalink" data-description="Item 11.6.3.3"><a href="#ht-inline-ex-3-2-3" title="Copy heading and permalink for Item 11.6.3.3" aria-label="Copy heading and permalink for Item 11.6.3.3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Checkpoint 11.4.3"><a href="#ht-inline-ex-3" title="Copy heading and permalink for Checkpoint 11.4.3" aria-label="Copy heading and permalink for Checkpoint 11.4.3">🔗</a></div>
+<div class="autopermalink" data-description="Checkpoint 11.6.3"><a href="#ht-inline-ex-3" title="Copy heading and permalink for Checkpoint 11.6.3" aria-label="Copy heading and permalink for Checkpoint 11.6.3">🔗</a></div>
 </article></details>
 <article class="activity project-like" id="act-ch11-proportion-test-builder"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Run a Proportion Test.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Run a Proportion Test.</span>
 </h3>
 <div class="introduction" id="act-ch11-proportion-test-builder-2">
 <div class="para" id="act-ch11-proportion-test-builder-2-1">Carry out a one-proportion z-test from the claim to the final conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-proportion-test-builder-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -484,21 +507,21 @@ z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
 <article class="task exercise-like" id="act-ch11-proportion-test-builder-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-proportion-test-builder-3-1-1">A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test <span class="process-math">\(H_0:p=0.60\)</span> against <span class="process-math">\(H_a:p&gt;0.60\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-proportion-test-builder-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.1.a"><a href="#act-ch11-proportion-test-builder-3" title="Copy heading and permalink for Task 11.4.1.a" aria-label="Copy heading and permalink for Task 11.4.1.a">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.1.a"><a href="#act-ch11-proportion-test-builder-3" title="Copy heading and permalink for Task 11.6.1.a" aria-label="Copy heading and permalink for Task 11.6.1.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch11-proportion-test-builder-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-proportion-test-builder-4-1-1">Compute <span class="process-math">\(\widehat{p}\text{,}\)</span> check the null-model conditions, and find the z statistic.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-proportion-test-builder-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.1.b"><a href="#act-ch11-proportion-test-builder-4" title="Copy heading and permalink for Task 11.4.1.b" aria-label="Copy heading and permalink for Task 11.4.1.b">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.1.b"><a href="#act-ch11-proportion-test-builder-4" title="Copy heading and permalink for Task 11.6.1.b" aria-label="Copy heading and permalink for Task 11.6.1.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch11-proportion-test-builder-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch11-proportion-test-builder-5-1-1">At <span class="process-math">\(\alpha=0.05\text{,}\)</span> decide whether to reject <span class="process-math">\(H_0\)</span> and write the conclusion in context.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-proportion-test-builder-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.1.c"><a href="#act-ch11-proportion-test-builder-5" title="Copy heading and permalink for Task 11.4.1.c" aria-label="Copy heading and permalink for Task 11.4.1.c">🔗</a></div>
-</article><div class="autopermalink" data-description="Activity 11.4.1: Run a Proportion Test"><a href="#act-ch11-proportion-test-builder" title="Copy heading and permalink for Activity 11.4.1: Run a Proportion Test" aria-label="Copy heading and permalink for Activity 11.4.1: Run a Proportion Test">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.1.c"><a href="#act-ch11-proportion-test-builder-5" title="Copy heading and permalink for Task 11.6.1.c" aria-label="Copy heading and permalink for Task 11.6.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 11.6.1: Run a Proportion Test"><a href="#act-ch11-proportion-test-builder" title="Copy heading and permalink for Activity 11.6.1: Run a Proportion Test" aria-label="Copy heading and permalink for Activity 11.6.1: Run a Proportion Test">🔗</a></div>
 </article>
 <article class="activity project-like" id="act-ch11-test-and-interval-link"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Connect the Test and the Interval.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Connect the Test and the Interval.</span>
 </h3>
 <div class="introduction" id="act-ch11-test-and-interval-link-2">
 <div class="para" id="act-ch11-test-and-interval-link-2-1">Compare the logic of a one-proportion test with the matching confidence interval.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-test-and-interval-link-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -507,23 +530,23 @@ z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
 <article class="task exercise-like" id="act-ch11-test-and-interval-link-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-test-and-interval-link-3-1-1">Return to the campus sample with <span class="process-math">\(n=200\)</span> and <span class="process-math">\(\widehat{p}=0.54\text{.}\)</span> Use the interval method from <a href="sec-confidence-intervals-proportion.html" class="internal" title="Section 10.3: Confidence Intervals for a Population Proportion">Section 10.3</a> to build a 95% confidence interval for <span class="process-math">\(p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-test-and-interval-link-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.2.a"><a href="#act-ch11-test-and-interval-link-3" title="Copy heading and permalink for Task 11.4.2.a" aria-label="Copy heading and permalink for Task 11.4.2.a">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.2.a"><a href="#act-ch11-test-and-interval-link-3" title="Copy heading and permalink for Task 11.6.2.a" aria-label="Copy heading and permalink for Task 11.6.2.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch11-test-and-interval-link-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-test-and-interval-link-4-1-1">Does the claimed value <span class="process-math">\(p_0=0.60\)</span> fall inside that interval?<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-test-and-interval-link-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.2.b"><a href="#act-ch11-test-and-interval-link-4" title="Copy heading and permalink for Task 11.4.2.b" aria-label="Copy heading and permalink for Task 11.4.2.b">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.2.b"><a href="#act-ch11-test-and-interval-link-4" title="Copy heading and permalink for Task 11.6.2.b" aria-label="Copy heading and permalink for Task 11.6.2.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch11-test-and-interval-link-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="act-ch11-test-and-interval-link-5-1-1">Explain how that interval result matches the hypothesis-test conclusion from <a href="sec-one-proportion-tests.html#ex-one-proportion-campus-plan" class="xref" data-knowl="./knowl/xref/ex-one-proportion-campus-plan.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 11.4.2: Testing a Claimed Support Level">Example 11.4.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-test-and-interval-link-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="act-ch11-test-and-interval-link-5-1-1">Explain how that interval result matches the hypothesis-test conclusion from <a href="sec-one-proportion-tests.html#ex-one-proportion-campus-plan" class="xref" data-knowl="./knowl/xref/ex-one-proportion-campus-plan.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 11.6.2: Testing a Claimed Support Level">Example 11.6.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-test-and-interval-link-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 11.4.2.c"><a href="#act-ch11-test-and-interval-link-5" title="Copy heading and permalink for Task 11.4.2.c" aria-label="Copy heading and permalink for Task 11.4.2.c">🔗</a></div>
-</article><div class="autopermalink" data-description="Activity 11.4.2: Connect the Test and the Interval"><a href="#act-ch11-test-and-interval-link" title="Copy heading and permalink for Activity 11.4.2: Connect the Test and the Interval" aria-label="Copy heading and permalink for Activity 11.4.2: Connect the Test and the Interval">🔗</a></div>
-</article><div class="autopermalink" data-description="Section 11.4: Tests for a Population Proportion"><a href="#sec-one-proportion-tests" title="Copy heading and permalink for Section 11.4: Tests for a Population Proportion" aria-label="Copy heading and permalink for Section 11.4: Tests for a Population Proportion">🔗</a></div>
+<div class="autopermalink" data-description="Task 11.6.2.c"><a href="#act-ch11-test-and-interval-link-5" title="Copy heading and permalink for Task 11.6.2.c" aria-label="Copy heading and permalink for Task 11.6.2.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 11.6.2: Connect the Test and the Interval"><a href="#act-ch11-test-and-interval-link" title="Copy heading and permalink for Activity 11.6.2: Connect the Test and the Interval" aria-label="Copy heading and permalink for Activity 11.6.2: Connect the Test and the Interval">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 11.6: Tests for a Population Proportion"><a href="#sec-one-proportion-tests" title="Copy heading and permalink for Section 11.6: Tests for a Population Proportion" aria-label="Copy heading and permalink for Section 11.6: Tests for a Population Proportion">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-one-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-one-variance-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-paired-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-one-variance-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

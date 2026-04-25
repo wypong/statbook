@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Paired-Sample Tests for a Mean Difference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Statistics">
+<meta property="book:author" content="Wai Yan Pong">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="elementarystatistics" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></h1>
+<p class="byline">Wai Yan Pong</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-two-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-hypothesis-testing.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-one-proportion-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\pgfplotsset{compat=1.18}
+\tcbset{divisionexercisestyle/.append style={lines before break=8}}
+\tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
+\tcbset{imagestyle/.append style={lines before break=3}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-overview.html" class="internal"><span class="codenumber">0</span> <span class="title">What Statistics Is About</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch0-exercises.html" class="internal"><span class="codenumber">0</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-data-types.html" class="internal"><span class="codenumber">1</span> <span class="title">Data Types</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classifying-data.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Classifying Data</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-levels-of-measurement.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Levels of Measurement</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-organizing-data.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Displays</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-frequency-tables.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Frequency Tables and Relative Frequency</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphs-for-data.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Graphs for Displaying Data</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-central-tendency.html" class="internal"><span class="codenumber">3</span> <span class="title">Central Tendency</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mean-median-mode.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Mean, Median, and Mode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-center-from-tables-and-shape.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Center from Frequency Tables and the Shape of a Distribution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-spread-of-data.html" class="internal"><span class="codenumber">4</span> <span class="title">Spread of Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-quartiles-iqr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Quartiles and the Interquartile Range</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-boxplots-outliers.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Five-Number Summary, Boxplots, and Outliers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-variance-sd-zscores.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Variance, Standard Deviation, and z-Scores</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-linear-regression.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Regression</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scatterplots-correlation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Scatterplots and Correlation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regression-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Regression Lines and Prediction</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-probability.html" class="internal"><span class="codenumber">6</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conditional-probability.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Conditional Probability and Independence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-conditional-probability-formula" class="internal"><span class="title">Conditional Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-independence" class="internal"><span class="title">Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-contingency-tables" class="internal"><span class="title">Contingency Tables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-random-variables.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-random-variables-pmf.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Random Variables, CDFs, Expectation, and Variance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cdf-expected-value.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Properties of Expectation and Variance</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-binomial-distribution.html" class="internal"><span class="codenumber">8</span> <span class="title">Binomial Distributions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bernoulli-binomial.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Bernoulli Trials and Binomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-pdf-cdf.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Binomial Probabilities and the Cumulative Distribution</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-normal-approximation.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Binomial Approximation of Normal Distribution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-normal-distributions.html" class="internal"><span class="codenumber">9</span> <span class="title">Normal Distributions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-continuous-uniform.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Continuous Random Variables and the Uniform Model</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-distributions.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Normal Distributions and Z-Scores</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-z-alpha-notation.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The z-Alpha Notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-probabilities-percentiles.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Normal Probabilities and Percentiles</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-confidence-intervals.html" class="internal"><span class="codenumber">10</span> <span class="title">Confidence Intervals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-hypothesis-testing.html" class="internal"><span class="codenumber">11</span> <span class="title">Hypothesis Testing</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-two-sample-mean-tests.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Two-Sample Tests for the Difference of Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-large-samples" class="internal"><span class="title">Large Samples: A Two-Sample Z-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-small-samples" class="internal"><span class="title">Small Samples: A Two-Sample T-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-two-sample-mean-tests.html#subsec-two-sample-choosing-method" class="internal"><span class="title">Choosing a Two-Sample Mean Test</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Paired-Sample Tests for a Mean Difference</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-large-samples" class="internal"><span class="title">Large Samples: A Z-Test on Differences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-small-samples" class="internal"><span class="title">Small Samples: A Paired T-Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-paired-sample-mean-tests.html#subsec-paired-or-independent" class="internal"><span class="title">Paired or Independent?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">A</span> <span class="title">Binomial Distribution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p01.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Success Probability 0.10</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p02.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Success Probability 0.20</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p03.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Success Probability 0.30</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p04.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Success Probability 0.40</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p05.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Success Probability 0.50</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-normal-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Normal Distribution</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-t-table.html" class="internal"><span class="codenumber">C</span> <span class="title">The t Distribution</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-chi-square-table.html" class="internal"><span class="codenumber">D</span> <span class="title">The Chi-Square Distribution</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">E</span> <span class="title">The F Distribution</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-005.html" class="internal"><span class="codenumber">E.1</span> <span class="title">Right-Tail Area 0.05</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-001.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Right-Tail Area 0.01</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-paired-sample-mean-tests">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired-Sample Tests for a Mean Difference</span>
+</h2>
+<section class="introduction" id="sec-paired-sample-mean-tests-2">
+<div class="para" id="sec-paired-sample-mean-tests-2-1">Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are <dfn class="terminology">paired data</dfn>, and treating the two columns as independent samples would throw away useful information.<div class="autopermalink" data-description="Paragraph"><a href="#sec-paired-sample-mean-tests-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-paired-sample-mean-tests-2-2">The fix is simple: subtract within each pair first. If the paired observations are<div class="autopermalink" data-description="Paragraph"><a href="#sec-paired-sample-mean-tests-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-paired-sample-mean-tests-2-3">
+\begin{equation*}
+(x_1,y_1), (x_2,y_2),\ldots,(x_n,y_n),
+\end{equation*}
+</div>
+<div class="para" id="sec-paired-sample-mean-tests-2-4">define the individual differences<div class="autopermalink" data-description="Paragraph"><a href="#sec-paired-sample-mean-tests-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-paired-sample-mean-tests-2-5">
+\begin{equation*}
+d_i=x_i-y_i.
+\end{equation*}
+</div>
+<div class="para" id="sec-paired-sample-mean-tests-2-6">Now the parameter is the population mean difference <span class="process-math">\(\mu_d\text{.}\)</span> The usual null hypothesis is<div class="autopermalink" data-description="Paragraph"><a href="#sec-paired-sample-mean-tests-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-paired-sample-mean-tests-2-7">
+\begin{equation*}
+H_0:\mu_d=0,
+\end{equation*}
+</div>
+<div class="para" id="sec-paired-sample-mean-tests-2-8">which says there is no average difference between the two paired measurements. More generally, we may test <span class="process-math">\(H_0:\mu_d=d_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-paired-sample-mean-tests-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-paired-large-samples">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Large Samples: A Z-Test on Differences</span>
+</h3>
+<div class="para" id="subsec-paired-large-samples-2">Once we form the differences, this is just a one-sample problem. The sample mean of the differences is<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-large-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-large-samples-3">
+\begin{equation*}
+\overline{d}=\frac{d_1+d_2+\cdots+d_n}{n},
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-large-samples-4">and the sample standard deviation of the differences is <span class="process-math">\(s_d\text{.}\)</span> For large <span class="process-math">\(n\text{,}\)</span> the CLT says that <span class="process-math">\(\overline{D}\)</span> is approximately normal with mean <span class="process-math">\(\mu_d\)</span> and standard deviation <span class="process-math">\(\sigma_d/\sqrt{n}\text{.}\)</span> Since <span class="process-math">\(\sigma_d\)</span> is usually unknown, we estimate it with <span class="process-math">\(s_d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-large-samples-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-paired-large-samples-5">That gives the large-sample paired z statistic<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-large-samples-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-large-samples-6">
+\begin{equation*}
+z=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-large-samples-7">For the common null hypothesis <span class="process-math">\(H_0:\mu_d=0\text{,}\)</span> this becomes<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-large-samples-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-large-samples-8">
+\begin{equation*}
+z=\frac{\overline{d}}{s_d/\sqrt{n}}
+=\frac{\overline{d}\sqrt{n}}{s_d}.
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-large-samples-9">This formula has the same shape as every other test statistic in this chapter: observed estimate minus null value, divided by its estimated standard error. The only new step is that the observed estimate is the mean of the within-pair differences, not the difference between two independent sample means.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-large-samples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-paired-large-sample-commute" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Large-Sample Paired Test.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-paired-large-sample-commute-2">A transit planner records commute times for 40 riders before and after a route change. For each rider, let <span class="process-math">\(d=\text{before}-\text{after}\text{,}\)</span> so positive differences mean the commute became shorter. The sample has <span class="process-math">\(\overline{d}=3.2\)</span> minutes and <span class="process-math">\(s_d=9.0\)</span> minutes. Test whether the route change reduced average commute time:<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-large-sample-commute-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-paired-large-sample-commute-3">
+\begin{equation*}
+H_0:\mu_d=0
+\qquad\text{versus}\qquad
+H_a:\mu_d&gt;0.
+\end{equation*}
+</div>
+<div class="para" id="ex-paired-large-sample-commute-4">Because the sample of differences is large, we use<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-large-sample-commute-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-paired-large-sample-commute-5">
+\begin{equation*}
+z=\frac{3.2-0}{9.0/\sqrt{40}}\approx 2.25.
+\end{equation*}
+</div>
+<div class="para" id="ex-paired-large-sample-commute-6">The right-tailed p-value is <span class="process-math">\(P(Z\ge 2.25)\approx 0.0122\text{.}\)</span> At the 5% significance level, we reject <span class="process-math">\(H_0\text{.}\)</span> The paired data give evidence that the route change reduced the mean commute time.<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-large-sample-commute-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 11.5.1: A Large-Sample Paired Test"><a href="#ex-paired-large-sample-commute" title="Copy heading and permalink for Example 11.5.1: A Large-Sample Paired Test" aria-label="Copy heading and permalink for Example 11.5.1: A Large-Sample Paired Test">🔗</a></div>
+</article></details>
+<details id="ht-inline-ex-paired-large" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="ht-inline-ex-paired-large-1">A large paired sample has <span class="process-math">\(n=50\text{,}\)</span> <span class="process-math">\(\overline{d}=1.8\text{,}\)</span> and <span class="process-math">\(s_d=6.5\text{.}\)</span> Test <span class="process-math">\(H_0:\mu_d=0\)</span> against <span class="process-math">\(H_a:\mu_d&gt;0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-large-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="ht-inline-ex-paired-large-2">
+<li id="ht-inline-ex-paired-large-2-1">
+<div class="para" id="ht-inline-ex-paired-large-2-1-1">Compute the estimated standard error of <span class="process-math">\(\overline{d}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-large-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.2.1"><a href="#ht-inline-ex-paired-large-2-1" title="Copy heading and permalink for Item 11.5.2.1" aria-label="Copy heading and permalink for Item 11.5.2.1">🔗</a></div>
+</li>
+<li id="ht-inline-ex-paired-large-2-2">
+<div class="para" id="ht-inline-ex-paired-large-2-2-1">Compute the z statistic.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-large-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.2.2"><a href="#ht-inline-ex-paired-large-2-2" title="Copy heading and permalink for Item 11.5.2.2" aria-label="Copy heading and permalink for Item 11.5.2.2">🔗</a></div>
+</li>
+<li id="ht-inline-ex-paired-large-2-3">
+<div class="para" id="ht-inline-ex-paired-large-2-3-1">State whether the result is significant at <span class="process-math">\(\alpha=0.05\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-large-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.2.3"><a href="#ht-inline-ex-paired-large-2-3" title="Copy heading and permalink for Item 11.5.2.3" aria-label="Copy heading and permalink for Item 11.5.2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Checkpoint 11.5.2"><a href="#ht-inline-ex-paired-large" title="Copy heading and permalink for Checkpoint 11.5.2" aria-label="Copy heading and permalink for Checkpoint 11.5.2">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection: Large Samples: A Z-Test on Differences"><a href="#subsec-paired-large-samples" title="Copy heading and permalink for Subsection: Large Samples: A Z-Test on Differences" aria-label="Copy heading and permalink for Subsection: Large Samples: A Z-Test on Differences">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-paired-small-samples">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Small Samples: A Paired T-Test</span>
+</h3>
+<div class="para" id="subsec-paired-small-samples-2">For small paired samples, we still subtract within each pair and test the mean of the differences. The statistic is<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-small-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-small-samples-3">
+\begin{equation*}
+t=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-small-samples-4">For <span class="process-math">\(H_0:\mu_d=0\text{,}\)</span> this is<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-small-samples-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-small-samples-5">
+\begin{equation*}
+t=\frac{\overline{d}\sqrt{n}}{s_d}.
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-small-samples-6">The reason for the t distribution is the same as in a one-sample t-test. With a small sample, <span class="process-math">\(s_d\)</span> is a noisy estimate of the true standard deviation of the differences, so the standardized statistic has heavier tails than the standard normal curve. Since there are <span class="process-math">\(n\)</span> differences, the degrees of freedom are<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-small-samples-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="subsec-paired-small-samples-7">
+\begin{equation*}
+df=n-1.
+\end{equation*}
+</div>
+<div class="para" id="subsec-paired-small-samples-8">This is called a <dfn class="terminology">paired-sample t-test</dfn>. It is not a two-sample t-test. After forming the differences, we have one sample: <span class="process-math">\(d_1,\ldots,d_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-small-samples-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-paired-small-samples-9">The conditions are that the pairs are randomly selected or otherwise representative, the pairs are independent of each other, and the distribution of differences is approximately normal. For larger samples, the CLT makes the normality condition less strict. For small samples, strong skewness or serious outliers in the differences can make the paired t-test unreliable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-small-samples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-paired-small-sample-blood-pressure" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Small-Sample Paired T-Test.</span>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-paired-small-sample-blood-pressure-2">A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let <span class="process-math">\(d=\text{before}-\text{after}\text{,}\)</span> so positive differences mean blood pressure decreased. The differences have <span class="process-math">\(\overline{d}=4.6\)</span> and <span class="process-math">\(s_d=5.8\text{.}\)</span> Test whether the exercise lowers the mean blood pressure:<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-small-sample-blood-pressure-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-paired-small-sample-blood-pressure-3">
+\begin{equation*}
+H_0:\mu_d=0
+\qquad\text{versus}\qquad
+H_a:\mu_d&gt;0.
+\end{equation*}
+</div>
+<div class="para" id="ex-paired-small-sample-blood-pressure-4">The test statistic is<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-small-sample-blood-pressure-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-paired-small-sample-blood-pressure-5">
+\begin{equation*}
+t=\frac{4.6-0}{5.8/\sqrt{10}}\approx 2.51.
+\end{equation*}
+</div>
+<div class="para" id="ex-paired-small-sample-blood-pressure-6">There are <span class="process-math">\(df=10-1=9\)</span> degrees of freedom. For a right-tailed test, technology gives a p-value of about <span class="process-math">\(0.017\text{.}\)</span> At the 5% significance level, we reject <span class="process-math">\(H_0\text{.}\)</span> The sample gives evidence that the exercise lowers mean systolic blood pressure, assuming the differences are reasonably close to normal.<div class="autopermalink" data-description="Paragraph"><a href="#ex-paired-small-sample-blood-pressure-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 11.5.3: A Small-Sample Paired T-Test"><a href="#ex-paired-small-sample-blood-pressure" title="Copy heading and permalink for Example 11.5.3: A Small-Sample Paired T-Test" aria-label="Copy heading and permalink for Example 11.5.3: A Small-Sample Paired T-Test">🔗</a></div>
+</article></details>
+<details id="ht-inline-ex-paired-small" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="para" id="ht-inline-ex-paired-small-1">For a small paired study, the differences have <span class="process-math">\(n=12\text{,}\)</span> <span class="process-math">\(\overline{d}=-2.4\text{,}\)</span> and <span class="process-math">\(s_d=3.6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-small-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="ht-inline-ex-paired-small-2">
+<li id="ht-inline-ex-paired-small-2-1">
+<div class="para" id="ht-inline-ex-paired-small-2-1-1">Compute the paired t statistic for <span class="process-math">\(H_0:\mu_d=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-small-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.4.1"><a href="#ht-inline-ex-paired-small-2-1" title="Copy heading and permalink for Item 11.5.4.1" aria-label="Copy heading and permalink for Item 11.5.4.1">🔗</a></div>
+</li>
+<li id="ht-inline-ex-paired-small-2-2">
+<div class="para" id="ht-inline-ex-paired-small-2-2-1">Find the degrees of freedom.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-small-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.4.2"><a href="#ht-inline-ex-paired-small-2-2" title="Copy heading and permalink for Item 11.5.4.2" aria-label="Copy heading and permalink for Item 11.5.4.2">🔗</a></div>
+</li>
+<li id="ht-inline-ex-paired-small-2-3">
+<div class="para" id="ht-inline-ex-paired-small-2-3-1">If the alternative is <span class="process-math">\(H_a:\mu_d&lt;0\text{,}\)</span> explain what a negative t statistic means in context.<div class="autopermalink" data-description="Paragraph"><a href="#ht-inline-ex-paired-small-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 11.5.4.3"><a href="#ht-inline-ex-paired-small-2-3" title="Copy heading and permalink for Item 11.5.4.3" aria-label="Copy heading and permalink for Item 11.5.4.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Checkpoint 11.5.4"><a href="#ht-inline-ex-paired-small" title="Copy heading and permalink for Checkpoint 11.5.4" aria-label="Copy heading and permalink for Checkpoint 11.5.4">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection: Small Samples: A Paired T-Test"><a href="#subsec-paired-small-samples" title="Copy heading and permalink for Subsection: Small Samples: A Paired T-Test" aria-label="Copy heading and permalink for Subsection: Small Samples: A Paired T-Test">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-paired-or-independent">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired or Independent?</span>
+</h3>
+<div class="para" id="subsec-paired-or-independent-2">The choice between a paired test and an independent two-sample test is not about sample size. It is about how the data were collected. If each observation in one group is naturally linked to one observation in the other group, use the paired differences. If the two groups are separate and unrelated, use an independent two-sample test.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-paired-or-independent-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="act-ch11-paired-or-independent"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired or Independent?</span>
+</h4>
+<div class="introduction" id="act-ch11-paired-or-independent-2">
+<div class="para" id="act-ch11-paired-or-independent-2-1">Decide whether a study should use paired differences or two independent samples.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-paired-or-independent-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="act-ch11-paired-or-independent-3-1-1">Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-paired-or-independent-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 11.5.1.a"><a href="#act-ch11-paired-or-independent-3" title="Copy heading and permalink for Task 11.5.1.a" aria-label="Copy heading and permalink for Task 11.5.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="act-ch11-paired-or-independent-4-1-1">One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-paired-or-independent-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 11.5.1.b"><a href="#act-ch11-paired-or-independent-4" title="Copy heading and permalink for Task 11.5.1.b" aria-label="Copy heading and permalink for Task 11.5.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="act-ch11-paired-or-independent-5-1-1">For the paired case, define a useful difference <span class="process-math">\(d\)</span> and write the hypotheses for testing whether the second measurement is higher on average.<div class="autopermalink" data-description="Paragraph"><a href="#act-ch11-paired-or-independent-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 11.5.1.c"><a href="#act-ch11-paired-or-independent-5" title="Copy heading and permalink for Task 11.5.1.c" aria-label="Copy heading and permalink for Task 11.5.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 11.5.1: Paired or Independent?"><a href="#act-ch11-paired-or-independent" title="Copy heading and permalink for Activity 11.5.1: Paired or Independent?" aria-label="Copy heading and permalink for Activity 11.5.1: Paired or Independent?">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection: Paired or Independent?"><a href="#subsec-paired-or-independent" title="Copy heading and permalink for Subsection: Paired or Independent?" aria-label="Copy heading and permalink for Subsection: Paired or Independent?">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 11.5: Paired-Sample Tests for a Mean Difference"><a href="#sec-paired-sample-mean-tests" title="Copy heading and permalink for Section 11.5: Paired-Sample Tests for a Mean Difference" aria-label="Copy heading and permalink for Section 11.5: Paired-Sample Tests for a Mean Difference">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-two-sample-mean-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-one-proportion-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

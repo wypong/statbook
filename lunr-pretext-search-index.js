@@ -1942,21 +1942,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Conditional Probability and Independence",
-  "body": " Conditional Probability and Independence  Sometimes the probability of an event changes once we learn extra information. That idea leads to conditional probability probability conditional probability .  The probability of given is written . It means the probability that the outcome is in once we already know the outcome is in . If , then   This formula can be rearranged into the multiplication rule probability multiplication rule :    Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event “the outcome is odd,” and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:    Two events and are independent probability independent events if knowing that one occurred does not change the probability of the other. In symbols, independence means   which is equivalent to    Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.   It is important not to mix up independence and mutual exclusivity. They are different ideas.   Mutually exclusive events cannot happen together.  Independent events can happen together, but one does not affect the probability of the other.   If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product is positive.   Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event “the outcome is odd” and let be the event “the outcome is greater than 2.” Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.      Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.      Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Decide whether the events are independent.      For the same die, let be the event “the outcome is 1” and let be the event “the outcome is 6.” Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.     "
+  "body": " Conditional Probability and Independence   Sometimes the probability of an event changes once we learn extra information. That idea leads to conditional probability probability conditional probability . In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.    Conditional Probability  The probability of given is written . It means the probability that the outcome is in once we already know the outcome is in . If , then   This formula can be rearranged into the multiplication rule probability multiplication rule :    Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event “the outcome is odd,” and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:     Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event “the outcome is odd” and let be the event “the outcome is greater than 2.” Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.      Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.       Independence  Two events and are independent probability independent events if knowing that one occurred does not change the probability of the other. In symbols, independence means   which is equivalent to    Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.   It is important not to mix up independence and mutual exclusivity. They are different ideas.   Mutually exclusive events cannot happen together.  Independent events can happen together, but one does not affect the probability of the other.   If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product is positive.   Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Decide whether the events are independent.      For the same die, let be the event “the outcome is 1” and let be the event “the outcome is 6.” Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.       Contingency Tables  A contingency table tables contingency table , also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.  The counts inside the table are joint frequencies tables joint frequency because each count belongs to a combination of two categories. The totals along the edges are marginal totals tables marginal total . The grand total is the total number of observations.   Conditional Probability from a Contingency Table  A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in .    Commute length and public transportation use     Public transportation  No public transportation  Total    Commute at least 30 minutes  18  22  40    Commute under 30 minutes  12  28  40    Total  30  50  80     Let be the event “the commute is at least 30 minutes” and let be the event “the student uses public transportation.” From the table,   To find , restrict attention to the row for commutes at least 30 minutes. Out of those 40 students, 18 use public transportation, so   To find , restrict attention to the column for public transportation. Out of those 30 students, 18 have commutes at least 30 minutes, so   This is a good reminder that and usually answer different questions. The condition tells us which row or column becomes the new total.  Contingency tables also help us check independence. In this example, , but . Since knowing that the commute is at least 30 minutes changes the probability that a student uses public transportation, the events and are not independent.   Reading a Contingency Table   Use a two-way table to compute conditional probabilities and check whether two events appear independent.     Use to find the probability that a randomly selected student uses public transportation.      Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.      Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?      "
 },
 {
-  "id": "sec-conditional-probability-2",
+  "id": "sec-conditional-probability-2-1",
   "level": "2",
-  "url": "sec-conditional-probability.html#sec-conditional-probability-2",
+  "url": "sec-conditional-probability.html#sec-conditional-probability-2-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "conditional probability probability conditional probability "
 },
 {
-  "id": "sec-conditional-probability-5",
+  "id": "subsec-conditional-probability-formula-4",
   "level": "2",
-  "url": "sec-conditional-probability.html#sec-conditional-probability-5",
+  "url": "sec-conditional-probability.html#subsec-conditional-probability-formula-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1970,24 +1970,6 @@ var ptx_lunr_docs = [
   "number": "6.3.1",
   "title": "Conditional Probability on a Die Roll.",
   "body": " Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event “the outcome is odd,” and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:   "
-},
-{
-  "id": "sec-conditional-probability-8",
-  "level": "2",
-  "url": "sec-conditional-probability.html#sec-conditional-probability-8",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "independent probability independent events "
-},
-{
-  "id": "ex-independent-die",
-  "level": "2",
-  "url": "sec-conditional-probability.html#ex-independent-die",
-  "type": "Example",
-  "number": "6.3.2",
-  "title": "Checking Independence.",
-  "body": " Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.  "
 },
 {
   "id": "act-ch6-conditional-die",
@@ -2008,6 +1990,24 @@ var ptx_lunr_docs = [
   "body": " Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.    "
 },
 {
+  "id": "subsec-independence-2",
+  "level": "2",
+  "url": "sec-conditional-probability.html#subsec-independence-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "independent probability independent events "
+},
+{
+  "id": "ex-independent-die",
+  "level": "2",
+  "url": "sec-conditional-probability.html#ex-independent-die",
+  "type": "Example",
+  "number": "6.3.2",
+  "title": "Checking Independence.",
+  "body": " Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.  "
+},
+{
   "id": "act-ch6-independence-check",
   "level": "2",
   "url": "sec-conditional-probability.html#act-ch6-independence-check",
@@ -2017,13 +2017,58 @@ var ptx_lunr_docs = [
   "body": " Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Decide whether the events are independent.      For the same die, let be the event “the outcome is 1” and let be the event “the outcome is 6.” Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.    "
 },
 {
+  "id": "subsec-contingency-tables-2",
+  "level": "2",
+  "url": "sec-conditional-probability.html#subsec-contingency-tables-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "contingency table tables contingency table "
+},
+{
+  "id": "subsec-contingency-tables-3",
+  "level": "2",
+  "url": "sec-conditional-probability.html#subsec-contingency-tables-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "joint frequencies tables joint frequency marginal totals tables marginal total "
+},
+{
+  "id": "ex-contingency-table-commute",
+  "level": "2",
+  "url": "sec-conditional-probability.html#ex-contingency-table-commute",
+  "type": "Example",
+  "number": "6.3.3",
+  "title": "Conditional Probability from a Contingency Table.",
+  "body": " Conditional Probability from a Contingency Table  A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in .  "
+},
+{
+  "id": "tbl-commute-contingency",
+  "level": "2",
+  "url": "sec-conditional-probability.html#tbl-commute-contingency",
+  "type": "Table",
+  "number": "6.3.4",
+  "title": "Commute length and public transportation use",
+  "body": " Commute length and public transportation use     Public transportation  No public transportation  Total    Commute at least 30 minutes  18  22  40    Commute under 30 minutes  12  28  40    Total  30  50  80    "
+},
+{
+  "id": "act-ch6-contingency-table",
+  "level": "2",
+  "url": "sec-conditional-probability.html#act-ch6-contingency-table",
+  "type": "Activity",
+  "number": "6.3.4",
+  "title": "Reading a Contingency Table.",
+  "body": " Reading a Contingency Table   Use a two-way table to compute conditional probabilities and check whether two events appear independent.     Use to find the probability that a randomly selected student uses public transportation.      Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.      Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?    "
+},
+{
   "id": "ch6-exercises",
   "level": "1",
   "url": "ch6-exercises.html",
   "type": "Exercises",
   "number": "6.4",
   "title": "Exercises",
-  "body": " Exercises   A fair die is rolled once. Let and .   Find .  Find .  Find .     A coin is flipped twice.   Write the sample space.  Let be the event “at least one head occurs.” List the outcomes in .  Let be the event “the second flip is tails.” List the outcomes in .     A fair die is rolled once. Find the probability of each event.   The outcome is prime.  The outcome is less than 5.  The outcome is even or greater than 4.     Suppose , , and .   Find .  Find .  Find .     Use .   Find the probability of rolling a number at least 4.  Find the probability of rolling an even number.  Find the probability of rolling a number that is even or at least 4.     A card is drawn from a standard deck of 52 cards. Let be the event “the card is a heart” and let be the event “the card is a face card.”   Find , , and .  Find .  Are and independent? Explain.     Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.   "
+  "body": " Exercises   A fair die is rolled once. Let and .   Find .  Find .  Find .     A coin is flipped twice.   Write the sample space.  Let be the event “at least one head occurs.” List the outcomes in .  Let be the event “the second flip is tails.” List the outcomes in .     A fair die is rolled once. Find the probability of each event.   The outcome is prime.  The outcome is less than 5.  The outcome is even or greater than 4.     Suppose , , and .   Find .  Find .  Find .     Use .   Find the probability of rolling a number at least 4.  Find the probability of rolling an even number.  Find the probability of rolling a number that is even or at least 4.     A card is drawn from a standard deck of 52 cards. Let be the event “the card is a heart” and let be the event “the card is a face card.”   Find , , and .  Find .  Are and independent? Explain.     Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.    A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.   Work schedule and online classes     Online class  No online class  Total    Works at least 10 hours  32  18  50    Works under 10 hours  20  30  50    Total  52  48  100      Find the probability that a randomly selected student is taking an online class.  Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.  Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.    "
 },
 {
   "id": "ch6-ex-1",
@@ -2087,6 +2132,15 @@ var ptx_lunr_docs = [
   "number": "6.4.7",
   "title": "",
   "body": " Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.  "
+},
+{
+  "id": "ch6-ex-8",
+  "level": "2",
+  "url": "ch6-exercises.html#ch6-ex-8",
+  "type": "Exercise",
+  "number": "6.4.8",
+  "title": "",
+  "body": " A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.   Work schedule and online classes     Online class  No online class  Total    Works at least 10 hours  32  18  50    Works under 10 hours  20  30  50    Total  52  48  100      Find the probability that a randomly selected student is taking an online class.  Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.  Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.   "
 },
 {
   "id": "sec-random-variables-pmf",
@@ -3691,11 +3745,173 @@ var ptx_lunr_docs = [
   "body": " Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.    "
 },
 {
+  "id": "sec-two-sample-mean-tests",
+  "level": "1",
+  "url": "sec-two-sample-mean-tests.html",
+  "type": "Section",
+  "number": "11.4",
+  "title": "Two-Sample Tests for the Difference of Means",
+  "body": " Two-Sample Tests for the Difference of Means   Many questions compare two population means rather than one. For example, we might compare the mean exam score for two teaching methods, the mean wait time at two clinics, or the mean amount spent by two groups of customers.  Let and be the two population means. The parameter we care about is the difference of means inference difference of means   The natural estimate of this difference is   So a typical null hypothesis is   which says the two population means are equal. The alternative can be left-tailed, right-tailed, or two-tailed:     Large Samples: A Two-Sample Z-Test  To see where the test statistic comes from, start with the sampling distributions of the two sample means. For large samples, the CLT gives   approximately. Here the second input in is the standard deviation, so the variances are and .  Now use two facts from earlier chapters. First, sums and differences of independent normal random variables are normal. Second, from , expectation is linear and variances add for independent random variables. Therefore the difference   is approximately normal. Its mean is   Because the two samples are independent, the variance is   So for large independent samples,   approximately. This is the key reason the standard error for a difference of sample means is   In practice, the population standard deviations and are usually unknown. For large samples, we estimate them with and . That gives the large-sample two-sample z-test inference two-sample z-test statistic   where is the difference claimed by the null hypothesis. For the common null hypothesis , this becomes    Pieces of a large-sample two-sample mean test    Quantity  Meaning     observed difference between sample means     difference claimed by     estimated standard error of the difference     number of estimated standard errors from the null value     As usual, the z statistic tells us how far the observed result is from the null value, measured in standard errors. A large positive z-value supports an alternative such as . A large negative z-value supports an alternative such as . Values far from 0 in either direction support a two-tailed alternative.  The main conditions are that the two samples are random or otherwise representative, the two samples are independent of each other, and both sample sizes are large enough for the CLT to make the sample means approximately normal. A common rule of thumb is that both and should be at least 30, though strongly skewed populations may require larger samples.   Comparing Two Teaching Methods  A department compares exam scores from two large independent classes. Method 1 has , , and . Method 2 has , , and . Test whether Method 1 has the higher mean score:   The estimated standard error is   The observed difference is , so   For a right-tailed test, the p-value is   At the 5% significance level, , so we reject . The sample gives evidence that Method 1 has the higher population mean exam score.    Two independent large samples give , , , and , , .   Compute the estimated standard error of .  For , compute the z statistic.  For , decide whether the result is significant at .      Small Samples: A Two-Sample T-Test  When one or both samples are small, the same basic comparison is still natural:   So the numerator stays   The standard error idea also stays the same. The spread of comes from the spread of both sample means, so we still use   The difference is the reference distribution. With large samples, replacing and by and barely changes the shape, so a standard normal model works well. With small samples, that extra uncertainty matters more. The test statistic   is compared with a t distribution instead of a standard normal distribution.  There is one complication: this statistic does not usually have a t distribution with a simple degree of freedom like . Because the denominator uses two separate sample variances, the degrees of freedom are estimated. A common choice is the Welch approximation:   This formula looks unpleasant, but its purpose is reasonable: it adjusts the t curve for the fact that two sample standard deviations are being estimated, possibly from samples of different sizes and different spreads. In practice, technology usually computes the degrees of freedom. The important idea is that small samples need a t reference curve because the estimated standard error is less stable.  This method is often called Welch's two-sample t-test inference Welch's two-sample t-test . It is a good default because it does not require us to assume the two population variances are equal.  The conditions are stricter than in the large-sample case. The samples should be random or otherwise representative, the two samples should be independent of each other, and each population distribution should be approximately normal or at least not strongly skewed with serious outliers. For very small samples, the normality condition matters a lot.   Comparing Two Small Samples  A tutor compares quiz scores from two small independent groups. Group 1 has , , and . Group 2 has , , and . Test whether the first group has the higher population mean score:   The estimated standard error is   The test statistic is   Using the Welch formula gives about . For a right-tailed test, technology gives   At the 5% significance level, this is just small enough to reject . The sample gives some evidence that the first group has the higher population mean score, assuming the small-sample conditions are reasonable.    Two independent small samples give , , , and , , .   Compute the estimated standard error of .  For , compute the t statistic.  Why should this statistic be compared with a t distribution rather than a standard normal distribution?      Choosing a Two-Sample Mean Test   Two Groups, One Difference   Practice setting up a two-sample test before doing calculations.     A counselor compares mean weekly study hours for students who use tutoring and students who do not. Identify , , and the parameter .      Write null and alternative hypotheses for testing whether the tutoring group has a higher mean study time.      List the conditions you would check before deciding whether a large-sample z-test or a small-sample t-test is appropriate.      "
+},
+{
+  "id": "sec-two-sample-mean-tests-2-2",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#sec-two-sample-mean-tests-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "difference of means inference difference of means "
+},
+{
+  "id": "subsec-two-sample-large-samples-15",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#subsec-two-sample-large-samples-15",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "two-sample z-test inference two-sample z-test "
+},
+{
+  "id": "tbl-two-sample-mean-test-pieces",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#tbl-two-sample-mean-test-pieces",
+  "type": "Table",
+  "number": "11.4.1",
+  "title": "Pieces of a large-sample two-sample mean test",
+  "body": " Pieces of a large-sample two-sample mean test    Quantity  Meaning     observed difference between sample means     difference claimed by     estimated standard error of the difference     number of estimated standard errors from the null value    "
+},
+{
+  "id": "ex-two-sample-mean-test-teaching",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#ex-two-sample-mean-test-teaching",
+  "type": "Example",
+  "number": "11.4.2",
+  "title": "Comparing Two Teaching Methods.",
+  "body": " Comparing Two Teaching Methods  A department compares exam scores from two large independent classes. Method 1 has , , and . Method 2 has , , and . Test whether Method 1 has the higher mean score:   The estimated standard error is   The observed difference is , so   For a right-tailed test, the p-value is   At the 5% significance level, , so we reject . The sample gives evidence that Method 1 has the higher population mean exam score.  "
+},
+{
+  "id": "ht-inline-ex-two-sample-means",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#ht-inline-ex-two-sample-means",
+  "type": "Checkpoint",
+  "number": "11.4.3",
+  "title": "",
+  "body": " Two independent large samples give , , , and , , .   Compute the estimated standard error of .  For , compute the z statistic.  For , decide whether the result is significant at .   "
+},
+{
+  "id": "subsec-two-sample-small-samples-14",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#subsec-two-sample-small-samples-14",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Welch's two-sample t-test inference Welch's two-sample t-test "
+},
+{
+  "id": "ex-two-sample-small-t-test",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#ex-two-sample-small-t-test",
+  "type": "Example",
+  "number": "11.4.4",
+  "title": "Comparing Two Small Samples.",
+  "body": " Comparing Two Small Samples  A tutor compares quiz scores from two small independent groups. Group 1 has , , and . Group 2 has , , and . Test whether the first group has the higher population mean score:   The estimated standard error is   The test statistic is   Using the Welch formula gives about . For a right-tailed test, technology gives   At the 5% significance level, this is just small enough to reject . The sample gives some evidence that the first group has the higher population mean score, assuming the small-sample conditions are reasonable.  "
+},
+{
+  "id": "ht-inline-ex-two-sample-small-t",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#ht-inline-ex-two-sample-small-t",
+  "type": "Checkpoint",
+  "number": "11.4.5",
+  "title": "",
+  "body": " Two independent small samples give , , , and , , .   Compute the estimated standard error of .  For , compute the t statistic.  Why should this statistic be compared with a t distribution rather than a standard normal distribution?   "
+},
+{
+  "id": "act-ch11-two-sample-mean-setup",
+  "level": "2",
+  "url": "sec-two-sample-mean-tests.html#act-ch11-two-sample-mean-setup",
+  "type": "Activity",
+  "number": "11.4.1",
+  "title": "Two Groups, One Difference.",
+  "body": " Two Groups, One Difference   Practice setting up a two-sample test before doing calculations.     A counselor compares mean weekly study hours for students who use tutoring and students who do not. Identify , , and the parameter .      Write null and alternative hypotheses for testing whether the tutoring group has a higher mean study time.      List the conditions you would check before deciding whether a large-sample z-test or a small-sample t-test is appropriate.    "
+},
+{
+  "id": "sec-paired-sample-mean-tests",
+  "level": "1",
+  "url": "sec-paired-sample-mean-tests.html",
+  "type": "Section",
+  "number": "11.5",
+  "title": "Paired-Sample Tests for a Mean Difference",
+  "body": " Paired-Sample Tests for a Mean Difference   Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are paired data inference paired data , and treating the two columns as independent samples would throw away useful information.  The fix is simple: subtract within each pair first. If the paired observations are   define the individual differences   Now the parameter is the population mean difference . The usual null hypothesis is   which says there is no average difference between the two paired measurements. More generally, we may test .    Large Samples: A Z-Test on Differences  Once we form the differences, this is just a one-sample problem. The sample mean of the differences is   and the sample standard deviation of the differences is . For large , the CLT says that is approximately normal with mean and standard deviation . Since is usually unknown, we estimate it with .  That gives the large-sample paired z statistic   For the common null hypothesis , this becomes   This formula has the same shape as every other test statistic in this chapter: observed estimate minus null value, divided by its estimated standard error. The only new step is that the observed estimate is the mean of the within-pair differences, not the difference between two independent sample means.   A Large-Sample Paired Test  A transit planner records commute times for 40 riders before and after a route change. For each rider, let , so positive differences mean the commute became shorter. The sample has minutes and minutes. Test whether the route change reduced average commute time:   Because the sample of differences is large, we use   The right-tailed p-value is . At the 5% significance level, we reject . The paired data give evidence that the route change reduced the mean commute time.    A large paired sample has , , and . Test against .   Compute the estimated standard error of .  Compute the z statistic.  State whether the result is significant at .      Small Samples: A Paired T-Test  For small paired samples, we still subtract within each pair and test the mean of the differences. The statistic is   For , this is   The reason for the t distribution is the same as in a one-sample t-test. With a small sample, is a noisy estimate of the true standard deviation of the differences, so the standardized statistic has heavier tails than the standard normal curve. Since there are differences, the degrees of freedom are   This is called a paired-sample t-test inference paired-sample t-test . It is not a two-sample t-test. After forming the differences, we have one sample: .  The conditions are that the pairs are randomly selected or otherwise representative, the pairs are independent of each other, and the distribution of differences is approximately normal. For larger samples, the CLT makes the normality condition less strict. For small samples, strong skewness or serious outliers in the differences can make the paired t-test unreliable.   A Small-Sample Paired T-Test  A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let , so positive differences mean blood pressure decreased. The differences have and . Test whether the exercise lowers the mean blood pressure:   The test statistic is   There are degrees of freedom. For a right-tailed test, technology gives a p-value of about . At the 5% significance level, we reject . The sample gives evidence that the exercise lowers mean systolic blood pressure, assuming the differences are reasonably close to normal.    For a small paired study, the differences have , , and .   Compute the paired t statistic for .  Find the degrees of freedom.  If the alternative is , explain what a negative t statistic means in context.      Paired or Independent?  The choice between a paired test and an independent two-sample test is not about sample size. It is about how the data were collected. If each observation in one group is naturally linked to one observation in the other group, use the paired differences. If the two groups are separate and unrelated, use an independent two-sample test.   Paired or Independent?   Decide whether a study should use paired differences or two independent samples.     Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.      One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.      For the paired case, define a useful difference and write the hypotheses for testing whether the second measurement is higher on average.      "
+},
+{
+  "id": "sec-paired-sample-mean-tests-2-1",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#sec-paired-sample-mean-tests-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "paired data inference paired data "
+},
+{
+  "id": "ex-paired-large-sample-commute",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#ex-paired-large-sample-commute",
+  "type": "Example",
+  "number": "11.5.1",
+  "title": "A Large-Sample Paired Test.",
+  "body": " A Large-Sample Paired Test  A transit planner records commute times for 40 riders before and after a route change. For each rider, let , so positive differences mean the commute became shorter. The sample has minutes and minutes. Test whether the route change reduced average commute time:   Because the sample of differences is large, we use   The right-tailed p-value is . At the 5% significance level, we reject . The paired data give evidence that the route change reduced the mean commute time.  "
+},
+{
+  "id": "ht-inline-ex-paired-large",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#ht-inline-ex-paired-large",
+  "type": "Checkpoint",
+  "number": "11.5.2",
+  "title": "",
+  "body": " A large paired sample has , , and . Test against .   Compute the estimated standard error of .  Compute the z statistic.  State whether the result is significant at .   "
+},
+{
+  "id": "subsec-paired-small-samples-8",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#subsec-paired-small-samples-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "paired-sample t-test inference paired-sample t-test "
+},
+{
+  "id": "ex-paired-small-sample-blood-pressure",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#ex-paired-small-sample-blood-pressure",
+  "type": "Example",
+  "number": "11.5.3",
+  "title": "A Small-Sample Paired T-Test.",
+  "body": " A Small-Sample Paired T-Test  A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let , so positive differences mean blood pressure decreased. The differences have and . Test whether the exercise lowers the mean blood pressure:   The test statistic is   There are degrees of freedom. For a right-tailed test, technology gives a p-value of about . At the 5% significance level, we reject . The sample gives evidence that the exercise lowers mean systolic blood pressure, assuming the differences are reasonably close to normal.  "
+},
+{
+  "id": "ht-inline-ex-paired-small",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#ht-inline-ex-paired-small",
+  "type": "Checkpoint",
+  "number": "11.5.4",
+  "title": "",
+  "body": " For a small paired study, the differences have , , and .   Compute the paired t statistic for .  Find the degrees of freedom.  If the alternative is , explain what a negative t statistic means in context.   "
+},
+{
+  "id": "act-ch11-paired-or-independent",
+  "level": "2",
+  "url": "sec-paired-sample-mean-tests.html#act-ch11-paired-or-independent",
+  "type": "Activity",
+  "number": "11.5.1",
+  "title": "Paired or Independent?",
+  "body": " Paired or Independent?   Decide whether a study should use paired differences or two independent samples.     Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.      One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.      For the paired case, define a useful difference and write the hypotheses for testing whether the second measurement is higher on average.    "
+},
+{
   "id": "sec-one-proportion-tests",
   "level": "1",
   "url": "sec-one-proportion-tests.html",
   "type": "Section",
-  "number": "11.4",
+  "number": "11.6",
   "title": "Tests for a Population Proportion",
   "body": " Tests for a Population Proportion  This section is the testing counterpart to . The setup is the same: each observation is a success or failure, the population proportion of success is , and the sample proportion is .  The normal model behind proportion tests comes from . If , then for large enough , the count is approximately normal. Dividing by gives an approximate normal model for .  To test a claim about a population proportion, we begin with hypotheses such as   Under the null hypothesis, the sample proportion is approximately normal with mean and standard deviation   provided the expected counts under are both at least about 5:   That leads to the one-proportion z-test inference one-proportion z-test statistic   This looks a lot like the z-interval from , but there is an important difference. In a confidence interval, the unknown proportion is replaced by in the standard error. In a hypothesis test, the null hypothesis tells us exactly which value to use, so the standard error is built from .  Once the z statistic is computed, the rest is familiar:   For , use the left-tail p-value .  For , use the right-tail p-value .  For , use the two-tail p-value .   As before, reject when the p-value is less than the chosen significance level .   Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.    Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.   The connection with confidence intervals is worth noticing. If a hypothesized value sits far outside a confidence interval for , then it is also likely to be rejected by a hypothesis test at a matching significance level. So intervals and tests are two ways of looking at the same sample evidence.   A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.     Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
 },
@@ -3713,7 +3929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#ex-one-proportion-defect-test",
   "type": "Example",
-  "number": "11.4.1",
+  "number": "11.6.1",
   "title": "Testing a Claimed Defect Rate.",
   "body": " Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.  "
 },
@@ -3722,7 +3938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#ex-one-proportion-campus-plan",
   "type": "Example",
-  "number": "11.4.2",
+  "number": "11.6.2",
   "title": "Testing a Claimed Support Level.",
   "body": " Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.  "
 },
@@ -3731,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#ht-inline-ex-3",
   "type": "Checkpoint",
-  "number": "11.4.3",
+  "number": "11.6.3",
   "title": "",
   "body": " A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.   "
 },
@@ -3740,7 +3956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#act-ch11-proportion-test-builder",
   "type": "Activity",
-  "number": "11.4.1",
+  "number": "11.6.1",
   "title": "Run a Proportion Test.",
   "body": " Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.    "
 },
@@ -3749,7 +3965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#act-ch11-test-and-interval-link",
   "type": "Activity",
-  "number": "11.4.2",
+  "number": "11.6.2",
   "title": "Connect the Test and the Interval.",
   "body": " Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
 },
@@ -3758,7 +3974,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-one-variance-tests.html",
   "type": "Section",
-  "number": "11.5",
+  "number": "11.7",
   "title": "Tests for a Population Variance and Standard Deviation",
   "body": " Tests for a Population Variance and Standard Deviation  Tests for Variance and Standard Deviation  This section is the testing counterpart to . The goal is to decide whether the sample spread gives enough evidence against a claimed value of the population variance or the population standard deviation .  If a claim is written in terms of standard deviation, we can square both sides and test variance instead. So   The alternative can again be left-tailed, right-tailed, or two-tailed:   These tests require careful assumptions.   The data should come from a random sample or a similarly independent process.  The observations should be independent.  The population should be normal. This is the crucial assumption.   That last condition matters much more here than it does for tests about a mean. A large sample by itself does not justify the chi-square test for variance. The method depends on the population distribution being normal, not just on the sample size being large.  From , if is true and the population is normal, then   This gives the chi-square test for a population variance inference chi-square test for variance . The interpretation is straightforward:   If the sample variance is much larger than the null value , then the observed chi-square statistic will be large.  If the sample variance is much smaller than the null value , then the observed chi-square statistic will be small.   So the tail of the test matches the direction of the alternative.  Let when is true, and let be the observed test statistic.   For , use the right-tail p-value .  For , use the left-tail p-value .  For , reject at significance level when or . Because the chi-square distribution is not symmetric, technology is often the easiest way to find a two-sided p-value.    Testing Whether Delivery Times Have Become More Variable  Suppose delivery times on a short route are well modeled by a normal distribution. A company claims the population standard deviation is 2 minutes. A random sample of 16 deliveries gives sample standard deviation minutes. Test at the 5% significance level whether the true standard deviation is greater than 2 minutes.  Let be the population standard deviation of delivery times. Then   Equivalently, we are testing against . Because the population is assumed normal, we use the chi-square statistic with :   If is true, then . Since this is a right-tailed test, the p-value is   Because , we reject . The sample gives strong evidence that delivery times vary more than the claimed 2 minutes.    Testing Whether a Machine's Variation Has Changed  Assume bottle fill amounts are normally distributed. A machine is supposed to have population standard deviation 1.2 ounces. A random sample of 12 bottles gives sample standard deviation ounces. Test at the 5% significance level whether the standard deviation differs from 1.2 ounces.  We test   Equivalently, and . The test statistic has :   For a two-tailed test with and , the rejection region is   From ,   Since , the observed statistic falls in the rejection region, so we reject . The data suggest that the machine's standard deviation differs from 1.2 ounces, and in fact it appears to be larger.   The connection with confidence intervals is the same as before. If a claimed value of or falls outside the matching confidence interval from , then that claim is also likely to be rejected by a hypothesis test at the corresponding significance level.   Assume a normal population. A random sample of size 12 has sample standard deviation . Test against at the 10% significance level.   Find the degrees of freedom.  Compute the chi-square test statistic.  Find the p-value and state the conclusion.     Run a Variance Test   Carry out a chi-square test for a population standard deviation from start to finish.     Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation millimeters. Test against .      Find the degrees of freedom, compute the chi-square statistic, and find the p-value.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare a chi-square test for spread with the matching confidence interval.     Return to the bottle-fill sample with and . Use the method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
 },
@@ -3776,7 +3992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#ex-variance-test-deliveries",
   "type": "Example",
-  "number": "11.5.1",
+  "number": "11.7.1",
   "title": "Testing Whether Delivery Times Have Become More Variable.",
   "body": " Testing Whether Delivery Times Have Become More Variable  Suppose delivery times on a short route are well modeled by a normal distribution. A company claims the population standard deviation is 2 minutes. A random sample of 16 deliveries gives sample standard deviation minutes. Test at the 5% significance level whether the true standard deviation is greater than 2 minutes.  Let be the population standard deviation of delivery times. Then   Equivalently, we are testing against . Because the population is assumed normal, we use the chi-square statistic with :   If is true, then . Since this is a right-tailed test, the p-value is   Because , we reject . The sample gives strong evidence that delivery times vary more than the claimed 2 minutes.  "
 },
@@ -3785,7 +4001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#ex-variance-test-bottles",
   "type": "Example",
-  "number": "11.5.2",
+  "number": "11.7.2",
   "title": "Testing Whether a Machine’s Variation Has Changed.",
   "body": " Testing Whether a Machine's Variation Has Changed  Assume bottle fill amounts are normally distributed. A machine is supposed to have population standard deviation 1.2 ounces. A random sample of 12 bottles gives sample standard deviation ounces. Test at the 5% significance level whether the standard deviation differs from 1.2 ounces.  We test   Equivalently, and . The test statistic has :   For a two-tailed test with and , the rejection region is   From ,   Since , the observed statistic falls in the rejection region, so we reject . The data suggest that the machine's standard deviation differs from 1.2 ounces, and in fact it appears to be larger.  "
 },
@@ -3794,7 +4010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#ht-inline-ex-4",
   "type": "Checkpoint",
-  "number": "11.5.3",
+  "number": "11.7.3",
   "title": "",
   "body": " Assume a normal population. A random sample of size 12 has sample standard deviation . Test against at the 10% significance level.   Find the degrees of freedom.  Compute the chi-square test statistic.  Find the p-value and state the conclusion.   "
 },
@@ -3803,7 +4019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#act-ch11-variance-test-builder",
   "type": "Activity",
-  "number": "11.5.1",
+  "number": "11.7.1",
   "title": "Run a Variance Test.",
   "body": " Run a Variance Test   Carry out a chi-square test for a population standard deviation from start to finish.     Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation millimeters. Test against .      Find the degrees of freedom, compute the chi-square statistic, and find the p-value.      At , decide whether to reject and write the conclusion in context.    "
 },
@@ -3812,7 +4028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#act-ch11-variance-test-interval-link",
   "type": "Activity",
-  "number": "11.5.2",
+  "number": "11.7.2",
   "title": "Connect the Test and the Interval.",
   "body": " Connect the Test and the Interval   Compare a chi-square test for spread with the matching confidence interval.     Return to the bottle-fill sample with and . Use the method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
 },
@@ -3821,16 +4037,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "ch11-exercises.html",
   "type": "Exercises",
-  "number": "11.6",
+  "number": "11.8",
   "title": "Exercises",
-  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is “fail to reject ” a better phrase than “accept ”?    Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .     A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.     A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?     Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.    Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.     Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.     State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?    "
+  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is “fail to reject ” a better phrase than “accept ”?    Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .     Two independent large samples give , , , and , , .   Write the hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error of .  Compute the z statistic for .  State the conclusion at the 5% significance level.     Explain why, for large independent samples, the statistic is approximately normal with variance .   Which theorem explains why each sample mean is approximately normal?  Why is the mean of the difference ?  Why do the variances add instead of subtract?     Two independent small samples give , , , and , , .   Write hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error and the two-sample t statistic.  Explain why a t distribution is used instead of the standard normal distribution.  State the small-sample conditions that should be checked before trusting the test.     A study records resting heart rate for 36 students before and after a four-week exercise program. Let . The sample of differences has beats per minute and beats per minute.   Explain why this is a paired-sample problem.  Write hypotheses for testing whether the program lowers mean resting heart rate.  Compute the large-sample paired z statistic.  At , state the conclusion in context.     Eight students take a short skills test before and after a workshop. Let . The differences have points and points.   Write hypotheses for testing whether the workshop improves the mean score.  Compute the paired t statistic.  Find the degrees of freedom.  State the condition about the distribution of differences that matters most for this small sample.     A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.     A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?     Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.    Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.     Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.     State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?    "
 },
 {
   "id": "ch11-ex-1",
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-1",
   "type": "Exercise",
-  "number": "11.6.1",
+  "number": "11.8.1",
   "title": "",
   "body": " For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,   "
 },
@@ -3839,7 +4055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-2",
   "type": "Exercise",
-  "number": "11.6.2",
+  "number": "11.8.2",
   "title": "",
   "body": " A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?   "
 },
@@ -3848,7 +4064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-3",
   "type": "Exercise",
-  "number": "11.6.3",
+  "number": "11.8.3",
   "title": "",
   "body": " A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?   "
 },
@@ -3857,7 +4073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-4",
   "type": "Exercise",
-  "number": "11.6.4",
+  "number": "11.8.4",
   "title": "",
   "body": " Why is “fail to reject ” a better phrase than “accept ”?  "
 },
@@ -3866,16 +4082,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-5",
   "type": "Exercise",
-  "number": "11.6.5",
+  "number": "11.8.5",
   "title": "",
   "body": " Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .   "
+},
+{
+  "id": "ch11-ex-12",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-12",
+  "type": "Exercise",
+  "number": "11.8.6",
+  "title": "",
+  "body": " Two independent large samples give , , , and , , .   Write the hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error of .  Compute the z statistic for .  State the conclusion at the 5% significance level.   "
+},
+{
+  "id": "ch11-ex-13",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-13",
+  "type": "Exercise",
+  "number": "11.8.7",
+  "title": "",
+  "body": " Explain why, for large independent samples, the statistic is approximately normal with variance .   Which theorem explains why each sample mean is approximately normal?  Why is the mean of the difference ?  Why do the variances add instead of subtract?   "
+},
+{
+  "id": "ch11-ex-14",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-14",
+  "type": "Exercise",
+  "number": "11.8.8",
+  "title": "",
+  "body": " Two independent small samples give , , , and , , .   Write hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error and the two-sample t statistic.  Explain why a t distribution is used instead of the standard normal distribution.  State the small-sample conditions that should be checked before trusting the test.   "
+},
+{
+  "id": "ch11-ex-15",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-15",
+  "type": "Exercise",
+  "number": "11.8.9",
+  "title": "",
+  "body": " A study records resting heart rate for 36 students before and after a four-week exercise program. Let . The sample of differences has beats per minute and beats per minute.   Explain why this is a paired-sample problem.  Write hypotheses for testing whether the program lowers mean resting heart rate.  Compute the large-sample paired z statistic.  At , state the conclusion in context.   "
+},
+{
+  "id": "ch11-ex-16",
+  "level": "2",
+  "url": "ch11-exercises.html#ch11-ex-16",
+  "type": "Exercise",
+  "number": "11.8.10",
+  "title": "",
+  "body": " Eight students take a short skills test before and after a workshop. Let . The differences have points and points.   Write hypotheses for testing whether the workshop improves the mean score.  Compute the paired t statistic.  Find the degrees of freedom.  State the condition about the distribution of differences that matters most for this small sample.   "
 },
 {
   "id": "ch11-ex-6",
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-6",
   "type": "Exercise",
-  "number": "11.6.6",
+  "number": "11.8.11",
   "title": "",
   "body": " A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.   "
 },
@@ -3884,7 +4145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-7",
   "type": "Exercise",
-  "number": "11.6.7",
+  "number": "11.8.12",
   "title": "",
   "body": " A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?   "
 },
@@ -3893,7 +4154,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-8",
   "type": "Exercise",
-  "number": "11.6.8",
+  "number": "11.8.13",
   "title": "",
   "body": " Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.  "
 },
@@ -3902,7 +4163,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-9",
   "type": "Exercise",
-  "number": "11.6.9",
+  "number": "11.8.14",
   "title": "",
   "body": " Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.   "
 },
@@ -3911,7 +4172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-10",
   "type": "Exercise",
-  "number": "11.6.10",
+  "number": "11.8.15",
   "title": "",
   "body": " Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.   "
 },
@@ -3920,7 +4181,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch11-exercises.html#ch11-ex-11",
   "type": "Exercise",
-  "number": "11.6.11",
+  "number": "11.8.16",
   "title": "",
   "body": " State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?   "
 },
