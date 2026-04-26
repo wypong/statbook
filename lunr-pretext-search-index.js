@@ -3976,7 +3976,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.7",
   "title": "Chi-Square Test of Independence",
-  "body": " Chi-Square Test of Independence  In , we used a two-way contingency table to compute conditional probabilities and check whether two events looked independent. For example, if is different from in a sample, the sample table shows some departure from independence.  A chi-square test of independence inference chi-square test of independence asks the next statistical question: is the departure large enough to count as evidence that the two categorical variables are associated in the population, or could it reasonably be explained by random sampling variation?  The data are organized in an -by-  two-way contingency table inference two-way contingency table . The hypotheses are always about the two categorical variables, not about a single cell.    Under the null hypothesis, the probability of landing in row and column should factor just like the independence rule from probability:   That rule tells us what count we should expect in each cell if the row and column variables are independent. If the observed count in cell is , then the expected count under independence is   The formula is just the independence rule written with sample proportions. The row proportion estimates , the column proportion estimates , and multiplying by the grand total converts the expected proportion back into an expected count.  The test statistic adds the standardized squared departures from the expected counts:   Large values of mean that the observed table is far from the table we would expect under independence. Because the statistic squares the differences, both positive and negative departures count in the same direction. The chi-square test of independence is therefore a right-tailed test. The denominator appears because the typical size of random fluctuation in a large count is about ; explains this normal approximation for cell counts in more detail.  The usual conditions are:   The data come from a random sample or a randomized experiment, or at least from a process that is reasonable to treat as representative.  Each observation contributes to exactly one cell of the table.  The observations are independent of each other.  The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5; this is the large-count setting behind the approximation in .   Why are the degrees of freedom ? The degrees of freedom for the chi-square test of independence are   Here is the idea. A table with rows and columns has cell counts. But the counts cannot all vary freely once the total sample size is fixed: after cells are known, the last cell is forced by the grand total.  Under the independence model, the whole table is controlled by the row probabilities and the column probabilities. The row probabilities have only free choices, because they must add to 1. The column probabilities have only free choices for the same reason. So the independence model uses   free probability choices. The departures from independence are what remain after those row and column effects have been accounted for:   There is also a hands-on way to see the same count. If the row totals and column totals are fixed, then the cells in the first rows and first columns can be chosen freely, subject to being reasonable counts. Once those cells are chosen, the remaining cells in the last row and last column are forced by the marginal totals.  Why does the test statistic have a chi-square distribution with that many degrees of freedom? As explained in , for large samples the cell-count errors are approximately normal, and the Pearson statistic is a squared, scaled measure of those errors. The row and column totals account for the directions of variation that come only from the marginal probabilities. After removing those directions, there are independent directions of genuine departure from independence left. So   when is true and the expected counts are large enough.   Testing the Commute Table from Probability  Return to the commute table from . A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes.   Observed and expected counts for the commute table     Public transit  No transit  Total    At least 30 min    40    Under 30 min    40    Total  30  50  80     In each interior cell, the first number is the observed count and the number in parentheses is the expected count under independence. For example, the expected count for students with commutes at least 30 minutes who use public transit is   We test    The test statistic is   There are rows and columns, so   Using a chi-square distribution with 1 degree of freedom, the right-tail p-value is about 0.166. At the 5% significance level, we fail to reject .  This conclusion does not say the sample proportions were exactly independent. In , we saw that while in the sample. The chi-square test says that this difference is not large enough, for a sample of 80 students, to give strong evidence of an association in the population.    A Larger Table  A college surveys 150 students about their main study support and their course result. The observed counts are shown in .   Study support and course result     Mostly A\/B  C  D\/F  Total    No support  15  22  13  50    Occasional support  25  20  5  50    Regular support  35  14  1  50    Total  75  56  19  150     We test whether study support and course result are independent in the population of students like these. The expected counts for each row are the same because each row total is 50:   All expected counts are at least 5, so the chi-square approximation is reasonable. The test statistic is   The table has rows and columns, so   For , the p-value is less than 0.001. We reject . The data give strong evidence that study support and course result are associated.  The test tells us that an association exists; it does not by itself prove that study support caused the different course results. The study design still matters.    A survey of 120 students records preferred class format and whether the student works at least 20 hours per week.   Class format and work status     Online  Hybrid  In person  Total    Works 20+ hours  22  18  20  60    Works under 20 hours  14  16  30  60    Total  36  34  50  120      Write the null and alternative hypotheses for a chi-square test of independence.  Find the expected count for the cell \"Works 20+ hours\" and \"Online.\"  Find the degrees of freedom.  Explain what a large chi-square statistic would mean in this context.     From Conditional Probabilities to a Test   Connect the earlier contingency-table idea to the chi-square test of independence.     Choose two categorical variables that can be observed in class, such as preferred study location and whether a student usually studies with others. Collect one response from each student and build a two-way table.      Use the table to compute one marginal probability and one conditional probability. Based only on those probabilities, do the variables look independent in the sample?      Compute the expected counts under independence. Check whether the expected counts are large enough for a chi-square test.      Find the degrees of freedom and describe what conclusion a small p-value would support.     "
+  "body": " Chi-Square Test of Independence  In , we used a two-way contingency table to compute conditional probabilities and check whether two events looked independent. For example, if is different from in a sample, the sample table shows some departure from independence.  A chi-square test of independence inference chi-square test of independence asks the next statistical question: is the departure large enough to count as evidence that the two categorical variables are associated in the population, or could it reasonably be explained by random sampling variation?  The data are organized in an -by-  two-way contingency table inference two-way contingency table . The hypotheses are always about the two categorical variables, not about a single cell.    Under the null hypothesis, the probability of landing in row and column should factor just like the independence rule from probability:   That rule tells us what count we should expect in each cell if the row and column variables are independent. If the observed count in cell is , then the expected count under independence is   The formula is just the independence rule written with sample proportions. The row proportion estimates , the column proportion estimates , and multiplying by the grand total converts the expected proportion back into an expected count.  The test statistic adds the standardized squared departures from the expected counts:   Large values of mean that the observed table is far from the table we would expect under independence. Because the statistic squares the differences, both positive and negative departures count in the same direction. The chi-square test of independence is therefore a right-tailed test. The denominator appears because the typical size of random fluctuation in a large count is about . One way to remember this is that a large count behaves much like a Poisson count, and a Poisson count with mean has variance .  The usual conditions are:   The data come from a random sample or a randomized experiment, or at least from a process that is reasonable to treat as representative.  Each observation contributes to exactly one cell of the table.  The observations are independent of each other.  The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5.   Why are the degrees of freedom ? The degrees of freedom for the chi-square test of independence are   Here is the idea. A table with rows and columns has cell counts. But the counts cannot all vary freely once the total sample size is fixed: after cells are known, the last cell is forced by the grand total.  Under the independence model, the whole table is controlled by the row probabilities and the column probabilities. The row probabilities have only free choices, because they must add to 1. The column probabilities have only free choices for the same reason. So the independence model uses   free probability choices. The departures from independence are what remain after those row and column effects have been accounted for:   There is also a hands-on way to see the same count. If the row totals and column totals are fixed, then the cells in the first rows and first columns can be chosen freely, subject to being reasonable counts. Once those cells are chosen, the remaining cells in the last row and last column are forced by the marginal totals.  Why does the test statistic have a chi-square distribution with that many degrees of freedom? The quick intuition is not that the terms in the sum are independent squared standard normal variables. They are not. The cell counts in a table are tied together by the row and column totals. That is exactly why the degrees of freedom are smaller than .  Instead, think of the table as having only genuinely free ways to depart from independence. In a large sample, each cell count is built from many individual observations, so the random errors in the table are approximately normal. The Pearson statistic measures the total squared size of those errors after scaling each cell by its expected count.  For a -by- table, this is especially concrete. Once the row totals and column totals are fixed, choosing one cell determines the other three cells. There is only one real way for the observed table to move away from the independent table, and the Pearson statistic is approximately the square of one standard normal quantity. That gives a approximation.  For an -by- table, the same idea repeats with free departures instead of one. The Pearson statistic behaves like the sum of the squared standardized sizes of those free departures. That is the practical reason the chi-square distribution appears:   when is true and the expected counts are large enough.   Testing the Commute Table from Probability  Return to the commute table from . A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes.   Observed and expected counts for the commute table     Public transit  No transit  Total    At least 30 min    40    Under 30 min    40    Total  30  50  80     In each interior cell, the first number is the observed count and the number in parentheses is the expected count under independence. For example, the expected count for students with commutes at least 30 minutes who use public transit is   We test    The test statistic is   There are rows and columns, so   Using a chi-square distribution with 1 degree of freedom, the right-tail p-value is about 0.166. At the 5% significance level, we fail to reject .  This conclusion does not say the sample proportions were exactly independent. In , we saw that while in the sample. The chi-square test says that this difference is not large enough, for a sample of 80 students, to give strong evidence of an association in the population.    A Larger Table  A college surveys 150 students about their main study support and their course result. The observed counts are shown in .   Study support and course result     Mostly A\/B  C  D\/F  Total    No support  15  22  13  50    Occasional support  25  20  5  50    Regular support  35  14  1  50    Total  75  56  19  150     We test whether study support and course result are independent in the population of students like these. The expected counts for each row are the same because each row total is 50:   All expected counts are at least 5, so the chi-square approximation is reasonable. The test statistic is   The table has rows and columns, so   For , the p-value is less than 0.001. We reject . The data give strong evidence that study support and course result are associated.  The test tells us that an association exists; it does not by itself prove that study support caused the different course results. The study design still matters.    A survey of 120 students records preferred class format and whether the student works at least 20 hours per week.   Class format and work status     Online  Hybrid  In person  Total    Works 20+ hours  22  18  20  60    Works under 20 hours  14  16  30  60    Total  36  34  50  120      Write the null and alternative hypotheses for a chi-square test of independence.  Find the expected count for the cell \"Works 20+ hours\" and \"Online.\"  Find the degrees of freedom.  Explain what a large chi-square statistic would mean in this context.     From Conditional Probabilities to a Test   Connect the earlier contingency-table idea to the chi-square test of independence.     Choose two categorical variables that can be observed in class, such as preferred study location and whether a student usually studies with others. Collect one response from each student and build a two-way table.      Use the table to compute one marginal probability and one conditional probability. Based only on those probabilities, do the variables look independent in the sample?      Compute the expected counts under independence. Check whether the expected counts are large enough for a chi-square test.      Find the degrees of freedom and describe what conclusion a small p-value would support.     "
 },
 {
   "id": "sec-chi-square-independence-test-3",
@@ -4285,83 +4285,11 @@ var ptx_lunr_docs = [
   "body": " This book was authored in PreTeXt .  "
 },
 {
-  "id": "sec-cell-count-one-cell",
-  "level": "1",
-  "url": "sec-cell-count-one-cell.html",
-  "type": "Section",
-  "number": "A.1",
-  "title": "Start with One Cell",
-  "body": " Start with One Cell  Fix one cell in a two-way table. For each observation , define   Then the observed cell count contingency tables cell count is   So is a sum of many Bernoulli random variables. If the true probability of falling in cell is , then   Therefore   and   By the central limit theorem theorems central limit theorem , for large ,   Here means a normal distribution with mean and standard deviation .  "
-},
-{
-  "id": "sec-cell-count-one-cell-4",
-  "level": "2",
-  "url": "sec-cell-count-one-cell.html#sec-cell-count-one-cell-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "cell count contingency tables cell count "
-},
-{
-  "id": "sec-cell-count-one-cell-12",
-  "level": "2",
-  "url": "sec-cell-count-one-cell.html#sec-cell-count-one-cell-12",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "central limit theorem theorems central limit theorem "
-},
-{
-  "id": "sec-cell-count-expected-counts",
-  "level": "1",
-  "url": "sec-cell-count-expected-counts.html",
-  "type": "Section",
-  "number": "A.2",
-  "title": "Expected Counts Under Independence",
-  "body": " Expected Counts Under Independence  In a test of independence, the null hypothesis says that the row and column variables are independent. In probability language,   The expected count under independence is therefore   Since the row and column probabilities are usually unknown, we estimate them from the table. That gives the familiar formula   At this point, a useful first approximation is that is centered near and is roughly normal when the expected count is large enough.  "
-},
-{
-  "id": "sec-cell-count-poisson-approx",
-  "level": "1",
-  "url": "sec-cell-count-poisson-approx.html",
-  "type": "Section",
-  "number": "A.3",
-  "title": "The Square Root Scaling",
-  "body": " The Square Root Scaling  For a binomial cell count, the exact standard deviation is   If , this is   So the statement   is not literally exact for one cell in a fixed-total multinomial table. The cleaner reason for the denominator comes from a Poisson approximation distributions Poisson approximation .  If , then   For large , a Poisson random variable is approximately normal:   Thus, if a cell count is modeled approximately as   then   and the quantity   is approximately standard normal.  "
-},
-{
-  "id": "sec-cell-count-poisson-approx-8",
-  "level": "2",
-  "url": "sec-cell-count-poisson-approx.html#sec-cell-count-poisson-approx-8",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Poisson approximation distributions Poisson approximation "
-},
-{
-  "id": "sec-cell-count-caveat",
-  "level": "1",
-  "url": "sec-cell-count-caveat.html",
-  "type": "Section",
-  "number": "A.4",
-  "title": "The Important Caveat",
-  "body": " The Important Caveat  In an actual fixed-total contingency table, the cell counts are not independent. They are constrained by the grand total, and when we estimate expected counts from the row and column totals, the entries are tied together even more.  So it is not quite right to say that every Pearson residual   is individually an independent standard normal random variable. The better statement is this:   Cell-count errors are approximately normal for large samples.  The Pearson chi-square statistic is a squared, scaled measure of those errors.  The row and column constraints remove some directions of variation.  After those constraints are accounted for, only independent directions of departure from independence remain.   That is why, under the null hypothesis of independence and with expected counts large enough,   "
-},
-{
-  "id": "sec-cell-count-bottom-line",
-  "level": "1",
-  "url": "sec-cell-count-bottom-line.html",
-  "type": "Section",
-  "number": "A.5",
-  "title": "Bottom Line",
-  "body": " Bottom Line  It is reasonable to view as roughly normal because it is a large count, meaning a sum of many Bernoulli indicators. The simplified approximation   comes from the Poisson-count picture. For a fixed-total contingency table this is only a heuristic cell-by-cell statement, but it gives the right intuition for why the Pearson statistic is chi-square after the row and column constraints are taken into account.  "
-},
-{
   "id": "sec-binomial-table-p01",
   "level": "1",
   "url": "sec-binomial-table-p01.html",
   "type": "Section",
-  "number": "B.1",
+  "number": "A.1",
   "title": "Success Probability 0.10",
   "body": " Success Probability 0.10   Exact probabilities for with     0  1  2  3  4  5    1  0.9000  0.1000        2  0.8100  0.1800  0.0100       3  0.7290  0.2430  0.0270  0.0010      4  0.6561  0.2916  0.0486  0.0036  0.0001     5  0.5905  0.3281  0.0729  0.0081  0.0005  0.0000    6  0.5314  0.3543  0.0984  0.0146  0.0012  0.0001    7  0.4783  0.3720  0.1240  0.0230  0.0026  0.0002    8  0.4305  0.3826  0.1488  0.0331  0.0046  0.0004    9  0.3874  0.3874  0.1722  0.0446  0.0074  0.0008    10  0.3487  0.3874  0.1937  0.0574  0.0112  0.0015      Exact probabilities for with     6  7  8  9  10    6  0.0000        7  0.0000  0.0000       8  0.0000  0.0000  0.0000      9  0.0001  0.0000  0.0000  0.0000     10  0.0001  0.0000  0.0000  0.0000  0.0000     "
 },
@@ -4370,7 +4298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p01.html#tbl-binomial-p01-low",
   "type": "Table",
-  "number": "B.1.1",
+  "number": "A.1.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.10)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.9000  0.1000        2  0.8100  0.1800  0.0100       3  0.7290  0.2430  0.0270  0.0010      4  0.6561  0.2916  0.0486  0.0036  0.0001     5  0.5905  0.3281  0.0729  0.0081  0.0005  0.0000    6  0.5314  0.3543  0.0984  0.0146  0.0012  0.0001    7  0.4783  0.3720  0.1240  0.0230  0.0026  0.0002    8  0.4305  0.3826  0.1488  0.0331  0.0046  0.0004    9  0.3874  0.3874  0.1722  0.0446  0.0074  0.0008    10  0.3487  0.3874  0.1937  0.0574  0.0112  0.0015    "
 },
@@ -4379,7 +4307,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p01.html#tbl-binomial-p01-high",
   "type": "Table",
-  "number": "B.1.2",
+  "number": "A.1.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.10)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0000        7  0.0000  0.0000       8  0.0000  0.0000  0.0000      9  0.0001  0.0000  0.0000  0.0000     10  0.0001  0.0000  0.0000  0.0000  0.0000    "
 },
@@ -4388,7 +4316,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-binomial-table-p02.html",
   "type": "Section",
-  "number": "B.2",
+  "number": "A.2",
   "title": "Success Probability 0.20",
   "body": " Success Probability 0.20   Exact probabilities for with     0  1  2  3  4  5    1  0.8000  0.2000        2  0.6400  0.3200  0.0400       3  0.5120  0.3840  0.0960  0.0080      4  0.4096  0.4096  0.1536  0.0256  0.0016     5  0.3277  0.4096  0.2048  0.0512  0.0064  0.0003    6  0.2621  0.3932  0.2458  0.0819  0.0154  0.0015    7  0.2097  0.3670  0.2753  0.1147  0.0287  0.0043    8  0.1678  0.3355  0.2936  0.1468  0.0459  0.0092    9  0.1342  0.3020  0.3020  0.1762  0.0661  0.0165    10  0.1074  0.2684  0.3020  0.2013  0.0881  0.0264      Exact probabilities for with     6  7  8  9  10    6  0.0001        7  0.0004  0.0000       8  0.0011  0.0001  0.0000      9  0.0028  0.0003  0.0000  0.0000     10  0.0055  0.0008  0.0001  0.0000  0.0000     "
 },
@@ -4397,7 +4325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p02.html#tbl-binomial-p02-low",
   "type": "Table",
-  "number": "B.2.1",
+  "number": "A.2.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.20)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.8000  0.2000        2  0.6400  0.3200  0.0400       3  0.5120  0.3840  0.0960  0.0080      4  0.4096  0.4096  0.1536  0.0256  0.0016     5  0.3277  0.4096  0.2048  0.0512  0.0064  0.0003    6  0.2621  0.3932  0.2458  0.0819  0.0154  0.0015    7  0.2097  0.3670  0.2753  0.1147  0.0287  0.0043    8  0.1678  0.3355  0.2936  0.1468  0.0459  0.0092    9  0.1342  0.3020  0.3020  0.1762  0.0661  0.0165    10  0.1074  0.2684  0.3020  0.2013  0.0881  0.0264    "
 },
@@ -4406,7 +4334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p02.html#tbl-binomial-p02-high",
   "type": "Table",
-  "number": "B.2.2",
+  "number": "A.2.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.20)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0001        7  0.0004  0.0000       8  0.0011  0.0001  0.0000      9  0.0028  0.0003  0.0000  0.0000     10  0.0055  0.0008  0.0001  0.0000  0.0000    "
 },
@@ -4415,7 +4343,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-binomial-table-p03.html",
   "type": "Section",
-  "number": "B.3",
+  "number": "A.3",
   "title": "Success Probability 0.30",
   "body": " Success Probability 0.30   Exact probabilities for with     0  1  2  3  4  5    1  0.7000  0.3000        2  0.4900  0.4200  0.0900       3  0.3430  0.4410  0.1890  0.0270      4  0.2401  0.4116  0.2646  0.0756  0.0081     5  0.1681  0.3601  0.3087  0.1323  0.0283  0.0024    6  0.1176  0.3025  0.3241  0.1852  0.0595  0.0102    7  0.0824  0.2471  0.3177  0.2269  0.0972  0.0250    8  0.0576  0.1977  0.2965  0.2541  0.1361  0.0467    9  0.0404  0.1556  0.2668  0.2668  0.1715  0.0735    10  0.0282  0.1211  0.2335  0.2668  0.2001  0.1029      Exact probabilities for with     6  7  8  9  10    6  0.0007        7  0.0036  0.0002       8  0.0100  0.0012  0.0001      9  0.0210  0.0039  0.0004  0.0000     10  0.0368  0.0090  0.0014  0.0001  0.0000     "
 },
@@ -4424,7 +4352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p03.html#tbl-binomial-p03-low",
   "type": "Table",
-  "number": "B.3.1",
+  "number": "A.3.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.30)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.7000  0.3000        2  0.4900  0.4200  0.0900       3  0.3430  0.4410  0.1890  0.0270      4  0.2401  0.4116  0.2646  0.0756  0.0081     5  0.1681  0.3601  0.3087  0.1323  0.0283  0.0024    6  0.1176  0.3025  0.3241  0.1852  0.0595  0.0102    7  0.0824  0.2471  0.3177  0.2269  0.0972  0.0250    8  0.0576  0.1977  0.2965  0.2541  0.1361  0.0467    9  0.0404  0.1556  0.2668  0.2668  0.1715  0.0735    10  0.0282  0.1211  0.2335  0.2668  0.2001  0.1029    "
 },
@@ -4433,7 +4361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p03.html#tbl-binomial-p03-high",
   "type": "Table",
-  "number": "B.3.2",
+  "number": "A.3.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.30)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0007        7  0.0036  0.0002       8  0.0100  0.0012  0.0001      9  0.0210  0.0039  0.0004  0.0000     10  0.0368  0.0090  0.0014  0.0001  0.0000    "
 },
@@ -4442,7 +4370,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-binomial-table-p04.html",
   "type": "Section",
-  "number": "B.4",
+  "number": "A.4",
   "title": "Success Probability 0.40",
   "body": " Success Probability 0.40   Exact probabilities for with     0  1  2  3  4  5    1  0.6000  0.4000        2  0.3600  0.4800  0.1600       3  0.2160  0.4320  0.2880  0.0640      4  0.1296  0.3456  0.3456  0.1536  0.0256     5  0.0778  0.2592  0.3456  0.2304  0.0768  0.0102    6  0.0467  0.1866  0.3110  0.2765  0.1382  0.0369    7  0.0280  0.1306  0.2613  0.2903  0.1935  0.0774    8  0.0168  0.0896  0.2090  0.2787  0.2322  0.1239    9  0.0101  0.0605  0.1612  0.2508  0.2508  0.1672    10  0.0060  0.0403  0.1209  0.2150  0.2508  0.2007      Exact probabilities for with     6  7  8  9  10    6  0.0041        7  0.0172  0.0016       8  0.0413  0.0079  0.0007      9  0.0743  0.0212  0.0035  0.0003     10  0.1115  0.0425  0.0106  0.0016  0.0001     "
 },
@@ -4451,7 +4379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p04.html#tbl-binomial-p04-low",
   "type": "Table",
-  "number": "B.4.1",
+  "number": "A.4.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.40)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.6000  0.4000        2  0.3600  0.4800  0.1600       3  0.2160  0.4320  0.2880  0.0640      4  0.1296  0.3456  0.3456  0.1536  0.0256     5  0.0778  0.2592  0.3456  0.2304  0.0768  0.0102    6  0.0467  0.1866  0.3110  0.2765  0.1382  0.0369    7  0.0280  0.1306  0.2613  0.2903  0.1935  0.0774    8  0.0168  0.0896  0.2090  0.2787  0.2322  0.1239    9  0.0101  0.0605  0.1612  0.2508  0.2508  0.1672    10  0.0060  0.0403  0.1209  0.2150  0.2508  0.2007    "
 },
@@ -4460,7 +4388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p04.html#tbl-binomial-p04-high",
   "type": "Table",
-  "number": "B.4.2",
+  "number": "A.4.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.40)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0041        7  0.0172  0.0016       8  0.0413  0.0079  0.0007      9  0.0743  0.0212  0.0035  0.0003     10  0.1115  0.0425  0.0106  0.0016  0.0001    "
 },
@@ -4469,7 +4397,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-binomial-table-p05.html",
   "type": "Section",
-  "number": "B.5",
+  "number": "A.5",
   "title": "Success Probability 0.50",
   "body": " Success Probability 0.50   Exact probabilities for with     0  1  2  3  4  5    1  0.5000  0.5000        2  0.2500  0.5000  0.2500       3  0.1250  0.3750  0.3750  0.1250      4  0.0625  0.2500  0.3750  0.2500  0.0625     5  0.0312  0.1562  0.3125  0.3125  0.1562  0.0312    6  0.0156  0.0938  0.2344  0.3125  0.2344  0.0938    7  0.0078  0.0547  0.1641  0.2734  0.2734  0.1641    8  0.0039  0.0312  0.1094  0.2188  0.2734  0.2188    9  0.0020  0.0176  0.0703  0.1641  0.2461  0.2461    10  0.0010  0.0098  0.0439  0.1172  0.2051  0.2461      Exact probabilities for with     6  7  8  9  10    6  0.0156        7  0.0547  0.0078       8  0.1094  0.0312  0.0039      9  0.1641  0.0703  0.0176  0.0020     10  0.2051  0.1172  0.0439  0.0098  0.0010     "
 },
@@ -4478,7 +4406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p05.html#tbl-binomial-p05-low",
   "type": "Table",
-  "number": "B.5.1",
+  "number": "A.5.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.50)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.5000  0.5000        2  0.2500  0.5000  0.2500       3  0.1250  0.3750  0.3750  0.1250      4  0.0625  0.2500  0.3750  0.2500  0.0625     5  0.0312  0.1562  0.3125  0.3125  0.1562  0.0312    6  0.0156  0.0938  0.2344  0.3125  0.2344  0.0938    7  0.0078  0.0547  0.1641  0.2734  0.2734  0.1641    8  0.0039  0.0312  0.1094  0.2188  0.2734  0.2188    9  0.0020  0.0176  0.0703  0.1641  0.2461  0.2461    10  0.0010  0.0098  0.0439  0.1172  0.2051  0.2461    "
 },
@@ -4487,7 +4415,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-table-p05.html#tbl-binomial-p05-high",
   "type": "Table",
-  "number": "B.5.2",
+  "number": "A.5.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.50)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0156        7  0.0547  0.0078       8  0.1094  0.0312  0.0039      9  0.1641  0.0703  0.0176  0.0020     10  0.2051  0.1172  0.0439  0.0098  0.0010    "
 },
@@ -4496,7 +4424,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "app-normal-table.html",
   "type": "Appendix",
-  "number": "C",
+  "number": "B",
   "title": "Normal Distribution",
   "body": " Normal Distribution  This appendix gives the standard normal cumulative distribution table. Each entry is for a standard normal random variable appendices standard normal table  .  The table lists only nonnegative -values. For negative values, use symmetry: .  To keep the print layout readable, the columns are split into two companion tables.   Columns 0.00 through 0.04 for     0.00  0.01  0.02  0.03  0.04    0.0  0.5000  0.5040  0.5080  0.5120  0.5160    0.1  0.5398  0.5438  0.5478  0.5517  0.5557    0.2  0.5793  0.5832  0.5871  0.5910  0.5948    0.3  0.6179  0.6217  0.6255  0.6293  0.6331    0.4  0.6554  0.6591  0.6628  0.6664  0.6700    0.5  0.6915  0.6950  0.6985  0.7019  0.7054    0.6  0.7257  0.7291  0.7324  0.7357  0.7389    0.7  0.7580  0.7611  0.7642  0.7673  0.7704    0.8  0.7881  0.7910  0.7939  0.7967  0.7995    0.9  0.8159  0.8186  0.8212  0.8238  0.8264    1.0  0.8413  0.8438  0.8461  0.8485  0.8508    1.1  0.8643  0.8665  0.8686  0.8708  0.8729    1.2  0.8849  0.8869  0.8888  0.8907  0.8925    1.3  0.9032  0.9049  0.9066  0.9082  0.9099    1.4  0.9192  0.9207  0.9222  0.9236  0.9251    1.5  0.9332  0.9345  0.9357  0.9370  0.9382    1.6  0.9452  0.9463  0.9474  0.9484  0.9495    1.7  0.9554  0.9564  0.9573  0.9582  0.9591    1.8  0.9641  0.9649  0.9656  0.9664  0.9671    1.9  0.9713  0.9719  0.9726  0.9732  0.9738    2.0  0.9772  0.9778  0.9783  0.9788  0.9793    2.1  0.9821  0.9826  0.9830  0.9834  0.9838    2.2  0.9861  0.9864  0.9868  0.9871  0.9875    2.3  0.9893  0.9896  0.9898  0.9901  0.9904    2.4  0.9918  0.9920  0.9922  0.9925  0.9927    2.5  0.9938  0.9940  0.9941  0.9943  0.9945    2.6  0.9953  0.9955  0.9956  0.9957  0.9959    2.7  0.9965  0.9966  0.9967  0.9968  0.9969    2.8  0.9974  0.9975  0.9976  0.9977  0.9977    2.9  0.9981  0.9982  0.9982  0.9983  0.9984    3.0  0.9987  0.9987  0.9987  0.9988  0.9988    3.1  0.9990  0.9991  0.9991  0.9991  0.9992    3.2  0.9993  0.9993  0.9994  0.9994  0.9994    3.3  0.9995  0.9995  0.9995  0.9996  0.9996    3.4  0.9997  0.9997  0.9997  0.9997  0.9997    3.5  0.9998  0.9998  0.9998  0.9998  0.9998    3.6  0.9998  0.9998  0.9999  0.9999  0.9999    3.7  0.9999  0.9999  0.9999  0.9999  0.9999    3.8  0.9999  0.9999  0.9999  0.9999  0.9999    3.9  1.0000  1.0000  1.0000  1.0000  1.0000      Columns 0.05 through 0.09 for     0.05  0.06  0.07  0.08  0.09    0.0  0.5199  0.5239  0.5279  0.5319  0.5359    0.1  0.5596  0.5636  0.5675  0.5714  0.5753    0.2  0.5987  0.6026  0.6064  0.6103  0.6141    0.3  0.6368  0.6406  0.6443  0.6480  0.6517    0.4  0.6736  0.6772  0.6808  0.6844  0.6879    0.5  0.7088  0.7123  0.7157  0.7190  0.7224    0.6  0.7422  0.7454  0.7486  0.7517  0.7549    0.7  0.7734  0.7764  0.7794  0.7823  0.7852    0.8  0.8023  0.8051  0.8078  0.8106  0.8133    0.9  0.8289  0.8315  0.8340  0.8365  0.8389    1.0  0.8531  0.8554  0.8577  0.8599  0.8621    1.1  0.8749  0.8770  0.8790  0.8810  0.8830    1.2  0.8944  0.8962  0.8980  0.8997  0.9015    1.3  0.9115  0.9131  0.9147  0.9162  0.9177    1.4  0.9265  0.9279  0.9292  0.9306  0.9319    1.5  0.9394  0.9406  0.9418  0.9429  0.9441    1.6  0.9505  0.9515  0.9525  0.9535  0.9545    1.7  0.9599  0.9608  0.9616  0.9625  0.9633    1.8  0.9678  0.9686  0.9693  0.9699  0.9706    1.9  0.9744  0.9750  0.9756  0.9761  0.9767    2.0  0.9798  0.9803  0.9808  0.9812  0.9817    2.1  0.9842  0.9846  0.9850  0.9854  0.9857    2.2  0.9878  0.9881  0.9884  0.9887  0.9890    2.3  0.9906  0.9909  0.9911  0.9913  0.9916    2.4  0.9929  0.9931  0.9932  0.9934  0.9936    2.5  0.9946  0.9948  0.9949  0.9951  0.9952    2.6  0.9960  0.9961  0.9962  0.9963  0.9964    2.7  0.9970  0.9971  0.9972  0.9973  0.9974    2.8  0.9978  0.9979  0.9979  0.9980  0.9981    2.9  0.9984  0.9985  0.9985  0.9986  0.9986    3.0  0.9989  0.9989  0.9989  0.9990  0.9990    3.1  0.9992  0.9992  0.9992  0.9993  0.9993    3.2  0.9994  0.9994  0.9995  0.9995  0.9995    3.3  0.9996  0.9996  0.9996  0.9996  0.9997    3.4  0.9997  0.9997  0.9997  0.9997  0.9998    3.5  0.9998  0.9998  0.9998  0.9998  0.9998    3.6  0.9999  0.9999  0.9999  0.9999  0.9999    3.7  0.9999  0.9999  0.9999  0.9999  0.9999    3.8  0.9999  0.9999  0.9999  0.9999  0.9999    3.9  1.0000  1.0000  1.0000  1.0000  1.0000     "
 },
@@ -4514,7 +4442,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "app-normal-table.html#tbl-standard-normal-cdf-a",
   "type": "Table",
-  "number": "C.0.1",
+  "number": "B.0.1",
   "title": "Columns 0.00 through 0.04 for <span class=\"process-math\">\\(P(Z\\le z)\\)<\/span>",
   "body": " Columns 0.00 through 0.04 for     0.00  0.01  0.02  0.03  0.04    0.0  0.5000  0.5040  0.5080  0.5120  0.5160    0.1  0.5398  0.5438  0.5478  0.5517  0.5557    0.2  0.5793  0.5832  0.5871  0.5910  0.5948    0.3  0.6179  0.6217  0.6255  0.6293  0.6331    0.4  0.6554  0.6591  0.6628  0.6664  0.6700    0.5  0.6915  0.6950  0.6985  0.7019  0.7054    0.6  0.7257  0.7291  0.7324  0.7357  0.7389    0.7  0.7580  0.7611  0.7642  0.7673  0.7704    0.8  0.7881  0.7910  0.7939  0.7967  0.7995    0.9  0.8159  0.8186  0.8212  0.8238  0.8264    1.0  0.8413  0.8438  0.8461  0.8485  0.8508    1.1  0.8643  0.8665  0.8686  0.8708  0.8729    1.2  0.8849  0.8869  0.8888  0.8907  0.8925    1.3  0.9032  0.9049  0.9066  0.9082  0.9099    1.4  0.9192  0.9207  0.9222  0.9236  0.9251    1.5  0.9332  0.9345  0.9357  0.9370  0.9382    1.6  0.9452  0.9463  0.9474  0.9484  0.9495    1.7  0.9554  0.9564  0.9573  0.9582  0.9591    1.8  0.9641  0.9649  0.9656  0.9664  0.9671    1.9  0.9713  0.9719  0.9726  0.9732  0.9738    2.0  0.9772  0.9778  0.9783  0.9788  0.9793    2.1  0.9821  0.9826  0.9830  0.9834  0.9838    2.2  0.9861  0.9864  0.9868  0.9871  0.9875    2.3  0.9893  0.9896  0.9898  0.9901  0.9904    2.4  0.9918  0.9920  0.9922  0.9925  0.9927    2.5  0.9938  0.9940  0.9941  0.9943  0.9945    2.6  0.9953  0.9955  0.9956  0.9957  0.9959    2.7  0.9965  0.9966  0.9967  0.9968  0.9969    2.8  0.9974  0.9975  0.9976  0.9977  0.9977    2.9  0.9981  0.9982  0.9982  0.9983  0.9984    3.0  0.9987  0.9987  0.9987  0.9988  0.9988    3.1  0.9990  0.9991  0.9991  0.9991  0.9992    3.2  0.9993  0.9993  0.9994  0.9994  0.9994    3.3  0.9995  0.9995  0.9995  0.9996  0.9996    3.4  0.9997  0.9997  0.9997  0.9997  0.9997    3.5  0.9998  0.9998  0.9998  0.9998  0.9998    3.6  0.9998  0.9998  0.9999  0.9999  0.9999    3.7  0.9999  0.9999  0.9999  0.9999  0.9999    3.8  0.9999  0.9999  0.9999  0.9999  0.9999    3.9  1.0000  1.0000  1.0000  1.0000  1.0000    "
 },
@@ -4523,7 +4451,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "app-normal-table.html#tbl-standard-normal-cdf-b",
   "type": "Table",
-  "number": "C.0.2",
+  "number": "B.0.2",
   "title": "Columns 0.05 through 0.09 for <span class=\"process-math\">\\(P(Z\\le z)\\)<\/span>",
   "body": " Columns 0.05 through 0.09 for     0.05  0.06  0.07  0.08  0.09    0.0  0.5199  0.5239  0.5279  0.5319  0.5359    0.1  0.5596  0.5636  0.5675  0.5714  0.5753    0.2  0.5987  0.6026  0.6064  0.6103  0.6141    0.3  0.6368  0.6406  0.6443  0.6480  0.6517    0.4  0.6736  0.6772  0.6808  0.6844  0.6879    0.5  0.7088  0.7123  0.7157  0.7190  0.7224    0.6  0.7422  0.7454  0.7486  0.7517  0.7549    0.7  0.7734  0.7764  0.7794  0.7823  0.7852    0.8  0.8023  0.8051  0.8078  0.8106  0.8133    0.9  0.8289  0.8315  0.8340  0.8365  0.8389    1.0  0.8531  0.8554  0.8577  0.8599  0.8621    1.1  0.8749  0.8770  0.8790  0.8810  0.8830    1.2  0.8944  0.8962  0.8980  0.8997  0.9015    1.3  0.9115  0.9131  0.9147  0.9162  0.9177    1.4  0.9265  0.9279  0.9292  0.9306  0.9319    1.5  0.9394  0.9406  0.9418  0.9429  0.9441    1.6  0.9505  0.9515  0.9525  0.9535  0.9545    1.7  0.9599  0.9608  0.9616  0.9625  0.9633    1.8  0.9678  0.9686  0.9693  0.9699  0.9706    1.9  0.9744  0.9750  0.9756  0.9761  0.9767    2.0  0.9798  0.9803  0.9808  0.9812  0.9817    2.1  0.9842  0.9846  0.9850  0.9854  0.9857    2.2  0.9878  0.9881  0.9884  0.9887  0.9890    2.3  0.9906  0.9909  0.9911  0.9913  0.9916    2.4  0.9929  0.9931  0.9932  0.9934  0.9936    2.5  0.9946  0.9948  0.9949  0.9951  0.9952    2.6  0.9960  0.9961  0.9962  0.9963  0.9964    2.7  0.9970  0.9971  0.9972  0.9973  0.9974    2.8  0.9978  0.9979  0.9979  0.9980  0.9981    2.9  0.9984  0.9985  0.9985  0.9986  0.9986    3.0  0.9989  0.9989  0.9989  0.9990  0.9990    3.1  0.9992  0.9992  0.9992  0.9993  0.9993    3.2  0.9994  0.9994  0.9995  0.9995  0.9995    3.3  0.9996  0.9996  0.9996  0.9996  0.9997    3.4  0.9997  0.9997  0.9997  0.9997  0.9998    3.5  0.9998  0.9998  0.9998  0.9998  0.9998    3.6  0.9999  0.9999  0.9999  0.9999  0.9999    3.7  0.9999  0.9999  0.9999  0.9999  0.9999    3.8  0.9999  0.9999  0.9999  0.9999  0.9999    3.9  1.0000  1.0000  1.0000  1.0000  1.0000    "
 },
@@ -4532,7 +4460,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "app-t-table.html",
   "type": "Appendix",
-  "number": "D",
+  "number": "C",
   "title": "The t Distribution",
   "body": " The t Distribution  This appendix lists upper-tail critical values for the t distribution appendices t table . Each entry satisfies for with the indicated degrees of freedom.  For a two-tailed confidence interval or hypothesis test with total tail area , use the column for .   Upper-tail critical values for the distribution    df           1.000  3.078  6.314  12.706  31.821  63.657     0.816  1.886  2.920  4.303  6.965  9.925     0.765  1.638  2.353  3.182  4.541  5.841     0.741  1.533  2.132  2.776  3.747  4.604     0.727  1.476  2.015  2.571  3.365  4.032     0.718  1.440  1.943  2.447  3.143  3.707     0.711  1.415  1.895  2.365  2.998  3.499     0.706  1.397  1.860  2.306  2.896  3.355     0.703  1.383  1.833  2.262  2.821  3.250     0.700  1.372  1.812  2.228  2.764  3.169     0.697  1.363  1.796  2.201  2.718  3.106     0.695  1.356  1.782  2.179  2.681  3.055     0.694  1.350  1.771  2.160  2.650  3.012     0.692  1.345  1.761  2.145  2.624  2.977     0.691  1.341  1.753  2.131  2.602  2.947     0.690  1.337  1.746  2.120  2.583  2.921     0.689  1.333  1.740  2.110  2.567  2.898     0.688  1.330  1.734  2.101  2.552  2.878     0.688  1.328  1.729  2.093  2.539  2.861     0.687  1.325  1.725  2.086  2.528  2.845     0.686  1.323  1.721  2.080  2.518  2.831     0.686  1.321  1.717  2.074  2.508  2.819     0.685  1.319  1.714  2.069  2.500  2.807     0.685  1.318  1.711  2.064  2.492  2.797     0.684  1.316  1.708  2.060  2.485  2.787     0.684  1.315  1.706  2.056  2.479  2.779     0.684  1.314  1.703  2.052  2.473  2.771     0.683  1.313  1.701  2.048  2.467  2.763     0.683  1.311  1.699  2.045  2.462  2.756     0.683  1.310  1.697  2.042  2.457  2.750     0.681  1.303  1.684  2.021  2.423  2.704     0.679  1.296  1.671  2.000  2.390  2.660     0.677  1.289  1.658  1.980  2.358  2.617     0.674  1.282  1.645  1.960  2.326  2.576     "
 },
@@ -4550,7 +4478,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "app-t-table.html#tbl-t-critical-values",
   "type": "Table",
-  "number": "D.0.1",
+  "number": "C.0.1",
   "title": "Upper-tail critical values for the <span class=\"process-math\">\\(t\\)<\/span> distribution",
   "body": " Upper-tail critical values for the distribution    df           1.000  3.078  6.314  12.706  31.821  63.657     0.816  1.886  2.920  4.303  6.965  9.925     0.765  1.638  2.353  3.182  4.541  5.841     0.741  1.533  2.132  2.776  3.747  4.604     0.727  1.476  2.015  2.571  3.365  4.032     0.718  1.440  1.943  2.447  3.143  3.707     0.711  1.415  1.895  2.365  2.998  3.499     0.706  1.397  1.860  2.306  2.896  3.355     0.703  1.383  1.833  2.262  2.821  3.250     0.700  1.372  1.812  2.228  2.764  3.169     0.697  1.363  1.796  2.201  2.718  3.106     0.695  1.356  1.782  2.179  2.681  3.055     0.694  1.350  1.771  2.160  2.650  3.012     0.692  1.345  1.761  2.145  2.624  2.977     0.691  1.341  1.753  2.131  2.602  2.947     0.690  1.337  1.746  2.120  2.583  2.921     0.689  1.333  1.740  2.110  2.567  2.898     0.688  1.330  1.734  2.101  2.552  2.878     0.688  1.328  1.729  2.093  2.539  2.861     0.687  1.325  1.725  2.086  2.528  2.845     0.686  1.323  1.721  2.080  2.518  2.831     0.686  1.321  1.717  2.074  2.508  2.819     0.685  1.319  1.714  2.069  2.500  2.807     0.685  1.318  1.711  2.064  2.492  2.797     0.684  1.316  1.708  2.060  2.485  2.787     0.684  1.315  1.706  2.056  2.479  2.779     0.684  1.314  1.703  2.052  2.473  2.771     0.683  1.313  1.701  2.048  2.467  2.763     0.683  1.311  1.699  2.045  2.462  2.756     0.683  1.310  1.697  2.042  2.457  2.750     0.681  1.303  1.684  2.021  2.423  2.704     0.679  1.296  1.671  2.000  2.390  2.660     0.677  1.289  1.658  1.980  2.358  2.617     0.674  1.282  1.645  1.960  2.326  2.576    "
 },
@@ -4559,7 +4487,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "app-chi-square-table.html",
   "type": "Appendix",
-  "number": "E",
+  "number": "D",
   "title": "The Chi-Square Distribution",
   "body": " The Chi-Square Distribution  This appendix gives right-tail critical values for the chi-square distribution appendices chi-square table . Each entry satisfies for the stated degrees of freedom.  The left-side columns are useful for lower-tail cutoffs, while the right-side columns are the ones most often used for hypothesis tests and confidence intervals.  In this book, these values are used most directly for confidence intervals and hypothesis tests for a population variance or standard deviation from a normal population.  To keep the print layout centered and readable, the columns are split into two related tables.   Columns for larger right-tail areas for the distribution    df         1  0.000  0.000  0.001  0.004  0.016    2  0.010  0.020  0.051  0.103  0.211    3  0.072  0.115  0.216  0.352  0.584    4  0.207  0.297  0.484  0.711  1.064    5  0.412  0.554  0.831  1.145  1.610    6  0.676  0.872  1.237  1.635  2.204    7  0.989  1.239  1.690  2.167  2.833    8  1.344  1.646  2.180  2.733  3.490    9  1.735  2.088  2.700  3.325  4.168    10  2.156  2.558  3.247  3.940  4.865    11  2.603  3.053  3.816  4.575  5.578    12  3.074  3.571  4.404  5.226  6.304    13  3.565  4.107  5.009  5.892  7.042    14  4.075  4.660  5.629  6.571  7.790    15  4.601  5.229  6.262  7.261  8.547    16  5.142  5.812  6.908  7.962  9.312    17  5.697  6.408  7.564  8.672  10.085    18  6.265  7.015  8.231  9.390  10.865    19  6.844  7.633  8.907  10.117  11.651    20  7.434  8.260  9.591  10.851  12.443    21  8.034  8.897  10.283  11.591  13.240    22  8.643  9.542  10.982  12.338  14.041    23  9.260  10.196  11.689  13.091  14.848    24  9.886  10.856  12.401  13.848  15.659    25  10.520  11.524  13.120  14.611  16.473    26  11.160  12.198  13.844  15.379  17.292    27  11.808  12.879  14.573  16.151  18.114    28  12.461  13.565  15.308  16.928  18.939    29  13.121  14.256  16.047  17.708  19.768    30  13.787  14.953  16.791  18.493  20.599    40  20.707  22.164  24.433  26.509  29.051    60  35.534  37.485  40.482  43.188  46.459    80  51.172  53.540  57.153  60.391  64.278    100  67.328  70.065  74.222  77.929  82.358      Columns for smaller right-tail areas for the distribution    df         1  2.706  3.841  5.024  6.635  7.879    2  4.605  5.991  7.378  9.210  10.597    3  6.251  7.815  9.348  11.345  12.838    4  7.779  9.488  11.143  13.277  14.860    5  9.236  11.070  12.833  15.086  16.750    6  10.645  12.592  14.449  16.812  18.548    7  12.017  14.067  16.013  18.475  20.278    8  13.362  15.507  17.535  20.090  21.955    9  14.684  16.919  19.023  21.666  23.589    10  15.987  18.307  20.483  23.209  25.188    11  17.275  19.675  21.920  24.725  26.757    12  18.549  21.026  23.337  26.217  28.300    13  19.812  22.362  24.736  27.688  29.819    14  21.064  23.685  26.119  29.141  31.319    15  22.307  24.996  27.488  30.578  32.801    16  23.542  26.296  28.845  32.000  34.267    17  24.769  27.587  30.191  33.409  35.718    18  25.989  28.869  31.526  34.805  37.156    19  27.204  30.144  32.852  36.191  38.582    20  28.412  31.410  34.170  37.566  39.997    21  29.615  32.671  35.479  38.932  41.401    22  30.813  33.924  36.781  40.289  42.796    23  32.007  35.172  38.076  41.638  44.181    24  33.196  36.415  39.364  42.980  45.559    25  34.382  37.652  40.646  44.314  46.928    26  35.563  38.885  41.923  45.642  48.290    27  36.741  40.113  43.195  46.963  49.645    28  37.916  41.337  44.461  48.278  50.993    29  39.087  42.557  45.722  49.588  52.336    30  40.256  43.773  46.979  50.892  53.672    40  51.805  55.758  59.342  63.691  66.766    60  74.397  79.082  83.298  88.379  91.952    80  96.578  101.879  106.629  112.329  116.321    100  118.498  124.342  129.561  135.807  140.169     "
 },
@@ -4577,7 +4505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "app-chi-square-table.html#tbl-chi-square-critical-values-left",
   "type": "Table",
-  "number": "E.0.1",
+  "number": "D.0.1",
   "title": "Columns for larger right-tail areas for the <span class=\"process-math\">\\(\\chi^2\\)<\/span> distribution",
   "body": " Columns for larger right-tail areas for the distribution    df         1  0.000  0.000  0.001  0.004  0.016    2  0.010  0.020  0.051  0.103  0.211    3  0.072  0.115  0.216  0.352  0.584    4  0.207  0.297  0.484  0.711  1.064    5  0.412  0.554  0.831  1.145  1.610    6  0.676  0.872  1.237  1.635  2.204    7  0.989  1.239  1.690  2.167  2.833    8  1.344  1.646  2.180  2.733  3.490    9  1.735  2.088  2.700  3.325  4.168    10  2.156  2.558  3.247  3.940  4.865    11  2.603  3.053  3.816  4.575  5.578    12  3.074  3.571  4.404  5.226  6.304    13  3.565  4.107  5.009  5.892  7.042    14  4.075  4.660  5.629  6.571  7.790    15  4.601  5.229  6.262  7.261  8.547    16  5.142  5.812  6.908  7.962  9.312    17  5.697  6.408  7.564  8.672  10.085    18  6.265  7.015  8.231  9.390  10.865    19  6.844  7.633  8.907  10.117  11.651    20  7.434  8.260  9.591  10.851  12.443    21  8.034  8.897  10.283  11.591  13.240    22  8.643  9.542  10.982  12.338  14.041    23  9.260  10.196  11.689  13.091  14.848    24  9.886  10.856  12.401  13.848  15.659    25  10.520  11.524  13.120  14.611  16.473    26  11.160  12.198  13.844  15.379  17.292    27  11.808  12.879  14.573  16.151  18.114    28  12.461  13.565  15.308  16.928  18.939    29  13.121  14.256  16.047  17.708  19.768    30  13.787  14.953  16.791  18.493  20.599    40  20.707  22.164  24.433  26.509  29.051    60  35.534  37.485  40.482  43.188  46.459    80  51.172  53.540  57.153  60.391  64.278    100  67.328  70.065  74.222  77.929  82.358    "
 },
@@ -4586,7 +4514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "app-chi-square-table.html#tbl-chi-square-critical-values-right",
   "type": "Table",
-  "number": "E.0.2",
+  "number": "D.0.2",
   "title": "Columns for smaller right-tail areas for the <span class=\"process-math\">\\(\\chi^2\\)<\/span> distribution",
   "body": " Columns for smaller right-tail areas for the distribution    df         1  2.706  3.841  5.024  6.635  7.879    2  4.605  5.991  7.378  9.210  10.597    3  6.251  7.815  9.348  11.345  12.838    4  7.779  9.488  11.143  13.277  14.860    5  9.236  11.070  12.833  15.086  16.750    6  10.645  12.592  14.449  16.812  18.548    7  12.017  14.067  16.013  18.475  20.278    8  13.362  15.507  17.535  20.090  21.955    9  14.684  16.919  19.023  21.666  23.589    10  15.987  18.307  20.483  23.209  25.188    11  17.275  19.675  21.920  24.725  26.757    12  18.549  21.026  23.337  26.217  28.300    13  19.812  22.362  24.736  27.688  29.819    14  21.064  23.685  26.119  29.141  31.319    15  22.307  24.996  27.488  30.578  32.801    16  23.542  26.296  28.845  32.000  34.267    17  24.769  27.587  30.191  33.409  35.718    18  25.989  28.869  31.526  34.805  37.156    19  27.204  30.144  32.852  36.191  38.582    20  28.412  31.410  34.170  37.566  39.997    21  29.615  32.671  35.479  38.932  41.401    22  30.813  33.924  36.781  40.289  42.796    23  32.007  35.172  38.076  41.638  44.181    24  33.196  36.415  39.364  42.980  45.559    25  34.382  37.652  40.646  44.314  46.928    26  35.563  38.885  41.923  45.642  48.290    27  36.741  40.113  43.195  46.963  49.645    28  37.916  41.337  44.461  48.278  50.993    29  39.087  42.557  45.722  49.588  52.336    30  40.256  43.773  46.979  50.892  53.672    40  51.805  55.758  59.342  63.691  66.766    60  74.397  79.082  83.298  88.379  91.952    80  96.578  101.879  106.629  112.329  116.321    100  118.498  124.342  129.561  135.807  140.169    "
 },
@@ -4595,7 +4523,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-f-alpha-005.html",
   "type": "Section",
-  "number": "F.1",
+  "number": "E.1",
   "title": "Right-Tail Area 0.05",
   "body": " Right-Tail Area 0.05   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     161.448  199.500  215.707  224.583  230.162     18.513  19.000  19.164  19.247  19.296     10.128  9.552  9.277  9.117  9.013     7.709  6.944  6.591  6.388  6.256     6.608  5.786  5.409  5.192  5.050     5.987  5.143  4.757  4.534  4.387     5.591  4.737  4.347  4.120  3.972     5.318  4.459  4.066  3.838  3.687     5.117  4.256  3.863  3.633  3.482     4.965  4.103  3.708  3.478  3.326     4.747  3.885  3.490  3.259  3.106     4.543  3.682  3.287  3.056  2.901     4.351  3.493  3.098  2.866  2.711     4.260  3.403  3.009  2.776  2.621     4.171  3.316  2.922  2.690  2.534     4.085  3.232  2.839  2.606  2.449     4.001  3.150  2.758  2.525  2.368     3.920  3.072  2.680  2.447  2.290     3.841  2.996  2.605  2.372  2.214      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     233.986  236.768  238.883  240.543  241.882     19.330  19.353  19.371  19.385  19.396     8.941  8.887  8.845  8.812  8.786     6.163  6.094  6.041  5.999  5.964     4.950  4.876  4.818  4.772  4.735     4.284  4.207  4.147  4.099  4.060     3.866  3.787  3.726  3.677  3.637     3.581  3.500  3.438  3.388  3.347     3.374  3.293  3.230  3.179  3.137     3.217  3.135  3.072  3.020  2.978     2.996  2.913  2.849  2.796  2.753     2.790  2.707  2.641  2.588  2.544     2.599  2.514  2.447  2.393  2.348     2.508  2.423  2.355  2.300  2.255     2.421  2.334  2.266  2.211  2.165     2.336  2.249  2.180  2.124  2.077     2.254  2.167  2.097  2.040  1.993     2.175  2.087  2.016  1.959  1.910     2.099  2.010  1.938  1.880  1.831      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     243.906  245.950  248.013  249.052  250.095  251.143  252.196  253.253     19.413  19.429  19.446  19.454  19.462  19.471  19.479  19.487     8.745  8.703  8.660  8.639  8.617  8.594  8.572  8.549     5.912  5.858  5.803  5.774  5.746  5.717  5.688  5.658     4.678  4.619  4.558  4.527  4.496  4.464  4.431  4.398     4.000  3.938  3.874  3.841  3.808  3.774  3.740  3.705     3.575  3.511  3.445  3.410  3.376  3.340  3.304  3.267     3.284  3.218  3.150  3.115  3.079  3.043  3.005  2.967     3.073  3.006  2.936  2.900  2.864  2.826  2.787  2.748     2.913  2.845  2.774  2.737  2.700  2.661  2.621  2.580     2.687  2.617  2.544  2.505  2.466  2.426  2.384  2.341     2.475  2.403  2.328  2.288  2.247  2.204  2.160  2.114     2.278  2.203  2.124  2.082  2.039  1.994  1.946  1.896     2.183  2.108  2.027  1.984  1.939  1.892  1.842  1.790     2.092  2.015  1.932  1.887  1.841  1.792  1.740  1.683     2.003  1.924  1.839  1.793  1.744  1.693  1.637  1.577     1.917  1.836  1.748  1.700  1.649  1.594  1.534  1.467     1.834  1.750  1.659  1.608  1.554  1.495  1.429  1.352     1.752  1.666  1.571  1.517  1.459  1.394  1.318  1.221     "
 },
@@ -4604,7 +4532,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g1a",
   "type": "Table",
-  "number": "F.1.1",
+  "number": "E.1.1",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 1, 2, 3, 4, 5",
   "body": " Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     161.448  199.500  215.707  224.583  230.162     18.513  19.000  19.164  19.247  19.296     10.128  9.552  9.277  9.117  9.013     7.709  6.944  6.591  6.388  6.256     6.608  5.786  5.409  5.192  5.050     5.987  5.143  4.757  4.534  4.387     5.591  4.737  4.347  4.120  3.972     5.318  4.459  4.066  3.838  3.687     5.117  4.256  3.863  3.633  3.482     4.965  4.103  3.708  3.478  3.326     4.747  3.885  3.490  3.259  3.106     4.543  3.682  3.287  3.056  2.901     4.351  3.493  3.098  2.866  2.711     4.260  3.403  3.009  2.776  2.621     4.171  3.316  2.922  2.690  2.534     4.085  3.232  2.839  2.606  2.449     4.001  3.150  2.758  2.525  2.368     3.920  3.072  2.680  2.447  2.290     3.841  2.996  2.605  2.372  2.214    "
 },
@@ -4613,7 +4541,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g1b",
   "type": "Table",
-  "number": "F.1.2",
+  "number": "E.1.2",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 6, 7, 8, 9, 10",
   "body": " Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     233.986  236.768  238.883  240.543  241.882     19.330  19.353  19.371  19.385  19.396     8.941  8.887  8.845  8.812  8.786     6.163  6.094  6.041  5.999  5.964     4.950  4.876  4.818  4.772  4.735     4.284  4.207  4.147  4.099  4.060     3.866  3.787  3.726  3.677  3.637     3.581  3.500  3.438  3.388  3.347     3.374  3.293  3.230  3.179  3.137     3.217  3.135  3.072  3.020  2.978     2.996  2.913  2.849  2.796  2.753     2.790  2.707  2.641  2.588  2.544     2.599  2.514  2.447  2.393  2.348     2.508  2.423  2.355  2.300  2.255     2.421  2.334  2.266  2.211  2.165     2.336  2.249  2.180  2.124  2.077     2.254  2.167  2.097  2.040  1.993     2.175  2.087  2.016  1.959  1.910     2.099  2.010  1.938  1.880  1.831    "
 },
@@ -4622,7 +4550,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g2",
   "type": "Table",
-  "number": "F.1.3",
+  "number": "E.1.3",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 12, 15, 20, 24, 30, 40, 60, 120",
   "body": " Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     243.906  245.950  248.013  249.052  250.095  251.143  252.196  253.253     19.413  19.429  19.446  19.454  19.462  19.471  19.479  19.487     8.745  8.703  8.660  8.639  8.617  8.594  8.572  8.549     5.912  5.858  5.803  5.774  5.746  5.717  5.688  5.658     4.678  4.619  4.558  4.527  4.496  4.464  4.431  4.398     4.000  3.938  3.874  3.841  3.808  3.774  3.740  3.705     3.575  3.511  3.445  3.410  3.376  3.340  3.304  3.267     3.284  3.218  3.150  3.115  3.079  3.043  3.005  2.967     3.073  3.006  2.936  2.900  2.864  2.826  2.787  2.748     2.913  2.845  2.774  2.737  2.700  2.661  2.621  2.580     2.687  2.617  2.544  2.505  2.466  2.426  2.384  2.341     2.475  2.403  2.328  2.288  2.247  2.204  2.160  2.114     2.278  2.203  2.124  2.082  2.039  1.994  1.946  1.896     2.183  2.108  2.027  1.984  1.939  1.892  1.842  1.790     2.092  2.015  1.932  1.887  1.841  1.792  1.740  1.683     2.003  1.924  1.839  1.793  1.744  1.693  1.637  1.577     1.917  1.836  1.748  1.700  1.649  1.594  1.534  1.467     1.834  1.750  1.659  1.608  1.554  1.495  1.429  1.352     1.752  1.666  1.571  1.517  1.459  1.394  1.318  1.221    "
 },
@@ -4631,7 +4559,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-f-alpha-001.html",
   "type": "Section",
-  "number": "F.2",
+  "number": "E.2",
   "title": "Right-Tail Area 0.01",
   "body": " Right-Tail Area 0.01   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     4052.181  4999.500  5403.352  5624.583  5763.650     98.503  99.000  99.166  99.249  99.299     34.116  30.817  29.457  28.710  28.237     21.198  18.000  16.694  15.977  15.522     16.258  13.274  12.060  11.392  10.967     13.745  10.925  9.780  9.148  8.746     12.246  9.547  8.451  7.847  7.460     11.259  8.649  7.591  7.006  6.632     10.561  8.022  6.992  6.422  6.057     10.044  7.559  6.552  5.994  5.636     9.330  6.927  5.953  5.412  5.064     8.683  6.359  5.417  4.893  4.556     8.096  5.849  4.938  4.431  4.103     7.823  5.614  4.718  4.218  3.895     7.562  5.390  4.510  4.018  3.699     7.314  5.179  4.313  3.828  3.514     7.077  4.977  4.126  3.649  3.339     6.851  4.787  3.949  3.480  3.174     6.635  4.605  3.782  3.319  3.017      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     5858.986  5928.356  5981.070  6022.473  6055.847     99.333  99.356  99.374  99.388  99.399     27.911  27.672  27.489  27.345  27.229     15.207  14.976  14.799  14.659  14.546     10.672  10.456  10.289  10.158  10.051     8.466  8.260  8.102  7.976  7.874     7.191  6.993  6.840  6.719  6.620     6.371  6.178  6.029  5.911  5.814     5.802  5.613  5.467  5.351  5.257     5.386  5.200  5.057  4.942  4.849     4.821  4.640  4.499  4.388  4.296     4.318  4.142  4.004  3.895  3.805     3.871  3.699  3.564  3.457  3.368     3.667  3.496  3.363  3.256  3.168     3.473  3.304  3.173  3.067  2.979     3.291  3.124  2.993  2.888  2.801     3.119  2.953  2.823  2.718  2.632     2.956  2.792  2.663  2.559  2.472     2.802  2.639  2.511  2.407  2.321      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     6106.321  6157.285  6208.730  6234.631  6260.649  6286.782  6313.030  6339.391     99.416  99.433  99.449  99.458  99.466  99.474  99.482  99.491     27.052  26.872  26.690  26.598  26.505  26.411  26.316  26.221     14.374  14.198  14.020  13.929  13.838  13.745  13.652  13.558     9.888  9.722  9.553  9.466  9.379  9.291  9.202  9.112     7.718  7.559  7.396  7.313  7.229  7.143  7.057  6.969     6.469  6.314  6.155  6.074  5.992  5.908  5.824  5.737     5.667  5.515  5.359  5.279  5.198  5.116  5.032  4.946     5.111  4.962  4.808  4.729  4.649  4.567  4.483  4.398     4.706  4.558  4.405  4.327  4.247  4.165  4.082  3.996     4.155  4.010  3.858  3.780  3.701  3.619  3.535  3.449     3.666  3.522  3.372  3.294  3.214  3.132  3.047  2.959     3.231  3.088  2.938  2.859  2.778  2.695  2.608  2.517     3.032  2.889  2.738  2.659  2.577  2.492  2.403  2.310     2.843  2.700  2.549  2.469  2.386  2.299  2.208  2.111     2.665  2.522  2.369  2.288  2.203  2.114  2.019  1.917     2.496  2.352  2.198  2.115  2.028  1.936  1.836  1.726     2.336  2.192  2.035  1.950  1.860  1.763  1.656  1.533     2.185  2.039  1.878  1.791  1.696  1.592  1.473  1.325     "
 },
@@ -4640,7 +4568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g1a",
   "type": "Table",
-  "number": "F.2.1",
+  "number": "E.2.1",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 1, 2, 3, 4, 5",
   "body": " Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     4052.181  4999.500  5403.352  5624.583  5763.650     98.503  99.000  99.166  99.249  99.299     34.116  30.817  29.457  28.710  28.237     21.198  18.000  16.694  15.977  15.522     16.258  13.274  12.060  11.392  10.967     13.745  10.925  9.780  9.148  8.746     12.246  9.547  8.451  7.847  7.460     11.259  8.649  7.591  7.006  6.632     10.561  8.022  6.992  6.422  6.057     10.044  7.559  6.552  5.994  5.636     9.330  6.927  5.953  5.412  5.064     8.683  6.359  5.417  4.893  4.556     8.096  5.849  4.938  4.431  4.103     7.823  5.614  4.718  4.218  3.895     7.562  5.390  4.510  4.018  3.699     7.314  5.179  4.313  3.828  3.514     7.077  4.977  4.126  3.649  3.339     6.851  4.787  3.949  3.480  3.174     6.635  4.605  3.782  3.319  3.017    "
 },
@@ -4649,7 +4577,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g1b",
   "type": "Table",
-  "number": "F.2.2",
+  "number": "E.2.2",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 6, 7, 8, 9, 10",
   "body": " Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     5858.986  5928.356  5981.070  6022.473  6055.847     99.333  99.356  99.374  99.388  99.399     27.911  27.672  27.489  27.345  27.229     15.207  14.976  14.799  14.659  14.546     10.672  10.456  10.289  10.158  10.051     8.466  8.260  8.102  7.976  7.874     7.191  6.993  6.840  6.719  6.620     6.371  6.178  6.029  5.911  5.814     5.802  5.613  5.467  5.351  5.257     5.386  5.200  5.057  4.942  4.849     4.821  4.640  4.499  4.388  4.296     4.318  4.142  4.004  3.895  3.805     3.871  3.699  3.564  3.457  3.368     3.667  3.496  3.363  3.256  3.168     3.473  3.304  3.173  3.067  2.979     3.291  3.124  2.993  2.888  2.801     3.119  2.953  2.823  2.718  2.632     2.956  2.792  2.663  2.559  2.472     2.802  2.639  2.511  2.407  2.321    "
 },
@@ -4658,14 +4586,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g2",
   "type": "Table",
-  "number": "F.2.3",
+  "number": "E.2.3",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 12, 15, 20, 24, 30, 40, 60, 120",
   "body": " Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     6106.321  6157.285  6208.730  6234.631  6260.649  6286.782  6313.030  6339.391     99.416  99.433  99.449  99.458  99.466  99.474  99.482  99.491     27.052  26.872  26.690  26.598  26.505  26.411  26.316  26.221     14.374  14.198  14.020  13.929  13.838  13.745  13.652  13.558     9.888  9.722  9.553  9.466  9.379  9.291  9.202  9.112     7.718  7.559  7.396  7.313  7.229  7.143  7.057  6.969     6.469  6.314  6.155  6.074  5.992  5.908  5.824  5.737     5.667  5.515  5.359  5.279  5.198  5.116  5.032  4.946     5.111  4.962  4.808  4.729  4.649  4.567  4.483  4.398     4.706  4.558  4.405  4.327  4.247  4.165  4.082  3.996     4.155  4.010  3.858  3.780  3.701  3.619  3.535  3.449     3.666  3.522  3.372  3.294  3.214  3.132  3.047  2.959     3.231  3.088  2.938  2.859  2.778  2.695  2.608  2.517     3.032  2.889  2.738  2.659  2.577  2.492  2.403  2.310     2.843  2.700  2.549  2.469  2.386  2.299  2.208  2.111     2.665  2.522  2.369  2.288  2.203  2.114  2.019  1.917     2.496  2.352  2.198  2.115  2.028  1.936  1.836  1.726     2.336  2.192  2.035  1.950  1.860  1.763  1.656  1.533     2.185  2.039  1.878  1.791  1.696  1.592  1.473  1.325    "
 },
 {
-  "id": "backmatter-9",
+  "id": "backmatter-8",
   "level": "1",
-  "url": "backmatter-9.html",
+  "url": "backmatter-8.html",
   "type": "Index",
   "number": "",
   "title": "Index",
