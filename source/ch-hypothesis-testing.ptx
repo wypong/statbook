@@ -1323,8 +1323,9 @@
     departures count in the same direction. The chi-square test of
     independence is therefore a right-tailed test. The denominator
     <m>E_{ij}</m> appears because the typical size of random fluctuation in a
-    large count is about <m>\sqrt{E_{ij}}</m>; <xref ref="app-cell-count-normal-approx"/>
-    explains this normal approximation for cell counts in more detail.</p>
+    large count is about <m>\sqrt{E_{ij}}</m>. One way to remember this is
+    that a large count behaves much like a Poisson count, and a Poisson count
+    with mean <m>E_{ij}</m> has variance <m>E_{ij}</m>.</p>
 
     <p>The usual conditions are:</p>
 
@@ -1332,7 +1333,7 @@
       <li><p>The data come from a random sample or a randomized experiment, or at least from a process that is reasonable to treat as representative.</p></li>
       <li><p>Each observation contributes to exactly one cell of the table.</p></li>
       <li><p>The observations are independent of each other.</p></li>
-      <li><p>The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5; this is the large-count setting behind the approximation in <xref ref="app-cell-count-normal-approx"/>.</p></li>
+      <li><p>The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5.</p></li>
     </ul>
 
     <p>Why are the degrees of freedom <m>(r-1)(c-1)</m>? The degrees of
@@ -1374,14 +1375,31 @@
     marginal totals.</p>
 
     <p>Why does the test statistic have a chi-square distribution with that
-    many degrees of freedom? As explained in
-    <xref ref="app-cell-count-normal-approx"/>, for large samples the
-    cell-count errors are approximately normal, and the Pearson statistic is
-    a squared, scaled measure of those errors. The row and column totals
-    account for the directions of variation that come only from the marginal
-    probabilities. After removing those directions, there are
-    <m>(r-1)(c-1)</m> independent directions of genuine departure from
-    independence left. So</p>
+    many degrees of freedom? The quick intuition is not that the <m>rc</m>
+    terms in the sum are independent squared standard normal variables. They
+    are not. The cell counts in a table are tied together by the row and
+    column totals. That is exactly why the degrees of freedom are smaller
+    than <m>rc</m>.</p>
+
+    <p>Instead, think of the table as having only <m>(r-1)(c-1)</m> genuinely
+    free ways to depart from independence. In a large sample, each cell count
+    is built from many individual observations, so the random errors in the
+    table are approximately normal. The Pearson statistic measures the total
+    squared size of those errors after scaling each cell by its expected
+    count.</p>
+
+    <p>For a <m>2</m>-by-<m>2</m> table, this is especially concrete. Once the
+    row totals and column totals are fixed, choosing one cell determines the
+    other three cells. There is only one real way for the observed table to
+    move away from the independent table, and the Pearson statistic is
+    approximately the square of one standard normal quantity. That gives a
+    <m>\chi^2[1]</m> approximation.</p>
+
+    <p>For an <m>r</m>-by-<m>c</m> table, the same idea repeats with
+    <m>(r-1)(c-1)</m> free departures instead of one. The Pearson statistic
+    behaves like the sum of the squared standardized sizes of those free
+    departures. That is the practical reason the chi-square distribution
+    appears:</p>
 
     <me>
       \chi^2_{\text{obs}}\approx \chi^2[(r-1)(c-1)]
