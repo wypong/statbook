@@ -12,6 +12,7 @@
     <p> This book was authored in <pretext />. </p>
   </colophon>
 
+  <xi:include href="./app-cell-count-normal-approx.ptx" />
   <xi:include href="./app-binomial-table.ptx" />
   <xi:include href="./app-normal-table.ptx" />
   <xi:include href="./app-t-table.ptx" />

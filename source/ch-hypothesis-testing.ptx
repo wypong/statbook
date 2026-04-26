@@ -5,8 +5,8 @@
 
   <introduction>
     <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test<idx><h>inference</h><h>hypothesis test</h></idx></term> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
-    <p>This chapter introduces the basic logic of testing a population mean, a difference of two population means, a mean paired difference, a population proportion, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
-    <p>As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model, while variance tests use the chi-square distribution that comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.</p>
+    <p>This chapter introduces the basic logic of testing a population mean, a difference of two population means, a mean paired difference, a population proportion, the independence of two categorical variables, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
+    <p>As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model. Tests about categorical tables and variance use chi-square distributions, but for different reasons: one comes from many cell counts varying together, while the other comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.</p>
   </introduction>
 
   <section xml:id="sec-hypothesis-tests-basics">
@@ -1258,6 +1258,377 @@
     </activity>
   </section>
 
+  <section xml:id="sec-chi-square-independence-test">
+    <title>Chi-Square Test of Independence</title>
+
+    <p>In <xref ref="subsec-contingency-tables" text="title"/>, we used a two-way
+    contingency table to compute conditional probabilities and check whether
+    two events looked independent. For example, if <m>P(T\mid L)</m> is
+    different from <m>P(T)</m> in a sample, the sample table shows some
+    departure from independence.</p>
+
+    <p>A <term>chi-square test of independence<idx><h>inference</h><h>chi-square test of independence</h></idx></term> asks the next statistical question: is the departure large enough to count as evidence that the two categorical variables are associated in the population, or could it reasonably be explained by random sampling variation?</p>
+
+    <p>The data are organized in an <m>r</m>-by-<m>c</m>
+    <term>two-way contingency table<idx><h>inference</h><h>two-way contingency table</h></idx></term>. The hypotheses are always about the two categorical variables, not about a single cell.</p>
+
+    <me>
+      H_0:\text{ the two categorical variables are independent}
+    </me>
+    <me>
+      H_a:\text{ the two categorical variables are not independent}.
+    </me>
+
+    <p>Under the null hypothesis, the probability of landing in row <m>i</m>
+    and column <m>j</m> should factor just like the independence rule from
+    probability:</p>
+
+    <me>
+      P(\text{row }i\text{ and column }j)
+      =
+      P(\text{row }i)P(\text{column }j).
+    </me>
+
+    <p>That rule tells us what count we should expect in each cell if the row
+    and column variables are independent. If the observed count in cell
+    <m>(i,j)</m> is <m>O_{ij}</m>, then the expected count under independence
+    is</p>
+
+    <me>
+      E_{ij}
+      =
+      \frac{(\text{row }i\text{ total})(\text{column }j\text{ total})}
+      {\text{grand total}}.
+    </me>
+
+    <p>The formula is just the independence rule written with sample
+    proportions. The row proportion estimates <m>P(\text{row }i)</m>, the
+    column proportion estimates <m>P(\text{column }j)</m>, and multiplying by
+    the grand total converts the expected proportion back into an expected
+    count.</p>
+
+    <p>The test statistic adds the standardized squared departures from the
+    expected counts:</p>
+
+    <me>
+      \chi^2_{\text{obs}}
+      =
+      \sum_{i=1}^{r}\sum_{j=1}^{c}
+      \frac{(O_{ij}-E_{ij})^2}{E_{ij}}.
+    </me>
+
+    <p>Large values of <m>\chi^2_{\text{obs}}</m> mean that the observed
+    table is far from the table we would expect under independence. Because
+    the statistic squares the differences, both positive and negative
+    departures count in the same direction. The chi-square test of
+    independence is therefore a right-tailed test. The denominator
+    <m>E_{ij}</m> appears because the typical size of random fluctuation in a
+    large count is about <m>\sqrt{E_{ij}}</m>; <xref ref="app-cell-count-normal-approx"/>
+    explains this normal approximation for cell counts in more detail.</p>
+
+    <p>The usual conditions are:</p>
+
+    <ul>
+      <li><p>The data come from a random sample or a randomized experiment, or at least from a process that is reasonable to treat as representative.</p></li>
+      <li><p>Each observation contributes to exactly one cell of the table.</p></li>
+      <li><p>The observations are independent of each other.</p></li>
+      <li><p>The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5; this is the large-count setting behind the approximation in <xref ref="app-cell-count-normal-approx"/>.</p></li>
+    </ul>
+
+    <p>Why are the degrees of freedom <m>(r-1)(c-1)</m>? The degrees of
+    freedom for the chi-square test of independence are</p>
+
+    <me>
+      df=(r-1)(c-1).
+    </me>
+
+    <p>Here is the idea. A table with <m>r</m> rows and <m>c</m> columns has
+      <m>rc</m> cell counts. But the counts cannot all vary freely once the
+      total sample size is fixed: after <m>rc-1</m> cells are known, the last
+      cell is forced by the grand total.</p>
+
+    <p>Under the independence model, the whole table is controlled by the
+      row probabilities and the column probabilities. The <m>r</m> row
+      probabilities have only <m>r-1</m> free choices, because they must add
+      to 1. The <m>c</m> column probabilities have only <m>c-1</m> free
+      choices for the same reason. So the independence model uses</p>
+
+    <me>
+      (r-1)+(c-1)
+    </me>
+
+    <p>free probability choices. The departures from independence are what
+    remain after those row and column effects have been accounted for:</p>
+
+    <md alignment="align">
+      <mrow>df&amp;=(rc-1)-\big((r-1)+(c-1)\big)</mrow>
+      <mrow>&amp;=rc-r-c+1</mrow>
+      <mrow>&amp;=(r-1)(c-1).</mrow>
+    </md>
+
+    <p>There is also a hands-on way to see the same count. If the row totals
+    and column totals are fixed, then the cells in the first <m>r-1</m>
+    rows and first <m>c-1</m> columns can be chosen freely, subject to
+    being reasonable counts. Once those <m>(r-1)(c-1)</m> cells are chosen,
+    the remaining cells in the last row and last column are forced by the
+    marginal totals.</p>
+
+    <p>Why does the test statistic have a chi-square distribution with that
+    many degrees of freedom? As explained in
+    <xref ref="app-cell-count-normal-approx"/>, for large samples the
+    cell-count errors are approximately normal, and the Pearson statistic is
+    a squared, scaled measure of those errors. The row and column totals
+    account for the directions of variation that come only from the marginal
+    probabilities. After removing those directions, there are
+    <m>(r-1)(c-1)</m> independent directions of genuine departure from
+    independence left. So</p>
+
+    <me>
+      \chi^2_{\text{obs}}\approx \chi^2[(r-1)(c-1)]
+    </me>
+
+    <p>when <m>H_0</m> is true and the expected counts are large enough.</p>
+
+    <example xml:id="ex-chi-square-independence-commute">
+      <title>Testing the Commute Table from Probability</title>
+
+      <p>Return to the commute table from <xref ref="tbl-commute-contingency"/>.
+      A class survey asked 80 students whether they usually take public
+      transportation to campus and whether their commute is at least 30
+      minutes.</p>
+
+      <table xml:id="tbl-commute-independence-observed-expected">
+        <title>Observed and expected counts for the commute table</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Public transit</cell>
+            <cell>No transit</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>At least 30 min</cell>
+            <cell><m>18\;(15)</m></cell>
+            <cell><m>22\;(25)</m></cell>
+            <cell>40</cell>
+          </row>
+          <row>
+            <cell>Under 30 min</cell>
+            <cell><m>12\;(15)</m></cell>
+            <cell><m>28\;(25)</m></cell>
+            <cell>40</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>30</cell>
+            <cell>50</cell>
+            <cell>80</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>In each interior cell, the first number is the observed count and the
+      number in parentheses is the expected count under independence. For
+      example, the expected count for students with commutes at least 30
+      minutes who use public transit is</p>
+
+      <me>
+        E=\frac{(40)(30)}{80}=15.
+      </me>
+
+      <p>We test</p>
+
+      <me>
+        H_0:\text{ commute length and public transportation use are independent}
+      </me>
+      <me>
+        H_a:\text{ commute length and public transportation use are not independent}.
+      </me>
+
+      <p>The test statistic is</p>
+
+      <md alignment="align">
+        <mrow>\chi^2_{\text{obs}}
+        &amp;=\frac{(18-15)^2}{15}
+        +\frac{(22-25)^2}{25}
+        +\frac{(12-15)^2}{15}
+        +\frac{(28-25)^2}{25}</mrow>
+        <mrow>&amp;=1.92.</mrow>
+      </md>
+
+      <p>There are <m>r=2</m> rows and <m>c=2</m> columns, so</p>
+
+      <me>
+        df=(2-1)(2-1)=1.
+      </me>
+
+      <p>Using a chi-square distribution with 1 degree of freedom, the
+      right-tail p-value is about 0.166. At the 5% significance level, we
+      fail to reject <m>H_0</m>.</p>
+
+      <p>This conclusion does not say the sample proportions were exactly
+      independent. In <xref ref="subsec-contingency-tables" text="title"/>, we saw that
+      <m>P(T\mid L)=18/40=0.45</m> while <m>P(T)=30/80=0.375</m> in the
+      sample. The chi-square test says that this difference is not large
+      enough, for a sample of 80 students, to give strong evidence of an
+      association in the population.</p>
+    </example>
+
+    <example xml:id="ex-chi-square-independence-study-method">
+      <title>A Larger Table</title>
+
+      <p>A college surveys 150 students about their main study support and
+      their course result. The observed counts are shown in
+      <xref ref="tbl-study-support-result"/>.</p>
+
+      <table xml:id="tbl-study-support-result">
+        <title>Study support and course result</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Mostly A/B</cell>
+            <cell>C</cell>
+            <cell>D/F</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>No support</cell>
+            <cell>15</cell>
+            <cell>22</cell>
+            <cell>13</cell>
+            <cell>50</cell>
+          </row>
+          <row>
+            <cell>Occasional support</cell>
+            <cell>25</cell>
+            <cell>20</cell>
+            <cell>5</cell>
+            <cell>50</cell>
+          </row>
+          <row>
+            <cell>Regular support</cell>
+            <cell>35</cell>
+            <cell>14</cell>
+            <cell>1</cell>
+            <cell>50</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>75</cell>
+            <cell>56</cell>
+            <cell>19</cell>
+            <cell>150</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>We test whether study support and course result are independent in
+      the population of students like these. The expected counts for each row
+      are the same because each row total is 50:</p>
+
+      <me>
+        \frac{50(75)}{150}=25,\qquad
+        \frac{50(56)}{150}\approx 18.67,\qquad
+        \frac{50(19)}{150}\approx 6.33.
+      </me>
+
+      <p>All expected counts are at least 5, so the chi-square approximation
+      is reasonable. The test statistic is</p>
+
+      <me>
+        \chi^2_{\text{obs}}\approx 24.17.
+      </me>
+
+      <p>The table has <m>r=3</m> rows and <m>c=3</m> columns, so</p>
+
+      <me>
+        df=(3-1)(3-1)=4.
+      </me>
+
+      <p>For <m>W\sim \chi^2[4]</m>, the p-value
+      <m>P(W\ge 24.17)</m> is less than 0.001. We reject <m>H_0</m>. The
+      data give strong evidence that study support and course result are
+      associated.</p>
+
+      <p>The test tells us that an association exists; it does not by itself
+      prove that study support caused the different course results. The study
+      design still matters.</p>
+    </example>
+
+    <exercise xml:id="ht-inline-ex-chi-square-independence">
+      <p>A survey of 120 students records preferred class format and whether
+      the student works at least 20 hours per week.</p>
+
+      <table xml:id="tbl-inline-format-work">
+        <title>Class format and work status</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Online</cell>
+            <cell>Hybrid</cell>
+            <cell>In person</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>Works 20+ hours</cell>
+            <cell>22</cell>
+            <cell>18</cell>
+            <cell>20</cell>
+            <cell>60</cell>
+          </row>
+          <row>
+            <cell>Works under 20 hours</cell>
+            <cell>14</cell>
+            <cell>16</cell>
+            <cell>30</cell>
+            <cell>60</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>36</cell>
+            <cell>34</cell>
+            <cell>50</cell>
+            <cell>120</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <ol>
+        <li><p>Write the null and alternative hypotheses for a chi-square test of independence.</p></li>
+        <li><p>Find the expected count for the cell "Works 20+ hours" and "Online."</p></li>
+        <li><p>Find the degrees of freedom.</p></li>
+        <li><p>Explain what a large chi-square statistic would mean in this context.</p></li>
+      </ol>
+    </exercise>
+
+    <activity xml:id="act-ch11-chi-square-table-builder">
+      <title>From Conditional Probabilities to a Test</title>
+      <introduction>
+        <p>Connect the earlier contingency-table idea to the chi-square test of independence.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose two categorical variables that can be observed in class, such as preferred study location and whether a student usually studies with others. Collect one response from each student and build a two-way table.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Use the table to compute one marginal probability and one conditional probability. Based only on those probabilities, do the variables look independent in the sample?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Compute the expected counts under independence. Check whether the expected counts are large enough for a chi-square test.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Find the degrees of freedom and describe what conclusion a small p-value would support.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
   <section xml:id="sec-one-variance-tests">
     <title>Tests for a Population Variance and Standard Deviation</title>
     <shorttitle>Tests for Variance and Standard Deviation</shorttitle>
@@ -1493,11 +1864,14 @@
       <li><p>A paired-sample t-test uses <m>t=(\overline{d}-d_0)/(s_d/\sqrt{n})</m> with <m>df=n-1</m>; when <m>d_0=0</m>, this is <m>t=\overline{d}\sqrt{n}/s_d</m>.</p></li>
       <li><p>A one-proportion z-test uses <m>z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}</m> when the expected numbers of successes and failures under <m>H_0</m> are large enough.</p></li>
       <li><p>Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.</p></li>
+      <li><p>A chi-square test of independence compares observed counts in a two-way table with expected counts found from the row total, column total, and grand total.</p></li>
+      <li><p>The chi-square test statistic <m>\sum (O-E)^2/E</m> is large when the observed table is far from what independence predicts.</p></li>
+      <li><p>For an <m>r</m>-by-<m>c</m> contingency table, the degrees of freedom for the chi-square test of independence are <m>(r-1)(c-1)</m>.</p></li>
       <li><p>A chi-square test for variance uses <m>\chi^2=(n-1)s^2/\sigma_0^2</m> when the population is normal.</p></li>
       <li><p>Tests for variance and standard deviation are closely tied to the matching chi-square confidence interval, and normality of the population is the key assumption.</p></li>
     </ul>
 
-    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.</p>
+    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests, chi-square tests of independence, and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.</p>
   </conclusion>
 
   <exercises xml:id="ch11-exercises">
@@ -1616,6 +1990,107 @@
       <p>Explain why a one-proportion confidence interval uses
       <m>\widehat{p}</m> in the standard error, while a one-proportion
       hypothesis test uses <m>p_0</m> in the standard error.</p>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-17">
+      <p>A student survey records class standing and preferred study drink.</p>
+
+      <table xml:id="tbl-ex-class-standing-drink">
+        <title>Class standing and preferred study drink</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Coffee</cell>
+            <cell>Tea</cell>
+            <cell>Energy drink</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>First or second year</cell>
+            <cell>30</cell>
+            <cell>20</cell>
+            <cell>10</cell>
+            <cell>60</cell>
+          </row>
+          <row>
+            <cell>Third or fourth year</cell>
+            <cell>18</cell>
+            <cell>22</cell>
+            <cell>20</cell>
+            <cell>60</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>48</cell>
+            <cell>42</cell>
+            <cell>30</cell>
+            <cell>120</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <ol>
+        <li><p>Write the null and alternative hypotheses for testing whether class standing and preferred study drink are independent.</p></li>
+        <li><p>Find all expected counts under independence.</p></li>
+        <li><p>Compute the chi-square test statistic.</p></li>
+        <li><p>Find the degrees of freedom and state the conclusion at the 5% significance level.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-18">
+      <p>A campus survey records whether a student lives on campus, lives off campus with family, or lives off campus without family. It also records whether the student usually studies before noon or after noon.</p>
+
+      <table xml:id="tbl-ex-housing-study-time">
+        <title>Housing and usual study time</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell/>
+            <cell>Before noon</cell>
+            <cell>After noon</cell>
+            <cell>Total</cell>
+          </row>
+          <row>
+            <cell>On campus</cell>
+            <cell>16</cell>
+            <cell>24</cell>
+            <cell>40</cell>
+          </row>
+          <row>
+            <cell>Off campus with family</cell>
+            <cell>18</cell>
+            <cell>42</cell>
+            <cell>60</cell>
+          </row>
+          <row>
+            <cell>Off campus without family</cell>
+            <cell>26</cell>
+            <cell>34</cell>
+            <cell>60</cell>
+          </row>
+          <row bottom="major">
+            <cell>Total</cell>
+            <cell>60</cell>
+            <cell>100</cell>
+            <cell>160</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <ol>
+        <li><p>What are <m>r</m> and <m>c</m> for this table?</p></li>
+        <li><p>Find the degrees of freedom for a chi-square test of independence.</p></li>
+        <li><p>Find the expected count for the "On campus" and "Before noon" cell.</p></li>
+        <li><p>State the expected-count condition and check it for this table.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch11-ex-19">
+      <p>Explain why the degrees of freedom for a chi-square test of independence in an <m>r</m>-by-<m>c</m> table are <m>(r-1)(c-1)</m>.</p>
+      <ol>
+        <li><p>How many cell probabilities are free before assuming independence, once the probabilities must add to 1?</p></li>
+        <li><p>How many free row and column probability choices are used by the independence model?</p></li>
+        <li><p>Subtract these quantities and simplify.</p></li>
+      </ol>
     </exercise>
 
     <exercise xml:id="ch11-ex-9">
