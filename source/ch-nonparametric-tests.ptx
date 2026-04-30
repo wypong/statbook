@@ -10,36 +10,9 @@
 
     <p>This chapter studies two useful examples. The <term>sign test<idx><h>inference</h><h>sign test</h></idx></term> tests a claim about a population median, or about the median of paired differences. The <term>Spearman test of rank correlation<idx><h>inference</h><h>Spearman test of rank correlation</h></idx></term> tests whether two quantitative variables tend to move together in a monotone way after replacing the raw data by their ranks.</p>
 
-    <table xml:id="tbl-parametric-nonparametric-comparison">
-      <title>Parametric and non-parametric tests</title>
-      <tabular halign="left">
-        <row header="yes" bottom="minor">
-          <cell>Question</cell>
-          <cell>Parametric test</cell>
-          <cell>Non-parametric test</cell>
-        </row>
-        <row>
-          <cell>What is usually tested?</cell>
-          <cell>A parameter such as a mean, variance, or proportion</cell>
-          <cell>A median, sign pattern, rank pattern, or distribution-free feature</cell>
-        </row>
-        <row>
-          <cell>What information is used?</cell>
-          <cell>Actual numerical sizes, such as distances from a mean</cell>
-          <cell>Often only signs, ranks, or order</cell>
-        </row>
-        <row>
-          <cell>What assumptions matter?</cell>
-          <cell>Often normality, equal variances, or a stated model family</cell>
-          <cell>Fewer shape assumptions, but still random sampling and independence where appropriate</cell>
-        </row>
-        <row bottom="major">
-          <cell>What is the tradeoff?</cell>
-          <cell>Can be powerful when the model assumptions are reasonable</cell>
-          <cell>More robust, but may ignore some numerical information</cell>
-        </row>
-      </tabular>
-    </table>
+    <p>Here is the basic tradeoff. Parametric tests usually work with actual numerical distances, such as distances from a mean, and test parameters such as a mean, variance, or proportion. They can be powerful when the model assumptions are reasonable, but those assumptions often include normality, equal variances, or a stated model family.</p>
+
+    <p>Non-parametric tests usually keep less numerical detail. They may use only signs, ranks, order, or whether observations fall above or below a claimed value. That makes them more robust, but they can also ignore information that a well-chosen parametric test would use.</p>
   </introduction>
 
   <section xml:id="sec-sign-test">
@@ -113,9 +86,12 @@
       <p>Since the alternative is right-tailed, the p-value is</p>
 
       <me>
-        P(S\ge 10)=P(S=10)+P(S=11)+P(S=12)
-        =\frac{\binom{12}{10}+\binom{12}{11}+\binom{12}{12}}{2^{12}}
-        =\frac{79}{4096}\approx 0.019.
+        \begin{aligned}
+        P(S\ge 10)
+        &amp;=P(S=10)+P(S=11)+P(S=12)\\
+        &amp;=\frac{\binom{12}{10}+\binom{12}{11}+\binom{12}{12}}{2^{12}}\\
+        &amp;=\frac{79}{4096}\approx 0.019.
+        \end{aligned}
       </me>
 
       <p>At the 5% significance level, we reject <m>H_0</m>. The sample gives evidence that the median parking time is more than 10 minutes.</p>
