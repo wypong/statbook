@@ -4276,6 +4276,447 @@ var ptx_lunr_docs = [
   "body": " State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?   "
 },
 {
+  "id": "sec-anova-variance-components",
+  "level": "1",
+  "url": "sec-anova-variance-components.html",
+  "type": "Section",
+  "number": "12.1",
+  "title": "Components of Variation",
+  "body": " Components of Variation  Suppose we have groups and observations in each group. Write for observation in group . The group mean is , and the grand mean of all observations is .  ANOVA begins by splitting total variation into two pieces. The total variation inference total variation is   The between-group variation inference between-group variation measures how far the group means are from the grand mean:   The within-group variation inference within-group variation measures how far observations are from their own group mean:   With this shorthand, the balanced one-way ANOVA identity is   The factor appears because each group mean represents observations. If a group mean is 4 units above the grand mean, then all observations in that group inherit that 4-unit group-level offset before we even look at their individual wiggles around the group mean.   Between-group and within-group variation   Three horizontal dotplots show observations in three groups. Each group has its own mean, and one vertical reference line marks the grand mean.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.     The identity is not a statistical approximation. It is algebra. For every observation, write its distance from the grand mean as a two-step trip:   The first term is the group mean's distance from the grand mean. The second term is the observation's distance from its group mean. When we square and sum over all observations, the cross-product terms disappear because, within each group, deviations from the group mean sum to 0:   What remains is the between part counted times, plus the within part:    Splitting Total Variation  Three teaching methods are compared using quiz-score gains. Each method is used with four students.   Quiz-score gains by teaching method    Method  Data  Group mean    A  6, 8, 7, 9  7.5    B  10, 11, 9, 10  10.0    C  13, 15, 14, 16  14.5     The grand mean is   The between-group part is   Since each group has observations, the between contribution to total variation is   The within-group variation is   So the total variation should be   Most of the variation here comes from the group means being far apart, not from large spread inside the groups.   The connection with the F distribution distributions F distribution comes from comparing two independent estimates of the same population variance. Recall the definition: if and are independent chi-square random variables with and degrees of freedom, then   Under the ANOVA null hypothesis that all group means are equal, and assuming normal populations with a common variance , the two scaled variation pieces behave like independent chi-square random variables:   Therefore the ratio   has the distribution   when the null hypothesis is true. In words, the numerator is the between-group variation per between-group degree of freedom, and the denominator is the within-group variation per within-group degree of freedom. If the group means are truly equal, those two quantities should be estimating the same common variance , so their ratio should usually be near 1.   Where Did the Variation Go?   Use a small data set to see the ANOVA split by hand.     In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.      For each data set, compute the group means, the grand mean, , , and .      Which data set has the larger between-group component? Which has the larger within-group component?     "
+},
+{
+  "id": "sec-anova-variance-components-3",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#sec-anova-variance-components-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "total variation inference total variation "
+},
+{
+  "id": "sec-anova-variance-components-5",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#sec-anova-variance-components-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "between-group variation inference between-group variation "
+},
+{
+  "id": "sec-anova-variance-components-7",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#sec-anova-variance-components-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "within-group variation inference within-group variation "
+},
+{
+  "id": "fig-anova-between-within",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#fig-anova-between-within",
+  "type": "Figure",
+  "number": "12.1.1",
+  "title": "",
+  "body": " Between-group and within-group variation   Three horizontal dotplots show observations in three groups. Each group has its own mean, and one vertical reference line marks the grand mean.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.    "
+},
+{
+  "id": "ex-anova-variation-split",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#ex-anova-variation-split",
+  "type": "Example",
+  "number": "12.1.2",
+  "title": "Splitting Total Variation.",
+  "body": " Splitting Total Variation  Three teaching methods are compared using quiz-score gains. Each method is used with four students.   Quiz-score gains by teaching method    Method  Data  Group mean    A  6, 8, 7, 9  7.5    B  10, 11, 9, 10  10.0    C  13, 15, 14, 16  14.5     The grand mean is   The between-group part is   Since each group has observations, the between contribution to total variation is   The within-group variation is   So the total variation should be   Most of the variation here comes from the group means being far apart, not from large spread inside the groups.  "
+},
+{
+  "id": "sec-anova-variance-components-20",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#sec-anova-variance-components-20",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "F distribution distributions F distribution "
+},
+{
+  "id": "act-anova-variation-split",
+  "level": "2",
+  "url": "sec-anova-variance-components.html#act-anova-variation-split",
+  "type": "Activity",
+  "number": "12.1.1",
+  "title": "Where Did the Variation Go?",
+  "body": " Where Did the Variation Go?   Use a small data set to see the ANOVA split by hand.     In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.      For each data set, compute the group means, the grand mean, , , and .      Which data set has the larger between-group component? Which has the larger within-group component?    "
+},
+{
+  "id": "sec-anova-testing-several-means",
+  "level": "1",
+  "url": "sec-anova-testing-several-means.html",
+  "type": "Section",
+  "number": "12.2",
+  "title": "Testing Several Means",
+  "body": " Testing Several Means  A one-way ANOVA test inference one-way ANOVA test compares several population means using one categorical explanatory variable. The groups might be teaching methods, fertilizer types, treatment doses, or class sections.  The hypotheses are   and   The alternative does not say that every mean is different from every other mean. It only says that the means are not all equal.  The test statistic is built from the variation split in . The mean square between inference mean square between is   and the mean square within inference mean square within is   The ANOVA F statistic inference ANOVA F statistic is   Large values of count against . A large numerator means the group means are spread out. A small denominator means the observations inside each group are fairly tight. That combination makes the differences among the group means look too large to blame on ordinary within-group noise.   Balanced one-way ANOVA components    Source  df  Sum of squares  Mean square    Between       Within       Total        To run the test at significance level , compare the observed statistic with a right-tail critical value from :   Equivalently, compute the right-tail p-value. Reject when the p-value is less than .   Testing Three Teaching Methods  Use the teaching-method data from . We want to test whether the three population mean score gains are equal.  The hypotheses are   From the earlier calculation, , , , and . Therefore   and   The F statistic is   The degrees of freedom are and . At , the F-table critical value is about . Since , we reject .  The data give strong evidence that the three teaching methods do not all have the same population mean score gain. This conclusion does not, by itself, identify exactly which methods differ. For that, we would need follow-up comparisons.   The usual conditions for one-way ANOVA are:   The observations are independent, and the groups are formed by random sampling or random assignment.  Each group population is approximately normal, especially when the sample sizes are small.  The group populations have a common variance . This is the equal-variance assumption inference equal-variance assumption .   The equal-variance condition explains why the denominator is so important. If the groups all have the same population variance, then the within-group variation gives a pooled estimate of that common variance. The numerator should estimate the same variance when is true, but it tends to become much larger when the group means are genuinely different.   ANOVA Table Detective   Read an ANOVA table before interpreting the conclusion.     An ANOVA table has , , , and . Compute the F statistic.      Explain, without using a table, whether the evidence looks weak, moderate, or strong. What would an F statistic close to 1 have meant?      Write the null and alternative hypotheses for a setting with four population means.     "
+},
+{
+  "id": "sec-anova-testing-several-means-2",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "one-way ANOVA test inference one-way ANOVA test "
+},
+{
+  "id": "sec-anova-testing-several-means-8",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "mean square between inference mean square between "
+},
+{
+  "id": "sec-anova-testing-several-means-10",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "mean square within inference mean square within "
+},
+{
+  "id": "sec-anova-testing-several-means-12",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "ANOVA F statistic inference ANOVA F statistic "
+},
+{
+  "id": "tbl-anova-summary-balanced",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#tbl-anova-summary-balanced",
+  "type": "Table",
+  "number": "12.2.1",
+  "title": "Balanced one-way ANOVA components",
+  "body": " Balanced one-way ANOVA components    Source  df  Sum of squares  Mean square    Between       Within       Total       "
+},
+{
+  "id": "ex-anova-test-teaching-methods",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#ex-anova-test-teaching-methods",
+  "type": "Example",
+  "number": "12.2.2",
+  "title": "Testing Three Teaching Methods.",
+  "body": " Testing Three Teaching Methods  Use the teaching-method data from . We want to test whether the three population mean score gains are equal.  The hypotheses are   From the earlier calculation, , , , and . Therefore   and   The F statistic is   The degrees of freedom are and . At , the F-table critical value is about . Since , we reject .  The data give strong evidence that the three teaching methods do not all have the same population mean score gain. This conclusion does not, by itself, identify exactly which methods differ. For that, we would need follow-up comparisons.  "
+},
+{
+  "id": "sec-anova-testing-several-means-21-3-1",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-21-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "equal-variance assumption inference equal-variance assumption "
+},
+{
+  "id": "act-anova-table-detective",
+  "level": "2",
+  "url": "sec-anova-testing-several-means.html#act-anova-table-detective",
+  "type": "Activity",
+  "number": "12.2.1",
+  "title": "ANOVA Table Detective.",
+  "body": " ANOVA Table Detective   Read an ANOVA table before interpreting the conclusion.     An ANOVA table has , , , and . Compute the F statistic.      Explain, without using a table, whether the evidence looks weak, moderate, or strong. What would an F statistic close to 1 have meant?      Write the null and alternative hypotheses for a setting with four population means.    "
+},
+{
+  "id": "ch-anova-exercises",
+  "level": "1",
+  "url": "ch-anova-exercises.html",
+  "type": "Exercises",
+  "number": "12.3",
+  "title": "Exercises",
+  "body": " Exercises   In a balanced one-way ANOVA, explain the meaning of , , , and .    Suppose there are groups with observations in each group. The between-group component is , and the within-group component is .   Compute the total variation .  Compute and .  Compute the ANOVA F statistic.     A study compares three exercise programs. Each program has four participants, and the weight-loss amounts are shown below.   Weight loss by program    Program  Data    A  4, 5, 6, 5    B  7, 8, 6, 7    C  9, 10, 11, 10      Find the three group means and the grand mean.  Compute , , and .  Which part of the variation is larger: between groups or within groups?     For the data in , test whether the three population mean weight losses are equal at the 5% significance level.   Write the null and alternative hypotheses.  Compute , , and .  Find the numerator and denominator degrees of freedom.  Use to make a reject-or-fail-to-reject decision.     Explain why the ANOVA test statistic is large when group means are far apart and observations within each group are close together.    Suppose an ANOVA table gives and .   Compute the F statistic.  Explain why this does not look like strong evidence against equal means.     A researcher reports that a one-way ANOVA test comparing five means has with degrees of freedom and .   How many groups were compared?  What are the null and alternative hypotheses?  At the 5% significance level, would you reject ? Use .     State the main assumptions for one-way ANOVA. For each assumption, describe one practical way it could fail in a real study.   "
+},
+{
+  "id": "ch-anova-ex-1",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-1",
+  "type": "Exercise",
+  "number": "12.3.1",
+  "title": "",
+  "body": " In a balanced one-way ANOVA, explain the meaning of , , , and .  "
+},
+{
+  "id": "ch-anova-ex-2",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-2",
+  "type": "Exercise",
+  "number": "12.3.2",
+  "title": "",
+  "body": " Suppose there are groups with observations in each group. The between-group component is , and the within-group component is .   Compute the total variation .  Compute and .  Compute the ANOVA F statistic.   "
+},
+{
+  "id": "ch-anova-ex-3",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-3",
+  "type": "Exercise",
+  "number": "12.3.3",
+  "title": "",
+  "body": " A study compares three exercise programs. Each program has four participants, and the weight-loss amounts are shown below.   Weight loss by program    Program  Data    A  4, 5, 6, 5    B  7, 8, 6, 7    C  9, 10, 11, 10      Find the three group means and the grand mean.  Compute , , and .  Which part of the variation is larger: between groups or within groups?   "
+},
+{
+  "id": "ch-anova-ex-4",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-4",
+  "type": "Exercise",
+  "number": "12.3.4",
+  "title": "",
+  "body": " For the data in , test whether the three population mean weight losses are equal at the 5% significance level.   Write the null and alternative hypotheses.  Compute , , and .  Find the numerator and denominator degrees of freedom.  Use to make a reject-or-fail-to-reject decision.   "
+},
+{
+  "id": "ch-anova-ex-5",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-5",
+  "type": "Exercise",
+  "number": "12.3.5",
+  "title": "",
+  "body": " Explain why the ANOVA test statistic is large when group means are far apart and observations within each group are close together.  "
+},
+{
+  "id": "ch-anova-ex-6",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-6",
+  "type": "Exercise",
+  "number": "12.3.6",
+  "title": "",
+  "body": " Suppose an ANOVA table gives and .   Compute the F statistic.  Explain why this does not look like strong evidence against equal means.   "
+},
+{
+  "id": "ch-anova-ex-7",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-7",
+  "type": "Exercise",
+  "number": "12.3.7",
+  "title": "",
+  "body": " A researcher reports that a one-way ANOVA test comparing five means has with degrees of freedom and .   How many groups were compared?  What are the null and alternative hypotheses?  At the 5% significance level, would you reject ? Use .   "
+},
+{
+  "id": "ch-anova-ex-8",
+  "level": "2",
+  "url": "ch-anova-exercises.html#ch-anova-ex-8",
+  "type": "Exercise",
+  "number": "12.3.8",
+  "title": "",
+  "body": " State the main assumptions for one-way ANOVA. For each assumption, describe one practical way it could fail in a real study.  "
+},
+{
+  "id": "sec-sign-test",
+  "level": "1",
+  "url": "sec-sign-test.html",
+  "type": "Section",
+  "number": "13.1",
+  "title": "The Sign Test",
+  "body": " The Sign Test  The sign test is easy to describe because it ignores almost everything except whether each observation is above or below a hypothesized value. For a one-sample problem, the null hypothesis has the form   where is the population median inference median test . This is the first important point: the sign test is a test about a median, not a test about a mean. A few extremely large or small observations can pull a mean around, but the sign test only asks how many observations fall on each side of .  Suppose is true and the population is continuous, so ties at exactly are unlikely. Then a randomly selected observation is just as likely to be above as below it:   Let be the number of observations above , after throwing out any observations exactly equal to . If there are non-tied observations, then under the null hypothesis   So the sign test is a particular case of a binomial proportion test with . The “success” is simply being on one chosen side of the hypothesized median.  The alternative hypothesis tells us which tail of the binomial distribution to use.   For , large values of count against .  For , small values of count against .  For , values of far from in either direction count against .   For small samples, we base the rejection decision directly on the binomial distribution. For large samples, we use the normal approximation to the binomial distribution. Since , the null mean and standard deviation of are   Thus the large-sample sign-test statistic is approximately   A continuity correction is often used when converting a binomial tail to a normal tail, but the main idea is the same: the observed number of plus signs is compared with what a fair binomial model predicts.   An Exact One-Sample Sign Test  A student group claims that the median time to find parking on campus is more than 10 minutes. A random sample of 12 students gives parking times where 10 are above 10 minutes and 2 are below 10 minutes. There are no ties at exactly 10 minutes.  We test   Let be the number of times above 10 minutes. Under ,   Since the alternative is right-tailed, the p-value is   At the 5% significance level, we reject . The sample gives evidence that the median parking time is more than 10 minutes.    A Large-Sample Sign Test  A city wants to know whether the median commute time is greater than 30 minutes. In a random sample of 64 commuters, 43 report commute times above 30 minutes, 21 report commute times below 30 minutes, and nobody reports exactly 30 minutes.  Under , the number above 30 minutes has approximately mean and standard deviation . The z statistic is   For the right-tailed alternative , the p-value is about . The data give strong evidence that the median commute time is greater than 30 minutes.   The sign test also works naturally for paired data. For a paired-sample sign test inference paired-sample sign test , first compute the paired differences   or whatever direction makes sense in context. Then ignore the zero differences and count the signs of the nonzero differences. The null hypothesis is about the median difference:   If the treatment has no median effect, positive and negative differences should be equally likely, so the number of positive differences again follows under the null hypothesis.   A Paired-Sample Sign Test  Ten students take a short statistics quiz before and after a review session. Let . The signs of the differences are   There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use   Under , the number of positive signs is . The p-value is   At , this is close but not quite small enough to reject . The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.    Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as “the median commute time to campus is 20 minutes.” Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.     "
+},
+{
+  "id": "sec-sign-test-4",
+  "level": "2",
+  "url": "sec-sign-test.html#sec-sign-test-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "median inference median test "
+},
+{
+  "id": "ex-sign-test-median-exact",
+  "level": "2",
+  "url": "sec-sign-test.html#ex-sign-test-median-exact",
+  "type": "Example",
+  "number": "13.1.1",
+  "title": "An Exact One-Sample Sign Test.",
+  "body": " An Exact One-Sample Sign Test  A student group claims that the median time to find parking on campus is more than 10 minutes. A random sample of 12 students gives parking times where 10 are above 10 minutes and 2 are below 10 minutes. There are no ties at exactly 10 minutes.  We test   Let be the number of times above 10 minutes. Under ,   Since the alternative is right-tailed, the p-value is   At the 5% significance level, we reject . The sample gives evidence that the median parking time is more than 10 minutes.  "
+},
+{
+  "id": "ex-sign-test-large-sample",
+  "level": "2",
+  "url": "sec-sign-test.html#ex-sign-test-large-sample",
+  "type": "Example",
+  "number": "13.1.2",
+  "title": "A Large-Sample Sign Test.",
+  "body": " A Large-Sample Sign Test  A city wants to know whether the median commute time is greater than 30 minutes. In a random sample of 64 commuters, 43 report commute times above 30 minutes, 21 report commute times below 30 minutes, and nobody reports exactly 30 minutes.  Under , the number above 30 minutes has approximately mean and standard deviation . The z statistic is   For the right-tailed alternative , the p-value is about . The data give strong evidence that the median commute time is greater than 30 minutes.  "
+},
+{
+  "id": "sec-sign-test-19",
+  "level": "2",
+  "url": "sec-sign-test.html#sec-sign-test-19",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "paired-sample sign test inference paired-sample sign test "
+},
+{
+  "id": "ex-paired-sign-test",
+  "level": "2",
+  "url": "sec-sign-test.html#ex-paired-sign-test",
+  "type": "Example",
+  "number": "13.1.3",
+  "title": "A Paired-Sample Sign Test.",
+  "body": " A Paired-Sample Sign Test  Ten students take a short statistics quiz before and after a review session. Let . The signs of the differences are   There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use   Under , the number of positive signs is . The p-value is   At , this is close but not quite small enough to reject . The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.  "
+},
+{
+  "id": "act-ch12-human-sign-test",
+  "level": "2",
+  "url": "sec-sign-test.html#act-ch12-human-sign-test",
+  "type": "Activity",
+  "number": "13.1.1",
+  "title": "Human Sign Test.",
+  "body": " Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as “the median commute time to campus is 20 minutes.” Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.    "
+},
+{
+  "id": "sec-spearman-rank-correlation",
+  "level": "1",
+  "url": "sec-spearman-rank-correlation.html",
+  "type": "Section",
+  "number": "13.2",
+  "title": "The Spearman Test of Rank Correlation",
+  "body": " The Spearman Test of Rank Correlation  The ordinary correlation coefficient measures the strength and direction of a linear relationship. The Spearman rank correlation coefficient inference Spearman rank correlation coefficient , written , measures the strength and direction of a monotone relationship after the data values are replaced by ranks.  A relationship is monotone inference monotone relationship if it mostly moves in one direction. A positive monotone relationship tends to go up as increases. A negative monotone relationship tends to go down as increases. It does not have to be a straight line. So the Spearman test is about monotonicity, not linearity.   Monotone and non-monotone patterns   Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.     To compute , rank the -values from smallest to largest and rank the -values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let be the rank of , let be the rank of , and let   Then   The denominator is important. The common no-ties formula has in the denominator, which is the same as . A formula with only is missing the factor and will not give the Spearman correlation coefficient.  Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of , so they have the same mean   The ordinary correlation of the ranks is   Because both rank lists have the same spread,   Now expand the squared rank differences:   After expanding and collecting terms,   Solving this for the cross-product sum and dividing by gives   If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.   Computing Spearman Rank Correlation  Six students report hours studied and quiz scores.   Ranks for hours studied and quiz score    Student  Hours rank  Score rank      A  1  2   1    B  2  1  1  1    C  3  4   1    D  4  3  1  1    E  5  5  0  0    F  6  6  0  0     Here and . Therefore   The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.   The Spearman test usually starts with   meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is   under . This approximation has a concrete reason. Under the null hypothesis of no rank association, once the -ranks are fixed, the -ranks are essentially a random permutation of . In that random-permutation model, the Spearman statistic has mean 0 and variance   So multiplying by makes the variance equal to 1. As grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why can be treated as approximately standard normal for a large-sample test.   A Large-Sample Spearman Test  A researcher studies whether stress rank and sleep-loss rank tend to move together for students. The Spearman rank correlation is . Test for positive monotone association.  The hypotheses are   The large-sample statistic is   The right-tailed p-value is about . The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.    Rank Correlation Card Sort   Practice reading monotone association without worrying about the original measurement units.     Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.      Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate .      Describe one arrangement that has a clear curved pattern but still has positive monotone association.     "
+},
+{
+  "id": "sec-spearman-rank-correlation-2",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#sec-spearman-rank-correlation-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Spearman rank correlation coefficient inference Spearman rank correlation coefficient "
+},
+{
+  "id": "sec-spearman-rank-correlation-3",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#sec-spearman-rank-correlation-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "monotone inference monotone relationship "
+},
+{
+  "id": "fig-monotone-not-linear",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#fig-monotone-not-linear",
+  "type": "Figure",
+  "number": "13.2.1",
+  "title": "",
+  "body": " Monotone and non-monotone patterns   Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.    "
+},
+{
+  "id": "ex-spearman-coefficient",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#ex-spearman-coefficient",
+  "type": "Example",
+  "number": "13.2.2",
+  "title": "Computing Spearman Rank Correlation.",
+  "body": " Computing Spearman Rank Correlation  Six students report hours studied and quiz scores.   Ranks for hours studied and quiz score    Student  Hours rank  Score rank      A  1  2   1    B  2  1  1  1    C  3  4   1    D  4  3  1  1    E  5  5  0  0    F  6  6  0  0     Here and . Therefore   The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.  "
+},
+{
+  "id": "ex-spearman-large-sample-test",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#ex-spearman-large-sample-test",
+  "type": "Example",
+  "number": "13.2.4",
+  "title": "A Large-Sample Spearman Test.",
+  "body": " A Large-Sample Spearman Test  A researcher studies whether stress rank and sleep-loss rank tend to move together for students. The Spearman rank correlation is . Test for positive monotone association.  The hypotheses are   The large-sample statistic is   The right-tailed p-value is about . The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.  "
+},
+{
+  "id": "act-ch12-rank-correlation-card-sort",
+  "level": "2",
+  "url": "sec-spearman-rank-correlation.html#act-ch12-rank-correlation-card-sort",
+  "type": "Activity",
+  "number": "13.2.1",
+  "title": "Rank Correlation Card Sort.",
+  "body": " Rank Correlation Card Sort   Practice reading monotone association without worrying about the original measurement units.     Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.      Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate .      Describe one arrangement that has a clear curved pattern but still has positive monotone association.    "
+},
+{
+  "id": "ch12-exercises",
+  "level": "1",
+  "url": "ch12-exercises.html",
+  "type": "Exercises",
+  "number": "13.3",
+  "title": "Exercises",
+  "body": " Exercises   Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why “non-parametric” does not mean “assumption-free.”     A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.   Write hypotheses for testing whether the population median is greater than 15 minutes.  State the binomial distribution used under .  Compute the exact p-value.     A one-sample sign test has non-tied observations, with 28 observations above the hypothesized median.   Compute the large-sample z statistic without a continuity correction.  For a right-tailed test, estimate the p-value using the standard normal distribution.  State the conclusion at .     A paired study records blood pressure before and after a relaxation exercise. Let . Among 15 nonzero differences, 4 are positive and 11 are negative.   For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference .  Which sign should be counted as evidence for the alternative?  Compute the exact p-value using a binomial distribution.     Explain why the sign test is a test about a median rather than a mean.    For the paired rank data below, compute Spearman's rank correlation coefficient.   Paired ranks    Observation  Rank of  Rank of    1  1  1    2  2  3    3  3  2    4  4  5    5  5  4    6  6  6      Find each rank difference .  Find .  Use the shortcut formula for .     A sample of paired observations has Spearman rank correlation .   Write hypotheses for testing whether there is a negative monotone association.  Compute .  Use the standard normal distribution to estimate the p-value.     Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.   "
+},
+{
+  "id": "ch12-ex-1",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-1",
+  "type": "Exercise",
+  "number": "13.3.1",
+  "title": "",
+  "body": " Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why “non-parametric” does not mean “assumption-free.”   "
+},
+{
+  "id": "ch12-ex-2",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-2",
+  "type": "Exercise",
+  "number": "13.3.2",
+  "title": "",
+  "body": " A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.   Write hypotheses for testing whether the population median is greater than 15 minutes.  State the binomial distribution used under .  Compute the exact p-value.   "
+},
+{
+  "id": "ch12-ex-3",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-3",
+  "type": "Exercise",
+  "number": "13.3.3",
+  "title": "",
+  "body": " A one-sample sign test has non-tied observations, with 28 observations above the hypothesized median.   Compute the large-sample z statistic without a continuity correction.  For a right-tailed test, estimate the p-value using the standard normal distribution.  State the conclusion at .   "
+},
+{
+  "id": "ch12-ex-4",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-4",
+  "type": "Exercise",
+  "number": "13.3.4",
+  "title": "",
+  "body": " A paired study records blood pressure before and after a relaxation exercise. Let . Among 15 nonzero differences, 4 are positive and 11 are negative.   For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference .  Which sign should be counted as evidence for the alternative?  Compute the exact p-value using a binomial distribution.   "
+},
+{
+  "id": "ch12-ex-5",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-5",
+  "type": "Exercise",
+  "number": "13.3.5",
+  "title": "",
+  "body": " Explain why the sign test is a test about a median rather than a mean.  "
+},
+{
+  "id": "ch12-ex-6",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-6",
+  "type": "Exercise",
+  "number": "13.3.6",
+  "title": "",
+  "body": " For the paired rank data below, compute Spearman's rank correlation coefficient.   Paired ranks    Observation  Rank of  Rank of    1  1  1    2  2  3    3  3  2    4  4  5    5  5  4    6  6  6      Find each rank difference .  Find .  Use the shortcut formula for .   "
+},
+{
+  "id": "ch12-ex-7",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-7",
+  "type": "Exercise",
+  "number": "13.3.7",
+  "title": "",
+  "body": " A sample of paired observations has Spearman rank correlation .   Write hypotheses for testing whether there is a negative monotone association.  Compute .  Use the standard normal distribution to estimate the p-value.   "
+},
+{
+  "id": "ch12-ex-8",
+  "level": "2",
+  "url": "ch12-exercises.html#ch12-ex-8",
+  "type": "Exercise",
+  "number": "13.3.8",
+  "title": "",
+  "body": " Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.  "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
