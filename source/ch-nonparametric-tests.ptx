@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-nonparametric-tests" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Non-Parametric Tests</title>
+
+  <introduction>
+    <p>The tests in the previous chapter mostly had a familiar shape: state a hypothesis about a mean, proportion, variance, or table relationship; compute a standardized statistic; and compare it with a known reference distribution. Many of those methods are <term>parametric tests<idx><h>inference</h><h>parametric test</h></idx></term>. That means the model is described by a small number of population parameters, such as <m>\mu</m>, <m>\sigma</m>, or <m>p</m>, and the test usually relies on assumptions about the population distribution.</p>
+
+    <p>A <term>non-parametric test<idx><h>inference</h><h>non-parametric test</h></idx></term> uses less detailed information about the population distribution. Non-parametric does not mean “no assumptions at all.” It means we avoid assuming a specific distributional family, such as normal populations with means and standard deviations. Instead, we often test claims about medians, signs, ranks, or order.</p>
+
+    <p>This chapter studies two useful examples. The <term>sign test<idx><h>inference</h><h>sign test</h></idx></term> tests a claim about a population median, or about the median of paired differences. The <term>Spearman test of rank correlation<idx><h>inference</h><h>Spearman test of rank correlation</h></idx></term> tests whether two quantitative variables tend to move together in a monotone way after replacing the raw data by their ranks.</p>
+
+    <table xml:id="tbl-parametric-nonparametric-comparison">
+      <title>Parametric and non-parametric tests</title>
+      <tabular halign="left">
+        <row header="yes" bottom="minor">
+          <cell>Question</cell>
+          <cell>Parametric test</cell>
+          <cell>Non-parametric test</cell>
+        </row>
+        <row>
+          <cell>What is usually tested?</cell>
+          <cell>A parameter such as a mean, variance, or proportion</cell>
+          <cell>A median, sign pattern, rank pattern, or distribution-free feature</cell>
+        </row>
+        <row>
+          <cell>What information is used?</cell>
+          <cell>Actual numerical sizes, such as distances from a mean</cell>
+          <cell>Often only signs, ranks, or order</cell>
+        </row>
+        <row>
+          <cell>What assumptions matter?</cell>
+          <cell>Often normality, equal variances, or a stated model family</cell>
+          <cell>Fewer shape assumptions, but still random sampling and independence where appropriate</cell>
+        </row>
+        <row bottom="major">
+          <cell>What is the tradeoff?</cell>
+          <cell>Can be powerful when the model assumptions are reasonable</cell>
+          <cell>More robust, but may ignore some numerical information</cell>
+        </row>
+      </tabular>
+    </table>
+  </introduction>
+
+  <section xml:id="sec-sign-test">
+    <title>The Sign Test</title>
+
+    <p>The sign test is easy to describe because it ignores almost everything except whether each observation is above or below a hypothesized value. For a one-sample problem, the null hypothesis has the form</p>
+
+    <me>
+      H_0:M=M_0,
+    </me>
+
+    <p>where <m>M</m> is the population <term>median<idx><h>inference</h><h>median test</h></idx></term>. This is the first important point: the sign test is a test about a median, not a test about a mean. A few extremely large or small observations can pull a mean around, but the sign test only asks how many observations fall on each side of <m>M_0</m>.</p>
+
+    <p>Suppose <m>H_0:M=M_0</m> is true and the population is continuous, so ties at exactly <m>M_0</m> are unlikely. Then a randomly selected observation is just as likely to be above <m>M_0</m> as below it:</p>
+
+    <me>
+      P(X&gt;M_0)=P(X&lt;M_0)=\frac{1}{2}.
+    </me>
+
+    <p>Let <m>S</m> be the number of observations above <m>M_0</m>, after throwing out any observations exactly equal to <m>M_0</m>. If there are <m>n</m> non-tied observations, then under the null hypothesis</p>
+
+    <me>
+      S\sim B\left(n,\frac{1}{2}\right).
+    </me>
+
+    <p>So the sign test is a particular case of a binomial proportion test with <m>p=1/2</m>. The “success” is simply being on one chosen side of the hypothesized median.</p>
+
+    <p>The alternative hypothesis tells us which tail of the binomial distribution to use.</p>
+
+    <ul>
+      <li><p>For <m>H_a:M&gt;M_0</m>, large values of <m>S</m> count against <m>H_0</m>.</p></li>
+      <li><p>For <m>H_a:M&lt;M_0</m>, small values of <m>S</m> count against <m>H_0</m>.</p></li>
+      <li><p>For <m>H_a:M\ne M_0</m>, values of <m>S</m> far from <m>n/2</m> in either direction count against <m>H_0</m>.</p></li>
+    </ul>
+
+    <p>For small samples, we base the rejection decision directly on the binomial distribution. For large samples, we use the normal approximation to the binomial distribution. Since <m>p=1/2</m>, the null mean and standard deviation of <m>S</m> are</p>
+
+    <me>
+      \mu_S=\frac{n}{2}
+      \qquad\text{and}\qquad
+      \sigma_S=\sqrt{n\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)}
+      =\frac{\sqrt{n}}{2}.
+    </me>
+
+    <p>Thus the large-sample sign-test statistic is approximately</p>
+
+    <me>
+      z=\frac{S-n/2}{\sqrt{n}/2}.
+    </me>
+
+    <p>A continuity correction is often used when converting a binomial tail to a normal tail, but the main idea is the same: the observed number of plus signs is compared with what a fair <m>p=1/2</m> binomial model predicts.</p>
+
+    <example xml:id="ex-sign-test-median-exact">
+      <title>An Exact One-Sample Sign Test</title>
+      <p>A student group claims that the median time to find parking on campus is more than 10 minutes. A random sample of 12 students gives parking times where 10 are above 10 minutes and 2 are below 10 minutes. There are no ties at exactly 10 minutes.</p>
+
+      <p>We test</p>
+
+      <me>
+        H_0:M=10
+        \qquad\text{versus}\qquad
+        H_a:M&gt;10.
+      </me>
+
+      <p>Let <m>S</m> be the number of times above 10 minutes. Under <m>H_0</m>,</p>
+
+      <me>
+        S\sim B\left(12,\frac{1}{2}\right).
+      </me>
+
+      <p>Since the alternative is right-tailed, the p-value is</p>
+
+      <me>
+        P(S\ge 10)=P(S=10)+P(S=11)+P(S=12)
+        =\frac{\binom{12}{10}+\binom{12}{11}+\binom{12}{12}}{2^{12}}
+        =\frac{79}{4096}\approx 0.019.
+      </me>
+
+      <p>At the 5% significance level, we reject <m>H_0</m>. The sample gives evidence that the median parking time is more than 10 minutes.</p>
+    </example>
+
+    <example xml:id="ex-sign-test-large-sample">
+      <title>A Large-Sample Sign Test</title>
+      <p>A city wants to know whether the median commute time is greater than 30 minutes. In a random sample of 64 commuters, 43 report commute times above 30 minutes, 21 report commute times below 30 minutes, and nobody reports exactly 30 minutes.</p>
+
+      <p>Under <m>H_0:M=30</m>, the number above 30 minutes has approximately mean <m>64/2=32</m> and standard deviation <m>\sqrt{64}/2=4</m>. The z statistic is</p>
+
+      <me>
+        z=\frac{43-32}{4}=2.75.
+      </me>
+
+      <p>For the right-tailed alternative <m>H_a:M&gt;30</m>, the p-value is about <m>P(Z\ge 2.75)\approx 0.003</m>. The data give strong evidence that the median commute time is greater than 30 minutes.</p>
+    </example>
+
+    <p>The sign test also works naturally for paired data. For a <term>paired-sample sign test<idx><h>inference</h><h>paired-sample sign test</h></idx></term>, first compute the paired differences</p>
+
+    <me>
+      d_i=\text{after}_i-\text{before}_i
+    </me>
+
+    <p>or whatever direction makes sense in context. Then ignore the zero differences and count the signs of the nonzero differences. The null hypothesis is about the median difference:</p>
+
+    <me>
+      H_0:M_d=0.
+    </me>
+
+    <p>If the treatment has no median effect, positive and negative differences should be equally likely, so the number of positive differences again follows <m>B(n,1/2)</m> under the null hypothesis.</p>
+
+    <example xml:id="ex-paired-sign-test">
+      <title>A Paired-Sample Sign Test</title>
+      <p>Ten students take a short statistics quiz before and after a review session. Let <m>d=\text{after}-\text{before}</m>. The signs of the differences are</p>
+
+      <me>
+        +,\ +,\ -,\ +,\ +,\ +,\ -,\ +,\ +,\ +.
+      </me>
+
+      <p>There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use</p>
+
+      <me>
+        H_0:M_d=0
+        \qquad\text{versus}\qquad
+        H_a:M_d&gt;0.
+      </me>
+
+      <p>Under <m>H_0</m>, the number of positive signs is <m>S\sim B(10,1/2)</m>. The p-value is</p>
+
+      <me>
+        P(S\ge 8)=\frac{\binom{10}{8}+\binom{10}{9}+\binom{10}{10}}{2^{10}}
+        =\frac{56}{1024}\approx 0.055.
+      </me>
+
+      <p>At <m>\alpha=0.05</m>, this is close but not quite small enough to reject <m>H_0</m>. The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.</p>
+    </example>
+
+    <activity xml:id="act-ch12-human-sign-test">
+      <title>Human Sign Test</title>
+      <introduction>
+        <p>Use a quick class data set to see why the sign test is a binomial test in disguise.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Choose a claim about a median that the class can check quickly, such as “the median commute time to campus is 20 minutes.” Each student records whether their value is above, below, or exactly equal to the claimed median.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Throw out any ties. Count the number above the claimed median and the number below it.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain why the number above the claimed median should follow <m>B(n,1/2)</m> if the claim is true.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <section xml:id="sec-spearman-rank-correlation">
+    <title>The Spearman Test of Rank Correlation</title>
+
+    <p>The ordinary correlation coefficient <m>r</m> measures the strength and direction of a linear relationship. The <term>Spearman rank correlation coefficient<idx><h>inference</h><h>Spearman rank correlation coefficient</h></idx></term>, written <m>r_s</m>, measures the strength and direction of a monotone relationship after the data values are replaced by ranks.</p>
+
+    <p>A relationship is <term>monotone<idx><h>inference</h><h>monotone relationship</h></idx></term> if it mostly moves in one direction. A positive monotone relationship tends to go up as <m>x</m> increases. A negative monotone relationship tends to go down as <m>x</m> increases. It does not have to be a straight line. So the Spearman test is about monotonicity, not linearity.</p>
+
+    <figure xml:id="fig-monotone-not-linear">
+      <caption>Monotone and non-monotone patterns</caption>
+      <image width="92%" margins="4%">
+        <shortdescription>Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.</shortdescription>
+        <description>The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              at={(0cm,0cm)},
+              anchor=south west,
+              width=6.4cm,
+              height=5.2cm,
+              xmin=0,
+              xmax=7,
+              ymin=0,
+              ymax=10,
+              xlabel={$x$},
+              ylabel={$y$},
+              title={Monotone, not linear},
+              title style={font=\small},
+              xtick=\empty,
+              ytick=\empty,
+              enlargelimits=false
+            ]
+              \addplot[only marks, mark=*, mark size=2pt, color=blue]
+                coordinates {(0.8,1.0) (1.5,1.6) (2.2,2.5) (2.9,3.6) (3.6,5.0) (4.3,6.4) (5.0,7.6) (5.7,8.6) (6.4,9.2)};
+            \end{axis}
+
+            \begin{axis}[
+              at={(7.4cm,0cm)},
+              anchor=south west,
+              width=6.4cm,
+              height=5.2cm,
+              xmin=0,
+              xmax=7,
+              ymin=0,
+              ymax=10,
+              xlabel={$x$},
+              ylabel={$y$},
+              title={Not monotone},
+              title style={font=\small},
+              xtick=\empty,
+              ytick=\empty,
+              enlargelimits=false
+            ]
+              \addplot[only marks, mark=*, mark size=2pt, color=red]
+                coordinates {(0.8,8.5) (1.5,6.0) (2.2,3.7) (2.9,2.3) (3.6,1.8) (4.3,2.5) (5.0,4.0) (5.7,6.2) (6.4,8.7)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>To compute <m>r_s</m>, rank the <m>x</m>-values from smallest to largest and rank the <m>y</m>-values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let <m>R_i</m> be the rank of <m>x_i</m>, let <m>S_i</m> be the rank of <m>y_i</m>, and let</p>
+
+    <me>
+      d_i=R_i-S_i.
+    </me>
+
+    <p>Then</p>
+
+    <me>
+      r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
+    </me>
+
+    <p>The denominator is important. The common no-ties formula has <m>n(n^2-1)</m> in the denominator, which is the same as <m>n(n-1)(n+1)</m>. A formula with only <m>n(n-1)</m> is missing the factor <m>n+1</m> and will not give the Spearman correlation coefficient.</p>
+
+    <p>Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of <m>1,2,\ldots,n</m>, so they have the same mean</p>
+
+    <me>
+      \overline{R}=\overline{S}=\frac{n+1}{2}.
+    </me>
+
+    <p>The ordinary correlation of the ranks is</p>
+
+    <me>
+      r_s=
+      \frac{\sum (R_i-\overline{R})(S_i-\overline{S})}
+      {\sqrt{\sum (R_i-\overline{R})^2}\sqrt{\sum (S_i-\overline{S})^2}}.
+    </me>
+
+    <p>Because both rank lists have the same spread,</p>
+
+    <me>
+      \sum (R_i-\overline{R})^2
+      =
+      \sum (S_i-\overline{S})^2
+      =
+      \frac{n(n^2-1)}{12}.
+    </me>
+
+    <p>Now expand the squared rank differences:</p>
+
+    <me>
+      \sum d_i^2
+      =
+      \sum\left((R_i-\overline{R})-(S_i-\overline{S})\right)^2.
+    </me>
+
+    <p>After expanding and collecting terms,</p>
+
+    <me>
+      \sum d_i^2
+      =
+      2\sum (R_i-\overline{R})^2
+      -2\sum (R_i-\overline{R})(S_i-\overline{S}).
+    </me>
+
+    <p>Solving this for the cross-product sum and dividing by <m>\sum (R_i-\overline{R})^2=n(n^2-1)/12</m> gives</p>
+
+    <me>
+      r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
+    </me>
+
+    <p>If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.</p>
+
+    <example xml:id="ex-spearman-coefficient">
+      <title>Computing Spearman Rank Correlation</title>
+      <p>Six students report hours studied and quiz scores.</p>
+
+      <table xml:id="tbl-spearman-study-score">
+        <title>Ranks for hours studied and quiz score</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Student</cell>
+            <cell>Hours rank <m>R</m></cell>
+            <cell>Score rank <m>S</m></cell>
+            <cell><m>d=R-S</m></cell>
+            <cell><m>d^2</m></cell>
+          </row>
+          <row>
+            <cell>A</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell><m>-1</m></cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>B</cell>
+            <cell>2</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>C</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+            <cell><m>-1</m></cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>D</cell>
+            <cell>4</cell>
+            <cell>3</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>E</cell>
+            <cell>5</cell>
+            <cell>5</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+          </row>
+          <row bottom="major">
+            <cell>F</cell>
+            <cell>6</cell>
+            <cell>6</cell>
+            <cell>0</cell>
+            <cell>0</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>Here <m>\sum d^2=4</m> and <m>n=6</m>. Therefore</p>
+
+      <me>
+        r_s=1-\frac{6(4)}{6(6^2-1)}
+        =1-\frac{24}{210}
+        \approx 0.886.
+      </me>
+
+      <p>The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.</p>
+    </example>
+
+    <p>The Spearman test usually starts with</p>
+
+    <me>
+      H_0:\rho_s=0,
+    </me>
+
+    <p>meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is</p>
+
+    <me>
+      Z=r_s\sqrt{n-1}\approx N(0,1)
+    </me>
+
+    <p>under <m>H_0</m>. This approximation has a concrete reason. Under the null hypothesis of no rank association, once the <m>x</m>-ranks are fixed, the <m>y</m>-ranks are essentially a random permutation of <m>1,2,\ldots,n</m>. In that random-permutation model, the Spearman statistic has mean 0 and variance</p>
+
+    <me>
+      \operatorname{Var}(r_s)=\frac{1}{n-1}.
+    </me>
+
+    <p>So multiplying by <m>\sqrt{n-1}</m> makes the variance equal to 1. As <m>n</m> grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why <m>r_s\sqrt{n-1}</m> can be treated as approximately standard normal for a large-sample test.</p>
+
+    <example xml:id="ex-spearman-large-sample-test">
+      <title>A Large-Sample Spearman Test</title>
+      <p>A researcher studies whether stress rank and sleep-loss rank tend to move together for <m>n=20</m> students. The Spearman rank correlation is <m>r_s=0.70</m>. Test for positive monotone association.</p>
+
+      <p>The hypotheses are</p>
+
+      <me>
+        H_0:\rho_s=0
+        \qquad\text{and}\qquad
+        H_a:\rho_s&gt;0.
+      </me>
+
+      <p>The large-sample statistic is</p>
+
+      <me>
+        z=r_s\sqrt{n-1}=0.70\sqrt{19}\approx 3.05.
+      </me>
+
+      <p>The right-tailed p-value is about <m>P(Z\ge 3.05)\approx 0.001</m>. The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.</p>
+    </example>
+
+    <activity xml:id="act-ch12-rank-correlation-card-sort">
+      <title>Rank Correlation Card Sort</title>
+      <introduction>
+        <p>Practice reading monotone association without worrying about the original measurement units.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate <m>r_s</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Describe one arrangement that has a clear curved pattern but still has positive monotone association.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>Non-parametric tests are useful when a question is really about order, signs, medians, or ranks rather than about a normal-population mean.</p>
+
+    <ul>
+      <li><p>Parametric tests rely on a specific population model described by parameters such as <m>\mu</m>, <m>\sigma</m>, or <m>p</m>.</p></li>
+      <li><p>Non-parametric tests make fewer distributional assumptions, but they still need appropriate sampling and independence conditions.</p></li>
+      <li><p>The sign test tests a hypothesized median, not a hypothesized mean.</p></li>
+      <li><p>Under <m>H_0:M=M_0</m>, the number of observations above <m>M_0</m> follows <m>B(n,1/2)</m> after ties are removed.</p></li>
+      <li><p>Small-sample sign tests use exact binomial probabilities, while large-sample sign tests use the normal approximation to the binomial distribution.</p></li>
+      <li><p>A paired-sample sign test applies the same idea to the signs of paired differences and tests <m>H_0:M_d=0</m>.</p></li>
+      <li><p>Spearman's <m>r_s</m> is the ordinary correlation coefficient computed on ranks.</p></li>
+      <li><p>Spearman correlation measures monotone association, not necessarily linear association.</p></li>
+      <li><p>With no ties, <m>r_s=1-6\sum d_i^2/(n(n^2-1))</m>, where <m>d_i</m> is the difference between the two ranks in pair <m>i</m>.</p></li>
+      <li><p>For large samples under no rank association, <m>r_s\sqrt{n-1}</m> is approximately standard normal.</p></li>
+    </ul>
+  </conclusion>
+
+  <exercises xml:id="ch12-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch12-ex-1">
+      <p>Explain the difference between a parametric test and a non-parametric test.</p>
+      <ol>
+        <li><p>Give one example of a parametric test from the previous chapter.</p></li>
+        <li><p>Give one example of a non-parametric test from this chapter.</p></li>
+        <li><p>Explain why “non-parametric” does not mean “assumption-free.”</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-2">
+      <p>A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.</p>
+      <ol>
+        <li><p>Write hypotheses for testing whether the population median is greater than 15 minutes.</p></li>
+        <li><p>State the binomial distribution used under <m>H_0</m>.</p></li>
+        <li><p>Compute the exact p-value.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-3">
+      <p>A one-sample sign test has <m>n=40</m> non-tied observations, with 28 observations above the hypothesized median.</p>
+      <ol>
+        <li><p>Compute the large-sample z statistic without a continuity correction.</p></li>
+        <li><p>For a right-tailed test, estimate the p-value using the standard normal distribution.</p></li>
+        <li><p>State the conclusion at <m>\alpha=0.05</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-4">
+      <p>A paired study records blood pressure before and after a relaxation exercise. Let <m>d=\text{after}-\text{before}</m>. Among 15 nonzero differences, 4 are positive and 11 are negative.</p>
+      <ol>
+        <li><p>For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference <m>M_d</m>.</p></li>
+        <li><p>Which sign should be counted as evidence for the alternative?</p></li>
+        <li><p>Compute the exact p-value using a binomial distribution.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-5">
+      <p>Explain why the sign test is a test about a median rather than a mean.</p>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-6">
+      <p>For the paired rank data below, compute Spearman's rank correlation coefficient.</p>
+
+      <table xml:id="tbl-ex-spearman-ranks">
+        <title>Paired ranks</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Observation</cell>
+            <cell>Rank of <m>x</m></cell>
+            <cell>Rank of <m>y</m></cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>3</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>4</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+          </row>
+          <row>
+            <cell>5</cell>
+            <cell>5</cell>
+            <cell>4</cell>
+          </row>
+          <row bottom="major">
+            <cell>6</cell>
+            <cell>6</cell>
+            <cell>6</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <ol>
+        <li><p>Find each rank difference <m>d_i</m>.</p></li>
+        <li><p>Find <m>\sum d_i^2</m>.</p></li>
+        <li><p>Use the shortcut formula for <m>r_s</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-7">
+      <p>A sample of <m>n=25</m> paired observations has Spearman rank correlation <m>r_s=-0.52</m>.</p>
+      <ol>
+        <li><p>Write hypotheses for testing whether there is a negative monotone association.</p></li>
+        <li><p>Compute <m>z=r_s\sqrt{n-1}</m>.</p></li>
+        <li><p>Use the standard normal distribution to estimate the p-value.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch12-ex-8">
+      <p>Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.</p>
+    </exercise>
+  </exercises>
+</chapter>

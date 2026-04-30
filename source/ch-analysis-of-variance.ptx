@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-analysis-of-variance" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Analysis of Variance</title>
+
+  <introduction>
+    <p>Earlier chapters compared one mean with a claimed value, or compared two means with each other. The <term>analysis of variance<idx><h>inference</h><h>analysis of variance</h></idx></term>, often shortened to <term>ANOVA<idx><h>inference</h><h>ANOVA</h></idx></term>, is built for a larger question: how do we compare several population means at once?</p>
+
+    <p>The name sounds a little surprising. We want to compare means, but the method studies variation. The reason is that differences among sample means are only meaningful when they are large compared with the ordinary variation inside the groups. ANOVA turns that idea into a ratio.</p>
+
+    <p>This chapter introduces one-way ANOVA in the balanced case. That means there are <m>m</m> groups, each group has the same sample size <m>n</m>, and the groups are independent. The equal sample-size assumption keeps the formulas readable. The same ideas extend to unequal sample sizes, but the notation becomes heavier.</p>
+  </introduction>
+
+  <section xml:id="sec-anova-variance-components">
+    <title>Components of Variation</title>
+
+    <p>Suppose we have <m>m</m> groups and <m>n</m> observations in each group. Write <m>x_{ij}</m> for observation <m>j</m> in group <m>i</m>. The group mean is <m>\overline{x}_{i\cdot}</m>, and the grand mean of all <m>mn</m> observations is <m>\overline{x}_{\cdot\cdot}</m>.</p>
+
+    <p>ANOVA begins by splitting total variation into two pieces. The <term>total variation<idx><h>inference</h><h>total variation</h></idx></term> is</p>
+
+    <me>
+      T=\sum_{i=1}^{m}\sum_{j=1}^{n}
+      \left(x_{ij}-\overline{x}_{\cdot\cdot}\right)^2.
+    </me>
+
+    <p>The <term>between-group variation<idx><h>inference</h><h>between-group variation</h></idx></term> measures how far the group means are from the grand mean:</p>
+
+    <me>
+      B=\sum_{i=1}^{m}
+      \left(\overline{x}_{i\cdot}-\overline{x}_{\cdot\cdot}\right)^2.
+    </me>
+
+    <p>The <term>within-group variation<idx><h>inference</h><h>within-group variation</h></idx></term> measures how far observations are from their own group mean:</p>
+
+    <me>
+      W=\sum_{i=1}^{m}\sum_{j=1}^{n}
+      \left(x_{ij}-\overline{x}_{i\cdot}\right)^2.
+    </me>
+
+    <p>With this shorthand, the balanced one-way ANOVA identity is</p>
+
+    <me>
+      T=nB+W.
+    </me>
+
+    <p>The factor <m>n</m> appears because each group mean represents <m>n</m> observations. If a group mean is 4 units above the grand mean, then all <m>n</m> observations in that group inherit that 4-unit group-level offset before we even look at their individual wiggles around the group mean.</p>
+
+    <figure xml:id="fig-anova-between-within">
+      <caption>Between-group and within-group variation</caption>
+      <image width="92%" margins="4%">
+        <shortdescription>Three horizontal dotplots show observations in three groups. Each group has its own mean, and one vertical reference line marks the grand mean.</shortdescription>
+        <description>Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.</description>
+        <latex-image>
+          \begin{tikzpicture}[x=0.55cm,y=0.9cm]
+            \draw[->] (4.5,0.4) -- (17,0.4);
+            \foreach \x in {5,7,9,11,13,15,17}
+              \draw (\x,0.3) -- (\x,0.5) node[below=4pt] {\small \x};
+            \node at (10.75,-0.25) {\small score};
+
+            \node[anchor=east] at (4.2,1.2) {\small Group A};
+            \node[anchor=east] at (4.2,2.2) {\small Group B};
+            \node[anchor=east] at (4.2,3.2) {\small Group C};
+
+            \foreach \x in {6,7,8,9}
+              \fill[black] (\x,1.2) circle (2.5pt);
+            \foreach \x in {9,10,10,11}
+              \fill[black] (\x,2.2) circle (2.5pt);
+            \foreach \x in {13,14,15,16}
+              \fill[black] (\x,3.2) circle (2.5pt);
+
+            \draw[thick,blue] (7.5,0.95) -- (7.5,1.45);
+            \draw[thick,blue] (10,1.95) -- (10,2.45);
+            \draw[thick,blue] (14.5,2.95) -- (14.5,3.45);
+            \node[blue,anchor=west] at (14.75,3.45) {\small group means};
+
+            \draw[dashed,thick] (10.67,0.75) -- (10.67,3.65);
+            \node[anchor=west] at (10.85,0.85) {\small grand mean};
+
+            \draw[&lt;-&gt;,blue] (7.5,1.65) -- (10.67,1.65);
+            \draw[&lt;-&gt;,blue] (10,2.65) -- (10.67,2.65);
+            \draw[&lt;-&gt;,blue] (10.67,3.65) -- (14.5,3.65);
+            \node[blue] at (8.9,1.9) {\small between};
+
+            \draw[&lt;-&gt;] (6,0.9) -- (9,0.9);
+            \node at (7.5,0.72) {\small within};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>The identity <m>T=nB+W</m> is not a statistical approximation. It is algebra. For every observation, write its distance from the grand mean as a two-step trip:</p>
+
+    <me>
+      x_{ij}-\overline{x}_{\cdot\cdot}
+      =
+      \left(\overline{x}_{i\cdot}-\overline{x}_{\cdot\cdot}\right)
+      +
+      \left(x_{ij}-\overline{x}_{i\cdot}\right).
+    </me>
+
+    <p>The first term is the group mean's distance from the grand mean. The second term is the observation's distance from its group mean. When we square and sum over all observations, the cross-product terms disappear because, within each group, deviations from the group mean sum to 0:</p>
+
+    <me>
+      \sum_{j=1}^{n}\left(x_{ij}-\overline{x}_{i\cdot}\right)=0.
+    </me>
+
+    <p>What remains is the between part counted <m>n</m> times, plus the within part:</p>
+
+    <me>
+      \sum_{i=1}^{m}\sum_{j=1}^{n}
+      \left(x_{ij}-\overline{x}_{\cdot\cdot}\right)^2
+      =
+      n\sum_{i=1}^{m}
+      \left(\overline{x}_{i\cdot}-\overline{x}_{\cdot\cdot}\right)^2
+      +
+      \sum_{i=1}^{m}\sum_{j=1}^{n}
+      \left(x_{ij}-\overline{x}_{i\cdot}\right)^2.
+    </me>
+
+    <example xml:id="ex-anova-variation-split">
+      <title>Splitting Total Variation</title>
+      <p>Three teaching methods are compared using quiz-score gains. Each method is used with four students.</p>
+
+      <table xml:id="tbl-anova-variation-example">
+        <title>Quiz-score gains by teaching method</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Method</cell>
+            <cell>Data</cell>
+            <cell>Group mean</cell>
+          </row>
+          <row>
+            <cell>A</cell>
+            <cell>6, 8, 7, 9</cell>
+            <cell>7.5</cell>
+          </row>
+          <row>
+            <cell>B</cell>
+            <cell>10, 11, 9, 10</cell>
+            <cell>10.0</cell>
+          </row>
+          <row bottom="major">
+            <cell>C</cell>
+            <cell>13, 15, 14, 16</cell>
+            <cell>14.5</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>The grand mean is</p>
+
+      <me>
+        \overline{x}_{\cdot\cdot}
+        =
+        \frac{6+8+7+9+10+11+9+10+13+15+14+16}{12}
+        =
+        10.667.
+      </me>
+
+      <p>The between-group part is</p>
+
+      <me>
+        B=(7.5-10.667)^2+(10-10.667)^2+(14.5-10.667)^2
+        \approx 25.167.
+      </me>
+
+      <p>Since each group has <m>n=4</m> observations, the between contribution to total variation is</p>
+
+      <me>
+        nB=4(25.167)\approx 100.667.
+      </me>
+
+      <p>The within-group variation is</p>
+
+      <me>
+        W=5+2+5=12.
+      </me>
+
+      <p>So the total variation should be</p>
+
+      <me>
+        T=nB+W\approx 100.667+12=112.667.
+      </me>
+
+      <p>Most of the variation here comes from the group means being far apart, not from large spread inside the groups.</p>
+    </example>
+
+    <p>The connection with the <term>F distribution<idx><h>distributions</h><h>F distribution</h></idx></term> comes from comparing two independent estimates of the same population variance. Recall the definition: if <m>U</m> and <m>V</m> are independent chi-square random variables with <m>d_1</m> and <m>d_2</m> degrees of freedom, then</p>
+
+    <me>
+      \frac{U/d_1}{V/d_2}\sim F(d_1,d_2).
+    </me>
+
+    <p>Under the ANOVA null hypothesis that all group means are equal, and assuming normal populations with a common variance <m>\sigma^2</m>, the two scaled variation pieces behave like independent chi-square random variables:</p>
+
+    <me>
+      \frac{nB}{\sigma^2}\sim \chi^2_{m-1}
+      \qquad\text{and}\qquad
+      \frac{W}{\sigma^2}\sim \chi^2_{m(n-1)}.
+    </me>
+
+    <p>Therefore the ratio</p>
+
+    <me>
+      F=
+      \frac{nB/(m-1)}{W/[m(n-1)]}
+    </me>
+
+    <p>has the distribution</p>
+
+    <me>
+      F\sim F\left(m-1,\ m(n-1)\right)
+    </me>
+
+    <p>when the null hypothesis is true. In words, the numerator is the between-group variation per between-group degree of freedom, and the denominator is the within-group variation per within-group degree of freedom. If the group means are truly equal, those two quantities should be estimating the same common variance <m>\sigma^2</m>, so their ratio should usually be near 1.</p>
+
+    <activity xml:id="act-anova-variation-split">
+      <title>Where Did the Variation Go?</title>
+      <introduction>
+        <p>Use a small data set to see the ANOVA split by hand.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>For each data set, compute the group means, the grand mean, <m>B</m>, <m>W</m>, and <m>nB+W</m>.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Which data set has the larger between-group component? Which has the larger within-group component?</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <section xml:id="sec-anova-testing-several-means">
+    <title>Testing Several Means</title>
+
+    <p>A <term>one-way ANOVA test<idx><h>inference</h><h>one-way ANOVA test</h></idx></term> compares several population means using one categorical explanatory variable. The groups might be teaching methods, fertilizer types, treatment doses, or class sections.</p>
+
+    <p>The hypotheses are</p>
+
+    <me>
+      H_0:\mu_1=\mu_2=\cdots=\mu_m
+    </me>
+
+    <p>and</p>
+
+    <me>
+      H_a:\text{at least one population mean is different.}
+    </me>
+
+    <p>The alternative does not say that every mean is different from every other mean. It only says that the means are not all equal.</p>
+
+    <p>The test statistic is built from the variation split in <xref ref="sec-anova-variance-components"/>. The <term>mean square between<idx><h>inference</h><h>mean square between</h></idx></term> is</p>
+
+    <me>
+      MSB=\frac{nB}{m-1},
+    </me>
+
+    <p>and the <term>mean square within<idx><h>inference</h><h>mean square within</h></idx></term> is</p>
+
+    <me>
+      MSW=\frac{W}{m(n-1)}.
+    </me>
+
+    <p>The <term>ANOVA F statistic<idx><h>inference</h><h>ANOVA F statistic</h></idx></term> is</p>
+
+    <me>
+      F=\frac{MSB}{MSW}
+      =
+      \frac{nB/(m-1)}{W/[m(n-1)]}.
+    </me>
+
+    <p>Large values of <m>F</m> count against <m>H_0</m>. A large numerator means the group means are spread out. A small denominator means the observations inside each group are fairly tight. That combination makes the differences among the group means look too large to blame on ordinary within-group noise.</p>
+
+    <table xml:id="tbl-anova-summary-balanced">
+      <title>Balanced one-way ANOVA components</title>
+      <tabular halign="center">
+        <row header="yes" bottom="minor">
+          <cell>Source</cell>
+          <cell>df</cell>
+          <cell>Sum of squares</cell>
+          <cell>Mean square</cell>
+        </row>
+        <row>
+          <cell>Between</cell>
+          <cell><m>m-1</m></cell>
+          <cell><m>nB</m></cell>
+          <cell><m>MSB=nB/(m-1)</m></cell>
+        </row>
+        <row>
+          <cell>Within</cell>
+          <cell><m>m(n-1)</m></cell>
+          <cell><m>W</m></cell>
+          <cell><m>MSW=W/[m(n-1)]</m></cell>
+        </row>
+        <row bottom="major">
+          <cell>Total</cell>
+          <cell><m>mn-1</m></cell>
+          <cell><m>T</m></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>To run the test at significance level <m>\alpha</m>, compare the observed statistic with a right-tail critical value from <xref ref="app-f-table"/>:</p>
+
+    <me>
+      F_{\alpha}\left(m-1,\ m(n-1)\right).
+    </me>
+
+    <p>Equivalently, compute the right-tail p-value. Reject <m>H_0</m> when the p-value is less than <m>\alpha</m>.</p>
+
+    <example xml:id="ex-anova-test-teaching-methods">
+      <title>Testing Three Teaching Methods</title>
+      <p>Use the teaching-method data from <xref ref="ex-anova-variation-split"/>. We want to test whether the three population mean score gains are equal.</p>
+
+      <p>The hypotheses are</p>
+
+      <me>
+        H_0:\mu_A=\mu_B=\mu_C
+        \qquad\text{and}\qquad
+        H_a:\text{at least one mean differs.}
+      </me>
+
+      <p>From the earlier calculation, <m>m=3</m>, <m>n=4</m>, <m>B\approx 25.167</m>, and <m>W=12</m>. Therefore</p>
+
+      <me>
+        MSB=\frac{nB}{m-1}
+        =
+        \frac{4(25.167)}{2}
+        \approx 50.333,
+      </me>
+
+      <p>and</p>
+
+      <me>
+        MSW=\frac{W}{m(n-1)}
+        =
+        \frac{12}{3(3)}
+        =
+        1.333.
+      </me>
+
+      <p>The F statistic is</p>
+
+      <me>
+        F=\frac{50.333}{1.333}\approx 37.75.
+      </me>
+
+      <p>The degrees of freedom are <m>m-1=2</m> and <m>m(n-1)=9</m>. At <m>\alpha=0.05</m>, the F-table critical value is about <m>F_{0.05}(2,9)=4.256</m>. Since <m>37.75&gt;4.256</m>, we reject <m>H_0</m>.</p>
+
+      <p>The data give strong evidence that the three teaching methods do not all have the same population mean score gain. This conclusion does not, by itself, identify exactly which methods differ. For that, we would need follow-up comparisons.</p>
+    </example>
+
+    <p>The usual conditions for one-way ANOVA are:</p>
+
+    <ul>
+      <li><p>The observations are independent, and the groups are formed by random sampling or random assignment.</p></li>
+      <li><p>Each group population is approximately normal, especially when the sample sizes are small.</p></li>
+      <li><p>The group populations have a common variance <m>\sigma^2</m>. This is the <term>equal-variance assumption<idx><h>inference</h><h>equal-variance assumption</h></idx></term>.</p></li>
+    </ul>
+
+    <p>The equal-variance condition explains why the denominator <m>MSW</m> is so important. If the groups all have the same population variance, then the within-group variation gives a pooled estimate of that common variance. The numerator <m>MSB</m> should estimate the same variance when <m>H_0</m> is true, but it tends to become much larger when the group means are genuinely different.</p>
+
+    <activity xml:id="act-anova-table-detective">
+      <title>ANOVA Table Detective</title>
+      <introduction>
+        <p>Read an ANOVA table before interpreting the conclusion.</p>
+      </introduction>
+      <task>
+        <statement>
+          <p>An ANOVA table has <m>df_1=3</m>, <m>df_2=20</m>, <m>MSB=18.4</m>, and <m>MSW=5.2</m>. Compute the F statistic.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Explain, without using a table, whether the evidence looks weak, moderate, or strong. What would an F statistic close to 1 have meant?</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Write the null and alternative hypotheses for a setting with four population means.</p>
+        </statement>
+      </task>
+    </activity>
+  </section>
+
+  <conclusion>
+    <title>Summary</title>
+
+    <p>ANOVA compares several means by comparing two kinds of variation.</p>
+
+    <ul>
+      <li><p>In balanced one-way ANOVA, there are <m>m</m> groups and <m>n</m> observations per group.</p></li>
+      <li><p>Total variation splits into between-group and within-group pieces: <m>T=nB+W</m>.</p></li>
+      <li><p>The identity comes from writing each observation's deviation from the grand mean as a group-level deviation plus an individual deviation from the group mean.</p></li>
+      <li><p>Under equal population means, normality, independence, and common variance, <m>nB/\sigma^2</m> and <m>W/\sigma^2</m> behave like independent chi-square random variables.</p></li>
+      <li><p>That chi-square ratio gives <m>F=\{nB/(m-1)\}/\{W/[m(n-1)]\}\sim F(m-1,m(n-1))</m> under the null hypothesis.</p></li>
+      <li><p>The one-way ANOVA test uses <m>H_0:\mu_1=\mu_2=\cdots=\mu_m</m> against the alternative that at least one mean differs.</p></li>
+      <li><p>Large F statistics are evidence against equal population means.</p></li>
+      <li><p>A significant ANOVA test says the means are not all equal; it does not automatically say which specific means differ.</p></li>
+    </ul>
+  </conclusion>
+
+  <exercises xml:id="ch-anova-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="ch-anova-ex-1">
+      <p>In a balanced one-way ANOVA, explain the meaning of <m>m</m>, <m>n</m>, <m>\overline{x}_{i\cdot}</m>, and <m>\overline{x}_{\cdot\cdot}</m>.</p>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-2">
+      <p>Suppose there are <m>m=4</m> groups with <m>n=5</m> observations in each group. The between-group component is <m>B=18</m>, and the within-group component is <m>W=72</m>.</p>
+      <ol>
+        <li><p>Compute the total variation <m>T</m>.</p></li>
+        <li><p>Compute <m>MSB</m> and <m>MSW</m>.</p></li>
+        <li><p>Compute the ANOVA F statistic.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-3">
+      <p>A study compares three exercise programs. Each program has four participants, and the weight-loss amounts are shown below.</p>
+
+      <table xml:id="tbl-ex-anova-weight-loss">
+        <title>Weight loss by program</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Program</cell>
+            <cell>Data</cell>
+          </row>
+          <row>
+            <cell>A</cell>
+            <cell>4, 5, 6, 5</cell>
+          </row>
+          <row>
+            <cell>B</cell>
+            <cell>7, 8, 6, 7</cell>
+          </row>
+          <row bottom="major">
+            <cell>C</cell>
+            <cell>9, 10, 11, 10</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <ol>
+        <li><p>Find the three group means and the grand mean.</p></li>
+        <li><p>Compute <m>B</m>, <m>W</m>, and <m>T=nB+W</m>.</p></li>
+        <li><p>Which part of the variation is larger: between groups or within groups?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-4">
+      <p>For the data in <xref ref="tbl-ex-anova-weight-loss"/>, test whether the three population mean weight losses are equal at the 5% significance level.</p>
+      <ol>
+        <li><p>Write the null and alternative hypotheses.</p></li>
+        <li><p>Compute <m>MSB</m>, <m>MSW</m>, and <m>F</m>.</p></li>
+        <li><p>Find the numerator and denominator degrees of freedom.</p></li>
+        <li><p>Use <xref ref="app-f-table"/> to make a reject-or-fail-to-reject decision.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-5">
+      <p>Explain why the ANOVA test statistic is large when group means are far apart and observations within each group are close together.</p>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-6">
+      <p>Suppose an ANOVA table gives <m>MSB=9.6</m> and <m>MSW=8.8</m>.</p>
+      <ol>
+        <li><p>Compute the F statistic.</p></li>
+        <li><p>Explain why this does not look like strong evidence against equal means.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-7">
+      <p>A researcher reports that a one-way ANOVA test comparing five means has <m>F=6.4</m> with degrees of freedom <m>4</m> and <m>30</m>.</p>
+      <ol>
+        <li><p>How many groups were compared?</p></li>
+        <li><p>What are the null and alternative hypotheses?</p></li>
+        <li><p>At the 5% significance level, would you reject <m>H_0</m>? Use <xref ref="app-f-table"/>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ch-anova-ex-8">
+      <p>State the main assumptions for one-way ANOVA. For each assumption, describe one practical way it could fail in a real study.</p>
+    </exercise>
+  </exercises>
+</chapter>

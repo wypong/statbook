@@ -19,6 +19,8 @@
     <xi:include href="./ch-normal-distributions.ptx" />
     <xi:include href="./ch-confidence-intervals.ptx" />
     <xi:include href="./ch-hypothesis-testing.ptx" />
+    <xi:include href="./ch-analysis-of-variance.ptx" />
+    <xi:include href="./ch-nonparametric-tests.ptx" />
 
     <xi:include href="./backmatter.ptx" />
   </book>
