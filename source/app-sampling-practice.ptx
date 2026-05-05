@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="app-sampling-practice">
+  <title>Sampling in Practice</title>
+
+  <p>Statistics usually starts with a practical problem: we want to learn something about a <term>population<idx><h>sampling</h><h>population</h></idx></term>, but we cannot measure every member of that population. So we study a <term>sample<idx><h>sampling</h><h>sample</h></idx></term> and use it to make a careful guess about the larger group.</p>
+
+  <p>The quality of that guess depends on how the sample was chosen. A large sample can still be poor if it comes from the wrong people or the wrong conditions. A smaller sample can be useful if it is chosen in a way that gives every important part of the population a fair chance to appear.</p>
+
+  <section xml:id="sec-app-sampling-why">
+    <title>Why Sampling Matters</title>
+
+    <p>The main danger in sampling is <term>bias<idx><h>sampling</h><h>bias</h></idx></term>. Bias means the sampling method tends to favor some outcomes over others. Random variation is expected and can be measured. Bias is more serious because collecting more biased data usually just gives a more confident wrong answer.</p>
+
+    <example xml:id="ex-app-sampling-lunch-survey">
+      <title>A Cafeteria Survey</title>
+      <p>A school wants to estimate the percentage of students who like the cafeteria food. If the survey is given only to students eating in the cafeteria, it misses students who avoid the cafeteria because they dislike the food. That sample is convenient, but it is probably biased.</p>
+      <p>A better plan is to choose students from the whole student list, then ask the selected students the same question. This is harder to organize, but it has a better chance of representing the whole student body.</p>
+    </example>
+
+    <p>A good sampling plan should answer four basic questions:</p>
+
+    <ul>
+      <li><p>What is the population we want to describe?</p></li>
+      <li><p>What list or process will let us reach members of that population?</p></li>
+      <li><p>How will we choose the sample?</p></li>
+      <li><p>What groups might be missed or overrepresented?</p></li>
+    </ul>
+
+    <p>The list or process used to reach the population is called the <term>sampling frame<idx><h>sampling</h><h>sampling frame</h></idx></term>. For a student survey, the sampling frame might be the current enrollment list. For a batch of manufactured parts, it might be the production log for the day.</p>
+  </section>
+
+  <section xml:id="sec-app-sampling-simple-random">
+    <title>Simple Random Samples</title>
+
+    <p>A <term>simple random sample<idx><h>sampling</h><h>simple random sample</h></idx></term> is the cleanest basic sampling method. In a simple random sample of size <m>n</m>, every group of <m>n</m> members from the population has the same chance of being selected.</p>
+
+    <p>In practice, a simple random sample is usually taken like this:</p>
+
+    <ol>
+      <li><p>Make a sampling frame, such as a numbered list of all members of the population.</p></li>
+      <li><p>Decide on the sample size <m>n</m>.</p></li>
+      <li><p>Use random numbers, software, or a random-number table to choose <m>n</m> different numbers from the list.</p></li>
+      <li><p>Collect data from the members whose numbers were chosen.</p></li>
+    </ol>
+
+    <p>One convenient online tool is the <url href="https://www.random.org/sequences/">RANDOM.ORG Sequence Generator</url>. For a simple random sample of 20 people from a population numbered 1 through 500, enter 1 as the smallest value and 500 as the largest value. The generator returns the numbers in random order, without repeats. Use the first 20 numbers in that randomized sequence. An ordinary random integer generator can also be used, but it may produce repeated numbers, so duplicates have to be skipped.</p>
+
+    <example xml:id="ex-app-sampling-simple-random">
+      <title>Choosing Students at Random</title>
+      <p>A class has 32 students, and an instructor wants a sample of 6 students for a short anonymous follow-up interview. Number the students from 1 to 32. Then use a random-number generator to choose 6 different numbers between 1 and 32. The students with those numbers form the sample.</p>
+      <p>The important part is not the technology. The important part is that the instructor does not pick students by memory, by seating location, or by who is easiest to ask.</p>
+    </example>
+
+    <example xml:id="ex-app-sampling-random-number-table">
+      <title>Using a Random-Number Table</title>
+      <p>Suppose a population has 500 members and we want a simple random sample of 20. First label the members 001, 002, 003, and so on, up to 500. Since 500 has three digits, read the <term>random-number table<idx><h>sampling</h><h>random-number table</h></idx></term> in groups of three digits. Choose a starting place in the table, then read across the row.</p>
+
+      <table xml:id="tbl-app-random-digits-snippet">
+        <title>A short snippet from a random-number table</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell>Row</cell>
+            <cell colspan="6">Random digits, grouped only for readability</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>42801</cell>
+            <cell>67334</cell>
+            <cell>28502</cell>
+            <cell>11700</cell>
+            <cell>03912</cell>
+            <cell>60089</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>51420</cell>
+            <cell>51174</cell>
+            <cell>73044</cell>
+            <cell>32267</cell>
+            <cell>51984</cell>
+            <cell>05251</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>03649</cell>
+            <cell>92701</cell>
+            <cell>38004</cell>
+            <cell>58742</cell>
+            <cell>03118</cell>
+            <cell>64277</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>The five-digit blocks in <xref ref="tbl-app-random-digits-snippet"/> are just printed that way to make the table easier to read. Since our population labels have three digits, start at the first digit of Row 1 and read across in groups of three. The groups begin as follows:</p>
+      <p>428, 016, 733, 428, 502, 117, 000, 391, 260, 089, 514, 205, 117, 473, 044, 322, 675, 198, 405, 251, 036, 499, 270, 138, 004, 587, 420, 311.</p>
+      <p>Keep numbers from 001 to 500 that have not already appeared. Skip 733, 502, 000, 514, 675, and 587 because they are outside the range 001 to 500. Skip the second 428 and the second 117 because those labels were already chosen. Continue reading until 20 different labels have been accepted.</p>
+      <p>The accepted labels are</p>
+      <p>428, 016, 117, 391, 260, 089, 205, 473, 044, 322, 198, 405, 251, 036, 499, 270, 138, 004, 420, 311.</p>
+      <p>These 20 labels identify the sample. Labels such as 016 and 004 just mean member 16 and member 4 on the original list.</p>
+    </example>
+
+    <p>Simple random sampling is easy to understand and is the usual starting point for theory. Its weakness is that it requires a good list of the whole population. In real studies, that list may be incomplete, outdated, or hard to use.</p>
+  </section>
+
+  <section xml:id="sec-app-sampling-common-methods">
+    <title>Other Common Sampling Methods</title>
+
+    <p>Simple random sampling is not the only useful method. The best method depends on the population, the available list, the budget, and the kind of question being asked. The most common practical choices are a <term>systematic sample<idx><h>sampling</h><h>systematic sample</h></idx></term>, a <term>stratified sample<idx><h>sampling</h><h>stratified sample</h></idx></term>, a <term>cluster sample<idx><h>sampling</h><h>cluster sample</h></idx></term>, and sometimes a <term>convenience sample<idx><h>sampling</h><h>convenience sample</h></idx></term>.</p>
+
+    <ul>
+      <li><p><em>Systematic sample.</em> Choose a random start, then take every <m>k</m>th member. This works well for a long ordered list, as long as the order does not contain a hidden pattern related to the question.</p></li>
+      <li><p><em>Stratified sample.</em> Split the population into important groups, then randomly sample within each group. This works well when groups such as class level, shift, region, or product type should all be represented.</p></li>
+      <li><p><em>Cluster sample.</em> Split the population into natural groups, randomly choose some groups, then study everyone or many people in those groups. This works well when the population is spread out and visiting every location is too expensive.</p></li>
+      <li><p><em>Convenience sample.</em> Use the people or items easiest to reach. This is useful for quick practice or early exploration, but it is not strong evidence about a population.</p></li>
+    </ul>
+
+    <example xml:id="ex-app-sampling-choose-method">
+      <title>Picking a Method</title>
+      <p>A school wants feedback from students in grades 9, 10, 11, and 12. A simple random sample from the whole school might work, but it could accidentally include too few students from one grade. A stratified sample is better: randomly choose some students from each grade.</p>
+      <p>If the school instead wants to inspect lockers for damage across a large campus, a cluster sample might be more practical. Randomly choose several hallways, then inspect all lockers in those hallways.</p>
+    </example>
+
+    <p>Convenience samples are common because they are easy. They are also risky. If a class surveys only friends, or a store surveys only customers who visit on Monday morning, the sample may tell us more about that easy-to-reach group than about the population we actually care about.</p>
+  </section>
+
+  <section xml:id="sec-app-sampling-experiments">
+    <title>Sampling and Experimental Design</title>
+
+    <p>Sampling is also important in <term>experimental design<idx><h>experimental design</h><h>sampling</h></idx></term>, but it plays a different role from random assignment.</p>
+
+    <p>Sampling answers the question, <q>Who or what gets into the study?</q> A good sample helps us generalize from the study to a larger population. Random assignment answers the question, <q>Which treatment does each study unit receive?</q> Random assignment helps make treatment groups comparable, so differences in outcomes can be more fairly attributed to the treatment.</p>
+
+    <example xml:id="ex-app-sampling-random-assignment">
+      <title>A Study App Experiment</title>
+      <p>Suppose a college wants to test whether a new study app improves quiz scores. If it recruits only students who already like technology, the sample may not represent all students. That is a sampling problem.</p>
+      <p>After the students are recruited, the college should randomly assign some students to use the app and some students to use the usual study method. That is an experimental-design problem. The study needs both pieces: a sample that fits the population of interest and random assignment that makes the comparison fair.</p>
+    </example>
+
+    <p>A simple rule is useful: random sampling helps with <em>generalizing</em>; random assignment helps with <em>cause and effect</em>. A study can have one without the other, but the conclusion is then more limited.</p>
+  </section>
+
+  <section xml:id="sec-app-sampling-choosing">
+    <title>Choosing a Sampling Method</title>
+
+    <p>For a beginning statistics course, the following guide is enough for many situations:</p>
+
+    <ul>
+      <li><p>Use a simple random sample when you have a complete list and no special subgroup must be guaranteed.</p></li>
+      <li><p>Use a stratified sample when important groups should be represented, such as class level, shift, region, or product type.</p></li>
+      <li><p>Use a systematic sample when the population is already in a long list or line, and the order does not hide a repeating pattern.</p></li>
+      <li><p>Use a cluster sample when the population is naturally grouped by location or time, and it would be too expensive to sample from everywhere.</p></li>
+      <li><p>Treat convenience samples as weak evidence unless there is a very good reason to believe the easy-to-reach group looks like the population.</p></li>
+    </ul>
+
+    <p>No sampling method fixes a badly stated question. Before choosing a method, state the population clearly. Then choose the method that gives that population a fair chance to be represented.</p>
+  </section>
+
+  <exercises xml:id="app-sampling-practice-exercises">
+    <title>Exercises</title>
+
+    <exercise xml:id="app-sampling-ex-1">
+      <p>A teacher wants to choose 8 students from a roster of 40 students for a quick interview. Describe exactly how to get a simple random sample.</p>
+    </exercise>
+
+    <exercise xml:id="app-sampling-ex-2">
+      <p>A store wants opinions from customers who shop in the morning, afternoon, and evening. Which sampling method would you recommend, and why?</p>
+    </exercise>
+
+    <exercise xml:id="app-sampling-ex-3">
+      <p>A city surveys people at one downtown bus stop at noon and uses the results to describe all city residents. Identify one possible source of bias.</p>
+    </exercise>
+
+    <exercise xml:id="app-sampling-ex-4">
+      <p>In a medical experiment, explain the difference between randomly sampling patients and randomly assigning patients to treatments.</p>
+    </exercise>
+  </exercises>
+</appendix>
