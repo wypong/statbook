@@ -13,18 +13,18 @@
 
     <p>The <term>mean<idx><h>summaries</h><h>arithmetic mean</h></idx></term> of a data set is what most people call the average. We add the data values and divide by the number of observations.</p>
 
-    <me>
+    <md>
       \bar{x} = \frac{\text{sum of the data values}}{n}
-    </me>
+    </md>
 
     <p>Here <m>n</m> is the size of the data set. The mean uses every value in the set, so it reacts to changes anywhere in the data. It also does not have to be one of the observed data values.</p>
 
     <example xml:id="ex-mean-commute-time">
       <title>Computing a Mean</title>
       <p>Suppose five students report commute times of 12, 15, 18, 20, and 25 minutes. The mean commute time is</p>
-      <me>
+      <md>
         \bar{x} = \frac{12+15+18+20+25}{5} = \frac{90}{5} = 18.
-      </me>
+      </md>
       <p>So the average commute time is 18 minutes.</p>
     </example>
 
@@ -33,9 +33,9 @@
     <example xml:id="ex-median-odd-even">
       <title>Odd and Even Cases for the Median</title>
       <p>For the ordered data set 4, 7, 9, 12, 15, the median is 9 because it is the middle value. For the ordered data set 4, 7, 9, 12, 15, 20, the median is</p>
-      <me>
+      <md>
         \frac{9+12}{2}=10.5.
-      </me>
+      </md>
       <p>That second median is not one of the original data values, and that is completely normal.</p>
     </example>
 
@@ -59,13 +59,13 @@
     <example xml:id="ex-salary-mean-median">
       <title>When Mean and Median Pull Apart</title>
       <p>Suppose six hourly wages are 16, 17, 18, 18, 19, and 40 dollars. The mean is</p>
-      <me>
+      <md>
         \bar{x}=\frac{16+17+18+18+19+40}{6}=\frac{128}{6}\approx 21.33,
-      </me>
+      </md>
       <p>while the median is</p>
-      <me>
+      <md>
         \frac{18+18}{2}=18.
-      </me>
+      </md>
       <p>The high wage of 40 pulls the mean upward, but it does not move the median very much. This is one reason the median is often preferred for income data.</p>
     </example>
 
@@ -121,9 +121,9 @@
 
     <p>For a frequency table, the mean is a weighted average:</p>
 
-    <me>
+    <md>
       \bar{x} = \frac{\sum x f}{\sum f}
-    </me>
+    </md>
 
     <p>Here <m>x</m> is a data value and <m>f</m> is its frequency. To find the mode, we look for the value with the highest frequency. To find the median, we locate the middle observation or middle two observations by using the <term>cumulative frequency<idx><h>tables</h><h>cumulative frequency</h></idx></term>.</p>
 
@@ -181,14 +181,14 @@
     </table>
 
     <p>Since the total frequency is <m>20</m>, the mean is</p>
-    <me>
+    <md>
       \bar{x}=\frac{8+15+30+28+24+27}{20}=\frac{132}{20}=6.6.
-    </me>
+    </md>
 
     <p>The mode is 6 because 6 has the highest frequency. To find the median, we note that the 10th observation is 6 and the 11th observation is 7, so the median is</p>
-    <me>
+    <md>
       \frac{6+7}{2}=6.5.
-    </me>
+    </md>
 
     <p>Frequency tables are also useful because they connect naturally to the overall <term>distribution<idx><h>graphs</h><h>distribution</h></idx></term> of the data. When we look at a histogram or similar graph, we often describe the shape as symmetric, skewed right, or skewed left.</p>
 

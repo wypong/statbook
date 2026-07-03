@@ -18,37 +18,37 @@
     <example xml:id="ex-quartiles-odd">
       <title>Quartiles for an Odd-Sized Data Set</title>
       <p>Consider the ordered data set 4, 6, 7, 9, 10, 12, 15, 18, 20. Since there are 9 values, the median is the fifth value, so <m>Q_2=10</m>. After removing the median, the lower half is 4, 6, 7, 9 and the upper half is 12, 15, 18, 20. Therefore</p>
-      <me>
+      <md>
         Q_1 = \frac{6+7}{2}=6.5
         \qquad\text{and}\qquad
         Q_3 = \frac{15+18}{2}=16.5.
-      </me>
+      </md>
     </example>
 
     <example xml:id="ex-quartiles-even">
       <title>Quartiles for an Even-Sized Data Set</title>
       <p>Now consider the ordered data set 3, 5, 6, 7, 9, 12, 14, 18. Since there are 8 values, the median is</p>
-      <me>
+      <md>
         Q_2=\frac{7+9}{2}=8.
-      </me>
+      </md>
       <p>The lower half is 3, 5, 6, 7 and the upper half is 9, 12, 14, 18, so</p>
-      <me>
+      <md>
         Q_1=\frac{5+6}{2}=5.5
         \qquad\text{and}\qquad
         Q_3=\frac{12+14}{2}=13.
-      </me>
+      </md>
     </example>
 
     <p>The <term>interquartile range<idx><h>summaries</h><h>interquartile range</h></idx></term>, or <term>IQR<idx><h>summaries</h><h>IQR</h></idx></term>, measures the spread of the middle half of the data.</p>
 
-    <me>
+    <md>
       \text{IQR}=Q_3-Q_1
-    </me>
+    </md>
 
     <p>The IQR is useful because it ignores the most extreme observations and focuses on the central 50% of the distribution. In the previous example with <m>Q_1=5.5</m> and <m>Q_3=13</m>, the IQR is</p>
-    <me>
+    <md>
       13-5.5=7.5.
-    </me>
+    </md>
 
     <p>A small IQR means the middle half of the data is fairly concentrated. A large IQR means the middle half is more spread out.</p>
 
@@ -124,18 +124,18 @@
 
     <p>The <term>five-number summary<idx><h>summaries</h><h>five-number summary</h></idx></term> of a data set consists of</p>
 
-    <me>
+    <md>
       \min,\quad Q_1,\quad Q_2,\quad Q_3,\quad \max.
-    </me>
+    </md>
 
     <p>These five values give a compact description of both center and spread. The minimum and maximum show the full range of the data, the quartiles show the middle structure, and the median marks the center.</p>
 
     <example xml:id="ex-five-number-summary">
       <title>A Five-Number Summary</title>
       <p>For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found <m>Q_1=5.5</m>, <m>Q_2=8</m>, and <m>Q_3=13</m>. Since the minimum is 3 and the maximum is 18, the five-number summary is</p>
-      <me>
+      <md>
         3,\ 5.5,\ 8,\ 13,\ 18.
-      </me>
+      </md>
     </example>
 
     <p>A <term>boxplot<idx><h>graphs</h><h>boxplot</h></idx></term>, also called a <term>box-and-whisker plot<idx><h>graphs</h><h>box-and-whisker plot</h></idx></term>, turns the five-number summary into a picture. The box stretches from <m>Q_1</m> to <m>Q_3</m>, a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.</p>
@@ -169,26 +169,26 @@
 
     <p>An <term>outlier<idx><h>summaries</h><h>outlier</h></idx></term> is a value that does not fit the general pattern of the data. One common rule for identifying possible outliers is the <term>1.5 times IQR rule<idx><h>summaries</h><h>1.5 times IQR rule</h></idx></term>. First compute the two <term>fences<idx><h>summaries</h><h>fence</h></idx></term>:</p>
 
-    <me>
+    <md>
       \text{Lower fence}=Q_1-1.5(\text{IQR})
       \qquad\text{and}\qquad
       \text{Upper fence}=Q_3+1.5(\text{IQR}).
-    </me>
+    </md>
 
     <p>Any observation below the lower fence or above the upper fence is called a possible outlier according to this rule. The fences themselves are not data values. They are only cutoffs.</p>
 
     <example xml:id="ex-iqr-outlier-rule">
       <title>Using the 1.5 Times IQR Rule</title>
       <p>Suppose a data set has <m>Q_1=12</m> and <m>Q_3=20</m>. Then the IQR is</p>
-      <me>
+      <md>
         20-12=8.
-      </me>
+      </md>
       <p>So the fences are</p>
-      <me>
+      <md>
         12-1.5(8)=0
         \qquad\text{and}\qquad
         20+1.5(8)=32.
-      </me>
+      </md>
       <p>Any data value less than 0 or greater than 32 would be flagged as a possible outlier.</p>
     </example>
 
@@ -266,15 +266,15 @@
 
     <p>The <term>variance<idx><h>summaries</h><h>variance</h></idx></term> measures the average squared distance from the mean. For a population, the variance is</p>
 
-    <me>
+    <md>
       \sigma^2=\frac{\sum (x-\mu)^2}{N},
-    </me>
+    </md>
 
     <p>where <m>\mu</m> is the population mean and <m>N</m> is the population size. The <term>standard deviation<idx><h>summaries</h><h>standard deviation</h></idx></term> is the square root of the variance:</p>
 
-    <me>
+    <md>
       \sigma=\sqrt{\frac{\sum (x-\mu)^2}{N}}.
-    </me>
+    </md>
 
     <p>The standard deviation is easier to interpret than the variance because it is measured in the same units as the original data.</p>
 
@@ -286,56 +286,56 @@
 
     <p>When we work with a sample rather than a whole population, we use the <term>sample variance<idx><h>summaries</h><h>sample variance</h></idx></term>, written <m>s^2</m>:</p>
 
-    <me>
+    <md>
       s^2=\frac{\sum (x-\bar{x})^2}{n-1},
-    </me>
+    </md>
 
     <p>and the <term>sample standard deviation<idx><h>summaries</h><h>sample standard deviation</h></idx></term>, written <m>s</m>:</p>
 
-    <me>
+    <md>
       s=\sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}.
-    </me>
+    </md>
 
     <p>The denominator is <m>n-1</m>, not <m>n</m>. That adjustment makes <m>s</m> a better estimator of the population standard deviation.</p>
 
     <p>The <term>relative standard deviation<idx><h>summaries</h><h>relative standard deviation</h></idx></term>, or <term>RSD<idx><h>summaries</h><h>RSD</h></idx></term>, compares the standard deviation to the mean:</p>
 
-    <me>
+    <md>
       \text{RSD}=\frac{\text{standard deviation}}{\text{mean}}\cdot 100\%.
-    </me>
+    </md>
 
     <p>RSD is useful when we want to compare variation across data sets measured on different scales or with very different means.</p>
 
     <example xml:id="ex-rsd">
       <title>Why Relative Standard Deviation Can Help</title>
       <p>Suppose one machine fills bottles with mean 500 mL and standard deviation 5 mL, while another fills large containers with mean 2000 mL and standard deviation 12 mL. The second standard deviation is larger in absolute terms, but the first machine has the larger spread relative to its mean because</p>
-      <me>
+      <md>
         \frac{5}{500}=1\%
         \qquad\text{while}\qquad
         \frac{12}{2000}=0.6\%.
-      </me>
+      </md>
     </example>
 
     <p>A <term>z-score<idx><h>summaries</h><h>standard score</h></idx></term>, also called a standard score, tells how many standard deviations a value lies above or below the mean:</p>
 
-    <me>
+    <md>
       z=\frac{x-\bar{x}}{s}
-    </me>
+    </md>
 
     <p>if we are working with sample data, or</p>
 
-    <me>
+    <md>
       z=\frac{x-\mu}{\sigma}
-    </me>
+    </md>
 
     <p>for a population. Positive z-scores are above the mean, negative z-scores are below the mean, and a z-score of 0 means the value is exactly at the mean.</p>
 
     <example xml:id="ex-zscore-test">
       <title>Interpreting a z-Score</title>
       <p>A test score of 82 comes from a class with mean 74 and standard deviation 4. The z-score is</p>
-      <me>
+      <md>
         z=\frac{82-74}{4}=2.
-      </me>
+      </md>
       <p>This means the score of 82 is 2 standard deviations above the mean.</p>
     </example>
 

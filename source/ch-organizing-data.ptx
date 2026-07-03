@@ -14,9 +14,9 @@
 
     <p>A <term>frequency table<idx><h>tables</h><h>frequency table</h></idx></term> organizes data by listing each value or category together with its <term>frequency<idx><h>tables</h><h>frequency</h></idx></term>, which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the <term>relative frequency<idx><h>tables</h><h>relative frequency</h></idx></term>. Relative frequency tells us the share of the data in each category.</p>
 
-    <me>
+    <md>
       \text{relative frequency} = \frac{\text{frequency}}{\text{total number of observations}}
-    </me>
+    </md>
 
     <p>Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to <m>1</m>, or equivalently to <m>100\%</m>.</p>
 

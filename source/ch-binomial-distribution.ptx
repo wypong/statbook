@@ -15,13 +15,13 @@
 
     <p>If a single Bernoulli trial has success probability <m>p</m>, then the corresponding <term>Bernoulli random variable<idx><h>probability</h><h>Bernoulli random variable</h></idx></term> <m>Y</m> is defined by</p>
 
-    <me>
+    <md>
       Y=
       \begin{cases}
         1 &amp; \text{if the trial is a success},\\
         0 &amp; \text{if the trial is a failure}.
       \end{cases}
-    </me>
+    </md>
 
     <p>So <m>P(Y=1)=p</m> and <m>P(Y=0)=1-p</m>.</p>
 
@@ -91,18 +91,18 @@
 
     <p>To compute binomial probabilities, we also need the <term>binomial coefficient<idx><h>probability</h><h>binomial coefficient</h></idx></term></p>
 
-    <me>
+    <md>
       \binom{n}{k}=\frac{n!}{k!(n-k)!},
-    </me>
+    </md>
 
     <p>which is read “<m>n</m> choose <m>k</m>.” It counts the number of ways to choose <m>k</m> objects from <m>n</m> objects, without regard to order.</p>
 
     <example xml:id="ex-binom-coefficient">
       <title>Computing a Binomial Coefficient</title>
       <p>The number of ways to choose 3 students from a group of 5 is</p>
-      <me>
+      <md>
         \binom{5}{3}=\frac{5!}{3!\,2!}=\frac{5\cdot 4}{2\cdot 1}=10.
-      </me>
+      </md>
     </example>
   </section>
 
@@ -111,21 +111,21 @@
 
     <p>If <m>X</m> counts the number of successes in <m>n</m> independent Bernoulli trials with success probability <m>p</m>, then we write</p>
 
-    <me>
+    <md>
       X\sim B(n,p).
-    </me>
+    </md>
 
     <p>The possible values of <m>X</m> are</p>
 
-    <me>
+    <md>
       0,1,2,\dots,n.
-    </me>
+    </md>
 
     <p>The probability that exactly <m>k</m> successes occur is</p>
 
-    <me>
+    <md>
       P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
-    </me>
+    </md>
 
     <p>This formula makes sense for a simple reason. A particular sequence with exactly <m>k</m> successes has probability <m>p^k(1-p)^{n-k}</m>. Then <m>\binom{n}{k}</m> counts how many such sequences there are.</p>
 
@@ -133,13 +133,13 @@
       <title>Exactly Three Goals in Five Penalty Kicks</title>
       <p>Suppose a soccer player makes a penalty kick with probability <m>0.75</m>. Let <m>X</m> be the number of goals in 5 penalty kicks. Then <m>X\sim B(5,0.75)</m>.</p>
       <p>The probability of exactly 3 goals is</p>
-      <me>
+      <md>
         P(X=3)=\binom{5}{3}(0.75)^3(0.25)^2.
-      </me>
+      </md>
       <p>Since <m>\binom{5}{3}=10</m>,</p>
-      <me>
+      <md>
         P(X=3)=10(0.75)^3(0.25)^2\approx 0.2637.
-      </me>
+      </md>
       <p>So the chance of scoring exactly 3 times is about 0.264.</p>
     </example>
 
@@ -147,43 +147,43 @@
       <title>Using the Complement</title>
       <p>A factory knows that 2% of the items it produces are defective. Suppose 20 items are selected independently, and let <m>X</m> be the number of defective items. Then <m>X\sim B(20,0.02)</m>.</p>
       <p>The probability of getting at least one defective item is easier to compute by using the complement:</p>
-      <me>
+      <md>
         P(X\ge 1)=1-P(X=0)=1-\binom{20}{0}(0.02)^0(0.98)^{20}=1-(0.98)^{20}\approx 0.3324.
-      </me>
+      </md>
     </example>
 
     <p>The <term>cumulative distribution function<idx><h>probability</h><h>cumulative distribution function</h></idx></term>, or CDF, of a binomial random variable is</p>
 
-    <me>
+    <md>
       F_X(k)=P(X\le k).
-    </me>
+    </md>
 
     <p>For a binomial random variable, the CDF is found by adding the probabilities from 0 up to <m>k</m>.</p>
 
     <example xml:id="ex-binom-cdf">
       <title>At Most Three Goals</title>
       <p>Continue with <m>X\sim B(5,0.75)</m>. Then</p>
-      <me>
+      <md>
         F_X(3)=P(X\le 3)=P(X=0)+P(X=1)+P(X=2)+P(X=3).
-      </me>
+      </md>
       <p>Computing the four terms gives</p>
-      <me>
+      <md>
         F_X(3)\approx 0.3672.
-      </me>
+      </md>
       <p>So the probability of scoring at most 3 goals in 5 kicks is about 0.367.</p>
     </example>
 
     <p>The CDF is useful because many probability questions can be rewritten in terms of “at most.” For example,</p>
 
-    <me>
+    <md>
       P(X\ge 3)=1-P(X\le 2)=1-F_X(2),
-    </me>
+    </md>
 
     <p>and if <m>a&lt;b</m>, then</p>
 
-    <me>
+    <md>
       P(a&lt;X\le b)=F_X(b)-F_X(a).
-    </me>
+    </md>
 
     <exercise xml:id="binom-inline-ex-2">
       <p>A multiple-choice quiz has 6 questions, each with 4 answer choices, and a student guesses on every question. Let <m>X</m> be the number answered correctly.</p>
@@ -246,33 +246,33 @@
 
     <p>Think of a binomial random variable as a sum of Bernoulli random variables:</p>
 
-    <me>
+    <md>
       X=Y_1+Y_2+\cdots+Y_n,
-    </me>
+    </md>
 
     <p>where each <m>Y_i</m> equals 1 for success and 0 for failure. For one Bernoulli random variable,</p>
 
-    <me>
+    <md>
       E(Y_i)=p
       \qquad\text{and}\qquad
       \operatorname{Var}(Y_i)=p(1-p).
-    </me>
+    </md>
 
     <p>Because expectation adds and independent variances add, a binomial random variable <m>X\sim B(n,p)</m> satisfies</p>
 
-    <me>
+    <md>
       E(X)=np,
-    </me>
+    </md>
 
-    <me>
+    <md>
       \operatorname{Var}(X)=np(1-p),
-    </me>
+    </md>
 
     <p>and therefore the <term>standard deviation<idx><h>probability</h><h>standard deviation of a binomial distribution</h></idx></term> is</p>
 
-    <me>
+    <md>
       \sigma_X=\sqrt{np(1-p)}.
-    </me>
+    </md>
 
     <p>The mean <m>np</m> gives the long-run average number of successes. The standard deviation tells us how much the actual count typically varies around that average.</p>
 
@@ -280,17 +280,17 @@
       <title>Free Throws</title>
       <p>A player makes free throws with probability <m>0.8</m>. Suppose the player takes 20 free throws, and let <m>X</m> be the number made. Then <m>X\sim B(20,0.8)</m>.</p>
       <p>The mean number of made shots is</p>
-      <me>
+      <md>
         E(X)=np=20(0.8)=16.
-      </me>
+      </md>
       <p>The variance is</p>
-      <me>
+      <md>
         \operatorname{Var}(X)=20(0.8)(0.2)=3.2,
-      </me>
+      </md>
       <p>so the standard deviation is</p>
-      <me>
+      <md>
         \sigma_X=\sqrt{3.2}\approx 1.789.
-      </me>
+      </md>
       <p>In other words, over many such 20-shot sessions, the player would average about 16 made shots, with typical variation of about 1.8 shots.</p>
     </example>
 
@@ -354,19 +354,19 @@
 
     <p>When <m>n</m> is fairly large and <m>p</m> is not too close to 0 or 1, the graph of a binomial distribution begins to look bell-shaped instead of strongly skewed. A common rule of thumb is that the binomial model <m>B(n,p)</m> is reasonably approximated by a normal distribution when</p>
 
-    <me>
+    <md>
       np\ge 5
       \qquad\text{and}\qquad
       n(1-p)\ge 5.
-    </me>
+    </md>
 
     <p>These conditions say that we expect at least about 5 successes and at least about 5 failures. If one side is too small, then the binomial distribution is usually too lopsided for a normal curve to match it well.</p>
 
     <p>When the rule of thumb is satisfied, we match the binomial model with the normal model</p>
 
-    <me>
+    <md>
       B(n,p)\approx N(np,\sqrt{np(1-p)}).
-    </me>
+    </md>
 
     <p>In other words, we use a normal distribution with the same mean <m>np</m> and the same standard deviation <m>\sqrt{np(1-p)}</m> as the binomial distribution. So the formulas from the previous section are exactly what make this approximation possible.</p>
 
@@ -375,15 +375,15 @@
     <example xml:id="ex-binom-normal-approximation">
       <title>A Binomial Model That Looks Nearly Normal</title>
       <p>Let <m>X\sim B(20,0.5)</m>. Then</p>
-      <me>
+      <md>
         np=20(0.5)=10
         \qquad\text{and}\qquad
         \sqrt{np(1-p)}=\sqrt{20(0.5)(0.5)}=\sqrt{5}\approx 2.236.
-      </me>
+      </md>
       <p>Since <m>np=10</m> and <m>n(1-p)=10</m>, the rule of thumb is satisfied. So <m>X</m> should be approximated reasonably well by the normal model</p>
-      <me>
+      <md>
         N(10,\sqrt{5}).
-      </me>
+      </md>
       <p><xref ref="fig-binom-normal-approximation"/> overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.</p>
     </example>
 

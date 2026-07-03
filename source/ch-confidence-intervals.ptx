@@ -26,9 +26,9 @@
     <m>\sigma</m>. If we draw a sample of size <m>n</m>, then the <term>sample
     mean<idx><h>data</h><h>sample mean</h></idx></term> is</p>
 
-    <me>
+    <md>
       \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n}.
-    </me>
+    </md>
 
     <p>The variable <m>\overline{X}</m> is itself a random
     variable. Its distribution is called a <term>sampling
@@ -37,24 +37,24 @@
 
     <p>Two facts are especially important:</p>
 
-    <me>
+    <md>
       E(\overline{X})=\mu \qquad\text{and}\qquad
       \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
-    </me>
+    </md>
 
     <p>These formulas follow directly from the properties of expectation
     and variance from <xref ref="sec-cdf-expected-value"/>. Since</p>
 
-    <me>
+    <md>
       \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n},
-    </me>
+    </md>
 
     <p>linearity of expectation gives</p>
 
-    <me>
+    <md>
       E(\overline{X}) =E\left(\frac{X_1+\cdots+X_n}{n}\right)
       =\frac{1}{n}\bigl(E(X_1)+\cdots+E(X_n)\bigr) =\frac{1}{n}(n\mu) =\mu.
-    </me>
+    </md>
 
     <p>So the sample mean is an unbiased estimate of the population mean.</p>
 
@@ -68,19 +68,19 @@
 
     <p>Because each <m>X_i</m> has variance <m>\sigma^2</m>,</p>
 
-    <me>
+    <md>
       \operatorname{Var}(\overline{X})
       =\frac{1}{n^2}(n\sigma^2)
       =\frac{\sigma^2}{n}.
-    </me>
+    </md>
 
     <p>Taking square roots gives</p>
 
-    <me>
+    <md>
       \sigma_{\overline{X}}=\sqrt{\operatorname{Var}(\overline{X})}
       =\sqrt{\frac{\sigma^2}{n}}
       =\frac{\sigma}{\sqrt{n}}.
-    </me>
+    </md>
 
     <p>The first fact says that the sample mean is centered at the population
     mean. The second says that larger samples give less variation. Averaging
@@ -99,9 +99,9 @@
     distributed with mean <m>\mu</m> and standard deviation <m>\sigma</m>,
     the sample mean <m>\overline{X}</m> is approximately distributed as</p>
 
-    <me>
+    <md>
       \overline{X}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)
-    </me>
+    </md>
 
     <p>for large enough <m>n</m>.</p>
 
@@ -121,13 +121,13 @@
       wait times have population mean 18 minutes and population standard
       deviation 6 minutes. The shape of the population distribution is not
       known. If we take a random sample of <m>n=36</m> customers, then by
-      the CLT the sample mean is approximately normal:</p> <me>
+      the CLT the sample mean is approximately normal:</p> <md>
         \overline{X}\sim N\left(18,\frac{6}{\sqrt{36}}\right)=N(18,1).
-      </me> <p>The probability that the sample mean is less than 17 minutes
-      is therefore</p> <me>
+      </md> <p>The probability that the sample mean is less than 17 minutes
+      is therefore</p> <md>
         P(\overline{X}&lt;17)=P\!\left(Z&lt;\frac{17-18}{1}\right)=P(Z&lt;-1)\approx
         0.1587.
-      </me>
+      </md>
     </example>
 
     <exercise xml:id="ci-inline-ex-1">
@@ -204,9 +204,9 @@
     (exactly when the population is normal, or approximately for large
     samples by the CLT):</p>
 
-    <me>
+    <md>
       \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1).
-    </me>
+    </md>
 
     <p>Let <m>\alpha=1-C</m>. To capture the middle proportion <m>C</m> of the
     standard normal curve, we leave total area <m>\alpha</m> outside and split
@@ -284,23 +284,23 @@
 
     <p>So the corresponding probability statement is</p>
 
-    <me>
+    <md>
       P\left(-z_{\alpha/2} \lt \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \lt z_{\alpha/2}\right)=C.
-    </me>
+    </md>
 
     <p>After we collect the sample and observe <m>\overline{x}</m>, we solve
     that inequality for <m>\mu</m>. The result is the z-interval</p>
 
-    <me>
+    <md>
       \overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}},
-    </me>
+    </md>
 
     <p>or, written as an interval,</p>
 
-    <me>
+    <md>
       \left(\overline{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\;
       \overline{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right).
-    </me>
+    </md>
 
     <p>In practice, <m>\sigma</m> is often unknown. When the sample is large,
     we usually replace <m>\sigma</m> by the sample standard deviation
@@ -309,17 +309,17 @@
     <m>\sigma</m> is known, but if <m>\sigma</m> is unknown and we replace it
     by <m>s</m>, then</p>
 
-    <me>
+    <md>
       \frac{\overline{X}-\mu}{s/\sqrt{n}} \sim t[n-1].
-    </me>
+    </md>
 
     <p>In every case, the confidence interval has the form
     point estimate <m>\pm</m> margin of error. For the population mean, that
     means</p>
 
-    <me>
+    <md>
     (\overline{x}-\text{margin of error},\overline{x}+\text{margin of error}),
-    </me>
+    </md>
 
     <p>So the interval is centered at a sample mean, and its total width is
     twice the margin of error.</p>
@@ -363,56 +363,56 @@
     <example xml:id="ex-z-ci-height">
       <title>Case 1: Large Sample, <m>\sigma</m> Known</title>
       <p>Suppose a sample of 36 women has mean height <m>\overline{x}=65.1</m> inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is</p>
-      <me>
+      <md>
         65.1\pm 1.96\frac{2.8}{\sqrt{36}}=65.1\pm 0.9147.
-      </me>
+      </md>
       <p>So the interval is</p>
-      <me>
+      <md>
         (64.1853,66.0147).
-      </me>
+      </md>
     </example>
 
     <example xml:id="ex-z-ci-large-unknown">
       <title>Case 2: Large Sample, <m>\sigma</m> Unknown</title>
       <p>A random sample of 64 delivery times has mean <m>\overline{x}=72.4</m> minutes and sample standard deviation <m>s=12</m> minutes. Find a 95% confidence interval for the population mean.</p>
       <p>Because the sample is large, we use the z critical value and replace <m>\sigma</m> by <m>s</m>:</p>
-      <me>
+      <md>
         \overline{x}\pm z_{0.025}\frac{s}{\sqrt{n}}
         =72.4\pm 1.96\frac{12}{\sqrt{64}}
         =72.4\pm 2.94.
-      </me>
+      </md>
       <p>So the confidence interval is</p>
-      <me>
+      <md>
         (69.46,75.34).
-      </me>
+      </md>
     </example>
 
     <example xml:id="ex-z-ci-small-known">
       <title>Case 3: Small Sample, Population Normal, <m>\sigma</m> Known</title>
       <p>Assume the population distribution is normal. A sample of size 16 has mean <m>\overline{x}=50</m>, and the population standard deviation is known to be <m>\sigma=4</m>. Find a 90% confidence interval for the population mean.</p>
       <p>Because the population is normal and <m>\sigma</m> is known, we use a z interval:</p>
-      <me>
+      <md>
         \overline{x}\pm z_{0.05}\frac{\sigma}{\sqrt{n}}
         =50\pm 1.645\frac{4}{\sqrt{16}}
         =50\pm 1.645.
-      </me>
+      </md>
       <p>So the confidence interval is</p>
-      <me>
+      <md>
         (48.355,51.645).
-      </me>
+      </md>
     </example>
 
     <example xml:id="ex-t-ci-small-sample">
       <title>Case 4: Small Sample, Population Normal, <m>\sigma</m> Unknown</title>
       <p>Assume the population is normal. A sample of 11 observations has sample mean <m>\overline{x}=8.8636</m> and sample standard deviation <m>s=1.3223</m>. For a 95% confidence interval, we use <m>df=10</m> and <m>t_{0.025}[10]=2.228</m>.</p>
       <p>The margin of error is</p>
-      <me>
+      <md>
         2.228\frac{1.3223}{\sqrt{11}}\approx 0.8883.
-      </me>
+      </md>
       <p>So the confidence interval is</p>
-      <me>
+      <md>
         (8.8636-0.8883,\;8.8636+0.8883)=(7.9753,9.7519).
-      </me>
+      </md>
     </example>
 
     <p>Interpreting a confidence interval takes some care. Before we collect
@@ -500,9 +500,9 @@
     <term>sample proportion<idx><h>data</h><h>sample
     proportion</h></idx></term>:</p>
 
-    <me>
+    <md>
       \widehat{p}=\frac{X}{n}.
-    </me>
+    </md>
 
     <p>This section is built directly on the binomial model from
     <xref ref="sec-binomial-normal-approximation"/>. If each observation is a
@@ -510,60 +510,60 @@
     count <m>X</m> of successes in <m>n</m> independent trials has a binomial
     distribution:</p>
 
-    <me>
+    <md>
       X\sim B(n,p).
-    </me>
+    </md>
 
     <p>From the binomial chapter, for large enough <m>n</m> we can approximate
     this binomial count by a normal random variable with the same mean and
     standard deviation:</p>
 
-    <me>
+    <md>
       X \approx N(np,\sqrt{np(1-p)}),
-    </me>
+    </md>
 
     <p>provided the expected numbers of successes and failures are both at
     least about 5:</p>
 
-    <me>
+    <md>
       np\ge 5
       \qquad\text{and}\qquad
       n(1-p)\ge 5.
-    </me>
+    </md>
 
     <p>Now divide everything by <m>n</m>. Since <m>\widehat{p}=X/n</m>, the
     sample proportion is approximately normal with mean</p>
 
-    <me>
+    <md>
       E(\widehat{p})=E\left(\frac{X}{n}\right)=\frac{E(X)}{n}=\frac{np}{n}=p
-    </me>
+    </md>
 
     <p>and standard deviation</p>
 
-    <me>
+    <md>
       \sigma_{\widehat{p}}
       =\frac{\sigma_X}{n}
       =\frac{\sqrt{np(1-p)}}{n}
       =\sqrt{\frac{p(1-p)}{n}}.
-    </me>
+    </md>
 
     <p>So for large samples,</p>
 
-    <me>
+    <md>
       \widehat{p}\approx N\left(p,\sqrt{\frac{p(1-p)}{n}}\right).
-    </me>
+    </md>
 
     <p>That is the key fact behind a one-proportion confidence interval. Once
     we standardize, we get the approximate z-statistic</p>
 
-    <me>
+    <md>
       \frac{\widehat{p}-p}{\sqrt{p(1-p)/n}} \approx N(0,1).
-    </me>
+    </md>
 
     <p>Let <m>\alpha=1-C</m> as before. Then the middle proportion <m>C</m> of
     the standard normal curve gives</p>
 
-    <me>
+    <md>
       P\left(
       -z_{\alpha/2}
       \lt
@@ -571,38 +571,38 @@
       \lt
       z_{\alpha/2}
       \right)\approx C.
-    </me>
+    </md>
 
     <p>Solving that inequality for <m>p</m> suggests the interval</p>
 
-    <me>
+    <md>
       \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{p(1-p)}{n}}.
-    </me>
+    </md>
 
     <p>There is one catch: the standard deviation still contains the unknown
     parameter <m>p</m>. In practice we plug in the sample proportion
     <m>\widehat{p}</m> in its place. That gives the usual large-sample
     confidence interval for a population proportion:</p>
 
-    <me>
+    <md>
       \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
-    </me>
+    </md>
 
     <p>So the margin of error for a proportion is</p>
 
-    <me>
+    <md>
       E=z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
-    </me>
+    </md>
 
     <p>This method works well when the sample is random or otherwise
     independent, and when the sample is large enough that the observed counts
     of successes and failures are both at least about 5:</p>
 
-    <me>
+    <md>
       n\widehat{p}\ge 5
       \qquad\text{and}\qquad
       n(1-\widehat{p})\ge 5.
-    </me>
+    </md>
 
     <p>If sampling is done without replacement from a finite population, a
     common rule of thumb is that the population should be at least 10 times as
@@ -617,30 +617,30 @@
 
       <p>Here <m>x=124</m>, <m>n=200</m>, so</p>
 
-      <me>
+      <md>
         \widehat{p}=\frac{124}{200}=0.62.
-      </me>
+      </md>
 
       <p>The large-sample conditions are met because</p>
 
-      <me>
+      <md>
         n\widehat{p}=200(0.62)=124
         \qquad\text{and}\qquad
         n(1-\widehat{p})=200(0.38)=76,
-      </me>
+      </md>
 
       <p>and both numbers are much larger than 5. For 95% confidence,
       <m>z_{0.025}=1.96</m>. The margin of error is</p>
 
-      <me>
+      <md>
         E=1.96\sqrt{\frac{0.62(0.38)}{200}}\approx 0.0673.
-      </me>
+      </md>
 
       <p>So the confidence interval is</p>
 
-      <me>
+      <md>
         0.62\pm 0.0673=(0.5527,0.6873).
-      </me>
+      </md>
 
       <p>So we estimate that between about 55.3% and 68.7% of all students
       support the tutoring center.</p>
@@ -654,29 +654,29 @@
 
       <p>First compute the sample proportion:</p>
 
-      <me>
+      <md>
         \widehat{p}=\frac{18}{400}=0.045.
-      </me>
+      </md>
 
       <p>The large-sample conditions are satisfied because</p>
 
-      <me>
+      <md>
         n\widehat{p}=400(0.045)=18
         \qquad\text{and}\qquad
         n(1-\widehat{p})=400(0.955)=382.
-      </me>
+      </md>
 
       <p>For 90% confidence, <m>z_{0.05}=1.645</m>. The margin of error is</p>
 
-      <me>
+      <md>
         E=1.645\sqrt{\frac{0.045(0.955)}{400}}\approx 0.0170.
-      </me>
+      </md>
 
       <p>So the confidence interval is</p>
 
-      <me>
+      <md>
         0.045\pm 0.0170=(0.0280,0.0620).
-      </me>
+      </md>
 
       <p>That puts the defect rate at about 2.8% to 6.2%.</p>
     </example>
@@ -760,9 +760,9 @@
     on squared deviations from the sample mean. Before the data are collected,
     the random sample variance is</p>
 
-    <me>
+    <md>
       S^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\overline{X})^2.
-    </me>
+    </md>
 
     <p>After the sample is observed, its value is written <m>s^2</m>.</p>
 
@@ -771,9 +771,9 @@
     <m>X_1,\ldots,X_n</m> is a random sample from a normal population
     <m>N(\mu,\sigma)</m>. If we standardize each observation,</p>
 
-    <me>
+    <md>
       Z_i=\frac{X_i-\mu}{\sigma},
-    </me>
+    </md>
 
     <p>then each <m>Z_i</m> is standard normal. A sum of squares of
     independent standard normal random variables has a <term>chi-square
@@ -782,9 +782,9 @@
 
     <p>If the population mean <m>\mu</m> were known, then</p>
 
-    <me>
+    <md>
       \sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma}\right)^2\sim \chi^2_n.
-    </me>
+    </md>
 
     <p>But in practice <m>\mu</m> is usually unknown, so we replace it by the
     sample mean <m>\overline{X}</m>. That uses up one <term>degree of
@@ -793,21 +793,21 @@
     <m>X_i-\overline{X}</m> are known, the last one is forced by the fact that
     they add up to 0. So</p>
 
-    <me>
+    <md>
       \sum_{i=1}^n\left(\frac{X_i-\overline{X}}{\sigma}\right)^2\sim \chi^2_{n-1}.
-    </me>
+    </md>
 
     <p>Since</p>
 
-    <me>
+    <md>
       \sum_{i=1}^n (X_i-\overline{X})^2=(n-1)S^2,
-    </me>
+    </md>
 
     <p>the key result becomes</p>
 
-    <me>
+    <md>
       \frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}.
-    </me>
+    </md>
 
     <p>That one fact is what makes a confidence interval for
     <m>\sigma^2</m> possible.</p>
@@ -831,7 +831,7 @@
     <m>\chi^2_{\alpha}[n-1]</m> leaves right-tail area <m>\alpha</m> for a
     chi-square distribution with <m>n-1</m> degrees of freedom, we have</p>
 
-    <me>
+    <md>
       P\left(
       \chi^2_{1-\alpha/2}[n-1]
       \le
@@ -839,27 +839,27 @@
       \le
       \chi^2_{\alpha/2}[n-1]
       \right)=C.
-    </me>
+    </md>
 
     <p>Solving that inequality for <m>\sigma^2</m> gives the confidence
     interval for the population variance:</p>
 
-    <me>
+    <md>
       \left(
       \frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]},
       \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}
       \right).
-    </me>
+    </md>
 
     <p>If we want an interval for the population standard deviation instead,
     we simply take square roots of both endpoints:</p>
 
-    <me>
+    <md>
       \left(
       \sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]}},
       \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}}
       \right).
-    </me>
+    </md>
 
     <example xml:id="ex-ci-variance-delivery-times">
       <title>An Interval for Variation in Delivery Times</title>
@@ -872,29 +872,29 @@
       <m>n-1=11</m>. For 95% confidence, <m>\alpha=0.05</m>. From
       <xref ref="app-chi-square-table"/>,</p>
 
-      <me>
+      <md>
         \chi^2_{0.025}[11]\approx 21.920
         \qquad\text{and}\qquad
         \chi^2_{0.975}[11]\approx 3.816.
-      </me>
+      </md>
 
       <p>Since <m>s^2=16</m>, the variance interval is</p>
 
-      <me>
+      <md>
         \left(
         \frac{11(16)}{21.920},
         \frac{11(16)}{3.816}
         \right)
         \approx
         (8.03,46.12).
-      </me>
+      </md>
 
       <p>Now take square roots to get an interval for the population standard
       deviation:</p>
 
-      <me>
+      <md>
         (\sqrt{8.03},\sqrt{46.12})\approx (2.83,6.79).
-      </me>
+      </md>
 
       <p>So a reasonable estimate for the route-to-route spread is that the
       population standard deviation is between about 2.83 and 6.79 minutes.</p>
@@ -975,9 +975,9 @@
     <p>This section returns to the z-interval for a population mean. In that
     setting, the margin of error is</p>
 
-    <me>
+    <md>
       E=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
-    </me>
+    </md>
 
     <p>This formula shows two basic truths:</p>
 
@@ -988,9 +988,9 @@
 
     <p>If we want the margin of error to be at most some target value <m>E</m>, then we solve for <m>n</m>:</p>
 
-    <me>
+    <md>
       n\ge \left(\frac{z_{\alpha/2}\sigma}{E}\right)^2.
-    </me>
+    </md>
 
     <p>Since sample size must be a whole number, we always round up.</p>
 
@@ -1001,13 +1001,13 @@
       confidence and margin of error at most 0.5 inches. Assume <m>\sigma=2.8</m>.</p>
       
       <p>Here <m>\alpha=0.02</m>, so <m>z_{\alpha/2}=z_{0.01}=2.326</m>. Therefore</p>
-      <me>
+      <md>
         n\ge \left(\frac{2.326(2.8)}{0.5}\right)^2\approx 169.67.
-      </me>
+      </md>
       <p>We round up, so the least acceptable sample size is</p>
-      <me>
+      <md>
         n=170.
-      </me>
+      </md>
     </example>
 
     <p>This is one of the most practical formulas in the course. It tells

@@ -20,23 +20,23 @@
 
     <p>The sign test is easy to describe because it ignores almost everything except whether each observation is above or below a hypothesized value. For a one-sample problem, the null hypothesis has the form</p>
 
-    <me>
+    <md>
       H_0:M=M_0,
-    </me>
+    </md>
 
     <p>where <m>M</m> is the population <term>median<idx><h>inference</h><h>median test</h></idx></term>. This is the first important point: the sign test is a test about a median, not a test about a mean. A few extremely large or small observations can pull a mean around, but the sign test only asks how many observations fall on each side of <m>M_0</m>.</p>
 
     <p>Suppose <m>H_0:M=M_0</m> is true and the population is continuous, so ties at exactly <m>M_0</m> are unlikely. Then a randomly selected observation is just as likely to be above <m>M_0</m> as below it:</p>
 
-    <me>
+    <md>
       P(X&gt;M_0)=P(X&lt;M_0)=\frac{1}{2}.
-    </me>
+    </md>
 
     <p>Let <m>S</m> be the number of observations above <m>M_0</m>, after throwing out any observations exactly equal to <m>M_0</m>. If there are <m>n</m> non-tied observations, then under the null hypothesis</p>
 
-    <me>
+    <md>
       S\sim B\left(n,\frac{1}{2}\right).
-    </me>
+    </md>
 
     <p>So the sign test is a particular case of a binomial proportion test with <m>p=1/2</m>. The “success” is simply being on one chosen side of the hypothesized median.</p>
 
@@ -50,18 +50,18 @@
 
     <p>For small samples, we base the rejection decision directly on the binomial distribution. For large samples, we use the normal approximation to the binomial distribution. Since <m>p=1/2</m>, the null mean and standard deviation of <m>S</m> are</p>
 
-    <me>
+    <md>
       \mu_S=\frac{n}{2}
       \qquad\text{and}\qquad
       \sigma_S=\sqrt{n\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)}
       =\frac{\sqrt{n}}{2}.
-    </me>
+    </md>
 
     <p>Thus the large-sample sign-test statistic is approximately</p>
 
-    <me>
+    <md>
       z=\frac{S-n/2}{\sqrt{n}/2}.
-    </me>
+    </md>
 
     <p>A continuity correction is often used when converting a binomial tail to a normal tail, but the main idea is the same: the observed number of plus signs is compared with what a fair <m>p=1/2</m> binomial model predicts.</p>
 
@@ -71,28 +71,28 @@
 
       <p>We test</p>
 
-      <me>
+      <md>
         H_0:M=10
         \qquad\text{versus}\qquad
         H_a:M&gt;10.
-      </me>
+      </md>
 
       <p>Let <m>S</m> be the number of times above 10 minutes. Under <m>H_0</m>,</p>
 
-      <me>
+      <md>
         S\sim B\left(12,\frac{1}{2}\right).
-      </me>
+      </md>
 
       <p>Since the alternative is right-tailed, the p-value is</p>
 
-      <me>
+      <md>
         \begin{aligned}
         P(S\ge 10)
         &amp;=P(S=10)+P(S=11)+P(S=12)\\
         &amp;=\frac{\binom{12}{10}+\binom{12}{11}+\binom{12}{12}}{2^{12}}\\
         &amp;=\frac{79}{4096}\approx 0.019.
         \end{aligned}
-      </me>
+      </md>
 
       <p>At the 5% significance level, we reject <m>H_0</m>. The sample gives evidence that the median parking time is more than 10 minutes.</p>
     </example>
@@ -103,24 +103,24 @@
 
       <p>Under <m>H_0:M=30</m>, the number above 30 minutes has approximately mean <m>64/2=32</m> and standard deviation <m>\sqrt{64}/2=4</m>. The z statistic is</p>
 
-      <me>
+      <md>
         z=\frac{43-32}{4}=2.75.
-      </me>
+      </md>
 
       <p>For the right-tailed alternative <m>H_a:M&gt;30</m>, the p-value is about <m>P(Z\ge 2.75)\approx 0.003</m>. The data give strong evidence that the median commute time is greater than 30 minutes.</p>
     </example>
 
     <p>The sign test also works naturally for paired data. For a <term>paired-sample sign test<idx><h>inference</h><h>paired-sample sign test</h></idx></term>, first compute the paired differences</p>
 
-    <me>
+    <md>
       d_i=\text{after}_i-\text{before}_i
-    </me>
+    </md>
 
     <p>or whatever direction makes sense in context. Then ignore the zero differences and count the signs of the nonzero differences. The null hypothesis is about the median difference:</p>
 
-    <me>
+    <md>
       H_0:M_d=0.
-    </me>
+    </md>
 
     <p>If the treatment has no median effect, positive and negative differences should be equally likely, so the number of positive differences again follows <m>B(n,1/2)</m> under the null hypothesis.</p>
 
@@ -128,24 +128,24 @@
       <title>A Paired-Sample Sign Test</title>
       <p>Ten students take a short statistics quiz before and after a review session. Let <m>d=\text{after}-\text{before}</m>. The signs of the differences are</p>
 
-      <me>
+      <md>
         +,\ +,\ -,\ +,\ +,\ +,\ -,\ +,\ +,\ +.
-      </me>
+      </md>
 
       <p>There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use</p>
 
-      <me>
+      <md>
         H_0:M_d=0
         \qquad\text{versus}\qquad
         H_a:M_d&gt;0.
-      </me>
+      </md>
 
       <p>Under <m>H_0</m>, the number of positive signs is <m>S\sim B(10,1/2)</m>. The p-value is</p>
 
-      <me>
+      <md>
         P(S\ge 8)=\frac{\binom{10}{8}+\binom{10}{9}+\binom{10}{10}}{2^{10}}
         =\frac{56}{1024}\approx 0.055.
-      </me>
+      </md>
 
       <p>At <m>\alpha=0.05</m>, this is close but not quite small enough to reject <m>H_0</m>. The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.</p>
     </example>
@@ -235,64 +235,64 @@
 
     <p>To compute <m>r_s</m>, rank the <m>x</m>-values from smallest to largest and rank the <m>y</m>-values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let <m>R_i</m> be the rank of <m>x_i</m>, let <m>S_i</m> be the rank of <m>y_i</m>, and let</p>
 
-    <me>
+    <md>
       d_i=R_i-S_i.
-    </me>
+    </md>
 
     <p>Then</p>
 
-    <me>
+    <md>
       r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
-    </me>
+    </md>
 
     <p>The denominator is important. The common no-ties formula has <m>n(n^2-1)</m> in the denominator, which is the same as <m>n(n-1)(n+1)</m>. A formula with only <m>n(n-1)</m> is missing the factor <m>n+1</m> and will not give the Spearman correlation coefficient.</p>
 
     <p>Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of <m>1,2,\ldots,n</m>, so they have the same mean</p>
 
-    <me>
+    <md>
       \overline{R}=\overline{S}=\frac{n+1}{2}.
-    </me>
+    </md>
 
     <p>The ordinary correlation of the ranks is</p>
 
-    <me>
+    <md>
       r_s=
       \frac{\sum (R_i-\overline{R})(S_i-\overline{S})}
       {\sqrt{\sum (R_i-\overline{R})^2}\sqrt{\sum (S_i-\overline{S})^2}}.
-    </me>
+    </md>
 
     <p>Because both rank lists have the same spread,</p>
 
-    <me>
+    <md>
       \sum (R_i-\overline{R})^2
       =
       \sum (S_i-\overline{S})^2
       =
       \frac{n(n^2-1)}{12}.
-    </me>
+    </md>
 
     <p>Now expand the squared rank differences:</p>
 
-    <me>
+    <md>
       \sum d_i^2
       =
       \sum\left((R_i-\overline{R})-(S_i-\overline{S})\right)^2.
-    </me>
+    </md>
 
     <p>After expanding and collecting terms,</p>
 
-    <me>
+    <md>
       \sum d_i^2
       =
       2\sum (R_i-\overline{R})^2
       -2\sum (R_i-\overline{R})(S_i-\overline{S}).
-    </me>
+    </md>
 
     <p>Solving this for the cross-product sum and dividing by <m>\sum (R_i-\overline{R})^2=n(n^2-1)/12</m> gives</p>
 
-    <me>
+    <md>
       r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
-    </me>
+    </md>
 
     <p>If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.</p>
 
@@ -357,32 +357,32 @@
 
       <p>Here <m>\sum d^2=4</m> and <m>n=6</m>. Therefore</p>
 
-      <me>
+      <md>
         r_s=1-\frac{6(4)}{6(6^2-1)}
         =1-\frac{24}{210}
         \approx 0.886.
-      </me>
+      </md>
 
       <p>The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.</p>
     </example>
 
     <p>The Spearman test usually starts with</p>
 
-    <me>
+    <md>
       H_0:\rho_s=0,
-    </me>
+    </md>
 
     <p>meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is</p>
 
-    <me>
+    <md>
       Z=r_s\sqrt{n-1}\approx N(0,1)
-    </me>
+    </md>
 
     <p>under <m>H_0</m>. This approximation has a concrete reason. Under the null hypothesis of no rank association, once the <m>x</m>-ranks are fixed, the <m>y</m>-ranks are essentially a random permutation of <m>1,2,\ldots,n</m>. In that random-permutation model, the Spearman statistic has mean 0 and variance</p>
 
-    <me>
+    <md>
       \operatorname{Var}(r_s)=\frac{1}{n-1}.
-    </me>
+    </md>
 
     <p>So multiplying by <m>\sqrt{n-1}</m> makes the variance equal to 1. As <m>n</m> grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why <m>r_s\sqrt{n-1}</m> can be treated as approximately standard normal for a large-sample test.</p>
 
@@ -392,17 +392,17 @@
 
       <p>The hypotheses are</p>
 
-      <me>
+      <md>
         H_0:\rho_s=0
         \qquad\text{and}\qquad
         H_a:\rho_s&gt;0.
-      </me>
+      </md>
 
       <p>The large-sample statistic is</p>
 
-      <me>
+      <md>
         z=r_s\sqrt{n-1}=0.70\sqrt{19}\approx 3.05.
-      </me>
+      </md>
 
       <p>The right-tailed p-value is about <m>P(Z\ge 3.05)\approx 0.001</m>. The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.</p>
     </example>

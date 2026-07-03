@@ -192,9 +192,9 @@
 
     <p>The <term>correlation coefficient<idx><h>regression</h><h>correlation coefficient</h></idx></term>, written <m>r</m>, measures the strength and direction of a linear relationship. Its value always satisfies</p>
 
-    <me>
+    <md>
       -1 \le r \le 1.
-    </me>
+    </md>
 
     <p>The sign of <m>r</m> gives the direction, and the size of <m>|r|</m> gives the strength.</p>
 
@@ -207,9 +207,9 @@
 
     <p>One common formula for <m>r</m> is</p>
 
-    <me>
+    <md>
       r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar{y})^2}}.
-    </me>
+    </md>
 
     <p>In practice, technology usually computes <m>r</m> for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.</p>
 
@@ -290,17 +290,17 @@
 
     <p>A <term>linear relation<idx><h>regression</h><h>linear relation</h></idx></term> has the form</p>
 
-    <me>
+    <md>
       y=ax+b,
-    </me>
+    </md>
 
     <p>where <m>a</m> is the <term>slope<idx><h>regression</h><h>slope</h></idx></term> and <m>b</m> is the <term>y-intercept<idx><h>regression</h><h>y-intercept</h></idx></term>. If <m>a&gt;0</m>, the line goes up as <m>x</m> increases. If <m>a&lt;0</m>, the line goes down as <m>x</m> increases.</p>
 
     <p>In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the <term>best-fit line<idx><h>regression</h><h>best-fit line</h></idx></term> or <term>regression line<idx><h>regression</h><h>regression line</h></idx></term>. Its equation is often written</p>
 
-    <me>
+    <md>
       \hat{y}=a+bx.
-    </me>
+    </md>
 
     <p>Here <m>\hat{y}</m> is the predicted value of <m>y</m> for a given value of <m>x</m>.</p>
 
@@ -345,13 +345,13 @@
     <example xml:id="ex-regression-prediction">
       <title>Using a Regression Equation</title>
       <p>Suppose a regression line for study hours and exam score is</p>
-      <me>
+      <md>
         \hat{y}=53.5+4.4x.
-      </me>
+      </md>
       <p>If a student studies for 5 hours, the predicted exam score is</p>
-      <me>
+      <md>
         \hat{y}=53.5+4.4(5)=75.5.
-      </me>
+      </md>
       <p>So the model predicts a score of about 76.</p>
     </example>
 
@@ -496,25 +496,25 @@
 
     <exercise xml:id="ch5-ex-8">
       <p>A regression line is given by</p>
-      <me>
+      <md>
         \hat{y}=12+3.5x.
-      </me>
+      </md>
       <p>Find the predicted value of <m>y</m> when <m>x=4</m>.</p>
     </exercise>
 
     <exercise xml:id="ch5-ex-9">
       <p>A regression equation is</p>
-      <me>
+      <md>
         \hat{y}=85-2.1x.
-      </me>
+      </md>
       <p>What is the slope? What does it mean in context if <m>x</m> is age of a car in years and <m>y</m> is selling price in thousands of dollars?</p>
     </exercise>
 
     <exercise xml:id="ch5-ex-10">
       <p>A regression equation for predicting quiz score from hours of review is</p>
-      <me>
+      <md>
         \hat{y}=48+6x.
-      </me>
+      </md>
       <p>Use the equation to predict the quiz score for a student who reviews for 5 hours.</p>
     </exercise>
 
