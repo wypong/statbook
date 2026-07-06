@@ -301,6 +301,42 @@
 
     <p>Each graph has its own job. The trick is not to memorize names blindly, but to match the graph to the kind of data you have and the question you want to answer.</p>
 
+    <p>The table below gives a quick rule of thumb for the displays in this section.</p>
+
+    <table xml:id="tbl-graph-choice-rules">
+      <title>Rules of thumb for choosing a graph</title>
+      <tabular width="100%" halign="left" valign="top">
+        <col width="18%"/>
+        <col width="25%"/>
+        <col width="42%"/>
+        <row header="yes" bottom="minor">
+          <cell>Display</cell>
+          <cell>Best for</cell>
+          <cell>What it shows well</cell>
+        </row>
+        <row>
+          <cell>Dot plot</cell>
+          <cell>Small quantitative data sets</cell>
+          <cell><p>Individual values and repeated values.</p><p>Use it when the actual data points are the main thing to see.</p></cell>
+        </row>
+        <row>
+          <cell>Bar chart</cell>
+          <cell>Categorical data</cell>
+          <cell><p>Counts or percentages across groups.</p><p>Good examples are eye color, commute method, or class standing.</p></cell>
+        </row>
+        <row>
+          <cell>Stem-and-leaf plot</cell>
+          <cell>Moderate quantitative data sets</cell>
+          <cell><p>How many values fall in each stem, such as the 70s, 80s, and 90s.</p><p>It still keeps the original values visible.</p></cell>
+        </row>
+        <row bottom="major">
+          <cell>Histogram</cell>
+          <cell>Large or grouped quantitative data</cell>
+          <cell><p>The overall shape across intervals.</p><p>Use it when exact individual values matter less than the pattern.</p></cell>
+        </row>
+      </tabular>
+    </table>
+
     <activity xml:id="act-choose-graph">
       <title>Choosing the Right Graph</title>
       <introduction>
