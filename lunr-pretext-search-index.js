@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Frequency Tables and Relative Frequency",
-  "body": " Frequency Tables and Relative Frequency  A frequency table tables frequency table organizes data by listing each value or category together with its frequency tables frequency , which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the relative frequency tables relative frequency . Relative frequency tells us the share of the data in each category.   Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to , or equivalently to .  A quick way to practice these ideas is with data from the class itself. The point is not to make the numbers fancy. The point is to get comfortable turning a raw list into a table, then reading that table a little more carefully.   Last-Name Initials   Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.     Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.      Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?      Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?      Length of Student Names   Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.     Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.      Add a relative frequency column. Which name length is most common? Which lengths are rare?      Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?      How Students Get to Campus  Suppose a class records how 12 students usually travel to campus: auto, auto, metro, bike, auto, walk, metro, auto, bike, walk, metro, auto. A frequency table for this data is shown in .    Frequency and relative frequency for commuting to campus    Mode of transportation  Frequency  Relative frequency    Auto  5  or    Metro  3  or    Bike  2  or    Walk  2  or     This table says more than the raw list did. We can immediately see that auto is the most common commuting method, and we can compare categories with either counts or percentages. If the class size changed next semester, the percentages would still make comparison easy.  Sometimes a variable has many possible values, or it is measured on a continuous scale. In that situation a row for every single value would not be very useful. Instead we group nearby values into class intervals tables class interval . A table built from intervals is called a grouped frequency table tables grouped frequency table .   Customer Wait Times  A coffee shop records the waiting time, in minutes, for 50 customers during a busy hour. Rather than listing every separate time, the manager groups the data into intervals. The grouped frequency table appears in .    Grouped frequency table for customer wait times    Wait time (minutes)  Frequency  Relative frequency     6  or     14  or     18  or     9  or     3  or     From this table we can see that the most common waiting times fall in the interval from 4 to 6 minutes. We can also say that of the customers waited between 4 and 6 minutes, and only waited between 8 and 10 minutes.  Frequency tables are simple, but they do a lot of work. They help us summarize the data, compare categories, and prepare for the graphs we will make next.  "
+  "body": " Frequency Tables and Relative Frequency  A frequency table tables frequency table organizes data by listing each value or category together with its frequency tables frequency , which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the relative frequency tables relative frequency . Relative frequency tells us the share of the data in each category.   Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to , or equivalently to .   How Students Get to Campus  Suppose a class records how 12 students usually travel to campus: auto, auto, metro, bike, auto, walk, metro, auto, bike, walk, metro, auto. A frequency table for this data is shown in .    Frequency and relative frequency for commuting to campus    Mode of transportation  Frequency  Relative frequency    Auto  5  or    Metro  3  or    Bike  2  or    Walk  2  or     This table says more than the raw list did. We can immediately see that auto is the most common commuting method, and we can compare categories with either counts or percentages. If the class size changed next semester, the percentages would still make comparison easy.  Sometimes a variable has many possible values, or it is measured on a continuous scale. In that situation a row for every single value would not be very useful. Instead we group nearby values into class intervals tables class interval . A table built from intervals is called a grouped frequency table tables grouped frequency table .   Customer Wait Times  A coffee shop records the waiting time, in minutes, for 50 customers during a busy hour. Rather than listing every separate time, the manager groups the data into intervals. The grouped frequency table appears in .    Grouped frequency table for customer wait times    Wait time (minutes)  Frequency  Relative frequency     6  or     14  or     18  or     9  or     3  or     From this table we can see that the most common waiting times fall in the interval from 4 to 6 minutes. We can also say that of the customers waited between 4 and 6 minutes, and only waited between 8 and 10 minutes.  Frequency tables are simple, but they do a lot of work. They help us summarize the data, compare categories, and prepare for the graphs we will make next.  A quick way to practice these ideas is with data from the class itself. The point is not to make the numbers fancy. The point is to get comfortable turning a raw list into a table, then reading that table a little more carefully.   Last-Name Initials   Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.     Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.      Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?      Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?      Length of Student Names   Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.     Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.      Add a relative frequency column. Which name length is most common? Which lengths are rare?      Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?     "
 },
 {
   "id": "sec-frequency-tables-2",
@@ -395,24 +395,6 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "",
   "body": "frequency table tables frequency table frequency tables frequency relative frequency tables relative frequency "
-},
-{
-  "id": "act-last-name-initials",
-  "level": "2",
-  "url": "sec-frequency-tables.html#act-last-name-initials",
-  "type": "Activity",
-  "number": "2.1.1",
-  "title": "Last-Name Initials.",
-  "body": " Last-Name Initials   Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.     Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.      Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?      Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?    "
-},
-{
-  "id": "act-name-lengths",
-  "level": "2",
-  "url": "sec-frequency-tables.html#act-name-lengths",
-  "type": "Activity",
-  "number": "2.1.2",
-  "title": "Length of Student Names.",
-  "body": " Length of Student Names   Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.     Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.      Add a relative frequency column. Which name length is most common? Which lengths are rare?      Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?    "
 },
 {
   "id": "ex-commute-frequency-table",
@@ -433,9 +415,9 @@ var ptx_lunr_docs = [
   "body": " Frequency and relative frequency for commuting to campus    Mode of transportation  Frequency  Relative frequency    Auto  5  or    Metro  3  or    Bike  2  or    Walk  2  or    "
 },
 {
-  "id": "sec-frequency-tables-11",
+  "id": "sec-frequency-tables-8",
   "level": "2",
-  "url": "sec-frequency-tables.html#sec-frequency-tables-11",
+  "url": "sec-frequency-tables.html#sec-frequency-tables-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -458,6 +440,24 @@ var ptx_lunr_docs = [
   "number": "2.1.4",
   "title": "Grouped frequency table for customer wait times",
   "body": " Grouped frequency table for customer wait times    Wait time (minutes)  Frequency  Relative frequency     6  or     14  or     18  or     9  or     3  or    "
+},
+{
+  "id": "act-last-name-initials",
+  "level": "2",
+  "url": "sec-frequency-tables.html#act-last-name-initials",
+  "type": "Activity",
+  "number": "2.1.1",
+  "title": "Last-Name Initials.",
+  "body": " Last-Name Initials   Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.     Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.      Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?      Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?    "
+},
+{
+  "id": "act-name-lengths",
+  "level": "2",
+  "url": "sec-frequency-tables.html#act-name-lengths",
+  "type": "Activity",
+  "number": "2.1.2",
+  "title": "Length of Student Names.",
+  "body": " Length of Student Names   Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.     Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.      Add a relative frequency column. Which name length is most common? Which lengths are rare?      Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?    "
 },
 {
   "id": "sec-graphs-for-data",
