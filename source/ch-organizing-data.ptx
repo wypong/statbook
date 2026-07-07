@@ -5,66 +5,33 @@
   <shorttitle>Data Displays</shorttitle>
 
   <introduction>
-    <p>Once we know what kind of data we have, the next question is how to present it so that someone can actually read it. A raw list of observations is often messy and hard to interpret. A good table or graph can turn that raw list into a pattern we can talk about.</p>
-    <p>In this chapter we start with tables, because tables are the most direct way to organize data. Then we move to graphs, which help us notice shape, clusters, gaps, and comparisons much faster. The main goal is not to decorate the data. The goal is to make the important features easier to see.</p>
+    <p>Once we know what kind of data we have, the next question is how to
+    present it so that someone can actually read it. A raw list of observations
+    is often messy and hard to interpret. A good table or graph can turn
+    that raw list into a pattern we can talk about.</p> <p>In this chapter
+    we start with tables, because tables are the most direct way to organize
+    data. Then we move to graphs, which help us notice shape, clusters,
+    gaps, and comparisons much faster. The main goal is not to decorate the
+    data. The goal is to make the important features easier to see.</p>
   </introduction>
 
   <section xml:id="sec-frequency-tables">
     <title>Frequency Tables and Relative Frequency</title>
 
-    <p>A <term>frequency table<idx><h>tables</h><h>frequency table</h></idx></term> organizes data by listing each value or category together with its <term>frequency<idx><h>tables</h><h>frequency</h></idx></term>, which is the number of times that value occurs. If we divide each frequency by the total number of observations, we get the <term>relative frequency<idx><h>tables</h><h>relative frequency</h></idx></term>. Relative frequency tells us the share of the data in each category.</p>
+    <p>A <term>frequency table<idx><h>tables</h><h>frequency
+    table</h></idx></term> organizes data by
+    listing each value or category together with its
+    <term>frequency<idx><h>tables</h><h>frequency</h></idx></term>,
+    which is the number of times that value occurs. If we divide each
+    frequency by the total number of observations, we get the <term>relative
+    frequency<idx><h>tables</h><h>relative frequency</h></idx></term>. Relative
+    frequency tells us the share of the data in each category.</p>
 
     <md>
       \text{relative frequency} = \frac{\text{frequency}}{\text{total number of observations}}
     </md>
 
     <p>Relative frequency is often written as a decimal, but a percentage is usually easier to read. The relative frequencies in a complete table should add up to <m>1</m>, or equivalently to <m>100\%</m>.</p>
-
-    <p>A quick way to practice these ideas is with data from the class itself. The point is not to make the numbers fancy. The point is to get comfortable turning a raw list into a table, then reading that table a little more carefully.</p>
-
-    <activity xml:id="act-last-name-initials">
-      <title>Last-Name Initials</title>
-      <introduction>
-        <p>Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.</p>
-      </introduction>
-      <task>
-        <statement>
-          <p>Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?</p>
-        </statement>
-      </task>
-    </activity>
-
-    <activity xml:id="act-name-lengths">
-      <title>Length of Student Names</title>
-      <introduction>
-        <p>Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.</p>
-      </introduction>
-      <task>
-        <statement>
-          <p>Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Add a relative frequency column. Which name length is most common? Which lengths are rare?</p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?</p>
-        </statement>
-      </task>
-    </activity>
 
     <example xml:id="ex-commute-frequency-table">
       <title>How Students Get to Campus</title>
@@ -102,26 +69,34 @@
       </tabular>
     </table>
 
-    <p>This table says more than the raw list did. We can immediately see that auto is the most common commuting method, and we can compare categories with either counts or percentages. If the class size changed next semester, the percentages would still make comparison easy.</p>
+    <p>This table says more than the raw list did. We can immediately
+    see that auto is the most common commuting method, and we can compare
+    categories with either counts or percentages. If the class size changed
+    next semester, the percentages would still make comparison easy.</p>
 
-    <p>Sometimes a variable has many possible values, or it is measured on a continuous scale. In that situation a row for every single value would not be very useful. Instead we group nearby values into <term>class intervals<idx><h>tables</h><h>class interval</h></idx></term>. A table built from intervals is called a <term>grouped frequency table<idx><h>tables</h><h>grouped frequency table</h></idx></term>.</p>
+    <p>Sometimes a variable has many possible values, or it is measured on a
+    continuous scale. In that situation a row for every single value would
+    not be very useful. Instead we group nearby values into <term>class
+    intervals<idx><h>tables</h><h>class interval</h></idx></term>. A
+    table built from intervals is called a <term>grouped frequency
+    table<idx><h>tables</h><h>grouped frequency table</h></idx></term>.</p>
 
     <example xml:id="ex-wait-time-grouped">
-      <title>Customer Wait Times</title>
-      <p>A coffee shop records the waiting time, in minutes, for 50 customers during a busy hour. Rather than listing every separate time, the manager groups the data into intervals. The grouped frequency table appears in <xref ref="tbl-wait-time-frequency"/>.</p>
+      <title>Customer Wait Times</title> <p>A coffee shop records
+      the waiting time, in minutes, for 50 customers during a busy
+      hour. Rather than listing every separate time, the manager groups
+      the data into intervals. The grouped frequency table appears in <xref
+      ref="tbl-wait-time-frequency"/>.</p>
     </example>
 
     <table xml:id="tbl-wait-time-frequency">
       <title>Grouped frequency table for customer wait times</title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
-          <cell>Wait time (minutes)</cell>
-          <cell>Frequency</cell>
+          <cell>Wait time (minutes)</cell> <cell>Frequency</cell>
           <cell>Relative frequency</cell>
-        </row>
-        <row>
-          <cell><m>[0,2)</m></cell>
-          <cell>6</cell>
+        </row> <row>
+          <cell><m>[0,2)</m></cell> <cell>6</cell>
           <cell><m>\frac{6}{50}=0.12</m> or <m>12\%</m></cell>
         </row>
         <row>
@@ -149,7 +124,68 @@
 
     <p>From this table we can see that the most common waiting times fall in the interval from 4 to 6 minutes. We can also say that <m>36\%</m> of the customers waited between 4 and 6 minutes, and only <m>6\%</m> waited between 8 and 10 minutes.</p>
 
-    <p>Frequency tables are simple, but they do a lot of work. They help us summarize the data, compare categories, and prepare for the graphs we will make next.</p>
+    <p>Frequency tables are simple, but they do a lot of work. They help us
+    summarize the data, compare categories, and prepare for the graphs we
+    will make next.</p>
+
+    <p>A quick way to practice these ideas is with data from the class
+    itself. The point is not to make the numbers fancy. The point is to get
+    comfortable turning a raw list into a table, then reading that table a
+    little more carefully.</p>
+
+    <activity xml:id="act-last-name-initials">
+      <title>Last-Name Initials</title> <introduction>
+        <p>Use the first letter of each student's last name to build
+        a frequency table. This is a nice warm-up because the data are
+        categorical, but the table still has enough structure to let us talk
+        about relative and cumulative frequency.</p>
+      </introduction> <task>
+        <statement>
+          <p>Collect the first initial of each student's last name. Make a
+          frequency table with the initials in alphabetical order.</p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>Add a relative frequency column. Which initial has the
+          largest relative frequency? What percentage of the class does
+          it represent?</p>
+        </statement>
+      </task> <task>
+        <statement>
+          <p>Add a cumulative frequency column, again using alphabetical
+          order. Which initials account for about half of the class?</p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity xml:id="act-name-lengths">
+      <title>Length of Student Names</title> <introduction>
+        <p>Now use the lengths of students' names. To keep the counting
+        consistent, count letters only and ignore spaces and punctuation. This
+        gives us numerical data, so the table can also lead naturally into
+        cumulative frequency.</p>
+      </introduction> <task>
+        <statement>
+          <p>Count the number of letters in each student's full name. Make
+          a frequency table for the name lengths, ordering the lengths from
+          smallest to largest.</p>
+        </statement>
+      </task> <task>
+        <statement>
+          <p>Add a relative frequency column. Which name length is most
+          common? Which lengths are rare?</p>
+        </statement>
+      </task> <task>
+        <statement>
+          <p>Add a cumulative frequency column. As you move from the shortest
+          names to the longest, at what name length does the cumulative
+          frequency first pass half of the class? What proportion of the
+          class do the shorter names represent?</p>
+        </statement>
+      </task>
+    </activity>
+
   </section>
 
   <section xml:id="sec-graphs-for-data">
