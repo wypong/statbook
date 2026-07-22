@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,21 +57,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.8';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="elementarystatistics" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -107,6 +107,9 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
+\newcommand{\var}{\operatorname{Var}}
+\newcommand{\cov}{\operatorname{Cov}}
+\newcommand{\E}{\operatorname{E}}
 \pgfplotsset{compat=1.18}
 \tcbset{divisionexercisestyle/.append style={lines before break=8}}
 \tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
@@ -311,9 +314,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec-confidence-intervals-proportion">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Confidence Intervals for a Population Proportion</span>
-</h2>
+</h1>
 <div class="para" id="sec-confidence-intervals-proportion-2">Many statistical questions are really yes-or-no questions. What proportion of voters support a ballot measure? What proportion of products coming off an assembly line are defective? What proportion of students at a college work more than 20 hours per week? In settings like these, the parameter we want is the <dfn class="terminology">population proportion</dfn>, usually written <span class="process-math">\(p\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-confidence-intervals-proportion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-confidence-intervals-proportion-3">If we take a random sample of size <span class="process-math">\(n\)</span> and count the number of successes, say <span class="process-math">\(X\text{,}\)</span> then a natural estimate of <span class="process-math">\(p\)</span> is the <dfn class="terminology">sample proportion</dfn>:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-confidence-intervals-proportion-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -350,7 +353,7 @@ n(1-p)\ge 5.
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-binomial-normal-approximation.html" id="sec-confidence-intervals-proportion-12">
 \begin{equation*}
-E(\widehat{p})=E\left(\frac{X}{n}\right)=\frac{E(X)}{n}=\frac{np}{n}=p
+\E(\widehat{p})=\E\left(\frac{X}{n}\right)=\frac{\E(X)}{n}=\frac{np}{n}=p
 \end{equation*}
 </div>
 <div class="para" id="sec-confidence-intervals-proportion-13">and standard deviation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-confidence-intervals-proportion-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -422,9 +425,9 @@ n(1-\widehat{p})\ge 5.
 </div>
 <div class="para" id="sec-confidence-intervals-proportion-29">If sampling is done without replacement from a finite population, a common rule of thumb is that the population should be at least 10 times as large as the sample so the observations are close to independent.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-confidence-intervals-proportion-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-ci-proportion-campus-poll" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ex-ci-proportion-campus-poll" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Confidence Interval for Support in a Campus Poll.</span>
-</h3></summary>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-ci-proportion-campus-poll-2">A random sample of 200 students is asked whether they support a new campus tutoring center. Suppose 124 students say yes. Estimate the population proportion <span class="process-math">\(p\)</span> of all students who support the plan with 95% confidence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-ci-proportion-campus-poll-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -462,9 +465,9 @@ E=1.96\sqrt{\frac{0.62(0.38)}{200}}\approx 0.0673.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 10.3.1: A Confidence Interval for Support in a Campus Poll"><a tabindex="-1" href="#ex-ci-proportion-campus-poll" title="Copy heading and permalink for Example 10.3.1: A Confidence Interval for Support in a Campus Poll" aria-label="Copy heading and permalink for Example 10.3.1: A Confidence Interval for Support in a Campus Poll">🔗</a></div>
 </article></details>
-<details id="ex-ci-proportion-defects" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ex-ci-proportion-defects" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Confidence Interval for a Defect Rate.</span>
-</h3></summary>
+</h2></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-ci-proportion-defects-2">A quality-control inspector checks 400 light bulbs and finds 18 defective ones. Find a 90% confidence interval for the population proportion of defective bulbs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-ci-proportion-defects-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -504,9 +507,9 @@ E=1.645\sqrt{\frac{0.045(0.955)}{400}}\approx 0.0170.
 </article></details>
 <div class="para" id="sec-confidence-intervals-proportion-32">The interpretation follows the same pattern as for means. A 95% confidence interval for <span class="process-math">\(p\)</span> does not mean there is a 95% chance that the fixed population proportion is inside the one interval we already computed. It means that if we repeated the sampling process many times and built an interval each time, about 95% of those intervals would capture the true proportion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-confidence-intervals-proportion-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ci-inline-ex-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ci-inline-ex-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary>
+</h2></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ci-inline-ex-3-1">In a random sample of 150 customers, 57 say they used a store coupon that week.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ci-inline-ex-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -529,47 +532,47 @@ E=1.645\sqrt{\frac{0.045(0.955)}{400}}\approx 0.0170.
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Checkpoint 10.3.3"><a tabindex="-1" href="#ci-inline-ex-3" title="Copy heading and permalink for Checkpoint 10.3.3" aria-label="Copy heading and permalink for Checkpoint 10.3.3">🔗</a></div>
 </article></details>
-<article class="activity project-like" id="act-ch10-proportion-builder"><h3 class="heading">
+<article class="activity project-like" id="act-ch10-proportion-builder"><h2 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Proportion Interval Builder.</span>
-</h3>
+</h2>
 <div class="introduction" id="act-ch10-proportion-builder-2">
 <div class="para" id="act-ch10-proportion-builder-2-1">Build a confidence interval for a population proportion from a sample count.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-proportion-builder-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="act-ch10-proportion-builder-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="act-ch10-proportion-builder-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch10-proportion-builder-3-1-1">A random sample of 120 students finds that 48 prefer digital notes to printed notes. Compute <span class="process-math">\(\widehat{p}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-proportion-builder-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.1.a"><a tabindex="-1" href="#act-ch10-proportion-builder-3" title="Copy heading and permalink for Task 10.3.1.a" aria-label="Copy heading and permalink for Task 10.3.1.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch10-proportion-builder-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="act-ch10-proportion-builder-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch10-proportion-builder-4-1-1">Check whether the conditions for a one-proportion z-interval are satisfied.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-proportion-builder-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.1.b"><a tabindex="-1" href="#act-ch10-proportion-builder-4" title="Copy heading and permalink for Task 10.3.1.b" aria-label="Copy heading and permalink for Task 10.3.1.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch10-proportion-builder-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="act-ch10-proportion-builder-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch10-proportion-builder-5-1-1">Find a 95% confidence interval for the population proportion and interpret it in context.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-proportion-builder-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.1.c"><a tabindex="-1" href="#act-ch10-proportion-builder-5" title="Copy heading and permalink for Task 10.3.1.c" aria-label="Copy heading and permalink for Task 10.3.1.c">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Activity 10.3.1: Proportion Interval Builder"><a tabindex="-1" href="#act-ch10-proportion-builder" title="Copy heading and permalink for Activity 10.3.1: Proportion Interval Builder" aria-label="Copy heading and permalink for Activity 10.3.1: Proportion Interval Builder">🔗</a></div>
 </article>
-<article class="activity project-like" id="act-ch10-approximation-check"><h3 class="heading">
+<article class="activity project-like" id="act-ch10-approximation-check"><h2 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Can We Trust the Approximation?</span>
-</h3>
+</h2>
 <div class="introduction" id="act-ch10-approximation-check-2">
 <div class="para" id="act-ch10-approximation-check-2-1">Decide when the normal approximation behind a proportion interval is reasonable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-approximation-check-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="act-ch10-approximation-check-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="act-ch10-approximation-check-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch10-approximation-check-3-1-1">For each pair <span class="process-math">\((n,\widehat{p})\text{,}\)</span> compute <span class="process-math">\(n\widehat{p}\)</span> and <span class="process-math">\(n(1-\widehat{p})\text{:}\)</span> <span class="process-math">\((40,0.10)\text{,}\)</span> <span class="process-math">\((80,0.55)\text{,}\)</span> and <span class="process-math">\((25,0.92)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-approximation-check-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.a"><a tabindex="-1" href="#act-ch10-approximation-check-3" title="Copy heading and permalink for Task 10.3.2.a" aria-label="Copy heading and permalink for Task 10.3.2.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch10-approximation-check-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="act-ch10-approximation-check-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch10-approximation-check-4-1-1">For which cases would a one-proportion z-interval be reasonable? Explain briefly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-approximation-check-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.b"><a tabindex="-1" href="#act-ch10-approximation-check-4" title="Copy heading and permalink for Task 10.3.2.b" aria-label="Copy heading and permalink for Task 10.3.2.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch10-approximation-check-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<article class="task exercise-like" id="act-ch10-approximation-check-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch10-approximation-check-5-1-1">Why is it a problem when the sample has very few observed successes or very few observed failures?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch10-approximation-check-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 10.3.2.c"><a tabindex="-1" href="#act-ch10-approximation-check-5" title="Copy heading and permalink for Task 10.3.2.c" aria-label="Copy heading and permalink for Task 10.3.2.c">🔗</a></div>

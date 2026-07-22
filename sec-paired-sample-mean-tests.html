@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,21 +57,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.8';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="elementarystatistics" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -107,6 +107,9 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
+\newcommand{\var}{\operatorname{Var}}
+\newcommand{\cov}{\operatorname{Cov}}
+\newcommand{\E}{\operatorname{E}}
 \pgfplotsset{compat=1.18}
 \tcbset{divisionexercisestyle/.append style={lines before break=8}}
 \tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
@@ -311,9 +314,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec-paired-sample-mean-tests">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired-Sample Tests for a Mean Difference</span>
-</h2>
+</h1>
 <section class="introduction" id="sec-paired-sample-mean-tests-2">
 <div class="para" id="sec-paired-sample-mean-tests-2-1">Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are <dfn class="terminology">paired data</dfn>, and treating the two columns as independent samples would throw away useful information.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-paired-sample-mean-tests-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -341,9 +344,9 @@ H_0:\mu_d=0,
 <div class="para" id="sec-paired-sample-mean-tests-2-8">which says there is no average difference between the two paired measurements. More generally, we may test <span class="process-math">\(H_0:\mu_d=d_0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-paired-sample-mean-tests-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsection" id="subsec-paired-large-samples">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Large Samples: A Z-Test on Differences</span>
-</h3>
+</h2>
 <div class="para" id="subsec-paired-large-samples-2">Once we form the differences, this is just a one-sample problem. The sample mean of the differences is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-paired-large-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="subsec-paired-large-samples-3">
@@ -370,9 +373,9 @@ z=\frac{\overline{d}}{s_d/\sqrt{n}}
 </div>
 <div class="para" id="subsec-paired-large-samples-9">This formula has the same shape as every other test statistic in this chapter: observed estimate minus null value, divided by its estimated standard error. The only new step is that the observed estimate is the mean of the within-pair differences, not the difference between two independent sample means.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-paired-large-samples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-paired-large-sample-commute" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ex-paired-large-sample-commute" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Large-Sample Paired Test.</span>
-</h4></summary>
+</h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-paired-large-sample-commute-2">A transit planner records commute times for 40 riders before and after a route change. For each rider, let <span class="process-math">\(d=\text{before}-\text{after}\text{,}\)</span> so positive differences mean the commute became shorter. The sample has <span class="process-math">\(\overline{d}=3.2\)</span> minutes and <span class="process-math">\(s_d=9.0\)</span> minutes. Test whether the route change reduced average commute time:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-paired-large-sample-commute-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -394,9 +397,9 @@ z=\frac{3.2-0}{9.0/\sqrt{40}}\approx 2.25.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.5.1: A Large-Sample Paired Test"><a tabindex="-1" href="#ex-paired-large-sample-commute" title="Copy heading and permalink for Example 11.5.1: A Large-Sample Paired Test" aria-label="Copy heading and permalink for Example 11.5.1: A Large-Sample Paired Test">🔗</a></div>
 </article></details>
-<details id="ht-inline-ex-paired-large" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ht-inline-ex-paired-large" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary>
+</h3></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ht-inline-ex-paired-large-1">A large paired sample has <span class="process-math">\(n=50\text{,}\)</span> <span class="process-math">\(\overline{d}=1.8\text{,}\)</span> and <span class="process-math">\(s_d=6.5\text{.}\)</span> Test <span class="process-math">\(H_0:\mu_d=0\)</span> against <span class="process-math">\(H_a:\mu_d&gt;0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ht-inline-ex-paired-large-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -421,9 +424,9 @@ z=\frac{3.2-0}{9.0/\sqrt{40}}\approx 2.25.
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection: Large Samples: A Z-Test on Differences"><a tabindex="-1" href="#subsec-paired-large-samples" title="Copy heading and permalink for Subsection: Large Samples: A Z-Test on Differences" aria-label="Copy heading and permalink for Subsection: Large Samples: A Z-Test on Differences">🔗</a></div>
 </section>
 <section class="subsection" id="subsec-paired-small-samples">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Small Samples: A Paired T-Test</span>
-</h3>
+</h2>
 <div class="para" id="subsec-paired-small-samples-2">For small paired samples, we still subtract within each pair and test the mean of the differences. The statistic is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-paired-small-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="subsec-paired-small-samples-3">
@@ -449,9 +452,9 @@ df=n-1.
 </div>
 <div class="para" id="subsec-paired-small-samples-9">The conditions are that the pairs are randomly selected or otherwise representative, the pairs are independent of each other, and the distribution of differences is approximately normal. For larger samples, the CLT makes the normality condition less strict. For small samples, strong skewness or serious outliers in the differences can make the paired t-test unreliable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-paired-small-samples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-paired-small-sample-blood-pressure" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ex-paired-small-sample-blood-pressure" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Small-Sample Paired T-Test.</span>
-</h4></summary>
+</h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-paired-small-sample-blood-pressure-2">A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let <span class="process-math">\(d=\text{before}-\text{after}\text{,}\)</span> so positive differences mean blood pressure decreased. The differences have <span class="process-math">\(\overline{d}=4.6\)</span> and <span class="process-math">\(s_d=5.8\text{.}\)</span> Test whether the exercise lowers the mean blood pressure:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-paired-small-sample-blood-pressure-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -473,9 +476,9 @@ t=\frac{4.6-0}{5.8/\sqrt{10}}\approx 2.51.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.5.3: A Small-Sample Paired T-Test"><a tabindex="-1" href="#ex-paired-small-sample-blood-pressure" title="Copy heading and permalink for Example 11.5.3: A Small-Sample Paired T-Test" aria-label="Copy heading and permalink for Example 11.5.3: A Small-Sample Paired T-Test">🔗</a></div>
 </article></details>
-<details id="ht-inline-ex-paired-small" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ht-inline-ex-paired-small" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary>
+</h3></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ht-inline-ex-paired-small-1">For a small paired study, the differences have <span class="process-math">\(n=12\text{,}\)</span> <span class="process-math">\(\overline{d}=-2.4\text{,}\)</span> and <span class="process-math">\(s_d=3.6\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ht-inline-ex-paired-small-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -500,29 +503,29 @@ t=\frac{4.6-0}{5.8/\sqrt{10}}\approx 2.51.
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection: Small Samples: A Paired T-Test"><a tabindex="-1" href="#subsec-paired-small-samples" title="Copy heading and permalink for Subsection: Small Samples: A Paired T-Test" aria-label="Copy heading and permalink for Subsection: Small Samples: A Paired T-Test">🔗</a></div>
 </section>
 <section class="subsection" id="subsec-paired-or-independent">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired or Independent?</span>
-</h3>
+</h2>
 <div class="para" id="subsec-paired-or-independent-2">The choice between a paired test and an independent two-sample test is not about sample size. It is about how the data were collected. If each observation in one group is naturally linked to one observation in the other group, use the paired differences. If the two groups are separate and unrelated, use an independent two-sample test.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-paired-or-independent-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="act-ch11-paired-or-independent"><h4 class="heading">
+<article class="activity project-like" id="act-ch11-paired-or-independent"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Paired or Independent?</span>
-</h4>
+</h3>
 <div class="introduction" id="act-ch11-paired-or-independent-2">
 <div class="para" id="act-ch11-paired-or-independent-2-1">Decide whether a study should use paired differences or two independent samples.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-paired-or-independent-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="act-ch11-paired-or-independent-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-paired-or-independent-3-1-1">Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-paired-or-independent-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.5.1.a"><a tabindex="-1" href="#act-ch11-paired-or-independent-3" title="Copy heading and permalink for Task 11.5.1.a" aria-label="Copy heading and permalink for Task 11.5.1.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch11-paired-or-independent-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-paired-or-independent-4-1-1">One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-paired-or-independent-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.5.1.b"><a tabindex="-1" href="#act-ch11-paired-or-independent-4" title="Copy heading and permalink for Task 11.5.1.b" aria-label="Copy heading and permalink for Task 11.5.1.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch11-paired-or-independent-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<article class="task exercise-like" id="act-ch11-paired-or-independent-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch11-paired-or-independent-5-1-1">For the paired case, define a useful difference <span class="process-math">\(d\)</span> and write the hypotheses for testing whether the second measurement is higher on average.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-paired-or-independent-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.5.1.c"><a tabindex="-1" href="#act-ch11-paired-or-independent-5" title="Copy heading and permalink for Task 11.5.1.c" aria-label="Copy heading and permalink for Task 11.5.1.c">🔗</a></div>

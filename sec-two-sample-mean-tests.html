@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.43"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,21 +57,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.8';
+eBookConfig.runestone_version = '8.1.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.d40a1acc1751a0b6.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="elementarystatistics" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
@@ -107,6 +107,9 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
+\newcommand{\var}{\operatorname{Var}}
+\newcommand{\cov}{\operatorname{Cov}}
+\newcommand{\E}{\operatorname{E}}
 \pgfplotsset{compat=1.18}
 \tcbset{divisionexercisestyle/.append style={lines before break=8}}
 \tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
@@ -311,9 +314,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec-two-sample-mean-tests">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two-Sample Mean Tests</span>
-</h2>
+</h1>
 <section class="introduction" id="sec-two-sample-mean-tests-2">
 <div class="para" id="sec-two-sample-mean-tests-2-1">Many questions compare two population means rather than one. For example, we might compare the mean exam score for two teaching methods, the mean wait time at two clinics, or the mean amount spent by two groups of customers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-two-sample-mean-tests-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -348,9 +351,9 @@ H_a:\mu_1-\mu_2\ne 0.
 \end{equation*}
 </div></section>
 <section class="subsection" id="subsec-two-sample-large-samples">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Large Samples: A Two-Sample Z-Test</span>
-</h3>
+</h2>
 <div class="para" id="subsec-two-sample-large-samples-2">To see where the test statistic comes from, start with the sampling distributions of the two sample means. For large samples, the CLT gives<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-two-sample-large-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-cdf-expected-value.html" id="subsec-two-sample-large-samples-3">
@@ -373,8 +376,8 @@ H_a:\mu_1-\mu_2\ne 0.
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-cdf-expected-value.html" id="subsec-two-sample-large-samples-8">
 \begin{align*}
-E(\overline{X}_1-\overline{X}_2)&amp;=E(\overline{X}_1)+E(-\overline{X}_2)\\
-&amp;=E(\overline{X}_1)-E(\overline{X}_2)\\
+\E(\overline{X}_1-\overline{X}_2)&amp;=\E(\overline{X}_1)+\E(-\overline{X}_2)\\
+&amp;=\E(\overline{X}_1)-\E(\overline{X}_2)\\
 &amp;=\mu_1-\mu_2.
 \end{align*}
 </div>
@@ -382,8 +385,8 @@ E(\overline{X}_1-\overline{X}_2)&amp;=E(\overline{X}_1)+E(-\overline{X}_2)\\
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-cdf-expected-value.html" id="subsec-two-sample-large-samples-10">
 \begin{align*}
-\operatorname{Var}(\overline{X}_1-\overline{X}_2)&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(-\overline{X}_2)\\
-&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(\overline{X}_2)\\
+\var(\overline{X}_1-\overline{X}_2)&amp;=\var(\overline{X}_1)+\var(-\overline{X}_2)\\
+&amp;=\var(\overline{X}_1)+\var(\overline{X}_2)\\
 &amp;=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}.
 \end{align*}
 </div>
@@ -446,9 +449,9 @@ z=\frac{\overline{x}_1-\overline{x}_2}
 </div>
 <div class="para" id="subsec-two-sample-large-samples-21">The main conditions are that the two samples are random or otherwise representative, the two samples are independent of each other, and both sample sizes are large enough for the CLT to make the sample means approximately normal. A common rule of thumb is that both <span class="process-math">\(n_1\)</span> and <span class="process-math">\(n_2\)</span> should be at least 30, though strongly skewed populations may require larger samples.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-two-sample-large-samples-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-two-sample-mean-test-teaching" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ex-two-sample-mean-test-teaching" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Two Teaching Methods.</span>
-</h4></summary>
+</h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-two-sample-mean-test-teaching-2">A department compares exam scores from two large independent classes. Method 1 has <span class="process-math">\(n_1=64\text{,}\)</span> <span class="process-math">\(\overline{x}_1=78\text{,}\)</span> and <span class="process-math">\(s_1=10\text{.}\)</span> Method 2 has <span class="process-math">\(n_2=49\text{,}\)</span> <span class="process-math">\(\overline{x}_2=74\text{,}\)</span> and <span class="process-math">\(s_2=9\text{.}\)</span> Test whether Method 1 has the higher mean score:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-two-sample-mean-test-teaching-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -485,9 +488,9 @@ P(Z\ge 2.23)\approx 0.0129.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.4.2: Comparing Two Teaching Methods"><a tabindex="-1" href="#ex-two-sample-mean-test-teaching" title="Copy heading and permalink for Example 11.4.2: Comparing Two Teaching Methods" aria-label="Copy heading and permalink for Example 11.4.2: Comparing Two Teaching Methods">🔗</a></div>
 </article></details>
-<details id="ht-inline-ex-two-sample-means" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ht-inline-ex-two-sample-means" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary>
+</h3></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ht-inline-ex-two-sample-means-1">Two independent large samples give <span class="process-math">\(n_1=50\text{,}\)</span> <span class="process-math">\(\overline{x}_1=32.4\text{,}\)</span> <span class="process-math">\(s_1=6.0\text{,}\)</span> and <span class="process-math">\(n_2=60\text{,}\)</span> <span class="process-math">\(\overline{x}_2=30.1\text{,}\)</span> <span class="process-math">\(s_2=5.5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ht-inline-ex-two-sample-means-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -512,9 +515,9 @@ P(Z\ge 2.23)\approx 0.0129.
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection: Large Samples: A Two-Sample Z-Test"><a tabindex="-1" href="#subsec-two-sample-large-samples" title="Copy heading and permalink for Subsection: Large Samples: A Two-Sample Z-Test" aria-label="Copy heading and permalink for Subsection: Large Samples: A Two-Sample Z-Test">🔗</a></div>
 </section>
 <section class="subsection" id="subsec-two-sample-small-samples">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Small Samples: A Two-Sample T-Test</span>
-</h3>
+</h2>
 <div class="para" id="subsec-two-sample-small-samples-2">When one or both samples are small, the same basic comparison is still natural:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-two-sample-small-samples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="subsec-two-sample-small-samples-3">
@@ -562,9 +565,9 @@ df\approx
 </div>
 <div class="para" id="subsec-two-sample-small-samples-15">The conditions are stricter than in the large-sample case. The samples should be random or otherwise representative, the two samples should be independent of each other, and each population distribution should be approximately normal or at least not strongly skewed with serious outliers. For very small samples, the normality condition matters a lot.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-two-sample-small-samples-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-two-sample-small-t-test" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ex-two-sample-small-t-test" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comparing Two Small Samples.</span>
-</h4></summary>
+</h3></summary>
 <article class="example example-like knowl__content">
 <div class="para" id="ex-two-sample-small-t-test-2">A tutor compares quiz scores from two small independent groups. Group 1 has <span class="process-math">\(n_1=12\text{,}\)</span> <span class="process-math">\(\overline{x}_1=84\text{,}\)</span> and <span class="process-math">\(s_1=6\text{.}\)</span> Group 2 has <span class="process-math">\(n_2=10\text{,}\)</span> <span class="process-math">\(\overline{x}_2=79\text{,}\)</span> and <span class="process-math">\(s_2=7\text{.}\)</span> Test whether the first group has the higher population mean score:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-two-sample-small-t-test-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -601,9 +604,9 @@ t=\frac{(84-79)-0}{2.81}\approx 1.78.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.4.4: Comparing Two Small Samples"><a tabindex="-1" href="#ex-two-sample-small-t-test" title="Copy heading and permalink for Example 11.4.4: Comparing Two Small Samples" aria-label="Copy heading and permalink for Example 11.4.4: Comparing Two Small Samples">🔗</a></div>
 </article></details>
-<details id="ht-inline-ex-two-sample-small-t" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<details id="ht-inline-ex-two-sample-small-t" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary>
+</h3></summary>
 <article class="exercise exercise-like knowl__content">
 <div class="para" id="ht-inline-ex-two-sample-small-t-1">Two independent small samples give <span class="process-math">\(n_1=9\text{,}\)</span> <span class="process-math">\(\overline{x}_1=42.1\text{,}\)</span> <span class="process-math">\(s_1=4.2\text{,}\)</span> and <span class="process-math">\(n_2=11\text{,}\)</span> <span class="process-math">\(\overline{x}_2=38.7\text{,}\)</span> <span class="process-math">\(s_2=5.1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ht-inline-ex-two-sample-small-t-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -628,27 +631,27 @@ t=\frac{(84-79)-0}{2.81}\approx 1.78.
 </article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection: Small Samples: A Two-Sample T-Test"><a tabindex="-1" href="#subsec-two-sample-small-samples" title="Copy heading and permalink for Subsection: Small Samples: A Two-Sample T-Test" aria-label="Copy heading and permalink for Subsection: Small Samples: A Two-Sample T-Test">🔗</a></div>
 </section>
 <section class="subsection" id="subsec-two-sample-choosing-method">
-<h3 class="heading hide-type">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing a Two-Sample Mean Test</span>
-</h3>
-<article class="activity project-like" id="act-ch11-two-sample-mean-setup"><h4 class="heading">
+</h2>
+<article class="activity project-like" id="act-ch11-two-sample-mean-setup"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two Groups, One Difference.</span>
-</h4>
+</h3>
 <div class="introduction" id="act-ch11-two-sample-mean-setup-2">
 <div class="para" id="act-ch11-two-sample-mean-setup-2-1">Practice setting up a two-sample test before doing calculations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="act-ch11-two-sample-mean-setup-3-1-1">A counselor compares mean weekly study hours for students who use tutoring and students who do not. Identify <span class="process-math">\(\mu_1\text{,}\)</span> <span class="process-math">\(\mu_2\text{,}\)</span> and the parameter <span class="process-math">\(\mu_1-\mu_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.4.1.a"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-3" title="Copy heading and permalink for Task 11.4.1.a" aria-label="Copy heading and permalink for Task 11.4.1.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="act-ch11-two-sample-mean-setup-4-1-1">Write null and alternative hypotheses for testing whether the tutoring group has a higher mean study time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.4.1.b"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-4" title="Copy heading and permalink for Task 11.4.1.b" aria-label="Copy heading and permalink for Task 11.4.1.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<article class="task exercise-like" id="act-ch11-two-sample-mean-setup-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="act-ch11-two-sample-mean-setup-5-1-1">List the conditions you would check before deciding whether a large-sample z-test or a small-sample t-test is appropriate.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 11.4.1.c"><a tabindex="-1" href="#act-ch11-two-sample-mean-setup-5" title="Copy heading and permalink for Task 11.4.1.c" aria-label="Copy heading and permalink for Task 11.4.1.c">🔗</a></div>
