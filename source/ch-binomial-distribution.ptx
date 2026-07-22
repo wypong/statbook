@@ -253,19 +253,19 @@
     <p>where each <m>Y_i</m> equals 1 for success and 0 for failure. For one Bernoulli random variable,</p>
 
     <md>
-      E(Y_i)=p
+      \E(Y_i)=p
       \qquad\text{and}\qquad
-      \operatorname{Var}(Y_i)=p(1-p).
+      \var(Y_i)=p(1-p).
     </md>
 
     <p>Because expectation adds and independent variances add, a binomial random variable <m>X\sim B(n,p)</m> satisfies</p>
 
     <md>
-      E(X)=np,
+      \E(X)=np,
     </md>
 
     <md>
-      \operatorname{Var}(X)=np(1-p),
+      \var(X)=np(1-p),
     </md>
 
     <p>and therefore the <term>standard deviation<idx><h>probability</h><h>standard deviation of a binomial distribution</h></idx></term> is</p>
@@ -281,11 +281,11 @@
       <p>A player makes free throws with probability <m>0.8</m>. Suppose the player takes 20 free throws, and let <m>X</m> be the number made. Then <m>X\sim B(20,0.8)</m>.</p>
       <p>The mean number of made shots is</p>
       <md>
-        E(X)=np=20(0.8)=16.
+        \E(X)=np=20(0.8)=16.
       </md>
       <p>The variance is</p>
       <md>
-        \operatorname{Var}(X)=20(0.8)(0.2)=3.2,
+        \var(X)=20(0.8)(0.2)=3.2,
       </md>
       <p>so the standard deviation is</p>
       <md>
@@ -341,7 +341,7 @@
     </activity>
 
     <exercise xml:id="binom-inline-ex-3">
-      <p>If <m>X\sim B(10,0.3)</m>, find <m>E(X)</m>, <m>\operatorname{Var}(X)</m>, and <m>\sigma_X</m>.</p>
+      <p>If <m>X\sim B(10,0.3)</m>, find <m>\E(X)</m>, <m>\var(X)</m>, and <m>\sigma_X</m>.</p>
     </exercise>
   </section>
 

@@ -38,7 +38,7 @@
     <p>Two facts are especially important:</p>
 
     <md>
-      E(\overline{X})=\mu \qquad\text{and}\qquad
+      \E(\overline{X})=\mu \qquad\text{and}\qquad
       \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
     </md>
 
@@ -52,8 +52,8 @@
     <p>linearity of expectation gives</p>
 
     <md>
-      E(\overline{X}) =E\left(\frac{X_1+\cdots+X_n}{n}\right)
-      =\frac{1}{n}\bigl(E(X_1)+\cdots+E(X_n)\bigr) =\frac{1}{n}(n\mu) =\mu.
+      \E(\overline{X}) =\E\left(\frac{X_1+\cdots+X_n}{n}\right)
+      =\frac{1}{n}\bigl(\E(X_1)+\cdots+\E(X_n)\bigr) =\frac{1}{n}(n\mu) =\mu.
     </md>
 
     <p>So the sample mean is an unbiased estimate of the population mean.</p>
@@ -61,15 +61,15 @@
     <p>For the variance, independence lets us add variances:</p>
 
     <md alignment="align">
-      <mrow>\operatorname{Var}(\overline{X})&amp;=\operatorname{Var}\left(\frac{X_1+\cdots+X_n}{n}\right)</mrow>
-      <mrow>&amp;=\frac{1}{n^2}\operatorname{Var}(X_1+\cdots+X_n)</mrow>
-      <mrow>&amp;=\frac{1}{n^2}\bigl(\operatorname{Var}(X_1)+\cdots+\operatorname{Var}(X_n)\bigr).</mrow>
+      <mrow>\var(\overline{X})&amp;=\var\left(\frac{X_1+\cdots+X_n}{n}\right)</mrow>
+      <mrow>&amp;=\frac{1}{n^2}\var(X_1+\cdots+X_n)</mrow>
+      <mrow>&amp;=\frac{1}{n^2}\bigl(\var(X_1)+\cdots+\var(X_n)\bigr).</mrow>
     </md>
 
     <p>Because each <m>X_i</m> has variance <m>\sigma^2</m>,</p>
 
     <md>
-      \operatorname{Var}(\overline{X})
+      \var(\overline{X})
       =\frac{1}{n^2}(n\sigma^2)
       =\frac{\sigma^2}{n}.
     </md>
@@ -77,7 +77,7 @@
     <p>Taking square roots gives</p>
 
     <md>
-      \sigma_{\overline{X}}=\sqrt{\operatorname{Var}(\overline{X})}
+      \sigma_{\overline{X}}=\sqrt{\var(\overline{X})}
       =\sqrt{\frac{\sigma^2}{n}}
       =\frac{\sigma}{\sqrt{n}}.
     </md>
@@ -535,7 +535,7 @@
     sample proportion is approximately normal with mean</p>
 
     <md>
-      E(\widehat{p})=E\left(\frac{X}{n}\right)=\frac{E(X)}{n}=\frac{np}{n}=p
+      \E(\widehat{p})=\E\left(\frac{X}{n}\right)=\frac{\E(X)}{n}=\frac{np}{n}=p
     </md>
 
     <p>and standard deviation</p>

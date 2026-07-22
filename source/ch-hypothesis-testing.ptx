@@ -648,16 +648,16 @@
     <p>is approximately normal. Its mean is</p>
 
     <md alignment="align">
-      <mrow>E(\overline{X}_1-\overline{X}_2)&amp;=E(\overline{X}_1)+E(-\overline{X}_2)</mrow>
-      <mrow>&amp;=E(\overline{X}_1)-E(\overline{X}_2)</mrow>
+      <mrow>\E(\overline{X}_1-\overline{X}_2)&amp;=\E(\overline{X}_1)+\E(-\overline{X}_2)</mrow>
+      <mrow>&amp;=\E(\overline{X}_1)-\E(\overline{X}_2)</mrow>
       <mrow>&amp;=\mu_1-\mu_2.</mrow>
     </md>
 
     <p>Because the two samples are independent, the variance is</p>
 
     <md alignment="align">
-      <mrow>\operatorname{Var}(\overline{X}_1-\overline{X}_2)&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(-\overline{X}_2)</mrow>
-      <mrow>&amp;=\operatorname{Var}(\overline{X}_1)+\operatorname{Var}(\overline{X}_2)</mrow>
+      <mrow>\var(\overline{X}_1-\overline{X}_2)&amp;=\var(\overline{X}_1)+\var(-\overline{X}_2)</mrow>
+      <mrow>&amp;=\var(\overline{X}_1)+\var(\overline{X}_2)</mrow>
       <mrow>&amp;=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}.</mrow>
     </md>
 

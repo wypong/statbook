@@ -381,7 +381,7 @@
     <p>under <m>H_0</m>. This approximation has a concrete reason. Under the null hypothesis of no rank association, once the <m>x</m>-ranks are fixed, the <m>y</m>-ranks are essentially a random permutation of <m>1,2,\ldots,n</m>. In that random-permutation model, the Spearman statistic has mean 0 and variance</p>
 
     <md>
-      \operatorname{Var}(r_s)=\frac{1}{n-1}.
+      \var(r_s)=\frac{1}{n-1}.
     </md>
 
     <p>So multiplying by <m>\sqrt{n-1}</m> makes the variance equal to 1. As <m>n</m> grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why <m>r_s\sqrt{n-1}</m> can be treated as approximately standard normal for a large-sample test.</p>

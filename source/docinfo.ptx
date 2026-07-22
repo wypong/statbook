@@ -22,6 +22,9 @@
     \newcommand{\Z}{\mathbb Z}
     \newcommand{\Q}{\mathbb Q}
     \newcommand{\R}{\mathbb R}
+    \newcommand{\var}{\operatorname{Var}}
+    \newcommand{\cov}{\operatorname{Cov}}
+    \newcommand{\E}{\operatorname{E}}
     \pgfplotsset{compat=1.18}
     \tcbset{divisionexercisestyle/.append style={lines before break=8}}
     \tcbset{divisionexerciseegstyle/.append style={lines before break=8}}
