@@ -25,6 +25,7 @@ hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.47"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.47"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +58,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.14';
+eBookConfig.runestone_version = '8.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.ed2cce180827a7ad.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.18fa7ea1d9f376c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -74,7 +75,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
 <div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
 <input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
@@ -84,7 +85,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -102,7 +113,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-sign-test.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-nonparametric-tests.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-sign-test.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-nonparametric-tests.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-ch12-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -124,59 +135,70 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-overview.html" class="internal"><span class="codenumber">0</span> <span class="title">What Statistics Is About</span></a></div>
-<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch0-exercises.html" class="internal"><span class="codenumber">0</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-overview-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch0-exercises.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-data-types.html" class="internal"><span class="codenumber">1</span> <span class="title">Data Types</span></a></div>
 <ul id="ptx-toc-group-ch-data-types" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-data-types-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classifying-data.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Classifying Data</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-levels-of-measurement.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Levels of Measurement</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-data-types-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-organizing-data.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Displays</span></a></div>
 <ul id="ptx-toc-group-ch-organizing-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-organizing-data-3.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-frequency-tables.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Frequency Tables and Relative Frequency</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphs-for-data.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Graphs for Displaying Data</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-organizing-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-central-tendency.html" class="internal"><span class="codenumber">3</span> <span class="title">Central Tendency</span></a></div>
 <ul id="ptx-toc-group-ch-central-tendency" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-central-tendency-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mean-median-mode.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Mean, Median, and Mode</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-center-from-tables-and-shape.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Center from Frequency Tables and the Shape of a Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-central-tendency-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-spread-of-data.html" class="internal"><span class="codenumber">4</span> <span class="title">Spread of Data</span></a></div>
 <ul id="ptx-toc-group-ch-spread-of-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-spread-of-data-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-quartiles-iqr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Quartiles and the Interquartile Range</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-boxplots-outliers.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Five-Number Summary, Boxplots, and Outliers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-variance-sd-zscores.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Variance, Standard Deviation, and z-Scores</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-spread-of-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-linear-regression.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Regression</span></a></div>
 <ul id="ptx-toc-group-ch-linear-regression" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-linear-regression-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scatterplots-correlation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Scatterplots and Correlation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regression-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Regression Lines and Prediction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-linear-regression-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-probability.html" class="internal"><span class="codenumber">6</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-ch-probability" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-probability-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
 <li class="toc-item toc-section">
@@ -187,51 +209,61 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-contingency-tables" class="internal"><span class="title">Contingency Tables</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-probability-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-random-variables.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete Random Variables</span></a></div>
 <ul id="ptx-toc-group-ch-random-variables" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-random-variables-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-random-variables-pmf.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Random Variables, CDFs, Expectation, and Variance</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cdf-expected-value.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Properties of Expectation and Variance</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-random-variables-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-binomial-distribution.html" class="internal"><span class="codenumber">8</span> <span class="title">Binomial Distributions</span></a></div>
 <ul id="ptx-toc-group-ch-binomial-distribution" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-binomial-distribution-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bernoulli-binomial.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Bernoulli Trials and Binomial Coefficients</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-pdf-cdf.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Binomial Probabilities and the Cumulative Distribution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-normal-approximation.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Binomial Approximation of Normal Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-binomial-distribution-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-distributions.html" class="internal"><span class="codenumber">9</span> <span class="title">Normal Distributions</span></a></div>
 <ul id="ptx-toc-group-ch-normal-distributions" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-normal-distributions-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-continuous-uniform.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Continuous Random Variables and the Uniform Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-distributions.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Normal Distributions and Z-Scores</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-z-alpha-notation.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The z-Alpha Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-probabilities-percentiles.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Normal Probabilities and Percentiles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-normal-distributions-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-confidence-intervals.html" class="internal"><span class="codenumber">10</span> <span class="title">Confidence Intervals</span></a></div>
 <ul id="ptx-toc-group-ch-confidence-intervals" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-confidence-intervals-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-confidence-intervals-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-hypothesis-testing.html" class="internal"><span class="codenumber">11</span> <span class="title">Hypothesis Testing</span></a></div>
 <ul id="ptx-toc-group-ch-hypothesis-testing" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-hypothesis-testing-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
@@ -254,61 +286,41 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chi-square-independence-test.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Chi-Square Test of Independence</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-hypothesis-testing-12.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-analysis-of-variance.html" class="internal"><span class="codenumber">12</span> <span class="title">The Analysis of Variance</span></a></div>
 <ul id="ptx-toc-group-ch-analysis-of-variance" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-analysis-of-variance-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-variance-components.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Components of Variation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-testing-several-means.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Testing Several Means</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-analysis-of-variance-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-nonparametric-tests.html" class="internal"><span class="codenumber">13</span> <span class="title">Non-Parametric Tests</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-nonparametric-tests">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-nonparametric-tests-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sign-test.html" class="internal"><span class="codenumber">13.1</span> <span class="title">The Sign Test</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-spearman-rank-correlation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Spearman Test of Rank Correlation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-nonparametric-tests-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div>
-<ul id="ptx-toc-group-app-sampling-practice" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-why.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Why Sampling Matters</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-simple-random.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Simple Random Samples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-common-methods.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Other Common Sampling Methods</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-experiments.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Sampling and Experimental Design</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-choosing.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Choosing a Sampling Method</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="app-sampling-practice-exercises.html" class="internal"><span class="codenumber">A.6</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div>
-<ul id="ptx-toc-group-app-binomial-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p01.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Success Probability 0.10</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p02.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Success Probability 0.20</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p03.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Success Probability 0.30</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p04.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Success Probability 0.40</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p05.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Success Probability 0.50</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-normal-table.html" class="internal"><span class="codenumber">C</span> <span class="title">Normal Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-t-table.html" class="internal"><span class="codenumber">D</span> <span class="title">The t Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-chi-square-table.html" class="internal"><span class="codenumber">E</span> <span class="title">The Chi-Square Distribution</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div>
-<ul id="ptx-toc-group-app-f-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-005.html" class="internal"><span class="codenumber">F.1</span> <span class="title">Right-Tail Area 0.05</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-001.html" class="internal"><span class="codenumber">F.2</span> <span class="title">Right-Tail Area 0.01</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -321,44 +333,62 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sec-spearman-rank-correlation-3">A relationship is <dfn class="terminology">monotone</dfn> if it mostly moves in one direction. A positive monotone relationship tends to go up as <span class="process-math">\(x\)</span> increases. A negative monotone relationship tends to go down as <span class="process-math">\(x\)</span> increases. It does not have to be a straight line. So the Spearman test is about monotonicity, not linearity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-monotone-not-linear"><div class="image-box" style="width: 92%; margin-left: 4%; margin-right: 4%;"><img src="generated/latex-image/fig-monotone-not-linear-2.svg" role="img" class="contained" alt="Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone."></div>
+<figure class="figure figure-like" id="fig-monotone-not-linear"><div class="image-box" style="width: 92%; margin-left: 4%; margin-right: 4%;">
+<img src="generated/latex-image/fig-monotone-not-linear-2.svg" role="img" class="contained" alt="Two scatterplots."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-monotone-not-linear-2-description">
+<div class="para" id="fig-monotone-not-linear-2-2-1">The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-monotone-not-linear-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Monotone and non-monotone patterns<div class="autopermalink" aria-hidden="true" data-description="Figure 13.2.1"><a tabindex="-1" href="#fig-monotone-not-linear" title="Copy heading and permalink for Figure 13.2.1" aria-label="Copy heading and permalink for Figure 13.2.1">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="sec-spearman-rank-correlation-5">To compute <span class="process-math">\(r_s\text{,}\)</span> rank the <span class="process-math">\(x\)</span>-values from smallest to largest and rank the <span class="process-math">\(y\)</span>-values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let <span class="process-math">\(R_i\)</span> be the rank of <span class="process-math">\(x_i\text{,}\)</span> let <span class="process-math">\(S_i\)</span> be the rank of <span class="process-math">\(y_i\text{,}\)</span> and let<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-6">
+<div class="para logical" id="sec-spearman-rank-correlation-6">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-6-1">
 \begin{equation*}
 d_i=R_i-S_i.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-7">Then<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-8">
+<div class="para logical" id="sec-spearman-rank-correlation-8">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-8-1">
 \begin{equation*}
 r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-spearman-rank-correlation-9">The denominator is important. The common no-ties formula has <span class="process-math">\(n(n^2-1)\)</span> in the denominator, which is the same as <span class="process-math">\(n(n-1)(n+1)\text{.}\)</span> A formula with only <span class="process-math">\(n(n-1)\)</span> is missing the factor <span class="process-math">\(n+1\)</span> and will not give the Spearman correlation coefficient.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-spearman-rank-correlation-10">Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of <span class="process-math">\(1,2,\ldots,n\text{,}\)</span> so they have the same mean<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-11">
+<div class="para logical" id="sec-spearman-rank-correlation-11">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-11-1">
 \begin{equation*}
 \overline{R}=\overline{S}=\frac{n+1}{2}.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-12">The ordinary correlation of the ranks is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-13">
+<div class="para logical" id="sec-spearman-rank-correlation-13">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-13-1">
 \begin{equation*}
 r_s=
 \frac{\sum (R_i-\overline{R})(S_i-\overline{S})}
 {\sqrt{\sum (R_i-\overline{R})^2}\sqrt{\sum (S_i-\overline{S})^2}}.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-14">Because both rank lists have the same spread,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-15">
+<div class="para logical" id="sec-spearman-rank-correlation-15">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-15-1">
 \begin{equation*}
 \sum (R_i-\overline{R})^2
 =
@@ -367,18 +397,24 @@ r_s=
 \frac{n(n^2-1)}{12}.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-16">Now expand the squared rank differences:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-17">
+<div class="para logical" id="sec-spearman-rank-correlation-17">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-17-1">
 \begin{equation*}
 \sum d_i^2
 =
 \sum\left((R_i-\overline{R})-(S_i-\overline{S})\right)^2.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-18">After expanding and collecting terms,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-19">
+<div class="para logical" id="sec-spearman-rank-correlation-19">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-19-1">
 \begin{equation*}
 \sum d_i^2
 =
@@ -386,12 +422,17 @@ r_s=
 -2\sum (R_i-\overline{R})(S_i-\overline{S}).
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-20">Solving this for the cross-product sum and dividing by <span class="process-math">\(\sum (R_i-\overline{R})^2=n(n^2-1)/12\)</span> gives<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-21">
+<div class="para logical" id="sec-spearman-rank-correlation-21">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-21-1">
 \begin{equation*}
 r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-spearman-rank-correlation-22">If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -457,12 +498,15 @@ r_s=1-\frac{6\sum d_i^2}{n(n^2-1)}.
 </figure>
 <div class="para" id="ex-spearman-coefficient-4">Here <span class="process-math">\(\sum d^2=4\)</span> and <span class="process-math">\(n=6\text{.}\)</span> Therefore<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-coefficient-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-spearman-coefficient-5">
+<div class="para logical" id="ex-spearman-coefficient-5">
+<div class="displaymath process-math" id="ex-spearman-coefficient-5-1">
 \begin{equation*}
 r_s=1-\frac{6(4)}{6(6^2-1)}
 =1-\frac{24}{210}
 \approx 0.886.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-coefficient-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-spearman-coefficient-6">The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-coefficient-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -470,24 +514,33 @@ r_s=1-\frac{6(4)}{6(6^2-1)}
 </article></details>
 <div class="para" id="sec-spearman-rank-correlation-24">The Spearman test usually starts with<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-25">
+<div class="para logical" id="sec-spearman-rank-correlation-25">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-25-1">
 \begin{equation*}
 H_0:\rho_s=0,
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-26">meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-27">
+<div class="para logical" id="sec-spearman-rank-correlation-27">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-27-1">
 \begin{equation*}
 Z=r_s\sqrt{n-1}\approx N(0,1)
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-spearman-rank-correlation-28">under <span class="process-math">\(H_0\text{.}\)</span> This approximation has a concrete reason. Under the null hypothesis of no rank association, once the <span class="process-math">\(x\)</span>-ranks are fixed, the <span class="process-math">\(y\)</span>-ranks are essentially a random permutation of <span class="process-math">\(1,2,\ldots,n\text{.}\)</span> In that random-permutation model, the Spearman statistic has mean 0 and variance<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="sec-spearman-rank-correlation-29">
+<div class="para logical" id="sec-spearman-rank-correlation-29">
+<div class="displaymath process-math" id="sec-spearman-rank-correlation-29-1">
 \begin{equation*}
 \var(r_s)=\frac{1}{n-1}.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-spearman-rank-correlation-30">So multiplying by <span class="process-math">\(\sqrt{n-1}\)</span> makes the variance equal to 1. As <span class="process-math">\(n\)</span> grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why <span class="process-math">\(r_s\sqrt{n-1}\)</span> can be treated as approximately standard normal for a large-sample test.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-spearman-rank-correlation-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -499,26 +552,32 @@ Z=r_s\sqrt{n-1}\approx N(0,1)
 </div>
 <div class="para" id="ex-spearman-large-sample-test-3">The hypotheses are<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-large-sample-test-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-spearman-large-sample-test-4">
+<div class="para logical" id="ex-spearman-large-sample-test-4">
+<div class="displaymath process-math" id="ex-spearman-large-sample-test-4-1">
 \begin{equation*}
 H_0:\rho_s=0
 \qquad\text{and}\qquad
 H_a:\rho_s&gt;0.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-large-sample-test-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="ex-spearman-large-sample-test-5">The large-sample statistic is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-large-sample-test-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-spearman-large-sample-test-6">
+<div class="para logical" id="ex-spearman-large-sample-test-6">
+<div class="displaymath process-math" id="ex-spearman-large-sample-test-6-1">
 \begin{equation*}
 z=r_s\sqrt{n-1}=0.70\sqrt{19}\approx 3.05.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-large-sample-test-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-spearman-large-sample-test-7">The right-tailed p-value is about <span class="process-math">\(P(Z\ge 3.05)\approx 0.001\text{.}\)</span> The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spearman-large-sample-test-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 13.2.4: A Large-Sample Spearman Test"><a tabindex="-1" href="#ex-spearman-large-sample-test" title="Copy heading and permalink for Example 13.2.4: A Large-Sample Spearman Test" aria-label="Copy heading and permalink for Example 13.2.4: A Large-Sample Spearman Test">🔗</a></div>
 </article></details>
 <article class="activity project-like" id="act-ch12-rank-correlation-card-sort"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rank Correlation Card Sort.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rank Correlation Card Sort.</span>
 </h2>
 <div class="introduction" id="act-ch12-rank-correlation-card-sort-2">
 <div class="para" id="act-ch12-rank-correlation-card-sort-2-1">Practice reading monotone association without worrying about the original measurement units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -527,23 +586,23 @@ z=r_s\sqrt{n-1}=0.70\sqrt{19}\approx 3.05.
 <article class="task exercise-like" id="act-ch12-rank-correlation-card-sort-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch12-rank-correlation-card-sort-3-1-1">Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.1.a"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-3" title="Copy heading and permalink for Task 13.2.1.a" aria-label="Copy heading and permalink for Task 13.2.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.5.a"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-3" title="Copy heading and permalink for Task 13.2.5.a" aria-label="Copy heading and permalink for Task 13.2.5.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch12-rank-correlation-card-sort-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch12-rank-correlation-card-sort-4-1-1">Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate <span class="process-math">\(r_s\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.1.b"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-4" title="Copy heading and permalink for Task 13.2.1.b" aria-label="Copy heading and permalink for Task 13.2.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.5.b"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-4" title="Copy heading and permalink for Task 13.2.5.b" aria-label="Copy heading and permalink for Task 13.2.5.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch12-rank-correlation-card-sort-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch12-rank-correlation-card-sort-5-1-1">Describe one arrangement that has a clear curved pattern but still has positive monotone association.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.1.c"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-5" title="Copy heading and permalink for Task 13.2.1.c" aria-label="Copy heading and permalink for Task 13.2.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 13.2.1: Rank Correlation Card Sort"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort" title="Copy heading and permalink for Activity 13.2.1: Rank Correlation Card Sort" aria-label="Copy heading and permalink for Activity 13.2.1: Rank Correlation Card Sort">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 13.2.5.c"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort-5" title="Copy heading and permalink for Task 13.2.5.c" aria-label="Copy heading and permalink for Task 13.2.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 13.2.5: Rank Correlation Card Sort"><a tabindex="-1" href="#act-ch12-rank-correlation-card-sort" title="Copy heading and permalink for Activity 13.2.5: Rank Correlation Card Sort" aria-label="Copy heading and permalink for Activity 13.2.5: Rank Correlation Card Sort">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 13.2: The Spearman Test of Rank Correlation"><a tabindex="-1" href="#sec-spearman-rank-correlation" title="Copy heading and permalink for Section 13.2: The Spearman Test of Rank Correlation" aria-label="Copy heading and permalink for Section 13.2: The Spearman Test of Rank Correlation">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-sign-test.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-sign-test.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-ch12-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -10,83 +10,38 @@ var ptx_lunr_docs = [
   "body": " Preface  This book grew out of my course notes for an elementary statistics course that I teach at California State University, Dominguez Hills. It is written for students who are seeing statistics for the first time and want a text that explains ideas plainly, works through examples carefully, and does not lose sight of what the numbers mean.  The main goal of the book is to help students build statistical judgment, not just memorize formulas. We begin with the basic language of data, then move through tables, graphs, measures of center and spread, probability, random variables, and the main ideas of statistical inference. The progression is meant to feel natural: first describe data clearly, then model randomness, and finally use sample information to make decisions about a larger population.  Some features of this book are worth pointing out:   The writing style is direct and conversational, with an emphasis on explaining why a method is used and what its result tells us.  New ideas are introduced with concrete examples drawn from familiar settings such as campus life, health, business, sports, and everyday decision-making.  Each chapter includes exercises so students can practice both basic skills and interpretation.  The book moves from descriptive statistics to probability and then to inference, so later topics rest on ideas students have already seen and used.  Because the text is developed in PreTeXt , it is designed to grow over time and remain easy to revise, improve, and share.   This is still a developing book, and it will continue to change as the course evolves. My hope is that it stays useful to students at Cal State Dominguez Hills while also being clear and practical for anyone learning elementary statistics in a first course.  "
 },
 {
-  "id": "front-colophon",
+  "id": "sec-ch0-exercises",
   "level": "1",
-  "url": "front-colophon.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": ""
-},
-{
-  "id": "ch-overview",
-  "level": "1",
-  "url": "ch-overview.html",
-  "type": "Chapter",
-  "number": "0",
-  "title": "What Statistics Is About",
-  "body": " What Statistics Is About   Statistics is the study of how we learn from data. It gives us a way to collect information, organize it, summarize it, analyze it, and then use it to make decisions. In everyday life, raw data by itself is often just a pile of numbers, labels, or measurements. Statistics helps turn that pile into a story we can understand.  That story matters because modern life runs on data. Doctors compare treatments, businesses track sales, schools study student success, sports teams evaluate performance, and governments use surveys to understand communities. In each of these settings, the goal is not just to gather data, but to ask sensible questions and to draw conclusions without being fooled by randomness, bias, or incomplete information.  Two big ideas appear early in almost every statistics course. Descriptive statistics statistics descriptive is about summarizing what the data says right now, often with tables, graphs, averages, or percentages. Inferential statistics statistics inferential is about going a step further and using data to say something about a larger group or about a process that is not fully observed. Much of statistics is about moving carefully from what we have seen to what we think is probably true.  Another basic distinction is between a population sampling population and a sample sampling sample . The population is the full group we care about. The sample is the part we actually observe. A number that describes a population is called a parameter summaries parameter , while a number computed from a sample is called a statistic summaries statistic . In practice we usually do not have access to an entire population, so we use sample statistics to estimate population parameters.   A Campus Survey  Suppose a college wants to know how students feel about parking on campus. Asking every student may be too expensive or too slow, so the college surveys 400 students chosen from the student body. The percentage of those 400 students who say parking is a serious problem is a statistic. The true percentage for all students is a parameter. The sample gives useful information, but the sample result will usually not match the population value exactly.    Describing Data Versus Making a Prediction  A basketball player takes 50 free throws in practice and makes 41 of them. Saying that the player made 82% of the practice shots is descriptive statistics. Using that practice result to predict how the player will perform in future games is inferential statistics. The same data can support both description and prediction, but those are not the same task.     Exercises   A city wants to estimate the average commute time of all workers in the city. It studies 600 randomly selected workers. Identify the population, the sample, and the kind of quantity that would be a parameter.    A streaming service reports that 63% of the users in a test group watched at least one documentary last month. Give one statement about this situation that is descriptive and one that is inferential.    Write down a real-life question from your own experience that could be answered with data. Then say what kind of data you would collect and what decision you hope the data would help you make.    "
-},
-{
-  "id": "ch-overview-2-3",
-  "level": "2",
-  "url": "ch-overview.html#ch-overview-2-3",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Descriptive statistics statistics descriptive Inferential statistics statistics inferential "
-},
-{
-  "id": "ch-overview-2-4",
-  "level": "2",
-  "url": "ch-overview.html#ch-overview-2-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "population sampling population sample sampling sample parameter summaries parameter statistic summaries statistic "
-},
-{
-  "id": "ex-campus-survey",
-  "level": "2",
-  "url": "ch-overview.html#ex-campus-survey",
-  "type": "Example",
-  "number": "0.0.1",
-  "title": "A Campus Survey.",
-  "body": " A Campus Survey  Suppose a college wants to know how students feel about parking on campus. Asking every student may be too expensive or too slow, so the college surveys 400 students chosen from the student body. The percentage of those 400 students who say parking is a serious problem is a statistic. The true percentage for all students is a parameter. The sample gives useful information, but the sample result will usually not match the population value exactly.  "
-},
-{
-  "id": "ex-basketball-free-throws",
-  "level": "2",
-  "url": "ch-overview.html#ex-basketball-free-throws",
-  "type": "Example",
-  "number": "0.0.2",
-  "title": "Describing Data Versus Making a Prediction.",
-  "body": " Describing Data Versus Making a Prediction  A basketball player takes 50 free throws in practice and makes 41 of them. Saying that the player made 82% of the practice shots is descriptive statistics. Using that practice result to predict how the player will perform in future games is inferential statistics. The same data can support both description and prediction, but those are not the same task.  "
+  "url": "sec-ch0-exercises.html",
+  "type": "Section",
+  "number": "0.1",
+  "title": "Exercises",
+  "body": " Exercises   A city wants to estimate the average commute time of all workers in the city. It studies 600 randomly selected workers. Identify the population, the sample, and the kind of quantity that would be a parameter.    A streaming service reports that 63% of the users in a test group watched at least one documentary last month. Give one statement about this situation that is descriptive and one that is inferential.    Write down a real-life question from your own experience that could be answered with data. Then say what kind of data you would collect and what decision you hope the data would help you make.   "
 },
 {
   "id": "ch0-ex-1",
   "level": "2",
-  "url": "ch0-exercises.html#ch0-ex-1",
-  "type": "Exercise",
-  "number": "0.1",
+  "url": "sec-ch0-exercises.html#ch0-ex-1",
+  "type": "Checkpoint",
+  "number": "0.1.1",
   "title": "",
   "body": " A city wants to estimate the average commute time of all workers in the city. It studies 600 randomly selected workers. Identify the population, the sample, and the kind of quantity that would be a parameter.  "
 },
 {
   "id": "ch0-ex-2",
   "level": "2",
-  "url": "ch0-exercises.html#ch0-ex-2",
-  "type": "Exercise",
-  "number": "0.2",
+  "url": "sec-ch0-exercises.html#ch0-ex-2",
+  "type": "Checkpoint",
+  "number": "0.1.2",
   "title": "",
   "body": " A streaming service reports that 63% of the users in a test group watched at least one documentary last month. Give one statement about this situation that is descriptive and one that is inferential.  "
 },
 {
   "id": "ch0-ex-3",
   "level": "2",
-  "url": "ch0-exercises.html#ch0-ex-3",
-  "type": "Exercise",
-  "number": "0.3",
+  "url": "sec-ch0-exercises.html#ch0-ex-3",
+  "type": "Checkpoint",
+  "number": "0.1.3",
   "title": "",
   "body": " Write down a real-life question from your own experience that could be answered with data. Then say what kind of data you would collect and what decision you hope the data would help you make.  "
 },
@@ -97,61 +52,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Classifying Data",
-  "body": " Classifying Data  A useful way to organize the main data types is to think of them as a classification tree. We first decide whether the data is qualitative or quantitative. Then we refine the classification one more step.    Qualitative data data qualitative , also called categorical data data categorical , records labels, names, or categories.   Nominal data data nominal : categories with no natural order.  Ordinal data data ordinal : categories with a meaningful order, but without equal numerical gaps.     Quantitative data data quantitative , also called numerical data data numerical , records counts or measurements.   Discrete data data discrete : values obtained by counting.  Continuous data data continuous : values obtained by measuring.     This tree is simple, but it is powerful. Once we know where a variable belongs, we already know a lot about how to describe it. Category labels are usually summarized by counts or percentages, while numerical data can often be summarized by averages, spreads, and graphs built around number lines.  A good classroom data set can show all of these ideas at once. If you are collecting information from students, useful choices include first name, last name initial, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, distance from school, commute time, shoe size, handedness, favorite subject, and number of pets. Some of these are categories and some are measurements, and some of them look numerical even though they are really labels.   Collecting Class Data   Work with the class to build one data set that includes several different variables. Try to include both categories and measurements so that the class data will cover all of the main data types later on.     Choose a small set of variables to record for each student. A good starting list is first name, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, and distance from school.      If you want a wider data set, add a few more variables such as handedness, favorite subject, commute time, shoe size, number of pets, or favorite music genre.      Put the information into a neat table. As you do, note which variables are really labels, which ones have an order, and which ones are true measurements.      Classifying the Data Types   Use the data set from the previous activity. The goal is to decide whether each variable is qualitative or quantitative, and then to refine the classification one step further.     Classify each variable as qualitative or quantitative.      For the qualitative variables, decide whether each one is nominal or ordinal.      For the quantitative variables, decide whether each one is discrete or continuous.      Check that your list includes at least one nominal variable, one ordinal variable, one discrete variable, and one continuous variable. If one of those types is missing, add another variable and try again.      Gym Check-In Data  A gym records each member's membership plan, locker preference, number of visits this month, and time spent on the treadmill today. The membership plan is qualitative because it is a category label. Locker preference such as upper, middle, or lower is qualitative and ordinal because the choices have an order. The number of visits is quantitative and discrete because it is counted. Time spent on the treadmill is quantitative and continuous because it is measured.    Online Store Data  An online store keeps track of payment method, customer satisfaction rating, number of items in an order, and delivery time in hours. Payment method is nominal. Customer satisfaction on a five-star scale is ordinal. Number of items is discrete. Delivery time is continuous.    Checkpoint  Classify each variable as nominal, ordinal, discrete, or continuous: type of housing, finish level in a video game (beginner, intermediate, advanced), number of classes missed, and amount of sleep last night.   Qualitative data answers questions like “Which group?” or “What kind?” Quantitative data answers questions like “How many?” or “How much?” Within qualitative data, nominal and ordinal variables differ by whether order matters. Within quantitative data, discrete and continuous variables differ by whether the values arise from counting or measuring.   Nominal examples: browser type, favorite fruit, blood type, and airline carrier.  Ordinal examples: hotel ratings, course grades, pain level, and military rank.  Discrete examples: number of logins, goals scored, books checked out, and children in a family.  Continuous examples: rainfall, waiting time, blood pressure, and distance run.    Hospital Triage  In an emergency room, a patient's triage level might be coded as immediate, urgent, less urgent, or nonurgent. That variable is ordinal because the levels have a clear order. The patient's pulse rate is quantitative. If it is recorded as beats per minute, it is usually treated as discrete because it is based on a count. The patient's body mass is continuous because it is measured.    Checkpoint  A music app records subscription type, playlist mood label, number of songs skipped in a session, and total listening time. Classify each variable as nominal, ordinal, discrete, or continuous.   "
+  "body": " Classifying Data  A useful way to organize the main data types is to think of them as a classification tree. We first decide whether the data is qualitative or quantitative. Then we refine the classification one more step.    Qualitative data data qualitative , also called categorical data data categorical , records labels, names, or categories.   Nominal data data nominal : categories with no natural order.  Ordinal data data ordinal : categories with a meaningful order, but without equal numerical gaps.     Quantitative data data quantitative , also called numerical data data numerical , records counts or measurements.   Discrete data data discrete : values obtained by counting.  Continuous data data continuous : values obtained by measuring.     This tree is simple, but it is powerful. Once we know where a variable belongs, we already know a lot about how to describe it. Category labels are usually summarized by counts or percentages, while numerical data can often be summarized by averages, spreads, and graphs built around number lines.  A good classroom data set can show all of these ideas at once. If you are collecting information from students, useful choices include first name, last name initial, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, distance from school, commute time, shoe size, handedness, favorite subject, and number of pets. Some of these are categories and some are measurements, and some of them look numerical even though they are really labels.   Collecting Class Data   Work with the class to build one data set that includes several different variables. Try to include both categories and measurements so that the class data will cover all of the main data types later on.     Choose a small set of variables to record for each student. A good starting list is first name, eye color, whether the student wears glasses, year in school, birth year, number of siblings, height, and distance from school.      If you want a wider data set, add a few more variables such as handedness, favorite subject, commute time, shoe size, number of pets, or favorite music genre.      Put the information into a neat table. As you do, note which variables are really labels, which ones have an order, and which ones are true measurements.      Classifying the Data Types   Use the data set from the previous activity. The goal is to decide whether each variable is qualitative or quantitative, and then to refine the classification one step further.     Classify each variable as qualitative or quantitative.      For the qualitative variables, decide whether each one is nominal or ordinal.      For the quantitative variables, decide whether each one is discrete or continuous.      Check that your list includes at least one nominal variable, one ordinal variable, one discrete variable, and one continuous variable. If one of those types is missing, add another variable and try again.      Gym Check-In Data  A gym records each member's membership plan, locker preference, number of visits this month, and time spent on the treadmill today. The membership plan is qualitative because it is a category label. Locker preference such as upper, middle, or lower is qualitative and ordinal because the choices have an order. The number of visits is quantitative and discrete because it is counted. Time spent on the treadmill is quantitative and continuous because it is measured.    Online Store Data  An online store keeps track of payment method, customer satisfaction rating, number of items in an order, and delivery time in hours. Payment method is nominal. Customer satisfaction on a five-star scale is ordinal. Number of items is discrete. Delivery time is continuous.    Checkpoint  Classify each variable as nominal, ordinal, discrete, or continuous: type of housing, finish level in a video game (beginner, intermediate, advanced), number of classes missed, and amount of sleep last night.   Qualitative data answers questions like Which group? or What kind? Quantitative data answers questions like How many? or How much? Within qualitative data, nominal and ordinal variables differ by whether order matters. Within quantitative data, discrete and continuous variables differ by whether the values arise from counting or measuring.   Nominal examples: browser type, favorite fruit, blood type, and airline carrier.  Ordinal examples: hotel ratings, course grades, pain level, and military rank.  Discrete examples: number of logins, goals scored, books checked out, and children in a family.  Continuous examples: rainfall, waiting time, blood pressure, and distance run.    Hospital Triage  In an emergency room, a patient's triage level might be coded as immediate, urgent, less urgent, or nonurgent. That variable is ordinal because the levels have a clear order. The patient's pulse rate is quantitative. If it is recorded as beats per minute, it is usually treated as discrete because it is based on a count. The patient's body mass is continuous because it is measured.    Checkpoint  A music app records subscription type, playlist mood label, number of songs skipped in a session, and total listening time. Classify each variable as nominal, ordinal, discrete, or continuous.   "
 },
 {
-  "id": "sec-classifying-data-3-1-1",
+  "id": "sec-classifying-data-3",
   "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-1-1",
+  "url": "sec-classifying-data.html#sec-classifying-data-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Qualitative data data qualitative categorical data data categorical "
-},
-{
-  "id": "sec-classifying-data-3-1-2-1-1",
-  "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-1-2-1-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Nominal data data nominal "
-},
-{
-  "id": "sec-classifying-data-3-1-2-2-1",
-  "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-1-2-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Ordinal data data ordinal "
-},
-{
-  "id": "sec-classifying-data-3-2-1",
-  "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Quantitative data data quantitative numerical data data numerical "
-},
-{
-  "id": "sec-classifying-data-3-2-2-1-1",
-  "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-2-2-1-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Discrete data data discrete "
-},
-{
-  "id": "sec-classifying-data-3-2-2-2-1",
-  "level": "2",
-  "url": "sec-classifying-data.html#sec-classifying-data-3-2-2-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Continuous data data continuous "
+  "body": "Qualitative data categorical data Nominal data Ordinal data Quantitative data numerical data Discrete data Continuous data "
 },
 {
   "id": "act-collect-class-data",
@@ -176,7 +86,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classifying-data.html#ex-gym-checkin",
   "type": "Example",
-  "number": "1.1.1",
+  "number": "1.1.3",
   "title": "Gym Check-In Data.",
   "body": " Gym Check-In Data  A gym records each member's membership plan, locker preference, number of visits this month, and time spent on the treadmill today. The membership plan is qualitative because it is a category label. Locker preference such as upper, middle, or lower is qualitative and ordinal because the choices have an order. The number of visits is quantitative and discrete because it is counted. Time spent on the treadmill is quantitative and continuous because it is measured.  "
 },
@@ -185,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classifying-data.html#ex-online-store",
   "type": "Example",
-  "number": "1.1.2",
+  "number": "1.1.4",
   "title": "Online Store Data.",
   "body": " Online Store Data  An online store keeps track of payment method, customer satisfaction rating, number of items in an order, and delivery time in hours. Payment method is nominal. Customer satisfaction on a five-star scale is ordinal. Number of items is discrete. Delivery time is continuous.  "
 },
@@ -194,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classifying-data.html#cp-classification-tree",
   "type": "Checkpoint",
-  "number": "1.1.3",
+  "number": "1.1.5",
   "title": "Checkpoint.",
   "body": " Checkpoint  Classify each variable as nominal, ordinal, discrete, or continuous: type of housing, finish level in a video game (beginner, intermediate, advanced), number of classes missed, and amount of sleep last night.  "
 },
@@ -203,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classifying-data.html#ex-hospital-triage",
   "type": "Example",
-  "number": "1.1.4",
+  "number": "1.1.6",
   "title": "Hospital Triage.",
   "body": " Hospital Triage  In an emergency room, a patient's triage level might be coded as immediate, urgent, less urgent, or nonurgent. That variable is ordinal because the levels have a clear order. The patient's pulse rate is quantitative. If it is recorded as beats per minute, it is usually treated as discrete because it is based on a count. The patient's body mass is continuous because it is measured.  "
 },
@@ -212,7 +122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classifying-data.html#cp-mixed-classification",
   "type": "Checkpoint",
-  "number": "1.1.5",
+  "number": "1.1.7",
   "title": "Checkpoint.",
   "body": " Checkpoint  A music app records subscription type, playlist mood label, number of songs skipped in a session, and total listening time. Classify each variable as nominal, ordinal, discrete, or continuous.  "
 },
@@ -232,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "levels of measurement measurement levels "
+  "body": "levels of measurement "
 },
 {
   "id": "sec-levels-of-measurement-3",
@@ -241,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "nominal scale measurement nominal scale ordinal scale measurement ordinal scale interval scale measurement interval scale ratio scale measurement ratio scale "
+  "body": "nominal scale ordinal scale interval scale ratio scale "
 },
 {
   "id": "ex-levels-of-measurement",
@@ -266,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-levels-of-measurement.html#act-levels-class-data",
   "type": "Activity",
-  "number": "1.2.1",
+  "number": "1.2.3",
   "title": "Classifying Levels of Measurement.",
   "body": " Classifying Levels of Measurement   Return to the class data set you collected earlier. Now classify each variable by its level of measurement.     Label each variable as nominal, ordinal, interval, or ratio.      For each one, explain briefly why that level fits. Ask whether the variable is only a label, whether order matters, whether differences matter, or whether zero means none of the quantity.      Check that your data set includes examples of all four levels of measurement. If one level is missing, add another variable that fills the gap.    "
 },
@@ -275,15 +185,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-levels-of-measurement.html#cp-levels-of-measurement",
   "type": "Checkpoint",
-  "number": "1.2.3",
+  "number": "1.2.4",
   "title": "Checkpoint.",
   "body": " Checkpoint  Identify the level of measurement for each variable: jersey number, finishing place in a race, temperature in Fahrenheit, and monthly rent in dollars.  "
 },
 {
-  "id": "ch1-exercises",
+  "id": "sec-ch1-exercises",
   "level": "1",
-  "url": "ch1-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch1-exercises.html",
+  "type": "Section",
   "number": "1.3",
   "title": "Exercises",
   "body": " Exercises   Classify each variable as qualitative or quantitative: favorite season, age of a used car, student ID number, and number of courses completed.    Classify each variable as nominal or ordinal: medal type in a competition, brand of cereal, customer satisfaction level, and blood type.    Classify each variable as discrete or continuous: number of customers in line, amount of gasoline in a tank, number of goals scored by a team, and height of a sunflower plant.    Identify the level of measurement for each variable: postal ZIP code, class rank, temperature in Celsius, and annual salary.    A university records the following information about students: housing type, GPA, number of clubs joined, and academic standing. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.    A weather station reports sky condition, wind speed, number of rainy days this month, and temperature in Fahrenheit. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.    Give one example of your own for each of the following: nominal data, ordinal data, discrete data, and continuous data.    Explain why a movie rating system such as one star through five stars is usually treated as ordinal rather than interval data.    Explain why temperature measured in Kelvin is ratio data, while temperature measured in Celsius is interval data.    A hospital records patient blood type, pain score from 1 to 10, number of previous surgeries, and body temperature. Classify each variable as carefully as you can and justify any choice that might be debatable.   "
@@ -291,8 +201,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-1",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-1",
+  "type": "Checkpoint",
   "number": "1.3.1",
   "title": "",
   "body": " Classify each variable as qualitative or quantitative: favorite season, age of a used car, student ID number, and number of courses completed.  "
@@ -300,8 +210,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-2",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-2",
+  "type": "Checkpoint",
   "number": "1.3.2",
   "title": "",
   "body": " Classify each variable as nominal or ordinal: medal type in a competition, brand of cereal, customer satisfaction level, and blood type.  "
@@ -309,8 +219,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-3",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-3",
+  "type": "Checkpoint",
   "number": "1.3.3",
   "title": "",
   "body": " Classify each variable as discrete or continuous: number of customers in line, amount of gasoline in a tank, number of goals scored by a team, and height of a sunflower plant.  "
@@ -318,8 +228,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-4",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-4",
+  "type": "Checkpoint",
   "number": "1.3.4",
   "title": "",
   "body": " Identify the level of measurement for each variable: postal ZIP code, class rank, temperature in Celsius, and annual salary.  "
@@ -327,8 +237,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-5",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-5",
+  "type": "Checkpoint",
   "number": "1.3.5",
   "title": "",
   "body": " A university records the following information about students: housing type, GPA, number of clubs joined, and academic standing. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.  "
@@ -336,8 +246,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-6",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-6",
+  "type": "Checkpoint",
   "number": "1.3.6",
   "title": "",
   "body": " A weather station reports sky condition, wind speed, number of rainy days this month, and temperature in Fahrenheit. Classify each variable as nominal, ordinal, discrete, or continuous whenever possible.  "
@@ -345,8 +255,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-7",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-7",
+  "type": "Checkpoint",
   "number": "1.3.7",
   "title": "",
   "body": " Give one example of your own for each of the following: nominal data, ordinal data, discrete data, and continuous data.  "
@@ -354,8 +264,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-8",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-8",
+  "type": "Checkpoint",
   "number": "1.3.8",
   "title": "",
   "body": " Explain why a movie rating system such as one star through five stars is usually treated as ordinal rather than interval data.  "
@@ -363,8 +273,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-9",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-9",
+  "type": "Checkpoint",
   "number": "1.3.9",
   "title": "",
   "body": " Explain why temperature measured in Kelvin is ratio data, while temperature measured in Celsius is interval data.  "
@@ -372,8 +282,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch1-ex-10",
   "level": "2",
-  "url": "ch1-exercises.html#ch1-ex-10",
-  "type": "Exercise",
+  "url": "sec-ch1-exercises.html#ch1-ex-10",
+  "type": "Checkpoint",
   "number": "1.3.10",
   "title": "",
   "body": " A hospital records patient blood type, pain score from 1 to 10, number of previous surgeries, and body temperature. Classify each variable as carefully as you can and justify any choice that might be debatable.  "
@@ -394,7 +304,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "frequency table tables frequency table frequency tables frequency relative frequency tables relative frequency "
+  "body": "frequency table frequency relative frequency "
 },
 {
   "id": "ex-commute-frequency-table",
@@ -421,7 +331,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "class intervals tables class interval grouped frequency table tables grouped frequency table "
+  "body": "class intervals grouped frequency table "
 },
 {
   "id": "ex-wait-time-grouped",
@@ -446,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-frequency-tables.html#act-last-name-initials",
   "type": "Activity",
-  "number": "2.1.1",
+  "number": "2.1.5",
   "title": "Last-Name Initials.",
   "body": " Last-Name Initials   Use the first letter of each student's last name to build a frequency table. This is a nice warm-up because the data are categorical, but the table still has enough structure to let us talk about relative and cumulative frequency.     Collect the first initial of each student's last name. Make a frequency table with the initials in alphabetical order.      Add a relative frequency column. Which initial has the largest relative frequency? What percentage of the class does it represent?      Add a cumulative frequency column, again using alphabetical order. Which initials account for about half of the class?    "
 },
@@ -455,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-frequency-tables.html#act-name-lengths",
   "type": "Activity",
-  "number": "2.1.2",
+  "number": "2.1.6",
   "title": "Length of Student Names.",
   "body": " Length of Student Names   Now use the lengths of students' names. To keep the counting consistent, count letters only and ignore spaces and punctuation. This gives us numerical data, so the table can also lead naturally into cumulative frequency.     Count the number of letters in each student's full name. Make a frequency table for the name lengths, ordering the lengths from smallest to largest.      Add a relative frequency column. Which name length is most common? Which lengths are rare?      Add a cumulative frequency column. As you move from the shortest names to the longest, at what name length does the cumulative frequency first pass half of the class? What proportion of the class do the shorter names represent?    "
 },
@@ -466,7 +376,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Graphs for Displaying Data",
-  "body": " Graphs for Displaying Data  Graphs are often faster to read than tables because they turn numerical information into shape and height. Different graphs are useful for different kinds of data. A dot plot graphs dot plot works well for small sets of discrete numerical data. A bar chart graphs bar chart is good for comparing categories. A stem-and-leaf plot graphs stem-and-leaf plot keeps the original data values visible. A histogram graphs histogram and a frequency polygon graphs frequency polygon are especially useful for grouped quantitative data.   A Dot Plot of Siblings  Suppose 12 students report the number of siblings they have: 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4. The dot plot in stacks one dot for each student above the corresponding number of siblings.    Dot plot for number of siblings   A dot plot with sibling counts from 0 through 4. There is one dot above 0, three above 1, three above 2, three above 3, and two above 4.  The horizontal axis is labeled Number of siblings and is marked at 0, 1, 2, 3, and 4. One dot is stacked above 0. Three dots are stacked above 1. Three dots are stacked above 2. Three dots are stacked above 3. Two dots are stacked above 4. The tallest stacks occur at 1, 2, and 3, each with frequency 3.     A dot plot is compact and honest. It shows every observation while still making the distribution easy to read. For small data sets, that is a nice combination.  For categorical data, a bar chart is usually the better choice. The categories are placed on one axis, and the height of each bar shows its frequency or relative frequency.   Bar chart for commuting to campus   A vertical bar chart with four categories: Auto at height 5, Metro at height 3, Bike at height 2, and Walk at height 2.  The horizontal axis lists Auto, Metro, Bike, and Walk. The vertical axis is labeled Frequency and runs from 0 to 6. The Auto bar reaches 5, the Metro bar reaches 3, and the Bike and Walk bars each reach 2. Auto is the tallest bar.     The bar chart in shows the same information as , but now the comparisons are visual. We can tell right away that auto is the most common category and that bike and walk are tied.   A Stem-and-Leaf Plot  Consider these quiz scores: 72, 74, 76, 78, 80, 81, 83, 83, 85, 88, 91, 94. A stem-and-leaf plot separates each score into a stem and a leaf. In this case the tens digits are stems and the ones digits are leaves, as shown in .    Stem-and-leaf plot for quiz scores    Stem  Leaves    7  2, 4, 6, 8    8  0, 1, 3, 3, 5, 8    9  1, 4     The key idea is that the plot still contains the original data values. For example, the leaf 3 on stem 8 represents a score of 83. A stem-and-leaf plot is handy when the data set is not too large and you want both a picture and the exact values.  When the data is grouped into intervals, a histogram is often the natural graph. The bars in a histogram touch because the intervals sit next to each other on a number line. The histogram in uses the grouped wait-time data from .   Histogram for customer wait times   A histogram with five touching bars for the intervals 0 to 2, 2 to 4, 4 to 6, 6 to 8, and 8 to 10 minutes. Their heights are 6, 14, 18, 9, and 3.  The horizontal axis is labeled Wait time in minutes and is marked at 0, 2, 4, 6, 8, and 10. The vertical axis is labeled Frequency and runs from 0 to 20. Five adjacent bars represent the intervals [0,2), [2,4), [4,6), [6,8), and [8,10). Their heights are 6, 14, 18, 9, and 3 respectively. The tallest bar is the interval from 4 to 6 minutes.     A frequency polygon graphs frequency polygon is built from the same grouped data, but instead of bars we plot the class midpoints graphs midpoint against the frequencies and join the points with line segments. This is especially helpful when we want to compare shapes or place more than one distribution on the same set of axes.   Frequency polygon for customer wait times   A line graph formed by connecting the points at midpoints 1, 3, 5, 7, and 9 with frequencies 6, 14, 18, 9, and 3, together with zero-frequency endpoints at -1 and 11.  The horizontal axis is labeled Wait time in minutes and the vertical axis is labeled Frequency. A polyline starts at the point (-1,0), rises to (1,6), then to (3,14), peaks at (5,18), drops to (7,9), then to (9,3), and returns to (11,0). The highest point occurs at the midpoint 5, corresponding to the interval from 4 to 6 minutes. The two endpoints lie one class width beyond the first and last class midpoints.     Each graph has its own job. The trick is not to memorize names blindly, but to match the graph to the kind of data you have and the question you want to answer.  The table below gives a quick rule of thumb for the displays in this section.   Rules of thumb for choosing a graph       Display  Best for  What it shows well    Dot plot  Small quantitative data sets  Individual values and repeated values. Use it when the actual data points are the main thing to see.    Bar chart  Categorical data  Counts or percentages across groups. Good examples are eye color, commute method, or class standing.    Stem-and-leaf plot  Moderate quantitative data sets  How many values fall in each stem, such as the 70s, 80s, and 90s. It still keeps the original values visible.    Histogram  Large or grouped quantitative data  The overall shape across intervals. Use it when exact individual values matter less than the pattern.      Choosing the Right Graph   Before drawing anything, the first job is to choose a graph that matches the data. The same data set can often be shown in more than one way, but some displays fit the variable much better than others.     For each variable below, decide which graph would be most appropriate: bar chart, dot plot, stem-and-leaf plot, histogram, or frequency polygon.      Explain your choice in a sentence or two. Think about whether the data is categorical or numerical, and whether the values are individual observations or grouped into classes.      Use these examples: eye color, number of siblings, height, and grouped commute times.      Bar Charts from Class Data   Use the data set collected in . Categorical variables are often easiest to understand when they are shown in a bar chart.     Choose one nominal variable from the class data, such as eye color, whether a student wears glasses, handedness, or favorite subject. Make a frequency table and then draw a bar chart.      If the variable has a natural order, such as year in school, make sure the bars are arranged in that order.      Write two observations from the graph. Which category is most common? Which category is least common?      Dot Plots and Stem-and-Leaf Plots   Use the quantitative data from the class collection. Small data sets work especially well for displays that keep the individual values visible.     Choose a discrete variable from the class data, such as number of siblings or number of pets. Make a dot plot and describe the shape of the distribution.      Choose another quantitative variable, such as height or commute time. If the data values are not too many, make a stem-and-leaf plot. If there are too many repeated values, use a dot plot instead.      Compare the two graphs. Which one makes it easier to see the exact values? Which one makes it easier to see the overall pattern?      Grouped Graphs from Class Data   If the class data include a continuous measurement like height or commute time, you can group the values into classes and make a histogram or frequency polygon. That is the natural next step when the raw values are too spread out to show clearly one by one.     Choose one continuous variable from the class data, such as height, commute time, or distance from school. Group the values into a reasonable set of class intervals.      Use the grouped data to draw a histogram. Then sketch a frequency polygon using the class midpoints.      Compare the histogram and the frequency polygon. Which one is better for seeing the shape of the data? Which one makes the class intervals easier to read?     "
+  "body": " Graphs for Displaying Data  Graphs are often faster to read than tables because they turn numerical information into shape and height. Different graphs are useful for different kinds of data. A dot plot graphs dot plot works well for small sets of discrete numerical data. A bar chart graphs bar chart is good for comparing categories. A stem-and-leaf plot graphs stem-and-leaf plot keeps the original data values visible. A histogram graphs histogram and a frequency polygon graphs frequency polygon are especially useful for grouped quantitative data.   A Dot Plot of Siblings  Suppose 12 students report the number of siblings they have: 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4. The dot plot in stacks one dot for each student above the corresponding number of siblings.    Dot plot for number of siblings   A dot plot with sibling counts from 0 through 4.  The horizontal axis is labeled Number of siblings and is marked at 0, 1, 2, 3, and 4. One dot is stacked above 0. Three dots are stacked above 1. Three dots are stacked above 2. Three dots are stacked above 3. Two dots are stacked above 4. The tallest stacks occur at 1, 2, and 3, each with frequency 3.     A dot plot is compact and honest. It shows every observation while still making the distribution easy to read. For small data sets, that is a nice combination.  For categorical data, a bar chart is usually the better choice. The categories are placed on one axis, and the height of each bar shows its frequency or relative frequency.   Bar chart for commuting to campus   A vertical bar chart with four categories: Auto at height 5, Metro at height 3, Bike at height 2, and Walk at height 2.  The horizontal axis lists Auto, Metro, Bike, and Walk. The vertical axis is labeled Frequency and runs from 0 to 6. The Auto bar reaches 5, the Metro bar reaches 3, and the Bike and Walk bars each reach 2. Auto is the tallest bar.     The bar chart in shows the same information as , but now the comparisons are visual. We can tell right away that auto is the most common category and that bike and walk are tied.   A Stem-and-Leaf Plot  Consider these quiz scores: 72, 74, 76, 78, 80, 81, 83, 83, 85, 88, 91, 94. A stem-and-leaf plot separates each score into a stem and a leaf. In this case the tens digits are stems and the ones digits are leaves, as shown in .    Stem-and-leaf plot for quiz scores    Stem  Leaves    7  2, 4, 6, 8    8  0, 1, 3, 3, 5, 8    9  1, 4     The key idea is that the plot still contains the original data values. For example, the leaf 3 on stem 8 represents a score of 83. A stem-and-leaf plot is handy when the data set is not too large and you want both a picture and the exact values.  When the data is grouped into intervals, a histogram is often the natural graph. The bars in a histogram touch because the intervals sit next to each other on a number line. The histogram in uses the grouped wait-time data from .   Histogram for customer wait times   A histogram with five touching bars for the intervals 0 to 2, 2 to 4, 4 to 6, 6 to 8, and 8 to 10 minutes.  The horizontal axis is labeled Wait time in minutes and is marked at 0, 2, 4, 6, 8, and 10. The vertical axis is labeled Frequency and runs from 0 to 20. Five adjacent bars represent the intervals [0,2), [2,4), [4,6), [6,8), and [8,10). Their heights are 6, 14, 18, 9, and 3 respectively. The tallest bar is the interval from 4 to 6 minutes.     A frequency polygon graphs frequency polygon is built from the same grouped data, but instead of bars we plot the class midpoints graphs midpoint against the frequencies and join the points with line segments. This is especially helpful when we want to compare shapes or place more than one distribution on the same set of axes.   Frequency polygon for customer wait times   A line graph formed by connecting the points at midpoints 1, 3, 5, 7, and 9 with frequencies 6, 14, 18, 9, and 3.  The horizontal axis is labeled Wait time in minutes and the vertical axis is labeled Frequency. A polyline starts at the point (-1,0), rises to (1,6), then to (3,14), peaks at (5,18), drops to (7,9), then to (9,3), and returns to (11,0). The highest point occurs at the midpoint 5, corresponding to the interval from 4 to 6 minutes. The two endpoints lie one class width beyond the first and last class midpoints.     Each graph has its own job. The trick is not to memorize names blindly, but to match the graph to the kind of data you have and the question you want to answer.  The table below gives a quick rule of thumb for the displays in this section.   Rules of thumb for choosing a graph       Display  Best for  What it shows well    Dot plot  Small quantitative data sets  Individual values and repeated values. Use it when the actual data points are the main thing to see.    Bar chart  Categorical data  Counts or percentages across groups. Good examples are eye color, commute method, or class standing.    Stem-and-leaf plot  Moderate quantitative data sets  How many values fall in each stem, such as the 70s, 80s, and 90s. It still keeps the original values visible.    Histogram  Large or grouped quantitative data  The overall shape across intervals. Use it when exact individual values matter less than the pattern.      Choosing the Right Graph   Before drawing anything, the first job is to choose a graph that matches the data. The same data set can often be shown in more than one way, but some displays fit the variable much better than others.     For each variable below, decide which graph would be most appropriate: bar chart, dot plot, stem-and-leaf plot, histogram, or frequency polygon.      Explain your choice in a sentence or two. Think about whether the data is categorical or numerical, and whether the values are individual observations or grouped into classes.      Use these examples: eye color, number of siblings, height, and grouped commute times.      Bar Charts from Class Data   Use the data set collected in . Categorical variables are often easiest to understand when they are shown in a bar chart.     Choose one nominal variable from the class data, such as eye color, whether a student wears glasses, handedness, or favorite subject. Make a frequency table and then draw a bar chart.      If the variable has a natural order, such as year in school, make sure the bars are arranged in that order.      Write two observations from the graph. Which category is most common? Which category is least common?      Dot Plots and Stem-and-Leaf Plots   Use the quantitative data from the class collection. Small data sets work especially well for displays that keep the individual values visible.     Choose a discrete variable from the class data, such as number of siblings or number of pets. Make a dot plot and describe the shape of the distribution.      Choose another quantitative variable, such as height or commute time. If the data values are not too many, make a stem-and-leaf plot. If there are too many repeated values, use a dot plot instead.      Compare the two graphs. Which one makes it easier to see the exact values? Which one makes it easier to see the overall pattern?      Grouped Graphs from Class Data   If the class data include a continuous measurement like height or commute time, you can group the values into classes and make a histogram or frequency polygon. That is the natural next step when the raw values are too spread out to show clearly one by one.     Choose one continuous variable from the class data, such as height, commute time, or distance from school. Group the values into a reasonable set of class intervals.      Use the grouped data to draw a histogram. Then sketch a frequency polygon using the class midpoints.      Compare the histogram and the frequency polygon. Which one is better for seeing the shape of the data? Which one makes the class intervals easier to read?     "
 },
 {
   "id": "sec-graphs-for-data-2",
@@ -475,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "dot plot graphs dot plot bar chart graphs bar chart stem-and-leaf plot graphs stem-and-leaf plot histogram graphs histogram frequency polygon graphs frequency polygon "
+  "body": "dot plot bar chart stem-and-leaf plot histogram frequency polygon "
 },
 {
   "id": "ex-dot-plot",
@@ -493,7 +403,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "2.2.2",
   "title": "",
-  "body": " Dot plot for number of siblings   A dot plot with sibling counts from 0 through 4. There is one dot above 0, three above 1, three above 2, three above 3, and two above 4.  The horizontal axis is labeled Number of siblings and is marked at 0, 1, 2, 3, and 4. One dot is stacked above 0. Three dots are stacked above 1. Three dots are stacked above 2. Three dots are stacked above 3. Two dots are stacked above 4. The tallest stacks occur at 1, 2, and 3, each with frequency 3.    "
+  "body": " Dot plot for number of siblings   A dot plot with sibling counts from 0 through 4.  The horizontal axis is labeled Number of siblings and is marked at 0, 1, 2, 3, and 4. One dot is stacked above 0. Three dots are stacked above 1. Three dots are stacked above 2. Three dots are stacked above 3. Two dots are stacked above 4. The tallest stacks occur at 1, 2, and 3, each with frequency 3.    "
 },
 {
   "id": "fig-bar-chart-commute",
@@ -529,7 +439,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "2.2.6",
   "title": "",
-  "body": " Histogram for customer wait times   A histogram with five touching bars for the intervals 0 to 2, 2 to 4, 4 to 6, 6 to 8, and 8 to 10 minutes. Their heights are 6, 14, 18, 9, and 3.  The horizontal axis is labeled Wait time in minutes and is marked at 0, 2, 4, 6, 8, and 10. The vertical axis is labeled Frequency and runs from 0 to 20. Five adjacent bars represent the intervals [0,2), [2,4), [4,6), [6,8), and [8,10). Their heights are 6, 14, 18, 9, and 3 respectively. The tallest bar is the interval from 4 to 6 minutes.    "
+  "body": " Histogram for customer wait times   A histogram with five touching bars for the intervals 0 to 2, 2 to 4, 4 to 6, 6 to 8, and 8 to 10 minutes.  The horizontal axis is labeled Wait time in minutes and is marked at 0, 2, 4, 6, 8, and 10. The vertical axis is labeled Frequency and runs from 0 to 20. Five adjacent bars represent the intervals [0,2), [2,4), [4,6), [6,8), and [8,10). Their heights are 6, 14, 18, 9, and 3 respectively. The tallest bar is the interval from 4 to 6 minutes.    "
 },
 {
   "id": "sec-graphs-for-data-14",
@@ -538,7 +448,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "frequency polygon graphs frequency polygon midpoints graphs midpoint "
+  "body": "frequency polygon midpoints "
 },
 {
   "id": "fig-frequency-polygon-wait-time",
@@ -547,7 +457,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "2.2.7",
   "title": "",
-  "body": " Frequency polygon for customer wait times   A line graph formed by connecting the points at midpoints 1, 3, 5, 7, and 9 with frequencies 6, 14, 18, 9, and 3, together with zero-frequency endpoints at -1 and 11.  The horizontal axis is labeled Wait time in minutes and the vertical axis is labeled Frequency. A polyline starts at the point (-1,0), rises to (1,6), then to (3,14), peaks at (5,18), drops to (7,9), then to (9,3), and returns to (11,0). The highest point occurs at the midpoint 5, corresponding to the interval from 4 to 6 minutes. The two endpoints lie one class width beyond the first and last class midpoints.    "
+  "body": " Frequency polygon for customer wait times   A line graph formed by connecting the points at midpoints 1, 3, 5, 7, and 9 with frequencies 6, 14, 18, 9, and 3.  The horizontal axis is labeled Wait time in minutes and the vertical axis is labeled Frequency. A polyline starts at the point (-1,0), rises to (1,6), then to (3,14), peaks at (5,18), drops to (7,9), then to (9,3), and returns to (11,0). The highest point occurs at the midpoint 5, corresponding to the interval from 4 to 6 minutes. The two endpoints lie one class width beyond the first and last class midpoints.    "
 },
 {
   "id": "tbl-graph-choice-rules",
@@ -563,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphs-for-data.html#act-choose-graph",
   "type": "Activity",
-  "number": "2.2.1",
+  "number": "2.2.9",
   "title": "Choosing the Right Graph.",
   "body": " Choosing the Right Graph   Before drawing anything, the first job is to choose a graph that matches the data. The same data set can often be shown in more than one way, but some displays fit the variable much better than others.     For each variable below, decide which graph would be most appropriate: bar chart, dot plot, stem-and-leaf plot, histogram, or frequency polygon.      Explain your choice in a sentence or two. Think about whether the data is categorical or numerical, and whether the values are individual observations or grouped into classes.      Use these examples: eye color, number of siblings, height, and grouped commute times.    "
 },
@@ -572,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphs-for-data.html#act-class-data-bar-chart",
   "type": "Activity",
-  "number": "2.2.2",
+  "number": "2.2.10",
   "title": "Bar Charts from Class Data.",
   "body": " Bar Charts from Class Data   Use the data set collected in . Categorical variables are often easiest to understand when they are shown in a bar chart.     Choose one nominal variable from the class data, such as eye color, whether a student wears glasses, handedness, or favorite subject. Make a frequency table and then draw a bar chart.      If the variable has a natural order, such as year in school, make sure the bars are arranged in that order.      Write two observations from the graph. Which category is most common? Which category is least common?    "
 },
@@ -581,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphs-for-data.html#act-class-data-dotplot-stem",
   "type": "Activity",
-  "number": "2.2.3",
+  "number": "2.2.11",
   "title": "Dot Plots and Stem-and-Leaf Plots.",
   "body": " Dot Plots and Stem-and-Leaf Plots   Use the quantitative data from the class collection. Small data sets work especially well for displays that keep the individual values visible.     Choose a discrete variable from the class data, such as number of siblings or number of pets. Make a dot plot and describe the shape of the distribution.      Choose another quantitative variable, such as height or commute time. If the data values are not too many, make a stem-and-leaf plot. If there are too many repeated values, use a dot plot instead.      Compare the two graphs. Which one makes it easier to see the exact values? Which one makes it easier to see the overall pattern?    "
 },
@@ -590,15 +500,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphs-for-data.html#act-class-data-grouped-graphs",
   "type": "Activity",
-  "number": "2.2.4",
+  "number": "2.2.12",
   "title": "Grouped Graphs from Class Data.",
   "body": " Grouped Graphs from Class Data   If the class data include a continuous measurement like height or commute time, you can group the values into classes and make a histogram or frequency polygon. That is the natural next step when the raw values are too spread out to show clearly one by one.     Choose one continuous variable from the class data, such as height, commute time, or distance from school. Group the values into a reasonable set of class intervals.      Use the grouped data to draw a histogram. Then sketch a frequency polygon using the class midpoints.      Compare the histogram and the frequency polygon. Which one is better for seeing the shape of the data? Which one makes the class intervals easier to read?    "
 },
 {
-  "id": "ch2-exercises",
+  "id": "sec-ch2-exercises",
   "level": "1",
-  "url": "ch2-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch2-exercises.html",
+  "type": "Section",
   "number": "2.3",
   "title": "Exercises",
   "body": " Exercises   A survey asks 20 students which streaming platform they use most often. The results are: Netflix, Hulu, Netflix, Disney+, Netflix, Hulu, Max, Netflix, Disney+, Hulu, Netflix, Max, Hulu, Hulu, Disney+, Netflix, Max, Hulu, Netflix, Disney+.  Construct a frequency table and a relative frequency table for this data.    A bakery records the number of muffins sold in an hour on 15 different mornings: 8, 11, 10, 12, 9, 10, 8, 13, 11, 10, 12, 9, 10, 11, 8.  Make a frequency table for the data and identify the most common value.    A grouped frequency table shows the frequencies 4, 9, 15, 8, and 4 for five consecutive classes, and there are 40 observations in all.  Find the relative frequency of each class and check that the relative frequencies sum to .    A gym measures workout time in minutes for 60 members and reports the grouped frequencies below.  : 6, : 18, : 21, : 11, : 4.  Which interval has the greatest frequency? Which interval has the smallest relative frequency?    Which display would be most appropriate in each situation: dot plot, bar chart, stem-and-leaf plot, histogram, or frequency polygon?   The blood types of patients in a clinic.  The number of text messages sent yesterday by each student in a small class.  A large set of waiting times measured to the nearest tenth of a minute.  A short list of quiz scores where you want to keep the original scores visible.     Draw a dot plot for the data set 0, 1, 1, 2, 2, 2, 3, 4, 4, 5.    Use the commuting data from to draw a bar chart by hand or with software. Then write one sentence comparing the categories.    Construct a stem-and-leaf plot for the following exam scores: 61, 64, 66, 70, 72, 72, 75, 78, 81, 84, 88, 90.    Use the wait-time data in to sketch a histogram. Which class interval contains the modal class (the class with the greatest frequency)?    Using the same grouped wait-time data in , list the class midpoints and use them to sketch a frequency polygon.   "
@@ -606,8 +516,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-1",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-1",
+  "type": "Checkpoint",
   "number": "2.3.1",
   "title": "",
   "body": " A survey asks 20 students which streaming platform they use most often. The results are: Netflix, Hulu, Netflix, Disney+, Netflix, Hulu, Max, Netflix, Disney+, Hulu, Netflix, Max, Hulu, Hulu, Disney+, Netflix, Max, Hulu, Netflix, Disney+.  Construct a frequency table and a relative frequency table for this data.  "
@@ -615,8 +525,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-2",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-2",
+  "type": "Checkpoint",
   "number": "2.3.2",
   "title": "",
   "body": " A bakery records the number of muffins sold in an hour on 15 different mornings: 8, 11, 10, 12, 9, 10, 8, 13, 11, 10, 12, 9, 10, 11, 8.  Make a frequency table for the data and identify the most common value.  "
@@ -624,8 +534,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-3",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-3",
+  "type": "Checkpoint",
   "number": "2.3.3",
   "title": "",
   "body": " A grouped frequency table shows the frequencies 4, 9, 15, 8, and 4 for five consecutive classes, and there are 40 observations in all.  Find the relative frequency of each class and check that the relative frequencies sum to .  "
@@ -633,8 +543,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-4",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-4",
+  "type": "Checkpoint",
   "number": "2.3.4",
   "title": "",
   "body": " A gym measures workout time in minutes for 60 members and reports the grouped frequencies below.  : 6, : 18, : 21, : 11, : 4.  Which interval has the greatest frequency? Which interval has the smallest relative frequency?  "
@@ -642,8 +552,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-5",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-5",
+  "type": "Checkpoint",
   "number": "2.3.5",
   "title": "",
   "body": " Which display would be most appropriate in each situation: dot plot, bar chart, stem-and-leaf plot, histogram, or frequency polygon?   The blood types of patients in a clinic.  The number of text messages sent yesterday by each student in a small class.  A large set of waiting times measured to the nearest tenth of a minute.  A short list of quiz scores where you want to keep the original scores visible.   "
@@ -651,8 +561,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-6",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-6",
+  "type": "Checkpoint",
   "number": "2.3.6",
   "title": "",
   "body": " Draw a dot plot for the data set 0, 1, 1, 2, 2, 2, 3, 4, 4, 5.  "
@@ -660,8 +570,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-7",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-7",
+  "type": "Checkpoint",
   "number": "2.3.7",
   "title": "",
   "body": " Use the commuting data from to draw a bar chart by hand or with software. Then write one sentence comparing the categories.  "
@@ -669,8 +579,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-8",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-8",
+  "type": "Checkpoint",
   "number": "2.3.8",
   "title": "",
   "body": " Construct a stem-and-leaf plot for the following exam scores: 61, 64, 66, 70, 72, 72, 75, 78, 81, 84, 88, 90.  "
@@ -678,8 +588,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-9",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-9",
+  "type": "Checkpoint",
   "number": "2.3.9",
   "title": "",
   "body": " Use the wait-time data in to sketch a histogram. Which class interval contains the modal class (the class with the greatest frequency)?  "
@@ -687,8 +597,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch2-ex-10",
   "level": "2",
-  "url": "ch2-exercises.html#ch2-ex-10",
-  "type": "Exercise",
+  "url": "sec-ch2-exercises.html#ch2-ex-10",
+  "type": "Checkpoint",
   "number": "2.3.10",
   "title": "",
   "body": " Using the same grouped wait-time data in , list the class midpoints and use them to sketch a frequency polygon.  "
@@ -709,7 +619,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mean summaries arithmetic mean "
+  "body": "mean "
 },
 {
   "id": "ex-mean-commute-time",
@@ -727,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "median summaries median "
+  "body": "median "
 },
 {
   "id": "ex-median-odd-even",
@@ -745,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mode summaries mode "
+  "body": "mode "
 },
 {
   "id": "ex-mode-bimodal",
@@ -770,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-mean-median-mode.html#act-ch3-central-measures-generated",
   "type": "Activity",
-  "number": "3.1.1",
+  "number": "3.1.5",
   "title": "Mean, Median, and Mode Practice.",
   "body": " Mean, Median, and Mode Practice   Work with short data sets so you can focus on the definitions of the mean, median, and mode.     For the data set 5, 7, 7, 8, 10, find the mean, median, and mode.      For the data set 3, 4, 6, 6, 9, 12, find the mean and median.      For the data set red, blue, blue, green, green, green, find the mode and state whether the data set is unimodal, bimodal, or has no mode.    "
 },
@@ -779,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-mean-median-mode.html#act-ch3-central-measures-class-data",
   "type": "Activity",
-  "number": "3.1.2",
+  "number": "3.1.6",
   "title": "Center from Class Data.",
   "body": " Center from Class Data   Use the data set collected in . Choose a quantitative variable that was recorded for the class.     Choose a variable such as number of siblings, height, commute time, or distance from school. Compute the mean and median.      If the variable is discrete and repeats values often, identify the mode as well.      Write one sentence comparing the mean and median. If they are different, say which one seems more typical for the data and why.    "
 },
@@ -799,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "cumulative frequency tables cumulative frequency "
+  "body": "cumulative frequency "
 },
 {
   "id": "ex-frequency-table-center",
@@ -826,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "distribution graphs distribution "
+  "body": "distribution "
 },
 {
   "id": "sec-center-from-tables-and-shape-13",
@@ -835,7 +745,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "symmetric distribution graphs symmetric distribution "
+  "body": "symmetric distribution "
 },
 {
   "id": "sec-center-from-tables-and-shape-14",
@@ -844,7 +754,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "skewed right graphs right-skewed distribution "
+  "body": "skewed right "
 },
 {
   "id": "sec-center-from-tables-and-shape-15",
@@ -853,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "skewed left graphs left-skewed distribution "
+  "body": "skewed left "
 },
 {
   "id": "fig-symmetric-distribution",
@@ -896,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-center-from-tables-and-shape.html#act-ch3-right-skewed-mean-median",
   "type": "Activity",
-  "number": "3.2.1",
+  "number": "3.2.7",
   "title": "Mean and Median for Right-Skewed Data.",
   "body": " Mean and Median for Right-Skewed Data   Use a class-style data set for commute times, in minutes. The values are right-skewed, so a few larger times pull the mean upward.     For the commute times 8, 9, 10, 10, 11, 12, 12, 13, 14, 30 minutes, find the mean and median.      Decide whether the mean or the median is a better description of the typical commute time.      State whether the distribution is skewed right, skewed left, or roughly symmetric, and check whether that matches the relationship between the mean and median.    "
 },
@@ -905,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-center-from-tables-and-shape.html#act-ch3-center-from-table",
   "type": "Activity",
-  "number": "3.2.2",
+  "number": "3.2.8",
   "title": "Center from a Frequency Table.",
   "body": " Center from a Frequency Table   Use a frequency table to practice the weighted-mean formula and the cumulative-frequency method for the median.     The frequency table shows the number of pets owned by students in a small class. Find the mean number of pets.   Frequency table for pets owned by students    Pets  Frequency    0  4    1  6    2  5    3  1         Use the same table to identify the mode and median.      Find the cumulative frequencies and use them to show how you located the median.    "
 },
@@ -914,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-center-from-tables-and-shape.html#act-ch3-center-shape-class-data",
   "type": "Activity",
-  "number": "3.2.3",
+  "number": "3.2.10",
   "title": "Center and Shape from Class Data.",
   "body": " Center and Shape from Class Data   Use a quantitative variable from the class data and compare its center with the shape of the distribution.     Choose one quantitative class variable and compute the mean and median.      Decide whether the distribution seems roughly symmetric, skewed right, or skewed left.      Check whether the mean is greater than, less than, or about equal to the median. Does that match the shape you saw?    "
 },
@@ -923,15 +833,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-center-from-tables-and-shape.html#act-ch3-skewness-practice",
   "type": "Activity",
-  "number": "3.2.4",
+  "number": "3.2.11",
   "title": "Skewness Practice.",
   "body": " Skewness Practice   These short data sets are designed to make the effect of outliers easy to see.     For the data set 2, 3, 4, 4, 5, 6, 20, find the mean and median. Then decide whether the distribution is skewed left, skewed right, or roughly symmetric.      For the data set 12, 13, 13, 14, 15, 15, 16, find the mean and median. Then decide whether the distribution is skewed left, skewed right, or roughly symmetric.      In one sentence, explain why the mean is pulled toward the tail in the first data set but not much in the second.    "
 },
 {
-  "id": "ch3-exercises",
+  "id": "sec-ch3-exercises",
   "level": "1",
-  "url": "ch3-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch3-exercises.html",
+  "type": "Section",
   "number": "3.3",
   "title": "Exercises",
   "body": " Exercises   Find the mean, median, and mode of the data set 6, 8, 8, 9, 10, 12, 12, 12, 15.    Find the mean and median of the ordered data set 3, 5, 7, 9, 12, 18.    Decide whether each data set has one mode, more than one mode, or no mode.   2, 2, 3, 4, 5, 5  red, blue, green, yellow  7, 7, 7, 8, 9     The weekly hours worked by six students are 8, 10, 12, 14, 16, and 40.  Find the mean and median. Which measure seems to represent the typical student better, and why?    The following frequency table summarizes the number of books read over the summer.   Books read over the summer    Books  Frequency    0  3    1  5    2  6    3  4    4  2     Find the mean, median, and mode.    Create a cumulative frequency column for the table in Exercise and use it to confirm the median.    For each situation, choose the measure of center that seems most useful: mean, median, or mode.   Favorite ice cream flavor in a class  House prices in a city with a few extremely expensive homes  The average score on a final exam     A distribution is described as right-skewed. State whether the mean is usually less than, about equal to, or greater than the median.    A distribution is described as left-skewed. State whether the mean is usually less than, about equal to, or greater than the median.    Give an example of a small data set for which the mean is larger than the median. Then give an example of a small data set for which the mean is smaller than the median.   "
@@ -939,8 +849,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-1",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch3-exercises.html#ch3-ex-1",
+  "type": "Checkpoint",
   "number": "3.3.1",
   "title": "",
   "body": " Find the mean, median, and mode of the data set 6, 8, 8, 9, 10, 12, 12, 12, 15.  "
@@ -948,8 +858,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-2",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch3-exercises.html#ch3-ex-2",
+  "type": "Checkpoint",
   "number": "3.3.2",
   "title": "",
   "body": " Find the mean and median of the ordered data set 3, 5, 7, 9, 12, 18.  "
@@ -957,8 +867,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-3",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch3-exercises.html#ch3-ex-3",
+  "type": "Checkpoint",
   "number": "3.3.3",
   "title": "",
   "body": " Decide whether each data set has one mode, more than one mode, or no mode.   2, 2, 3, 4, 5, 5  red, blue, green, yellow  7, 7, 7, 8, 9   "
@@ -966,8 +876,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-4",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch3-exercises.html#ch3-ex-4",
+  "type": "Checkpoint",
   "number": "3.3.4",
   "title": "",
   "body": " The weekly hours worked by six students are 8, 10, 12, 14, 16, and 40.  Find the mean and median. Which measure seems to represent the typical student better, and why?  "
@@ -975,8 +885,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-5",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch3-exercises.html#ch3-ex-5",
+  "type": "Checkpoint",
   "number": "3.3.5",
   "title": "",
   "body": " The following frequency table summarizes the number of books read over the summer.   Books read over the summer    Books  Frequency    0  3    1  5    2  6    3  4    4  2     Find the mean, median, and mode.  "
@@ -984,45 +894,45 @@ var ptx_lunr_docs = [
 {
   "id": "ch3-ex-6",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-6",
-  "type": "Exercise",
-  "number": "3.3.6",
+  "url": "sec-ch3-exercises.html#ch3-ex-6",
+  "type": "Checkpoint",
+  "number": "3.3.7",
   "title": "",
   "body": " Create a cumulative frequency column for the table in Exercise and use it to confirm the median.  "
 },
 {
   "id": "ch3-ex-7",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-7",
-  "type": "Exercise",
-  "number": "3.3.7",
+  "url": "sec-ch3-exercises.html#ch3-ex-7",
+  "type": "Checkpoint",
+  "number": "3.3.8",
   "title": "",
   "body": " For each situation, choose the measure of center that seems most useful: mean, median, or mode.   Favorite ice cream flavor in a class  House prices in a city with a few extremely expensive homes  The average score on a final exam   "
 },
 {
   "id": "ch3-ex-8",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-8",
-  "type": "Exercise",
-  "number": "3.3.8",
+  "url": "sec-ch3-exercises.html#ch3-ex-8",
+  "type": "Checkpoint",
+  "number": "3.3.9",
   "title": "",
   "body": " A distribution is described as right-skewed. State whether the mean is usually less than, about equal to, or greater than the median.  "
 },
 {
   "id": "ch3-ex-9",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-9",
-  "type": "Exercise",
-  "number": "3.3.9",
+  "url": "sec-ch3-exercises.html#ch3-ex-9",
+  "type": "Checkpoint",
+  "number": "3.3.10",
   "title": "",
   "body": " A distribution is described as left-skewed. State whether the mean is usually less than, about equal to, or greater than the median.  "
 },
 {
   "id": "ch3-ex-10",
   "level": "2",
-  "url": "ch3-exercises.html#ch3-ex-10",
-  "type": "Exercise",
-  "number": "3.3.10",
+  "url": "sec-ch3-exercises.html#ch3-ex-10",
+  "type": "Checkpoint",
+  "number": "3.3.11",
   "title": "",
   "body": " Give an example of a small data set for which the mean is larger than the median. Then give an example of a small data set for which the mean is smaller than the median.  "
 },
@@ -1042,7 +952,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Quartiles summaries quartiles first quartile summaries first quartile second quartile summaries second quartile third quartile summaries third quartile "
+  "body": "Quartiles first quartile second quartile third quartile "
 },
 {
   "id": "ex-quartiles-odd",
@@ -1069,14 +979,14 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "interquartile range summaries interquartile range IQR summaries IQR "
+  "body": "interquartile range IQR "
 },
 {
   "id": "act-ch4-quartiles-generated",
   "level": "2",
   "url": "sec-quartiles-iqr.html#act-ch4-quartiles-generated",
   "type": "Activity",
-  "number": "4.1.1",
+  "number": "4.1.3",
   "title": "Quartiles and IQR Practice.",
   "body": " Quartiles and IQR Practice   Use a short ordered data set so you can practice finding quartiles and the interquartile range by hand.     For the ordered data set 4, 6, 7, 8, 9, 11, 12, 15, 18, find , , and .      Compute the interquartile range.      Describe whether the middle 50% of the data is tightly clustered or fairly spread out, and use the IQR to support your answer.    "
 },
@@ -1085,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quartiles-iqr.html#act-ch4-create-data-sets-with-specific-properties",
   "type": "Activity",
-  "number": "4.1.2",
+  "number": "4.1.4",
   "title": "Creating Data Sets with Specific Properties.",
   "body": " Creating Data Sets with Specific Properties   Work in groups to create data sets that illustrate different outcomes of the 1.5 IQR outlier rule.     Create data sets containing numbers from 1 to 99. Use different sample sizes, such as 9, 10, 11, and 12 observations, so that the class examples include data sets with no possible outliers and data sets with one or more possible outliers.      For each data set, find the quartiles, IQR, and lower and upper fences. Identify any possible outliers.      Compare your results with another group. Explain how changing the data values or sample size affected the outlier rule.    "
 },
@@ -1094,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quartiles-iqr.html#act-ch4-quartiles-class-data",
   "type": "Activity",
-  "number": "4.1.3",
+  "number": "4.1.5",
   "title": "Quartiles from Class Data.",
   "body": " Quartiles from Class Data   Use one quantitative variable from the class data set collected earlier in the book.     Choose a class variable such as height, distance from school, commute time, or number of siblings. Order the data and find the quartiles and IQR.      Write one sentence describing the spread of the middle half of the data.      If another student chose a different quantitative variable from the class data, compare the two IQRs and say which data set is more spread out in the middle.    "
 },
@@ -1103,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-quartiles-iqr.html#act-ch4-quartiles-compare",
   "type": "Activity",
-  "number": "4.1.4",
+  "number": "4.1.6",
   "title": "Comparing Interquartile Ranges.",
   "body": " Comparing Interquartile Ranges   Compare two generated data sets with different amounts of spread in the middle half.     Find the IQR for the data set 10, 11, 11, 12, 13, 14, 14, 15, 16.      Find the IQR for the data set 2, 5, 6, 8, 10, 13, 16, 20, 24.      Which data set has the larger IQR? Explain what the comparison tells you about the spread of the middle 50%.    "
 },
@@ -1114,7 +1024,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Five-Number Summary, Boxplots, and Outliers",
-  "body": " Five-Number Summary, Boxplots, and Outliers  The five-number summary summaries five-number summary of a data set consists of   These five values give a compact description of both center and spread. The minimum and maximum show the full range of the data, the quartiles show the middle structure, and the median marks the center.   A Five-Number Summary  For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found , , and . Since the minimum is 3 and the maximum is 18, the five-number summary is    A boxplot graphs boxplot , also called a box-and-whisker plot graphs box-and-whisker plot , turns the five-number summary into a picture. The box stretches from to , a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.   Boxplot based on the five-number summary 3, 5.5, 8, 13, 18   A horizontal boxplot on a scale from 0 to 20. The left whisker reaches 3, the box runs from 5.5 to 13, the median is marked at 8, and the right whisker reaches 18.  The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew.     A boxplot does not show every data value, but it is very good at showing center, spread, and possible asymmetry. If the box and whiskers are roughly balanced on both sides of the median, the distribution may be fairly symmetric. If one side is stretched out more than the other, the distribution may be skewed. A histogram is still the best tool for judging shape in detail, but a boxplot gives a quick summary.  An outlier summaries outlier is a value that does not fit the general pattern of the data. One common rule for identifying possible outliers is the 1.5 times IQR rule summaries 1.5 times IQR rule . First compute the two fences summaries fence :   Any observation below the lower fence or above the upper fence is called a possible outlier according to this rule. The fences themselves are not data values. They are only cutoffs.   Using the 1.5 Times IQR Rule  Suppose a data set has and . Then the IQR is   So the fences are   Any data value less than 0 or greater than 32 would be flagged as a possible outlier.    Five-Number Summary and Boxplot   Use a short data set to practice the five-number summary and the shape of a boxplot.     For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, find the five-number summary.      Draw the boxplot for the data set.      State whether the distribution looks symmetric or skewed, and explain your answer from the boxplot.      Boxplot from Class Data   Use the class data set from earlier in the book.     Choose a quantitative variable such as height, commute time, distance from school, or number of siblings. Find the five-number summary and draw a boxplot.      Use the 1.5 IQR rule to look for possible outliers.      Say whether the data seem roughly symmetric or skewed, and use the boxplot to justify your answer.      Outlier Rule Practice   Use the 1.5 times IQR rule on a small data set with one possible outlier.     For the data set 4, 6, 7, 8, 8, 9, 10, 11, 24, find , , and the IQR.      Compute the lower and upper fences.      Identify any possible outliers.     "
+  "body": " Five-Number Summary, Boxplots, and Outliers  The five-number summary summaries five-number summary of a data set consists of   These five values give a compact description of both center and spread. The minimum and maximum show the full range of the data, the quartiles show the middle structure, and the median marks the center.   A Five-Number Summary  For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, we found , , and . Since the minimum is 3 and the maximum is 18, the five-number summary is    A boxplot graphs boxplot , also called a box-and-whisker plot graphs box-and-whisker plot , turns the five-number summary into a picture. The box stretches from to , a line inside the box marks the median, and the whiskers extend toward the smallest and largest values.   Boxplot based on the five-number summary 3, 5.5, 8, 13, 18   A horizontal boxplot on a scale from 0 to 20.  The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew.     A boxplot does not show every data value, but it is very good at showing center, spread, and possible asymmetry. If the box and whiskers are roughly balanced on both sides of the median, the distribution may be fairly symmetric. If one side is stretched out more than the other, the distribution may be skewed. A histogram is still the best tool for judging shape in detail, but a boxplot gives a quick summary.  An outlier summaries outlier is a value that does not fit the general pattern of the data. One common rule for identifying possible outliers is the 1.5 times IQR rule summaries 1.5 times IQR rule . First compute the two fences summaries fence :   Any observation below the lower fence or above the upper fence is called a possible outlier according to this rule. The fences themselves are not data values. They are only cutoffs.   Using the 1.5 Times IQR Rule  Suppose a data set has and . Then the IQR is   So the fences are   Any data value less than 0 or greater than 32 would be flagged as a possible outlier.    Five-Number Summary and Boxplot   Use a short data set to practice the five-number summary and the shape of a boxplot.     For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, find the five-number summary.      Draw the boxplot for the data set.      State whether the distribution looks symmetric or skewed, and explain your answer from the boxplot.      Boxplot from Class Data   Use the class data set from earlier in the book.     Choose a quantitative variable such as height, commute time, distance from school, or number of siblings. Find the five-number summary and draw a boxplot.      Use the 1.5 IQR rule to look for possible outliers.      Say whether the data seem roughly symmetric or skewed, and use the boxplot to justify your answer.      Outlier Rule Practice   Use the 1.5 times IQR rule on a small data set with one possible outlier.     For the data set 4, 6, 7, 8, 8, 9, 10, 11, 24, find , , and the IQR.      Compute the lower and upper fences.      Identify any possible outliers.     "
 },
 {
   "id": "sec-boxplots-outliers-2",
@@ -1123,7 +1033,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "five-number summary summaries five-number summary "
+  "body": "five-number summary "
 },
 {
   "id": "ex-five-number-summary",
@@ -1141,7 +1051,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "boxplot graphs boxplot box-and-whisker plot graphs box-and-whisker plot "
+  "body": "boxplot box-and-whisker plot "
 },
 {
   "id": "fig-boxplot-spread-example",
@@ -1150,7 +1060,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "4.2.2",
   "title": "",
-  "body": " Boxplot based on the five-number summary 3, 5.5, 8, 13, 18   A horizontal boxplot on a scale from 0 to 20. The left whisker reaches 3, the box runs from 5.5 to 13, the median is marked at 8, and the right whisker reaches 18.  The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew.    "
+  "body": " Boxplot based on the five-number summary 3, 5.5, 8, 13, 18   A horizontal boxplot on a scale from 0 to 20.  The graphic is a horizontal boxplot with a number line labeled Data value. The left whisker extends from the box to 3. The left edge of the box is at 5.5. A vertical line inside the box marks the median at 8. The right edge of the box is at 13. The right whisker extends to 18. The right side of the box and whisker is longer than the left, suggesting some right-skew.    "
 },
 {
   "id": "sec-boxplots-outliers-9",
@@ -1159,7 +1069,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "outlier summaries outlier 1.5 times IQR rule summaries 1.5 times IQR rule fences summaries fence "
+  "body": "outlier 1.5 times IQR rule fences "
 },
 {
   "id": "ex-iqr-outlier-rule",
@@ -1175,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-boxplots-outliers.html#act-ch4-boxplot-generated",
   "type": "Activity",
-  "number": "4.2.1",
+  "number": "4.2.4",
   "title": "Five-Number Summary and Boxplot.",
   "body": " Five-Number Summary and Boxplot   Use a short data set to practice the five-number summary and the shape of a boxplot.     For the ordered data set 3, 5, 6, 7, 9, 12, 14, 18, find the five-number summary.      Draw the boxplot for the data set.      State whether the distribution looks symmetric or skewed, and explain your answer from the boxplot.    "
 },
@@ -1184,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-boxplots-outliers.html#act-ch4-boxplot-class-data",
   "type": "Activity",
-  "number": "4.2.2",
+  "number": "4.2.5",
   "title": "Boxplot from Class Data.",
   "body": " Boxplot from Class Data   Use the class data set from earlier in the book.     Choose a quantitative variable such as height, commute time, distance from school, or number of siblings. Find the five-number summary and draw a boxplot.      Use the 1.5 IQR rule to look for possible outliers.      Say whether the data seem roughly symmetric or skewed, and use the boxplot to justify your answer.    "
 },
@@ -1193,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-boxplots-outliers.html#act-ch4-outlier-rule",
   "type": "Activity",
-  "number": "4.2.3",
+  "number": "4.2.6",
   "title": "Outlier Rule Practice.",
   "body": " Outlier Rule Practice   Use the 1.5 times IQR rule on a small data set with one possible outlier.     For the data set 4, 6, 7, 8, 8, 9, 10, 11, 24, find , , and the IQR.      Compute the lower and upper fences.      Identify any possible outliers.    "
 },
@@ -1213,7 +1123,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "variance summaries variance "
+  "body": "variance "
 },
 {
   "id": "sec-variance-sd-zscores-5",
@@ -1222,7 +1132,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "standard deviation summaries standard deviation "
+  "body": "standard deviation "
 },
 {
   "id": "ex-sd-small-data",
@@ -1240,7 +1150,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample variance summaries sample variance "
+  "body": "sample variance "
 },
 {
   "id": "sec-variance-sd-zscores-11",
@@ -1249,7 +1159,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample standard deviation summaries sample standard deviation "
+  "body": "sample standard deviation "
 },
 {
   "id": "sec-variance-sd-zscores-14",
@@ -1258,7 +1168,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "relative standard deviation summaries relative standard deviation RSD summaries RSD "
+  "body": "relative standard deviation RSD "
 },
 {
   "id": "ex-rsd",
@@ -1276,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "z-score summaries standard score "
+  "body": "z-score "
 },
 {
   "id": "ex-zscore-test",
@@ -1292,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-variance-sd-zscores.html#act-ch4-variance-generated",
   "type": "Activity",
-  "number": "4.3.1",
+  "number": "4.3.4",
   "title": "Variance and Standard Deviation Practice.",
   "body": " Variance and Standard Deviation Practice   Use a small data set so you can practice the variance and standard deviation formulas without getting buried in arithmetic.     For the population data set 2, 4, 6, 8, 10, compute the population mean, variance, and standard deviation.      For the sample data set 2, 4, 6, 8, 10, compute the sample mean and sample standard deviation.      Compare the two standard deviations. Why are they close, and why are they not exactly the same?    "
 },
@@ -1301,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-variance-sd-zscores.html#act-ch4-sd-class-data",
   "type": "Activity",
-  "number": "4.3.2",
+  "number": "4.3.5",
   "title": "Spread from Class Data.",
   "body": " Spread from Class Data   Use one quantitative variable from the class data set collected earlier in the book.     Choose a variable such as height, commute time, distance from school, or number of siblings. Compute the sample mean and sample standard deviation.      Describe the spread in one sentence using the standard deviation.      Find one data value that is about one standard deviation above or below the mean, if such a value exists.    "
 },
@@ -1310,24 +1220,24 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-variance-sd-zscores.html#act-ch4-zscores",
   "type": "Activity",
-  "number": "4.3.3",
+  "number": "4.3.6",
   "title": "Z-Score Practice.",
   "body": " Z-Score Practice   Practice interpreting z-scores and comparing values on a standardized scale.     A test score has mean 70 and standard deviation 5. Find the z-score for a score of 80.      A value has z-score in a distribution with mean 50 and standard deviation 8. Find the value.      State whether each z-score is above or below the mean: , , and .    "
 },
 {
-  "id": "ch4-exercises",
+  "id": "sec-ch4-exercises",
   "level": "1",
-  "url": "ch4-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch4-exercises.html",
+  "type": "Section",
   "number": "4.4",
   "title": "Exercises",
-  "body": " Exercises    For Exercises 1-4, find the requested quartiles, IQRs, or fences.    Find , , and for 2, 4, 5, 7, 8, 10, 12, 14, 18.    Find the quartiles and IQR for 6, 7, 9, 10, 12, 14, 16, 18.    The five-number summary of a data set is 3, 8, 11, 17, 24. What is the IQR?    A data set has and . Find the 1.5 IQR fences.     A data set has , , and includes 1, 6, 12, 15, 19, and 33. Which values are possible outliers by the 1.5 IQR rule?    Explain in words what the interquartile range tells you about a distribution.    Two data sets both have mean 20. One has standard deviation 2 and the other has standard deviation 9. Which data set is more spread out?    For the population data set 2, 4, 6, 8, compute the population mean, the population variance, and the population standard deviation.    For the sample data set 5, 7, 9, 11, compute the sample mean and the sample standard deviation.    A data set has mean 50 and standard deviation 8. Find the z-score of 62.    A data value has z-score . Explain what this tells you about the value relative to the mean.    Machine A has mean 40 and standard deviation 4. Machine B has mean 120 and standard deviation 6. Find the relative standard deviation for each machine and decide which machine has greater spread relative to its mean.   "
+  "body": " Exercises  For Exercises 1-4, find the requested quartiles, IQRs, or fences.   Find , , and for 2, 4, 5, 7, 8, 10, 12, 14, 18.    Find the quartiles and IQR for 6, 7, 9, 10, 12, 14, 16, 18.    The five-number summary of a data set is 3, 8, 11, 17, 24. What is the IQR?    A data set has and . Find the 1.5 IQR fences.    A data set has , , and includes 1, 6, 12, 15, 19, and 33. Which values are possible outliers by the 1.5 IQR rule?    Explain in words what the interquartile range tells you about a distribution.    Two data sets both have mean 20. One has standard deviation 2 and the other has standard deviation 9. Which data set is more spread out?    For the population data set 2, 4, 6, 8, compute the population mean, the population variance, and the population standard deviation.    For the sample data set 5, 7, 9, 11, compute the sample mean and the sample standard deviation.    A data set has mean 50 and standard deviation 8. Find the z-score of 62.    A data value has z-score . Explain what this tells you about the value relative to the mean.    Machine A has mean 40 and standard deviation 4. Machine B has mean 120 and standard deviation 6. Find the relative standard deviation for each machine and decide which machine has greater spread relative to its mean.   "
 },
 {
   "id": "ch4-ex-1",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-1",
+  "type": "Checkpoint",
   "number": "4.4.1",
   "title": "",
   "body": " Find , , and for 2, 4, 5, 7, 8, 10, 12, 14, 18.  "
@@ -1335,8 +1245,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-2",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-2",
+  "type": "Checkpoint",
   "number": "4.4.2",
   "title": "",
   "body": " Find the quartiles and IQR for 6, 7, 9, 10, 12, 14, 16, 18.  "
@@ -1344,8 +1254,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-3",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-3",
+  "type": "Checkpoint",
   "number": "4.4.3",
   "title": "",
   "body": " The five-number summary of a data set is 3, 8, 11, 17, 24. What is the IQR?  "
@@ -1353,8 +1263,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-4",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-4",
+  "type": "Checkpoint",
   "number": "4.4.4",
   "title": "",
   "body": " A data set has and . Find the 1.5 IQR fences.  "
@@ -1362,8 +1272,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-5",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-5",
+  "type": "Checkpoint",
   "number": "4.4.5",
   "title": "",
   "body": " A data set has , , and includes 1, 6, 12, 15, 19, and 33. Which values are possible outliers by the 1.5 IQR rule?  "
@@ -1371,8 +1281,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-6",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-6",
+  "type": "Checkpoint",
   "number": "4.4.6",
   "title": "",
   "body": " Explain in words what the interquartile range tells you about a distribution.  "
@@ -1380,8 +1290,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-7",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-7",
+  "type": "Checkpoint",
   "number": "4.4.7",
   "title": "",
   "body": " Two data sets both have mean 20. One has standard deviation 2 and the other has standard deviation 9. Which data set is more spread out?  "
@@ -1389,8 +1299,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-8",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-8",
+  "type": "Checkpoint",
   "number": "4.4.8",
   "title": "",
   "body": " For the population data set 2, 4, 6, 8, compute the population mean, the population variance, and the population standard deviation.  "
@@ -1398,8 +1308,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-9",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-9",
+  "type": "Checkpoint",
   "number": "4.4.9",
   "title": "",
   "body": " For the sample data set 5, 7, 9, 11, compute the sample mean and the sample standard deviation.  "
@@ -1407,8 +1317,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-10",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-10",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-10",
+  "type": "Checkpoint",
   "number": "4.4.10",
   "title": "",
   "body": " A data set has mean 50 and standard deviation 8. Find the z-score of 62.  "
@@ -1416,8 +1326,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-11",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-11",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-11",
+  "type": "Checkpoint",
   "number": "4.4.11",
   "title": "",
   "body": " A data value has z-score . Explain what this tells you about the value relative to the mean.  "
@@ -1425,8 +1335,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch4-ex-12",
   "level": "2",
-  "url": "ch4-exercises.html#ch4-ex-12",
-  "type": "Exercise",
+  "url": "sec-ch4-exercises.html#ch4-ex-12",
+  "type": "Checkpoint",
   "number": "4.4.12",
   "title": "",
   "body": " Machine A has mean 40 and standard deviation 4. Machine B has mean 120 and standard deviation 6. Find the relative standard deviation for each machine and decide which machine has greater spread relative to its mean.  "
@@ -1438,7 +1348,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Scatterplots and Correlation",
-  "body": " Scatterplots and Correlation  When each observation comes as a pair of numbers, we often label the two variables and . Usually is the independent variable regression independent variable and is the dependent variable regression dependent variable . That means we use to help explain or predict .  A scatterplot places each data pair as a point in the plane. Once the points are plotted, we look for an overall pattern.   Study Hours and Exam Scores  Suppose we record the hours studied and exam scores for eight students:    Study hours and exam scores    Hours studied  Exam score    1  58    2  62    3  67    4  71    5  76    6  79    7  85    8  88      Scatterplot of study hours and exam scores   A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study hours and exam score.  The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.     The scatterplot in shows an upward trend. As study time increases, exam score also tends to increase. That is an example of a positive association regression positive association .  In general, a scatterplot may suggest one of three broad patterns.   Positive correlation regression positive correlation : larger values tend to go with larger values.  Negative correlation regression negative correlation : larger values tend to go with smaller values.  No clear correlation regression no correlation : the points do not show a clear upward or downward trend.   A useful visual trick is to mark the point , where is the mean of the -values and is the mean of the -values. The vertical line through and the horizontal line through form a mean cross regression mean cross .  If most of the points lie in the first and third quadrants relative to that cross, then the variables tend to increase together, which suggests positive correlation. If most of the points lie in the second and fourth quadrants, then one variable tends to increase as the other decreases, which suggests negative correlation. If the points are spread more evenly among all four quadrants, the data may have little or no linear correlation.   Using the mean cross to read the direction of correlation   Three small scatterplots side by side. In the first, most points lie in the first and third quadrants relative to the mean cross, showing positive correlation. In the second, most points lie in the second and fourth quadrants, showing negative correlation. In the third, the points are spread around all four quadrants, showing little or no correlation.  The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.     The mean cross is a quick visual guide, not a substitute for a full scatterplot or the actual value of . Still, it is a nice way to see why positive correlation puts many points in quadrants one and three, while negative correlation puts many points in quadrants two and four.  The correlation coefficient regression correlation coefficient , written , measures the strength and direction of a linear relationship. Its value always satisfies   The sign of gives the direction, and the size of gives the strength.   If , the linear relationship is positive.  If , the linear relationship is negative.  If is close to 0, there is little or no linear relationship.  If is close to 1, the points lie close to a line and the linear relationship is strong.   One common formula for is   In practice, technology usually computes for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.   Interpreting Correlation  If a data set has , then it has a strong positive linear relationship. If another data set has , then it has a strong negative linear relationship. If a third data set has , then it has almost no linear relationship.    Guesstimation Competition   Use a class data set to see why the regression line is called a best-fit line. For a candidate line, define the sum of squared deviations by .     Gather at least five paired observations for two quantitative variables from the class. Make a scatterplot of the data.      Each group should draw its best guess for a regression line on the scatterplot.      For each group's candidate line, compute the SSD. Which group has the smallest SSD?      Use technology to compute the regression line and its SSD. Verify that this SSD is no larger than the SSD for any of the groups' candidate lines.      Reading a Scatterplot   Use the study-hours data set to practice reading a scatterplot and describing the overall pattern in words.     Make a scatterplot of the study-hours data from . If you use software, label the axes clearly.      Describe the direction of the association and tell whether it looks weak, moderate, or strong.      Explain whether the plot suggests a positive correlation, a negative correlation, or no clear correlation.      Interpreting Correlation Coefficients   Practice translating the value of into a plain-language description of a linear relationship.     Suppose . Describe the direction and strength of the linear relationship.      Suppose . Describe the direction and strength of the linear relationship.      Suppose . Explain what this suggests, if anything, about the linear relationship.      Using the Mean Cross   Use the study-hours and exam-scores data to connect the mean cross with the direction of the correlation.     Find the mean of the hours studied and the mean of the exam scores.      Plot the point on the scatterplot and draw the mean cross.      Count how many data points lie in quadrants one and three relative to the mean cross. Explain how this supports the direction of the correlation.     "
+  "body": " Scatterplots and Correlation  When each observation comes as a pair of numbers, we often label the two variables and . Usually is the independent variable regression independent variable and is the dependent variable regression dependent variable . That means we use to help explain or predict .  A scatterplot places each data pair as a point in the plane. Once the points are plotted, we look for an overall pattern.   Study Hours and Exam Scores  Suppose we record the hours studied and exam scores for eight students:    Study hours and exam scores    Hours studied  Exam score    1  58    2  62    3  67    4  71    5  76    6  79    7  85    8  88      Scatterplot of study hours and exam scores   A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study.  The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.     The scatterplot in shows an upward trend. As study time increases, exam score also tends to increase. That is an example of a positive association regression positive association .  In general, a scatterplot may suggest one of three broad patterns.   Positive correlation regression positive correlation : larger values tend to go with larger values.  Negative correlation regression negative correlation : larger values tend to go with smaller values.  No clear correlation regression no correlation : the points do not show a clear upward or downward trend.   A useful visual trick is to mark the point , where is the mean of the -values and is the mean of the -values. The vertical line through and the horizontal line through form a mean cross regression mean cross .  If most of the points lie in the first and third quadrants relative to that cross, then the variables tend to increase together, which suggests positive correlation. If most of the points lie in the second and fourth quadrants, then one variable tends to increase as the other decreases, which suggests negative correlation. If the points are spread more evenly among all four quadrants, the data may have little or no linear correlation.   Using the mean cross to read the direction of correlation   Three small scatterplots side by side.  The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.     The mean cross is a quick visual guide, not a substitute for a full scatterplot or the actual value of . Still, it is a nice way to see why positive correlation puts many points in quadrants one and three, while negative correlation puts many points in quadrants two and four.  The correlation coefficient regression correlation coefficient , written , measures the strength and direction of a linear relationship. Its value always satisfies   The sign of gives the direction, and the size of gives the strength.   If , the linear relationship is positive.  If , the linear relationship is negative.  If is close to 0, there is little or no linear relationship.  If is close to 1, the points lie close to a line and the linear relationship is strong.   One common formula for is   The quality   is called the covariance of and . Note that, and a little algebra shows that the correlation coefficient of and can also be expressed as   In practice, technology usually computes for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.   Interpreting Correlation  If a data set has , then it has a strong positive linear relationship. If another data set has , then it has a strong negative linear relationship. If a third data set has , then it has almost no linear relationship.    Guesstimation Competition   Use a class data set to see why the regression line is called a best-fit line. For a candidate line, define the sum of squared deviations by .     Gather at least five paired observations for two quantitative variables from the class. Make a scatterplot of the data.      Each group should draw its best guess for a regression line on the scatterplot.      For each group's candidate line, compute the SSD. Which group has the smallest SSD?      Use technology to compute the regression line and its SSD. Verify that this SSD is no larger than the SSD for any of the groups' candidate lines.      Reading a Scatterplot   Use the study-hours data set to practice reading a scatterplot and describing the overall pattern in words.     Make a scatterplot of the study-hours data from . If you use software, label the axes clearly.      Describe the direction of the association and tell whether it looks weak, moderate, or strong.      Explain whether the plot suggests a positive correlation, a negative correlation, or no clear correlation.      Interpreting Correlation Coefficients   Practice translating the value of into a plain-language description of a linear relationship.     Suppose . Describe the direction and strength of the linear relationship.      Suppose . Describe the direction and strength of the linear relationship.      Suppose . Explain what this suggests, if anything, about the linear relationship.      Using the Mean Cross   Use the study-hours and exam-scores data to connect the mean cross with the direction of the correlation.     Find the mean of the hours studied and the mean of the exam scores.      Plot the point on the scatterplot and draw the mean cross.      Count how many data points lie in quadrants one and three relative to the mean cross. Explain how this supports the direction of the correlation.     "
 },
 {
   "id": "sec-scatterplots-correlation-2",
@@ -1447,7 +1357,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "independent variable regression independent variable dependent variable regression dependent variable "
+  "body": "independent variable dependent variable "
 },
 {
   "id": "ex-study-hours-data",
@@ -1474,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "5.1.3",
   "title": "",
-  "body": " Scatterplot of study hours and exam scores   A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study hours and exam score.  The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.    "
+  "body": " Scatterplot of study hours and exam scores   A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study.  The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.    "
 },
 {
   "id": "sec-scatterplots-correlation-7",
@@ -1483,34 +1393,16 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "positive association regression positive association "
+  "body": "positive association "
 },
 {
-  "id": "sec-scatterplots-correlation-9-1-1",
+  "id": "sec-scatterplots-correlation-9",
   "level": "2",
-  "url": "sec-scatterplots-correlation.html#sec-scatterplots-correlation-9-1-1",
+  "url": "sec-scatterplots-correlation.html#sec-scatterplots-correlation-9",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Positive correlation regression positive correlation "
-},
-{
-  "id": "sec-scatterplots-correlation-9-2-1",
-  "level": "2",
-  "url": "sec-scatterplots-correlation.html#sec-scatterplots-correlation-9-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Negative correlation regression negative correlation "
-},
-{
-  "id": "sec-scatterplots-correlation-9-3-1",
-  "level": "2",
-  "url": "sec-scatterplots-correlation.html#sec-scatterplots-correlation-9-3-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "No clear correlation regression no correlation "
+  "body": "Positive correlation Negative correlation No clear correlation "
 },
 {
   "id": "sec-scatterplots-correlation-10",
@@ -1519,7 +1411,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mean cross regression mean cross "
+  "body": "mean cross "
 },
 {
   "id": "fig-mean-cross-cases",
@@ -1528,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "5.1.4",
   "title": "",
-  "body": " Using the mean cross to read the direction of correlation   Three small scatterplots side by side. In the first, most points lie in the first and third quadrants relative to the mean cross, showing positive correlation. In the second, most points lie in the second and fourth quadrants, showing negative correlation. In the third, the points are spread around all four quadrants, showing little or no correlation.  The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.    "
+  "body": " Using the mean cross to read the direction of correlation   Three small scatterplots side by side.  The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.    "
 },
 {
   "id": "sec-scatterplots-correlation-14",
@@ -1537,7 +1429,16 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "correlation coefficient regression correlation coefficient "
+  "body": "correlation coefficient "
+},
+{
+  "id": "sec-scatterplots-correlation-22",
+  "level": "2",
+  "url": "sec-scatterplots-correlation.html#sec-scatterplots-correlation-22",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "covariance "
 },
 {
   "id": "ex-r-interpretation",
@@ -1553,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-scatterplots-correlation.html#act-ch5-guesstimation-competition",
   "type": "Activity",
-  "number": "5.1.1",
+  "number": "5.1.6",
   "title": "Guesstimation Competition.",
   "body": " Guesstimation Competition   Use a class data set to see why the regression line is called a best-fit line. For a candidate line, define the sum of squared deviations by .     Gather at least five paired observations for two quantitative variables from the class. Make a scatterplot of the data.      Each group should draw its best guess for a regression line on the scatterplot.      For each group's candidate line, compute the SSD. Which group has the smallest SSD?      Use technology to compute the regression line and its SSD. Verify that this SSD is no larger than the SSD for any of the groups' candidate lines.    "
 },
@@ -1562,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-scatterplots-correlation.html#act-ch5-scatterplot-read-relationship",
   "type": "Activity",
-  "number": "5.1.2",
+  "number": "5.1.7",
   "title": "Reading a Scatterplot.",
   "body": " Reading a Scatterplot   Use the study-hours data set to practice reading a scatterplot and describing the overall pattern in words.     Make a scatterplot of the study-hours data from . If you use software, label the axes clearly.      Describe the direction of the association and tell whether it looks weak, moderate, or strong.      Explain whether the plot suggests a positive correlation, a negative correlation, or no clear correlation.    "
 },
@@ -1571,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-scatterplots-correlation.html#act-ch5-correlation-interpretation",
   "type": "Activity",
-  "number": "5.1.3",
+  "number": "5.1.8",
   "title": "Interpreting Correlation Coefficients.",
   "body": " Interpreting Correlation Coefficients   Practice translating the value of into a plain-language description of a linear relationship.     Suppose . Describe the direction and strength of the linear relationship.      Suppose . Describe the direction and strength of the linear relationship.      Suppose . Explain what this suggests, if anything, about the linear relationship.    "
 },
@@ -1580,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-scatterplots-correlation.html#act-ch5-mean-cross",
   "type": "Activity",
-  "number": "5.1.4",
+  "number": "5.1.9",
   "title": "Using the Mean Cross.",
   "body": " Using the Mean Cross   Use the study-hours and exam-scores data to connect the mean cross with the direction of the correlation.     Find the mean of the hours studied and the mean of the exam scores.      Plot the point on the scatterplot and draw the mean cross.      Count how many data points lie in quadrants one and three relative to the mean cross. Explain how this supports the direction of the correlation.    "
 },
@@ -1591,7 +1492,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Regression Lines and Prediction",
-  "body": " Regression Lines and Prediction  A linear relation regression linear relation has the form   where is the slope regression slope and is the y-intercept regression y-intercept . If , the line goes up as increases. If , the line goes down as increases.  In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the best-fit line regression best-fit line or regression line regression regression line . Its equation is often written   Here is the predicted value of for a given value of .   Scatterplot with a regression line   A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the points.  The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.      Using a Regression Equation  Suppose a regression line for study hours and exam score is   If a student studies for 5 hours, the predicted exam score is   So the model predicts a score of about 76.   The slope tells us how much the predicted changes when increases by 1 unit. In the example above, the slope is 4.4, so the model predicts that each additional hour of study is associated with about 4.4 more exam points.  The sign of the slope matches the sign of the correlation coefficient . That is useful, but the two numbers are not the same. The slope measures change in the original units, while is a unit-free measure of linear strength and always stays between and .  Regression is helpful for prediction, but it should be used with care. Predicting for an value inside the range of the observed data is called interpolation regression interpolation . Predicting far outside the observed range is called extrapolation regression extrapolation , and that is usually much less reliable.   Interpolation Versus Extrapolation  If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.    Using a Regression Equation   Practice using a regression equation to make predictions in context.     Suppose a regression line for study hours and exam score is . Find the predicted score for a student who studies for 4 hours.      Use the same equation to predict the score for a student who studies for 7 hours.      In one sentence, explain what the prediction means in the context of the data.      Interpreting Slope and Intercept   Focus on the meaning of the slope and intercept, rather than just the arithmetic.     For the equation , identify the slope and the -intercept.      Explain what the slope means when is hours studied and is exam score.      Explain why the -intercept may or may not have a sensible interpretation in this situation.      Interpolation or Extrapolation?   Decide whether each prediction stays within the observed data or goes beyond it.     If the study-hours data only includes values from 1 to 8 hours, decide whether predicting a score for 5 hours is interpolation or extrapolation.      Decide whether predicting a score for 10 hours is interpolation or extrapolation.      Explain why one of these predictions is usually more trustworthy than the other.     "
+  "body": " Regression Lines and Prediction  A linear relation regression linear relation has the form   where is the slope regression slope and is the y-intercept regression y-intercept . If , the line goes up as increases. If , the line goes down as increases.  In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the best-fit line regression best-fit line or regression line regression regression line . Its equation is often written   Here is the predicted value of for a given value of .   Scatterplot with a regression line   A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the.  The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.      Using a Regression Equation  Suppose a regression line for study hours and exam score is   If a student studies for 5 hours, the predicted exam score is   So the model predicts a score of about 76.   The slope tells us how much the predicted changes when increases by 1 unit. In the example above, the slope is 4.4, so the model predicts that each additional hour of study is associated with about 4.4 more exam points.  The sign of the slope matches the sign of the correlation coefficient . That is useful, but the two numbers are not the same. The slope measures change in the original units, while is a unit-free measure of linear strength and always stays between and .  Regression is helpful for prediction, but it should be used with care. Predicting for an value inside the range of the observed data is called interpolation regression interpolation . Predicting far outside the observed range is called extrapolation regression extrapolation , and that is usually much less reliable.   Interpolation Versus Extrapolation  If our study-hours data only covers values from 1 to 8 hours, then predicting the score for 6 hours is interpolation. Predicting the score for 20 hours is extrapolation. The line might give a numerical answer, but there is no guarantee that the same pattern continues that far.    Using a Regression Equation   Practice using a regression equation to make predictions in context.     Suppose a regression line for study hours and exam score is . Find the predicted score for a student who studies for 4 hours.      Use the same equation to predict the score for a student who studies for 7 hours.      In one sentence, explain what the prediction means in the context of the data.      Interpreting Slope and Intercept   Focus on the meaning of the slope and intercept, rather than just the arithmetic.     For the equation , identify the slope and the -intercept.      Explain what the slope means when is hours studied and is exam score.      Explain why the -intercept may or may not have a sensible interpretation in this situation.      Interpolation or Extrapolation?   Decide whether each prediction stays within the observed data or goes beyond it.     If the study-hours data only includes values from 1 to 8 hours, decide whether predicting a score for 5 hours is interpolation or extrapolation.      Decide whether predicting a score for 10 hours is interpolation or extrapolation.      Explain why one of these predictions is usually more trustworthy than the other.     "
 },
 {
   "id": "sec-regression-line-2",
@@ -1600,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "linear relation regression linear relation "
+  "body": "linear relation "
 },
 {
   "id": "sec-regression-line-4",
@@ -1609,7 +1510,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "slope regression slope y-intercept regression y-intercept "
+  "body": "slope y-intercept "
 },
 {
   "id": "sec-regression-line-5",
@@ -1618,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "best-fit line regression best-fit line regression line regression regression line "
+  "body": "best-fit line regression line "
 },
 {
   "id": "fig-study-hours-regression",
@@ -1627,7 +1528,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "5.2.1",
   "title": "",
-  "body": " Scatterplot with a regression line   A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the points.  The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.    "
+  "body": " Scatterplot with a regression line   A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the.  The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.    "
 },
 {
   "id": "ex-regression-prediction",
@@ -1645,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "interpolation regression interpolation extrapolation regression extrapolation "
+  "body": "interpolation extrapolation "
 },
 {
   "id": "ex-extrapolation-warning",
@@ -1661,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-regression-line.html#act-ch5-regression-prediction",
   "type": "Activity",
-  "number": "5.2.1",
+  "number": "5.2.4",
   "title": "Using a Regression Equation.",
   "body": " Using a Regression Equation   Practice using a regression equation to make predictions in context.     Suppose a regression line for study hours and exam score is . Find the predicted score for a student who studies for 4 hours.      Use the same equation to predict the score for a student who studies for 7 hours.      In one sentence, explain what the prediction means in the context of the data.    "
 },
@@ -1670,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-regression-line.html#act-ch5-slope-meaning",
   "type": "Activity",
-  "number": "5.2.2",
+  "number": "5.2.5",
   "title": "Interpreting Slope and Intercept.",
   "body": " Interpreting Slope and Intercept   Focus on the meaning of the slope and intercept, rather than just the arithmetic.     For the equation , identify the slope and the -intercept.      Explain what the slope means when is hours studied and is exam score.      Explain why the -intercept may or may not have a sensible interpretation in this situation.    "
 },
@@ -1679,15 +1580,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-regression-line.html#act-ch5-interpolation-extrapolation",
   "type": "Activity",
-  "number": "5.2.3",
+  "number": "5.2.6",
   "title": "Interpolation or Extrapolation?",
   "body": " Interpolation or Extrapolation?   Decide whether each prediction stays within the observed data or goes beyond it.     If the study-hours data only includes values from 1 to 8 hours, decide whether predicting a score for 5 hours is interpolation or extrapolation.      Decide whether predicting a score for 10 hours is interpolation or extrapolation.      Explain why one of these predictions is usually more trustworthy than the other.    "
 },
 {
-  "id": "ch5-exercises",
+  "id": "sec-ch5-exercises",
   "level": "1",
-  "url": "ch5-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch5-exercises.html",
+  "type": "Section",
   "number": "5.3",
   "title": "Exercises",
   "body": " Exercises   State whether each situation involves one-variable data or two-variable data.   The heights of 20 students  The heights and weights of 20 students  The daily high temperatures in a city for one month  The number of hours studied and the final exam scores for a class     For each pair of variables, decide which one is more naturally treated as the independent variable and which one is more naturally treated as the dependent variable.   Hours worked and weekly pay  Outdoor temperature and electricity used for air conditioning  Age of a used car and its selling price     Use the data in to make a scatterplot by hand or with software. Describe whether the association appears positive, negative, or unclear.    Suppose a data set has correlation coefficient . Describe the direction and strength of the linear relationship.    Suppose a data set has correlation coefficient . Describe the direction and strength of the linear relationship.    Suppose a data set has correlation coefficient . What does this suggest about the linear relationship?    Explain why the correlation coefficient must always lie between and , at least at the level of interpretation.    A regression line is given by   Find the predicted value of when .    A regression equation is   What is the slope? What does it mean in context if is age of a car in years and is selling price in thousands of dollars?    A regression equation for predicting quiz score from hours of review is   Use the equation to predict the quiz score for a student who reviews for 5 hours.    Explain the difference between interpolation and extrapolation. Then give one example of each.    A data set has a strong positive correlation. Does that prove that changes in cause changes in ? Explain briefly.   "
@@ -1695,8 +1596,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-1",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-1",
+  "type": "Checkpoint",
   "number": "5.3.1",
   "title": "",
   "body": " State whether each situation involves one-variable data or two-variable data.   The heights of 20 students  The heights and weights of 20 students  The daily high temperatures in a city for one month  The number of hours studied and the final exam scores for a class   "
@@ -1704,8 +1605,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-2",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-2",
+  "type": "Checkpoint",
   "number": "5.3.2",
   "title": "",
   "body": " For each pair of variables, decide which one is more naturally treated as the independent variable and which one is more naturally treated as the dependent variable.   Hours worked and weekly pay  Outdoor temperature and electricity used for air conditioning  Age of a used car and its selling price   "
@@ -1713,8 +1614,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-3",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-3",
+  "type": "Checkpoint",
   "number": "5.3.3",
   "title": "",
   "body": " Use the data in to make a scatterplot by hand or with software. Describe whether the association appears positive, negative, or unclear.  "
@@ -1722,8 +1623,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-4",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-4",
+  "type": "Checkpoint",
   "number": "5.3.4",
   "title": "",
   "body": " Suppose a data set has correlation coefficient . Describe the direction and strength of the linear relationship.  "
@@ -1731,8 +1632,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-5",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-5",
+  "type": "Checkpoint",
   "number": "5.3.5",
   "title": "",
   "body": " Suppose a data set has correlation coefficient . Describe the direction and strength of the linear relationship.  "
@@ -1740,8 +1641,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-6",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-6",
+  "type": "Checkpoint",
   "number": "5.3.6",
   "title": "",
   "body": " Suppose a data set has correlation coefficient . What does this suggest about the linear relationship?  "
@@ -1749,8 +1650,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-7",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-7",
+  "type": "Checkpoint",
   "number": "5.3.7",
   "title": "",
   "body": " Explain why the correlation coefficient must always lie between and , at least at the level of interpretation.  "
@@ -1758,8 +1659,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-8",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-8",
+  "type": "Checkpoint",
   "number": "5.3.8",
   "title": "",
   "body": " A regression line is given by   Find the predicted value of when .  "
@@ -1767,8 +1668,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-9",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-9",
+  "type": "Checkpoint",
   "number": "5.3.9",
   "title": "",
   "body": " A regression equation is   What is the slope? What does it mean in context if is age of a car in years and is selling price in thousands of dollars?  "
@@ -1776,8 +1677,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-10",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-10",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-10",
+  "type": "Checkpoint",
   "number": "5.3.10",
   "title": "",
   "body": " A regression equation for predicting quiz score from hours of review is   Use the equation to predict the quiz score for a student who reviews for 5 hours.  "
@@ -1785,8 +1686,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-11",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-11",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-11",
+  "type": "Checkpoint",
   "number": "5.3.11",
   "title": "",
   "body": " Explain the difference between interpolation and extrapolation. Then give one example of each.  "
@@ -1794,8 +1695,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch5-ex-12",
   "level": "2",
-  "url": "ch5-exercises.html#ch5-ex-12",
-  "type": "Exercise",
+  "url": "sec-ch5-exercises.html#ch5-ex-12",
+  "type": "Checkpoint",
   "number": "5.3.12",
   "title": "",
   "body": " A data set has a strong positive correlation. Does that prove that changes in cause changes in ? Explain briefly.  "
@@ -1807,7 +1708,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Sample Spaces and Events",
-  "body": " Sample Spaces and Events  A random experiment probability random experiment is a process with a known collection of possible outcomes, but the outcome of one trial is not known ahead of time. Flipping a coin, rolling a die, and selecting a student at random are all random experiments.  The set of all possible outcomes is called the sample space probability sample space , usually written . An event probability event is a subset of the sample space.   A Sample Space for a Die Roll  If a fair six-sided die is rolled once, then the sample space is   The event “an even number occurs” is   and the event “a number greater than 4 occurs” is    Once we treat events as sets, we can use ordinary set operations.  The complement probability complement of an event of an event , written , consists of all outcomes in the sample space that are not in .  The union probability union of events  consists of outcomes that are in or in or in both. The intersection probability intersection of events  consists of outcomes that are in both and .   Set Operations with Two Coin Flips  If a coin is flipped twice, then the sample space is   Let be the event “exactly one head occurs,” so . Let be the event “the first flip is a head,” so .  Then    Two events are mutually exclusive probability mutually exclusive events if they cannot happen at the same time. In set language, that means their intersection is empty.   Mutually Exclusive Events  When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.  On the other hand, the events “the outcome is even” and “the outcome is greater than 3” are not mutually exclusive, because 4 and 6 belong to both events.    Sample Spaces and Events   Practice writing sample spaces and identifying events for simple random experiments.     Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event “the number is at least 4.”      Write the sample space for one coin flip and list the outcomes for the event “heads occurs.” Then do the same for the event “tails occurs.”      For two coin flips, write the event “exactly one head occurs” as a set of outcomes.      Complements, Unions, and Intersections   Use the language of sets to describe common probability events.     Using the sample space for one die roll, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Write , , and .      For two coin flips, let be the event “the first flip is a head” and let be the event “exactly one head occurs.” Find .      Decide whether the events “the number is 1” and “the number is 6” are mutually exclusive. Explain your answer.     "
+  "body": " Sample Spaces and Events  A random experiment probability random experiment is a process with a known collection of possible outcomes, but the outcome of one trial is not known ahead of time. Flipping a coin, rolling a die, and selecting a student at random are all random experiments.  The set of all possible outcomes is called the sample space probability sample space , usually written . An event probability event is a subset of the sample space.   A Sample Space for a Die Roll  If a fair six-sided die is rolled once, then the sample space is   The event an even number occurs is   and the event a number greater than 4 occurs is    Once we treat events as sets, we can use ordinary set operations.  The complement probability complement of an event of an event , written , consists of all outcomes in the sample space that are not in .  The union probability union of events  consists of outcomes that are in or in or in both. The intersection probability intersection of events  consists of outcomes that are in both and .   Set Operations with Two Coin Flips  If a coin is flipped twice, then the sample space is   Let be the event exactly one head occurs, so . Let be the event the first flip is a head, so .  Then    Two events are mutually exclusive probability mutually exclusive events if they cannot happen at the same time. In set language, that means their intersection is empty.   Mutually Exclusive Events  When a die is rolled, the event the outcome is 2 and the event the outcome is 5 are mutually exclusive, because no single roll can be both 2 and 5.  On the other hand, the events the outcome is even and the outcome is greater than 3 are not mutually exclusive, because 4 and 6 belong to both events.    Sample Spaces and Events   Practice writing sample spaces and identifying events for simple random experiments.     Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event the number is at least 4.      Write the sample space for one coin flip and list the outcomes for the event heads occurs. Then do the same for the event tails occurs.      For two coin flips, write the event exactly one head occurs as a set of outcomes.      Complements, Unions, and Intersections   Use the language of sets to describe common probability events.     Using the sample space for one die roll, let be the event the outcome is even and let be the event the outcome is greater than 3. Write , , and .      For two coin flips, let be the event the first flip is a head and let be the event exactly one head occurs. Find .      Decide whether the events the number is 1 and the number is 6 are mutually exclusive. Explain your answer.     "
 },
 {
   "id": "sec-sample-spaces-events-2",
@@ -1816,7 +1717,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "random experiment probability random experiment "
+  "body": "random experiment "
 },
 {
   "id": "sec-sample-spaces-events-3",
@@ -1825,7 +1726,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample space probability sample space event probability event "
+  "body": "sample space event "
 },
 {
   "id": "ex-sample-space-die",
@@ -1834,7 +1735,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.1.1",
   "title": "A Sample Space for a Die Roll.",
-  "body": " A Sample Space for a Die Roll  If a fair six-sided die is rolled once, then the sample space is   The event “an even number occurs” is   and the event “a number greater than 4 occurs” is   "
+  "body": " A Sample Space for a Die Roll  If a fair six-sided die is rolled once, then the sample space is   The event an even number occurs is   and the event a number greater than 4 occurs is   "
 },
 {
   "id": "sec-sample-spaces-events-6",
@@ -1843,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "complement probability complement of an event "
+  "body": "complement "
 },
 {
   "id": "sec-sample-spaces-events-7",
@@ -1852,7 +1753,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "union probability union of events intersection probability intersection of events "
+  "body": "union intersection "
 },
 {
   "id": "ex-coin-set-operations",
@@ -1861,7 +1762,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.1.2",
   "title": "Set Operations with Two Coin Flips.",
-  "body": " Set Operations with Two Coin Flips  If a coin is flipped twice, then the sample space is   Let be the event “exactly one head occurs,” so . Let be the event “the first flip is a head,” so .  Then   "
+  "body": " Set Operations with Two Coin Flips  If a coin is flipped twice, then the sample space is   Let be the event exactly one head occurs, so . Let be the event the first flip is a head, so .  Then   "
 },
 {
   "id": "sec-sample-spaces-events-9",
@@ -1870,7 +1771,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mutually exclusive probability mutually exclusive events "
+  "body": "mutually exclusive "
 },
 {
   "id": "ex-mutually-exclusive-die",
@@ -1879,25 +1780,25 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.1.3",
   "title": "Mutually Exclusive Events.",
-  "body": " Mutually Exclusive Events  When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.  On the other hand, the events “the outcome is even” and “the outcome is greater than 3” are not mutually exclusive, because 4 and 6 belong to both events.  "
+  "body": " Mutually Exclusive Events  When a die is rolled, the event the outcome is 2 and the event the outcome is 5 are mutually exclusive, because no single roll can be both 2 and 5.  On the other hand, the events the outcome is even and the outcome is greater than 3 are not mutually exclusive, because 4 and 6 belong to both events.  "
 },
 {
   "id": "act-ch6-sample-spaces-events",
   "level": "2",
   "url": "sec-sample-spaces-events.html#act-ch6-sample-spaces-events",
   "type": "Activity",
-  "number": "6.1.1",
+  "number": "6.1.4",
   "title": "Sample Spaces and Events.",
-  "body": " Sample Spaces and Events   Practice writing sample spaces and identifying events for simple random experiments.     Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event “the number is at least 4.”      Write the sample space for one coin flip and list the outcomes for the event “heads occurs.” Then do the same for the event “tails occurs.”      For two coin flips, write the event “exactly one head occurs” as a set of outcomes.    "
+  "body": " Sample Spaces and Events   Practice writing sample spaces and identifying events for simple random experiments.     Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event the number is at least 4.      Write the sample space for one coin flip and list the outcomes for the event heads occurs. Then do the same for the event tails occurs.      For two coin flips, write the event exactly one head occurs as a set of outcomes.    "
 },
 {
   "id": "act-ch6-set-operations",
   "level": "2",
   "url": "sec-sample-spaces-events.html#act-ch6-set-operations",
   "type": "Activity",
-  "number": "6.1.2",
+  "number": "6.1.5",
   "title": "Complements, Unions, and Intersections.",
-  "body": " Complements, Unions, and Intersections   Use the language of sets to describe common probability events.     Using the sample space for one die roll, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Write , , and .      For two coin flips, let be the event “the first flip is a head” and let be the event “exactly one head occurs.” Find .      Decide whether the events “the number is 1” and “the number is 6” are mutually exclusive. Explain your answer.    "
+  "body": " Complements, Unions, and Intersections   Use the language of sets to describe common probability events.     Using the sample space for one die roll, let be the event the outcome is even and let be the event the outcome is greater than 3. Write , , and .      For two coin flips, let be the event the first flip is a head and let be the event exactly one head occurs. Find .      Decide whether the events the number is 1 and the number is 6 are mutually exclusive. Explain your answer.    "
 },
 {
   "id": "sec-probability-rules",
@@ -1906,7 +1807,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "Probability Rules",
-  "body": " Probability Rules  A probability law probability probability law assigns a number to each event . The number measures the chance that the outcome lies in .  Every probability law satisfies three basic facts.   for every event .  .  If and are mutually exclusive, then .   From these facts we get several rules that are used all the time:    Probability with Equally Likely Outcomes  When a fair die is rolled, all six outcomes are equally likely. If , then   If , then   Since , we have    When the individual outcomes are equally likely , the probability of an event is   That shortcut is useful, but it only works in equally likely situations. A loaded die is a good reminder that counting outcomes is not always enough.   A Loaded Die  Suppose a loaded die has the probability distribution shown in .    Probability distribution for a loaded die    Outcome  1  2  3  4  5  6              Let be the event “an odd outcome occurs,” and let .  Then    and since ,   Therefore   Notice what happens here: the event contains two outcomes, but its probability is not . That is why the formula cannot be used unless the outcomes are equally likely.   Using the Probability Rules   Practice computing probabilities from equally likely outcomes and from a probability table.     For a fair die, let be the event “the outcome is prime” and let be the event “the outcome is odd.” Find , , , and .      Using the loaded die in , find the probability of rolling a number less than 4.      Using the same table, find the complement of the event “rolling a 1 or a 2.” Then explain why the complement rule is useful here.      Fair and Loaded Dice   Compare a fair die with the loaded die to see how probability laws depend on the model.     For a fair die, find the probability of rolling a 6 and the probability of rolling an even number.      For the loaded die in , find the probability of rolling a 6 and the probability of rolling an even number.      Compare the two answers and explain what makes the loaded die different from the fair die.     "
+  "body": " Probability Rules  A probability law probability probability law assigns a number to each event . The number measures the chance that the outcome lies in .  Every probability law satisfies three basic facts.   for every event .  .  If and are mutually exclusive, then .   From these facts we get several rules that are used all the time:    Probability with Equally Likely Outcomes  When a fair die is rolled, all six outcomes are equally likely. If , then   If , then   Since , we have    When the individual outcomes are equally likely , the probability of an event is   That shortcut is useful, but it only works in equally likely situations. A loaded die is a good reminder that counting outcomes is not always enough.   A Loaded Die  Suppose a loaded die has the probability distribution shown in .    Probability distribution for a loaded die    Outcome  1  2  3  4  5  6              Let be the event an odd outcome occurs, and let .  Then    and since ,   Therefore   Notice what happens here: the event contains two outcomes, but its probability is not . That is why the formula cannot be used unless the outcomes are equally likely.   Using the Probability Rules   Practice computing probabilities from equally likely outcomes and from a probability table.     For a fair die, let be the event the outcome is prime and let be the event the outcome is odd. Find , , , and .      Using the loaded die in , find the probability of rolling a number less than 4.      Using the same table, find the complement of the event rolling a 1 or a 2. Then explain why the complement rule is useful here.      Fair and Loaded Dice   Compare a fair die with the loaded die to see how probability laws depend on the model.     For a fair die, find the probability of rolling a 6 and the probability of rolling an even number.      For the loaded die in , find the probability of rolling a 6 and the probability of rolling an even number.      Compare the two answers and explain what makes the loaded die different from the fair die.     "
 },
 {
   "id": "sec-probability-rules-2",
@@ -1915,7 +1816,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "probability law probability probability law "
+  "body": "probability law "
 },
 {
   "id": "ex-fair-die-probability",
@@ -1949,16 +1850,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-probability-rules.html#act-ch6-probability-rules",
   "type": "Activity",
-  "number": "6.2.1",
+  "number": "6.2.4",
   "title": "Using the Probability Rules.",
-  "body": " Using the Probability Rules   Practice computing probabilities from equally likely outcomes and from a probability table.     For a fair die, let be the event “the outcome is prime” and let be the event “the outcome is odd.” Find , , , and .      Using the loaded die in , find the probability of rolling a number less than 4.      Using the same table, find the complement of the event “rolling a 1 or a 2.” Then explain why the complement rule is useful here.    "
+  "body": " Using the Probability Rules   Practice computing probabilities from equally likely outcomes and from a probability table.     For a fair die, let be the event the outcome is prime and let be the event the outcome is odd. Find , , , and .      Using the loaded die in , find the probability of rolling a number less than 4.      Using the same table, find the complement of the event rolling a 1 or a 2. Then explain why the complement rule is useful here.    "
 },
 {
   "id": "act-ch6-fair-vs-loaded",
   "level": "2",
   "url": "sec-probability-rules.html#act-ch6-fair-vs-loaded",
   "type": "Activity",
-  "number": "6.2.2",
+  "number": "6.2.5",
   "title": "Fair and Loaded Dice.",
   "body": " Fair and Loaded Dice   Compare a fair die with the loaded die to see how probability laws depend on the model.     For a fair die, find the probability of rolling a 6 and the probability of rolling an even number.      For the loaded die in , find the probability of rolling a 6 and the probability of rolling an even number.      Compare the two answers and explain what makes the loaded die different from the fair die.    "
 },
@@ -1969,7 +1870,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Conditional Probability and Independence",
-  "body": " Conditional Probability and Independence   Sometimes the probability of an event changes once we learn extra information. That idea leads to conditional probability probability conditional probability . In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.    Conditional Probability  The probability of given is written . It means the probability that the outcome is in once we already know the outcome is in . If , then   This formula can be rearranged into the multiplication rule probability multiplication rule :    Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event “the outcome is odd,” and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:     Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event “the outcome is odd” and let be the event “the outcome is greater than 2.” Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.      Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.       Independence  Two events and are independent probability independent events if knowing that one occurred does not change the probability of the other. In symbols, independence means   which is equivalent to    Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.   It is important not to mix up independence and mutual exclusivity. They are different ideas.   Mutually exclusive events cannot happen together.  Independent events can happen together, but one does not affect the probability of the other.   If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product is positive.   Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Decide whether the events are independent.      For the same die, let be the event “the outcome is 1” and let be the event “the outcome is 6.” Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.       Contingency Tables  A contingency table tables contingency table , also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.  The counts inside the table are joint frequencies tables joint frequency because each count belongs to a combination of two categories. The totals along the edges are marginal totals tables marginal total . The grand total is the total number of observations.   Conditional Probability from a Contingency Table  A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in .    Commute length and public transportation use     Public transit  No transit  Total    At least 30 min  18  22  40    Under 30 min  12  28  40    Total  30  50  80     Let be the event “the commute is at least 30 minutes” and let be the event “the student uses public transportation.” From the table,   To find , restrict attention to the row for commutes at least 30 minutes. Out of those 40 students, 18 use public transportation, so   To find , restrict attention to the column for public transportation. Out of those 30 students, 18 have commutes at least 30 minutes, so   This is a good reminder that and usually answer different questions. The condition tells us which row or column becomes the new total.  Contingency tables also help us check independence. In this example, , but . Since knowing that the commute is at least 30 minutes changes the probability that a student uses public transportation, the events and are not independent.   Reading a Contingency Table   Use a two-way table to compute conditional probabilities and check whether two events appear independent.     Use to find the probability that a randomly selected student uses public transportation.      Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.      Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?      "
+  "body": " Conditional Probability and Independence   Sometimes the probability of an event changes once we learn extra information. That idea leads to conditional probability probability conditional probability . In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.    Conditional Probability  The probability of given is written . It means the probability that the outcome is in once we already know the outcome is in . If , then   This formula can be rearranged into the multiplication rule probability multiplication rule :    Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event the outcome is odd, and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:     Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event the outcome is odd and let be the event the outcome is greater than 2. Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.      Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.       Independence  Two events and are independent probability independent events if knowing that one occurred does not change the probability of the other. In symbols, independence means   which is equivalent to    Checking Independence  Let be the event the die shows an odd number, and let be the event the die shows a number at most 4.  Then   The intersection is , so   Because   the events are independent.   It is important not to mix up independence and mutual exclusivity. They are different ideas.   Mutually exclusive events cannot happen together.  Independent events can happen together, but one does not affect the probability of the other.   If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product is positive.   Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event the outcome is even and let be the event the outcome is greater than 3. Decide whether the events are independent.      For the same die, let be the event the outcome is 1 and let be the event the outcome is 6. Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.       Contingency Tables  A contingency table tables contingency table , also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.  The counts inside the table are joint frequencies tables joint frequency because each count belongs to a combination of two categories. The totals along the edges are marginal totals tables marginal total . The grand total is the total number of observations.   Conditional Probability from a Contingency Table  A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in .    Commute length and public transportation use     Public transit  No transit  Total    At least 30 min  18  22  40    Under 30 min  12  28  40    Total  30  50  80     Let be the event the commute is at least 30 minutes and let be the event the student uses public transportation. From the table,   To find , restrict attention to the row for commutes at least 30 minutes. Out of those 40 students, 18 use public transportation, so   To find , restrict attention to the column for public transportation. Out of those 30 students, 18 have commutes at least 30 minutes, so   This is a good reminder that and usually answer different questions. The condition tells us which row or column becomes the new total.  Contingency tables also help us check independence. In this example, , but . Since knowing that the commute is at least 30 minutes changes the probability that a student uses public transportation, the events and are not independent.   Reading a Contingency Table   Use a two-way table to compute conditional probabilities and check whether two events appear independent.     Use to find the probability that a randomly selected student uses public transportation.      Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.      Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?      "
 },
 {
   "id": "sec-conditional-probability-2-1",
@@ -1978,7 +1879,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "conditional probability probability conditional probability "
+  "body": "conditional probability "
 },
 {
   "id": "subsec-conditional-probability-formula-4",
@@ -1987,7 +1888,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "multiplication rule probability multiplication rule "
+  "body": "multiplication rule "
 },
 {
   "id": "ex-conditional-die",
@@ -1996,23 +1897,23 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.3.1",
   "title": "Conditional Probability on a Die Roll.",
-  "body": " Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event “the outcome is odd,” and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:   "
+  "body": " Conditional Probability on a Die Roll  Suppose a fair die is rolled. Let be the event the outcome is odd, and let .  Without extra information,   But if we know the outcome is in , then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in . So   Using the formula gives the same answer:   "
 },
 {
   "id": "act-ch6-conditional-die",
   "level": "2",
   "url": "sec-conditional-probability.html#act-ch6-conditional-die",
   "type": "Activity",
-  "number": "6.3.1",
+  "number": "6.3.2",
   "title": "Conditional Probability with a Die.",
-  "body": " Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event “the outcome is odd” and let be the event “the outcome is greater than 2.” Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.    "
+  "body": " Conditional Probability with a Die   Use a die roll to practice the conditional probability formula and the multiplication rule.     Let be the event the outcome is odd and let be the event the outcome is greater than 2. Find .      Find for the same events.      Use the multiplication rule to find and check that it matches the direct count.    "
 },
 {
   "id": "act-ch6-card-sample-conditional",
   "level": "2",
   "url": "sec-conditional-probability.html#act-ch6-card-sample-conditional",
   "type": "Activity",
-  "number": "6.3.2",
+  "number": "6.3.3",
   "title": "Conditional Probability with a Card Sample.",
   "body": " Conditional Probability with a Card Sample   Draw 10 random cards from a standard deck and use the sample to create and answer conditional probability questions. If a condition does not occur in your 10 cards, choose a different condition or draw a new sample.     Draw 10 random cards from a standard deck. Record each card's rank, suit, and color in a table or list.      Using your sample, answer a few conditional probability questions such as: What is the probability of getting a red card given that the card drawn is a 3? What is the probability of getting a face card given that the card is a heart? What is the probability of getting a club given that the card is black?      Write two conditional probability questions of your own based on your 10-card sample, and answer them clearly.    "
 },
@@ -2023,25 +1924,25 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "independent probability independent events "
+  "body": "independent "
 },
 {
   "id": "ex-independent-die",
   "level": "2",
   "url": "sec-conditional-probability.html#ex-independent-die",
   "type": "Example",
-  "number": "6.3.2",
+  "number": "6.3.4",
   "title": "Checking Independence.",
-  "body": " Checking Independence  Let be the event “the die shows an odd number,” and let be the event “the die shows a number at most 4.”  Then   The intersection is , so   Because   the events are independent.  "
+  "body": " Checking Independence  Let be the event the die shows an odd number, and let be the event the die shows a number at most 4.  Then   The intersection is , so   Because   the events are independent.  "
 },
 {
   "id": "act-ch6-independence-check",
   "level": "2",
   "url": "sec-conditional-probability.html#act-ch6-independence-check",
   "type": "Activity",
-  "number": "6.3.3",
+  "number": "6.3.5",
   "title": "Independent or Not?",
-  "body": " Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event “the outcome is even” and let be the event “the outcome is greater than 3.” Decide whether the events are independent.      For the same die, let be the event “the outcome is 1” and let be the event “the outcome is 6.” Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.    "
+  "body": " Independent or Not?   Decide whether pairs of events are independent, mutually exclusive, or neither.     For a fair die, let be the event the outcome is even and let be the event the outcome is greater than 3. Decide whether the events are independent.      For the same die, let be the event the outcome is 1 and let be the event the outcome is 6. Decide whether the events are mutually exclusive.      Explain in one or two sentences why independence and mutual exclusivity are different ideas.    "
 },
 {
   "id": "subsec-contingency-tables-2",
@@ -2050,7 +1951,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "contingency table tables contingency table "
+  "body": "contingency table "
 },
 {
   "id": "subsec-contingency-tables-3",
@@ -2059,14 +1960,14 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "joint frequencies tables joint frequency marginal totals tables marginal total "
+  "body": "joint frequencies marginal totals "
 },
 {
   "id": "ex-contingency-table-commute",
   "level": "2",
   "url": "sec-conditional-probability.html#ex-contingency-table-commute",
   "type": "Example",
-  "number": "6.3.3",
+  "number": "6.3.6",
   "title": "Conditional Probability from a Contingency Table.",
   "body": " Conditional Probability from a Contingency Table  A class survey asked 80 students whether they usually take public transportation to campus and whether their commute is at least 30 minutes. The results are shown in .  "
 },
@@ -2075,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-conditional-probability.html#tbl-commute-contingency",
   "type": "Table",
-  "number": "6.3.4",
+  "number": "6.3.7",
   "title": "Commute length and public transportation use",
   "body": " Commute length and public transportation use     Public transit  No transit  Total    At least 30 min  18  22  40    Under 30 min  12  28  40    Total  30  50  80    "
 },
@@ -2084,24 +1985,24 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-conditional-probability.html#act-ch6-contingency-table",
   "type": "Activity",
-  "number": "6.3.4",
+  "number": "6.3.8",
   "title": "Reading a Contingency Table.",
   "body": " Reading a Contingency Table   Use a two-way table to compute conditional probabilities and check whether two events appear independent.     Use to find the probability that a randomly selected student uses public transportation.      Use the same table to find the probability that a randomly selected student uses public transportation, given that the student's commute is under 30 minutes.      Compare the two probabilities from the previous tasks. Based on this comparison, do commute length and public transportation use appear independent in this class survey?    "
 },
 {
-  "id": "ch6-exercises",
+  "id": "sec-ch6-exercises",
   "level": "1",
-  "url": "ch6-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch6-exercises.html",
+  "type": "Section",
   "number": "6.4",
   "title": "Exercises",
-  "body": " Exercises   A fair die is rolled once. Let and .   Find .  Find .  Find .     A coin is flipped twice.   Write the sample space.  Let be the event “at least one head occurs.” List the outcomes in .  Let be the event “the second flip is tails.” List the outcomes in .     A fair die is rolled once. Find the probability of each event.   The outcome is prime.  The outcome is less than 5.  The outcome is even or greater than 4.     Suppose , , and .   Find .  Find .  Find .     Use .   Find the probability of rolling a number at least 4.  Find the probability of rolling an even number.  Find the probability of rolling a number that is even or at least 4.     A card is drawn from a standard deck of 52 cards. Let be the event “the card is a heart” and let be the event “the card is a face card.”   Find , , and .  Find .  Are and independent? Explain.     Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.    A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.   Work schedule and online classes     Online class  No online class  Total    Works at least 10 hours  32  18  50    Works under 10 hours  20  30  50    Total  52  48  100      Find the probability that a randomly selected student is taking an online class.  Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.  Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.    "
+  "body": " Exercises   A fair die is rolled once. Let and .   Find .  Find .  Find .     A coin is flipped twice.   Write the sample space.  Let be the event at least one head occurs. List the outcomes in .  Let be the event the second flip is tails. List the outcomes in .     A fair die is rolled once. Find the probability of each event.   The outcome is prime.  The outcome is less than 5.  The outcome is even or greater than 4.     Suppose , , and .   Find .  Find .  Find .     Use .   Find the probability of rolling a number at least 4.  Find the probability of rolling an even number.  Find the probability of rolling a number that is even or at least 4.     A card is drawn from a standard deck of 52 cards. Let be the event the card is a heart and let be the event the card is a face card.   Find , , and .  Find .  Are and independent? Explain.     Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.    A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.   Work schedule and online classes     Online class  No online class  Total    Works at least 10 hours  32  18  50    Works under 10 hours  20  30  50    Total  52  48  100      Find the probability that a randomly selected student is taking an online class.  Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.  Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.    "
 },
 {
   "id": "ch6-ex-1",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-1",
+  "type": "Checkpoint",
   "number": "6.4.1",
   "title": "",
   "body": " A fair die is rolled once. Let and .   Find .  Find .  Find .   "
@@ -2109,17 +2010,17 @@ var ptx_lunr_docs = [
 {
   "id": "ch6-ex-2",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-2",
+  "type": "Checkpoint",
   "number": "6.4.2",
   "title": "",
-  "body": " A coin is flipped twice.   Write the sample space.  Let be the event “at least one head occurs.” List the outcomes in .  Let be the event “the second flip is tails.” List the outcomes in .   "
+  "body": " A coin is flipped twice.   Write the sample space.  Let be the event at least one head occurs. List the outcomes in .  Let be the event the second flip is tails. List the outcomes in .   "
 },
 {
   "id": "ch6-ex-3",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-3",
+  "type": "Checkpoint",
   "number": "6.4.3",
   "title": "",
   "body": " A fair die is rolled once. Find the probability of each event.   The outcome is prime.  The outcome is less than 5.  The outcome is even or greater than 4.   "
@@ -2127,8 +2028,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch6-ex-4",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-4",
+  "type": "Checkpoint",
   "number": "6.4.4",
   "title": "",
   "body": " Suppose , , and .   Find .  Find .  Find .   "
@@ -2136,8 +2037,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch6-ex-5",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-5",
+  "type": "Checkpoint",
   "number": "6.4.5",
   "title": "",
   "body": " Use .   Find the probability of rolling a number at least 4.  Find the probability of rolling an even number.  Find the probability of rolling a number that is even or at least 4.   "
@@ -2145,17 +2046,17 @@ var ptx_lunr_docs = [
 {
   "id": "ch6-ex-6",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-6",
+  "type": "Checkpoint",
   "number": "6.4.6",
   "title": "",
-  "body": " A card is drawn from a standard deck of 52 cards. Let be the event “the card is a heart” and let be the event “the card is a face card.”   Find , , and .  Find .  Are and independent? Explain.   "
+  "body": " A card is drawn from a standard deck of 52 cards. Let be the event the card is a heart and let be the event the card is a face card.   Find , , and .  Find .  Are and independent? Explain.   "
 },
 {
   "id": "ch6-ex-7",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-7",
+  "type": "Checkpoint",
   "number": "6.4.7",
   "title": "",
   "body": " Can two events with positive probability be both mutually exclusive and independent? Explain why or why not.  "
@@ -2163,8 +2064,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch6-ex-8",
   "level": "2",
-  "url": "ch6-exercises.html#ch6-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch6-exercises.html#ch6-ex-8",
+  "type": "Checkpoint",
   "number": "6.4.8",
   "title": "",
   "body": " A survey of 100 students recorded whether each student works at least 10 hours per week and whether the student is taking an online class.   Work schedule and online classes     Online class  No online class  Total    Works at least 10 hours  32  18  50    Works under 10 hours  20  30  50    Total  52  48  100      Find the probability that a randomly selected student is taking an online class.  Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.  Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.   "
@@ -2176,7 +2077,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.1",
   "title": "Random Variables, CDFs, Expectation, and Variance",
-  "body": " Random Variables, CDFs, Expectation, and Variance  A random variable probability random variable is a function that assigns a real number to each outcome in a sample space. We often use a capital letter such as to name a random variable.  A random variable is discrete probability discrete random variable if it takes values in a countable set. It is continuous probability continuous random variable if it can take any value in an interval. In this chapter we focus only on the discrete case.   The Sum of Two Dice  Suppose two fair dice are rolled. The sample space consists of the 36 ordered pairs   Define the random variable by letting be the sum of the two dice. Then , , and the possible values of are    The probability function of a discrete random variable is called its probability distribution function probability probability distribution function . In many statistics books this is also called the probability mass function.   Probability distribution of the sum of two fair dice     2  3  4  5  6  7  8  9  10  11  12                   For example, because four ordered pairs produce a total of 5: , , , and .  Every discrete probability distribution satisfies two basic properties:   for each possible value .  The probabilities add to 1.    The cumulative distribution function probability cumulative distribution function , or CDF probability CDF , of a discrete random variable is defined by   For a discrete random variable, the CDF is found by adding the probabilities of all values up to .   A probability mass function and its corresponding cumulative distribution function   Two graphs shown side by side for the same discrete random variable. The left graph is a bar chart for the probability mass function at x equals 0, 1, 2, and 3 with heights 0.1, 0.3, 0.4, and 0.2. The right graph is a step graph for the cumulative distribution function with levels 0.1, 0.4, 0.8, and 1.0.  The figure has two panels. In the left panel, labeled PMF, a discrete random variable takes the values 0, 1, 2, and 3 with probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical bars. In the right panel, labeled CDF, the cumulative distribution function starts at 0 to the left of 0, jumps to 0.1 at x equals 0, then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x equals 3. The picture shows that the CDF is built by accumulating the PMF values from left to right.     shows the difference in how these two functions look. The PMF records the probability at each individual value, while the CDF keeps a running total and therefore has a step-like shape for a discrete random variable.   Computing a CDF Value  For the random variable equal to the sum of two fair dice,   Using ,    The CDF and the probability distribution contain the same information. For instance, if 5 is the next possible value after 4, then   The expected value probability expected value , also called the mean probability mean of a random variable , is the long-run average value of a random variable. For a discrete random variable,   If is a continuous random variable with probability density function , then the corresponding definition is   So the basic idea is the same in both cases: expectation is a weighted average, where probabilities play the role of the weights.   Expected Value from a Relative Frequency Table  Suppose the score of a randomly selected student from a class has the distribution shown in .    Probability distribution for a student's score    Score  13  15  16  17  18  19  20               The expected score is   So if we repeatedly select students at random from this class, the long-run average score would settle near 17.3.  The expected value tells us the center of a random variable, but it does not tell us how spread out the values are. For that, we use the variance probability variance of a random variable and the standard deviation probability standard deviation of a random variable .  First, the covariance of random variables and can be defined in terms of expectation by   We will show that last equality using properties of expectation in the next section. Define , the variance of , to be . So we have   And the standard deviation of is then   For a discrete random variable, it is often easiest to compute the variance by first finding and    Variance and Standard Deviation from a Distribution  Using the score distribution in , we already know that .  Now compute   Therefore   and     Arcade Dice Game   Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.     Roll one fair die. Let be the number of tickets earned, where 1, 2, and 3 earn 0 tickets, 4 earns 2 tickets, 5 earns 5 tickets, and 6 earns 10 tickets. Write the probability distribution of .      Find and .      Compute and explain what that value means if the game is played many times.      Prize Wheel Distribution   Practice checking a distribution and using it to compute the mean and variance of a random variable.     A prize wheel gives 0, 1, 2, or 4 tokens with probabilities 0.25, 0.35, 0.25, and 0.15. Verify that this is a valid probability distribution and sketch its bar chart.      Find and .      Use those values to find and .     "
+  "body": " Random Variables, CDFs, Expectation, and Variance  A random variable probability random variable is a function that assigns a real number to each outcome in a sample space. We often use a capital letter such as to name a random variable.  A random variable is discrete probability discrete random variable if it takes values in a countable set. It is continuous probability continuous random variable if it can take any value in an interval. In this chapter we focus only on the discrete case.   The Sum of Two Dice  Suppose two fair dice are rolled. The sample space consists of the 36 ordered pairs   Define the random variable by letting be the sum of the two dice. Then , , and the possible values of are    The probability function of a discrete random variable is called its probability distribution function probability probability distribution function . In many statistics books this is also called the probability mass function.   Probability distribution of the sum of two fair dice     2  3  4  5  6  7  8  9  10  11  12                   For example, because four ordered pairs produce a total of 5: , , , and .  Every discrete probability distribution satisfies two basic properties:   for each possible value .  The probabilities add to 1.    The cumulative distribution function probability cumulative distribution function , or CDF probability CDF , of a discrete random variable is defined by   For a discrete random variable, the CDF is found by adding the probabilities of all values up to .   A probability mass function and its corresponding cumulative distribution function   Two graphs shown side by side for the same discrete random variable.  The figure has two panels. In the left panel, labeled PMF, a discrete random variable takes the values 0, 1, 2, and 3 with probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical bars. In the right panel, labeled CDF, the cumulative distribution function starts at 0 to the left of 0, jumps to 0.1 at x equals 0, then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x equals 3. The picture shows that the CDF is built by accumulating the PMF values from left to right.     shows the difference in how these two functions look. The PMF records the probability at each individual value, while the CDF keeps a running total and therefore has a step-like shape for a discrete random variable.   Computing a CDF Value  For the random variable equal to the sum of two fair dice,   Using ,    The CDF and the probability distribution contain the same information. For instance, if 5 is the next possible value after 4, then   The expected value probability expected value , also called the mean probability mean of a random variable , is the long-run average value of a random variable. For a discrete random variable,   If is a continuous random variable with probability density function , then the corresponding definition is   So the basic idea is the same in both cases: expectation is a weighted average, where probabilities play the role of the weights.   Expected Value from a Relative Frequency Table  Suppose the score of a randomly selected student from a class has the distribution shown in .    Probability distribution for a student's score    Score  13  15  16  17  18  19  20               The expected score is   So if we repeatedly select students at random from this class, the long-run average score would settle near 17.3.  The expected value tells us the center of a random variable, but it does not tell us how spread out the values are. For that, we use the variance probability variance of a random variable and the standard deviation probability standard deviation of a random variable .  First, the covariance of random variables and can be defined in terms of expectation by   We will show that last equality using properties of expectation in the next section. Define , the variance of , to be . So we have   And the standard deviation of is then   For a discrete random variable, it is often easiest to compute the variance by first finding and    Variance and Standard Deviation from a Distribution  Using the score distribution in , we already know that .  Now compute   Therefore   and     Arcade Dice Game   Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.     Roll one fair die. Let be the number of tickets earned, where 1, 2, and 3 earn 0 tickets, 4 earns 2 tickets, 5 earns 5 tickets, and 6 earns 10 tickets. Write the probability distribution of .      Find and .      Compute and explain what that value means if the game is played many times.      Prize Wheel Distribution   Practice checking a distribution and using it to compute the mean and variance of a random variable.     A prize wheel gives 0, 1, 2, or 4 tokens with probabilities 0.25, 0.35, 0.25, and 0.15. Verify that this is a valid probability distribution and sketch its bar chart.      Find and .      Use those values to find and .     "
 },
 {
   "id": "sec-random-variables-pmf-2",
@@ -2185,7 +2086,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "random variable probability random variable "
+  "body": "random variable "
 },
 {
   "id": "sec-random-variables-pmf-3",
@@ -2194,7 +2095,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "discrete probability discrete random variable continuous probability continuous random variable "
+  "body": "discrete continuous "
 },
 {
   "id": "ex-two-dice-sum-rv",
@@ -2212,7 +2113,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "probability distribution function probability probability distribution function "
+  "body": "probability distribution function "
 },
 {
   "id": "tbl-two-dice-pmf",
@@ -2230,7 +2131,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "cumulative distribution function probability cumulative distribution function CDF probability CDF "
+  "body": "cumulative distribution function CDF "
 },
 {
   "id": "fig-pmf-cdf-side-by-side",
@@ -2239,7 +2140,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "7.1.3",
   "title": "",
-  "body": " A probability mass function and its corresponding cumulative distribution function   Two graphs shown side by side for the same discrete random variable. The left graph is a bar chart for the probability mass function at x equals 0, 1, 2, and 3 with heights 0.1, 0.3, 0.4, and 0.2. The right graph is a step graph for the cumulative distribution function with levels 0.1, 0.4, 0.8, and 1.0.  The figure has two panels. In the left panel, labeled PMF, a discrete random variable takes the values 0, 1, 2, and 3 with probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical bars. In the right panel, labeled CDF, the cumulative distribution function starts at 0 to the left of 0, jumps to 0.1 at x equals 0, then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x equals 3. The picture shows that the CDF is built by accumulating the PMF values from left to right.    "
+  "body": " A probability mass function and its corresponding cumulative distribution function   Two graphs shown side by side for the same discrete random variable.  The figure has two panels. In the left panel, labeled PMF, a discrete random variable takes the values 0, 1, 2, and 3 with probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical bars. In the right panel, labeled CDF, the cumulative distribution function starts at 0 to the left of 0, jumps to 0.1 at x equals 0, then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x equals 3. The picture shows that the CDF is built by accumulating the PMF values from left to right.    "
 },
 {
   "id": "ex-cdf-two-dice",
@@ -2257,7 +2158,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "expected value probability expected value mean probability mean of a random variable "
+  "body": "expected value mean "
 },
 {
   "id": "ex-score-distribution-mean",
@@ -2284,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "variance probability variance of a random variable standard deviation probability standard deviation of a random variable "
+  "body": "variance standard deviation "
 },
 {
   "id": "ex-score-distribution-variance",
@@ -2300,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-random-variables-pmf.html#act-ch7-arcade-dice-game",
   "type": "Activity",
-  "number": "7.1.1",
+  "number": "7.1.8",
   "title": "Arcade Dice Game.",
   "body": " Arcade Dice Game   Use a simple dice game to turn outcomes into a probability distribution, a CDF, and an expected value.     Roll one fair die. Let be the number of tickets earned, where 1, 2, and 3 earn 0 tickets, 4 earns 2 tickets, 5 earns 5 tickets, and 6 earns 10 tickets. Write the probability distribution of .      Find and .      Compute and explain what that value means if the game is played many times.    "
 },
@@ -2309,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-random-variables-pmf.html#act-ch7-prize-wheel-distribution",
   "type": "Activity",
-  "number": "7.1.2",
+  "number": "7.1.9",
   "title": "Prize Wheel Distribution.",
   "body": " Prize Wheel Distribution   Practice checking a distribution and using it to compute the mean and variance of a random variable.     A prize wheel gives 0, 1, 2, or 4 tokens with probabilities 0.25, 0.35, 0.25, and 0.15. Verify that this is a valid probability distribution and sketch its bar chart.      Find and .      Use those values to find and .    "
 },
@@ -2336,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cdf-expected-value.html#act-ch7-stretch-the-score",
   "type": "Activity",
-  "number": "7.2.1",
+  "number": "7.2.2",
   "title": "Stretch the Score.",
   "body": " Stretch the Score   See how adding and multiplying a random variable change its mean and spread.     Suppose a game score has and . Find .      Find and the standard deviation of .      In one sentence, explain why shifting changes the mean but not the spread, while multiplying changes both.    "
 },
@@ -2345,15 +2246,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cdf-expected-value.html#act-ch7-two-games-total",
   "type": "Activity",
-  "number": "7.2.2",
+  "number": "7.2.3",
   "title": "Two Games, One Total.",
   "body": " Two Games, One Total   Combine two independent random variables and see how expectation and variance behave.     Suppose game A gives a random score with and . Game B gives a random score with and . Assuming the games are independent, find and .      Find and .      Which game contributes more to the variability of the total, and why?    "
 },
 {
-  "id": "ch7-exercises",
+  "id": "sec-ch7-exercises",
   "level": "1",
-  "url": "ch7-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch7-exercises.html",
+  "type": "Section",
   "number": "7.3",
   "title": "Exercises",
   "body": " Exercises   Two fair dice are rolled and is the sum of the outcomes.   List the possible values of .  Find .  Find .     A random variable has the following probability distribution:   Distribution for     0  1  2  3             Verify that this is a valid probability distribution.  Find .  Find .     Use the distribution in Exercise to find .    A discrete random variable has distribution   Distribution for     1  3  5           Find , , and .    The random variable has mean 12 and variance 4.   Find .  Find .  Find the standard deviation of .     Explain in words what the expected value and the standard deviation of a discrete random variable are telling us.   "
@@ -2361,8 +2262,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch7-ex-1",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch7-exercises.html#ch7-ex-1",
+  "type": "Checkpoint",
   "number": "7.3.1",
   "title": "",
   "body": " Two fair dice are rolled and is the sum of the outcomes.   List the possible values of .  Find .  Find .   "
@@ -2370,8 +2271,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch7-ex-2",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch7-exercises.html#ch7-ex-2",
+  "type": "Checkpoint",
   "number": "7.3.2",
   "title": "",
   "body": " A random variable has the following probability distribution:   Distribution for     0  1  2  3             Verify that this is a valid probability distribution.  Find .  Find .   "
@@ -2379,36 +2280,36 @@ var ptx_lunr_docs = [
 {
   "id": "ch7-ex-3",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-3",
-  "type": "Exercise",
-  "number": "7.3.3",
+  "url": "sec-ch7-exercises.html#ch7-ex-3",
+  "type": "Checkpoint",
+  "number": "7.3.4",
   "title": "",
   "body": " Use the distribution in Exercise to find .  "
 },
 {
   "id": "ch7-ex-4",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-4",
-  "type": "Exercise",
-  "number": "7.3.4",
+  "url": "sec-ch7-exercises.html#ch7-ex-4",
+  "type": "Checkpoint",
+  "number": "7.3.5",
   "title": "",
   "body": " A discrete random variable has distribution   Distribution for     1  3  5           Find , , and .  "
 },
 {
   "id": "ch7-ex-5",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-5",
-  "type": "Exercise",
-  "number": "7.3.5",
+  "url": "sec-ch7-exercises.html#ch7-ex-5",
+  "type": "Checkpoint",
+  "number": "7.3.7",
   "title": "",
   "body": " The random variable has mean 12 and variance 4.   Find .  Find .  Find the standard deviation of .   "
 },
 {
   "id": "ch7-ex-6",
   "level": "2",
-  "url": "ch7-exercises.html#ch7-ex-6",
-  "type": "Exercise",
-  "number": "7.3.6",
+  "url": "sec-ch7-exercises.html#ch7-ex-6",
+  "type": "Checkpoint",
+  "number": "7.3.8",
   "title": "",
   "body": " Explain in words what the expected value and the standard deviation of a discrete random variable are telling us.  "
 },
@@ -2419,7 +2320,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.1",
   "title": "Bernoulli Trials and Binomial Coefficients",
-  "body": " Bernoulli Trials and Binomial Coefficients  A Bernoulli trial probability Bernoulli trial is an experiment with exactly two outcomes, which we usually call success and failure . A made free throw versus a missed free throw is one example. A person who does or does not respond to a survey is another.  If a single Bernoulli trial has success probability , then the corresponding Bernoulli random variable probability Bernoulli random variable  is defined by   So and .  Now suppose we repeat the same Bernoulli trial times, independently, with the same success probability each time. Let be the number of successes. Then follows a binomial distribution.  A situation is binomial when these four conditions hold:   There is a fixed number of trials.  Each trial has only two outcomes: success or failure.  The trials are independent.  The probability of success is the same on every trial.    Decide whether each situation can reasonably be modeled by a binomial random variable.   A student guesses on 8 true-false questions and we count the number answered correctly.  Five cards are drawn without replacement from a standard deck and we count the number of hearts.  A basketball player takes 12 free throws and we count the number made, assuming the player's success probability stays the same from shot to shot.     Binomial or Not?   Use a few quick examples to check whether the four binomial conditions really hold.     Decide whether guessing on 8 true-false questions can be modeled by a binomial random variable. If it can, state and .      Decide whether drawing 5 cards without replacement from a standard deck and counting the number of hearts is binomial. If not, say which condition fails.      Decide whether 12 free throws with the same success probability on every shot can be modeled by a binomial random variable.      Counting Success Patterns   See how binomial coefficients count the different ways to place successes among trials.     List all sequences of 5 Bernoulli trials with exactly 2 successes. Use for success and for failure.      Count the sequences you listed and verify that the answer matches .      For 6 trials with exactly 3 successes, how many success patterns are possible? Explain briefly why the order of the successes does not matter in the coefficient.     To compute binomial probabilities, we also need the binomial coefficient probability binomial coefficient   which is read “ choose .” It counts the number of ways to choose objects from objects, without regard to order.   Computing a Binomial Coefficient  The number of ways to choose 3 students from a group of 5 is    "
+  "body": " Bernoulli Trials and Binomial Coefficients  A Bernoulli trial probability Bernoulli trial is an experiment with exactly two outcomes, which we usually call success and failure . A made free throw versus a missed free throw is one example. A person who does or does not respond to a survey is another.  If a single Bernoulli trial has success probability , then the corresponding Bernoulli random variable probability Bernoulli random variable  is defined by   So and .  Now suppose we repeat the same Bernoulli trial times, independently, with the same success probability each time. Let be the number of successes. Then follows a binomial distribution.  A situation is binomial when these four conditions hold:   There is a fixed number of trials.  Each trial has only two outcomes: success or failure.  The trials are independent.  The probability of success is the same on every trial.    Decide whether each situation can reasonably be modeled by a binomial random variable.   A student guesses on 8 true-false questions and we count the number answered correctly.  Five cards are drawn without replacement from a standard deck and we count the number of hearts.  A basketball player takes 12 free throws and we count the number made, assuming the player's success probability stays the same from shot to shot.     Binomial or Not?   Use a few quick examples to check whether the four binomial conditions really hold.     Decide whether guessing on 8 true-false questions can be modeled by a binomial random variable. If it can, state and .      Decide whether drawing 5 cards without replacement from a standard deck and counting the number of hearts is binomial. If not, say which condition fails.      Decide whether 12 free throws with the same success probability on every shot can be modeled by a binomial random variable.      Counting Success Patterns   See how binomial coefficients count the different ways to place successes among trials.     List all sequences of 5 Bernoulli trials with exactly 2 successes. Use for success and for failure.      Count the sequences you listed and verify that the answer matches .      For 6 trials with exactly 3 successes, how many success patterns are possible? Explain briefly why the order of the successes does not matter in the coefficient.     To compute binomial probabilities, we also need the binomial coefficient probability binomial coefficient   which is read choose . It counts the number of ways to choose objects from objects, without regard to order.   Computing a Binomial Coefficient  The number of ways to choose 3 students from a group of 5 is    "
 },
 {
   "id": "sec-bernoulli-binomial-2",
@@ -2428,7 +2329,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Bernoulli trial probability Bernoulli trial "
+  "body": "Bernoulli trial "
 },
 {
   "id": "sec-bernoulli-binomial-3",
@@ -2437,7 +2338,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Bernoulli random variable probability Bernoulli random variable "
+  "body": "Bernoulli random variable "
 },
 {
   "id": "binom-inline-ex-1",
@@ -2453,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-bernoulli-binomial.html#act-ch8-binomial-or-not",
   "type": "Activity",
-  "number": "8.1.1",
+  "number": "8.1.2",
   "title": "Binomial or Not?",
   "body": " Binomial or Not?   Use a few quick examples to check whether the four binomial conditions really hold.     Decide whether guessing on 8 true-false questions can be modeled by a binomial random variable. If it can, state and .      Decide whether drawing 5 cards without replacement from a standard deck and counting the number of hearts is binomial. If not, say which condition fails.      Decide whether 12 free throws with the same success probability on every shot can be modeled by a binomial random variable.    "
 },
@@ -2462,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-bernoulli-binomial.html#act-ch8-pattern-hunt",
   "type": "Activity",
-  "number": "8.1.2",
+  "number": "8.1.3",
   "title": "Counting Success Patterns.",
   "body": " Counting Success Patterns   See how binomial coefficients count the different ways to place successes among trials.     List all sequences of 5 Bernoulli trials with exactly 2 successes. Use for success and for failure.      Count the sequences you listed and verify that the answer matches .      For 6 trials with exactly 3 successes, how many success patterns are possible? Explain briefly why the order of the successes does not matter in the coefficient.    "
 },
@@ -2473,14 +2374,14 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "binomial coefficient probability binomial coefficient "
+  "body": "binomial coefficient "
 },
 {
   "id": "ex-binom-coefficient",
   "level": "2",
   "url": "sec-bernoulli-binomial.html#ex-binom-coefficient",
   "type": "Example",
-  "number": "8.1.2",
+  "number": "8.1.4",
   "title": "Computing a Binomial Coefficient.",
   "body": " Computing a Binomial Coefficient  The number of ways to choose 3 students from a group of 5 is   "
 },
@@ -2491,7 +2392,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Binomial Probabilities and the Cumulative Distribution",
-  "body": " Binomial Probabilities and the Cumulative Distribution  If counts the number of successes in independent Bernoulli trials with success probability , then we write   The possible values of are   The probability that exactly successes occur is   This formula makes sense for a simple reason. A particular sequence with exactly successes has probability . Then counts how many such sequences there are.   Exactly Three Goals in Five Penalty Kicks  Suppose a soccer player makes a penalty kick with probability . Let be the number of goals in 5 penalty kicks. Then .  The probability of exactly 3 goals is   Since ,   So the chance of scoring exactly 3 times is about 0.264.    Using the Complement  A factory knows that 2% of the items it produces are defective. Suppose 20 items are selected independently, and let be the number of defective items. Then .  The probability of getting at least one defective item is easier to compute by using the complement:    The cumulative distribution function probability cumulative distribution function , or CDF, of a binomial random variable is   For a binomial random variable, the CDF is found by adding the probabilities from 0 up to .   At Most Three Goals  Continue with . Then   Computing the four terms gives   So the probability of scoring at most 3 goals in 5 kicks is about 0.367.   The CDF is useful because many probability questions can be rewritten in terms of “at most.” For example,   and if , then    A multiple-choice quiz has 6 questions, each with 4 answer choices, and a student guesses on every question. Let be the number answered correctly.   State the values of and .  Write a formula for .  Write a formula for .     Quiz Guessing Challenge   Work with a short quiz and practice exact, at-most, and at-least binomial probabilities.     A 6-question true-false quiz is answered by guessing. Let be the number correct. State and , and write a formula for .      Write a formula for . Then explain why the complement is the quickest way to compute it.      Write a formula for .      Factory Fault Finder   Use a defect-rate model to practice the binomial CDF and the complement rule.     A factory inspects 20 items, and each item has defect probability . Let be the number of defective items. State the binomial model for .      Find and .      Find and explain why the result is small or large in context.     "
+  "body": " Binomial Probabilities and the Cumulative Distribution  If counts the number of successes in independent Bernoulli trials with success probability , then we write   The possible values of are   The probability that exactly successes occur is   This formula makes sense for a simple reason. A particular sequence with exactly successes has probability . Then counts how many such sequences there are.   Exactly Three Goals in Five Penalty Kicks  Suppose a soccer player makes a penalty kick with probability . Let be the number of goals in 5 penalty kicks. Then .  The probability of exactly 3 goals is   Since ,   So the chance of scoring exactly 3 times is about 0.264.    Using the Complement  A factory knows that 2% of the items it produces are defective. Suppose 20 items are selected independently, and let be the number of defective items. Then .  The probability of getting at least one defective item is easier to compute by using the complement:    The cumulative distribution function probability cumulative distribution function , or CDF, of a binomial random variable is   For a binomial random variable, the CDF is found by adding the probabilities from 0 up to .   At Most Three Goals  Continue with . Then   Computing the four terms gives   So the probability of scoring at most 3 goals in 5 kicks is about 0.367.   The CDF is useful because many probability questions can be rewritten in terms of at most. For example,   and if , then    A multiple-choice quiz has 6 questions, each with 4 answer choices, and a student guesses on every question. Let be the number answered correctly.   State the values of and .  Write a formula for .  Write a formula for .     Quiz Guessing Challenge   Work with a short quiz and practice exact, at-most, and at-least binomial probabilities.     A 6-question true-false quiz is answered by guessing. Let be the number correct. State and , and write a formula for .      Write a formula for . Then explain why the complement is the quickest way to compute it.      Write a formula for .      Factory Fault Finder   Use a defect-rate model to practice the binomial CDF and the complement rule.     A factory inspects 20 items, and each item has defect probability . Let be the number of defective items. State the binomial model for .      Find and .      Find and explain why the result is small or large in context.     "
 },
 {
   "id": "ex-penalty-kicks",
@@ -2518,7 +2419,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "cumulative distribution function probability cumulative distribution function "
+  "body": "cumulative distribution function "
 },
 {
   "id": "ex-binom-cdf",
@@ -2543,7 +2444,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-pdf-cdf.html#act-ch8-quiz-guessing",
   "type": "Activity",
-  "number": "8.2.1",
+  "number": "8.2.5",
   "title": "Quiz Guessing Challenge.",
   "body": " Quiz Guessing Challenge   Work with a short quiz and practice exact, at-most, and at-least binomial probabilities.     A 6-question true-false quiz is answered by guessing. Let be the number correct. State and , and write a formula for .      Write a formula for . Then explain why the complement is the quickest way to compute it.      Write a formula for .    "
 },
@@ -2552,7 +2453,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-pdf-cdf.html#act-ch8-factory-defects",
   "type": "Activity",
-  "number": "8.2.2",
+  "number": "8.2.6",
   "title": "Factory Fault Finder.",
   "body": " Factory Fault Finder   Use a defect-rate model to practice the binomial CDF and the complement rule.     A factory inspects 20 items, and each item has defect probability . Let be the number of defective items. State the binomial model for .      Find and .      Find and explain why the result is small or large in context.    "
 },
@@ -2572,7 +2473,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "standard deviation probability standard deviation of a binomial distribution "
+  "body": "standard deviation "
 },
 {
   "id": "ex-binom-mean-variance",
@@ -2588,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-mean-variance.html#act-ch8-free-throw-forecast",
   "type": "Activity",
-  "number": "8.3.1",
+  "number": "8.3.2",
   "title": "Free-Throw Forecast.",
   "body": " Free-Throw Forecast   Practice the binomial mean and variance formulas with a sports context.     A player makes free throws with probability and takes 12 shots. Let . Find the mean number of made shots.      Find the variance and standard deviation of .      Explain what the mean and standard deviation say about the player's long-run performance.    "
 },
@@ -2597,7 +2498,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-mean-variance.html#act-ch8-compare-binomial-spread",
   "type": "Activity",
-  "number": "8.3.2",
+  "number": "8.3.3",
   "title": "Which Binomial is More Spread Out?",
   "body": " Which Binomial is More Spread Out?   Compare two binomial models that have the same mean but different variability.     For , find the mean and standard deviation.      For , find the mean and standard deviation.      Both random variables have the same mean. Which one is more spread out, and what does that say about the game or process it models?    "
 },
@@ -2606,7 +2507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-mean-variance.html#binom-inline-ex-3",
   "type": "Checkpoint",
-  "number": "8.3.2",
+  "number": "8.3.4",
   "title": "",
   "body": " If , find , , and .  "
 },
@@ -2617,7 +2518,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.4",
   "title": "Binomial Approximation of Normal Distribution",
-  "body": " Binomial Approximation of Normal Distribution  The previous section showed that if , then the mean of is and the standard deviation is . Those same two numbers will guide us here.  We have not formally studied the normal distribution yet. That happens in . For now, think of a normal distribution as a smooth bell-shaped curve determined by its center and its spread.  When is fairly large and is not too close to 0 or 1, the graph of a binomial distribution begins to look bell-shaped instead of strongly skewed. A common rule of thumb is that the binomial model is reasonably approximated by a normal distribution when   These conditions say that we expect at least about 5 successes and at least about 5 failures. If one side is too small, then the binomial distribution is usually too lopsided for a normal curve to match it well.  When the rule of thumb is satisfied, we match the binomial model with the normal model   In other words, we use a normal distribution with the same mean and the same standard deviation as the binomial distribution. So the formulas from the previous section are exactly what make this approximation possible.  For now, exact binomial probabilities still come from the binomial formula or technology. The point of this section is to see the shape connection. In the next chapter, once area under a normal curve has been introduced, we will be able to use this idea more fully.   A Binomial Model That Looks Nearly Normal  Let . Then   Since and , the rule of thumb is satisfied. So should be approximated reasonably well by the normal model   overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.    The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red bell-shaped curve over them. The curve is centered at 10 and closely follows the overall shape of the bars.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.     In , the binomial bars and the normal curve line up at the same center, and their spreads are very similar. That is exactly what we expect, because both models use mean 10 and standard deviation .   For each binomial model below, decide whether a normal approximation is reasonable. If it is, write the matching normal model.        When Does the Bell Curve Fit?   Use the rule of thumb together with the mean and standard deviation formulas from the previous section.     For , compute and . Should a normal approximation be reasonable?      If the approximation is reasonable, write the matching normal model and identify its mean and standard deviation.      Now consider . Repeat the check. Why should this distribution look less like a normal curve?     "
+  "body": " Binomial Approximation of Normal Distribution  The previous section showed that if , then the mean of is and the standard deviation is . Those same two numbers will guide us here.  We have not formally studied the normal distribution yet. That happens in . For now, think of a normal distribution as a smooth bell-shaped curve determined by its center and its spread.  When is fairly large and is not too close to 0 or 1, the graph of a binomial distribution begins to look bell-shaped instead of strongly skewed. A common rule of thumb is that the binomial model is reasonably approximated by a normal distribution when   These conditions say that we expect at least about 5 successes and at least about 5 failures. If one side is too small, then the binomial distribution is usually too lopsided for a normal curve to match it well.  When the rule of thumb is satisfied, we match the binomial model with the normal model   In other words, we use a normal distribution with the same mean and the same standard deviation as the binomial distribution. So the formulas from the previous section are exactly what make this approximation possible.  For now, exact binomial probabilities still come from the binomial formula or technology. The point of this section is to see the shape connection. In the next chapter, once area under a normal curve has been introduced, we will be able to use this idea more fully.   A Binomial Model That Looks Nearly Normal  Let . Then   Since and , the rule of thumb is satisfied. So should be approximated reasonably well by the normal model   overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.    The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.     In , the binomial bars and the normal curve line up at the same center, and their spreads are very similar. That is exactly what we expect, because both models use mean 10 and standard deviation .   For each binomial model below, decide whether a normal approximation is reasonable. If it is, write the matching normal model.        When Does the Bell Curve Fit?   Use the rule of thumb together with the mean and standard deviation formulas from the previous section.     For , compute and . Should a normal approximation be reasonable?      If the approximation is reasonable, write the matching normal model and identify its mean and standard deviation.      Now consider . Repeat the check. Why should this distribution look less like a normal curve?     "
 },
 {
   "id": "ex-binom-normal-approximation",
@@ -2635,7 +2536,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "8.4.2",
   "title": "",
-  "body": " The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red bell-shaped curve over them. The curve is centered at 10 and closely follows the overall shape of the bars.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.    "
+  "body": " The binomial distribution and the normal curve   A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red.  The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.    "
 },
 {
   "id": "binom-inline-ex-4",
@@ -2651,15 +2552,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-binomial-normal-approximation.html#act-ch8-normal-preview",
   "type": "Activity",
-  "number": "8.4.1",
+  "number": "8.4.4",
   "title": "When Does the Bell Curve Fit?",
   "body": " When Does the Bell Curve Fit?   Use the rule of thumb together with the mean and standard deviation formulas from the previous section.     For , compute and . Should a normal approximation be reasonable?      If the approximation is reasonable, write the matching normal model and identify its mean and standard deviation.      Now consider . Repeat the check. Why should this distribution look less like a normal curve?    "
 },
 {
-  "id": "ch8-exercises",
+  "id": "sec-ch8-exercises",
   "level": "1",
-  "url": "ch8-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch8-exercises.html",
+  "type": "Section",
   "number": "8.5",
   "title": "Exercises",
   "body": " Exercises   Decide whether each setting is binomial. If it is, state and .   A fair coin is flipped 12 times and the number of heads is counted.  Four cards are drawn without replacement from a deck and the number of aces is counted.  A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.     Let .   Find .  Find .  Find .     A basketball player makes free throws with probability . If the player takes 6 free throws, what is the probability of making exactly 4 of them?    A quiz has 10 true-false questions, and a student guesses on every question. Let be the number answered correctly.   Find .  Find .  Find .     If , find the mean, variance, and standard deviation.    In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let be the number that have a dog.   Find .  Find .  What is the expected number of selected households that have a dog?     For each binomial model below, decide whether a normal approximation is reasonable. Explain your decision using and .         Let .   Show that a normal approximation is reasonable.  Find the mean and standard deviation of .  Write the matching normal model.     Explain why should be approximated better by a normal curve than , even though both models have the same value of . In your explanation, discuss both the rule of thumb and the shape of the distribution.   "
@@ -2667,8 +2568,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-1",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-1",
+  "type": "Checkpoint",
   "number": "8.5.1",
   "title": "",
   "body": " Decide whether each setting is binomial. If it is, state and .   A fair coin is flipped 12 times and the number of heads is counted.  Four cards are drawn without replacement from a deck and the number of aces is counted.  A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.   "
@@ -2676,8 +2577,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-2",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-2",
+  "type": "Checkpoint",
   "number": "8.5.2",
   "title": "",
   "body": " Let .   Find .  Find .  Find .   "
@@ -2685,8 +2586,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-3",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-3",
+  "type": "Checkpoint",
   "number": "8.5.3",
   "title": "",
   "body": " A basketball player makes free throws with probability . If the player takes 6 free throws, what is the probability of making exactly 4 of them?  "
@@ -2694,8 +2595,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-4",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-4",
+  "type": "Checkpoint",
   "number": "8.5.4",
   "title": "",
   "body": " A quiz has 10 true-false questions, and a student guesses on every question. Let be the number answered correctly.   Find .  Find .  Find .   "
@@ -2703,8 +2604,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-5",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-5",
+  "type": "Checkpoint",
   "number": "8.5.5",
   "title": "",
   "body": " If , find the mean, variance, and standard deviation.  "
@@ -2712,8 +2613,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-6",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-6",
+  "type": "Checkpoint",
   "number": "8.5.6",
   "title": "",
   "body": " In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let be the number that have a dog.   Find .  Find .  What is the expected number of selected households that have a dog?   "
@@ -2721,8 +2622,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-7",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-7",
+  "type": "Checkpoint",
   "number": "8.5.7",
   "title": "",
   "body": " For each binomial model below, decide whether a normal approximation is reasonable. Explain your decision using and .       "
@@ -2730,8 +2631,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-8",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-8",
+  "type": "Checkpoint",
   "number": "8.5.8",
   "title": "",
   "body": " Let .   Show that a normal approximation is reasonable.  Find the mean and standard deviation of .  Write the matching normal model.   "
@@ -2739,8 +2640,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch8-ex-9",
   "level": "2",
-  "url": "ch8-exercises.html#ch8-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch8-exercises.html#ch8-ex-9",
+  "type": "Checkpoint",
   "number": "8.5.9",
   "title": "",
   "body": " Explain why should be approximated better by a normal curve than , even though both models have the same value of . In your explanation, discuss both the rule of thumb and the shape of the distribution.  "
@@ -2761,7 +2662,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "continuous probability continuous random variable "
+  "body": "continuous "
 },
 {
   "id": "sec-continuous-uniform-3",
@@ -2770,7 +2671,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "uniform distribution probability uniform distribution "
+  "body": "uniform distribution "
 },
 {
   "id": "ex-office-hours-uniform",
@@ -2788,7 +2689,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "probability density function probability probability density function "
+  "body": "probability density function "
 },
 {
   "id": "normal-inline-ex-1",
@@ -2804,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-uniform.html#act-ch9-uniform-food-truck",
   "type": "Activity",
-  "number": "9.1.1",
+  "number": "9.1.3",
   "title": "Food Truck Arrival Window.",
   "body": " Food Truck Arrival Window   Use a simple arrival-time model to practice probability on a uniform interval.     A food truck arrives uniformly at random between 11:00 and 11:30. Let be the number of minutes after 11:00. Find and .      Find and explain why the answer is zero.      Compare and . What do the two probabilities have in common?    "
 },
@@ -2813,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-continuous-uniform.html#act-ch9-uniform-equal-length",
   "type": "Activity",
-  "number": "9.1.2",
+  "number": "9.1.4",
   "title": "Equal-Length Interval Challenge.",
   "body": " Equal-Length Interval Challenge   See why equal-length intervals have equal probability in a uniform model.     Suppose is uniformly distributed on . Find the probability of any interval of length 10, such as .      Find the probability of another interval of length 10, such as . Compare your answer with the first one.      In one sentence, explain the general rule for probabilities in a uniform distribution.    "
 },
@@ -2824,7 +2725,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "Normal Distributions and Z-Scores",
-  "body": " Normal Distributions and Z-Scores  The most important continuous model in elementary statistics is the normal distribution probability normal distribution . Its graph is the familiar bell-shaped curve.  A normal distribution is determined by two numbers:   the mean , which tells us where the center is, and  the standard deviation , which tells us how spread out the distribution is.   If has a normal distribution with mean and standard deviation , we write    A Normal Model for Heights  Suppose the heights of adult women in a population are modeled by a normal distribution with mean 64 inches and standard deviation 2.8 inches. Then   This says the distribution is centered at 64 inches, and typical distances from the center are about 2.8 inches.   One of the nicest features of the normal curve is its symmetry. Values equally far above and below the mean have the same density, so the left half of the curve is a mirror image of the right half. The mean sits right in the middle.   The mean and standard deviation on a normal curve   A bell-shaped normal curve with a dotted vertical line through the center labeled mu. The points of inflection are marked on both sides, and the horizontal distance from mu to the right inflection point is labeled sigma.  The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.     In , the dotted line marks the mean . The curve changes concavity at the inflection points, and each one is exactly one standard deviation from the center. So the horizontal distance from to either inflection point is .  In the family of normal distributions, the one with mean 0 and standard deviation 1 is called the standard normal distribution probability standard normal distribution . It is customary to use to denote a random variable with the standard normal distribution .  A useful standardization is the z-score probability z-score   The z-score tells us how many standard deviations a value is above or below the mean. A positive z-score means the value is above the mean. A negative z-score means it is below the mean.  If , then the transformation   recenters the distribution at 0 and rescales the horizontal axis so that one standard deviation becomes length 1. In that way, the normal curve for is converted into the standard normal curve for . The important point is that probabilities are preserved under this relabeling of the axis. In particular, for any cutoff value ,   So the area to the left of under the curve for is exactly the same as the area to the left of the corresponding z-score under the standard normal curve.   Standardizing a normal random variable preserves left-tail area   Two bell-shaped curves shown side by side. On the left, a normal curve for X has the region to the left of a shaded. On the right, the standard normal curve for Z has the region to the left of z(a) shaded. The shaded areas represent the same probability.  The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.      Interpreting a Z-Score  Using , the z-score of 62 inches is   So a height of 62 inches is about 0.71 standard deviations below the mean.   This matters because probability tables and technology are usually organized around the standard normal distribution.   Height Detective   Compare heights using z-scores instead of raw inches.     Using , find the z-scores for 61 inches, 67 inches, and 70 inches.      Which of those three heights is most unusual relative to the model?      For each z-score, say whether the height is above or below the mean and by about how many standard deviations.      Same Raw Score, Different Crowd   Use z-scores to compare a raw score across two different normal distributions.     A score of 85 occurs on Exam A, where scores are modeled by . Find its z-score.      The same score of 85 occurs on Exam B, where scores are modeled by . Find its z-score.      Which score is better relative to its own group, and why?     "
+  "body": " Normal Distributions and Z-Scores  The most important continuous model in elementary statistics is the normal distribution probability normal distribution . Its graph is the familiar bell-shaped curve.  A normal distribution is determined by two numbers:   the mean , which tells us where the center is, and  the standard deviation , which tells us how spread out the distribution is.   If has a normal distribution with mean and standard deviation , we write    A Normal Model for Heights  Suppose the heights of adult women in a population are modeled by a normal distribution with mean 64 inches and standard deviation 2.8 inches. Then   This says the distribution is centered at 64 inches, and typical distances from the center are about 2.8 inches.   One of the nicest features of the normal curve is its symmetry. Values equally far above and below the mean have the same density, so the left half of the curve is a mirror image of the right half. The mean sits right in the middle.   The mean and standard deviation on a normal curve   A bell-shaped normal curve with a dotted vertical line through the center labeled mu.  The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.     In , the dotted line marks the mean . The curve changes concavity at the inflection points, and each one is exactly one standard deviation from the center. So the horizontal distance from to either inflection point is .  In the family of normal distributions, the one with mean 0 and standard deviation 1 is called the standard normal distribution probability standard normal distribution . It is customary to use to denote a random variable with the standard normal distribution .  A useful standardization is the z-score probability z-score   The z-score tells us how many standard deviations a value is above or below the mean. A positive z-score means the value is above the mean. A negative z-score means it is below the mean.  If , then the transformation   recenters the distribution at 0 and rescales the horizontal axis so that one standard deviation becomes length 1. In that way, the normal curve for is converted into the standard normal curve for . The important point is that probabilities are preserved under this relabeling of the axis. In particular, for any cutoff value ,   So the area to the left of under the curve for is exactly the same as the area to the left of the corresponding z-score under the standard normal curve.   Standardizing a normal random variable preserves left-tail area   Two bell-shaped curves shown side by side.  The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.      Interpreting a Z-Score  Using , the z-score of 62 inches is   So a height of 62 inches is about 0.71 standard deviations below the mean.   This matters because probability tables and technology are usually organized around the standard normal distribution.   Height Detective   Compare heights using z-scores instead of raw inches.     Using , find the z-scores for 61 inches, 67 inches, and 70 inches.      Which of those three heights is most unusual relative to the model?      For each z-score, say whether the height is above or below the mean and by about how many standard deviations.      Same Raw Score, Different Crowd   Use z-scores to compare a raw score across two different normal distributions.     A score of 85 occurs on Exam A, where scores are modeled by . Find its z-score.      The same score of 85 occurs on Exam B, where scores are modeled by . Find its z-score.      Which score is better relative to its own group, and why?     "
 },
 {
   "id": "sec-normal-distributions-2",
@@ -2833,7 +2734,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "normal distribution probability normal distribution "
+  "body": "normal distribution "
 },
 {
   "id": "ex-women-height-normal",
@@ -2851,7 +2752,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.2.2",
   "title": "",
-  "body": " The mean and standard deviation on a normal curve   A bell-shaped normal curve with a dotted vertical line through the center labeled mu. The points of inflection are marked on both sides, and the horizontal distance from mu to the right inflection point is labeled sigma.  The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.    "
+  "body": " The mean and standard deviation on a normal curve   A bell-shaped normal curve with a dotted vertical line through the center labeled mu.  The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.    "
 },
 {
   "id": "sec-normal-distributions-11",
@@ -2860,7 +2761,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "standard normal distribution probability standard normal distribution "
+  "body": "standard normal distribution "
 },
 {
   "id": "sec-normal-distributions-12",
@@ -2869,7 +2770,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "z-score probability z-score "
+  "body": "z-score "
 },
 {
   "id": "fig-standardization-area",
@@ -2878,7 +2779,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.2.3",
   "title": "",
-  "body": " Standardizing a normal random variable preserves left-tail area   Two bell-shaped curves shown side by side. On the left, a normal curve for X has the region to the left of a shaded. On the right, the standard normal curve for Z has the region to the left of z(a) shaded. The shaded areas represent the same probability.  The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.    "
+  "body": " Standardizing a normal random variable preserves left-tail area   Two bell-shaped curves shown side by side.  The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.    "
 },
 {
   "id": "ex-zscore-height",
@@ -2894,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-distributions.html#act-ch9-height-detective",
   "type": "Activity",
-  "number": "9.2.1",
+  "number": "9.2.5",
   "title": "Height Detective.",
   "body": " Height Detective   Compare heights using z-scores instead of raw inches.     Using , find the z-scores for 61 inches, 67 inches, and 70 inches.      Which of those three heights is most unusual relative to the model?      For each z-score, say whether the height is above or below the mean and by about how many standard deviations.    "
 },
@@ -2903,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-distributions.html#act-ch9-score-comparison",
   "type": "Activity",
-  "number": "9.2.2",
+  "number": "9.2.6",
   "title": "Same Raw Score, Different Crowd.",
   "body": " Same Raw Score, Different Crowd   Use z-scores to compare a raw score across two different normal distributions.     A score of 85 occurs on Exam A, where scores are modeled by . Find its z-score.      The same score of 85 occurs on Exam B, where scores are modeled by . Find its z-score.      Which score is better relative to its own group, and why?    "
 },
@@ -2914,7 +2815,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.3",
   "title": "The z-Alpha Notation",
-  "body": " The z-Alpha Notation  The z-Alpha Notation  When working with the standard normal distribution, we often use the notation . This is especially important later when we study confidence intervals and hypothesis tests.  By convention, is the value on the horizontal axis so that the area to the right under the standard normal curve is . In symbols,   Since the total area under the curve is 1, the area to the left of is therefore :   This is the standard convention used in statistics. For example, because the area to the right of 1.96 under the standard normal curve is 0.025.   The notation for the standard normal distribution   A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area to the right of that line shaded and labeled alpha.  The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha.     So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate .   Critical Value Hunt   Find and compare a few standard normal cutoffs used in confidence intervals and tests.     Find approximate values of , , and using technology or a z-table.      Which of these cutoffs is farthest from 0? Explain why that makes sense.      If a test uses a smaller right-tail area, what happens to the critical value?      Tail-Area Match-Up   Translate between right-tail area, left-tail area, and the notation.     If the right-tail area is 0.025, what notation is used for the corresponding critical value?      If , what is the area to the left of ?      In one sentence, explain what happens to as gets smaller.     "
+  "body": " The z-Alpha Notation  The z-Alpha Notation  When working with the standard normal distribution, we often use the notation . This is especially important later when we study confidence intervals and hypothesis tests.  By convention, is the value on the horizontal axis so that the area to the right under the standard normal curve is . In symbols,   Since the total area under the curve is 1, the area to the left of is therefore :   This is the standard convention used in statistics. For example, because the area to the right of 1.96 under the standard normal curve is 0.025.   The notation for the standard normal distribution   A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area.  The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha.     So if you know the confidence level or the significance level, you can translate that information into a cutoff on the standard normal curve by finding the appropriate .   Critical Value Hunt   Find and compare a few standard normal cutoffs used in confidence intervals and tests.     Find approximate values of , , and using technology or a z-table.      Which of these cutoffs is farthest from 0? Explain why that makes sense.      If a test uses a smaller right-tail area, what happens to the critical value?      Tail-Area Match-Up   Translate between right-tail area, left-tail area, and the notation.     If the right-tail area is 0.025, what notation is used for the corresponding critical value?      If , what is the area to the left of ?      In one sentence, explain what happens to as gets smaller.     "
 },
 {
   "id": "fig-z-alpha-right-tail",
@@ -2923,14 +2824,14 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "9.3.1",
   "title": "",
-  "body": " The notation for the standard normal distribution   A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area to the right of that line shaded and labeled alpha.  The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha.    "
+  "body": " The notation for the standard normal distribution   A bell-shaped standard normal curve centered at 0, with a vertical line at z-alpha to the right of the mean and the area.  The graphic shows the standard normal density curve over a horizontal axis. A vertical dashed line is drawn at a positive x-value labeled z-alpha. The region under the curve to the right of that line is shaded and labeled alpha, indicating that the right-tail area equals alpha.    "
 },
 {
   "id": "act-ch9-zalpha-hunt",
   "level": "2",
   "url": "sec-z-alpha-notation.html#act-ch9-zalpha-hunt",
   "type": "Activity",
-  "number": "9.3.1",
+  "number": "9.3.2",
   "title": "Critical Value Hunt.",
   "body": " Critical Value Hunt   Find and compare a few standard normal cutoffs used in confidence intervals and tests.     Find approximate values of , , and using technology or a z-table.      Which of these cutoffs is farthest from 0? Explain why that makes sense.      If a test uses a smaller right-tail area, what happens to the critical value?    "
 },
@@ -2939,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-z-alpha-notation.html#act-ch9-tail-area-match",
   "type": "Activity",
-  "number": "9.3.2",
+  "number": "9.3.3",
   "title": "Tail-Area Match-Up.",
   "body": " Tail-Area Match-Up   Translate between right-tail area, left-tail area, and the notation.     If the right-tail area is 0.025, what notation is used for the corresponding critical value?      If , what is the area to the left of ?      In one sentence, explain what happens to as gets smaller.    "
 },
@@ -2977,7 +2878,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "percentile data percentile "
+  "body": "percentile "
 },
 {
   "id": "ex-60th-percentile-height",
@@ -3002,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-probabilities-percentiles.html#act-ch9-normal-score-area",
   "type": "Activity",
-  "number": "9.4.1",
+  "number": "9.4.5",
   "title": "Exam Score Area Hunt.",
   "body": " Exam Score Area Hunt   Practice turning normal probability questions into z-scores and areas under the curve.     Suppose test scores are modeled by . Find .      Write the standardized form of .      What does the 90th percentile mean in this context?    "
 },
@@ -3011,15 +2912,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-normal-probabilities-percentiles.html#act-ch9-percentile-cutoff",
   "type": "Activity",
-  "number": "9.4.2",
+  "number": "9.4.6",
   "title": "Prize Cutoff Percentile.",
   "body": " Prize Cutoff Percentile   Find a percentile cutoff and interpret it as a prize threshold.     Suppose a scholarship goes to the top 5% of scores in a normal model . Find the cutoff score.      Decide whether a score of 80 would earn the scholarship.      Explain in one sentence what it means for a value to be a percentile cutoff.    "
 },
 {
-  "id": "ch9-exercises",
+  "id": "sec-ch9-exercises",
   "level": "1",
-  "url": "ch9-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch9-exercises.html",
+  "type": "Section",
   "number": "9.5",
   "title": "Exercises",
   "body": " Exercises   A phone call arrives uniformly at random between 2:00 and 2:40 p.m. Let be the arrival time in minutes after 2:00.   Find .  Find .  Find and explain why.     The lifetime of a certain light bulb is modeled by , where the units are hours.   Find the z-score of 1350 hours.  Write the standardized form of .  Write the standardized form of .     Exam scores are modeled by .   What does it mean to say that 85 is the 76th percentile?  Would the 90th percentile be above or below the mean? Explain.  Would a score with z-score be above or below the mean? By about how many standard deviations?    "
@@ -3027,8 +2928,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch9-ex-1",
   "level": "2",
-  "url": "ch9-exercises.html#ch9-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch9-exercises.html#ch9-ex-1",
+  "type": "Checkpoint",
   "number": "9.5.1",
   "title": "",
   "body": " A phone call arrives uniformly at random between 2:00 and 2:40 p.m. Let be the arrival time in minutes after 2:00.   Find .  Find .  Find and explain why.   "
@@ -3036,8 +2937,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch9-ex-2",
   "level": "2",
-  "url": "ch9-exercises.html#ch9-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch9-exercises.html#ch9-ex-2",
+  "type": "Checkpoint",
   "number": "9.5.2",
   "title": "",
   "body": " The lifetime of a certain light bulb is modeled by , where the units are hours.   Find the z-score of 1350 hours.  Write the standardized form of .  Write the standardized form of .   "
@@ -3045,8 +2946,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch9-ex-3",
   "level": "2",
-  "url": "ch9-exercises.html#ch9-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch9-exercises.html#ch9-ex-3",
+  "type": "Checkpoint",
   "number": "9.5.3",
   "title": "",
   "body": " Exam scores are modeled by .   What does it mean to say that 85 is the 76th percentile?  Would the 90th percentile be above or below the mean? Explain.  Would a score with z-score be above or below the mean? By about how many standard deviations?   "
@@ -3058,7 +2959,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.1",
   "title": "Sampling Distributions and the CLT",
-  "body": " Sampling Distributions and the CLT  Sampling Distributions and the CLT  Suppose a population has mean and standard deviation . If we draw a sample of size , then the sample mean data sample mean is   The variable is itself a random variable. Its distribution is called a sampling distribution inference sampling distribution .  Two facts are especially important:   These formulas follow directly from the properties of expectation and variance from . Since   linearity of expectation gives   So the sample mean is an unbiased estimate of the population mean.  For the variance, independence lets us add variances:   Because each has variance ,   Taking square roots gives   The first fact says that the sample mean is centered at the population mean. The second says that larger samples give less variation. Averaging many observations produces a more stable estimate than using just one observation.  The real breakthrough is the Central Limit Theorem inference Central Limit Theorem , usually shortened to CLT. In plain language, it says this:  If we repeatedly take independent samples from the same population, then for large the distribution of the sample means becomes approximately normal, even if the original population is not normal.  More precisely, when the observations are independent and identically distributed with mean and standard deviation , the sample mean is approximately distributed as   for large enough .  This theorem is a big deal. It explains why the normal distribution keeps showing up in statistics. Even when the raw data are skewed or irregular, the average of a reasonably large sample often behaves in a nearly normal way.  A common rule of thumb is that is often enough, though very skewed populations may need larger samples. The sample should also come from an independent process, which is usually reasonable when we sample with replacement or sample from a population much larger than the sample size.   Using the CLT for a Sample Mean  Suppose customer wait times have population mean 18 minutes and population standard deviation 6 minutes. The shape of the population distribution is not known. If we take a random sample of customers, then by the CLT the sample mean is approximately normal:   The probability that the sample mean is less than 17 minutes is therefore     A population has mean 50 and standard deviation 12. A sample of size 36 is taken.   Find the mean of .  Find the standard deviation of .  State the approximate distribution of using the CLT.     Sample Mean Sprint   See how the spread of sample means changes as the sample size grows.     A population has mean 50 and standard deviation 12. Find the mean and standard deviation of for sample sizes , , and .      Which sample size gives the most stable sample mean, and why?      If the population is strongly skewed, what does the CLT say about the shape of the sampling distribution when is large?      CLT Sketchbook   Draw the idea of the Central Limit Theorem instead of only writing formulas.     Sketch a population distribution that is strongly right-skewed. Label the sketch with a few sample values that might come from it.      Sketch what the distribution of sample means might look like for samples of size 5 and for samples of size 40.      Explain in words how the center and spread of the sampling distribution compare with the original population.     "
+  "body": " Sampling Distributions and the CLT  Sampling Distributions and the CLT  Suppose a population has mean and standard deviation . If we draw a sample of size , then the sample mean data sample mean is   The variable is itself a random variable. Its distribution is called a sampling distribution inference sampling distribution .  Two facts are especially important:   These formulas follow directly from the properties of expectation and variance from . Since   linearity of expectation gives   So the sample mean is an unbiased estimate of the population mean.  For the variance, independence lets us add variances:   Because each has variance ,   Taking square roots gives   The first fact says that the sample mean is centered at the population mean. The second says that larger samples give less variation. Averaging many observations produces a more stable estimate than using just one observation.  The real breakthrough is the Central Limit Theorem inference Central Limit Theorem , usually shortened to CLT. In plain language, it says this:  If we repeatedly take independent samples from the same population, then for large the distribution of the sample means becomes approximately normal, even if the original population is not normal.  More precisely, when the observations are independent and identically distributed with mean and standard deviation , the sample mean is approximately distributed as   for large enough .  This theorem is a big deal. It explains why the normal distribution keeps showing up in statistics. Even when the raw data are skewed or irregular, the average of a reasonably large sample often behaves in a nearly normal way.  A common rule of thumb is that is often enough, though very skewed populations may need larger samples. The sample should also come from an independent process, which is usually reasonable when we sample with replacement or sample from a population much larger than the sample size.   Using the CLT for a Sample Mean  Suppose customer wait times have population mean 18 minutes and population standard deviation 6 minutes. The shape of the population distribution is not known. If we take a random sample of customers, then by the CLT the sample mean is approximately normal:   The probability that the sample mean is less than 17 minutes is therefore     A population has mean 50 and standard deviation 12. A sample of size 36 is taken.   Find the mean of .  Find the standard deviation of .  State the approximate distribution of using the CLT.     Sample Mean Sprint   See how the spread of sample means changes as the sample size grows.     A population has mean 50 and standard deviation 12. Find the mean and standard deviation of for sample sizes , , and .      Which sample size gives the most stable sample mean, and why?      If the population is strongly skewed, what does the CLT say about the shape of the sampling distribution when is large?      CLT Sketchbook   Draw the idea of the Central Limit Theorem instead of only writing formulas.     Sketch a population distribution that is strongly right-skewed. Label the sketch with a few sample values that might come from it.      Sketch what the distribution of sample means might look like for samples of size 5 and for samples of size 40.      Explain in words how the center and spread of the sampling distribution compare with the original population.      Thirty Rolls, One Sampling Distribution   Use class data to see the Central Limit Theorem turn the outcomes of a fair die into an approximately normal distribution of sample means.     Compute the mean and the standard deviation of one roll of a fair six-sided die.      Each student rolls a fair die 30 times and computes the mean of those 30 rolls.      Students enter the sample means that they found in a spreadsheet shared with the class. The spreadsheet should contain one sample mean per student.      Make a histogram of the class sample means. Start with bins of width 0.1; if the histogram is too sparse, use bins of width 0.2 instead.      Compare the histogram with the Central Limit Theorem prediction where and are the mean and standard deviation found in Part (a). Does the distribution appear roughly symmetric and bell-shaped? Is it centered near , and is its spread close to ? Explain any differences you see.     "
 },
 {
   "id": "sec-sampling-distributions-clt-3",
@@ -3067,7 +2968,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample mean data sample mean "
+  "body": "sample mean "
 },
 {
   "id": "sec-sampling-distributions-clt-5",
@@ -3076,7 +2977,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sampling distribution inference sampling distribution "
+  "body": "sampling distribution "
 },
 {
   "id": "sec-sampling-distributions-clt-20",
@@ -3085,7 +2986,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Central Limit Theorem inference Central Limit Theorem "
+  "body": "Central Limit Theorem "
 },
 {
   "id": "ex-clt-wait-times",
@@ -3110,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sampling-distributions-clt.html#act-ch10-sample-mean-sprint",
   "type": "Activity",
-  "number": "10.1.1",
+  "number": "10.1.3",
   "title": "Sample Mean Sprint.",
   "body": " Sample Mean Sprint   See how the spread of sample means changes as the sample size grows.     A population has mean 50 and standard deviation 12. Find the mean and standard deviation of for sample sizes , , and .      Which sample size gives the most stable sample mean, and why?      If the population is strongly skewed, what does the CLT say about the shape of the sampling distribution when is large?    "
 },
@@ -3119,9 +3020,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sampling-distributions-clt.html#act-ch10-clt-sketchbook",
   "type": "Activity",
-  "number": "10.1.2",
+  "number": "10.1.4",
   "title": "CLT Sketchbook.",
   "body": " CLT Sketchbook   Draw the idea of the Central Limit Theorem instead of only writing formulas.     Sketch a population distribution that is strongly right-skewed. Label the sketch with a few sample values that might come from it.      Sketch what the distribution of sample means might look like for samples of size 5 and for samples of size 40.      Explain in words how the center and spread of the sampling distribution compare with the original population.    "
+},
+{
+  "id": "act-ch10-die-roll-sampling-distribution",
+  "level": "2",
+  "url": "sec-sampling-distributions-clt.html#act-ch10-die-roll-sampling-distribution",
+  "type": "Activity",
+  "number": "10.1.5",
+  "title": "Thirty Rolls, One Sampling Distribution.",
+  "body": " Thirty Rolls, One Sampling Distribution   Use class data to see the Central Limit Theorem turn the outcomes of a fair die into an approximately normal distribution of sample means.     Compute the mean and the standard deviation of one roll of a fair six-sided die.      Each student rolls a fair die 30 times and computes the mean of those 30 rolls.      Students enter the sample means that they found in a spreadsheet shared with the class. The spreadsheet should contain one sample mean per student.      Make a histogram of the class sample means. Start with bins of width 0.1; if the histogram is too sparse, use bins of width 0.2 instead.      Compare the histogram with the Central Limit Theorem prediction where and are the mean and standard deviation found in Part (a). Does the distribution appear roughly symmetric and bell-shaped? Is it centered near , and is its spread close to ? Explain any differences you see.    "
 },
 {
   "id": "sec-confidence-intervals-mean",
@@ -3130,7 +3040,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Confidence Intervals for the Mean",
-  "body": " Confidence Intervals for the Mean  A sample mean is a point estimate inference point estimate of the population mean . But a single number does not tell us how much uncertainty comes from sampling. A  confidence interval inference confidence interval adds a margin of error to the point estimate and gives a range of plausible values for , where is the confidence level inference confidence level . In informal language, we say we are confident that the resulting interval captures the true mean.  To see where the formula comes from, suppose are iid with mean and standard deviation , and suppose the standardized sample mean has a standard normal distribution (exactly when the population is normal, or approximately for large samples by the CLT):   Let . To capture the middle proportion of the standard normal curve, we leave total area outside and split it evenly between the two tails. That is, each tail has area .   The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and labeled C. Each tail outside that region is labeled alpha over 2.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.     So the corresponding probability statement is   After we collect the sample and observe , we solve that inequality for . The result is the z-interval   or, written as an interval,   In practice, is often unknown. When the sample is large, we usually replace by the sample standard deviation and still use the z critical value as an approximation. When the sample is small and the population is normal, we use a z-interval if is known, but if is unknown and we replace it by , then   In every case, the confidence interval has the form point estimate margin of error. For the population mean, that means   So the interval is centered at a sample mean, and its total width is twice the margin of error.  We summarize the confidence-interval settings for a population mean in .   Sampling distributions and confidence intervals for a mean    Setting  Statistic  Margin    , known      , unknown      , normal, known      , normal, unknown       The next four examples illustrate these four cases.   Case 1: Large Sample, Known  Suppose a sample of 36 women has mean height inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is   So the interval is     Case 2: Large Sample, Unknown  A random sample of 64 delivery times has mean minutes and sample standard deviation minutes. Find a 95% confidence interval for the population mean.  Because the sample is large, we use the z critical value and replace by :   So the confidence interval is     Case 3: Small Sample, Population Normal, Known  Assume the population distribution is normal. A sample of size 16 has mean , and the population standard deviation is known to be . Find a 90% confidence interval for the population mean.  Because the population is normal and is known, we use a z interval:   So the confidence interval is     Case 4: Small Sample, Population Normal, Unknown  Assume the population is normal. A sample of 11 observations has sample mean and sample standard deviation . For a 95% confidence interval, we use and .  The margin of error is   So the confidence interval is    Interpreting a confidence interval takes some care. Before we collect the data, the sample mean is random, so the interval built from it is random too. In that stage, it is correct to say that the interval procedure has probability 0.95 of capturing .  After we collect the sample and get a specific value , the interval becomes a fixed interval with fixed endpoints. At that point, the true mean is either inside the interval or it is not. So a 95% confidence level does not mean there is a 95% chance that is in this one computed interval. It means that if we repeated the same sampling process many times and built an interval each time, about 95% of those intervals would capture the true mean. The parameter is fixed; the interval is what changes from sample to sample.   A sample of size 49 has mean . Assume the population standard deviation is known to be 14.   Write the formula for a 90% confidence interval for .  Find the margin of error.  Find the interval.     Confidence Interval Builder   Build a confidence interval from a sample mean and a known population standard deviation.     A sample of size 49 has mean . Assume the population standard deviation is 14. Find a 90% confidence interval for .      Find the margin of error and interpret it in context.      Explain what the confidence level means in this situation.      Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?     "
+  "body": " Confidence Intervals for the Mean  A sample mean is a point estimate inference point estimate of the population mean . But a single number does not tell us how much uncertainty comes from sampling. A  confidence interval inference confidence interval adds a margin of error to the point estimate and gives a range of plausible values for , where is the confidence level inference confidence level . In informal language, we say we are confident that the resulting interval captures the true mean.  To see where the formula comes from, suppose are iid with mean and standard deviation , and suppose the standardized sample mean has a standard normal distribution (exactly when the population is normal, or approximately for large samples by the CLT):   Let . To capture the middle proportion of the standard normal curve, we leave total area outside and split it evenly between the two tails. That is, each tail has area .   The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.     So the corresponding probability statement is   After we collect the sample and observe , we solve that inequality for . The result is the z-interval   or, written as an interval,   In practice, is often unknown. When the sample is large, we usually replace by the sample standard deviation and still use the z critical value as an approximation. When the sample is small and the population is normal, we use a z-interval if is known, but if is unknown and we replace it by , then   In every case, the confidence interval has the form point estimate margin of error. For the population mean, that means   So the interval is centered at a sample mean, and its total width is twice the margin of error.  We summarize the confidence-interval settings for a population mean in .   Sampling distributions and confidence intervals for a mean    Setting  Statistic  Margin    , known      , unknown      , normal, known      , normal, unknown       The next four examples illustrate these four cases.   Case 1: Large Sample, Known  Suppose a sample of 36 women has mean height inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is   So the interval is     Case 2: Large Sample, Unknown  A random sample of 64 delivery times has mean minutes and sample standard deviation minutes. Find a 95% confidence interval for the population mean.  Because the sample is large, we use the z critical value and replace by :   So the confidence interval is     Case 3: Small Sample, Population Normal, Known  Assume the population distribution is normal. A sample of size 16 has mean , and the population standard deviation is known to be . Find a 90% confidence interval for the population mean.  Because the population is normal and is known, we use a z interval:   So the confidence interval is     Case 4: Small Sample, Population Normal, Unknown  Assume the population is normal. A sample of 11 observations has sample mean and sample standard deviation . For a 95% confidence interval, we use and .  The margin of error is   So the confidence interval is    Interpreting a confidence interval takes some care. Before we collect the data, the sample mean is random, so the interval built from it is random too. In that stage, it is correct to say that the interval procedure has probability 0.95 of capturing .  After we collect the sample and get a specific value , the interval becomes a fixed interval with fixed endpoints. At that point, the true mean is either inside the interval or it is not. So a 95% confidence level does not mean there is a 95% chance that is in this one computed interval. It means that if we repeated the same sampling process many times and built an interval each time, about 95% of those intervals would capture the true mean. The parameter is fixed; the interval is what changes from sample to sample.   A sample of size 49 has mean . Assume the population standard deviation is known to be 14.   Write the formula for a 90% confidence interval for .  Find the margin of error.  Find the interval.     Confidence Interval Builder   Build a confidence interval from a sample mean and a known population standard deviation.     A sample of size 49 has mean . Assume the population standard deviation is 14. Find a 90% confidence interval for .      Find the margin of error and interpret it in context.      Explain what the confidence level means in this situation.      Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?     "
 },
 {
   "id": "sec-confidence-intervals-mean-2",
@@ -3139,7 +3049,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "point estimate inference point estimate confidence interval inference confidence interval confidence level inference confidence level "
+  "body": "point estimate confidence interval confidence level "
 },
 {
   "id": "fig-ci-central-area",
@@ -3148,7 +3058,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "10.2.1",
   "title": "",
-  "body": " The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and labeled C. Each tail outside that region is labeled alpha over 2.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.    "
+  "body": " The middle of the standard normal curve   A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and.  The graphic shows the standard normal density curve centered at 0. Vertical dashed lines mark the cutoff points at negative z-alpha-over-2 and positive z-alpha-over-2. The region under the curve between these two lines is shaded and labeled C. The two unshaded tails outside the dashed lines are each labeled alpha over 2, showing that the total area outside the center is alpha.    "
 },
 {
   "id": "tbl-ci-summary",
@@ -3209,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-mean.html#act-ch10-confidence-builder",
   "type": "Activity",
-  "number": "10.2.1",
+  "number": "10.2.8",
   "title": "Confidence Interval Builder.",
   "body": " Confidence Interval Builder   Build a confidence interval from a sample mean and a known population standard deviation.     A sample of size 49 has mean . Assume the population standard deviation is 14. Find a 90% confidence interval for .      Find the margin of error and interpret it in context.      Explain what the confidence level means in this situation.    "
 },
@@ -3218,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-mean.html#act-ch10-interval-faceoff",
   "type": "Activity",
-  "number": "10.2.2",
+  "number": "10.2.9",
   "title": "Interval Face-Off.",
   "body": " Interval Face-Off   Compare confidence intervals made from the same sample but with different confidence levels.     Using the same sample from the previous activity, compare the width of a 90% interval and a 95% interval.      Which interval is wider, and why does that happen?      If a student wants a narrower interval, should they ask for higher confidence or lower confidence?    "
 },
@@ -3238,7 +3148,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "population proportion inference population proportion "
+  "body": "population proportion "
 },
 {
   "id": "sec-confidence-intervals-proportion-3",
@@ -3247,7 +3157,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample proportion data sample proportion "
+  "body": "sample proportion "
 },
 {
   "id": "ex-ci-proportion-campus-poll",
@@ -3281,7 +3191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-proportion.html#act-ch10-proportion-builder",
   "type": "Activity",
-  "number": "10.3.1",
+  "number": "10.3.4",
   "title": "Proportion Interval Builder.",
   "body": " Proportion Interval Builder   Build a confidence interval for a population proportion from a sample count.     A random sample of 120 students finds that 48 prefer digital notes to printed notes. Compute .      Check whether the conditions for a one-proportion z-interval are satisfied.      Find a 95% confidence interval for the population proportion and interpret it in context.    "
 },
@@ -3290,7 +3200,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-proportion.html#act-ch10-approximation-check",
   "type": "Activity",
-  "number": "10.3.2",
+  "number": "10.3.5",
   "title": "Can We Trust the Approximation?",
   "body": " Can We Trust the Approximation?   Decide when the normal approximation behind a proportion interval is reasonable.     For each pair , compute and : , , and .      For which cases would a one-proportion z-interval be reasonable? Explain briefly.      Why is it a problem when the sample has very few observed successes or very few observed failures?    "
 },
@@ -3310,7 +3220,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "population variance inference population variance "
+  "body": "population variance "
 },
 {
   "id": "sec-confidence-intervals-variance-4",
@@ -3319,7 +3229,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sample variance summaries sample variance "
+  "body": "sample variance "
 },
 {
   "id": "sec-confidence-intervals-variance-9",
@@ -3328,7 +3238,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "chi-square distribution inference chi-square distribution "
+  "body": "chi-square distribution "
 },
 {
   "id": "sec-confidence-intervals-variance-12",
@@ -3337,7 +3247,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "degree of freedom inference degrees of freedom "
+  "body": "degree of freedom "
 },
 {
   "id": "ex-ci-variance-delivery-times",
@@ -3371,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-variance.html#act-ch10-variance-builder",
   "type": "Activity",
-  "number": "10.4.1",
+  "number": "10.4.4",
   "title": "Variance Interval Builder.",
   "body": " Variance Interval Builder   Build a confidence interval for a population variance and standard deviation from a sample standard deviation.     Suppose a normal population is sampled with and the sample standard deviation is . Find the degrees of freedom.      Using the chi-square table, find a 90% confidence interval for the population variance .      Convert the interval to a 90% confidence interval for the population standard deviation .    "
 },
@@ -3380,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-confidence-intervals-variance.html#act-ch10-variance-assumption-check",
   "type": "Activity",
-  "number": "10.4.2",
+  "number": "10.4.5",
   "title": "Can We Trust the Chi-Square Method?",
   "body": " Can We Trust the Chi-Square Method?   Check the assumptions before using a confidence interval for variance.     A random sample of bolt lengths comes from a manufacturing process that is known to be close to normal. Is a chi-square interval for reasonable?      A random sample of 40 household incomes is strongly right-skewed. Should we be comfortable using the chi-square interval here? Explain.      Why does a large sample size help more for intervals about a mean than for intervals about a variance?    "
 },
@@ -3407,7 +3317,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sample-size-margin-error.html#act-ch10-survey-planner",
   "type": "Activity",
-  "number": "10.5.1",
+  "number": "10.5.2",
   "title": "Survey Planner.",
   "body": " Survey Planner   Plan a sample size before collecting data so the margin of error stays under control.     You want to estimate the mean amount of weekly screen time with 95% confidence and margin of error at most 3 hours. Assume . Find the minimum sample size.      Suppose the margin of error is cut in half. What happens to the required sample size?      In one sentence, explain why larger samples are useful when precision matters.    "
 },
@@ -3416,15 +3326,15 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sample-size-margin-error.html#act-ch10-budget-vs-precision",
   "type": "Activity",
-  "number": "10.5.2",
+  "number": "10.5.3",
   "title": "Budget vs Precision.",
   "body": " Budget vs Precision   Compare two sampling plans and decide which one gives the better estimate.     A campus poll can survey either 100 students or 196 students. If the same population standard deviation is used, which plan gives the smaller margin of error?      If the confidence level increases from 90% to 99%, what happens to the margin of error when the sample size stays the same?      Explain the tradeoff between wanting high confidence and wanting a small margin of error.    "
 },
 {
-  "id": "ch10-exercises",
+  "id": "sec-ch10-exercises",
   "level": "1",
-  "url": "ch10-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch10-exercises.html",
+  "type": "Section",
   "number": "10.6",
   "title": "Exercises",
   "body": " Exercises   A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.   Find the mean of .  Find the standard deviation of .  Use the CLT to state an approximate distribution for .     A sample of size 64 has mean . Assume the population standard deviation is known to be 8.   Find a 95% confidence interval for the population mean.  Find the margin of error.  Explain what the 95% confidence level means.     Assume the population is normal. A sample of size 16 has mean and sample standard deviation .   Write the form of the 95% t-interval for the mean.  What are the degrees of freedom?  Why is a t critical value used instead of a z critical value?     How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?    Explain how the confidence-interval formula for a population proportion comes from the normal approximation to a binomial random variable.   Start with and write its approximate normal model for large .  Use to find the approximate mean and standard deviation of .  Write the resulting z-based confidence-interval formula for .     In a random sample of 250 voters, 140 say they support a local park bond measure.   Find .  Check whether the large-sample conditions are satisfied.  Find a 95% confidence interval for the population proportion of voters who support the measure.  Interpret the interval in context.     A manufacturer samples 80 batteries and finds that 6 are defective.   Is a one-proportion z-interval appropriate here? Check the large-sample conditions.  If it is appropriate, find a 90% confidence interval for the population defect proportion.  If it is not appropriate, explain what goes wrong with the normal approximation.     Assume a normal population. A random sample of size 12 has sample standard deviation .   Find the degrees of freedom.  Find a 95% confidence interval for the population variance .  Convert the result to a 95% confidence interval for the population standard deviation .     Explain carefully why the chi-square distribution appears in a confidence interval for a population variance.   Start with a random sample from a normal population and standardize each observation.  Explain why squaring and adding leads to a chi-square distribution.  Explain why replacing by changes the degrees of freedom from to .     State the assumptions for using a chi-square confidence interval for the population variance.   Why is independence needed?  Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?    "
@@ -3432,8 +3342,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-1",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-1",
+  "type": "Checkpoint",
   "number": "10.6.1",
   "title": "",
   "body": " A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.   Find the mean of .  Find the standard deviation of .  Use the CLT to state an approximate distribution for .   "
@@ -3441,8 +3351,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-2",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-2",
+  "type": "Checkpoint",
   "number": "10.6.2",
   "title": "",
   "body": " A sample of size 64 has mean . Assume the population standard deviation is known to be 8.   Find a 95% confidence interval for the population mean.  Find the margin of error.  Explain what the 95% confidence level means.   "
@@ -3450,8 +3360,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-3",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-3",
+  "type": "Checkpoint",
   "number": "10.6.3",
   "title": "",
   "body": " Assume the population is normal. A sample of size 16 has mean and sample standard deviation .   Write the form of the 95% t-interval for the mean.  What are the degrees of freedom?  Why is a t critical value used instead of a z critical value?   "
@@ -3459,8 +3369,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-4",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-4",
+  "type": "Checkpoint",
   "number": "10.6.4",
   "title": "",
   "body": " How large a sample is needed to estimate a population mean with 95% confidence, population standard deviation 10, and margin of error at most 2?  "
@@ -3468,8 +3378,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-5",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-5",
+  "type": "Checkpoint",
   "number": "10.6.5",
   "title": "",
   "body": " Explain how the confidence-interval formula for a population proportion comes from the normal approximation to a binomial random variable.   Start with and write its approximate normal model for large .  Use to find the approximate mean and standard deviation of .  Write the resulting z-based confidence-interval formula for .   "
@@ -3477,8 +3387,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-6",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-6",
+  "type": "Checkpoint",
   "number": "10.6.6",
   "title": "",
   "body": " In a random sample of 250 voters, 140 say they support a local park bond measure.   Find .  Check whether the large-sample conditions are satisfied.  Find a 95% confidence interval for the population proportion of voters who support the measure.  Interpret the interval in context.   "
@@ -3486,8 +3396,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-7",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-7",
+  "type": "Checkpoint",
   "number": "10.6.7",
   "title": "",
   "body": " A manufacturer samples 80 batteries and finds that 6 are defective.   Is a one-proportion z-interval appropriate here? Check the large-sample conditions.  If it is appropriate, find a 90% confidence interval for the population defect proportion.  If it is not appropriate, explain what goes wrong with the normal approximation.   "
@@ -3495,8 +3405,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-8",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-8",
+  "type": "Checkpoint",
   "number": "10.6.8",
   "title": "",
   "body": " Assume a normal population. A random sample of size 12 has sample standard deviation .   Find the degrees of freedom.  Find a 95% confidence interval for the population variance .  Convert the result to a 95% confidence interval for the population standard deviation .   "
@@ -3504,8 +3414,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-9",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-9",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-9",
+  "type": "Checkpoint",
   "number": "10.6.9",
   "title": "",
   "body": " Explain carefully why the chi-square distribution appears in a confidence interval for a population variance.   Start with a random sample from a normal population and standardize each observation.  Explain why squaring and adding leads to a chi-square distribution.  Explain why replacing by changes the degrees of freedom from to .   "
@@ -3513,8 +3423,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch10-ex-10",
   "level": "2",
-  "url": "ch10-exercises.html#ch10-ex-10",
-  "type": "Exercise",
+  "url": "sec-ch10-exercises.html#ch10-ex-10",
+  "type": "Checkpoint",
   "number": "10.6.10",
   "title": "",
   "body": " State the assumptions for using a chi-square confidence interval for the population variance.   Why is independence needed?  Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?   "
@@ -3526,25 +3436,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.1",
   "title": "Null Hypotheses and P-Values",
-  "body": " Null Hypotheses and P-Values  Null Hypotheses and P-Values  A hypothesis test begins with two competing statements.   The null hypothesis inference null hypothesis , written , is the claim we test against.  The alternative hypothesis inference alternative hypothesis , written , is what we will support if the data give enough evidence against .   For tests about a population mean, the null hypothesis usually has the form   The alternative can take one of three common forms:   These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.  The next ingredient is the test statistic inference test statistic , a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use   depending on whether a z-test or t-test is appropriate.  The significance level inference significance level , written , is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.  One way to make the decision is by using a p-value inference p-value . The p-value is the probability, assuming is true, of getting a test statistic at least as extreme as the one observed.  The smaller the p-value, the stronger the evidence against . The decision rule is simple:   If the p-value is less than , reject .  If the p-value is at least , fail to reject .   Notice the wording. We say fail to reject , not “accept .” A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.   Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says “less than,” this is a left-tailed test.    Hypothesis Claim Match-Up   Translate informal claims into null and alternative hypotheses, then identify the tail of the test.     A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write and , and say whether the test is left-tailed, right-tailed, or two-tailed.      A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write and , and identify the tail type.      A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.      P-Value Verdict   Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.     At significance level , decide what to do with p-values 0.12, 0.03, and 0.001.      For each p-value, explain in one sentence what the decision means in plain language.      Which result gives the strongest evidence against the null hypothesis?     "
+  "body": " Null Hypotheses and P-Values  Null Hypotheses and P-Values  A hypothesis test begins with two competing statements.   The null hypothesis inference null hypothesis , written , is the claim we test against.  The alternative hypothesis inference alternative hypothesis , written , is what we will support if the data give enough evidence against .   For tests about a population mean, the null hypothesis usually has the form   The alternative can take one of three common forms:   These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.  The next ingredient is the test statistic inference test statistic , a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use   depending on whether a z-test or t-test is appropriate.  The significance level inference significance level , written , is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.  One way to make the decision is by using a p-value inference p-value . The p-value is the probability, assuming is true, of getting a test statistic at least as extreme as the one observed.  The smaller the p-value, the stronger the evidence against . The decision rule is simple:   If the p-value is less than , reject .  If the p-value is at least , fail to reject .   Notice the wording. We say fail to reject , not accept . A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.   Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says less than, this is a left-tailed test.    Hypothesis Claim Match-Up   Translate informal claims into null and alternative hypotheses, then identify the tail of the test.     A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write and , and say whether the test is left-tailed, right-tailed, or two-tailed.      A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write and , and identify the tail type.      A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.      P-Value Verdict   Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.     At significance level , decide what to do with p-values 0.12, 0.03, and 0.001.      For each p-value, explain in one sentence what the decision means in plain language.      Which result gives the strongest evidence against the null hypothesis?     "
 },
 {
-  "id": "sec-hypothesis-tests-basics-4-1-1",
+  "id": "sec-hypothesis-tests-basics-4",
   "level": "2",
-  "url": "sec-hypothesis-tests-basics.html#sec-hypothesis-tests-basics-4-1-1",
+  "url": "sec-hypothesis-tests-basics.html#sec-hypothesis-tests-basics-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "null hypothesis inference null hypothesis "
-},
-{
-  "id": "sec-hypothesis-tests-basics-4-2-1",
-  "level": "2",
-  "url": "sec-hypothesis-tests-basics.html#sec-hypothesis-tests-basics-4-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "alternative hypothesis inference alternative hypothesis "
+  "body": "null hypothesis alternative hypothesis "
 },
 {
   "id": "sec-hypothesis-tests-basics-10",
@@ -3553,7 +3454,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "test statistic inference test statistic "
+  "body": "test statistic "
 },
 {
   "id": "sec-hypothesis-tests-basics-13",
@@ -3562,7 +3463,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "significance level inference significance level "
+  "body": "significance level "
 },
 {
   "id": "sec-hypothesis-tests-basics-14",
@@ -3571,7 +3472,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "p-value inference p-value "
+  "body": "p-value "
 },
 {
   "id": "ex-battery-setup",
@@ -3580,14 +3481,14 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "11.1.1",
   "title": "Setting Up a Test.",
-  "body": " Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says “less than,” this is a left-tailed test.  "
+  "body": " Setting Up a Test  A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are   Because the alternative says less than, this is a left-tailed test.  "
 },
 {
   "id": "act-ch11-hypothesis-claims",
   "level": "2",
   "url": "sec-hypothesis-tests-basics.html#act-ch11-hypothesis-claims",
   "type": "Activity",
-  "number": "11.1.1",
+  "number": "11.1.2",
   "title": "Hypothesis Claim Match-Up.",
   "body": " Hypothesis Claim Match-Up   Translate informal claims into null and alternative hypotheses, then identify the tail of the test.     A coffee shop claims the average wait time is 5 minutes, but a customer thinks it is longer. Write and , and say whether the test is left-tailed, right-tailed, or two-tailed.      A school claims the mean math score is 70, and a teacher wants to know whether the mean has changed. Write and , and identify the tail type.      A snack company claims its bags contain 12 ounces on average, and a buyer suspects the bags are short. Write the hypotheses for that situation.    "
 },
@@ -3596,7 +3497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-hypothesis-tests-basics.html#act-ch11-pvalue-verdict",
   "type": "Activity",
-  "number": "11.1.2",
+  "number": "11.1.3",
   "title": "P-Value Verdict.",
   "body": " P-Value Verdict   Practice the reject-or-fail-to-reject decision using p-values and a chosen significance level.     At significance level , decide what to do with p-values 0.12, 0.03, and 0.001.      For each p-value, explain in one sentence what the decision means in plain language.      Which result gives the strongest evidence against the null hypothesis?    "
 },
@@ -3610,22 +3511,13 @@ var ptx_lunr_docs = [
   "body": " Type I and Type II Errors  Any hypothesis test can make two different kinds of mistakes.   A Type I error inference Type I error happens when we reject even though is actually true.  A Type II error inference Type II error happens when we fail to reject even though is actually false.    Possible decisions in a hypothesis test     true  false    Reject  Type I error  Correct decision    Fail to reject  Correct decision  Type II error     The significance level is the probability of a Type I error:   That is why choosing a smaller significance level makes the test more cautious about rejecting the null hypothesis.   Reading the Errors in Context  Return to the battery example with   In context:   A Type I error means we conclude the mean battery life is less than 22 hours when in fact the true mean is really 22 hours.  A Type II error means we fail to detect a drop in battery life and keep the 22-hour claim even though the true mean is actually less than 22 hours.    The two error types pull in opposite directions. If we make smaller, Type I errors become less likely, but it usually becomes harder to reject , so Type II errors can become more likely unless we also increase the sample size.  The probability of a Type II error is often written . The quantity   is called the power inference power of a test of the test. Power is the probability that the test successfully detects a false null hypothesis.  In practice, larger samples improve power. With more data, the test statistic has a better chance to separate real effects from ordinary random variation.   A school tests whether the mean math score has increased from 70 points. The hypotheses are and .   Describe a Type I error in context.  Describe a Type II error in context.  Which error would the school want to avoid more strongly if a new program is very expensive?     Error Detective   Identify Type I and Type II errors in a few familiar settings.     A hospital uses a screening test to detect a disease. If the test says a healthy patient is positive, what type of error is that? What if the test says a sick patient is negative?      Give a Type I and a Type II error for a smoke alarm.      Give a Type I and a Type II error for a spam filter on an email account.      Which Error Hurts More?   Decide which kind of mistake is more serious in a few real-world decisions.     For a smoke alarm, which error is worse: a false alarm or missing a real fire? Explain briefly.      For a medical screening test, which error is worse in general, and why?      Why do Type I and Type II errors usually pull in opposite directions when you change the significance level?     "
 },
 {
-  "id": "sec-type1-type2-errors-3-1-1",
+  "id": "sec-type1-type2-errors-3",
   "level": "2",
-  "url": "sec-type1-type2-errors.html#sec-type1-type2-errors-3-1-1",
+  "url": "sec-type1-type2-errors.html#sec-type1-type2-errors-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Type I error inference Type I error "
-},
-{
-  "id": "sec-type1-type2-errors-3-2-1",
-  "level": "2",
-  "url": "sec-type1-type2-errors.html#sec-type1-type2-errors-3-2-1",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Type II error inference Type II error "
+  "body": "Type I error Type II error "
 },
 {
   "id": "tbl-type1-type2",
@@ -3652,7 +3544,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "power inference power of a test "
+  "body": "power "
 },
 {
   "id": "ht-inline-ex-1",
@@ -3668,7 +3560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-type1-type2-errors.html#act-ch11-error-detective",
   "type": "Activity",
-  "number": "11.2.1",
+  "number": "11.2.4",
   "title": "Error Detective.",
   "body": " Error Detective   Identify Type I and Type II errors in a few familiar settings.     A hospital uses a screening test to detect a disease. If the test says a healthy patient is positive, what type of error is that? What if the test says a sick patient is negative?      Give a Type I and a Type II error for a smoke alarm.      Give a Type I and a Type II error for a spam filter on an email account.    "
 },
@@ -3677,7 +3569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-type1-type2-errors.html#act-ch11-which-error-hurts-more",
   "type": "Activity",
-  "number": "11.2.2",
+  "number": "11.2.5",
   "title": "Which Error Hurts More?",
   "body": " Which Error Hurts More?   Decide which kind of mistake is more serious in a few real-world decisions.     For a smoke alarm, which error is worse: a false alarm or missing a real fire? Explain briefly.      For a medical screening test, which error is worse in general, and why?      Why do Type I and Type II errors usually pull in opposite directions when you change the significance level?    "
 },
@@ -3688,7 +3580,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.3",
   "title": "One-Sample Tests for a Mean",
-  "body": " One-Sample Tests for a Mean  For a one-sample test of a mean, the test statistic depends on the setting:   Use a z-test when the population standard deviation is known, or when the sample is large enough that using in its place is reasonable.  Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.   To see why the decision rule makes sense, it helps to focus on one concrete case first: a right-tailed z-test. Suppose we want to test   Assume the population standard deviation is known, so the test statistic is   If is true, then the sample mean is centered at , so   That tells us what ordinary sampling variation looks like when the null hypothesis is true. Values of near 0 are routine. Moderately positive values can happen by chance. But very large positive values are rare under .  This is why a right-tailed test rejects only for large positive statistics. If the alternative says , then evidence against should come from a sample mean that is unusually high, not from one that is low or merely a little above . The word “large” here means large relative to the null distribution, or in more practical language, many standard errors above .  At significance level , we agree in advance to reject only when the observed statistic lands in the most extreme right-tail area of the null distribution. That cutoff is the critical value inference critical value  , defined by   So the rejection rule for a right-tailed z-test is   This rule is sensible for two reasons. First, it rejects only when the sample mean is unusually large under . Second, if really is true, the probability of rejecting is exactly the chosen significance level . In other words, the rule controls the Type I error rate.   The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.      Why the Critical-Value and P-Value Rules Agree  Suppose a school wants to know whether the mean weekly study time is greater than 40 hours. Assume the population standard deviation is known to be 8 hours, and a random sample of students gives sample mean . We test   at significance level .  If is true, then   The observed test statistic is   Using the critical-value method, the right-tailed cutoff is . Since , the observed statistic lies in the rejection region shown in , so we reject .  Now look at the same decision through the p-value method. The p-value inference p-value is the probability, assuming is true, of getting a test statistic at least as large as the one observed:   This means that if the true mean really were 40, then a sample mean this high or higher would occur only about 2.28% of the time. Since , the sample is too unusual under , so we again reject .    The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.     explains why the p-value method says the same thing as the critical-value method. In a right-tailed z-test, if the observed statistic is , then   The farther to the right is, the smaller this tail area becomes. Therefore, for a right-tailed test,   So the two rules are really the same comparison written in two different ways:   The critical-value method compares the observed statistic with a cutoff chosen in advance.  The p-value method compares the observed tail area with the significance level .   Both methods ask the same question: if were true, would this sample result be so far out in the right tail that it should count as unusually strong evidence for ?   A Left-Tailed Test for Battery Life  A sample of 50 batteries has mean lifetime hours and sample standard deviation hours. Test   at significance level .  Because the sample is large, we use the z statistic   The p-value is   Since , we reject . At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.    A Two-Tailed T-Test  Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean and sample standard deviation . We test   at the 5% significance level.  Because the sample is small and is unknown, we use a t-test with :   For a two-tailed test with and , the critical values are about . Since falls beyond the left critical value, we reject . The data suggest that the true mean estimate differs from 2.5 feet.   Whether we use a critical-value method or a p-value method, the logic is always the same: compare the observed statistic with what the null hypothesis predicts, then decide whether the result is too extreme to be explained by ordinary sampling variation alone.   Consider a right-tailed z-test with significance level .   If the observed statistic is , is it in the rejection region?  Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.  What decision should be made about ?     Run the Test   Carry out a one-sample mean test from start to finish.     A sample of 64 students has mean study time minutes. Assume the population standard deviation is known to be 8 minutes. Test against .      Compute the test statistic and p-value.      At , decide whether to reject and write the conclusion in context.      Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.     "
+  "body": " One-Sample Tests for a Mean  For a one-sample test of a mean, the test statistic depends on the setting:   Use a z-test when the population standard deviation is known, or when the sample is large enough that using in its place is reasonable.  Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.   To see why the decision rule makes sense, it helps to focus on one concrete case first: a right-tailed z-test. Suppose we want to test   Assume the population standard deviation is known, so the test statistic is   If is true, then the sample mean is centered at , so   That tells us what ordinary sampling variation looks like when the null hypothesis is true. Values of near 0 are routine. Moderately positive values can happen by chance. But very large positive values are rare under .  This is why a right-tailed test rejects only for large positive statistics. If the alternative says , then evidence against should come from a sample mean that is unusually high, not from one that is low or merely a little above . The word large here means large relative to the null distribution, or in more practical language, many standard errors above .  At significance level , we agree in advance to reject only when the observed statistic lands in the most extreme right-tail area of the null distribution. That cutoff is the critical value inference critical value  , defined by   So the rejection rule for a right-tailed z-test is   This rule is sensible for two reasons. First, it rejects only when the sample mean is unusually large under . Second, if really is true, the probability of rejecting is exactly the chosen significance level . In other words, the rule controls the Type I error rate.   The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.      Why the Critical-Value and P-Value Rules Agree  Suppose a school wants to know whether the mean weekly study time is greater than 40 hours. Assume the population standard deviation is known to be 8 hours, and a random sample of students gives sample mean . We test   at significance level .  If is true, then   The observed test statistic is   Using the critical-value method, the right-tailed cutoff is . Since , the observed statistic lies in the rejection region shown in , so we reject .  Now look at the same decision through the p-value method. The p-value inference p-value is the probability, assuming is true, of getting a test statistic at least as large as the one observed:   This means that if the true mean really were 40, then a sample mean this high or higher would occur only about 2.28% of the time. Since , the sample is too unusual under , so we again reject .    The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.     explains why the p-value method says the same thing as the critical-value method. In a right-tailed z-test, if the observed statistic is , then   The farther to the right is, the smaller this tail area becomes. Therefore, for a right-tailed test,   So the two rules are really the same comparison written in two different ways:   The critical-value method compares the observed statistic with a cutoff chosen in advance.  The p-value method compares the observed tail area with the significance level .   Both methods ask the same question: if were true, would this sample result be so far out in the right tail that it should count as unusually strong evidence for ?   A Left-Tailed Test for Battery Life  A sample of 50 batteries has mean lifetime hours and sample standard deviation hours. Test   at significance level .  Because the sample is large, we use the z statistic   The p-value is   Since , we reject . At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.    A Two-Tailed T-Test  Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean and sample standard deviation . We test   at the 5% significance level.  Because the sample is small and is unknown, we use a t-test with :   For a two-tailed test with and , the critical values are about . Since falls beyond the left critical value, we reject . The data suggest that the true mean estimate differs from 2.5 feet.   Whether we use a critical-value method or a p-value method, the logic is always the same: compare the observed statistic with what the null hypothesis predicts, then decide whether the result is too extreme to be explained by ordinary sampling variation alone.   Consider a right-tailed z-test with significance level .   If the observed statistic is , is it in the rejection region?  Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.  What decision should be made about ?     Run the Test   Carry out a one-sample mean test from start to finish.     A sample of 64 students has mean study time minutes. Assume the population standard deviation is known to be 8 minutes. Test against .      Compute the test statistic and p-value.      At , decide whether to reject and write the conclusion in context.      Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.     "
 },
 {
   "id": "sec-one-sample-mean-tests-12",
@@ -3697,7 +3589,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "critical value inference critical value "
+  "body": "critical value "
 },
 {
   "id": "fig-right-tailed-z-critical-region",
@@ -3706,7 +3598,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "11.3.1",
   "title": "",
-  "body": " The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.    "
+  "body": " The rejection region for a right-tailed z-test   A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection.  The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.    "
 },
 {
   "id": "ex-right-tailed-z-test-logic",
@@ -3724,7 +3616,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "11.3.3",
   "title": "",
-  "body": " The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.    "
+  "body": " The p-value is the tail area beyond the observed statistic   A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs.  The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.    "
 },
 {
   "id": "ex-battery-test",
@@ -3758,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-sample-mean-tests.html#act-ch11-run-the-test",
   "type": "Activity",
-  "number": "11.3.1",
+  "number": "11.3.7",
   "title": "Run the Test.",
   "body": " Run the Test   Carry out a one-sample mean test from start to finish.     A sample of 64 students has mean study time minutes. Assume the population standard deviation is known to be 8 minutes. Test against .      Compute the test statistic and p-value.      At , decide whether to reject and write the conclusion in context.    "
 },
@@ -3767,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-sample-mean-tests.html#act-ch11-test-translation",
   "type": "Activity",
-  "number": "11.3.2",
+  "number": "11.3.8",
   "title": "Test Result Translator.",
   "body": " Test Result Translator   Turn a test output into a plain-language conclusion.     A test reports at significance level . What decision should be made?      Write a one-sentence conclusion in context for a result like this.      Explain why a p-value of 0.018 is considered statistically significant at the 5% level.    "
 },
@@ -3787,7 +3679,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "difference of means inference difference of means "
+  "body": "difference of means "
 },
 {
   "id": "subsec-two-sample-large-samples-15",
@@ -3796,7 +3688,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "two-sample z-test inference two-sample z-test "
+  "body": "two-sample z-test "
 },
 {
   "id": "tbl-two-sample-mean-test-pieces",
@@ -3832,7 +3724,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Welch's two-sample t-test inference Welch's two-sample t-test "
+  "body": "Welch's two-sample t-test "
 },
 {
   "id": "ex-two-sample-small-t-test",
@@ -3857,7 +3749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-two-sample-mean-tests.html#act-ch11-two-sample-mean-setup",
   "type": "Activity",
-  "number": "11.4.1",
+  "number": "11.4.6",
   "title": "Two Groups, One Difference.",
   "body": " Two Groups, One Difference   Practice setting up a two-sample test before doing calculations.     A counselor compares mean weekly study hours for students who use tutoring and students who do not. Identify , , and the parameter .      Write null and alternative hypotheses for testing whether the tutoring group has a higher mean study time.      List the conditions you would check before deciding whether a large-sample z-test or a small-sample t-test is appropriate.    "
 },
@@ -3877,7 +3769,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "paired data inference paired data "
+  "body": "paired data "
 },
 {
   "id": "ex-paired-large-sample-commute",
@@ -3904,7 +3796,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "paired-sample t-test inference paired-sample t-test "
+  "body": "paired-sample t-test "
 },
 {
   "id": "ex-paired-small-sample-blood-pressure",
@@ -3929,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-paired-sample-mean-tests.html#act-ch11-paired-or-independent",
   "type": "Activity",
-  "number": "11.5.1",
+  "number": "11.5.5",
   "title": "Paired or Independent?",
   "body": " Paired or Independent?   Decide whether a study should use paired differences or two independent samples.     Each student takes a quiz before and after a review session. Should this be treated as paired or independent? Explain.      One class uses online homework and another class uses paper homework. The students are different people. Should this be treated as paired or independent? Explain.      For the paired case, define a useful difference and write the hypotheses for testing whether the second measurement is higher on average.    "
 },
@@ -3940,7 +3832,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.6",
   "title": "Tests for a Population Proportion",
-  "body": " Tests for a Population Proportion  This section is the testing counterpart to . The setup is the same: each observation is a success or failure, the population proportion of success is , and the sample proportion is .  The normal model behind proportion tests comes from . If , then for large enough , the count is approximately normal. Dividing by gives an approximate normal model for .  To test a claim about a population proportion, we begin with hypotheses such as   Under the null hypothesis, the sample proportion is approximately normal with mean and standard deviation   provided the expected counts under are both at least about 5:   That leads to the one-proportion z-test inference one-proportion z-test statistic   This looks a lot like the z-interval from , but there is an important difference. In a confidence interval, the unknown proportion is replaced by in the standard error. In a hypothesis test, the null hypothesis tells us exactly which value to use, so the standard error is built from .  Once the z statistic is computed, the rest is familiar:   For , use the left-tail p-value .  For , use the right-tail p-value .  For , use the two-tail p-value .   As before, reject when the p-value is less than the chosen significance level .   Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.    Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.   The connection with confidence intervals is worth noticing. If a hypothesized value sits far outside a confidence interval for , then it is also likely to be rejected by a hypothesis test at a matching significance level. So intervals and tests are two ways of looking at the same sample evidence.   A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.     Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
+  "body": " Tests for a Population Proportion  This section is the testing counterpart to . The setup is the same: each observation is a success or failure, the population proportion of success is , and the sample proportion is .  The normal model behind proportion tests comes from . If , then for large enough , the count is approximately normal. Dividing by gives an approximate normal model for .  To test a claim about a population proportion, we begin with hypotheses such as   Under the null hypothesis, the sample proportion is approximately normal with mean and standard deviation   provided the expected counts under are both at least about 5:   That leads to the one-proportion z-test inference one-proportion z-test statistic   This looks a lot like the z-interval from , but there is an important difference. In a confidence interval, the unknown proportion is replaced by in the standard error. In a hypothesis test, the null hypothesis tells us exactly which value to use, so the standard error is built from .  Once the z statistic is computed, the rest is familiar:   For , use the left-tail p-value .  For , use the right-tail p-value .  For , use the two-tail p-value .   As before, reject when the p-value is less than the chosen significance level .   Testing a Claimed Defect Rate  A manufacturer claims that at most 4% of its light bulbs are defective. A quality-control inspector checks 250 bulbs and finds 18 defectives. Is there evidence at the 5% significance level that the true defect rate is higher than 4%?  Let be the population proportion of defective bulbs. Then   The sample proportion is   The large-sample conditions under the null are satisfied because   So the test statistic is   Because this is a right-tailed test, the p-value is   Since , we reject . The sample gives strong evidence that the defect rate is greater than 4%.    Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper's claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.   The connection with confidence intervals is worth noticing. If a hypothesized value sits far outside a confidence interval for , then it is also likely to be rejected by a hypothesis test at a matching significance level. So intervals and tests are two ways of looking at the same sample evidence.   A random sample of 160 customers finds that 68 used a self-checkout lane. Test against at the 5% significance level.   Compute the sample proportion.  Check the large-sample conditions under the null hypothesis.  Find the z statistic and state the conclusion.     Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.      Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .     "
 },
 {
   "id": "sec-one-proportion-tests-10",
@@ -3949,7 +3841,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "one-proportion z-test inference one-proportion z-test "
+  "body": "one-proportion z-test "
 },
 {
   "id": "ex-one-proportion-defect-test",
@@ -3967,7 +3859,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "11.6.2",
   "title": "Testing a Claimed Support Level.",
-  "body": " Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper’s claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.  "
+  "body": " Testing a Claimed Support Level  A college newspaper reports that 60% of students support a new parking plan. A random sample of 200 students finds that 108 support the plan. Test the newspaper's claim at the 5% significance level.  Let be the true proportion of all students who support the plan. Since we want to know whether the reported value is off in either direction, we test   The sample proportion is   The null-model counts are   so the normal approximation is reasonable. The test statistic is   For a two-tailed test, the p-value is   Since , we fail to reject . At the 5% level, the sample does not give enough evidence to conclude that the true support level differs from 60%.  "
 },
 {
   "id": "ht-inline-ex-3",
@@ -3983,7 +3875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#act-ch11-proportion-test-builder",
   "type": "Activity",
-  "number": "11.6.1",
+  "number": "11.6.4",
   "title": "Run a Proportion Test.",
   "body": " Run a Proportion Test   Carry out a one-proportion z-test from the claim to the final conclusion.     A gym says that 60% of its members attend at least three times per week. In a random sample of 150 members, 99 say they do. Test against .      Compute , check the null-model conditions, and find the z statistic.      At , decide whether to reject and write the conclusion in context.    "
 },
@@ -3992,7 +3884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-proportion-tests.html#act-ch11-test-and-interval-link",
   "type": "Activity",
-  "number": "11.6.2",
+  "number": "11.6.5",
   "title": "Connect the Test and the Interval.",
   "body": " Connect the Test and the Interval   Compare the logic of a one-proportion test with the matching confidence interval.     Return to the campus sample with and . Use the interval method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
 },
@@ -4012,7 +3904,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "chi-square test of independence inference chi-square test of independence "
+  "body": "chi-square test of independence "
 },
 {
   "id": "sec-chi-square-independence-test-4",
@@ -4021,7 +3913,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "two-way contingency table inference two-way contingency table "
+  "body": "two-way contingency table "
 },
 {
   "id": "ex-chi-square-independence-commute",
@@ -4055,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-chi-square-independence-test.html#act-ch11-chi-square-table-builder",
   "type": "Activity",
-  "number": "11.7.1",
+  "number": "11.7.7",
   "title": "From Conditional Probabilities to a Test.",
   "body": " From Conditional Probabilities to a Test   Connect the earlier contingency-table idea to the chi-square test of independence.     Choose two categorical variables that can be observed in class, such as preferred study location and whether a student usually studies with others. Collect one response from each student and build a two-way table.      Use the table to compute one marginal probability and one conditional probability. Based only on those probabilities, do the variables look independent in the sample?      Compute the expected counts under independence. Check whether the expected counts are large enough for a chi-square test.      Find the degrees of freedom and describe what conclusion a small p-value would support.    "
 },
@@ -4075,7 +3967,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "chi-square test for a population variance inference chi-square test for variance "
+  "body": "chi-square test for a population variance "
 },
 {
   "id": "ex-variance-test-deliveries",
@@ -4109,7 +4001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#act-ch11-variance-test-builder",
   "type": "Activity",
-  "number": "11.8.1",
+  "number": "11.8.4",
   "title": "Run a Variance Test.",
   "body": " Run a Variance Test   Carry out a chi-square test for a population standard deviation from start to finish.     Assume bolt lengths from a machine are normally distributed. The machine is supposed to have standard deviation 2.5 millimeters. A random sample of 15 bolts gives sample standard deviation millimeters. Test against .      Find the degrees of freedom, compute the chi-square statistic, and find the p-value.      At , decide whether to reject and write the conclusion in context.    "
 },
@@ -4118,24 +4010,24 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-one-variance-tests.html#act-ch11-variance-test-interval-link",
   "type": "Activity",
-  "number": "11.8.2",
+  "number": "11.8.5",
   "title": "Connect the Test and the Interval.",
   "body": " Connect the Test and the Interval   Compare a chi-square test for spread with the matching confidence interval.     Return to the bottle-fill sample with and . Use the method from to build a 95% confidence interval for .      Does the claimed value fall inside that interval?      Explain how that interval result matches the hypothesis-test conclusion from .    "
 },
 {
-  "id": "ch11-exercises",
+  "id": "sec-ch11-exercises",
   "level": "1",
-  "url": "ch11-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch11-exercises.html",
+  "type": "Section",
   "number": "11.9",
   "title": "Exercises",
-  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is “fail to reject ” a better phrase than “accept ”?    Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .     Two independent large samples give , , , and , , .   Write the hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error of .  Compute the z statistic for .  State the conclusion at the 5% significance level.     Explain why, for large independent samples, the statistic is approximately normal with variance .   Which theorem explains why each sample mean is approximately normal?  Why is the mean of the difference ?  Why do the variances add instead of subtract?     Two independent small samples give , , , and , , .   Write hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error and the two-sample t statistic.  Explain why a t distribution is used instead of the standard normal distribution.  State the small-sample conditions that should be checked before trusting the test.     A study records resting heart rate for 36 students before and after a four-week exercise program. Let . The sample of differences has beats per minute and beats per minute.   Explain why this is a paired-sample problem.  Write hypotheses for testing whether the program lowers mean resting heart rate.  Compute the large-sample paired z statistic.  At , state the conclusion in context.     Eight students take a short skills test before and after a workshop. Let . The differences have points and points.   Write hypotheses for testing whether the workshop improves the mean score.  Compute the paired t statistic.  Find the degrees of freedom.  State the condition about the distribution of differences that matters most for this small sample.     A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.     A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?     Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.    A student survey records class standing and preferred study drink.   Class standing and preferred study drink     Coffee  Tea  Energy drink  Total    First or second year  30  20  10  60    Third or fourth year  18  22  20  60    Total  48  42  30  120      Write the null and alternative hypotheses for testing whether class standing and preferred study drink are independent.  Find all expected counts under independence.  Compute the chi-square test statistic.  Find the degrees of freedom and state the conclusion at the 5% significance level.     A campus survey records whether a student lives on campus, lives off campus with family, or lives off campus without family. It also records whether the student usually studies before noon or after noon.   Housing and usual study time     Before noon  After noon  Total    On campus  16  24  40    Off campus with family  18  42  60    Off campus without family  26  34  60    Total  60  100  160      What are and for this table?  Find the degrees of freedom for a chi-square test of independence.  Find the expected count for the \"On campus\" and \"Before noon\" cell.  State the expected-count condition and check it for this table.     Explain why the degrees of freedom for a chi-square test of independence in an -by- table are .   How many cell probabilities are free before assuming independence, once the probabilities must add to 1?  How many free row and column probability choices are used by the independence model?  Subtract these quantities and simplify.     Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.     Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.     State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?    "
+  "body": " Exercises   For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,     A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?     A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?     Why is fail to reject a better phrase than accept ?    Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .     Two independent large samples give , , , and , , .   Write the hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error of .  Compute the z statistic for .  State the conclusion at the 5% significance level.     Explain why, for large independent samples, the statistic is approximately normal with variance .   Which theorem explains why each sample mean is approximately normal?  Why is the mean of the difference ?  Why do the variances add instead of subtract?     Two independent small samples give , , , and , , .   Write hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error and the two-sample t statistic.  Explain why a t distribution is used instead of the standard normal distribution.  State the small-sample conditions that should be checked before trusting the test.     A study records resting heart rate for 36 students before and after a four-week exercise program. Let . The sample of differences has beats per minute and beats per minute.   Explain why this is a paired-sample problem.  Write hypotheses for testing whether the program lowers mean resting heart rate.  Compute the large-sample paired z statistic.  At , state the conclusion in context.     Eight students take a short skills test before and after a workshop. Let . The differences have points and points.   Write hypotheses for testing whether the workshop improves the mean score.  Compute the paired t statistic.  Find the degrees of freedom.  State the condition about the distribution of differences that matters most for this small sample.     A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.     A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?     Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.    A student survey records class standing and preferred study drink.   Class standing and preferred study drink     Coffee  Tea  Energy drink  Total    First or second year  30  20  10  60    Third or fourth year  18  22  20  60    Total  48  42  30  120      Write the null and alternative hypotheses for testing whether class standing and preferred study drink are independent.  Find all expected counts under independence.  Compute the chi-square test statistic.  Find the degrees of freedom and state the conclusion at the 5% significance level.     A campus survey records whether a student lives on campus, lives off campus with family, or lives off campus without family. It also records whether the student usually studies before noon or after noon.   Housing and usual study time     Before noon  After noon  Total    On campus  16  24  40    Off campus with family  18  42  60    Off campus without family  26  34  60    Total  60  100  160      What are and for this table?  Find the degrees of freedom for a chi-square test of independence.  Find the expected count for the \"On campus\" and \"Before noon\" cell.  State the expected-count condition and check it for this table.     Explain why the degrees of freedom for a chi-square test of independence in an -by- table are .   How many cell probabilities are free before assuming independence, once the probabilities must add to 1?  How many free row and column probability choices are used by the independence model?  Subtract these quantities and simplify.     Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.     Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.     State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?    "
 },
 {
   "id": "ch11-ex-1",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-1",
+  "type": "Checkpoint",
   "number": "11.9.1",
   "title": "",
   "body": " For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.   ,  ,  ,   "
@@ -4143,8 +4035,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-2",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-2",
+  "type": "Checkpoint",
   "number": "11.9.2",
   "title": "",
   "body": " A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests against .   Describe a Type I error in context.  Describe a Type II error in context.  What does it mean if the test uses ?   "
@@ -4152,8 +4044,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-3",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-3",
+  "type": "Checkpoint",
   "number": "11.9.3",
   "title": "",
   "body": " A sample of size 64 has mean and sample standard deviation . Test against at the 5% significance level.   Compute the test statistic.  State whether the test is a z-test or a t-test.  Would you reject or fail to reject ?   "
@@ -4161,17 +4053,17 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-4",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-4",
+  "type": "Checkpoint",
   "number": "11.9.4",
   "title": "",
-  "body": " Why is “fail to reject ” a better phrase than “accept ”?  "
+  "body": " Why is fail to reject a better phrase than accept ?  "
 },
 {
   "id": "ch11-ex-5",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-5",
+  "type": "Checkpoint",
   "number": "11.9.5",
   "title": "",
   "body": " Consider a right-tailed z-test of versus .   Explain why large positive z-values count as evidence against .  Explain why the rejection region has the form .  Explain why the rule is equivalent to the rule p-value .   "
@@ -4179,8 +4071,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-12",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-12",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-12",
+  "type": "Checkpoint",
   "number": "11.9.6",
   "title": "",
   "body": " Two independent large samples give , , , and , , .   Write the hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error of .  Compute the z statistic for .  State the conclusion at the 5% significance level.   "
@@ -4188,8 +4080,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-13",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-13",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-13",
+  "type": "Checkpoint",
   "number": "11.9.7",
   "title": "",
   "body": " Explain why, for large independent samples, the statistic is approximately normal with variance .   Which theorem explains why each sample mean is approximately normal?  Why is the mean of the difference ?  Why do the variances add instead of subtract?   "
@@ -4197,8 +4089,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-14",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-14",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-14",
+  "type": "Checkpoint",
   "number": "11.9.8",
   "title": "",
   "body": " Two independent small samples give , , , and , , .   Write hypotheses for testing whether the first population mean is greater than the second.  Compute the estimated standard error and the two-sample t statistic.  Explain why a t distribution is used instead of the standard normal distribution.  State the small-sample conditions that should be checked before trusting the test.   "
@@ -4206,8 +4098,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-15",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-15",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-15",
+  "type": "Checkpoint",
   "number": "11.9.9",
   "title": "",
   "body": " A study records resting heart rate for 36 students before and after a four-week exercise program. Let . The sample of differences has beats per minute and beats per minute.   Explain why this is a paired-sample problem.  Write hypotheses for testing whether the program lowers mean resting heart rate.  Compute the large-sample paired z statistic.  At , state the conclusion in context.   "
@@ -4215,8 +4107,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-16",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-16",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-16",
+  "type": "Checkpoint",
   "number": "11.9.10",
   "title": "",
   "body": " Eight students take a short skills test before and after a workshop. Let . The differences have points and points.   Write hypotheses for testing whether the workshop improves the mean score.  Compute the paired t statistic.  Find the degrees of freedom.  State the condition about the distribution of differences that matters most for this small sample.   "
@@ -4224,8 +4116,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-6",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-6",
+  "type": "Checkpoint",
   "number": "11.9.11",
   "title": "",
   "body": " A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.   Write the hypotheses for testing whether the true proportion is greater than 45%.  Check the large-sample conditions under the null hypothesis.  Compute the z statistic.  At , state the conclusion in context.   "
@@ -4233,8 +4125,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-7",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-7",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-7",
+  "type": "Checkpoint",
   "number": "11.9.12",
   "title": "",
   "body": " A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.   Test against at the 10% significance level.  Compute the p-value.  Would the conclusion change at the 5% significance level?   "
@@ -4242,8 +4134,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-8",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-8",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-8",
+  "type": "Checkpoint",
   "number": "11.9.13",
   "title": "",
   "body": " Explain why a one-proportion confidence interval uses in the standard error, while a one-proportion hypothesis test uses in the standard error.  "
@@ -4251,8 +4143,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-17",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-17",
-  "type": "Exercise",
+  "url": "sec-ch11-exercises.html#ch11-ex-17",
+  "type": "Checkpoint",
   "number": "11.9.14",
   "title": "",
   "body": " A student survey records class standing and preferred study drink.   Class standing and preferred study drink     Coffee  Tea  Energy drink  Total    First or second year  30  20  10  60    Third or fourth year  18  22  20  60    Total  48  42  30  120      Write the null and alternative hypotheses for testing whether class standing and preferred study drink are independent.  Find all expected counts under independence.  Compute the chi-square test statistic.  Find the degrees of freedom and state the conclusion at the 5% significance level.   "
@@ -4260,45 +4152,45 @@ var ptx_lunr_docs = [
 {
   "id": "ch11-ex-18",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-18",
-  "type": "Exercise",
-  "number": "11.9.15",
+  "url": "sec-ch11-exercises.html#ch11-ex-18",
+  "type": "Checkpoint",
+  "number": "11.9.16",
   "title": "",
   "body": " A campus survey records whether a student lives on campus, lives off campus with family, or lives off campus without family. It also records whether the student usually studies before noon or after noon.   Housing and usual study time     Before noon  After noon  Total    On campus  16  24  40    Off campus with family  18  42  60    Off campus without family  26  34  60    Total  60  100  160      What are and for this table?  Find the degrees of freedom for a chi-square test of independence.  Find the expected count for the \"On campus\" and \"Before noon\" cell.  State the expected-count condition and check it for this table.   "
 },
 {
   "id": "ch11-ex-19",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-19",
-  "type": "Exercise",
-  "number": "11.9.16",
+  "url": "sec-ch11-exercises.html#ch11-ex-19",
+  "type": "Checkpoint",
+  "number": "11.9.18",
   "title": "",
   "body": " Explain why the degrees of freedom for a chi-square test of independence in an -by- table are .   How many cell probabilities are free before assuming independence, once the probabilities must add to 1?  How many free row and column probability choices are used by the independence model?  Subtract these quantities and simplify.   "
 },
 {
   "id": "ch11-ex-9",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-9",
-  "type": "Exercise",
-  "number": "11.9.17",
+  "url": "sec-ch11-exercises.html#ch11-ex-9",
+  "type": "Checkpoint",
+  "number": "11.9.19",
   "title": "",
   "body": " Assume a normal manufacturing process is supposed to have standard deviation 5 units. A random sample of 20 items gives sample standard deviation units.   Test against at the 5% significance level.  Compute the chi-square test statistic.  State the p-value or compare with an appropriate critical value.  Write the conclusion in context.   "
 },
 {
   "id": "ch11-ex-10",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-10",
-  "type": "Exercise",
-  "number": "11.9.18",
+  "url": "sec-ch11-exercises.html#ch11-ex-10",
+  "type": "Checkpoint",
+  "number": "11.9.20",
   "title": "",
   "body": " Assume coating thicknesses from a process are normally distributed. The process is supposed to have standard deviation 1.2 millimeters. A random sample of 18 items gives sample standard deviation millimeters.   Test against at the 5% significance level.  Find the degrees of freedom and the chi-square test statistic.  Use two-tailed critical values to decide whether to reject .  State the conclusion in context.   "
 },
 {
   "id": "ch11-ex-11",
   "level": "2",
-  "url": "ch11-exercises.html#ch11-ex-11",
-  "type": "Exercise",
-  "number": "11.9.19",
+  "url": "sec-ch11-exercises.html#ch11-ex-11",
+  "type": "Checkpoint",
+  "number": "11.9.21",
   "title": "",
   "body": " State the assumptions for using a chi-square test for a population variance or standard deviation.   Why is normality the crucial assumption?  Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?  How is this test connected to the confidence interval in ?   "
 },
@@ -4309,7 +4201,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Components of Variation",
-  "body": " Components of Variation  Suppose we have groups and observations in each group. Write for observation in group . The group mean is , and the grand mean of all observations is .  ANOVA begins by splitting total variation into two pieces. The total variation inference total variation is   The between-group variation inference between-group variation measures how far the group means are from the grand mean:   The within-group variation inference within-group variation measures how far observations are from their own group mean:   With this shorthand, the balanced one-way ANOVA identity is   The factor appears because each group mean represents observations. If a group mean is 4 units above the grand mean, then all observations in that group inherit that 4-unit group-level offset before we even look at their individual wiggles around the group mean.   Between-group and within-group variation   Three horizontal dotplots show observations in three groups. Each group has its own mean, and one vertical reference line marks the grand mean.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.     The identity is not a statistical approximation. It is algebra. For every observation, write its distance from the grand mean as a two-step trip:   The first term is the group mean's distance from the grand mean. The second term is the observation's distance from its group mean. When we square and sum over all observations, the cross-product terms disappear because, within each group, deviations from the group mean sum to 0:   What remains is the between part counted times, plus the within part:    Splitting Total Variation  Three teaching methods are compared using quiz-score gains. Each method is used with four students.   Quiz-score gains by teaching method    Method  Data  Group mean    A  6, 8, 7, 9  7.5    B  10, 11, 9, 10  10.0    C  13, 15, 14, 16  14.5     The grand mean is   The between-group part is   Since each group has observations, the between contribution to total variation is   The within-group variation is   So the total variation should be   Most of the variation here comes from the group means being far apart, not from large spread inside the groups.   The connection with the F distribution distributions F distribution comes from comparing two independent estimates of the same population variance. Recall the definition: if and are independent chi-square random variables with and degrees of freedom, then   Under the ANOVA null hypothesis that all group means are equal, and assuming normal populations with a common variance , the two scaled variation pieces behave like independent chi-square random variables:   Therefore the ratio   has the distribution   when the null hypothesis is true. In words, the numerator is the between-group variation per between-group degree of freedom, and the denominator is the within-group variation per within-group degree of freedom. If the group means are truly equal, those two quantities should be estimating the same common variance , so their ratio should usually be near 1.   Where Did the Variation Go?   Use a small data set to see the ANOVA split by hand.     In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.      For each data set, compute the group means, the grand mean, , , and .      Which data set has the larger between-group component? Which has the larger within-group component?     "
+  "body": " Components of Variation  Suppose we have groups and observations in each group. Write for observation in group . The group mean is , and the grand mean of all observations is .  ANOVA begins by splitting total variation into two pieces. The total variation inference total variation is   The between-group variation inference between-group variation measures how far the group means are from the grand mean:   The within-group variation inference within-group variation measures how far observations are from their own group mean:   With this shorthand, the balanced one-way ANOVA identity is   The factor appears because each group mean represents observations. If a group mean is 4 units above the grand mean, then all observations in that group inherit that 4-unit group-level offset before we even look at their individual wiggles around the group mean.   Between-group and within-group variation   Three horizontal dotplots show observations in three groups.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.     The identity is not a statistical approximation. It is algebra. For every observation, write its distance from the grand mean as a two-step trip:   The first term is the group mean's distance from the grand mean. The second term is the observation's distance from its group mean. When we square and sum over all observations, the cross-product terms disappear because, within each group, deviations from the group mean sum to 0:   What remains is the between part counted times, plus the within part:    Splitting Total Variation  Three teaching methods are compared using quiz-score gains. Each method is used with four students.   Quiz-score gains by teaching method    Method  Data  Group mean    A  6, 8, 7, 9  7.5    B  10, 11, 9, 10  10.0    C  13, 15, 14, 16  14.5     The grand mean is   The between-group part is   Since each group has observations, the between contribution to total variation is   The within-group variation is   So the total variation should be   Most of the variation here comes from the group means being far apart, not from large spread inside the groups.   The connection with the F distribution distributions F distribution comes from comparing two independent estimates of the same population variance. Recall the definition: if and are independent chi-square random variables with and degrees of freedom, then   Under the ANOVA null hypothesis that all group means are equal, and assuming normal populations with a common variance , the two scaled variation pieces behave like independent chi-square random variables:   Therefore the ratio   has the distribution   when the null hypothesis is true. In words, the numerator is the between-group variation per between-group degree of freedom, and the denominator is the within-group variation per within-group degree of freedom. If the group means are truly equal, those two quantities should be estimating the same common variance , so their ratio should usually be near 1.   Where Did the Variation Go?   Use a small data set to see the ANOVA split by hand.     In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.      For each data set, compute the group means, the grand mean, , , and .      Which data set has the larger between-group component? Which has the larger within-group component?     "
 },
 {
   "id": "sec-anova-variance-components-3",
@@ -4318,7 +4210,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "total variation inference total variation "
+  "body": "total variation "
 },
 {
   "id": "sec-anova-variance-components-5",
@@ -4327,7 +4219,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "between-group variation inference between-group variation "
+  "body": "between-group variation "
 },
 {
   "id": "sec-anova-variance-components-7",
@@ -4336,7 +4228,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "within-group variation inference within-group variation "
+  "body": "within-group variation "
 },
 {
   "id": "fig-anova-between-within",
@@ -4345,7 +4237,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "12.1.1",
   "title": "",
-  "body": " Between-group and within-group variation   Three horizontal dotplots show observations in three groups. Each group has its own mean, and one vertical reference line marks the grand mean.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.    "
+  "body": " Between-group and within-group variation   Three horizontal dotplots show observations in three groups.  Three rows labeled Group A, Group B, and Group C show sample observations along a common score axis. Group A is centered to the left, Group B is near the middle, and Group C is centered to the right. A dashed vertical line marks the grand mean. The distances from each group mean to the grand mean represent between-group variation, while the spread of dots around each group mean represents within-group variation.    "
 },
 {
   "id": "ex-anova-variation-split",
@@ -4363,14 +4255,14 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "F distribution distributions F distribution "
+  "body": "F distribution "
 },
 {
   "id": "act-anova-variation-split",
   "level": "2",
   "url": "sec-anova-variance-components.html#act-anova-variation-split",
   "type": "Activity",
-  "number": "12.1.1",
+  "number": "12.1.4",
   "title": "Where Did the Variation Go?",
   "body": " Where Did the Variation Go?   Use a small data set to see the ANOVA split by hand.     In groups, make three small samples of size 4. Try to make one data set where the three group means are close together, and another where the group means are far apart but the within-group spreads are similar.      For each data set, compute the group means, the grand mean, , , and .      Which data set has the larger between-group component? Which has the larger within-group component?    "
 },
@@ -4390,7 +4282,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "one-way ANOVA test inference one-way ANOVA test "
+  "body": "one-way ANOVA test "
 },
 {
   "id": "sec-anova-testing-several-means-8",
@@ -4399,7 +4291,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mean square between inference mean square between "
+  "body": "mean square between "
 },
 {
   "id": "sec-anova-testing-several-means-10",
@@ -4408,7 +4300,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "mean square within inference mean square within "
+  "body": "mean square within "
 },
 {
   "id": "sec-anova-testing-several-means-12",
@@ -4417,7 +4309,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "ANOVA F statistic inference ANOVA F statistic "
+  "body": "ANOVA F statistic "
 },
 {
   "id": "tbl-anova-summary-balanced",
@@ -4438,28 +4330,28 @@ var ptx_lunr_docs = [
   "body": " Testing Three Teaching Methods  Use the teaching-method data from . We want to test whether the three population mean score gains are equal.  The hypotheses are   From the earlier calculation, , , , and . Therefore   and   The F statistic is   The degrees of freedom are and . At , the F-table critical value is about . Since , we reject .  The data give strong evidence that the three teaching methods do not all have the same population mean score gain. This conclusion does not, by itself, identify exactly which methods differ. For that, we would need follow-up comparisons.  "
 },
 {
-  "id": "sec-anova-testing-several-means-21-3-1",
+  "id": "sec-anova-testing-several-means-21",
   "level": "2",
-  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-21-3-1",
+  "url": "sec-anova-testing-several-means.html#sec-anova-testing-several-means-21",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "equal-variance assumption inference equal-variance assumption "
+  "body": "equal-variance assumption "
 },
 {
   "id": "act-anova-table-detective",
   "level": "2",
   "url": "sec-anova-testing-several-means.html#act-anova-table-detective",
   "type": "Activity",
-  "number": "12.2.1",
+  "number": "12.2.3",
   "title": "ANOVA Table Detective.",
   "body": " ANOVA Table Detective   Read an ANOVA table before interpreting the conclusion.     An ANOVA table has , , , and . Compute the F statistic.      Explain, without using a table, whether the evidence looks weak, moderate, or strong. What would an F statistic close to 1 have meant?      Write the null and alternative hypotheses for a setting with four population means.    "
 },
 {
-  "id": "ch-anova-exercises",
+  "id": "sec-ch-anova-exercises",
   "level": "1",
-  "url": "ch-anova-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch-anova-exercises.html",
+  "type": "Section",
   "number": "12.3",
   "title": "Exercises",
   "body": " Exercises   In a balanced one-way ANOVA, explain the meaning of , , , and .    Suppose there are groups with observations in each group. The between-group component is , and the within-group component is .   Compute the total variation .  Compute and .  Compute the ANOVA F statistic.     A study compares three exercise programs. Each program has four participants, and the weight-loss amounts are shown below.   Weight loss by program    Program  Data    A  4, 5, 6, 5    B  7, 8, 6, 7    C  9, 10, 11, 10      Find the three group means and the grand mean.  Compute , , and .  Which part of the variation is larger: between groups or within groups?     For the data in , test whether the three population mean weight losses are equal at the 5% significance level.   Write the null and alternative hypotheses.  Compute , , and .  Find the numerator and denominator degrees of freedom.  Use to make a reject-or-fail-to-reject decision.     Explain why the ANOVA test statistic is large when group means are far apart and observations within each group are close together.    Suppose an ANOVA table gives and .   Compute the F statistic.  Explain why this does not look like strong evidence against equal means.     A researcher reports that a one-way ANOVA test comparing five means has with degrees of freedom and .   How many groups were compared?  What are the null and alternative hypotheses?  At the 5% significance level, would you reject ? Use .     State the main assumptions for one-way ANOVA. For each assumption, describe one practical way it could fail in a real study.   "
@@ -4467,8 +4359,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch-anova-ex-1",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-1",
+  "type": "Checkpoint",
   "number": "12.3.1",
   "title": "",
   "body": " In a balanced one-way ANOVA, explain the meaning of , , , and .  "
@@ -4476,8 +4368,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch-anova-ex-2",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-2",
+  "type": "Checkpoint",
   "number": "12.3.2",
   "title": "",
   "body": " Suppose there are groups with observations in each group. The between-group component is , and the within-group component is .   Compute the total variation .  Compute and .  Compute the ANOVA F statistic.   "
@@ -4485,8 +4377,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch-anova-ex-3",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-3",
+  "type": "Checkpoint",
   "number": "12.3.3",
   "title": "",
   "body": " A study compares three exercise programs. Each program has four participants, and the weight-loss amounts are shown below.   Weight loss by program    Program  Data    A  4, 5, 6, 5    B  7, 8, 6, 7    C  9, 10, 11, 10      Find the three group means and the grand mean.  Compute , , and .  Which part of the variation is larger: between groups or within groups?   "
@@ -4494,45 +4386,45 @@ var ptx_lunr_docs = [
 {
   "id": "ch-anova-ex-4",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-4",
-  "type": "Exercise",
-  "number": "12.3.4",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-4",
+  "type": "Checkpoint",
+  "number": "12.3.5",
   "title": "",
   "body": " For the data in , test whether the three population mean weight losses are equal at the 5% significance level.   Write the null and alternative hypotheses.  Compute , , and .  Find the numerator and denominator degrees of freedom.  Use to make a reject-or-fail-to-reject decision.   "
 },
 {
   "id": "ch-anova-ex-5",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-5",
-  "type": "Exercise",
-  "number": "12.3.5",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-5",
+  "type": "Checkpoint",
+  "number": "12.3.6",
   "title": "",
   "body": " Explain why the ANOVA test statistic is large when group means are far apart and observations within each group are close together.  "
 },
 {
   "id": "ch-anova-ex-6",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-6",
-  "type": "Exercise",
-  "number": "12.3.6",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-6",
+  "type": "Checkpoint",
+  "number": "12.3.7",
   "title": "",
   "body": " Suppose an ANOVA table gives and .   Compute the F statistic.  Explain why this does not look like strong evidence against equal means.   "
 },
 {
   "id": "ch-anova-ex-7",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-7",
-  "type": "Exercise",
-  "number": "12.3.7",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-7",
+  "type": "Checkpoint",
+  "number": "12.3.8",
   "title": "",
   "body": " A researcher reports that a one-way ANOVA test comparing five means has with degrees of freedom and .   How many groups were compared?  What are the null and alternative hypotheses?  At the 5% significance level, would you reject ? Use .   "
 },
 {
   "id": "ch-anova-ex-8",
   "level": "2",
-  "url": "ch-anova-exercises.html#ch-anova-ex-8",
-  "type": "Exercise",
-  "number": "12.3.8",
+  "url": "sec-ch-anova-exercises.html#ch-anova-ex-8",
+  "type": "Checkpoint",
+  "number": "12.3.9",
   "title": "",
   "body": " State the main assumptions for one-way ANOVA. For each assumption, describe one practical way it could fail in a real study.  "
 },
@@ -4543,7 +4435,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "13.1",
   "title": "The Sign Test",
-  "body": " The Sign Test  The sign test is easy to describe because it ignores almost everything except whether each observation is above or below a hypothesized value. For a one-sample problem, the null hypothesis has the form   where is the population median inference median test . This is the first important point: the sign test is a test about a median, not a test about a mean. A few extremely large or small observations can pull a mean around, but the sign test only asks how many observations fall on each side of .  Suppose is true and the population is continuous, so ties at exactly are unlikely. Then a randomly selected observation is just as likely to be above as below it:   Let be the number of observations above , after throwing out any observations exactly equal to . If there are non-tied observations, then under the null hypothesis   So the sign test is a particular case of a binomial proportion test with . The “success” is simply being on one chosen side of the hypothesized median.  The alternative hypothesis tells us which tail of the binomial distribution to use.   For , large values of count against .  For , small values of count against .  For , values of far from in either direction count against .   For small samples, we base the rejection decision directly on the binomial distribution. For large samples, we use the normal approximation to the binomial distribution. Since , the null mean and standard deviation of are   Thus the large-sample sign-test statistic is approximately   A continuity correction is often used when converting a binomial tail to a normal tail, but the main idea is the same: the observed number of plus signs is compared with what a fair binomial model predicts.   An Exact One-Sample Sign Test  A student group claims that the median time to find parking on campus is more than 10 minutes. A random sample of 12 students gives parking times where 10 are above 10 minutes and 2 are below 10 minutes. There are no ties at exactly 10 minutes.  We test   Let be the number of times above 10 minutes. Under ,   Since the alternative is right-tailed, the p-value is   At the 5% significance level, we reject . The sample gives evidence that the median parking time is more than 10 minutes.    A Large-Sample Sign Test  A city wants to know whether the median commute time is greater than 30 minutes. In a random sample of 64 commuters, 43 report commute times above 30 minutes, 21 report commute times below 30 minutes, and nobody reports exactly 30 minutes.  Under , the number above 30 minutes has approximately mean and standard deviation . The z statistic is   For the right-tailed alternative , the p-value is about . The data give strong evidence that the median commute time is greater than 30 minutes.   The sign test also works naturally for paired data. For a paired-sample sign test inference paired-sample sign test , first compute the paired differences   or whatever direction makes sense in context. Then ignore the zero differences and count the signs of the nonzero differences. The null hypothesis is about the median difference:   If the treatment has no median effect, positive and negative differences should be equally likely, so the number of positive differences again follows under the null hypothesis.   A Paired-Sample Sign Test  Ten students take a short statistics quiz before and after a review session. Let . The signs of the differences are   There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use   Under , the number of positive signs is . The p-value is   At , this is close but not quite small enough to reject . The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.    Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as “the median commute time to campus is 20 minutes.” Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.     "
+  "body": " The Sign Test  The sign test is easy to describe because it ignores almost everything except whether each observation is above or below a hypothesized value. For a one-sample problem, the null hypothesis has the form   where is the population median inference median test . This is the first important point: the sign test is a test about a median, not a test about a mean. A few extremely large or small observations can pull a mean around, but the sign test only asks how many observations fall on each side of .  Suppose is true and the population is continuous, so ties at exactly are unlikely. Then a randomly selected observation is just as likely to be above as below it:   Let be the number of observations above , after throwing out any observations exactly equal to . If there are non-tied observations, then under the null hypothesis   So the sign test is a particular case of a binomial proportion test with . The success is simply being on one chosen side of the hypothesized median.  The alternative hypothesis tells us which tail of the binomial distribution to use.   For , large values of count against .  For , small values of count against .  For , values of far from in either direction count against .   For small samples, we base the rejection decision directly on the binomial distribution. For large samples, we use the normal approximation to the binomial distribution. Since , the null mean and standard deviation of are   Thus the large-sample sign-test statistic is approximately   A continuity correction is often used when converting a binomial tail to a normal tail, but the main idea is the same: the observed number of plus signs is compared with what a fair binomial model predicts.   An Exact One-Sample Sign Test  A student group claims that the median time to find parking on campus is more than 10 minutes. A random sample of 12 students gives parking times where 10 are above 10 minutes and 2 are below 10 minutes. There are no ties at exactly 10 minutes.  We test   Let be the number of times above 10 minutes. Under ,   Since the alternative is right-tailed, the p-value is   At the 5% significance level, we reject . The sample gives evidence that the median parking time is more than 10 minutes.    A Large-Sample Sign Test  A city wants to know whether the median commute time is greater than 30 minutes. In a random sample of 64 commuters, 43 report commute times above 30 minutes, 21 report commute times below 30 minutes, and nobody reports exactly 30 minutes.  Under , the number above 30 minutes has approximately mean and standard deviation . The z statistic is   For the right-tailed alternative , the p-value is about . The data give strong evidence that the median commute time is greater than 30 minutes.   The sign test also works naturally for paired data. For a paired-sample sign test inference paired-sample sign test , first compute the paired differences   or whatever direction makes sense in context. Then ignore the zero differences and count the signs of the nonzero differences. The null hypothesis is about the median difference:   If the treatment has no median effect, positive and negative differences should be equally likely, so the number of positive differences again follows under the null hypothesis.   A Paired-Sample Sign Test  Ten students take a short statistics quiz before and after a review session. Let . The signs of the differences are   There are 8 positive differences and 2 negative differences. To test whether the review session tends to improve scores, use   Under , the number of positive signs is . The p-value is   At , this is close but not quite small enough to reject . The sign pattern suggests improvement, but the evidence is not quite strong enough at the 5% level.    Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as the median commute time to campus is 20 minutes. Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.     "
 },
 {
   "id": "sec-sign-test-4",
@@ -4552,7 +4444,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "median inference median test "
+  "body": "median "
 },
 {
   "id": "ex-sign-test-median-exact",
@@ -4579,7 +4471,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "paired-sample sign test inference paired-sample sign test "
+  "body": "paired-sample sign test "
 },
 {
   "id": "ex-paired-sign-test",
@@ -4595,9 +4487,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sign-test.html#act-ch12-human-sign-test",
   "type": "Activity",
-  "number": "13.1.1",
+  "number": "13.1.4",
   "title": "Human Sign Test.",
-  "body": " Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as “the median commute time to campus is 20 minutes.” Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.    "
+  "body": " Human Sign Test   Use a quick class data set to see why the sign test is a binomial test in disguise.     Choose a claim about a median that the class can check quickly, such as the median commute time to campus is 20 minutes. Each student records whether their value is above, below, or exactly equal to the claimed median.      Throw out any ties. Count the number above the claimed median and the number below it.      Explain why the number above the claimed median should follow if the claim is true.    "
 },
 {
   "id": "sec-spearman-rank-correlation",
@@ -4606,7 +4498,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "13.2",
   "title": "The Spearman Test of Rank Correlation",
-  "body": " The Spearman Test of Rank Correlation  The ordinary correlation coefficient measures the strength and direction of a linear relationship. The Spearman rank correlation coefficient inference Spearman rank correlation coefficient , written , measures the strength and direction of a monotone relationship after the data values are replaced by ranks.  A relationship is monotone inference monotone relationship if it mostly moves in one direction. A positive monotone relationship tends to go up as increases. A negative monotone relationship tends to go down as increases. It does not have to be a straight line. So the Spearman test is about monotonicity, not linearity.   Monotone and non-monotone patterns   Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.     To compute , rank the -values from smallest to largest and rank the -values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let be the rank of , let be the rank of , and let   Then   The denominator is important. The common no-ties formula has in the denominator, which is the same as . A formula with only is missing the factor and will not give the Spearman correlation coefficient.  Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of , so they have the same mean   The ordinary correlation of the ranks is   Because both rank lists have the same spread,   Now expand the squared rank differences:   After expanding and collecting terms,   Solving this for the cross-product sum and dividing by gives   If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.   Computing Spearman Rank Correlation  Six students report hours studied and quiz scores.   Ranks for hours studied and quiz score    Student  Hours rank  Score rank      A  1  2   1    B  2  1  1  1    C  3  4   1    D  4  3  1  1    E  5  5  0  0    F  6  6  0  0     Here and . Therefore   The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.   The Spearman test usually starts with   meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is   under . This approximation has a concrete reason. Under the null hypothesis of no rank association, once the -ranks are fixed, the -ranks are essentially a random permutation of . In that random-permutation model, the Spearman statistic has mean 0 and variance   So multiplying by makes the variance equal to 1. As grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why can be treated as approximately standard normal for a large-sample test.   A Large-Sample Spearman Test  A researcher studies whether stress rank and sleep-loss rank tend to move together for students. The Spearman rank correlation is . Test for positive monotone association.  The hypotheses are   The large-sample statistic is   The right-tailed p-value is about . The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.    Rank Correlation Card Sort   Practice reading monotone association without worrying about the original measurement units.     Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.      Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate .      Describe one arrangement that has a clear curved pattern but still has positive monotone association.     "
+  "body": " The Spearman Test of Rank Correlation  The ordinary correlation coefficient measures the strength and direction of a linear relationship. The Spearman rank correlation coefficient inference Spearman rank correlation coefficient , written , measures the strength and direction of a monotone relationship after the data values are replaced by ranks.  A relationship is monotone inference monotone relationship if it mostly moves in one direction. A positive monotone relationship tends to go up as increases. A negative monotone relationship tends to go down as increases. It does not have to be a straight line. So the Spearman test is about monotonicity, not linearity.   Monotone and non-monotone patterns   Two scatterplots.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.     To compute , rank the -values from smallest to largest and rank the -values from smallest to largest. Then compute the ordinary Pearson correlation coefficient using those ranks instead of the original data. If there are no ties, there is a shortcut formula. Let be the rank of , let be the rank of , and let   Then   The denominator is important. The common no-ties formula has in the denominator, which is the same as . A formula with only is missing the factor and will not give the Spearman correlation coefficient.  Here is where the shortcut formula comes from. With no ties, both rank lists are just rearrangements of , so they have the same mean   The ordinary correlation of the ranks is   Because both rank lists have the same spread,   Now expand the squared rank differences:   After expanding and collecting terms,   Solving this for the cross-product sum and dividing by gives   If there are tied values, assign tied observations their average rank and compute the ordinary correlation of the two rank columns. The shortcut formula is meant for the no-ties case.   Computing Spearman Rank Correlation  Six students report hours studied and quiz scores.   Ranks for hours studied and quiz score    Student  Hours rank  Score rank      A  1  2   1    B  2  1  1  1    C  3  4   1    D  4  3  1  1    E  5  5  0  0    F  6  6  0  0     Here and . Therefore   The rank correlation is strongly positive. Students who studied more tended to have higher quiz scores, though not in perfect rank order.   The Spearman test usually starts with   meaning no monotone association in the population. The alternative may be positive, negative, or two-sided. Small samples can be handled with exact rank-permutation methods. For large samples, a useful approximation is   under . This approximation has a concrete reason. Under the null hypothesis of no rank association, once the -ranks are fixed, the -ranks are essentially a random permutation of . In that random-permutation model, the Spearman statistic has mean 0 and variance   So multiplying by makes the variance equal to 1. As grows, the permutation distribution of this standardized rank correlation becomes close to the standard normal distribution. That is why can be treated as approximately standard normal for a large-sample test.   A Large-Sample Spearman Test  A researcher studies whether stress rank and sleep-loss rank tend to move together for students. The Spearman rank correlation is . Test for positive monotone association.  The hypotheses are   The large-sample statistic is   The right-tailed p-value is about . The data give strong evidence of a positive monotone association: students with higher stress ranks tend to have higher sleep-loss ranks.    Rank Correlation Card Sort   Practice reading monotone association without worrying about the original measurement units.     Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.      Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate .      Describe one arrangement that has a clear curved pattern but still has positive monotone association.     "
 },
 {
   "id": "sec-spearman-rank-correlation-2",
@@ -4615,7 +4507,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Spearman rank correlation coefficient inference Spearman rank correlation coefficient "
+  "body": "Spearman rank correlation coefficient "
 },
 {
   "id": "sec-spearman-rank-correlation-3",
@@ -4624,7 +4516,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "monotone inference monotone relationship "
+  "body": "monotone "
 },
 {
   "id": "fig-monotone-not-linear",
@@ -4633,7 +4525,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "13.2.1",
   "title": "",
-  "body": " Monotone and non-monotone patterns   Two scatterplots. The left plot shows an increasing curved pattern that is monotone but not linear. The right plot shows a U-shaped pattern that is not monotone.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.    "
+  "body": " Monotone and non-monotone patterns   Two scatterplots.  The left panel has points that rise from lower left to upper right along a curved increasing path, showing a monotone relationship that is not a straight line. The right panel has points that fall and then rise in a U shape, showing a clear relationship that is not monotone.    "
 },
 {
   "id": "ex-spearman-coefficient",
@@ -4658,33 +4550,33 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spearman-rank-correlation.html#act-ch12-rank-correlation-card-sort",
   "type": "Activity",
-  "number": "13.2.1",
+  "number": "13.2.5",
   "title": "Rank Correlation Card Sort.",
   "body": " Rank Correlation Card Sort   Practice reading monotone association without worrying about the original measurement units.     Make two columns of paired numerical data with 8 observations. Rank each column from smallest to largest.      Shuffle only the second rank column until the pattern looks strongly positive, strongly negative, and then close to unrelated. For each arrangement, compute or estimate .      Describe one arrangement that has a clear curved pattern but still has positive monotone association.    "
 },
 {
-  "id": "ch12-exercises",
+  "id": "sec-ch12-exercises",
   "level": "1",
-  "url": "ch12-exercises.html",
-  "type": "Exercises",
+  "url": "sec-ch12-exercises.html",
+  "type": "Section",
   "number": "13.3",
   "title": "Exercises",
-  "body": " Exercises   Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why “non-parametric” does not mean “assumption-free.”     A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.   Write hypotheses for testing whether the population median is greater than 15 minutes.  State the binomial distribution used under .  Compute the exact p-value.     A one-sample sign test has non-tied observations, with 28 observations above the hypothesized median.   Compute the large-sample z statistic without a continuity correction.  For a right-tailed test, estimate the p-value using the standard normal distribution.  State the conclusion at .     A paired study records blood pressure before and after a relaxation exercise. Let . Among 15 nonzero differences, 4 are positive and 11 are negative.   For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference .  Which sign should be counted as evidence for the alternative?  Compute the exact p-value using a binomial distribution.     Explain why the sign test is a test about a median rather than a mean.    For the paired rank data below, compute Spearman's rank correlation coefficient.   Paired ranks    Observation  Rank of  Rank of    1  1  1    2  2  3    3  3  2    4  4  5    5  5  4    6  6  6      Find each rank difference .  Find .  Use the shortcut formula for .     A sample of paired observations has Spearman rank correlation .   Write hypotheses for testing whether there is a negative monotone association.  Compute .  Use the standard normal distribution to estimate the p-value.     Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.   "
+  "body": " Exercises   Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why non-parametric does not mean assumption-free.     A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.   Write hypotheses for testing whether the population median is greater than 15 minutes.  State the binomial distribution used under .  Compute the exact p-value.     A one-sample sign test has non-tied observations, with 28 observations above the hypothesized median.   Compute the large-sample z statistic without a continuity correction.  For a right-tailed test, estimate the p-value using the standard normal distribution.  State the conclusion at .     A paired study records blood pressure before and after a relaxation exercise. Let . Among 15 nonzero differences, 4 are positive and 11 are negative.   For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference .  Which sign should be counted as evidence for the alternative?  Compute the exact p-value using a binomial distribution.     Explain why the sign test is a test about a median rather than a mean.    For the paired rank data below, compute Spearman's rank correlation coefficient.   Paired ranks    Observation  Rank of  Rank of    1  1  1    2  2  3    3  3  2    4  4  5    5  5  4    6  6  6      Find each rank difference .  Find .  Use the shortcut formula for .     A sample of paired observations has Spearman rank correlation .   Write hypotheses for testing whether there is a negative monotone association.  Compute .  Use the standard normal distribution to estimate the p-value.     Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.   "
 },
 {
   "id": "ch12-ex-1",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-1",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-1",
+  "type": "Checkpoint",
   "number": "13.3.1",
   "title": "",
-  "body": " Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why “non-parametric” does not mean “assumption-free.”   "
+  "body": " Explain the difference between a parametric test and a non-parametric test.   Give one example of a parametric test from the previous chapter.  Give one example of a non-parametric test from this chapter.  Explain why non-parametric does not mean assumption-free.   "
 },
 {
   "id": "ch12-ex-2",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-2",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-2",
+  "type": "Checkpoint",
   "number": "13.3.2",
   "title": "",
   "body": " A sample of 9 wait times is compared with a hypothesized median of 15 minutes. Seven wait times are above 15 minutes, two are below 15 minutes, and none are exactly 15 minutes.   Write hypotheses for testing whether the population median is greater than 15 minutes.  State the binomial distribution used under .  Compute the exact p-value.   "
@@ -4692,8 +4584,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch12-ex-3",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-3",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-3",
+  "type": "Checkpoint",
   "number": "13.3.3",
   "title": "",
   "body": " A one-sample sign test has non-tied observations, with 28 observations above the hypothesized median.   Compute the large-sample z statistic without a continuity correction.  For a right-tailed test, estimate the p-value using the standard normal distribution.  State the conclusion at .   "
@@ -4701,8 +4593,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch12-ex-4",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-4",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-4",
+  "type": "Checkpoint",
   "number": "13.3.4",
   "title": "",
   "body": " A paired study records blood pressure before and after a relaxation exercise. Let . Among 15 nonzero differences, 4 are positive and 11 are negative.   For testing whether the relaxation exercise tends to lower blood pressure, write the hypotheses in terms of the median difference .  Which sign should be counted as evidence for the alternative?  Compute the exact p-value using a binomial distribution.   "
@@ -4710,8 +4602,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch12-ex-5",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-5",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-5",
+  "type": "Checkpoint",
   "number": "13.3.5",
   "title": "",
   "body": " Explain why the sign test is a test about a median rather than a mean.  "
@@ -4719,8 +4611,8 @@ var ptx_lunr_docs = [
 {
   "id": "ch12-ex-6",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-6",
-  "type": "Exercise",
+  "url": "sec-ch12-exercises.html#ch12-ex-6",
+  "type": "Checkpoint",
   "number": "13.3.6",
   "title": "",
   "body": " For the paired rank data below, compute Spearman's rank correlation coefficient.   Paired ranks    Observation  Rank of  Rank of    1  1  1    2  2  3    3  3  2    4  4  5    5  5  4    6  6  6      Find each rank difference .  Find .  Use the shortcut formula for .   "
@@ -4728,342 +4620,270 @@ var ptx_lunr_docs = [
 {
   "id": "ch12-ex-7",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-7",
-  "type": "Exercise",
-  "number": "13.3.7",
+  "url": "sec-ch12-exercises.html#ch12-ex-7",
+  "type": "Checkpoint",
+  "number": "13.3.8",
   "title": "",
   "body": " A sample of paired observations has Spearman rank correlation .   Write hypotheses for testing whether there is a negative monotone association.  Compute .  Use the standard normal distribution to estimate the p-value.   "
 },
 {
   "id": "ch12-ex-8",
   "level": "2",
-  "url": "ch12-exercises.html#ch12-ex-8",
-  "type": "Exercise",
-  "number": "13.3.8",
+  "url": "sec-ch12-exercises.html#ch12-ex-8",
+  "type": "Checkpoint",
+  "number": "13.3.9",
   "title": "",
   "body": " Explain why Spearman's rank correlation can be high for a curved increasing relationship, while ordinary correlation focuses specifically on linear relationship.  "
 },
 {
-  "id": "backmatter-2",
+  "id": "app-sampling-practice",
   "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": " This book was authored in PreTeXt .  "
+  "url": "app-sampling-practice.html",
+  "type": "Appendix",
+  "number": "A",
+  "title": "Sampling in Practice",
+  "body": " Sampling in Practice  Statistics usually starts with a practical problem: we want to learn something about a population sampling population , but we cannot measure every member of that population. So we study a sample sampling sample and use it to make a careful guess about the larger group.  The quality of that guess depends on how the sample was chosen. A large sample can still be poor if it comes from the wrong people or the wrong conditions. A smaller sample can be useful if it is chosen in a way that gives every important part of the population a fair chance to appear.  Why Sampling Matters  The main danger in sampling is bias sampling bias . Bias means the sampling method tends to favor some outcomes over others. Random variation is expected and can be measured. Bias is more serious because collecting more biased data usually just gives a more confident wrong answer.   A Cafeteria Survey  A school wants to estimate the percentage of students who like the cafeteria food. If the survey is given only to students eating in the cafeteria, it misses students who avoid the cafeteria because they dislike the food. That sample is convenient, but it is probably biased.  A better plan is to choose students from the whole student list, then ask the selected students the same question. This is harder to organize, but it has a better chance of representing the whole student body.   A good sampling plan should answer four basic questions:   What is the population we want to describe?  What list or process will let us reach members of that population?  How will we choose the sample?  What groups might be missed or overrepresented?   The list or process used to reach the population is called the sampling frame sampling sampling frame . For a student survey, the sampling frame might be the current enrollment list. For a batch of manufactured parts, it might be the production log for the day.  Simple Random Samples  A simple random sample sampling simple random sample is the cleanest basic sampling method. In a simple random sample of size , every group of members from the population has the same chance of being selected.  In practice, a simple random sample is usually taken like this:   Make a sampling frame, such as a numbered list of all members of the population.  Decide on the sample size .  Use random numbers, software, or a random-number table to choose different numbers from the list.  Collect data from the members whose numbers were chosen.   One convenient online tool is the RANDOM.ORG Sequence Generator . For a simple random sample of 20 people from a population numbered 1 through 500, enter 1 as the smallest value and 500 as the largest value. The generator returns the numbers in random order, without repeats. Use the first 20 numbers in that randomized sequence. An ordinary random integer generator can also be used, but it may produce repeated numbers, so duplicates have to be skipped.   Choosing Students at Random  A class has 32 students, and an instructor wants a sample of 6 students for a short anonymous follow-up interview. Number the students from 1 to 32. Then use a random-number generator to choose 6 different numbers between 1 and 32. The students with those numbers form the sample.  The important part is not the technology. The important part is that the instructor does not pick students by memory, by seating location, or by who is easiest to ask.    Using a Random-Number Table  Suppose a population has 500 members and we want a simple random sample of 20. First label the members 001, 002, 003, and so on, up to 500. Since 500 has three digits, read the random-number table sampling random-number table in groups of three digits. Choose a starting place in the table, then read across the row.   A short snippet from a random-number table    Row  Random digits, grouped only for readability    1  42801  67334  28502  11700  03912  60089    2  51420  51174  73044  32267  51984  05251    3  03649  92701  38004  58742  03118  64277     The five-digit blocks in are just printed that way to make the table easier to read. Since our population labels have three digits, start at the first digit of Row 1 and read across in groups of three. The groups begin as follows:  428, 016, 733, 428, 502, 117, 000, 391, 260, 089, 514, 205, 117, 473, 044, 322, 675, 198, 405, 251, 036, 499, 270, 138, 004, 587, 420, 311.  Keep numbers from 001 to 500 that have not already appeared. Skip 733, 502, 000, 514, 675, and 587 because they are outside the range 001 to 500. Skip the second 428 and the second 117 because those labels were already chosen. Continue reading until 20 different labels have been accepted.  The accepted labels are  428, 016, 117, 391, 260, 089, 205, 473, 044, 322, 198, 405, 251, 036, 499, 270, 138, 004, 420, 311.  These 20 labels identify the sample. Labels such as 016 and 004 just mean member 16 and member 4 on the original list.   Simple random sampling is easy to understand and is the usual starting point for theory. Its weakness is that it requires a good list of the whole population. In real studies, that list may be incomplete, outdated, or hard to use.  Other Common Sampling Methods  Simple random sampling is not the only useful method. The best method depends on the population, the available list, the budget, and the kind of question being asked. The most common practical choices are a systematic sample sampling systematic sample , a stratified sample sampling stratified sample , a cluster sample sampling cluster sample , and sometimes a convenience sample sampling convenience sample .   Systematic sample. Choose a random start, then take every th member. This works well for a long ordered list, as long as the order does not contain a hidden pattern related to the question.  Stratified sample. Split the population into important groups, then randomly sample within each group. This works well when groups such as class level, shift, region, or product type should all be represented.  Cluster sample. Split the population into natural groups, randomly choose some groups, then study everyone or many people in those groups. This works well when the population is spread out and visiting every location is too expensive.  Convenience sample. Use the people or items easiest to reach. This is useful for quick practice or early exploration, but it is not strong evidence about a population.    Picking a Method  A school wants feedback from students in grades 9, 10, 11, and 12. A simple random sample from the whole school might work, but it could accidentally include too few students from one grade. A stratified sample is better: randomly choose some students from each grade.  If the school instead wants to inspect lockers for damage across a large campus, a cluster sample might be more practical. Randomly choose several hallways, then inspect all lockers in those hallways.   Convenience samples are common because they are easy. They are also risky. If a class surveys only friends, or a store surveys only customers who visit on Monday morning, the sample may tell us more about that easy-to-reach group than about the population we actually care about.  Sampling and Experimental Design  Sampling is also important in experimental design experimental design sampling , but it plays a different role from random assignment.  Sampling answers the question, Who or what gets into the study? A good sample helps us generalize from the study to a larger population. Random assignment answers the question, Which treatment does each study unit receive? Random assignment helps make treatment groups comparable, so differences in outcomes can be more fairly attributed to the treatment.   A Study App Experiment  Suppose a college wants to test whether a new study app improves quiz scores. If it recruits only students who already like technology, the sample may not represent all students. That is a sampling problem.  After the students are recruited, the college should randomly assign some students to use the app and some students to use the usual study method. That is an experimental-design problem. The study needs both pieces: a sample that fits the population of interest and random assignment that makes the comparison fair.   A simple rule is useful: random sampling helps with generalizing ; random assignment helps with cause and effect . A study can have one without the other, but the conclusion is then more limited.  Choosing a Sampling Method  For a beginning statistics course, the following guide is enough for many situations:   Use a simple random sample when you have a complete list and no special subgroup must be guaranteed.  Use a stratified sample when important groups should be represented, such as class level, shift, region, or product type.  Use a systematic sample when the population is already in a long list or line, and the order does not hide a repeating pattern.  Use a cluster sample when the population is naturally grouped by location or time, and it would be too expensive to sample from everywhere.  Treat convenience samples as weak evidence unless there is a very good reason to believe the easy-to-reach group looks like the population.   No sampling method fixes a badly stated question. Before choosing a method, state the population clearly. Then choose the method that gives that population a fair chance to be represented.  Exercises   A teacher wants to choose 8 students from a roster of 40 students for a quick interview. Describe exactly how to get a simple random sample.    A store wants opinions from customers who shop in the morning, afternoon, and evening. Which sampling method would you recommend, and why?    A city surveys people at one downtown bus stop at noon and uses the results to describe all city residents. Identify one possible source of bias.    In a medical experiment, explain the difference between randomly sampling patients and randomly assigning patients to treatments.   "
 },
 {
-  "id": "sec-app-sampling-why",
-  "level": "1",
-  "url": "sec-app-sampling-why.html",
-  "type": "Section",
-  "number": "A.1",
-  "title": "Why Sampling Matters",
-  "body": " Why Sampling Matters  The main danger in sampling is bias sampling bias . Bias means the sampling method tends to favor some outcomes over others. Random variation is expected and can be measured. Bias is more serious because collecting more biased data usually just gives a more confident wrong answer.   A Cafeteria Survey  A school wants to estimate the percentage of students who like the cafeteria food. If the survey is given only to students eating in the cafeteria, it misses students who avoid the cafeteria because they dislike the food. That sample is convenient, but it is probably biased.  A better plan is to choose students from the whole student list, then ask the selected students the same question. This is harder to organize, but it has a better chance of representing the whole student body.   A good sampling plan should answer four basic questions:   What is the population we want to describe?  What list or process will let us reach members of that population?  How will we choose the sample?  What groups might be missed or overrepresented?   The list or process used to reach the population is called the sampling frame sampling sampling frame . For a student survey, the sampling frame might be the current enrollment list. For a batch of manufactured parts, it might be the production log for the day.  "
-},
-{
-  "id": "sec-app-sampling-why-2",
+  "id": "app-sampling-practice-2",
   "level": "2",
-  "url": "sec-app-sampling-why.html#sec-app-sampling-why-2",
+  "url": "app-sampling-practice.html#app-sampling-practice-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "bias sampling bias "
+  "body": "population sample "
+},
+{
+  "id": "app-sampling-practice-5",
+  "level": "2",
+  "url": "app-sampling-practice.html#app-sampling-practice-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "bias "
 },
 {
   "id": "ex-app-sampling-lunch-survey",
   "level": "2",
-  "url": "sec-app-sampling-why.html#ex-app-sampling-lunch-survey",
+  "url": "app-sampling-practice.html#ex-app-sampling-lunch-survey",
   "type": "Example",
-  "number": "A.1.1",
+  "number": "A.0.1",
   "title": "A Cafeteria Survey.",
   "body": " A Cafeteria Survey  A school wants to estimate the percentage of students who like the cafeteria food. If the survey is given only to students eating in the cafeteria, it misses students who avoid the cafeteria because they dislike the food. That sample is convenient, but it is probably biased.  A better plan is to choose students from the whole student list, then ask the selected students the same question. This is harder to organize, but it has a better chance of representing the whole student body.  "
 },
 {
-  "id": "sec-app-sampling-why-6",
+  "id": "app-sampling-practice-9",
   "level": "2",
-  "url": "sec-app-sampling-why.html#sec-app-sampling-why-6",
+  "url": "app-sampling-practice.html#app-sampling-practice-9",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "sampling frame sampling sampling frame "
+  "body": "sampling frame "
 },
 {
-  "id": "sec-app-sampling-simple-random",
-  "level": "1",
-  "url": "sec-app-sampling-simple-random.html",
-  "type": "Section",
-  "number": "A.2",
-  "title": "Simple Random Samples",
-  "body": " Simple Random Samples  A simple random sample sampling simple random sample is the cleanest basic sampling method. In a simple random sample of size , every group of members from the population has the same chance of being selected.  In practice, a simple random sample is usually taken like this:   Make a sampling frame, such as a numbered list of all members of the population.  Decide on the sample size .  Use random numbers, software, or a random-number table to choose different numbers from the list.  Collect data from the members whose numbers were chosen.   One convenient online tool is the RANDOM.ORG Sequence Generator . For a simple random sample of 20 people from a population numbered 1 through 500, enter 1 as the smallest value and 500 as the largest value. The generator returns the numbers in random order, without repeats. Use the first 20 numbers in that randomized sequence. An ordinary random integer generator can also be used, but it may produce repeated numbers, so duplicates have to be skipped.   Choosing Students at Random  A class has 32 students, and an instructor wants a sample of 6 students for a short anonymous follow-up interview. Number the students from 1 to 32. Then use a random-number generator to choose 6 different numbers between 1 and 32. The students with those numbers form the sample.  The important part is not the technology. The important part is that the instructor does not pick students by memory, by seating location, or by who is easiest to ask.    Using a Random-Number Table  Suppose a population has 500 members and we want a simple random sample of 20. First label the members 001, 002, 003, and so on, up to 500. Since 500 has three digits, read the random-number table sampling random-number table in groups of three digits. Choose a starting place in the table, then read across the row.   A short snippet from a random-number table    Row  Random digits, grouped only for readability    1  42801  67334  28502  11700  03912  60089    2  51420  51174  73044  32267  51984  05251    3  03649  92701  38004  58742  03118  64277     The five-digit blocks in are just printed that way to make the table easier to read. Since our population labels have three digits, start at the first digit of Row 1 and read across in groups of three. The groups begin as follows:  428, 016, 733, 428, 502, 117, 000, 391, 260, 089, 514, 205, 117, 473, 044, 322, 675, 198, 405, 251, 036, 499, 270, 138, 004, 587, 420, 311.  Keep numbers from 001 to 500 that have not already appeared. Skip 733, 502, 000, 514, 675, and 587 because they are outside the range 001 to 500. Skip the second 428 and the second 117 because those labels were already chosen. Continue reading until 20 different labels have been accepted.  The accepted labels are  428, 016, 117, 391, 260, 089, 205, 473, 044, 322, 198, 405, 251, 036, 499, 270, 138, 004, 420, 311.  These 20 labels identify the sample. Labels such as 016 and 004 just mean member 16 and member 4 on the original list.   Simple random sampling is easy to understand and is the usual starting point for theory. Its weakness is that it requires a good list of the whole population. In real studies, that list may be incomplete, outdated, or hard to use.  "
-},
-{
-  "id": "sec-app-sampling-simple-random-2",
+  "id": "app-sampling-practice-11",
   "level": "2",
-  "url": "sec-app-sampling-simple-random.html#sec-app-sampling-simple-random-2",
+  "url": "app-sampling-practice.html#app-sampling-practice-11",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "simple random sample sampling simple random sample "
+  "body": "simple random sample "
 },
 {
   "id": "ex-app-sampling-simple-random",
   "level": "2",
-  "url": "sec-app-sampling-simple-random.html#ex-app-sampling-simple-random",
+  "url": "app-sampling-practice.html#ex-app-sampling-simple-random",
   "type": "Example",
-  "number": "A.2.1",
+  "number": "A.0.2",
   "title": "Choosing Students at Random.",
   "body": " Choosing Students at Random  A class has 32 students, and an instructor wants a sample of 6 students for a short anonymous follow-up interview. Number the students from 1 to 32. Then use a random-number generator to choose 6 different numbers between 1 and 32. The students with those numbers form the sample.  The important part is not the technology. The important part is that the instructor does not pick students by memory, by seating location, or by who is easiest to ask.  "
 },
 {
   "id": "ex-app-sampling-random-number-table",
   "level": "2",
-  "url": "sec-app-sampling-simple-random.html#ex-app-sampling-random-number-table",
+  "url": "app-sampling-practice.html#ex-app-sampling-random-number-table",
   "type": "Example",
-  "number": "A.2.2",
+  "number": "A.0.3",
   "title": "Using a Random-Number Table.",
   "body": " Using a Random-Number Table  Suppose a population has 500 members and we want a simple random sample of 20. First label the members 001, 002, 003, and so on, up to 500. Since 500 has three digits, read the random-number table sampling random-number table in groups of three digits. Choose a starting place in the table, then read across the row.   A short snippet from a random-number table    Row  Random digits, grouped only for readability    1  42801  67334  28502  11700  03912  60089    2  51420  51174  73044  32267  51984  05251    3  03649  92701  38004  58742  03118  64277     The five-digit blocks in are just printed that way to make the table easier to read. Since our population labels have three digits, start at the first digit of Row 1 and read across in groups of three. The groups begin as follows:  428, 016, 733, 428, 502, 117, 000, 391, 260, 089, 514, 205, 117, 473, 044, 322, 675, 198, 405, 251, 036, 499, 270, 138, 004, 587, 420, 311.  Keep numbers from 001 to 500 that have not already appeared. Skip 733, 502, 000, 514, 675, and 587 because they are outside the range 001 to 500. Skip the second 428 and the second 117 because those labels were already chosen. Continue reading until 20 different labels have been accepted.  The accepted labels are  428, 016, 117, 391, 260, 089, 205, 473, 044, 322, 198, 405, 251, 036, 499, 270, 138, 004, 420, 311.  These 20 labels identify the sample. Labels such as 016 and 004 just mean member 16 and member 4 on the original list.  "
 },
 {
-  "id": "sec-app-sampling-common-methods",
-  "level": "1",
-  "url": "sec-app-sampling-common-methods.html",
-  "type": "Section",
-  "number": "A.3",
-  "title": "Other Common Sampling Methods",
-  "body": " Other Common Sampling Methods  Simple random sampling is not the only useful method. The best method depends on the population, the available list, the budget, and the kind of question being asked. The most common practical choices are a systematic sample sampling systematic sample , a stratified sample sampling stratified sample , a cluster sample sampling cluster sample , and sometimes a convenience sample sampling convenience sample .   Systematic sample. Choose a random start, then take every th member. This works well for a long ordered list, as long as the order does not contain a hidden pattern related to the question.  Stratified sample. Split the population into important groups, then randomly sample within each group. This works well when groups such as class level, shift, region, or product type should all be represented.  Cluster sample. Split the population into natural groups, randomly choose some groups, then study everyone or many people in those groups. This works well when the population is spread out and visiting every location is too expensive.  Convenience sample. Use the people or items easiest to reach. This is useful for quick practice or early exploration, but it is not strong evidence about a population.    Picking a Method  A school wants feedback from students in grades 9, 10, 11, and 12. A simple random sample from the whole school might work, but it could accidentally include too few students from one grade. A stratified sample is better: randomly choose some students from each grade.  If the school instead wants to inspect lockers for damage across a large campus, a cluster sample might be more practical. Randomly choose several hallways, then inspect all lockers in those hallways.   Convenience samples are common because they are easy. They are also risky. If a class surveys only friends, or a store surveys only customers who visit on Monday morning, the sample may tell us more about that easy-to-reach group than about the population we actually care about.  "
-},
-{
-  "id": "sec-app-sampling-common-methods-2",
+  "id": "app-sampling-practice-19",
   "level": "2",
-  "url": "sec-app-sampling-common-methods.html#sec-app-sampling-common-methods-2",
+  "url": "app-sampling-practice.html#app-sampling-practice-19",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "systematic sample sampling systematic sample stratified sample sampling stratified sample cluster sample sampling cluster sample convenience sample sampling convenience sample "
+  "body": "systematic sample stratified sample cluster sample convenience sample "
 },
 {
   "id": "ex-app-sampling-choose-method",
   "level": "2",
-  "url": "sec-app-sampling-common-methods.html#ex-app-sampling-choose-method",
+  "url": "app-sampling-practice.html#ex-app-sampling-choose-method",
   "type": "Example",
-  "number": "A.3.1",
+  "number": "A.0.5",
   "title": "Picking a Method.",
   "body": " Picking a Method  A school wants feedback from students in grades 9, 10, 11, and 12. A simple random sample from the whole school might work, but it could accidentally include too few students from one grade. A stratified sample is better: randomly choose some students from each grade.  If the school instead wants to inspect lockers for damage across a large campus, a cluster sample might be more practical. Randomly choose several hallways, then inspect all lockers in those hallways.  "
 },
 {
-  "id": "sec-app-sampling-experiments",
-  "level": "1",
-  "url": "sec-app-sampling-experiments.html",
-  "type": "Section",
-  "number": "A.4",
-  "title": "Sampling and Experimental Design",
-  "body": " Sampling and Experimental Design  Sampling is also important in experimental design experimental design sampling , but it plays a different role from random assignment.  Sampling answers the question, Who or what gets into the study? A good sample helps us generalize from the study to a larger population. Random assignment answers the question, Which treatment does each study unit receive? Random assignment helps make treatment groups comparable, so differences in outcomes can be more fairly attributed to the treatment.   A Study App Experiment  Suppose a college wants to test whether a new study app improves quiz scores. If it recruits only students who already like technology, the sample may not represent all students. That is a sampling problem.  After the students are recruited, the college should randomly assign some students to use the app and some students to use the usual study method. That is an experimental-design problem. The study needs both pieces: a sample that fits the population of interest and random assignment that makes the comparison fair.   A simple rule is useful: random sampling helps with generalizing ; random assignment helps with cause and effect . A study can have one without the other, but the conclusion is then more limited.  "
-},
-{
-  "id": "sec-app-sampling-experiments-2",
+  "id": "app-sampling-practice-24",
   "level": "2",
-  "url": "sec-app-sampling-experiments.html#sec-app-sampling-experiments-2",
+  "url": "app-sampling-practice.html#app-sampling-practice-24",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "experimental design experimental design sampling "
+  "body": "experimental design "
 },
 {
   "id": "ex-app-sampling-random-assignment",
   "level": "2",
-  "url": "sec-app-sampling-experiments.html#ex-app-sampling-random-assignment",
+  "url": "app-sampling-practice.html#ex-app-sampling-random-assignment",
   "type": "Example",
-  "number": "A.4.1",
+  "number": "A.0.6",
   "title": "A Study App Experiment.",
   "body": " A Study App Experiment  Suppose a college wants to test whether a new study app improves quiz scores. If it recruits only students who already like technology, the sample may not represent all students. That is a sampling problem.  After the students are recruited, the college should randomly assign some students to use the app and some students to use the usual study method. That is an experimental-design problem. The study needs both pieces: a sample that fits the population of interest and random assignment that makes the comparison fair.  "
 },
 {
-  "id": "sec-app-sampling-choosing",
-  "level": "1",
-  "url": "sec-app-sampling-choosing.html",
-  "type": "Section",
-  "number": "A.5",
-  "title": "Choosing a Sampling Method",
-  "body": " Choosing a Sampling Method  For a beginning statistics course, the following guide is enough for many situations:   Use a simple random sample when you have a complete list and no special subgroup must be guaranteed.  Use a stratified sample when important groups should be represented, such as class level, shift, region, or product type.  Use a systematic sample when the population is already in a long list or line, and the order does not hide a repeating pattern.  Use a cluster sample when the population is naturally grouped by location or time, and it would be too expensive to sample from everywhere.  Treat convenience samples as weak evidence unless there is a very good reason to believe the easy-to-reach group looks like the population.   No sampling method fixes a badly stated question. Before choosing a method, state the population clearly. Then choose the method that gives that population a fair chance to be represented.  "
-},
-{
-  "id": "app-sampling-practice-exercises",
-  "level": "1",
-  "url": "app-sampling-practice-exercises.html",
-  "type": "Exercises",
-  "number": "A.6",
-  "title": "Exercises",
-  "body": " Exercises   A teacher wants to choose 8 students from a roster of 40 students for a quick interview. Describe exactly how to get a simple random sample.    A store wants opinions from customers who shop in the morning, afternoon, and evening. Which sampling method would you recommend, and why?    A city surveys people at one downtown bus stop at noon and uses the results to describe all city residents. Identify one possible source of bias.    In a medical experiment, explain the difference between randomly sampling patients and randomly assigning patients to treatments.   "
-},
-{
   "id": "app-sampling-ex-1",
   "level": "2",
-  "url": "app-sampling-practice-exercises.html#app-sampling-ex-1",
-  "type": "Exercise",
-  "number": "A.6.1",
+  "url": "app-sampling-practice.html#app-sampling-ex-1",
+  "type": "Checkpoint",
+  "number": "A.0.7",
   "title": "",
   "body": " A teacher wants to choose 8 students from a roster of 40 students for a quick interview. Describe exactly how to get a simple random sample.  "
 },
 {
   "id": "app-sampling-ex-2",
   "level": "2",
-  "url": "app-sampling-practice-exercises.html#app-sampling-ex-2",
-  "type": "Exercise",
-  "number": "A.6.2",
+  "url": "app-sampling-practice.html#app-sampling-ex-2",
+  "type": "Checkpoint",
+  "number": "A.0.8",
   "title": "",
   "body": " A store wants opinions from customers who shop in the morning, afternoon, and evening. Which sampling method would you recommend, and why?  "
 },
 {
   "id": "app-sampling-ex-3",
   "level": "2",
-  "url": "app-sampling-practice-exercises.html#app-sampling-ex-3",
-  "type": "Exercise",
-  "number": "A.6.3",
+  "url": "app-sampling-practice.html#app-sampling-ex-3",
+  "type": "Checkpoint",
+  "number": "A.0.9",
   "title": "",
   "body": " A city surveys people at one downtown bus stop at noon and uses the results to describe all city residents. Identify one possible source of bias.  "
 },
 {
   "id": "app-sampling-ex-4",
   "level": "2",
-  "url": "app-sampling-practice-exercises.html#app-sampling-ex-4",
-  "type": "Exercise",
-  "number": "A.6.4",
+  "url": "app-sampling-practice.html#app-sampling-ex-4",
+  "type": "Checkpoint",
+  "number": "A.0.10",
   "title": "",
   "body": " In a medical experiment, explain the difference between randomly sampling patients and randomly assigning patients to treatments.  "
 },
 {
-  "id": "sec-binomial-table-p01",
+  "id": "app-binomial-table",
   "level": "1",
-  "url": "sec-binomial-table-p01.html",
-  "type": "Section",
-  "number": "B.1",
-  "title": "Success Probability 0.10",
-  "body": " Success Probability 0.10   Exact probabilities for with     0  1  2  3  4  5    1  0.9000  0.1000        2  0.8100  0.1800  0.0100       3  0.7290  0.2430  0.0270  0.0010      4  0.6561  0.2916  0.0486  0.0036  0.0001     5  0.5905  0.3281  0.0729  0.0081  0.0005  0.0000    6  0.5314  0.3543  0.0984  0.0146  0.0012  0.0001    7  0.4783  0.3720  0.1240  0.0230  0.0026  0.0002    8  0.4305  0.3826  0.1488  0.0331  0.0046  0.0004    9  0.3874  0.3874  0.1722  0.0446  0.0074  0.0008    10  0.3487  0.3874  0.1937  0.0574  0.0112  0.0015      Exact probabilities for with     6  7  8  9  10    6  0.0000        7  0.0000  0.0000       8  0.0000  0.0000  0.0000      9  0.0001  0.0000  0.0000  0.0000     10  0.0001  0.0000  0.0000  0.0000  0.0000     "
+  "url": "app-binomial-table.html",
+  "type": "Appendix",
+  "number": "B",
+  "title": "Binomial Distribution",
+  "body": " Binomial Distribution  This appendix gives a compact binomial table appendices binomial table of exact probabilities for , with from 1 to 10 and several common values of . If , use the symmetry relation .  Each table lists probabilities rounded to four decimal places. To make the print version easier to read, each value of is split into a lower- table and an upper- table. For larger values of or for parameters not shown here, use technology.  Success Probability 0.10   Exact probabilities for with     0  1  2  3  4  5    1  0.9000  0.1000        2  0.8100  0.1800  0.0100       3  0.7290  0.2430  0.0270  0.0010      4  0.6561  0.2916  0.0486  0.0036  0.0001     5  0.5905  0.3281  0.0729  0.0081  0.0005  0.0000    6  0.5314  0.3543  0.0984  0.0146  0.0012  0.0001    7  0.4783  0.3720  0.1240  0.0230  0.0026  0.0002    8  0.4305  0.3826  0.1488  0.0331  0.0046  0.0004    9  0.3874  0.3874  0.1722  0.0446  0.0074  0.0008    10  0.3487  0.3874  0.1937  0.0574  0.0112  0.0015      Exact probabilities for with     6  7  8  9  10    6  0.0000        7  0.0000  0.0000       8  0.0000  0.0000  0.0000      9  0.0001  0.0000  0.0000  0.0000     10  0.0001  0.0000  0.0000  0.0000  0.0000     Success Probability 0.20   Exact probabilities for with     0  1  2  3  4  5    1  0.8000  0.2000        2  0.6400  0.3200  0.0400       3  0.5120  0.3840  0.0960  0.0080      4  0.4096  0.4096  0.1536  0.0256  0.0016     5  0.3277  0.4096  0.2048  0.0512  0.0064  0.0003    6  0.2621  0.3932  0.2458  0.0819  0.0154  0.0015    7  0.2097  0.3670  0.2753  0.1147  0.0287  0.0043    8  0.1678  0.3355  0.2936  0.1468  0.0459  0.0092    9  0.1342  0.3020  0.3020  0.1762  0.0661  0.0165    10  0.1074  0.2684  0.3020  0.2013  0.0881  0.0264      Exact probabilities for with     6  7  8  9  10    6  0.0001        7  0.0004  0.0000       8  0.0011  0.0001  0.0000      9  0.0028  0.0003  0.0000  0.0000     10  0.0055  0.0008  0.0001  0.0000  0.0000     Success Probability 0.30   Exact probabilities for with     0  1  2  3  4  5    1  0.7000  0.3000        2  0.4900  0.4200  0.0900       3  0.3430  0.4410  0.1890  0.0270      4  0.2401  0.4116  0.2646  0.0756  0.0081     5  0.1681  0.3601  0.3087  0.1323  0.0283  0.0024    6  0.1176  0.3025  0.3241  0.1852  0.0595  0.0102    7  0.0824  0.2471  0.3177  0.2269  0.0972  0.0250    8  0.0576  0.1977  0.2965  0.2541  0.1361  0.0467    9  0.0404  0.1556  0.2668  0.2668  0.1715  0.0735    10  0.0282  0.1211  0.2335  0.2668  0.2001  0.1029      Exact probabilities for with     6  7  8  9  10    6  0.0007        7  0.0036  0.0002       8  0.0100  0.0012  0.0001      9  0.0210  0.0039  0.0004  0.0000     10  0.0368  0.0090  0.0014  0.0001  0.0000     Success Probability 0.40   Exact probabilities for with     0  1  2  3  4  5    1  0.6000  0.4000        2  0.3600  0.4800  0.1600       3  0.2160  0.4320  0.2880  0.0640      4  0.1296  0.3456  0.3456  0.1536  0.0256     5  0.0778  0.2592  0.3456  0.2304  0.0768  0.0102    6  0.0467  0.1866  0.3110  0.2765  0.1382  0.0369    7  0.0280  0.1306  0.2613  0.2903  0.1935  0.0774    8  0.0168  0.0896  0.2090  0.2787  0.2322  0.1239    9  0.0101  0.0605  0.1612  0.2508  0.2508  0.1672    10  0.0060  0.0403  0.1209  0.2150  0.2508  0.2007      Exact probabilities for with     6  7  8  9  10    6  0.0041        7  0.0172  0.0016       8  0.0413  0.0079  0.0007      9  0.0743  0.0212  0.0035  0.0003     10  0.1115  0.0425  0.0106  0.0016  0.0001     Success Probability 0.50   Exact probabilities for with     0  1  2  3  4  5    1  0.5000  0.5000        2  0.2500  0.5000  0.2500       3  0.1250  0.3750  0.3750  0.1250      4  0.0625  0.2500  0.3750  0.2500  0.0625     5  0.0312  0.1562  0.3125  0.3125  0.1562  0.0312    6  0.0156  0.0938  0.2344  0.3125  0.2344  0.0938    7  0.0078  0.0547  0.1641  0.2734  0.2734  0.1641    8  0.0039  0.0312  0.1094  0.2188  0.2734  0.2188    9  0.0020  0.0176  0.0703  0.1641  0.2461  0.2461    10  0.0010  0.0098  0.0439  0.1172  0.2051  0.2461      Exact probabilities for with     6  7  8  9  10    6  0.0156        7  0.0547  0.0078       8  0.1094  0.0312  0.0039      9  0.1641  0.0703  0.0176  0.0020     10  0.2051  0.1172  0.0439  0.0098  0.0010     "
+},
+{
+  "id": "app-binomial-table-2",
+  "level": "2",
+  "url": "app-binomial-table.html#app-binomial-table-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "binomial table "
 },
 {
   "id": "tbl-binomial-p01-low",
   "level": "2",
-  "url": "sec-binomial-table-p01.html#tbl-binomial-p01-low",
+  "url": "app-binomial-table.html#tbl-binomial-p01-low",
   "type": "Table",
-  "number": "B.1.1",
+  "number": "B.0.1",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.10)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.9000  0.1000        2  0.8100  0.1800  0.0100       3  0.7290  0.2430  0.0270  0.0010      4  0.6561  0.2916  0.0486  0.0036  0.0001     5  0.5905  0.3281  0.0729  0.0081  0.0005  0.0000    6  0.5314  0.3543  0.0984  0.0146  0.0012  0.0001    7  0.4783  0.3720  0.1240  0.0230  0.0026  0.0002    8  0.4305  0.3826  0.1488  0.0331  0.0046  0.0004    9  0.3874  0.3874  0.1722  0.0446  0.0074  0.0008    10  0.3487  0.3874  0.1937  0.0574  0.0112  0.0015    "
 },
 {
   "id": "tbl-binomial-p01-high",
   "level": "2",
-  "url": "sec-binomial-table-p01.html#tbl-binomial-p01-high",
+  "url": "app-binomial-table.html#tbl-binomial-p01-high",
   "type": "Table",
-  "number": "B.1.2",
+  "number": "B.0.2",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.10)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0000        7  0.0000  0.0000       8  0.0000  0.0000  0.0000      9  0.0001  0.0000  0.0000  0.0000     10  0.0001  0.0000  0.0000  0.0000  0.0000    "
 },
 {
-  "id": "sec-binomial-table-p02",
-  "level": "1",
-  "url": "sec-binomial-table-p02.html",
-  "type": "Section",
-  "number": "B.2",
-  "title": "Success Probability 0.20",
-  "body": " Success Probability 0.20   Exact probabilities for with     0  1  2  3  4  5    1  0.8000  0.2000        2  0.6400  0.3200  0.0400       3  0.5120  0.3840  0.0960  0.0080      4  0.4096  0.4096  0.1536  0.0256  0.0016     5  0.3277  0.4096  0.2048  0.0512  0.0064  0.0003    6  0.2621  0.3932  0.2458  0.0819  0.0154  0.0015    7  0.2097  0.3670  0.2753  0.1147  0.0287  0.0043    8  0.1678  0.3355  0.2936  0.1468  0.0459  0.0092    9  0.1342  0.3020  0.3020  0.1762  0.0661  0.0165    10  0.1074  0.2684  0.3020  0.2013  0.0881  0.0264      Exact probabilities for with     6  7  8  9  10    6  0.0001        7  0.0004  0.0000       8  0.0011  0.0001  0.0000      9  0.0028  0.0003  0.0000  0.0000     10  0.0055  0.0008  0.0001  0.0000  0.0000     "
-},
-{
   "id": "tbl-binomial-p02-low",
   "level": "2",
-  "url": "sec-binomial-table-p02.html#tbl-binomial-p02-low",
+  "url": "app-binomial-table.html#tbl-binomial-p02-low",
   "type": "Table",
-  "number": "B.2.1",
+  "number": "B.0.3",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.20)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.8000  0.2000        2  0.6400  0.3200  0.0400       3  0.5120  0.3840  0.0960  0.0080      4  0.4096  0.4096  0.1536  0.0256  0.0016     5  0.3277  0.4096  0.2048  0.0512  0.0064  0.0003    6  0.2621  0.3932  0.2458  0.0819  0.0154  0.0015    7  0.2097  0.3670  0.2753  0.1147  0.0287  0.0043    8  0.1678  0.3355  0.2936  0.1468  0.0459  0.0092    9  0.1342  0.3020  0.3020  0.1762  0.0661  0.0165    10  0.1074  0.2684  0.3020  0.2013  0.0881  0.0264    "
 },
 {
   "id": "tbl-binomial-p02-high",
   "level": "2",
-  "url": "sec-binomial-table-p02.html#tbl-binomial-p02-high",
+  "url": "app-binomial-table.html#tbl-binomial-p02-high",
   "type": "Table",
-  "number": "B.2.2",
+  "number": "B.0.4",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.20)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0001        7  0.0004  0.0000       8  0.0011  0.0001  0.0000      9  0.0028  0.0003  0.0000  0.0000     10  0.0055  0.0008  0.0001  0.0000  0.0000    "
 },
 {
-  "id": "sec-binomial-table-p03",
-  "level": "1",
-  "url": "sec-binomial-table-p03.html",
-  "type": "Section",
-  "number": "B.3",
-  "title": "Success Probability 0.30",
-  "body": " Success Probability 0.30   Exact probabilities for with     0  1  2  3  4  5    1  0.7000  0.3000        2  0.4900  0.4200  0.0900       3  0.3430  0.4410  0.1890  0.0270      4  0.2401  0.4116  0.2646  0.0756  0.0081     5  0.1681  0.3601  0.3087  0.1323  0.0283  0.0024    6  0.1176  0.3025  0.3241  0.1852  0.0595  0.0102    7  0.0824  0.2471  0.3177  0.2269  0.0972  0.0250    8  0.0576  0.1977  0.2965  0.2541  0.1361  0.0467    9  0.0404  0.1556  0.2668  0.2668  0.1715  0.0735    10  0.0282  0.1211  0.2335  0.2668  0.2001  0.1029      Exact probabilities for with     6  7  8  9  10    6  0.0007        7  0.0036  0.0002       8  0.0100  0.0012  0.0001      9  0.0210  0.0039  0.0004  0.0000     10  0.0368  0.0090  0.0014  0.0001  0.0000     "
-},
-{
   "id": "tbl-binomial-p03-low",
   "level": "2",
-  "url": "sec-binomial-table-p03.html#tbl-binomial-p03-low",
+  "url": "app-binomial-table.html#tbl-binomial-p03-low",
   "type": "Table",
-  "number": "B.3.1",
+  "number": "B.0.5",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.30)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.7000  0.3000        2  0.4900  0.4200  0.0900       3  0.3430  0.4410  0.1890  0.0270      4  0.2401  0.4116  0.2646  0.0756  0.0081     5  0.1681  0.3601  0.3087  0.1323  0.0283  0.0024    6  0.1176  0.3025  0.3241  0.1852  0.0595  0.0102    7  0.0824  0.2471  0.3177  0.2269  0.0972  0.0250    8  0.0576  0.1977  0.2965  0.2541  0.1361  0.0467    9  0.0404  0.1556  0.2668  0.2668  0.1715  0.0735    10  0.0282  0.1211  0.2335  0.2668  0.2001  0.1029    "
 },
 {
   "id": "tbl-binomial-p03-high",
   "level": "2",
-  "url": "sec-binomial-table-p03.html#tbl-binomial-p03-high",
+  "url": "app-binomial-table.html#tbl-binomial-p03-high",
   "type": "Table",
-  "number": "B.3.2",
+  "number": "B.0.6",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.30)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0007        7  0.0036  0.0002       8  0.0100  0.0012  0.0001      9  0.0210  0.0039  0.0004  0.0000     10  0.0368  0.0090  0.0014  0.0001  0.0000    "
 },
 {
-  "id": "sec-binomial-table-p04",
-  "level": "1",
-  "url": "sec-binomial-table-p04.html",
-  "type": "Section",
-  "number": "B.4",
-  "title": "Success Probability 0.40",
-  "body": " Success Probability 0.40   Exact probabilities for with     0  1  2  3  4  5    1  0.6000  0.4000        2  0.3600  0.4800  0.1600       3  0.2160  0.4320  0.2880  0.0640      4  0.1296  0.3456  0.3456  0.1536  0.0256     5  0.0778  0.2592  0.3456  0.2304  0.0768  0.0102    6  0.0467  0.1866  0.3110  0.2765  0.1382  0.0369    7  0.0280  0.1306  0.2613  0.2903  0.1935  0.0774    8  0.0168  0.0896  0.2090  0.2787  0.2322  0.1239    9  0.0101  0.0605  0.1612  0.2508  0.2508  0.1672    10  0.0060  0.0403  0.1209  0.2150  0.2508  0.2007      Exact probabilities for with     6  7  8  9  10    6  0.0041        7  0.0172  0.0016       8  0.0413  0.0079  0.0007      9  0.0743  0.0212  0.0035  0.0003     10  0.1115  0.0425  0.0106  0.0016  0.0001     "
-},
-{
   "id": "tbl-binomial-p04-low",
   "level": "2",
-  "url": "sec-binomial-table-p04.html#tbl-binomial-p04-low",
+  "url": "app-binomial-table.html#tbl-binomial-p04-low",
   "type": "Table",
-  "number": "B.4.1",
+  "number": "B.0.7",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.40)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.6000  0.4000        2  0.3600  0.4800  0.1600       3  0.2160  0.4320  0.2880  0.0640      4  0.1296  0.3456  0.3456  0.1536  0.0256     5  0.0778  0.2592  0.3456  0.2304  0.0768  0.0102    6  0.0467  0.1866  0.3110  0.2765  0.1382  0.0369    7  0.0280  0.1306  0.2613  0.2903  0.1935  0.0774    8  0.0168  0.0896  0.2090  0.2787  0.2322  0.1239    9  0.0101  0.0605  0.1612  0.2508  0.2508  0.1672    10  0.0060  0.0403  0.1209  0.2150  0.2508  0.2007    "
 },
 {
   "id": "tbl-binomial-p04-high",
   "level": "2",
-  "url": "sec-binomial-table-p04.html#tbl-binomial-p04-high",
+  "url": "app-binomial-table.html#tbl-binomial-p04-high",
   "type": "Table",
-  "number": "B.4.2",
+  "number": "B.0.8",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.40)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0041        7  0.0172  0.0016       8  0.0413  0.0079  0.0007      9  0.0743  0.0212  0.0035  0.0003     10  0.1115  0.0425  0.0106  0.0016  0.0001    "
 },
 {
-  "id": "sec-binomial-table-p05",
-  "level": "1",
-  "url": "sec-binomial-table-p05.html",
-  "type": "Section",
-  "number": "B.5",
-  "title": "Success Probability 0.50",
-  "body": " Success Probability 0.50   Exact probabilities for with     0  1  2  3  4  5    1  0.5000  0.5000        2  0.2500  0.5000  0.2500       3  0.1250  0.3750  0.3750  0.1250      4  0.0625  0.2500  0.3750  0.2500  0.0625     5  0.0312  0.1562  0.3125  0.3125  0.1562  0.0312    6  0.0156  0.0938  0.2344  0.3125  0.2344  0.0938    7  0.0078  0.0547  0.1641  0.2734  0.2734  0.1641    8  0.0039  0.0312  0.1094  0.2188  0.2734  0.2188    9  0.0020  0.0176  0.0703  0.1641  0.2461  0.2461    10  0.0010  0.0098  0.0439  0.1172  0.2051  0.2461      Exact probabilities for with     6  7  8  9  10    6  0.0156        7  0.0547  0.0078       8  0.1094  0.0312  0.0039      9  0.1641  0.0703  0.0176  0.0020     10  0.2051  0.1172  0.0439  0.0098  0.0010     "
-},
-{
   "id": "tbl-binomial-p05-low",
   "level": "2",
-  "url": "sec-binomial-table-p05.html#tbl-binomial-p05-low",
+  "url": "app-binomial-table.html#tbl-binomial-p05-low",
   "type": "Table",
-  "number": "B.5.1",
+  "number": "B.0.9",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.50)\\)<\/span> with <span class=\"process-math\">\\(k=0,1,2,3,4,5\\)<\/span>",
   "body": " Exact probabilities for with     0  1  2  3  4  5    1  0.5000  0.5000        2  0.2500  0.5000  0.2500       3  0.1250  0.3750  0.3750  0.1250      4  0.0625  0.2500  0.3750  0.2500  0.0625     5  0.0312  0.1562  0.3125  0.3125  0.1562  0.0312    6  0.0156  0.0938  0.2344  0.3125  0.2344  0.0938    7  0.0078  0.0547  0.1641  0.2734  0.2734  0.1641    8  0.0039  0.0312  0.1094  0.2188  0.2734  0.2188    9  0.0020  0.0176  0.0703  0.1641  0.2461  0.2461    10  0.0010  0.0098  0.0439  0.1172  0.2051  0.2461    "
 },
 {
   "id": "tbl-binomial-p05-high",
   "level": "2",
-  "url": "sec-binomial-table-p05.html#tbl-binomial-p05-high",
+  "url": "app-binomial-table.html#tbl-binomial-p05-high",
   "type": "Table",
-  "number": "B.5.2",
+  "number": "B.0.10",
   "title": "Exact probabilities for <span class=\"process-math\">\\(X\\sim B(n,0.50)\\)<\/span> with <span class=\"process-math\">\\(k=6,7,8,9,10\\)<\/span>",
   "body": " Exact probabilities for with     6  7  8  9  10    6  0.0156        7  0.0547  0.0078       8  0.1094  0.0312  0.0039      9  0.1641  0.0703  0.0176  0.0020     10  0.2051  0.1172  0.0439  0.0098  0.0010    "
 },
@@ -5083,7 +4903,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "standard normal random variable appendices standard normal table "
+  "body": "standard normal random variable "
 },
 {
   "id": "tbl-standard-normal-cdf-a",
@@ -5119,7 +4939,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "t distribution appendices t table "
+  "body": "t distribution "
 },
 {
   "id": "tbl-t-critical-values",
@@ -5146,7 +4966,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "chi-square distribution appendices chi-square table "
+  "body": "chi-square distribution "
 },
 {
   "id": "tbl-chi-square-critical-values-left",
@@ -5167,85 +4987,94 @@ var ptx_lunr_docs = [
   "body": " Columns for smaller right-tail areas for the distribution    df         1  2.706  3.841  5.024  6.635  7.879    2  4.605  5.991  7.378  9.210  10.597    3  6.251  7.815  9.348  11.345  12.838    4  7.779  9.488  11.143  13.277  14.860    5  9.236  11.070  12.833  15.086  16.750    6  10.645  12.592  14.449  16.812  18.548    7  12.017  14.067  16.013  18.475  20.278    8  13.362  15.507  17.535  20.090  21.955    9  14.684  16.919  19.023  21.666  23.589    10  15.987  18.307  20.483  23.209  25.188    11  17.275  19.675  21.920  24.725  26.757    12  18.549  21.026  23.337  26.217  28.300    13  19.812  22.362  24.736  27.688  29.819    14  21.064  23.685  26.119  29.141  31.319    15  22.307  24.996  27.488  30.578  32.801    16  23.542  26.296  28.845  32.000  34.267    17  24.769  27.587  30.191  33.409  35.718    18  25.989  28.869  31.526  34.805  37.156    19  27.204  30.144  32.852  36.191  38.582    20  28.412  31.410  34.170  37.566  39.997    21  29.615  32.671  35.479  38.932  41.401    22  30.813  33.924  36.781  40.289  42.796    23  32.007  35.172  38.076  41.638  44.181    24  33.196  36.415  39.364  42.980  45.559    25  34.382  37.652  40.646  44.314  46.928    26  35.563  38.885  41.923  45.642  48.290    27  36.741  40.113  43.195  46.963  49.645    28  37.916  41.337  44.461  48.278  50.993    29  39.087  42.557  45.722  49.588  52.336    30  40.256  43.773  46.979  50.892  53.672    40  51.805  55.758  59.342  63.691  66.766    60  74.397  79.082  83.298  88.379  91.952    80  96.578  101.879  106.629  112.329  116.321    100  118.498  124.342  129.561  135.807  140.169    "
 },
 {
-  "id": "sec-f-alpha-005",
+  "id": "app-f-table",
   "level": "1",
-  "url": "sec-f-alpha-005.html",
-  "type": "Section",
-  "number": "F.1",
-  "title": "Right-Tail Area 0.05",
-  "body": " Right-Tail Area 0.05   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     161.448  199.500  215.707  224.583  230.162     18.513  19.000  19.164  19.247  19.296     10.128  9.552  9.277  9.117  9.013     7.709  6.944  6.591  6.388  6.256     6.608  5.786  5.409  5.192  5.050     5.987  5.143  4.757  4.534  4.387     5.591  4.737  4.347  4.120  3.972     5.318  4.459  4.066  3.838  3.687     5.117  4.256  3.863  3.633  3.482     4.965  4.103  3.708  3.478  3.326     4.747  3.885  3.490  3.259  3.106     4.543  3.682  3.287  3.056  2.901     4.351  3.493  3.098  2.866  2.711     4.260  3.403  3.009  2.776  2.621     4.171  3.316  2.922  2.690  2.534     4.085  3.232  2.839  2.606  2.449     4.001  3.150  2.758  2.525  2.368     3.920  3.072  2.680  2.447  2.290     3.841  2.996  2.605  2.372  2.214      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     233.986  236.768  238.883  240.543  241.882     19.330  19.353  19.371  19.385  19.396     8.941  8.887  8.845  8.812  8.786     6.163  6.094  6.041  5.999  5.964     4.950  4.876  4.818  4.772  4.735     4.284  4.207  4.147  4.099  4.060     3.866  3.787  3.726  3.677  3.637     3.581  3.500  3.438  3.388  3.347     3.374  3.293  3.230  3.179  3.137     3.217  3.135  3.072  3.020  2.978     2.996  2.913  2.849  2.796  2.753     2.790  2.707  2.641  2.588  2.544     2.599  2.514  2.447  2.393  2.348     2.508  2.423  2.355  2.300  2.255     2.421  2.334  2.266  2.211  2.165     2.336  2.249  2.180  2.124  2.077     2.254  2.167  2.097  2.040  1.993     2.175  2.087  2.016  1.959  1.910     2.099  2.010  1.938  1.880  1.831      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     243.906  245.950  248.013  249.052  250.095  251.143  252.196  253.253     19.413  19.429  19.446  19.454  19.462  19.471  19.479  19.487     8.745  8.703  8.660  8.639  8.617  8.594  8.572  8.549     5.912  5.858  5.803  5.774  5.746  5.717  5.688  5.658     4.678  4.619  4.558  4.527  4.496  4.464  4.431  4.398     4.000  3.938  3.874  3.841  3.808  3.774  3.740  3.705     3.575  3.511  3.445  3.410  3.376  3.340  3.304  3.267     3.284  3.218  3.150  3.115  3.079  3.043  3.005  2.967     3.073  3.006  2.936  2.900  2.864  2.826  2.787  2.748     2.913  2.845  2.774  2.737  2.700  2.661  2.621  2.580     2.687  2.617  2.544  2.505  2.466  2.426  2.384  2.341     2.475  2.403  2.328  2.288  2.247  2.204  2.160  2.114     2.278  2.203  2.124  2.082  2.039  1.994  1.946  1.896     2.183  2.108  2.027  1.984  1.939  1.892  1.842  1.790     2.092  2.015  1.932  1.887  1.841  1.792  1.740  1.683     2.003  1.924  1.839  1.793  1.744  1.693  1.637  1.577     1.917  1.836  1.748  1.700  1.649  1.594  1.534  1.467     1.834  1.750  1.659  1.608  1.554  1.495  1.429  1.352     1.752  1.666  1.571  1.517  1.459  1.394  1.318  1.221     "
+  "url": "app-f-table.html",
+  "type": "Appendix",
+  "number": "F",
+  "title": "The F Distribution",
+  "body": " The F Distribution  This appendix gives right-tail critical values for the F distribution appendices F table . Each entry satisfies , where is the numerator degrees of freedom and is the denominator degrees of freedom.  Because the full table is large, the values are split into smaller tables by significance level and numerator degrees of freedom.  Right-Tail Area 0.05   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     161.448  199.500  215.707  224.583  230.162     18.513  19.000  19.164  19.247  19.296     10.128  9.552  9.277  9.117  9.013     7.709  6.944  6.591  6.388  6.256     6.608  5.786  5.409  5.192  5.050     5.987  5.143  4.757  4.534  4.387     5.591  4.737  4.347  4.120  3.972     5.318  4.459  4.066  3.838  3.687     5.117  4.256  3.863  3.633  3.482     4.965  4.103  3.708  3.478  3.326     4.747  3.885  3.490  3.259  3.106     4.543  3.682  3.287  3.056  2.901     4.351  3.493  3.098  2.866  2.711     4.260  3.403  3.009  2.776  2.621     4.171  3.316  2.922  2.690  2.534     4.085  3.232  2.839  2.606  2.449     4.001  3.150  2.758  2.525  2.368     3.920  3.072  2.680  2.447  2.290     3.841  2.996  2.605  2.372  2.214      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     233.986  236.768  238.883  240.543  241.882     19.330  19.353  19.371  19.385  19.396     8.941  8.887  8.845  8.812  8.786     6.163  6.094  6.041  5.999  5.964     4.950  4.876  4.818  4.772  4.735     4.284  4.207  4.147  4.099  4.060     3.866  3.787  3.726  3.677  3.637     3.581  3.500  3.438  3.388  3.347     3.374  3.293  3.230  3.179  3.137     3.217  3.135  3.072  3.020  2.978     2.996  2.913  2.849  2.796  2.753     2.790  2.707  2.641  2.588  2.544     2.599  2.514  2.447  2.393  2.348     2.508  2.423  2.355  2.300  2.255     2.421  2.334  2.266  2.211  2.165     2.336  2.249  2.180  2.124  2.077     2.254  2.167  2.097  2.040  1.993     2.175  2.087  2.016  1.959  1.910     2.099  2.010  1.938  1.880  1.831      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     243.906  245.950  248.013  249.052  250.095  251.143  252.196  253.253     19.413  19.429  19.446  19.454  19.462  19.471  19.479  19.487     8.745  8.703  8.660  8.639  8.617  8.594  8.572  8.549     5.912  5.858  5.803  5.774  5.746  5.717  5.688  5.658     4.678  4.619  4.558  4.527  4.496  4.464  4.431  4.398     4.000  3.938  3.874  3.841  3.808  3.774  3.740  3.705     3.575  3.511  3.445  3.410  3.376  3.340  3.304  3.267     3.284  3.218  3.150  3.115  3.079  3.043  3.005  2.967     3.073  3.006  2.936  2.900  2.864  2.826  2.787  2.748     2.913  2.845  2.774  2.737  2.700  2.661  2.621  2.580     2.687  2.617  2.544  2.505  2.466  2.426  2.384  2.341     2.475  2.403  2.328  2.288  2.247  2.204  2.160  2.114     2.278  2.203  2.124  2.082  2.039  1.994  1.946  1.896     2.183  2.108  2.027  1.984  1.939  1.892  1.842  1.790     2.092  2.015  1.932  1.887  1.841  1.792  1.740  1.683     2.003  1.924  1.839  1.793  1.744  1.693  1.637  1.577     1.917  1.836  1.748  1.700  1.649  1.594  1.534  1.467     1.834  1.750  1.659  1.608  1.554  1.495  1.429  1.352     1.752  1.666  1.571  1.517  1.459  1.394  1.318  1.221     Right-Tail Area 0.01   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     4052.181  4999.500  5403.352  5624.583  5763.650     98.503  99.000  99.166  99.249  99.299     34.116  30.817  29.457  28.710  28.237     21.198  18.000  16.694  15.977  15.522     16.258  13.274  12.060  11.392  10.967     13.745  10.925  9.780  9.148  8.746     12.246  9.547  8.451  7.847  7.460     11.259  8.649  7.591  7.006  6.632     10.561  8.022  6.992  6.422  6.057     10.044  7.559  6.552  5.994  5.636     9.330  6.927  5.953  5.412  5.064     8.683  6.359  5.417  4.893  4.556     8.096  5.849  4.938  4.431  4.103     7.823  5.614  4.718  4.218  3.895     7.562  5.390  4.510  4.018  3.699     7.314  5.179  4.313  3.828  3.514     7.077  4.977  4.126  3.649  3.339     6.851  4.787  3.949  3.480  3.174     6.635  4.605  3.782  3.319  3.017      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     5858.986  5928.356  5981.070  6022.473  6055.847     99.333  99.356  99.374  99.388  99.399     27.911  27.672  27.489  27.345  27.229     15.207  14.976  14.799  14.659  14.546     10.672  10.456  10.289  10.158  10.051     8.466  8.260  8.102  7.976  7.874     7.191  6.993  6.840  6.719  6.620     6.371  6.178  6.029  5.911  5.814     5.802  5.613  5.467  5.351  5.257     5.386  5.200  5.057  4.942  4.849     4.821  4.640  4.499  4.388  4.296     4.318  4.142  4.004  3.895  3.805     3.871  3.699  3.564  3.457  3.368     3.667  3.496  3.363  3.256  3.168     3.473  3.304  3.173  3.067  2.979     3.291  3.124  2.993  2.888  2.801     3.119  2.953  2.823  2.718  2.632     2.956  2.792  2.663  2.559  2.472     2.802  2.639  2.511  2.407  2.321      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     6106.321  6157.285  6208.730  6234.631  6260.649  6286.782  6313.030  6339.391     99.416  99.433  99.449  99.458  99.466  99.474  99.482  99.491     27.052  26.872  26.690  26.598  26.505  26.411  26.316  26.221     14.374  14.198  14.020  13.929  13.838  13.745  13.652  13.558     9.888  9.722  9.553  9.466  9.379  9.291  9.202  9.112     7.718  7.559  7.396  7.313  7.229  7.143  7.057  6.969     6.469  6.314  6.155  6.074  5.992  5.908  5.824  5.737     5.667  5.515  5.359  5.279  5.198  5.116  5.032  4.946     5.111  4.962  4.808  4.729  4.649  4.567  4.483  4.398     4.706  4.558  4.405  4.327  4.247  4.165  4.082  3.996     4.155  4.010  3.858  3.780  3.701  3.619  3.535  3.449     3.666  3.522  3.372  3.294  3.214  3.132  3.047  2.959     3.231  3.088  2.938  2.859  2.778  2.695  2.608  2.517     3.032  2.889  2.738  2.659  2.577  2.492  2.403  2.310     2.843  2.700  2.549  2.469  2.386  2.299  2.208  2.111     2.665  2.522  2.369  2.288  2.203  2.114  2.019  1.917     2.496  2.352  2.198  2.115  2.028  1.936  1.836  1.726     2.336  2.192  2.035  1.950  1.860  1.763  1.656  1.533     2.185  2.039  1.878  1.791  1.696  1.592  1.473  1.325     "
+},
+{
+  "id": "app-f-table-2",
+  "level": "2",
+  "url": "app-f-table.html#app-f-table-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "F distribution "
 },
 {
   "id": "tbl-f-alpha-005-g1a",
   "level": "2",
-  "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g1a",
+  "url": "app-f-table.html#tbl-f-alpha-005-g1a",
   "type": "Table",
-  "number": "F.1.1",
+  "number": "F.0.1",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 1, 2, 3, 4, 5",
   "body": " Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     161.448  199.500  215.707  224.583  230.162     18.513  19.000  19.164  19.247  19.296     10.128  9.552  9.277  9.117  9.013     7.709  6.944  6.591  6.388  6.256     6.608  5.786  5.409  5.192  5.050     5.987  5.143  4.757  4.534  4.387     5.591  4.737  4.347  4.120  3.972     5.318  4.459  4.066  3.838  3.687     5.117  4.256  3.863  3.633  3.482     4.965  4.103  3.708  3.478  3.326     4.747  3.885  3.490  3.259  3.106     4.543  3.682  3.287  3.056  2.901     4.351  3.493  3.098  2.866  2.711     4.260  3.403  3.009  2.776  2.621     4.171  3.316  2.922  2.690  2.534     4.085  3.232  2.839  2.606  2.449     4.001  3.150  2.758  2.525  2.368     3.920  3.072  2.680  2.447  2.290     3.841  2.996  2.605  2.372  2.214    "
 },
 {
   "id": "tbl-f-alpha-005-g1b",
   "level": "2",
-  "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g1b",
+  "url": "app-f-table.html#tbl-f-alpha-005-g1b",
   "type": "Table",
-  "number": "F.1.2",
+  "number": "F.0.2",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 6, 7, 8, 9, 10",
   "body": " Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     233.986  236.768  238.883  240.543  241.882     19.330  19.353  19.371  19.385  19.396     8.941  8.887  8.845  8.812  8.786     6.163  6.094  6.041  5.999  5.964     4.950  4.876  4.818  4.772  4.735     4.284  4.207  4.147  4.099  4.060     3.866  3.787  3.726  3.677  3.637     3.581  3.500  3.438  3.388  3.347     3.374  3.293  3.230  3.179  3.137     3.217  3.135  3.072  3.020  2.978     2.996  2.913  2.849  2.796  2.753     2.790  2.707  2.641  2.588  2.544     2.599  2.514  2.447  2.393  2.348     2.508  2.423  2.355  2.300  2.255     2.421  2.334  2.266  2.211  2.165     2.336  2.249  2.180  2.124  2.077     2.254  2.167  2.097  2.040  1.993     2.175  2.087  2.016  1.959  1.910     2.099  2.010  1.938  1.880  1.831    "
 },
 {
   "id": "tbl-f-alpha-005-g2",
   "level": "2",
-  "url": "sec-f-alpha-005.html#tbl-f-alpha-005-g2",
+  "url": "app-f-table.html#tbl-f-alpha-005-g2",
   "type": "Table",
-  "number": "F.1.3",
+  "number": "F.0.3",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.05\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 12, 15, 20, 24, 30, 40, 60, 120",
   "body": " Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     243.906  245.950  248.013  249.052  250.095  251.143  252.196  253.253     19.413  19.429  19.446  19.454  19.462  19.471  19.479  19.487     8.745  8.703  8.660  8.639  8.617  8.594  8.572  8.549     5.912  5.858  5.803  5.774  5.746  5.717  5.688  5.658     4.678  4.619  4.558  4.527  4.496  4.464  4.431  4.398     4.000  3.938  3.874  3.841  3.808  3.774  3.740  3.705     3.575  3.511  3.445  3.410  3.376  3.340  3.304  3.267     3.284  3.218  3.150  3.115  3.079  3.043  3.005  2.967     3.073  3.006  2.936  2.900  2.864  2.826  2.787  2.748     2.913  2.845  2.774  2.737  2.700  2.661  2.621  2.580     2.687  2.617  2.544  2.505  2.466  2.426  2.384  2.341     2.475  2.403  2.328  2.288  2.247  2.204  2.160  2.114     2.278  2.203  2.124  2.082  2.039  1.994  1.946  1.896     2.183  2.108  2.027  1.984  1.939  1.892  1.842  1.790     2.092  2.015  1.932  1.887  1.841  1.792  1.740  1.683     2.003  1.924  1.839  1.793  1.744  1.693  1.637  1.577     1.917  1.836  1.748  1.700  1.649  1.594  1.534  1.467     1.834  1.750  1.659  1.608  1.554  1.495  1.429  1.352     1.752  1.666  1.571  1.517  1.459  1.394  1.318  1.221    "
 },
 {
-  "id": "sec-f-alpha-001",
-  "level": "1",
-  "url": "sec-f-alpha-001.html",
-  "type": "Section",
-  "number": "F.2",
-  "title": "Right-Tail Area 0.01",
-  "body": " Right-Tail Area 0.01   Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     4052.181  4999.500  5403.352  5624.583  5763.650     98.503  99.000  99.166  99.249  99.299     34.116  30.817  29.457  28.710  28.237     21.198  18.000  16.694  15.977  15.522     16.258  13.274  12.060  11.392  10.967     13.745  10.925  9.780  9.148  8.746     12.246  9.547  8.451  7.847  7.460     11.259  8.649  7.591  7.006  6.632     10.561  8.022  6.992  6.422  6.057     10.044  7.559  6.552  5.994  5.636     9.330  6.927  5.953  5.412  5.064     8.683  6.359  5.417  4.893  4.556     8.096  5.849  4.938  4.431  4.103     7.823  5.614  4.718  4.218  3.895     7.562  5.390  4.510  4.018  3.699     7.314  5.179  4.313  3.828  3.514     7.077  4.977  4.126  3.649  3.339     6.851  4.787  3.949  3.480  3.174     6.635  4.605  3.782  3.319  3.017      Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     5858.986  5928.356  5981.070  6022.473  6055.847     99.333  99.356  99.374  99.388  99.399     27.911  27.672  27.489  27.345  27.229     15.207  14.976  14.799  14.659  14.546     10.672  10.456  10.289  10.158  10.051     8.466  8.260  8.102  7.976  7.874     7.191  6.993  6.840  6.719  6.620     6.371  6.178  6.029  5.911  5.814     5.802  5.613  5.467  5.351  5.257     5.386  5.200  5.057  4.942  4.849     4.821  4.640  4.499  4.388  4.296     4.318  4.142  4.004  3.895  3.805     3.871  3.699  3.564  3.457  3.368     3.667  3.496  3.363  3.256  3.168     3.473  3.304  3.173  3.067  2.979     3.291  3.124  2.993  2.888  2.801     3.119  2.953  2.823  2.718  2.632     2.956  2.792  2.663  2.559  2.472     2.802  2.639  2.511  2.407  2.321      Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     6106.321  6157.285  6208.730  6234.631  6260.649  6286.782  6313.030  6339.391     99.416  99.433  99.449  99.458  99.466  99.474  99.482  99.491     27.052  26.872  26.690  26.598  26.505  26.411  26.316  26.221     14.374  14.198  14.020  13.929  13.838  13.745  13.652  13.558     9.888  9.722  9.553  9.466  9.379  9.291  9.202  9.112     7.718  7.559  7.396  7.313  7.229  7.143  7.057  6.969     6.469  6.314  6.155  6.074  5.992  5.908  5.824  5.737     5.667  5.515  5.359  5.279  5.198  5.116  5.032  4.946     5.111  4.962  4.808  4.729  4.649  4.567  4.483  4.398     4.706  4.558  4.405  4.327  4.247  4.165  4.082  3.996     4.155  4.010  3.858  3.780  3.701  3.619  3.535  3.449     3.666  3.522  3.372  3.294  3.214  3.132  3.047  2.959     3.231  3.088  2.938  2.859  2.778  2.695  2.608  2.517     3.032  2.889  2.738  2.659  2.577  2.492  2.403  2.310     2.843  2.700  2.549  2.469  2.386  2.299  2.208  2.111     2.665  2.522  2.369  2.288  2.203  2.114  2.019  1.917     2.496  2.352  2.198  2.115  2.028  1.936  1.836  1.726     2.336  2.192  2.035  1.950  1.860  1.763  1.656  1.533     2.185  2.039  1.878  1.791  1.696  1.592  1.473  1.325     "
-},
-{
   "id": "tbl-f-alpha-001-g1a",
   "level": "2",
-  "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g1a",
+  "url": "app-f-table.html#tbl-f-alpha-001-g1a",
   "type": "Table",
-  "number": "F.2.1",
+  "number": "F.0.4",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 1, 2, 3, 4, 5",
   "body": " Critical values for with numerator degrees of freedom equal to 1, 2, 3, 4, 5     1  2  3  4  5     4052.181  4999.500  5403.352  5624.583  5763.650     98.503  99.000  99.166  99.249  99.299     34.116  30.817  29.457  28.710  28.237     21.198  18.000  16.694  15.977  15.522     16.258  13.274  12.060  11.392  10.967     13.745  10.925  9.780  9.148  8.746     12.246  9.547  8.451  7.847  7.460     11.259  8.649  7.591  7.006  6.632     10.561  8.022  6.992  6.422  6.057     10.044  7.559  6.552  5.994  5.636     9.330  6.927  5.953  5.412  5.064     8.683  6.359  5.417  4.893  4.556     8.096  5.849  4.938  4.431  4.103     7.823  5.614  4.718  4.218  3.895     7.562  5.390  4.510  4.018  3.699     7.314  5.179  4.313  3.828  3.514     7.077  4.977  4.126  3.649  3.339     6.851  4.787  3.949  3.480  3.174     6.635  4.605  3.782  3.319  3.017    "
 },
 {
   "id": "tbl-f-alpha-001-g1b",
   "level": "2",
-  "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g1b",
+  "url": "app-f-table.html#tbl-f-alpha-001-g1b",
   "type": "Table",
-  "number": "F.2.2",
+  "number": "F.0.5",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 6, 7, 8, 9, 10",
   "body": " Critical values for with numerator degrees of freedom equal to 6, 7, 8, 9, 10     6  7  8  9  10     5858.986  5928.356  5981.070  6022.473  6055.847     99.333  99.356  99.374  99.388  99.399     27.911  27.672  27.489  27.345  27.229     15.207  14.976  14.799  14.659  14.546     10.672  10.456  10.289  10.158  10.051     8.466  8.260  8.102  7.976  7.874     7.191  6.993  6.840  6.719  6.620     6.371  6.178  6.029  5.911  5.814     5.802  5.613  5.467  5.351  5.257     5.386  5.200  5.057  4.942  4.849     4.821  4.640  4.499  4.388  4.296     4.318  4.142  4.004  3.895  3.805     3.871  3.699  3.564  3.457  3.368     3.667  3.496  3.363  3.256  3.168     3.473  3.304  3.173  3.067  2.979     3.291  3.124  2.993  2.888  2.801     3.119  2.953  2.823  2.718  2.632     2.956  2.792  2.663  2.559  2.472     2.802  2.639  2.511  2.407  2.321    "
 },
 {
   "id": "tbl-f-alpha-001-g2",
   "level": "2",
-  "url": "sec-f-alpha-001.html#tbl-f-alpha-001-g2",
+  "url": "app-f-table.html#tbl-f-alpha-001-g2",
   "type": "Table",
-  "number": "F.2.3",
+  "number": "F.0.6",
   "title": "Critical values for <span class=\"process-math\">\\(\\alpha=0.01\\)<\/span> with numerator degrees of freedom <span class=\"process-math\">\\(d_1\\)<\/span> equal to 12, 15, 20, 24, 30, 40, 60, 120",
   "body": " Critical values for with numerator degrees of freedom equal to 12, 15, 20, 24, 30, 40, 60, 120     12  15  20  24  30  40  60  120     6106.321  6157.285  6208.730  6234.631  6260.649  6286.782  6313.030  6339.391     99.416  99.433  99.449  99.458  99.466  99.474  99.482  99.491     27.052  26.872  26.690  26.598  26.505  26.411  26.316  26.221     14.374  14.198  14.020  13.929  13.838  13.745  13.652  13.558     9.888  9.722  9.553  9.466  9.379  9.291  9.202  9.112     7.718  7.559  7.396  7.313  7.229  7.143  7.057  6.969     6.469  6.314  6.155  6.074  5.992  5.908  5.824  5.737     5.667  5.515  5.359  5.279  5.198  5.116  5.032  4.946     5.111  4.962  4.808  4.729  4.649  4.567  4.483  4.398     4.706  4.558  4.405  4.327  4.247  4.165  4.082  3.996     4.155  4.010  3.858  3.780  3.701  3.619  3.535  3.449     3.666  3.522  3.372  3.294  3.214  3.132  3.047  2.959     3.231  3.088  2.938  2.859  2.778  2.695  2.608  2.517     3.032  2.889  2.738  2.659  2.577  2.492  2.403  2.310     2.843  2.700  2.549  2.469  2.386  2.299  2.208  2.111     2.665  2.522  2.369  2.288  2.203  2.114  2.019  1.917     2.496  2.352  2.198  2.115  2.028  1.936  1.836  1.726     2.336  2.192  2.035  1.950  1.860  1.763  1.656  1.533     2.185  2.039  1.878  1.791  1.696  1.592  1.473  1.325    "
+},
+{
+  "id": "backmatter-8",
+  "level": "1",
+  "url": "backmatter-8.html",
+  "type": "Index",
+  "number": "",
+  "title": "Index",
+  "body": " Index   "
 },
 {
   "id": "backmatter-9",
   "level": "1",
   "url": "backmatter-9.html",
-  "type": "Index",
+  "type": "Colophon",
   "number": "",
-  "title": "Index",
-  "body": " Index   "
+  "title": "Colophon",
+  "body": " This book was authored in PreTeXt and developed collaboratively over time.  The HTML version uses the denver theme.  "
 }
 ]
 

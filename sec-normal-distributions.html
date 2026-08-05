@@ -25,6 +25,7 @@ hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.47"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.47"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +58,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.14';
+eBookConfig.runestone_version = '8.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.ed2cce180827a7ad.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.18fa7ea1d9f376c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -74,7 +75,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
 <div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
 <input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
@@ -84,7 +85,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -124,59 +135,70 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-overview.html" class="internal"><span class="codenumber">0</span> <span class="title">What Statistics Is About</span></a></div>
-<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch0-exercises.html" class="internal"><span class="codenumber">0</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-overview-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch0-exercises.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-data-types.html" class="internal"><span class="codenumber">1</span> <span class="title">Data Types</span></a></div>
 <ul id="ptx-toc-group-ch-data-types" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-data-types-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classifying-data.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Classifying Data</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-levels-of-measurement.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Levels of Measurement</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-data-types-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-organizing-data.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Displays</span></a></div>
 <ul id="ptx-toc-group-ch-organizing-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-organizing-data-3.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-frequency-tables.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Frequency Tables and Relative Frequency</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphs-for-data.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Graphs for Displaying Data</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-organizing-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-central-tendency.html" class="internal"><span class="codenumber">3</span> <span class="title">Central Tendency</span></a></div>
 <ul id="ptx-toc-group-ch-central-tendency" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-central-tendency-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mean-median-mode.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Mean, Median, and Mode</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-center-from-tables-and-shape.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Center from Frequency Tables and the Shape of a Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-central-tendency-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-spread-of-data.html" class="internal"><span class="codenumber">4</span> <span class="title">Spread of Data</span></a></div>
 <ul id="ptx-toc-group-ch-spread-of-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-spread-of-data-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-quartiles-iqr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Quartiles and the Interquartile Range</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-boxplots-outliers.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Five-Number Summary, Boxplots, and Outliers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-variance-sd-zscores.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Variance, Standard Deviation, and z-Scores</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-spread-of-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-linear-regression.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Regression</span></a></div>
 <ul id="ptx-toc-group-ch-linear-regression" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-linear-regression-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scatterplots-correlation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Scatterplots and Correlation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regression-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Regression Lines and Prediction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-linear-regression-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-probability.html" class="internal"><span class="codenumber">6</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-ch-probability" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-probability-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
 <li class="toc-item toc-section">
@@ -187,51 +209,61 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-contingency-tables" class="internal"><span class="title">Contingency Tables</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-probability-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-random-variables.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete Random Variables</span></a></div>
 <ul id="ptx-toc-group-ch-random-variables" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-random-variables-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-random-variables-pmf.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Random Variables, CDFs, Expectation, and Variance</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cdf-expected-value.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Properties of Expectation and Variance</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-random-variables-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-binomial-distribution.html" class="internal"><span class="codenumber">8</span> <span class="title">Binomial Distributions</span></a></div>
 <ul id="ptx-toc-group-ch-binomial-distribution" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-binomial-distribution-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bernoulli-binomial.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Bernoulli Trials and Binomial Coefficients</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-pdf-cdf.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Binomial Probabilities and the Cumulative Distribution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-normal-approximation.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Binomial Approximation of Normal Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-binomial-distribution-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-normal-distributions.html" class="internal"><span class="codenumber">9</span> <span class="title">Normal Distributions</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-normal-distributions">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-normal-distributions-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-continuous-uniform.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Continuous Random Variables and the Uniform Model</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-normal-distributions.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Normal Distributions and Z-Scores</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-z-alpha-notation.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The z-Alpha Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-probabilities-percentiles.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Normal Probabilities and Percentiles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-normal-distributions-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-confidence-intervals.html" class="internal"><span class="codenumber">10</span> <span class="title">Confidence Intervals</span></a></div>
 <ul id="ptx-toc-group-ch-confidence-intervals" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-confidence-intervals-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-confidence-intervals-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-hypothesis-testing.html" class="internal"><span class="codenumber">11</span> <span class="title">Hypothesis Testing</span></a></div>
 <ul id="ptx-toc-group-ch-hypothesis-testing" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-hypothesis-testing-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
@@ -254,61 +286,41 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chi-square-independence-test.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Chi-Square Test of Independence</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-hypothesis-testing-12.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-analysis-of-variance.html" class="internal"><span class="codenumber">12</span> <span class="title">The Analysis of Variance</span></a></div>
 <ul id="ptx-toc-group-ch-analysis-of-variance" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-analysis-of-variance-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-variance-components.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Components of Variation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-testing-several-means.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Testing Several Means</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-analysis-of-variance-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-nonparametric-tests.html" class="internal"><span class="codenumber">13</span> <span class="title">Non-Parametric Tests</span></a></div>
 <ul id="ptx-toc-group-ch-nonparametric-tests" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-nonparametric-tests-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sign-test.html" class="internal"><span class="codenumber">13.1</span> <span class="title">The Sign Test</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-spearman-rank-correlation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Spearman Test of Rank Correlation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-nonparametric-tests-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div>
-<ul id="ptx-toc-group-app-sampling-practice" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-why.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Why Sampling Matters</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-simple-random.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Simple Random Samples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-common-methods.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Other Common Sampling Methods</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-experiments.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Sampling and Experimental Design</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-choosing.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Choosing a Sampling Method</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="app-sampling-practice-exercises.html" class="internal"><span class="codenumber">A.6</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div>
-<ul id="ptx-toc-group-app-binomial-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p01.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Success Probability 0.10</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p02.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Success Probability 0.20</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p03.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Success Probability 0.30</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p04.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Success Probability 0.40</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p05.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Success Probability 0.50</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-normal-table.html" class="internal"><span class="codenumber">C</span> <span class="title">Normal Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-t-table.html" class="internal"><span class="codenumber">D</span> <span class="title">The t Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-chi-square-table.html" class="internal"><span class="codenumber">E</span> <span class="title">The Chi-Square Distribution</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div>
-<ul id="ptx-toc-group-app-f-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-005.html" class="internal"><span class="codenumber">F.1</span> <span class="title">Right-Tail Area 0.05</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-001.html" class="internal"><span class="codenumber">F.2</span> <span class="title">Right-Tail Area 0.01</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -321,24 +333,30 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sec-normal-distributions-3">A normal distribution is determined by two numbers:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-normal-distributions-4">
-<li id="sec-normal-distributions-4-1">
-<div class="para" id="sec-normal-distributions-4-1-1">the mean <span class="process-math">\(\mu\text{,}\)</span> which tells us where the center is, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-normal-distributions-4">
+<ul class="disc" id="sec-normal-distributions-4-1">
+<li id="sec-normal-distributions-4-1-1">
+<div class="para" id="sec-normal-distributions-4-1-1-1">the mean <span class="process-math">\(\mu\text{,}\)</span> which tells us where the center is, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-normal-distributions-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-normal-distributions-4-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-normal-distributions-4-2">
-<div class="para" id="sec-normal-distributions-4-2-1">the standard deviation <span class="process-math">\(\sigma\text{,}\)</span> which tells us how spread out the distribution is.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-normal-distributions-4-1-2">
+<div class="para" id="sec-normal-distributions-4-1-2-1">the standard deviation <span class="process-math">\(\sigma\text{,}\)</span> which tells us how spread out the distribution is.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-normal-distributions-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-normal-distributions-4-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-normal-distributions-5">If <span class="process-math">\(X\)</span> has a normal distribution with mean <span class="process-math">\(\mu\)</span> and standard deviation <span class="process-math">\(\sigma\text{,}\)</span> we write<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-normal-mu-sigma.html" id="sec-normal-distributions-6">
+<div class="para logical" id="sec-normal-distributions-6">
+<div class="displaymath process-math" id="sec-normal-distributions-6-1">
 \begin{equation*}
 X\sim N(\mu,\sigma).
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-women-height-normal" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Normal Model for Heights.</span>
@@ -346,10 +364,13 @@ X\sim N(\mu,\sigma).
 <article class="example example-like knowl__content">
 <div class="para" id="ex-women-height-normal-2">Suppose the heights of adult women in a population are modeled by a normal distribution with mean 64 inches and standard deviation 2.8 inches. Then<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-women-height-normal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-women-height-normal-3">
+<div class="para logical" id="ex-women-height-normal-3">
+<div class="displaymath process-math" id="ex-women-height-normal-3-1">
 \begin{equation*}
 X\sim N(64,2.8).
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-women-height-normal-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-women-height-normal-4">This says the distribution is centered at 64 inches, and typical distances from the center are about 2.8 inches.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-women-height-normal-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -357,7 +378,12 @@ X\sim N(64,2.8).
 </article></details>
 <div class="para" id="sec-normal-distributions-8">One of the nicest features of the normal curve is its symmetry. Values equally far above and below the mean have the same density, so the left half of the curve is a mirror image of the right half. The mean <span class="process-math">\(\mu\)</span> sits right in the middle.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-normal-mu-sigma"><div class="image-box" style="width: 76%; margin-left: 12%; margin-right: 12%;"><img src="generated/latex-image/fig-normal-mu-sigma-2.svg" role="img" class="contained" alt="A bell-shaped normal curve with a dotted vertical line through the center labeled mu. The points of inflection are marked on both sides, and the horizontal distance from mu to the right inflection point is labeled sigma.The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point."></div>
+<figure class="figure figure-like" id="fig-normal-mu-sigma"><div class="image-box" style="width: 76%; margin-left: 12%; margin-right: 12%;">
+<img src="generated/latex-image/fig-normal-mu-sigma-2.svg" role="img" class="contained" alt="A bell-shaped normal curve with a dotted vertical line through the center labeled mu."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-normal-mu-sigma-2-description">
+<div class="para" id="fig-normal-mu-sigma-2-2-1">The graphic shows a normal density curve symmetric about a central dotted vertical line labeled mu. Small dots mark the two inflection points, one to the left and one to the right of the center. A double arrow runs horizontally from the center line to the right inflection point, and that distance is labeled sigma. The picture emphasizes that the curve is symmetric and that one standard deviation is the width from the center to an inflection point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-normal-mu-sigma-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The mean and standard deviation on a normal curve<div class="autopermalink" aria-hidden="true" data-description="Figure 9.2.2"><a tabindex="-1" href="#fig-normal-mu-sigma" title="Copy heading and permalink for Figure 9.2.2" aria-label="Copy heading and permalink for Figure 9.2.2">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="sec-normal-distributions-10">In <a href="sec-normal-distributions.html#fig-normal-mu-sigma" class="xref" data-knowl="./knowl/xref/fig-normal-mu-sigma.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.2.2">Figure 9.2.2</a>, the dotted line marks the mean <span class="process-math">\(\mu\text{.}\)</span> The curve changes concavity at the inflection points, and each one is exactly one standard deviation from the center. So the horizontal distance from <span class="process-math">\(\mu\)</span> to either inflection point is <span class="process-math">\(\sigma\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -366,32 +392,46 @@ X\sim N(64,2.8).
 </div>
 <div class="para" id="sec-normal-distributions-12">A useful standardization is the <dfn class="terminology">z-score</dfn><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-normal-mu-sigma.html" id="sec-normal-distributions-13">
+<div class="para logical" id="sec-normal-distributions-13">
+<div class="displaymath process-math" id="sec-normal-distributions-13-1">
 \begin{equation*}
 z=\frac{x-\mu}{\sigma}.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-normal-distributions-14">The z-score tells us how many standard deviations a value <span class="process-math">\(x\)</span> is above or below the mean. A positive z-score means the value is above the mean. A negative z-score means it is below the mean.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-normal-distributions-15">If <span class="process-math">\(X\sim N(\mu,\sigma)\text{,}\)</span> then the transformation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-normal-mu-sigma.html" id="sec-normal-distributions-16">
+<div class="para logical" id="sec-normal-distributions-16">
+<div class="displaymath process-math" id="sec-normal-distributions-16-1">
 \begin{equation*}
 Z=\frac{X-\mu}{\sigma}
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-normal-distributions-17">recenters the distribution at 0 and rescales the horizontal axis so that one standard deviation becomes length 1. In that way, the normal curve for <span class="process-math">\(X\)</span> is converted into the standard normal curve for <span class="process-math">\(Z\text{.}\)</span> The important point is that probabilities are preserved under this relabeling of the axis. In particular, for any cutoff value <span class="process-math">\(a\text{,}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-normal-mu-sigma.html" id="sec-normal-distributions-18">
+<div class="para logical" id="sec-normal-distributions-18">
+<div class="displaymath process-math" id="sec-normal-distributions-18-1">
 \begin{equation*}
 P(X&lt;a)=P(Z&lt;z(a)),
 \qquad\text{where}\qquad
 z(a)=\frac{a-\mu}{\sigma}.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-normal-distributions-19">So the area to the left of <span class="process-math">\(a\)</span> under the curve for <span class="process-math">\(X\)</span> is exactly the same as the area to the left of the corresponding z-score under the standard normal curve.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-standardization-area"><div class="image-box" style="width: 94%; margin-left: 3%; margin-right: 3%;"><img src="generated/latex-image/fig-standardization-area-2.svg" role="img" class="contained" alt="Two bell-shaped curves shown side by side. On the left, a normal curve for X has the region to the left of a shaded. On the right, the standard normal curve for Z has the region to the left of z(a) shaded. The shaded areas represent the same probability.The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area."></div>
+<figure class="figure figure-like" id="fig-standardization-area"><div class="image-box" style="width: 94%; margin-left: 3%; margin-right: 3%;">
+<img src="generated/latex-image/fig-standardization-area-2.svg" role="img" class="contained" alt="Two bell-shaped curves shown side by side."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-standardization-area-2-description">
+<div class="para" id="fig-standardization-area-2-2-1">The figure has two panels. The left panel shows a normal density curve labeled X distributed as N(mu, sigma), with a dashed line at the mean mu and another dashed line at a point labeled a to the right of the mean. The region under the curve to the left of a is shaded. The right panel shows the standard normal density curve labeled Z distributed as N(0,1), with dashed lines at 0 and at the point z(a). The region under the curve to the left of z(a) is shaded in the same way. The picture indicates that standardization changes the horizontal scale but preserves the probability area.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-standardization-area-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Standardizing a normal random variable preserves left-tail area<div class="autopermalink" aria-hidden="true" data-description="Figure 9.2.3"><a tabindex="-1" href="#fig-standardization-area" title="Copy heading and permalink for Figure 9.2.3" aria-label="Copy heading and permalink for Figure 9.2.3">🔗</a></div></figcaption>
 </figure>
 <details id="ex-zscore-height" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
@@ -400,10 +440,13 @@ z(a)=\frac{a-\mu}{\sigma}.
 <article class="example example-like knowl__content">
 <div class="para" id="ex-zscore-height-2">Using <span class="process-math">\(X\sim N(64,2.8)\text{,}\)</span> the z-score of 62 inches is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-zscore-height-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-zscore-height-3">
+<div class="para logical" id="ex-zscore-height-3">
+<div class="displaymath process-math" id="ex-zscore-height-3-1">
 \begin{equation*}
 z=\frac{62-64}{2.8}\approx -0.714.
 \end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-zscore-height-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-zscore-height-4">So a height of 62 inches is about 0.71 standard deviations below the mean.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-zscore-height-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -412,7 +455,7 @@ z=\frac{62-64}{2.8}\approx -0.714.
 <div class="para" id="sec-normal-distributions-22">This matters because probability tables and technology are usually organized around the standard normal distribution.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-normal-distributions-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="act-ch9-height-detective"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Height Detective.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Height Detective.</span>
 </h2>
 <div class="introduction" id="act-ch9-height-detective-2">
 <div class="para" id="act-ch9-height-detective-2-1">Compare heights using z-scores instead of raw inches.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-height-detective-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -421,21 +464,21 @@ z=\frac{62-64}{2.8}\approx -0.714.
 <article class="task exercise-like" id="act-ch9-height-detective-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch9-height-detective-3-1-1">Using <span class="process-math">\(X\sim N(64,2.8)\text{,}\)</span> find the z-scores for 61 inches, 67 inches, and 70 inches.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-height-detective-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.1.a"><a tabindex="-1" href="#act-ch9-height-detective-3" title="Copy heading and permalink for Task 9.2.1.a" aria-label="Copy heading and permalink for Task 9.2.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.5.a"><a tabindex="-1" href="#act-ch9-height-detective-3" title="Copy heading and permalink for Task 9.2.5.a" aria-label="Copy heading and permalink for Task 9.2.5.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch9-height-detective-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch9-height-detective-4-1-1">Which of those three heights is most unusual relative to the model?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-height-detective-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.1.b"><a tabindex="-1" href="#act-ch9-height-detective-4" title="Copy heading and permalink for Task 9.2.1.b" aria-label="Copy heading and permalink for Task 9.2.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.5.b"><a tabindex="-1" href="#act-ch9-height-detective-4" title="Copy heading and permalink for Task 9.2.5.b" aria-label="Copy heading and permalink for Task 9.2.5.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch9-height-detective-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch9-height-detective-5-1-1">For each z-score, say whether the height is above or below the mean and by about how many standard deviations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-height-detective-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.1.c"><a tabindex="-1" href="#act-ch9-height-detective-5" title="Copy heading and permalink for Task 9.2.1.c" aria-label="Copy heading and permalink for Task 9.2.1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.2.1: Height Detective"><a tabindex="-1" href="#act-ch9-height-detective" title="Copy heading and permalink for Activity 9.2.1: Height Detective" aria-label="Copy heading and permalink for Activity 9.2.1: Height Detective">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.5.c"><a tabindex="-1" href="#act-ch9-height-detective-5" title="Copy heading and permalink for Task 9.2.5.c" aria-label="Copy heading and permalink for Task 9.2.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.2.5: Height Detective"><a tabindex="-1" href="#act-ch9-height-detective" title="Copy heading and permalink for Activity 9.2.5: Height Detective" aria-label="Copy heading and permalink for Activity 9.2.5: Height Detective">🔗</a></div>
 </article>
 <article class="activity project-like" id="act-ch9-score-comparison"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Same Raw Score, Different Crowd.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Same Raw Score, Different Crowd.</span>
 </h2>
 <div class="introduction" id="act-ch9-score-comparison-2">
 <div class="para" id="act-ch9-score-comparison-2-1">Use z-scores to compare a raw score across two different normal distributions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-score-comparison-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -444,18 +487,18 @@ z=\frac{62-64}{2.8}\approx -0.714.
 <article class="task exercise-like" id="act-ch9-score-comparison-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch9-score-comparison-3-1-1">A score of 85 occurs on Exam A, where scores are modeled by <span class="process-math">\(N(72,8)\text{.}\)</span> Find its z-score.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-score-comparison-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.2.a"><a tabindex="-1" href="#act-ch9-score-comparison-3" title="Copy heading and permalink for Task 9.2.2.a" aria-label="Copy heading and permalink for Task 9.2.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.6.a"><a tabindex="-1" href="#act-ch9-score-comparison-3" title="Copy heading and permalink for Task 9.2.6.a" aria-label="Copy heading and permalink for Task 9.2.6.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch9-score-comparison-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch9-score-comparison-4-1-1">The same score of 85 occurs on Exam B, where scores are modeled by <span class="process-math">\(N(80,4)\text{.}\)</span> Find its z-score.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-score-comparison-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.2.b"><a tabindex="-1" href="#act-ch9-score-comparison-4" title="Copy heading and permalink for Task 9.2.2.b" aria-label="Copy heading and permalink for Task 9.2.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.6.b"><a tabindex="-1" href="#act-ch9-score-comparison-4" title="Copy heading and permalink for Task 9.2.6.b" aria-label="Copy heading and permalink for Task 9.2.6.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch9-score-comparison-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch9-score-comparison-5-1-1">Which score is better relative to its own group, and why?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch9-score-comparison-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.2.c"><a tabindex="-1" href="#act-ch9-score-comparison-5" title="Copy heading and permalink for Task 9.2.2.c" aria-label="Copy heading and permalink for Task 9.2.2.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.2.2: Same Raw Score, Different Crowd"><a tabindex="-1" href="#act-ch9-score-comparison" title="Copy heading and permalink for Activity 9.2.2: Same Raw Score, Different Crowd" aria-label="Copy heading and permalink for Activity 9.2.2: Same Raw Score, Different Crowd">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.2.6.c"><a tabindex="-1" href="#act-ch9-score-comparison-5" title="Copy heading and permalink for Task 9.2.6.c" aria-label="Copy heading and permalink for Task 9.2.6.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.2.6: Same Raw Score, Different Crowd"><a tabindex="-1" href="#act-ch9-score-comparison" title="Copy heading and permalink for Activity 9.2.6: Same Raw Score, Different Crowd" aria-label="Copy heading and permalink for Activity 9.2.6: Same Raw Score, Different Crowd">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 9.2: Normal Distributions and Z-Scores"><a tabindex="-1" href="#sec-normal-distributions" title="Copy heading and permalink for Section 9.2: Normal Distributions and Z-Scores" aria-label="Copy heading and permalink for Section 9.2: Normal Distributions and Z-Scores">🔗</a></div>
 </section>
 </div>

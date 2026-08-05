@@ -25,6 +25,7 @@ hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta property="og:description" content="A straightforward introduction to elementary statistics built around data, examples, and practice.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.47"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.47"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +58,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.14';
+eBookConfig.runestone_version = '8.2.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cb5af2e851de3574.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f51cd4153b45055d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.ed2cce180827a7ad.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.18fa7ea1d9f376c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -74,7 +75,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="heading ptx-banner-heading"><a href="elementary-statistics.html"><span class="title">Elementary Statistics</span></a></div>
 <p class="byline">Wai Yan Pong</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
 <div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
 <input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
@@ -84,7 +85,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -102,7 +113,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch-linear-regression.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-linear-regression.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-regression-line.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch-linear-regression-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-linear-regression.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-regression-line.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -124,59 +135,70 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-</ul>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-overview.html" class="internal"><span class="codenumber">0</span> <span class="title">What Statistics Is About</span></a></div>
-<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch0-exercises.html" class="internal"><span class="codenumber">0</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul id="ptx-toc-group-ch-overview" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-overview-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch0-exercises.html" class="internal"><span class="codenumber">0.1</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-data-types.html" class="internal"><span class="codenumber">1</span> <span class="title">Data Types</span></a></div>
 <ul id="ptx-toc-group-ch-data-types" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-data-types-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classifying-data.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Classifying Data</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-levels-of-measurement.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Levels of Measurement</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch1-exercises.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-data-types-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-organizing-data.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Displays</span></a></div>
 <ul id="ptx-toc-group-ch-organizing-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-organizing-data-3.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-frequency-tables.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Frequency Tables and Relative Frequency</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-graphs-for-data.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Graphs for Displaying Data</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch2-exercises.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-organizing-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-central-tendency.html" class="internal"><span class="codenumber">3</span> <span class="title">Central Tendency</span></a></div>
 <ul id="ptx-toc-group-ch-central-tendency" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-central-tendency-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-mean-median-mode.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Mean, Median, and Mode</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-center-from-tables-and-shape.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Center from Frequency Tables and the Shape of a Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch3-exercises.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-central-tendency-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-spread-of-data.html" class="internal"><span class="codenumber">4</span> <span class="title">Spread of Data</span></a></div>
 <ul id="ptx-toc-group-ch-spread-of-data" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-spread-of-data-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-quartiles-iqr.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Quartiles and the Interquartile Range</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-boxplots-outliers.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Five-Number Summary, Boxplots, and Outliers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-variance-sd-zscores.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Variance, Standard Deviation, and z-Scores</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch4-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-spread-of-data-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-linear-regression.html" class="internal"><span class="codenumber">5</span> <span class="title">Linear Regression</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-linear-regression">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-linear-regression-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-scatterplots-correlation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Scatterplots and Correlation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regression-line.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Regression Lines and Prediction</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch5-exercises.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-linear-regression-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-probability.html" class="internal"><span class="codenumber">6</span> <span class="title">Probability</span></a></div>
 <ul id="ptx-toc-group-ch-probability" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-probability-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-spaces-events.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Sample Spaces and Events</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probability-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Probability Rules</span></a></div></li>
 <li class="toc-item toc-section">
@@ -187,51 +209,61 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conditional-probability.html#subsec-contingency-tables" class="internal"><span class="title">Contingency Tables</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch6-exercises.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-probability-7.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-random-variables.html" class="internal"><span class="codenumber">7</span> <span class="title">Discrete Random Variables</span></a></div>
 <ul id="ptx-toc-group-ch-random-variables" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-random-variables-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-random-variables-pmf.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Random Variables, CDFs, Expectation, and Variance</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cdf-expected-value.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Properties of Expectation and Variance</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch7-exercises.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-random-variables-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-binomial-distribution.html" class="internal"><span class="codenumber">8</span> <span class="title">Binomial Distributions</span></a></div>
 <ul id="ptx-toc-group-ch-binomial-distribution" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-binomial-distribution-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bernoulli-binomial.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Bernoulli Trials and Binomial Coefficients</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-pdf-cdf.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Binomial Probabilities and the Cumulative Distribution</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-mean-variance.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Mean, Variance, and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-normal-approximation.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Binomial Approximation of Normal Distribution</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch8-exercises.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-binomial-distribution-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-normal-distributions.html" class="internal"><span class="codenumber">9</span> <span class="title">Normal Distributions</span></a></div>
 <ul id="ptx-toc-group-ch-normal-distributions" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-normal-distributions-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-continuous-uniform.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Continuous Random Variables and the Uniform Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-distributions.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Normal Distributions and Z-Scores</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-z-alpha-notation.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The z-Alpha Notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-normal-probabilities-percentiles.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Normal Probabilities and Percentiles</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch9-exercises.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-normal-distributions-8.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-confidence-intervals.html" class="internal"><span class="codenumber">10</span> <span class="title">Confidence Intervals</span></a></div>
 <ul id="ptx-toc-group-ch-confidence-intervals" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-confidence-intervals-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sampling-distributions-clt.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Sampling Distributions and the CLT</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-mean.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Confidence Intervals for the Mean</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-proportion.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Confidence Intervals for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-confidence-intervals-variance.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Confidence Intervals for Variance and Standard Deviation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sample-size-margin-error.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Margin of Error and Sample Size</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch10-exercises.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-confidence-intervals-9.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-hypothesis-testing.html" class="internal"><span class="codenumber">11</span> <span class="title">Hypothesis Testing</span></a></div>
 <ul id="ptx-toc-group-ch-hypothesis-testing" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-hypothesis-testing-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-hypothesis-tests-basics.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Null Hypotheses and P-Values</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-type1-type2-errors.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Type I and Type II Errors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sample-mean-tests.html" class="internal"><span class="codenumber">11.3</span> <span class="title">One-Sample Tests for a Mean</span></a></div></li>
@@ -254,61 +286,41 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-proportion-tests.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Tests for a Population Proportion</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chi-square-independence-test.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Chi-Square Test of Independence</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-variance-tests.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Tests for Variance and Standard Deviation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch11-exercises.html" class="internal"><span class="codenumber">11.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-hypothesis-testing-12.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-analysis-of-variance.html" class="internal"><span class="codenumber">12</span> <span class="title">The Analysis of Variance</span></a></div>
 <ul id="ptx-toc-group-ch-analysis-of-variance" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-analysis-of-variance-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-variance-components.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Components of Variation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-anova-testing-several-means.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Testing Several Means</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch-anova-exercises.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-analysis-of-variance-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-nonparametric-tests.html" class="internal"><span class="codenumber">13</span> <span class="title">Non-Parametric Tests</span></a></div>
 <ul id="ptx-toc-group-ch-nonparametric-tests" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-nonparametric-tests-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sign-test.html" class="internal"><span class="codenumber">13.1</span> <span class="title">The Sign Test</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-spearman-rank-correlation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">The Spearman Test of Rank Correlation</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-ch12-exercises.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-conclusion"><div class="toc-title-box"><a href="ch-nonparametric-tests-6.html" class="internal"><span class="title">Conclusion</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div>
-<ul id="ptx-toc-group-app-sampling-practice" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-why.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Why Sampling Matters</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-simple-random.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Simple Random Samples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-common-methods.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Other Common Sampling Methods</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-experiments.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Sampling and Experimental Design</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-app-sampling-choosing.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Choosing a Sampling Method</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="app-sampling-practice-exercises.html" class="internal"><span class="codenumber">A.6</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div>
-<ul id="ptx-toc-group-app-binomial-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p01.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Success Probability 0.10</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p02.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Success Probability 0.20</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p03.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Success Probability 0.30</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p04.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Success Probability 0.40</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-binomial-table-p05.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Success Probability 0.50</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-sampling-practice.html" class="internal"><span class="codenumber">A</span> <span class="title">Sampling in Practice</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-binomial-table.html" class="internal"><span class="codenumber">B</span> <span class="title">Binomial Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-normal-table.html" class="internal"><span class="codenumber">C</span> <span class="title">Normal Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-t-table.html" class="internal"><span class="codenumber">D</span> <span class="title">The t Distribution</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-chi-square-table.html" class="internal"><span class="codenumber">E</span> <span class="title">The Chi-Square Distribution</span></a></div></li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div>
-<ul id="ptx-toc-group-app-f-table" class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-005.html" class="internal"><span class="codenumber">F.1</span> <span class="title">Right-Tail Area 0.05</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-f-alpha-001.html" class="internal"><span class="codenumber">F.2</span> <span class="title">Right-Tail Area 0.01</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="app-f-table.html" class="internal"><span class="codenumber">F</span> <span class="title">The F Distribution</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -368,81 +380,124 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 </table></div>
 </figure>
-<figure class="figure figure-like" id="fig-study-hours-scatter"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig-study-hours-scatter-2.svg" role="img" class="contained" alt="A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study hours and exam score.The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship."></div>
+<figure class="figure figure-like" id="fig-study-hours-scatter"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
+<img src="generated/latex-image/fig-study-hours-scatter-2.svg" role="img" class="contained" alt="A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-study-hours-scatter-2-description">
+<div class="para" id="fig-study-hours-scatter-2-2-1">The horizontal axis is labeled Hours studied and runs from 0 to 9. The vertical axis is labeled Exam score and runs from 50 to 95. The plotted points are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79), (7,85), and (8,88). The points form a fairly tight upward pattern, indicating a positive linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-study-hours-scatter-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Scatterplot of study hours and exam scores<div class="autopermalink" aria-hidden="true" data-description="Figure 5.1.3"><a tabindex="-1" href="#fig-study-hours-scatter" title="Copy heading and permalink for Figure 5.1.3" aria-label="Copy heading and permalink for Figure 5.1.3">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="sec-scatterplots-correlation-7">The scatterplot in <a href="sec-scatterplots-correlation.html#fig-study-hours-scatter" class="xref" data-knowl="./knowl/xref/fig-study-hours-scatter.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.1.3">Figure 5.1.3</a> shows an upward trend. As study time increases, exam score also tends to increase. That is an example of a <dfn class="terminology">positive association</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-scatterplots-correlation-8">In general, a scatterplot may suggest one of three broad patterns.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-scatterplots-correlation-9">
-<li id="sec-scatterplots-correlation-9-1">
-<div class="para" id="sec-scatterplots-correlation-9-1-1">
-<dfn class="terminology">Positive correlation</dfn>: larger <span class="process-math">\(x\)</span> values tend to go with larger <span class="process-math">\(y\)</span> values.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-scatterplots-correlation-9">
+<ul class="disc" id="sec-scatterplots-correlation-9-1">
+<li id="sec-scatterplots-correlation-9-1-1">
+<div class="para" id="sec-scatterplots-correlation-9-1-1-1">
+<dfn class="terminology">Positive correlation</dfn>: larger <span class="process-math">\(x\)</span> values tend to go with larger <span class="process-math">\(y\)</span> values.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-scatterplots-correlation-9-2">
-<div class="para" id="sec-scatterplots-correlation-9-2-1">
-<dfn class="terminology">Negative correlation</dfn>: larger <span class="process-math">\(x\)</span> values tend to go with smaller <span class="process-math">\(y\)</span> values.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-scatterplots-correlation-9-1-2">
+<div class="para" id="sec-scatterplots-correlation-9-1-2-1">
+<dfn class="terminology">Negative correlation</dfn>: larger <span class="process-math">\(x\)</span> values tend to go with smaller <span class="process-math">\(y\)</span> values.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-scatterplots-correlation-9-3">
-<div class="para" id="sec-scatterplots-correlation-9-3-1">
-<dfn class="terminology">No clear correlation</dfn>: the points do not show a clear upward or downward trend.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-scatterplots-correlation-9-1-3">
+<div class="para" id="sec-scatterplots-correlation-9-1-3-1">
+<dfn class="terminology">No clear correlation</dfn>: the points do not show a clear upward or downward trend.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-9-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-scatterplots-correlation-10">A useful visual trick is to mark the point <span class="process-math">\((\bar{x},\bar{y})\text{,}\)</span> where <span class="process-math">\(\bar{x}\)</span> is the mean of the <span class="process-math">\(x\)</span>-values and <span class="process-math">\(\bar{y}\)</span> is the mean of the <span class="process-math">\(y\)</span>-values. The vertical line through <span class="process-math">\(\bar{x}\)</span> and the horizontal line through <span class="process-math">\(\bar{y}\)</span> form a <dfn class="terminology">mean cross</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-scatterplots-correlation-11">If most of the points lie in the first and third quadrants relative to that cross, then the variables tend to increase together, which suggests positive correlation. If most of the points lie in the second and fourth quadrants, then one variable tends to increase as the other decreases, which suggests negative correlation. If the points are spread more evenly among all four quadrants, the data may have little or no linear correlation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-mean-cross-cases"><div class="image-box" style="width: 92%; margin-left: 4%; margin-right: 4%;"><img src="generated/latex-image/fig-mean-cross-cases-2.svg" role="img" class="contained" alt="Three small scatterplots side by side. In the first, most points lie in the first and third quadrants relative to the mean cross, showing positive correlation. In the second, most points lie in the second and fourth quadrants, showing negative correlation. In the third, the points are spread around all four quadrants, showing little or no correlation.The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction."></div>
+<figure class="figure figure-like" id="fig-mean-cross-cases"><div class="image-box" style="width: 92%; margin-left: 4%; margin-right: 4%;">
+<img src="generated/latex-image/fig-mean-cross-cases-2.svg" role="img" class="contained" alt="Three small scatterplots side by side."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig-mean-cross-cases-2-description">
+<div class="para" id="fig-mean-cross-cases-2-2-1">The figure contains three scatterplots. Each has a vertical dashed line at x-bar and a horizontal dashed line at y-bar, forming a mean cross. In the left panel, labeled Positive correlation, the points cluster from lower left to upper right, mainly in quadrants one and three relative to the mean cross. In the middle panel, labeled Negative correlation, the points cluster from upper left to lower right, mainly in quadrants two and four. In the right panel, labeled Little or no correlation, the points are scattered around all four quadrants with no clear linear direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fig-mean-cross-cases-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Using the mean cross to read the direction of correlation<div class="autopermalink" aria-hidden="true" data-description="Figure 5.1.4"><a tabindex="-1" href="#fig-mean-cross-cases" title="Copy heading and permalink for Figure 5.1.4" aria-label="Copy heading and permalink for Figure 5.1.4">🔗</a></div></figcaption>
 </figure>
 <div class="para" id="sec-scatterplots-correlation-13">The mean cross is a quick visual guide, not a substitute for a full scatterplot or the actual value of <span class="process-math">\(r\text{.}\)</span> Still, it is a nice way to see why positive correlation puts many points in quadrants one and three, while negative correlation puts many points in quadrants two and four.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-scatterplots-correlation-14">The <dfn class="terminology">correlation coefficient</dfn>, written <span class="process-math">\(r\text{,}\)</span> measures the strength and direction of a linear relationship. Its value always satisfies<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-study-hours-scatter.html ./knowl/xref/tbl-study-hours-score.html" id="sec-scatterplots-correlation-15">
+<div class="para logical" id="sec-scatterplots-correlation-15">
+<div class="displaymath process-math" id="sec-scatterplots-correlation-15-1">
 \begin{equation*}
 -1 \le r \le 1.
 \end{equation*}
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-scatterplots-correlation-16">The sign of <span class="process-math">\(r\)</span> gives the direction, and the size of <span class="process-math">\(|r|\)</span> gives the strength.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="sec-scatterplots-correlation-17">
-<li id="sec-scatterplots-correlation-17-1">
-<div class="para" id="sec-scatterplots-correlation-17-1-1">If <span class="process-math">\(r&gt;0\text{,}\)</span> the linear relationship is positive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-scatterplots-correlation-17">
+<ul class="disc" id="sec-scatterplots-correlation-17-1">
+<li id="sec-scatterplots-correlation-17-1-1">
+<div class="para" id="sec-scatterplots-correlation-17-1-1-1">If <span class="process-math">\(r&gt;0\text{,}\)</span> the linear relationship is positive.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-scatterplots-correlation-17-2">
-<div class="para" id="sec-scatterplots-correlation-17-2-1">If <span class="process-math">\(r&lt;0\text{,}\)</span> the linear relationship is negative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-scatterplots-correlation-17-1-2">
+<div class="para" id="sec-scatterplots-correlation-17-1-2-1">If <span class="process-math">\(r&lt;0\text{,}\)</span> the linear relationship is negative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-scatterplots-correlation-17-3">
-<div class="para" id="sec-scatterplots-correlation-17-3-1">If <span class="process-math">\(r\)</span> is close to 0, there is little or no linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-scatterplots-correlation-17-1-3">
+<div class="para" id="sec-scatterplots-correlation-17-1-3-1">If <span class="process-math">\(r\)</span> is close to 0, there is little or no linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-scatterplots-correlation-17-4">
-<div class="para" id="sec-scatterplots-correlation-17-4-1">If <span class="process-math">\(|r|\)</span> is close to 1, the points lie close to a line and the linear relationship is strong.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="sec-scatterplots-correlation-17-1-4">
+<div class="para" id="sec-scatterplots-correlation-17-1-4-1">If <span class="process-math">\(|r|\)</span> is close to 1, the points lie close to a line and the linear relationship is strong.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-scatterplots-correlation-17-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-scatterplots-correlation-18">One common formula for <span class="process-math">\(r\)</span> is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-study-hours-scatter.html ./knowl/xref/tbl-study-hours-score.html" id="sec-scatterplots-correlation-19">
+<div class="para logical" id="sec-scatterplots-correlation-19">
+<div class="displaymath process-math" id="sec-scatterplots-correlation-19-1">
 \begin{equation*}
-r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar{y})^2}}.
+r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum
+(y-\bar{y})^2}}.
 \end{equation*}
 </div>
-<div class="para" id="sec-scatterplots-correlation-20">In practice, technology usually computes <span class="process-math">\(r\)</span> for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-scatterplots-correlation-20">The quality<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-scatterplots-correlation-21">
+<div class="displaymath process-math" id="sec-scatterplots-correlation-21-1">
+\begin{equation*}
+\cov(x,y) = \frac{\sum (x-\bar{x})(y-\bar{y}}{n}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-scatterplots-correlation-22">is called the <dfn class="terminology">covariance</dfn> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Note that, <span class="process-math">\(\cov(x,x) = \var(x)\)</span> and a little algebra shows that the correlation coefficient of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> can also be expressed as<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-scatterplots-correlation-23">
+<div class="displaymath process-math" id="sec-scatterplots-correlation-23-1">
+\begin{equation*}
+r = \frac{\cov{x,y}}{\sigma_x}{\sigma_y}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-scatterplots-correlation-24">In practice, technology usually computes <span class="process-math">\(r\)</span> for us. What matters most in an introductory course is the interpretation. Correlation tells us about the strength of a linear pattern, not about cause and effect.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-scatterplots-correlation-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="ex-r-interpretation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting Correlation.</span>
@@ -453,7 +508,7 @@ r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar
 <div class="autopermalink" aria-hidden="true" data-description="Example 5.1.5: Interpreting Correlation"><a tabindex="-1" href="#ex-r-interpretation" title="Copy heading and permalink for Example 5.1.5: Interpreting Correlation" aria-label="Copy heading and permalink for Example 5.1.5: Interpreting Correlation">🔗</a></div>
 </article></details>
 <article class="activity project-like" id="act-ch5-guesstimation-competition"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guesstimation Competition.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guesstimation Competition.</span>
 </h2>
 <div class="introduction" id="act-ch5-guesstimation-competition-2">
 <div class="para" id="act-ch5-guesstimation-competition-2-1">Use a class data set to see why the regression line is called a best-fit line. For a candidate line, define the sum of squared deviations by <span class="process-math">\(\operatorname{SSD}=\sum(y-\hat{y})^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-guesstimation-competition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -462,26 +517,26 @@ r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar
 <article class="task exercise-like" id="act-ch5-guesstimation-competition-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch5-guesstimation-competition-3-1-1">Gather at least five paired observations for two quantitative variables from the class. Make a scatterplot of the data.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-guesstimation-competition-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.a"><a tabindex="-1" href="#act-ch5-guesstimation-competition-3" title="Copy heading and permalink for Task 5.1.1.a" aria-label="Copy heading and permalink for Task 5.1.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.a"><a tabindex="-1" href="#act-ch5-guesstimation-competition-3" title="Copy heading and permalink for Task 5.1.6.a" aria-label="Copy heading and permalink for Task 5.1.6.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-guesstimation-competition-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch5-guesstimation-competition-4-1-1">Each group should draw its best guess for a regression line on the scatterplot.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-guesstimation-competition-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.b"><a tabindex="-1" href="#act-ch5-guesstimation-competition-4" title="Copy heading and permalink for Task 5.1.1.b" aria-label="Copy heading and permalink for Task 5.1.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.b"><a tabindex="-1" href="#act-ch5-guesstimation-competition-4" title="Copy heading and permalink for Task 5.1.6.b" aria-label="Copy heading and permalink for Task 5.1.6.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-guesstimation-competition-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch5-guesstimation-competition-5-1-1">For each group’s candidate line, compute the SSD. Which group has the smallest SSD?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-guesstimation-competition-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.c"><a tabindex="-1" href="#act-ch5-guesstimation-competition-5" title="Copy heading and permalink for Task 5.1.1.c" aria-label="Copy heading and permalink for Task 5.1.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.c"><a tabindex="-1" href="#act-ch5-guesstimation-competition-5" title="Copy heading and permalink for Task 5.1.6.c" aria-label="Copy heading and permalink for Task 5.1.6.c">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-guesstimation-competition-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="act-ch5-guesstimation-competition-6-1-1">Use technology to compute the regression line and its SSD. Verify that this SSD is no larger than the SSD for any of the groups’ candidate lines.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-guesstimation-competition-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.1.d"><a tabindex="-1" href="#act-ch5-guesstimation-competition-6" title="Copy heading and permalink for Task 5.1.1.d" aria-label="Copy heading and permalink for Task 5.1.1.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.1: Guesstimation Competition"><a tabindex="-1" href="#act-ch5-guesstimation-competition" title="Copy heading and permalink for Activity 5.1.1: Guesstimation Competition" aria-label="Copy heading and permalink for Activity 5.1.1: Guesstimation Competition">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.6.d"><a tabindex="-1" href="#act-ch5-guesstimation-competition-6" title="Copy heading and permalink for Task 5.1.6.d" aria-label="Copy heading and permalink for Task 5.1.6.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.6: Guesstimation Competition"><a tabindex="-1" href="#act-ch5-guesstimation-competition" title="Copy heading and permalink for Activity 5.1.6: Guesstimation Competition" aria-label="Copy heading and permalink for Activity 5.1.6: Guesstimation Competition">🔗</a></div>
 </article>
 <article class="activity project-like" id="act-ch5-scatterplot-read-relationship"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading a Scatterplot.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reading a Scatterplot.</span>
 </h2>
 <div class="introduction" id="act-ch5-scatterplot-read-relationship-2">
 <div class="para" id="act-ch5-scatterplot-read-relationship-2-1">Use the study-hours data set to practice reading a scatterplot and describing the overall pattern in words.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -490,21 +545,21 @@ r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar
 <article class="task exercise-like" id="act-ch5-scatterplot-read-relationship-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch5-scatterplot-read-relationship-3-1-1">Make a scatterplot of the study-hours data from <a href="sec-scatterplots-correlation.html#tbl-study-hours-score" class="xref" data-knowl="./knowl/xref/tbl-study-hours-score.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 5.1.2: Study hours and exam scores">Table 5.1.2</a>. If you use software, label the axes clearly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.2.a"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-3" title="Copy heading and permalink for Task 5.1.2.a" aria-label="Copy heading and permalink for Task 5.1.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.7.a"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-3" title="Copy heading and permalink for Task 5.1.7.a" aria-label="Copy heading and permalink for Task 5.1.7.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-scatterplot-read-relationship-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch5-scatterplot-read-relationship-4-1-1">Describe the direction of the association and tell whether it looks weak, moderate, or strong.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.2.b"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-4" title="Copy heading and permalink for Task 5.1.2.b" aria-label="Copy heading and permalink for Task 5.1.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.7.b"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-4" title="Copy heading and permalink for Task 5.1.7.b" aria-label="Copy heading and permalink for Task 5.1.7.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-scatterplot-read-relationship-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch5-scatterplot-read-relationship-5-1-1">Explain whether the plot suggests a positive correlation, a negative correlation, or no clear correlation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.2.c"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-5" title="Copy heading and permalink for Task 5.1.2.c" aria-label="Copy heading and permalink for Task 5.1.2.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.2: Reading a Scatterplot"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship" title="Copy heading and permalink for Activity 5.1.2: Reading a Scatterplot" aria-label="Copy heading and permalink for Activity 5.1.2: Reading a Scatterplot">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.7.c"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship-5" title="Copy heading and permalink for Task 5.1.7.c" aria-label="Copy heading and permalink for Task 5.1.7.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.7: Reading a Scatterplot"><a tabindex="-1" href="#act-ch5-scatterplot-read-relationship" title="Copy heading and permalink for Activity 5.1.7: Reading a Scatterplot" aria-label="Copy heading and permalink for Activity 5.1.7: Reading a Scatterplot">🔗</a></div>
 </article>
 <article class="activity project-like" id="act-ch5-correlation-interpretation"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting Correlation Coefficients.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interpreting Correlation Coefficients.</span>
 </h2>
 <div class="introduction" id="act-ch5-correlation-interpretation-2">
 <div class="para" id="act-ch5-correlation-interpretation-2-1">Practice translating the value of <span class="process-math">\(r\)</span> into a plain-language description of a linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-correlation-interpretation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -513,21 +568,21 @@ r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar
 <article class="task exercise-like" id="act-ch5-correlation-interpretation-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch5-correlation-interpretation-3-1-1">Suppose <span class="process-math">\(r=0.88\text{.}\)</span> Describe the direction and strength of the linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-correlation-interpretation-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.3.a"><a tabindex="-1" href="#act-ch5-correlation-interpretation-3" title="Copy heading and permalink for Task 5.1.3.a" aria-label="Copy heading and permalink for Task 5.1.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.8.a"><a tabindex="-1" href="#act-ch5-correlation-interpretation-3" title="Copy heading and permalink for Task 5.1.8.a" aria-label="Copy heading and permalink for Task 5.1.8.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-correlation-interpretation-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch5-correlation-interpretation-4-1-1">Suppose <span class="process-math">\(r=-0.64\text{.}\)</span> Describe the direction and strength of the linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-correlation-interpretation-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.3.b"><a tabindex="-1" href="#act-ch5-correlation-interpretation-4" title="Copy heading and permalink for Task 5.1.3.b" aria-label="Copy heading and permalink for Task 5.1.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.8.b"><a tabindex="-1" href="#act-ch5-correlation-interpretation-4" title="Copy heading and permalink for Task 5.1.8.b" aria-label="Copy heading and permalink for Task 5.1.8.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-correlation-interpretation-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch5-correlation-interpretation-5-1-1">Suppose <span class="process-math">\(r=0.12\text{.}\)</span> Explain what this suggests, if anything, about the linear relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-correlation-interpretation-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.3.c"><a tabindex="-1" href="#act-ch5-correlation-interpretation-5" title="Copy heading and permalink for Task 5.1.3.c" aria-label="Copy heading and permalink for Task 5.1.3.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.3: Interpreting Correlation Coefficients"><a tabindex="-1" href="#act-ch5-correlation-interpretation" title="Copy heading and permalink for Activity 5.1.3: Interpreting Correlation Coefficients" aria-label="Copy heading and permalink for Activity 5.1.3: Interpreting Correlation Coefficients">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.8.c"><a tabindex="-1" href="#act-ch5-correlation-interpretation-5" title="Copy heading and permalink for Task 5.1.8.c" aria-label="Copy heading and permalink for Task 5.1.8.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.8: Interpreting Correlation Coefficients"><a tabindex="-1" href="#act-ch5-correlation-interpretation" title="Copy heading and permalink for Activity 5.1.8: Interpreting Correlation Coefficients" aria-label="Copy heading and permalink for Activity 5.1.8: Interpreting Correlation Coefficients">🔗</a></div>
 </article>
 <article class="activity project-like" id="act-ch5-mean-cross"><h2 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the Mean Cross.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using the Mean Cross.</span>
 </h2>
 <div class="introduction" id="act-ch5-mean-cross-2">
 <div class="para" id="act-ch5-mean-cross-2-1">Use the study-hours and exam-scores data to connect the mean cross with the direction of the correlation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-mean-cross-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -536,23 +591,23 @@ r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar
 <article class="task exercise-like" id="act-ch5-mean-cross-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="act-ch5-mean-cross-3-1-1">Find the mean of the hours studied and the mean of the exam scores.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-mean-cross-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.4.a"><a tabindex="-1" href="#act-ch5-mean-cross-3" title="Copy heading and permalink for Task 5.1.4.a" aria-label="Copy heading and permalink for Task 5.1.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.a"><a tabindex="-1" href="#act-ch5-mean-cross-3" title="Copy heading and permalink for Task 5.1.9.a" aria-label="Copy heading and permalink for Task 5.1.9.a">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-mean-cross-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para" id="act-ch5-mean-cross-4-1-1">Plot the point <span class="process-math">\((\bar{x},\bar{y})\)</span> on the scatterplot and draw the mean cross.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-mean-cross-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.4.b"><a tabindex="-1" href="#act-ch5-mean-cross-4" title="Copy heading and permalink for Task 5.1.4.b" aria-label="Copy heading and permalink for Task 5.1.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.b"><a tabindex="-1" href="#act-ch5-mean-cross-4" title="Copy heading and permalink for Task 5.1.9.b" aria-label="Copy heading and permalink for Task 5.1.9.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="act-ch5-mean-cross-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="act-ch5-mean-cross-5-1-1">Count how many data points lie in quadrants one and three relative to the mean cross. Explain how this supports the direction of the correlation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#act-ch5-mean-cross-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.4.c"><a tabindex="-1" href="#act-ch5-mean-cross-5" title="Copy heading and permalink for Task 5.1.4.c" aria-label="Copy heading and permalink for Task 5.1.4.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.4: Using the Mean Cross"><a tabindex="-1" href="#act-ch5-mean-cross" title="Copy heading and permalink for Activity 5.1.4: Using the Mean Cross" aria-label="Copy heading and permalink for Activity 5.1.4: Using the Mean Cross">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.1.9.c"><a tabindex="-1" href="#act-ch5-mean-cross-5" title="Copy heading and permalink for Task 5.1.9.c" aria-label="Copy heading and permalink for Task 5.1.9.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 5.1.9: Using the Mean Cross"><a tabindex="-1" href="#act-ch5-mean-cross" title="Copy heading and permalink for Activity 5.1.9: Using the Mean Cross" aria-label="Copy heading and permalink for Activity 5.1.9: Using the Mean Cross">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 5.1: Scatterplots and Correlation"><a tabindex="-1" href="#sec-scatterplots-correlation" title="Copy heading and permalink for Section 5.1: Scatterplots and Correlation" aria-label="Copy heading and permalink for Section 5.1: Scatterplots and Correlation">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-linear-regression.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-regression-line.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-linear-regression-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-regression-line.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
