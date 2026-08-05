@@ -3,7 +3,7 @@
 <appendix xml:id="app-t-table">
   <title>The t Distribution</title>
 
-  <p>This appendix lists upper-tail critical values for the <term>t distribution<idx><h>appendices</h><h>t table</h></idx></term>. Each entry <m>t_\alpha</m> satisfies <m>P(T&gt;t_\alpha)=\alpha</m> for <m>T</m> with the indicated degrees of freedom.</p>
+  <p>This appendix lists upper-tail critical values for the <term>t distribution</term><idx><h>appendices</h><h>t table</h></idx>. Each entry <m>t_\alpha</m> satisfies <m>P(T&gt;t_\alpha)=\alpha</m> for <m>T</m> with the indicated degrees of freedom.</p>
   <p>For a two-tailed confidence interval or hypothesis test with total tail area <m>\alpha</m>, use the column for <m>\alpha/2</m>.</p>
 
   <table xml:id="tbl-t-critical-values">

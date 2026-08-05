@@ -3,7 +3,7 @@
 <appendix xml:id="app-normal-table">
   <title>Normal Distribution</title>
 
-  <p>This appendix gives the standard normal cumulative distribution table. Each entry is <m>P(Z\le z)</m> for a <term>standard normal random variable<idx><h>appendices</h><h>standard normal table</h></idx></term> <m>Z\sim N(0,1)</m>.</p>
+  <p>This appendix gives the standard normal cumulative distribution table. Each entry is <m>P(Z\le z)</m> for a <term>standard normal random variable</term><idx><h>appendices</h><h>standard normal table</h></idx> <m>Z\sim N(0,1)</m>.</p>
   <p>The table lists only nonnegative <m>z</m>-values. For negative values, use symmetry: <m>P(Z\le -z)=1-P(Z\le z)</m>.</p>
   <p>To keep the print layout readable, the columns are split into two companion tables.</p>
 

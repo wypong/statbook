@@ -8,9 +8,9 @@
     value to each outcome of a random experiment. Instead of tracking
     the full outcome of rolling two dice, for example, we might only care
     about the sum. Instead of recording which student was chosen, we might
-    only care about that student’s test score.</p> <p>That point of
-    view leads to <term>random variables<idx><h>probability</h><h>random
-    variable</h></idx></term>. In this chapter we study discrete random
+    only care about that student's test score.</p> <p>That point of
+    view leads to <term>random variables</term><idx><h>probability</h><h>random
+    variable</h></idx>. In this chapter we study discrete random
     variables, their probability distributions, cumulative distributions,
     expected values, and measures of spread.</p>
   </introduction>
@@ -18,32 +18,32 @@
   <section xml:id="sec-random-variables-pmf">
     <title>Random Variables, CDFs, Expectation, and Variance</title>
 
-    <p>A <term>random variable<idx><h>probability</h><h>random
-    variable</h></idx></term> is a function that assigns a real number to
+    <p>A <term>random variable</term><idx><h>probability</h><h>random
+    variable</h></idx> is a function that assigns a real number to
     each outcome in a sample space. We often use a capital letter such as
     <m>X</m> to name a random variable.</p>
 
-    <p>A random variable is <term>discrete<idx><h>probability</h><h>discrete
-    random variable</h></idx></term> if it takes values in a countable
-    set. It is <term>continuous<idx><h>probability</h><h>continuous random
-    variable</h></idx></term> if it can take any value in an interval. In
+    <p>A random variable is <term>discrete</term><idx><h>probability</h><h>discrete
+    random variable</h></idx> if it takes values in a countable
+    set. It is <term>continuous</term><idx><h>probability</h><h>continuous random
+    variable</h></idx> if it can take any value in an interval. In
     this chapter we focus only on the discrete case.</p>
 
     <example xml:id="ex-two-dice-sum-rv">
       <title>The Sum of Two Dice</title> <p>Suppose two fair dice are
-      rolled. The sample space consists of the 36 ordered pairs</p> <md>
+      rolled. The sample space consists of the 36 ordered pairs</p> <p><md>
         (1,1),(1,2),\dots,(6,6).
-      </md> <p>Define the random variable <m>X</m> by letting <m>X</m>
+      </md></p> <p>Define the random variable <m>X</m> by letting <m>X</m>
       be the sum of the two dice. Then <m>X(2,3)=5</m>, <m>X(6,6)=12</m>,
-      and the possible values of <m>X</m> are</p> <md>
+      and the possible values of <m>X</m> are</p> <p><md>
         R_X=\{2,3,4,5,6,7,8,9,10,11,12\}.
-      </md>
+      </md></p>
     </example>
 
     <p>The probability function of a discrete random variable
     <m>X</m> is called its <term>probability distribution
-    function<idx><h>probability</h><h>probability distribution
-    function</h></idx></term>. In many statistics books this is also called
+    function</term><idx><h>probability</h><h>probability distribution
+    function</h></idx>. In many statistics books this is also called
     the probability mass function.</p>
 
     <table xml:id="tbl-two-dice-pmf">
@@ -86,43 +86,39 @@
     <p>Every discrete probability distribution satisfies two basic
     properties:</p>
 
-    <ul>
+    <p><ul>
       <li><p><m>0\le P(X=x)\le 1</m> for each possible value <m>x</m>.</p></li>
       <li><p>The probabilities add to 1.</p></li>
-    </ul>
+    </ul></p>
 
-    <md>
+    <p><md>
       \sum_{x\in R_X} P(X=x)=1.
-    </md>
+    </md></p>
 
     <p>The <term>cumulative distribution
-    function<idx><h>probability</h><h>cumulative
-    distribution function</h></idx></term>, or
-    <term>CDF<idx><h>probability</h><h>CDF</h></idx></term>, of a discrete
+    function</term><idx><h>probability</h><h>cumulative
+    distribution function</h></idx>, or
+    <term>CDF</term><idx><h>probability</h><h>CDF</h></idx>, of a discrete
     random variable <m>X</m> is defined by</p>
 
-    <md>
+    <p><md>
       F_X(x)=P(X\le x).
-    </md>
+    </md></p>
 
     <p>For a discrete random variable, the CDF is found by adding the probabilities of all values up to <m>x</m>.</p>
 
     <figure xml:id="fig-pmf-cdf-side-by-side">
       <caption>A probability mass function and its corresponding cumulative distribution function</caption>
       <image width="94%" margins="3%">
-        <shortdescription>Two graphs shown side by side for the same discrete
-        random variable. The left graph is a bar chart for the probability mass
-        function at x equals 0, 1, 2, and 3 with heights 0.1, 0.3, 0.4, and
-        0.2. The right graph is a step graph for the cumulative distribution
-        function with levels 0.1, 0.4, 0.8, and 1.0.</shortdescription>
-        <description>The figure has two panels. In the left panel, labeled
+        <shortdescription>Two graphs shown side by side for the same discrete random variable.</shortdescription>
+        <description><p>The figure has two panels. In the left panel, labeled
         PMF, a discrete random variable takes the values 0, 1, 2, and 3 with
         probabilities 0.1, 0.3, 0.4, and 0.2, displayed as separate vertical
         bars. In the right panel, labeled CDF, the cumulative distribution
         function starts at 0 to the left of 0, jumps to 0.1 at x equals 0,
         then to 0.4 at x equals 1, to 0.8 at x equals 2, and to 1.0 at x
         equals 3. The picture shows that the CDF is built by accumulating
-        the PMF values from left to right.</description> <latex-image>
+        the PMF values from left to right.</p></description> <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
               at={(0cm,0cm)},
@@ -213,37 +209,37 @@
     <example xml:id="ex-cdf-two-dice">
       <title>Computing a CDF Value</title>
       <p>For the random variable <m>X</m> equal to the sum of two fair dice,</p>
-      <md>
+      <p><md>
         F_X(4)=P(X\le 4)=P(X=2)+P(X=3)+P(X=4).
-      </md>
+      </md></p>
       <p>Using <xref ref="tbl-two-dice-pmf"/>,</p>
-      <md>
+      <p><md>
         F_X(4)=\frac{1}{36}+\frac{2}{36}+\frac{3}{36}=\frac{6}{36}=\frac{1}{6}.
-      </md>
+      </md></p>
     </example>
 
     <p>The CDF and the probability distribution contain the same information. For instance, if 5 is the next possible value after 4, then</p>
 
-    <md>
+    <p><md>
       P(X=5)=F_X(5)-F_X(4).
-    </md>
+    </md></p>
 
-    <p>The <term>expected value<idx><h>probability</h><h>expected
-    value</h></idx></term>, also called the
-    <term>mean<idx><h>probability</h><h>mean of a random
-    variable</h></idx></term>, is the long-run average value of a random
+    <p>The <term>expected value</term><idx><h>probability</h><h>expected
+    value</h></idx>, also called the
+    <term>mean</term><idx><h>probability</h><h>mean of a random
+    variable</h></idx>, is the long-run average value of a random
     variable. For a discrete random variable,</p>
 
-    <md>
+    <p><md>
       \E(X)=\sum_{x\in R_X} xP(X=x).
-    </md>
+    </md></p>
 
     <p>If <m>X</m> is a continuous random variable with probability density
     function <m>f(x)</m>, then the corresponding definition is</p>
 
-    <md>
+    <p><md>
       \E(X)=\int_{-\infty}^{\infty} xf(x)\,dx.
-    </md>
+    </md></p>
 
     <p>So the basic idea is the same in both cases: expectation is a weighted
     average, where probabilities play the role of the weights.</p>
@@ -281,61 +277,61 @@
 
     <p>The expected score is</p>
 
-    <md alignment="align">
+    <p><md alignment="align">
       <mrow>\E(X)&amp;=13\left(\frac{1}{30}\right)+15\left(\frac{5}{30}\right)+16\left(\frac{3}{30}\right)+17\left(\frac{5}{30}\right)</mrow>
       <mrow>&amp;\quad+18\left(\frac{9}{30}\right)+19\left(\frac{4}{30}\right)+20\left(\frac{3}{30}\right)=17.3.</mrow>
-    </md>
+    </md></p>
 
     <p>So if we repeatedly select students at random from this class, the
     long-run average score would settle near 17.3.</p>
 
     <p>The expected value tells us the center of a random variable,
     but it does not tell us how spread out the values are. For that,
-    we use the <term>variance<idx><h>probability</h><h>variance
-    of a random variable</h></idx></term> and the <term>standard
-    deviation<idx><h>probability</h><h>standard deviation of a random
-    variable</h></idx></term>.</p>
+    we use the <term>variance</term><idx><h>probability</h><h>variance
+    of a random variable</h></idx> and the <term>standard
+    deviation</term><idx><h>probability</h><h>standard deviation of a random
+    variable</h></idx>.</p>
 
     <p>First, the covariance of random variables <m>X</m> and <m>Y</m>
     can be defined in terms of expectation by</p>
 
-    <md>
+    <p><md>
     \operatorname{Cov}(X,Y)=\E(X-\E(X))(Y-\E(Y)) = \E(XY) - \E(X)\E(Y)
-    </md>
+    </md></p>
     <p>
        We will show that last equality using properties of expectation in the
        next section. Define <m>\var(X)</m>, the variance of
        <m>X</m>, to be <m>\operatorname{Cov}(X,X)</m>. So we have
     </p>
 
-    <md>
+    <p><md>
         \var(X) = \E(X-\E(X))^2 = \E(X^2) - (\E(X))^2
-    </md>
+    </md></p>
     <p>And the standard deviation of <m>X</m> is then</p>
 
-    <md>
+    <p><md>
       \sigma_X=\sqrt{\var(X)}.
-    </md>
+    </md></p>
 
     <p>For a discrete random variable, it is often easiest to compute the
     variance by first finding <m>\E(X)</m> and</p>
 
-    <md>
+    <p><md>
       \E(X^2)=\sum_{x\in R_X} x^2P(X=x).
-    </md>
+    </md></p>
 
     <example xml:id="ex-score-distribution-variance">
       <title>Variance and Standard Deviation from a Distribution</title>
       <p>Using the score distribution in <xref ref="tbl-score-distribution"/>,
-      we already know that <m>\E(X)=17.3</m>.</p> <p>Now compute</p> <md
+      we already know that <m>\E(X)=17.3</m>.</p> <p>Now compute</p> <p><md
       alignment="align">
         <mrow>\E(X^2)&amp;=13^2\left(\frac{1}{30}\right)+15^2\left(\frac{5}{30}\right)+16^2\left(\frac{3}{30}\right)</mrow>
         <mrow>&amp;\quad+17^2\left(\frac{5}{30}\right)+18^2\left(\frac{9}{30}\right)+19^2\left(\frac{4}{30}\right)</mrow>
         <mrow>&amp;\quad+20^2\left(\frac{3}{30}\right)\approx 302.2333.</mrow>
-      </md> <p>Therefore</p> <md>
+      </md></p> <p>Therefore</p> <p><md>
         \var(X)=302.2333-(17.3)^2\approx 2.9433
-      </md> <p>and</p> <md> \sigma_X=\sqrt{2.9433}\approx 1.7156.
-    </md> </example>
+      </md></p> <p>and</p> <p><md> \sigma_X=\sqrt{2.9433}\approx 1.7156.
+    </md></p> </example>
 
     <activity xml:id="act-ch7-arcade-dice-game">
       <title>Arcade Dice Game</title> <introduction>
@@ -393,33 +389,33 @@
     <p>Expectation is linear. For random variables <m>X</m> and <m>Y</m> and
     constants <m>a</m> and <m>b</m>,</p>
 
-   <ol>
+   <p><ol>
     <li>
       <p>Expectation is additive:</p>
-      <md>
+      <p><md>
         \E(X+Y)=\E(X)+\E(Y).
-      </md>
+      </md></p>
     </li>
     <li>
       <p>Expectation respects scaling</p>
-      <md>
+      <p><md>
       \E(aX)=a\E(X).
-      </md>
+      </md></p>
     </li>
-  </ol>
+  </ol></p>
 
   <p>These properties are intuitive: the average of sums is the sum of the
     averages, and adding or multiplying every value changes the average in
     the same way. Note also that since the probabilities sum to 1,</p>
-    <md>
+    <p><md>
       \E(1)=\sum_{x\in R_X}1P(X=x)=1.
-    </md>
+    </md></p>
     <p>Consequently, it follows from the scaling property of expectation that
     for any constant <m>a</m>
     </p>
-    <md>
+    <p><md>
       \E(a) = \E(a1) = a\E(1) =a.
-    </md>
+    </md></p>
     <p>
       This certainly agrees with one instinct that the average of a constant
       is that constant itself.
@@ -427,34 +423,34 @@
 
     <p>For variance, using the linearity of expectation, we have </p>
 
-    <md>
+    <p><md>
        <mrow> \var(aX) &amp; = \E(aX)^2 - (\E(aX))^2 </mrow>
        <mrow> &amp; = \E(a^2 X^2) - (a\E(X))^2  </mrow>
        <mrow> &amp; = a^2 \E(X^2) - a^2(\E(X))^2 = a^2\var(X).</mrow>
-    </md>
+    </md></p>
     <p>and</p>
 
-    <md>
+    <p><md>
       <mrow>\var(X+Y) &amp; = \E(X+Y)^2 - (\E(X+Y))^2</mrow>
        <mrow> &amp; = \E(X^2 + 2XY +Y^2) - (\E(X))^2 - 2\E(X)\E(Y) - (\E(Y))^2</mrow>
       <mrow> &amp; = \var(X) + \var(Y) + 2\cov(X,Y)</mrow>
-    </md>
+    </md></p>
 
     <p>Thus, if <m>X</m> and <m>Y</m> are <em>uncorrelated</em>, i.e.
     <m>\cov(X,Y) = 0</m>, in particular when <m>X</m> and <m>Y</m> are
     independent, then</p>
 
-    <md>
+    <p><md>
       \var(X+Y)=\var(X)+\var(Y).
-    </md>
+    </md></p>
 
     <p>Note also that for any constant <m>a</m>, since <m>a = \E(a)</m>,
     <m>\cov(X,a) = \E(X-\E(X))(a - \E(a)) = 0</m>. In particular, <m>\var(a) =
     \cov(a,a) = 0</m>. Therefore,</p>
 
-    <md>
+    <p><md>
       \var(X+a) = \var(X) + \var(a) + 2\cov(X,a) = \var(X).
-    </md>
+    </md></p>
 
     <p>Remember, expectation
     always adds, but variance adds only under extra conditions such as
@@ -464,16 +460,16 @@
       <title>Using the Properties</title>
       <p>Suppose <m>\E(X)=5</m>, <m>\var(X)=4</m>, <m>\E(Y)=2</m>, and <m>\var(Y)=9</m>. Assume <m>X</m> and <m>Y</m> are independent.</p>
       <p>Then</p>
-      <md>
+      <p><md>
         \E(3X-1)=3\E(X)-1=3(5)-1=14,
-      </md>
-      <md>
+      </md></p>
+      <p><md>
         \var(3X-1)=3^2\var(X)=9(4)=36,
-      </md>
+      </md></p>
       <p>and</p>
-      <md>
+      <p><md>
         \var(X+Y)=\var(X)+\var(Y)=4+9=13.
-      </md>
+      </md></p>
     </example>
 
     <p>These properties are handy when units change. For example, converting from meters to centimeters multiplies both the expected value and the standard deviation by 100, but it multiplies the variance by <m>100^2</m>.</p>
@@ -523,35 +519,20 @@
     </activity>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch7-exercises">
 
-    <p>Discrete random variables let us translate probability questions into numerical summaries. Once a random experiment is encoded by a variable <m>X</m>, we can study its distribution just as we study the distribution of observed data.</p>
-
-    <ul>
-      <li><p>A random variable assigns a number to each outcome in a sample space.</p></li>
-      <li><p>A discrete random variable has a countable set of possible values.</p></li>
-      <li><p>The probability distribution function lists the probabilities <m>P(X=x)</m>.</p></li>
-      <li><p>The cumulative distribution function is <m>F_X(x)=P(X\le x)</m>.</p></li>
-      <li><p>For a discrete random variable, <m>\E(X)=\sum xP(X=x)</m>. For a continuous random variable with density <m>f</m>, <m>\E(X)=\int xf(x)\,dx</m>.</p></li>
-      <li><p>The variance is defined by <m>\var(X)=\E\bigl((X-\E(X))^2\bigr)=\E(X^2)-\bigl(\E(X)\bigr)^2</m>.</p></li>
-      <li><p>The standard deviation is the square root of the variance.</p></li>
-      <li><p>The identities <m>\E(X+Y)=\E(X)+\E(Y)</m>, <m>\E(aX+b)=a\E(X)+b</m>, and <m>\var(aX+b)=a^2\var(X)</m> hold broadly, and for independent random variables we also have <m>\var(X+Y)=\var(X)+\var(Y)</m>.</p></li>
-    </ul>
-
-    <p>These ideas will reappear throughout statistics, especially when we model data with probability distributions and study sampling behavior.</p>
-  </conclusion>
-
-  <exercises xml:id="ch7-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch7-ex-1">
       <p>Two fair dice are rolled and <m>X</m> is the sum of the outcomes.</p>
-      <ol>
+      <p><ol>
         <li><p>List the possible values of <m>X</m>.</p></li>
         <li><p>Find <m>P(X=8)</m>.</p></li>
         <li><p>Find <m>P(X\le 4)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch7-ex-2">
@@ -575,11 +556,11 @@
           </row>
         </tabular>
       </table>
-      <ol>
+      <p><ol>
         <li><p>Verify that this is a valid probability distribution.</p></li>
         <li><p>Find <m>F_X(1)</m>.</p></li>
         <li><p>Find <m>F_X(2)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch7-ex-3">
@@ -610,15 +591,34 @@
 
     <exercise xml:id="ch7-ex-5">
       <p>The random variable <m>X</m> has mean 12 and variance 4.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>\E(3X+1)</m>.</p></li>
         <li><p>Find <m>\var(3X+1)</m>.</p></li>
         <li><p>Find the standard deviation of <m>3X+1</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch7-ex-6">
       <p>Explain in words what the expected value and the standard deviation of a discrete random variable are telling us.</p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>Discrete random variables let us translate probability questions into numerical summaries. Once a random experiment is encoded by a variable <m>X</m>, we can study its distribution just as we study the distribution of observed data.</p>
+
+    <p><ul>
+      <li><p>A random variable assigns a number to each outcome in a sample space.</p></li>
+      <li><p>A discrete random variable has a countable set of possible values.</p></li>
+      <li><p>The probability distribution function lists the probabilities <m>P(X=x)</m>.</p></li>
+      <li><p>The cumulative distribution function is <m>F_X(x)=P(X\le x)</m>.</p></li>
+      <li><p>For a discrete random variable, <m>\E(X)=\sum xP(X=x)</m>. For a continuous random variable with density <m>f</m>, <m>\E(X)=\int xf(x)\,dx</m>.</p></li>
+      <li><p>The variance is defined by <m>\var(X)=\E\bigl((X-\E(X))^2\bigr)=\E(X^2)-\bigl(\E(X)\bigr)^2</m>.</p></li>
+      <li><p>The standard deviation is the square root of the variance.</p></li>
+      <li><p>The identities <m>\E(X+Y)=\E(X)+\E(Y)</m>, <m>\E(aX+b)=a\E(X)+b</m>, and <m>\var(aX+b)=a^2\var(X)</m> hold broadly, and for independent random variables we also have <m>\var(X+Y)=\var(X)+\var(Y)</m>.</p></li>
+    </ul></p>
+
+    <p>These ideas will reappear throughout statistics, especially when we model data with probability distributions and study sampling behavior.</p>
+  </conclusion>
 </chapter>

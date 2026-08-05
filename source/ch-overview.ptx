@@ -8,9 +8,9 @@
 
     <p>That story matters because modern life runs on data. Doctors compare treatments, businesses track sales, schools study student success, sports teams evaluate performance, and governments use surveys to understand communities. In each of these settings, the goal is not just to gather data, but to ask sensible questions and to draw conclusions without being fooled by randomness, bias, or incomplete information.</p>
 
-    <p>Two big ideas appear early in almost every statistics course. <term>Descriptive statistics<idx><h>statistics</h><h>descriptive</h></idx></term> is about summarizing what the data says right now, often with tables, graphs, averages, or percentages. <term>Inferential statistics<idx><h>statistics</h><h>inferential</h></idx></term> is about going a step further and using data to say something about a larger group or about a process that is not fully observed. Much of statistics is about moving carefully from what we have seen to what we think is probably true.</p>
+    <p>Two big ideas appear early in almost every statistics course. <term>Descriptive statistics</term><idx><h>statistics</h><h>descriptive</h></idx> is about summarizing what the data says right now, often with tables, graphs, averages, or percentages. <term>Inferential statistics</term><idx><h>statistics</h><h>inferential</h></idx> is about going a step further and using data to say something about a larger group or about a process that is not fully observed. Much of statistics is about moving carefully from what we have seen to what we think is probably true.</p>
 
-    <p>Another basic distinction is between a <term>population<idx><h>sampling</h><h>population</h></idx></term> and a <term>sample<idx><h>sampling</h><h>sample</h></idx></term>. The population is the full group we care about. The sample is the part we actually observe. A number that describes a population is called a <term>parameter<idx><h>summaries</h><h>parameter</h></idx></term>, while a number computed from a sample is called a <term>statistic<idx><h>summaries</h><h>statistic</h></idx></term>. In practice we usually do not have access to an entire population, so we use sample statistics to estimate population parameters.</p>
+    <p>Another basic distinction is between a <term>population</term><idx><h>sampling</h><h>population</h></idx> and a <term>sample</term><idx><h>sampling</h><h>sample</h></idx>. The population is the full group we care about. The sample is the part we actually observe. A number that describes a population is called a <term>parameter</term><idx><h>summaries</h><h>parameter</h></idx>, while a number computed from a sample is called a <term>statistic</term><idx><h>summaries</h><h>statistic</h></idx>. In practice we usually do not have access to an entire population, so we use sample statistics to estimate population parameters.</p>
 
     <example xml:id="ex-campus-survey">
       <title>A Campus Survey</title>
@@ -22,9 +22,12 @@
       <p>A basketball player takes 50 free throws in practice and makes 41 of them. Saying that the player made 82% of the practice shots is descriptive statistics. Using that practice result to predict how the player will perform in future games is inferential statistics. The same data can support both description and prediction, but those are not the same task.</p>
     </example>
   </introduction>
+  <section xml:id="sec-ch0-exercises">
 
-  <exercises xml:id="ch0-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch0-ex-1">
       <p>A city wants to estimate the average commute time of all workers in the city. It studies 600 randomly selected workers. Identify the population, the sample, and the kind of quantity that would be a parameter.</p>
@@ -37,5 +40,7 @@
     <exercise xml:id="ch0-ex-3">
       <p>Write down a real-life question from your own experience that could be answered with data. Then say what kind of data you would collect and what decision you hope the data would help you make.</p>
     </exercise>
-  </exercises>
+
+
+  </section>
 </chapter>

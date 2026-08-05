@@ -9,8 +9,8 @@
     to say something sensible about unknown population quantities.</p>
     <p>This chapter focuses on estimating three common kinds of
     parameters: a population mean, a population proportion, and a population
-    variance. The main tool is the <term>confidence interval<idx><h>inference</h><h>confidence
-    interval</h></idx></term>, which gives a range of plausible values for
+    variance. The main tool is the <term>confidence interval</term><idx><h>inference</h><h>confidence
+    interval</h></idx>, which gives a range of plausible values for
     the parameter. To justify those formulas, we first need to understand
     how sample means, sample proportions, and sample variances behave.</p>
     <p>For means and proportions, the normal distribution does most of the
@@ -24,63 +24,63 @@
 
     <p>Suppose a population has mean <m>\mu</m> and standard deviation
     <m>\sigma</m>. If we draw a sample of size <m>n</m>, then the <term>sample
-    mean<idx><h>data</h><h>sample mean</h></idx></term> is</p>
+    mean</term><idx><h>data</h><h>sample mean</h></idx> is</p>
 
-    <md>
+    <p><md>
       \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n}.
-    </md>
+    </md></p>
 
     <p>The variable <m>\overline{X}</m> is itself a random
     variable. Its distribution is called a <term>sampling
-    distribution<idx><h>inference</h><h>sampling
-    distribution</h></idx></term>.</p>
+    distribution</term><idx><h>inference</h><h>sampling
+    distribution</h></idx>.</p>
 
     <p>Two facts are especially important:</p>
 
-    <md>
+    <p><md>
       \E(\overline{X})=\mu \qquad\text{and}\qquad
       \sigma_{\overline{X}}=\frac{\sigma}{\sqrt{n}}.
-    </md>
+    </md></p>
 
     <p>These formulas follow directly from the properties of expectation
     and variance from <xref ref="sec-cdf-expected-value"/>. Since</p>
 
-    <md>
+    <p><md>
       \overline{X}=\frac{X_1+X_2+\cdots+X_n}{n},
-    </md>
+    </md></p>
 
     <p>linearity of expectation gives</p>
 
-    <md>
+    <p><md>
       \E(\overline{X}) =\E\left(\frac{X_1+\cdots+X_n}{n}\right)
       =\frac{1}{n}\bigl(\E(X_1)+\cdots+\E(X_n)\bigr) =\frac{1}{n}(n\mu) =\mu.
-    </md>
+    </md></p>
 
     <p>So the sample mean is an unbiased estimate of the population mean.</p>
 
     <p>For the variance, independence lets us add variances:</p>
 
-    <md alignment="align">
+    <p><md alignment="align">
       <mrow>\var(\overline{X})&amp;=\var\left(\frac{X_1+\cdots+X_n}{n}\right)</mrow>
       <mrow>&amp;=\frac{1}{n^2}\var(X_1+\cdots+X_n)</mrow>
       <mrow>&amp;=\frac{1}{n^2}\bigl(\var(X_1)+\cdots+\var(X_n)\bigr).</mrow>
-    </md>
+    </md></p>
 
     <p>Because each <m>X_i</m> has variance <m>\sigma^2</m>,</p>
 
-    <md>
+    <p><md>
       \var(\overline{X})
       =\frac{1}{n^2}(n\sigma^2)
       =\frac{\sigma^2}{n}.
-    </md>
+    </md></p>
 
     <p>Taking square roots gives</p>
 
-    <md>
+    <p><md>
       \sigma_{\overline{X}}=\sqrt{\var(\overline{X})}
       =\sqrt{\frac{\sigma^2}{n}}
       =\frac{\sigma}{\sqrt{n}}.
-    </md>
+    </md></p>
 
     <p>The first fact says that the sample mean is centered at the population
     mean. The second says that larger samples give less variation. Averaging
@@ -88,7 +88,7 @@
     observation.</p>
 
     <p>The real breakthrough is the <term>Central Limit
-    Theorem<idx><h>inference</h><h>Central Limit Theorem</h></idx></term>,
+    Theorem</term><idx><h>inference</h><h>Central Limit Theorem</h></idx>,
     usually shortened to CLT. In plain language, it says this:</p>
 
     <p>If we repeatedly take independent samples from the same population,
@@ -99,9 +99,9 @@
     distributed with mean <m>\mu</m> and standard deviation <m>\sigma</m>,
     the sample mean <m>\overline{X}</m> is approximately distributed as</p>
 
-    <md>
+    <p><md>
       \overline{X}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)
-    </md>
+    </md></p>
 
     <p>for large enough <m>n</m>.</p>
 
@@ -121,22 +121,22 @@
       wait times have population mean 18 minutes and population standard
       deviation 6 minutes. The shape of the population distribution is not
       known. If we take a random sample of <m>n=36</m> customers, then by
-      the CLT the sample mean is approximately normal:</p> <md>
+      the CLT the sample mean is approximately normal:</p> <p><md>
         \overline{X}\sim N\left(18,\frac{6}{\sqrt{36}}\right)=N(18,1).
-      </md> <p>The probability that the sample mean is less than 17 minutes
-      is therefore</p> <md>
+      </md></p> <p>The probability that the sample mean is less than 17 minutes
+      is therefore</p> <p><md>
         P(\overline{X}&lt;17)=P\!\left(Z&lt;\frac{17-18}{1}\right)=P(Z&lt;-1)\approx
         0.1587.
-      </md>
+      </md></p>
     </example>
 
     <exercise xml:id="ci-inline-ex-1">
       <p>A population has mean 50 and standard deviation 12. A sample of size 36 is taken.</p>
-      <ol>
+      <p><ol>
         <li><p>Find the mean of <m>\overline{X}</m>.</p></li>
         <li><p>Find the standard deviation of <m>\overline{X}</m>.</p></li>
         <li><p>State the approximate distribution of <m>\overline{X}</m> using the CLT.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch10-sample-mean-sprint">
@@ -182,19 +182,58 @@
         </statement>
       </task>
     </activity>
+
+    <activity xml:id="act-ch10-die-roll-sampling-distribution">
+      <title>Thirty Rolls, One Sampling Distribution</title> <introduction>
+        <p>Use class data to see the Central Limit Theorem turn the outcomes
+        of a fair die into an approximately normal distribution of sample
+        means.</p>
+      </introduction> <task>
+        <statement>
+          <p>Compute the mean <m>\mu</m> and the standard deviation
+          <m>\sigma</m> of one roll of a fair six-sided die.</p>
+        </statement>
+      </task> <task>
+	<statement>
+	  <p>Each student rolls a fair die 30 times and computes the mean
+	  of those 30 rolls.</p>
+	</statement>
+      </task> <task>
+	<statement>
+	  <p>Students enter the sample means that they found in a spreadsheet
+	  shared with the class. The spreadsheet should contain one sample
+	  mean per student.</p>
+	</statement>
+      </task> <task>
+	<statement>
+	  <p>Make a histogram of the class sample means. Start with bins
+	  of width 0.1; if the histogram is too sparse, use bins of width
+	  0.2 instead.</p>
+	</statement>
+      </task> <task>
+	<statement>
+	  <p>Compare the histogram with the Central Limit Theorem prediction
+	<m>\overline{X}\approx N\left(\mu, \frac{\sigma}{\sqrt{30}}\right)</m>
+	where <m>\mu</m> and <m>\sigma</m> are the mean and standard deviation
+	found in Part (a). Does the distribution appear roughly symmetric
+	and bell-shaped? Is it centered near <m>\mu</m>, and is its spread
+	close to <m>\sigma/\sqrt{30}</m>? Explain any differences you see.</p>
+	</statement>
+      </task>
+    </activity>
   </section>
 
   <section xml:id="sec-confidence-intervals-mean">
     <title>Confidence Intervals for the Mean</title>
 
     <p>A sample mean <m>\overline{x}</m> is a <term>point
-    estimate<idx><h>inference</h><h>point estimate</h></idx></term> of
+    estimate</term><idx><h>inference</h><h>point estimate</h></idx> of
     the population mean <m>\mu</m>. But a single number does not tell us
     how much uncertainty comes from sampling. A <m>C</m> <term>confidence
-    interval<idx><h>inference</h><h>confidence interval</h></idx></term> adds a
+    interval</term><idx><h>inference</h><h>confidence interval</h></idx> adds a
     margin of error to the point estimate and gives a range of plausible
     values for <m>\mu</m>, where <m>0 \lt C \lt 1</m> is the <term>confidence
-    level<idx><h>inference</h><h>confidence level</h></idx></term>. In
+    level</term><idx><h>inference</h><h>confidence level</h></idx>. In
     informal language, we say we are <m>C</m> confident that the resulting
     interval captures the true mean.</p>
 
@@ -204,9 +243,9 @@
     (exactly when the population is normal, or approximately for large
     samples by the CLT):</p>
 
-    <md>
+    <p><md>
       \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1).
-    </md>
+    </md></p>
 
     <p>Let <m>\alpha=1-C</m>. To capture the middle proportion <m>C</m> of the
     standard normal curve, we leave total area <m>\alpha</m> outside and split
@@ -216,17 +255,14 @@
     <figure xml:id="fig-ci-central-area">
       <caption>The middle <m>C</m> of the standard normal curve</caption>
       <image width="76%" margins="12%">
-        
-      <shortdescription>A standard normal curve with the central region
-      between negative z-alpha-over-2 and positive z-alpha-over-2 shaded
-      and labeled C. Each tail outside that region is labeled alpha over
-      2.</shortdescription>
-        <description>The graphic shows the standard normal density curve
+
+      <shortdescription>A standard normal curve with the central region between negative z-alpha-over-2 and positive z-alpha-over-2 shaded and.</shortdescription>
+        <description><p>The graphic shows the standard normal density curve
         centered at 0. Vertical dashed lines mark the cutoff points at negative
         z-alpha-over-2 and positive z-alpha-over-2. The region under the curve
         between these two lines is shaded and labeled C. The two unshaded tails
         outside the dashed lines are each labeled alpha over 2, showing that
-        the total area outside the center is alpha.</description> 
+        the total area outside the center is alpha.</p></description>
 	<latex-image>
           \begin{tikzpicture}
             \begin{axis}[
@@ -284,23 +320,23 @@
 
     <p>So the corresponding probability statement is</p>
 
-    <md>
+    <p><md>
       P\left(-z_{\alpha/2} \lt \frac{\overline{X}-\mu}{\sigma/\sqrt{n}} \lt z_{\alpha/2}\right)=C.
-    </md>
+    </md></p>
 
     <p>After we collect the sample and observe <m>\overline{x}</m>, we solve
     that inequality for <m>\mu</m>. The result is the z-interval</p>
 
-    <md>
+    <p><md>
       \overline{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}},
-    </md>
+    </md></p>
 
     <p>or, written as an interval,</p>
 
-    <md>
+    <p><md>
       \left(\overline{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\;
       \overline{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right).
-    </md>
+    </md></p>
 
     <p>In practice, <m>\sigma</m> is often unknown. When the sample is large,
     we usually replace <m>\sigma</m> by the sample standard deviation
@@ -309,17 +345,17 @@
     <m>\sigma</m> is known, but if <m>\sigma</m> is unknown and we replace it
     by <m>s</m>, then</p>
 
-    <md>
+    <p><md>
       \frac{\overline{X}-\mu}{s/\sqrt{n}} \sim t[n-1].
-    </md>
+    </md></p>
 
     <p>In every case, the confidence interval has the form
     point estimate <m>\pm</m> margin of error. For the population mean, that
     means</p>
 
-    <md>
+    <p><md>
     (\overline{x}-\text{margin of error},\overline{x}+\text{margin of error}),
-    </md>
+    </md></p>
 
     <p>So the interval is centered at a sample mean, and its total width is
     twice the margin of error.</p>
@@ -363,56 +399,56 @@
     <example xml:id="ex-z-ci-height">
       <title>Case 1: Large Sample, <m>\sigma</m> Known</title>
       <p>Suppose a sample of 36 women has mean height <m>\overline{x}=65.1</m> inches. Assume the population standard deviation is known to be 2.8 inches. A 95% confidence interval for the mean height is</p>
-      <md>
+      <p><md>
         65.1\pm 1.96\frac{2.8}{\sqrt{36}}=65.1\pm 0.9147.
-      </md>
+      </md></p>
       <p>So the interval is</p>
-      <md>
+      <p><md>
         (64.1853,66.0147).
-      </md>
+      </md></p>
     </example>
 
     <example xml:id="ex-z-ci-large-unknown">
       <title>Case 2: Large Sample, <m>\sigma</m> Unknown</title>
       <p>A random sample of 64 delivery times has mean <m>\overline{x}=72.4</m> minutes and sample standard deviation <m>s=12</m> minutes. Find a 95% confidence interval for the population mean.</p>
       <p>Because the sample is large, we use the z critical value and replace <m>\sigma</m> by <m>s</m>:</p>
-      <md>
+      <p><md>
         \overline{x}\pm z_{0.025}\frac{s}{\sqrt{n}}
         =72.4\pm 1.96\frac{12}{\sqrt{64}}
         =72.4\pm 2.94.
-      </md>
+      </md></p>
       <p>So the confidence interval is</p>
-      <md>
+      <p><md>
         (69.46,75.34).
-      </md>
+      </md></p>
     </example>
 
     <example xml:id="ex-z-ci-small-known">
       <title>Case 3: Small Sample, Population Normal, <m>\sigma</m> Known</title>
       <p>Assume the population distribution is normal. A sample of size 16 has mean <m>\overline{x}=50</m>, and the population standard deviation is known to be <m>\sigma=4</m>. Find a 90% confidence interval for the population mean.</p>
       <p>Because the population is normal and <m>\sigma</m> is known, we use a z interval:</p>
-      <md>
+      <p><md>
         \overline{x}\pm z_{0.05}\frac{\sigma}{\sqrt{n}}
         =50\pm 1.645\frac{4}{\sqrt{16}}
         =50\pm 1.645.
-      </md>
+      </md></p>
       <p>So the confidence interval is</p>
-      <md>
+      <p><md>
         (48.355,51.645).
-      </md>
+      </md></p>
     </example>
 
     <example xml:id="ex-t-ci-small-sample">
       <title>Case 4: Small Sample, Population Normal, <m>\sigma</m> Unknown</title>
       <p>Assume the population is normal. A sample of 11 observations has sample mean <m>\overline{x}=8.8636</m> and sample standard deviation <m>s=1.3223</m>. For a 95% confidence interval, we use <m>df=10</m> and <m>t_{0.025}[10]=2.228</m>.</p>
       <p>The margin of error is</p>
-      <md>
+      <p><md>
         2.228\frac{1.3223}{\sqrt{11}}\approx 0.8883.
-      </md>
+      </md></p>
       <p>So the confidence interval is</p>
-      <md>
+      <p><md>
         (8.8636-0.8883,\;8.8636+0.8883)=(7.9753,9.7519).
-      </md>
+      </md></p>
     </example>
 
     <p>Interpreting a confidence interval takes some care. Before we collect
@@ -432,11 +468,11 @@
 
     <exercise xml:id="ci-inline-ex-2">
       <p>A sample of size 49 has mean <m>\overline{x}=82</m>. Assume the population standard deviation is known to be 14.</p>
-      <ol>
+      <p><ol>
         <li><p>Write the formula for a 90% confidence interval for <m>\mu</m>.</p></li>
         <li><p>Find the margin of error.</p></li>
         <li><p>Find the interval.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch10-confidence-builder">
@@ -492,17 +528,17 @@
     products coming off an assembly line are defective? What proportion of
     students at a college work more than 20 hours per week? In settings like
     these, the parameter we want is the <term>population
-    proportion<idx><h>inference</h><h>population proportion</h></idx></term>,
+    proportion</term><idx><h>inference</h><h>population proportion</h></idx>,
     usually written <m>p</m>.</p>
 
     <p>If we take a random sample of size <m>n</m> and count the number of
     successes, say <m>X</m>, then a natural estimate of <m>p</m> is the
-    <term>sample proportion<idx><h>data</h><h>sample
-    proportion</h></idx></term>:</p>
+    <term>sample proportion</term><idx><h>data</h><h>sample
+    proportion</h></idx>:</p>
 
-    <md>
+    <p><md>
       \widehat{p}=\frac{X}{n}.
-    </md>
+    </md></p>
 
     <p>This section is built directly on the binomial model from
     <xref ref="sec-binomial-normal-approximation"/>. If each observation is a
@@ -510,60 +546,60 @@
     count <m>X</m> of successes in <m>n</m> independent trials has a binomial
     distribution:</p>
 
-    <md>
+    <p><md>
       X\sim B(n,p).
-    </md>
+    </md></p>
 
     <p>From the binomial chapter, for large enough <m>n</m> we can approximate
     this binomial count by a normal random variable with the same mean and
     standard deviation:</p>
 
-    <md>
+    <p><md>
       X \approx N(np,\sqrt{np(1-p)}),
-    </md>
+    </md></p>
 
     <p>provided the expected numbers of successes and failures are both at
     least about 5:</p>
 
-    <md>
+    <p><md>
       np\ge 5
       \qquad\text{and}\qquad
       n(1-p)\ge 5.
-    </md>
+    </md></p>
 
     <p>Now divide everything by <m>n</m>. Since <m>\widehat{p}=X/n</m>, the
     sample proportion is approximately normal with mean</p>
 
-    <md>
+    <p><md>
       \E(\widehat{p})=\E\left(\frac{X}{n}\right)=\frac{\E(X)}{n}=\frac{np}{n}=p
-    </md>
+    </md></p>
 
     <p>and standard deviation</p>
 
-    <md>
+    <p><md>
       \sigma_{\widehat{p}}
       =\frac{\sigma_X}{n}
       =\frac{\sqrt{np(1-p)}}{n}
       =\sqrt{\frac{p(1-p)}{n}}.
-    </md>
+    </md></p>
 
     <p>So for large samples,</p>
 
-    <md>
+    <p><md>
       \widehat{p}\approx N\left(p,\sqrt{\frac{p(1-p)}{n}}\right).
-    </md>
+    </md></p>
 
     <p>That is the key fact behind a one-proportion confidence interval. Once
     we standardize, we get the approximate z-statistic</p>
 
-    <md>
+    <p><md>
       \frac{\widehat{p}-p}{\sqrt{p(1-p)/n}} \approx N(0,1).
-    </md>
+    </md></p>
 
     <p>Let <m>\alpha=1-C</m> as before. Then the middle proportion <m>C</m> of
     the standard normal curve gives</p>
 
-    <md>
+    <p><md>
       P\left(
       -z_{\alpha/2}
       \lt
@@ -571,38 +607,38 @@
       \lt
       z_{\alpha/2}
       \right)\approx C.
-    </md>
+    </md></p>
 
     <p>Solving that inequality for <m>p</m> suggests the interval</p>
 
-    <md>
+    <p><md>
       \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{p(1-p)}{n}}.
-    </md>
+    </md></p>
 
     <p>There is one catch: the standard deviation still contains the unknown
     parameter <m>p</m>. In practice we plug in the sample proportion
     <m>\widehat{p}</m> in its place. That gives the usual large-sample
     confidence interval for a population proportion:</p>
 
-    <md>
+    <p><md>
       \widehat{p}\pm z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
-    </md>
+    </md></p>
 
     <p>So the margin of error for a proportion is</p>
 
-    <md>
+    <p><md>
       E=z_{\alpha/2}\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}.
-    </md>
+    </md></p>
 
     <p>This method works well when the sample is random or otherwise
     independent, and when the sample is large enough that the observed counts
     of successes and failures are both at least about 5:</p>
 
-    <md>
+    <p><md>
       n\widehat{p}\ge 5
       \qquad\text{and}\qquad
       n(1-\widehat{p})\ge 5.
-    </md>
+    </md></p>
 
     <p>If sampling is done without replacement from a finite population, a
     common rule of thumb is that the population should be at least 10 times as
@@ -617,30 +653,30 @@
 
       <p>Here <m>x=124</m>, <m>n=200</m>, so</p>
 
-      <md>
+      <p><md>
         \widehat{p}=\frac{124}{200}=0.62.
-      </md>
+      </md></p>
 
       <p>The large-sample conditions are met because</p>
 
-      <md>
+      <p><md>
         n\widehat{p}=200(0.62)=124
         \qquad\text{and}\qquad
         n(1-\widehat{p})=200(0.38)=76,
-      </md>
+      </md></p>
 
       <p>and both numbers are much larger than 5. For 95% confidence,
       <m>z_{0.025}=1.96</m>. The margin of error is</p>
 
-      <md>
+      <p><md>
         E=1.96\sqrt{\frac{0.62(0.38)}{200}}\approx 0.0673.
-      </md>
+      </md></p>
 
       <p>So the confidence interval is</p>
 
-      <md>
+      <p><md>
         0.62\pm 0.0673=(0.5527,0.6873).
-      </md>
+      </md></p>
 
       <p>So we estimate that between about 55.3% and 68.7% of all students
       support the tutoring center.</p>
@@ -654,29 +690,29 @@
 
       <p>First compute the sample proportion:</p>
 
-      <md>
+      <p><md>
         \widehat{p}=\frac{18}{400}=0.045.
-      </md>
+      </md></p>
 
       <p>The large-sample conditions are satisfied because</p>
 
-      <md>
+      <p><md>
         n\widehat{p}=400(0.045)=18
         \qquad\text{and}\qquad
         n(1-\widehat{p})=400(0.955)=382.
-      </md>
+      </md></p>
 
       <p>For 90% confidence, <m>z_{0.05}=1.645</m>. The margin of error is</p>
 
-      <md>
+      <p><md>
         E=1.645\sqrt{\frac{0.045(0.955)}{400}}\approx 0.0170.
-      </md>
+      </md></p>
 
       <p>So the confidence interval is</p>
 
-      <md>
+      <p><md>
         0.045\pm 0.0170=(0.0280,0.0620).
-      </md>
+      </md></p>
 
       <p>That puts the defect rate at about 2.8% to 6.2%.</p>
     </example>
@@ -691,11 +727,11 @@
     <exercise xml:id="ci-inline-ex-3">
       <p>In a random sample of 150 customers, 57 say they used a store coupon
       that week.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>\widehat{p}</m>.</p></li>
         <li><p>Check whether the large-sample conditions for a one-proportion z-interval are met.</p></li>
         <li><p>Write the formula for a 95% confidence interval for <m>p</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch10-proportion-builder">
@@ -751,18 +787,18 @@
     manufacturer may want to estimate how much bottle fills vary. A coach may
     care about the variability of race times, not just the average time. In
     problems like these, the parameter of interest is the <term>population
-    variance<idx><h>inference</h><h>population variance</h></idx></term>
+    variance</term><idx><h>inference</h><h>population variance</h></idx>
     <m>\sigma^2</m>, or equivalently the population standard deviation
     <m>\sigma</m>.</p>
 
     <p>From <xref ref="sec-variance-sd-zscores"/>, the <term>sample
-    variance<idx><h>summaries</h><h>sample variance</h></idx></term> is based
+    variance</term><idx><h>summaries</h><h>sample variance</h></idx> is based
     on squared deviations from the sample mean. Before the data are collected,
     the random sample variance is</p>
 
-    <md>
+    <p><md>
       S^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\overline{X})^2.
-    </md>
+    </md></p>
 
     <p>After the sample is observed, its value is written <m>s^2</m>.</p>
 
@@ -771,54 +807,54 @@
     <m>X_1,\ldots,X_n</m> is a random sample from a normal population
     <m>N(\mu,\sigma)</m>. If we standardize each observation,</p>
 
-    <md>
+    <p><md>
       Z_i=\frac{X_i-\mu}{\sigma},
-    </md>
+    </md></p>
 
     <p>then each <m>Z_i</m> is standard normal. A sum of squares of
     independent standard normal random variables has a <term>chi-square
-    distribution<idx><h>inference</h><h>chi-square
-    distribution</h></idx></term>.</p>
+    distribution</term><idx><h>inference</h><h>chi-square
+    distribution</h></idx>.</p>
 
     <p>If the population mean <m>\mu</m> were known, then</p>
 
-    <md>
+    <p><md>
       \sum_{i=1}^n\left(\frac{X_i-\mu}{\sigma}\right)^2\sim \chi^2_n.
-    </md>
+    </md></p>
 
     <p>But in practice <m>\mu</m> is usually unknown, so we replace it by the
     sample mean <m>\overline{X}</m>. That uses up one <term>degree of
-    freedom<idx><h>inference</h><h>degrees of freedom</h></idx></term>,
+    freedom</term><idx><h>inference</h><h>degrees of freedom</h></idx>,
     because once <m>n-1</m> of the deviations
     <m>X_i-\overline{X}</m> are known, the last one is forced by the fact that
     they add up to 0. So</p>
 
-    <md>
+    <p><md>
       \sum_{i=1}^n\left(\frac{X_i-\overline{X}}{\sigma}\right)^2\sim \chi^2_{n-1}.
-    </md>
+    </md></p>
 
     <p>Since</p>
 
-    <md>
+    <p><md>
       \sum_{i=1}^n (X_i-\overline{X})^2=(n-1)S^2,
-    </md>
+    </md></p>
 
     <p>the key result becomes</p>
 
-    <md>
+    <p><md>
       \frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}.
-    </md>
+    </md></p>
 
     <p>That one fact is what makes a confidence interval for
     <m>\sigma^2</m> possible.</p>
 
     <p>The assumptions need to be stated carefully.</p>
 
-    <ul>
+    <p><ul>
       <li><p>The data should come from a random sample or a similarly independent sampling process.</p></li>
       <li><p>The observations should be independent. If sampling is done without replacement from a finite population, a common rule of thumb is that the population should be at least 10 times as large as the sample.</p></li>
       <li><p>The population itself should be normal. This is the crucial assumption.</p></li>
-    </ul>
+    </ul></p>
 
     <p>That last point matters more here than it did for intervals about a
     mean. The CLT helps sample means become approximately normal for large
@@ -831,7 +867,7 @@
     <m>\chi^2_{\alpha}[n-1]</m> leaves right-tail area <m>\alpha</m> for a
     chi-square distribution with <m>n-1</m> degrees of freedom, we have</p>
 
-    <md>
+    <p><md>
       P\left(
       \chi^2_{1-\alpha/2}[n-1]
       \le
@@ -839,27 +875,27 @@
       \le
       \chi^2_{\alpha/2}[n-1]
       \right)=C.
-    </md>
+    </md></p>
 
     <p>Solving that inequality for <m>\sigma^2</m> gives the confidence
     interval for the population variance:</p>
 
-    <md>
+    <p><md>
       \left(
       \frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]},
       \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}
       \right).
-    </md>
+    </md></p>
 
     <p>If we want an interval for the population standard deviation instead,
     we simply take square roots of both endpoints:</p>
 
-    <md>
+    <p><md>
       \left(
       \sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}[n-1]}},
       \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}[n-1]}}
       \right).
-    </md>
+    </md></p>
 
     <example xml:id="ex-ci-variance-delivery-times">
       <title>An Interval for Variation in Delivery Times</title>
@@ -872,29 +908,29 @@
       <m>n-1=11</m>. For 95% confidence, <m>\alpha=0.05</m>. From
       <xref ref="app-chi-square-table"/>,</p>
 
-      <md>
+      <p><md>
         \chi^2_{0.025}[11]\approx 21.920
         \qquad\text{and}\qquad
         \chi^2_{0.975}[11]\approx 3.816.
-      </md>
+      </md></p>
 
       <p>Since <m>s^2=16</m>, the variance interval is</p>
 
-      <md>
+      <p><md>
         \left(
         \frac{11(16)}{21.920},
         \frac{11(16)}{3.816}
         \right)
         \approx
         (8.03,46.12).
-      </md>
+      </md></p>
 
       <p>Now take square roots to get an interval for the population standard
       deviation:</p>
 
-      <md>
+      <p><md>
         (\sqrt{8.03},\sqrt{46.12})\approx (2.83,6.79).
-      </md>
+      </md></p>
 
       <p>So a reasonable estimate for the route-to-route spread is that the
       population standard deviation is between about 2.83 and 6.79 minutes.</p>
@@ -917,11 +953,11 @@
     <exercise xml:id="ci-inline-ex-4">
       <p>Assume a population is normal. A random sample of size 16 has sample
       variance <m>s^2=9</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>What are the degrees of freedom?</p></li>
         <li><p>Write the formula for a 90% confidence interval for <m>\sigma^2</m>.</p></li>
         <li><p>Write the corresponding interval for <m>\sigma</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch10-variance-builder">
@@ -975,39 +1011,39 @@
     <p>This section returns to the z-interval for a population mean. In that
     setting, the margin of error is</p>
 
-    <md>
+    <p><md>
       E=z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
-    </md>
+    </md></p>
 
     <p>This formula shows two basic truths:</p>
 
-    <ul>
+    <p><ul>
       <li><p>Higher confidence means a larger critical value and therefore a larger margin of error.</p></li>
       <li><p>Larger samples make the denominator bigger and therefore shrink the margin of error.</p></li>
-    </ul>
+    </ul></p>
 
     <p>If we want the margin of error to be at most some target value <m>E</m>, then we solve for <m>n</m>:</p>
 
-    <md>
+    <p><md>
       n\ge \left(\frac{z_{\alpha/2}\sigma}{E}\right)^2.
-    </md>
+    </md></p>
 
     <p>Since sample size must be a whole number, we always round up.</p>
 
     <example xml:id="ex-sample-size-women-height">
       <title>Finding a Required Sample Size</title>
-      
+
       <p>Suppose we want to estimate the mean height of women with 98%
       confidence and margin of error at most 0.5 inches. Assume <m>\sigma=2.8</m>.</p>
-      
+
       <p>Here <m>\alpha=0.02</m>, so <m>z_{\alpha/2}=z_{0.01}=2.326</m>. Therefore</p>
-      <md>
+      <p><md>
         n\ge \left(\frac{2.326(2.8)}{0.5}\right)^2\approx 169.67.
-      </md>
+      </md></p>
       <p>We round up, so the least acceptable sample size is</p>
-      <md>
+      <p><md>
         n=170.
-      </md>
+      </md></p>
     </example>
 
     <p>This is one of the most practical formulas in the course. It tells
@@ -1058,60 +1094,39 @@
     </activity>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch10-exercises">
 
-    <p>Confidence intervals are built on the sampling behavior of sample means
-    and sample proportions, and in one important case on sample variances as
-    well.</p>
-
-    <ul>
-      <li><p>The sampling distribution of <m>\overline{X}</m> has mean <m>\mu</m> and standard deviation <m>\sigma/\sqrt{n}</m>.</p></li>
-      <li><p>The Central Limit Theorem says that for large samples, the sample mean is approximately normal.</p></li>
-      <li><p>A confidence interval estimates a population parameter by giving a range of plausible values.</p></li>
-      <li><p>Its basic form is point estimate plus or minus margin of error.</p></li>
-      <li><p>For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.</p></li>
-      <li><p>If <m>X\sim B(n,p)</m>, then for large samples the binomial model leads to the approximation <m>\widehat{p}\approx N\left(p,\sqrt{p(1-p)/n}\right)</m>.</p></li>
-      <li><p>A large-sample confidence interval for a population proportion is <m>\widehat{p}\pm z_{\alpha/2}\sqrt{\widehat{p}(1-\widehat{p})/n}</m>.</p></li>
-      <li><p>For a normal population, <m>\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}</m>, which leads to a confidence interval for the population variance and standard deviation.</p></li>
-      <li><p>The chi-square interval for variance requires a normal population; large sample size by itself is not the main justification.</p></li>
-      <li><p>Sample-size formulas come from solving the margin-of-error formula for <m>n</m>.</p></li>
-    </ul>
-
-    <p>The next chapter turns estimation into decision-making. Instead of
-    asking which parameter values are plausible, we will ask whether the
-    data give strong enough evidence to reject a claimed value.</p>
-  </conclusion>
-
-  <exercises xml:id="ch10-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch10-ex-1">
       <p>A population has mean 24 and standard deviation 9. A random sample of size 81 is taken.</p>
-      <ol>
+      <p><ol>
         <li><p>Find the mean of <m>\overline{X}</m>.</p></li>
         <li><p>Find the standard deviation of <m>\overline{X}</m>.</p></li>
         <li><p>Use the CLT to state an approximate distribution for <m>\overline{X}</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-2">
       <p>A sample of size 64 has mean <m>\overline{x}=41.5</m>. Assume the
-      population standard deviation is known to be 8.</p> <ol>
+      population standard deviation is known to be 8.</p> <p><ol>
         <li><p>Find a 95% confidence interval for the population mean.</p></li>
         <li><p>Find the margin of error.</p></li>
         <li><p>Explain what the 95% confidence level means.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-3">
       <p>Assume the population is normal. A sample of size 16 has mean
       <m>\overline{x}=12.4</m> and sample standard deviation <m>s=2.0</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Write the form of the 95% t-interval for the mean.</p></li>
         <li><p>What are the degrees of freedom?</p></li> <li><p>Why is a t
         critical value used instead of a z critical value?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-4">
@@ -1122,61 +1137,86 @@
       <p>Explain how the confidence-interval formula for a population
       proportion comes from the normal approximation to a binomial random
       variable.</p>
-      <ol>
+      <p><ol>
         <li><p>Start with <m>X\sim B(n,p)</m> and write its approximate normal model for large <m>n</m>.</p></li>
         <li><p>Use <m>\widehat{p}=X/n</m> to find the approximate mean and standard deviation of <m>\widehat{p}</m>.</p></li>
         <li><p>Write the resulting z-based confidence-interval formula for <m>p</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-6">
       <p>In a random sample of 250 voters, 140 say they support a local park
       bond measure.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>\widehat{p}</m>.</p></li>
         <li><p>Check whether the large-sample conditions are satisfied.</p></li>
         <li><p>Find a 95% confidence interval for the population proportion of voters who support the measure.</p></li>
         <li><p>Interpret the interval in context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-7">
       <p>A manufacturer samples 80 batteries and finds that 6 are defective.</p>
-      <ol>
+      <p><ol>
         <li><p>Is a one-proportion z-interval appropriate here? Check the large-sample conditions.</p></li>
         <li><p>If it is appropriate, find a 90% confidence interval for the population defect proportion.</p></li>
         <li><p>If it is not appropriate, explain what goes wrong with the normal approximation.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-8">
       <p>Assume a normal population. A random sample of size 12 has sample
       standard deviation <m>s=4</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Find the degrees of freedom.</p></li>
         <li><p>Find a 95% confidence interval for the population variance <m>\sigma^2</m>.</p></li>
         <li><p>Convert the result to a 95% confidence interval for the population standard deviation <m>\sigma</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-9">
       <p>Explain carefully why the chi-square distribution appears in a
       confidence interval for a population variance.</p>
-      <ol>
+      <p><ol>
         <li><p>Start with a random sample from a normal population and standardize each observation.</p></li>
         <li><p>Explain why squaring and adding leads to a chi-square distribution.</p></li>
         <li><p>Explain why replacing <m>\mu</m> by <m>\overline{X}</m> changes the degrees of freedom from <m>n</m> to <m>n-1</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch10-ex-10">
       <p>State the assumptions for using a chi-square confidence interval for
       the population variance.</p>
-      <ol>
+      <p><ol>
         <li><p>Why is independence needed?</p></li>
         <li><p>Why is normality the crucial assumption?</p></li>
         <li><p>Why does a large sample not rescue this method in the same way the CLT helps intervals for a mean?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>Confidence intervals are built on the sampling behavior of sample means
+    and sample proportions, and in one important case on sample variances as
+    well.</p>
+
+    <p><ul>
+      <li><p>The sampling distribution of <m>\overline{X}</m> has mean <m>\mu</m> and standard deviation <m>\sigma/\sqrt{n}</m>.</p></li>
+      <li><p>The Central Limit Theorem says that for large samples, the sample mean is approximately normal.</p></li>
+      <li><p>A confidence interval estimates a population parameter by giving a range of plausible values.</p></li>
+      <li><p>Its basic form is point estimate plus or minus margin of error.</p></li>
+      <li><p>For small samples from a normal population with unknown standard deviation, we use t critical values instead of z critical values.</p></li>
+      <li><p>If <m>X\sim B(n,p)</m>, then for large samples the binomial model leads to the approximation <m>\widehat{p}\approx N\left(p,\sqrt{p(1-p)/n}\right)</m>.</p></li>
+      <li><p>A large-sample confidence interval for a population proportion is <m>\widehat{p}\pm z_{\alpha/2}\sqrt{\widehat{p}(1-\widehat{p})/n}</m>.</p></li>
+      <li><p>For a normal population, <m>\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}</m>, which leads to a confidence interval for the population variance and standard deviation.</p></li>
+      <li><p>The chi-square interval for variance requires a normal population; large sample size by itself is not the main justification.</p></li>
+      <li><p>Sample-size formulas come from solving the margin-of-error formula for <m>n</m>.</p></li>
+    </ul></p>
+
+    <p>The next chapter turns estimation into decision-making. Instead of
+    asking which parameter values are plausible, we will ask whether the
+    data give strong enough evidence to reject a claimed value.</p>
+  </conclusion>
 </chapter>

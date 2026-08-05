@@ -8,10 +8,6 @@
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
   <title>Backmatter</title>
 
-  <colophon>
-    <p> This book was authored in <pretext />. </p>
-  </colophon>
-
   <xi:include href="./app-sampling-practice.ptx" />
   <xi:include href="./app-binomial-table.ptx" />
   <xi:include href="./app-normal-table.ptx" />
@@ -23,4 +19,8 @@
     <title>Index</title>
     <index-list/>
   </index>
+  <colophon>
+    <p>This book was authored in <pretext /> and developed collaboratively over time.</p>
+    <p>The HTML version uses the <c>denver</c> theme.</p>
+  </colophon>
 </backmatter>

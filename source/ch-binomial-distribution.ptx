@@ -4,24 +4,24 @@
   <title>Binomial Distributions</title>
 
   <introduction>
-    <p>The <term>binomial distribution<idx><h>probability</h><h>binomial distribution</h></idx></term> is probably the most common discrete probability distribution in an introductory statistics course. It appears whenever we repeat the same yes-or-no kind of trial and count how many successes occur. Did a shot go in or not? Did a customer buy the product or not? Did a tested item pass inspection or fail?</p>
+    <p>The <term>binomial distribution</term><idx><h>probability</h><h>binomial distribution</h></idx> is probably the most common discrete probability distribution in an introductory statistics course. It appears whenever we repeat the same yes-or-no kind of trial and count how many successes occur. Did a shot go in or not? Did a customer buy the product or not? Did a tested item pass inspection or fail?</p>
     <p>This chapter explains where the binomial distribution comes from, how to compute its probabilities, how to use its cumulative distribution, how to find its mean and standard deviation, and when a binomial model starts to look like a normal one. Along the way we will keep one main idea in view: a binomial random variable is just a count of successes in repeated independent trials.</p>
   </introduction>
 
   <section xml:id="sec-bernoulli-binomial">
     <title>Bernoulli Trials and Binomial Coefficients</title>
 
-    <p>A <term>Bernoulli trial<idx><h>probability</h><h>Bernoulli trial</h></idx></term> is an experiment with exactly two outcomes, which we usually call <em>success</em> and <em>failure</em>. A made free throw versus a missed free throw is one example. A person who does or does not respond to a survey is another.</p>
+    <p>A <term>Bernoulli trial</term><idx><h>probability</h><h>Bernoulli trial</h></idx> is an experiment with exactly two outcomes, which we usually call <em>success</em> and <em>failure</em>. A made free throw versus a missed free throw is one example. A person who does or does not respond to a survey is another.</p>
 
-    <p>If a single Bernoulli trial has success probability <m>p</m>, then the corresponding <term>Bernoulli random variable<idx><h>probability</h><h>Bernoulli random variable</h></idx></term> <m>Y</m> is defined by</p>
+    <p>If a single Bernoulli trial has success probability <m>p</m>, then the corresponding <term>Bernoulli random variable</term><idx><h>probability</h><h>Bernoulli random variable</h></idx> <m>Y</m> is defined by</p>
 
-    <md>
+    <p><md>
       Y=
       \begin{cases}
         1 &amp; \text{if the trial is a success},\\
         0 &amp; \text{if the trial is a failure}.
       \end{cases}
-    </md>
+    </md></p>
 
     <p>So <m>P(Y=1)=p</m> and <m>P(Y=0)=1-p</m>.</p>
 
@@ -29,20 +29,20 @@
 
     <p>A situation is binomial when these four conditions hold:</p>
 
-    <ul>
+    <p><ul>
       <li><p>There is a fixed number <m>n</m> of trials.</p></li>
       <li><p>Each trial has only two outcomes: success or failure.</p></li>
       <li><p>The trials are independent.</p></li>
       <li><p>The probability of success is the same on every trial.</p></li>
-    </ul>
+    </ul></p>
 
     <exercise xml:id="binom-inline-ex-1">
       <p>Decide whether each situation can reasonably be modeled by a binomial random variable.</p>
-      <ol>
+      <p><ol>
         <li><p>A student guesses on 8 true-false questions and we count the number answered correctly.</p></li>
         <li><p>Five cards are drawn without replacement from a standard deck and we count the number of hearts.</p></li>
         <li><p>A basketball player takes 12 free throws and we count the number made, assuming the player's success probability stays the same from shot to shot.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch8-binomial-or-not">
@@ -89,20 +89,20 @@
       </task>
     </activity>
 
-    <p>To compute binomial probabilities, we also need the <term>binomial coefficient<idx><h>probability</h><h>binomial coefficient</h></idx></term></p>
+    <p>To compute binomial probabilities, we also need the <term>binomial coefficient</term><idx><h>probability</h><h>binomial coefficient</h></idx></p>
 
-    <md>
+    <p><md>
       \binom{n}{k}=\frac{n!}{k!(n-k)!},
-    </md>
+    </md></p>
 
-    <p>which is read “<m>n</m> choose <m>k</m>.” It counts the number of ways to choose <m>k</m> objects from <m>n</m> objects, without regard to order.</p>
+    <p>which is read <q><m>n</m> choose <m>k</m>.</q> It counts the number of ways to choose <m>k</m> objects from <m>n</m> objects, without regard to order.</p>
 
     <example xml:id="ex-binom-coefficient">
       <title>Computing a Binomial Coefficient</title>
       <p>The number of ways to choose 3 students from a group of 5 is</p>
-      <md>
+      <p><md>
         \binom{5}{3}=\frac{5!}{3!\,2!}=\frac{5\cdot 4}{2\cdot 1}=10.
-      </md>
+      </md></p>
     </example>
   </section>
 
@@ -111,21 +111,21 @@
 
     <p>If <m>X</m> counts the number of successes in <m>n</m> independent Bernoulli trials with success probability <m>p</m>, then we write</p>
 
-    <md>
+    <p><md>
       X\sim B(n,p).
-    </md>
+    </md></p>
 
     <p>The possible values of <m>X</m> are</p>
 
-    <md>
+    <p><md>
       0,1,2,\dots,n.
-    </md>
+    </md></p>
 
     <p>The probability that exactly <m>k</m> successes occur is</p>
 
-    <md>
+    <p><md>
       P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
-    </md>
+    </md></p>
 
     <p>This formula makes sense for a simple reason. A particular sequence with exactly <m>k</m> successes has probability <m>p^k(1-p)^{n-k}</m>. Then <m>\binom{n}{k}</m> counts how many such sequences there are.</p>
 
@@ -133,13 +133,13 @@
       <title>Exactly Three Goals in Five Penalty Kicks</title>
       <p>Suppose a soccer player makes a penalty kick with probability <m>0.75</m>. Let <m>X</m> be the number of goals in 5 penalty kicks. Then <m>X\sim B(5,0.75)</m>.</p>
       <p>The probability of exactly 3 goals is</p>
-      <md>
+      <p><md>
         P(X=3)=\binom{5}{3}(0.75)^3(0.25)^2.
-      </md>
+      </md></p>
       <p>Since <m>\binom{5}{3}=10</m>,</p>
-      <md>
+      <p><md>
         P(X=3)=10(0.75)^3(0.25)^2\approx 0.2637.
-      </md>
+      </md></p>
       <p>So the chance of scoring exactly 3 times is about 0.264.</p>
     </example>
 
@@ -147,51 +147,51 @@
       <title>Using the Complement</title>
       <p>A factory knows that 2% of the items it produces are defective. Suppose 20 items are selected independently, and let <m>X</m> be the number of defective items. Then <m>X\sim B(20,0.02)</m>.</p>
       <p>The probability of getting at least one defective item is easier to compute by using the complement:</p>
-      <md>
+      <p><md>
         P(X\ge 1)=1-P(X=0)=1-\binom{20}{0}(0.02)^0(0.98)^{20}=1-(0.98)^{20}\approx 0.3324.
-      </md>
+      </md></p>
     </example>
 
-    <p>The <term>cumulative distribution function<idx><h>probability</h><h>cumulative distribution function</h></idx></term>, or CDF, of a binomial random variable is</p>
+    <p>The <term>cumulative distribution function</term><idx><h>probability</h><h>cumulative distribution function</h></idx>, or CDF, of a binomial random variable is</p>
 
-    <md>
+    <p><md>
       F_X(k)=P(X\le k).
-    </md>
+    </md></p>
 
     <p>For a binomial random variable, the CDF is found by adding the probabilities from 0 up to <m>k</m>.</p>
 
     <example xml:id="ex-binom-cdf">
       <title>At Most Three Goals</title>
       <p>Continue with <m>X\sim B(5,0.75)</m>. Then</p>
-      <md>
+      <p><md>
         F_X(3)=P(X\le 3)=P(X=0)+P(X=1)+P(X=2)+P(X=3).
-      </md>
+      </md></p>
       <p>Computing the four terms gives</p>
-      <md>
+      <p><md>
         F_X(3)\approx 0.3672.
-      </md>
+      </md></p>
       <p>So the probability of scoring at most 3 goals in 5 kicks is about 0.367.</p>
     </example>
 
-    <p>The CDF is useful because many probability questions can be rewritten in terms of “at most.” For example,</p>
+    <p>The CDF is useful because many probability questions can be rewritten in terms of <q>at most.</q> For example,</p>
 
-    <md>
+    <p><md>
       P(X\ge 3)=1-P(X\le 2)=1-F_X(2),
-    </md>
+    </md></p>
 
     <p>and if <m>a&lt;b</m>, then</p>
 
-    <md>
+    <p><md>
       P(a&lt;X\le b)=F_X(b)-F_X(a).
-    </md>
+    </md></p>
 
     <exercise xml:id="binom-inline-ex-2">
       <p>A multiple-choice quiz has 6 questions, each with 4 answer choices, and a student guesses on every question. Let <m>X</m> be the number answered correctly.</p>
-      <ol>
+      <p><ol>
         <li><p>State the values of <m>n</m> and <m>p</m>.</p></li>
         <li><p>Write a formula for <m>P(X=2)</m>.</p></li>
         <li><p>Write a formula for <m>P(X\le 1)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch8-quiz-guessing">
@@ -246,33 +246,33 @@
 
     <p>Think of a binomial random variable as a sum of Bernoulli random variables:</p>
 
-    <md>
+    <p><md>
       X=Y_1+Y_2+\cdots+Y_n,
-    </md>
+    </md></p>
 
     <p>where each <m>Y_i</m> equals 1 for success and 0 for failure. For one Bernoulli random variable,</p>
 
-    <md>
+    <p><md>
       \E(Y_i)=p
       \qquad\text{and}\qquad
       \var(Y_i)=p(1-p).
-    </md>
+    </md></p>
 
     <p>Because expectation adds and independent variances add, a binomial random variable <m>X\sim B(n,p)</m> satisfies</p>
 
-    <md>
+    <p><md>
       \E(X)=np,
-    </md>
+    </md></p>
 
-    <md>
+    <p><md>
       \var(X)=np(1-p),
-    </md>
+    </md></p>
 
-    <p>and therefore the <term>standard deviation<idx><h>probability</h><h>standard deviation of a binomial distribution</h></idx></term> is</p>
+    <p>and therefore the <term>standard deviation</term><idx><h>probability</h><h>standard deviation of a binomial distribution</h></idx> is</p>
 
-    <md>
+    <p><md>
       \sigma_X=\sqrt{np(1-p)}.
-    </md>
+    </md></p>
 
     <p>The mean <m>np</m> gives the long-run average number of successes. The standard deviation tells us how much the actual count typically varies around that average.</p>
 
@@ -280,17 +280,17 @@
       <title>Free Throws</title>
       <p>A player makes free throws with probability <m>0.8</m>. Suppose the player takes 20 free throws, and let <m>X</m> be the number made. Then <m>X\sim B(20,0.8)</m>.</p>
       <p>The mean number of made shots is</p>
-      <md>
+      <p><md>
         \E(X)=np=20(0.8)=16.
-      </md>
+      </md></p>
       <p>The variance is</p>
-      <md>
+      <p><md>
         \var(X)=20(0.8)(0.2)=3.2,
-      </md>
+      </md></p>
       <p>so the standard deviation is</p>
-      <md>
+      <p><md>
         \sigma_X=\sqrt{3.2}\approx 1.789.
-      </md>
+      </md></p>
       <p>In other words, over many such 20-shot sessions, the player would average about 16 made shots, with typical variation of about 1.8 shots.</p>
     </example>
 
@@ -354,19 +354,19 @@
 
     <p>When <m>n</m> is fairly large and <m>p</m> is not too close to 0 or 1, the graph of a binomial distribution begins to look bell-shaped instead of strongly skewed. A common rule of thumb is that the binomial model <m>B(n,p)</m> is reasonably approximated by a normal distribution when</p>
 
-    <md>
+    <p><md>
       np\ge 5
       \qquad\text{and}\qquad
       n(1-p)\ge 5.
-    </md>
+    </md></p>
 
     <p>These conditions say that we expect at least about 5 successes and at least about 5 failures. If one side is too small, then the binomial distribution is usually too lopsided for a normal curve to match it well.</p>
 
     <p>When the rule of thumb is satisfied, we match the binomial model with the normal model</p>
 
-    <md>
+    <p><md>
       B(n,p)\approx N(np,\sqrt{np(1-p)}).
-    </md>
+    </md></p>
 
     <p>In other words, we use a normal distribution with the same mean <m>np</m> and the same standard deviation <m>\sqrt{np(1-p)}</m> as the binomial distribution. So the formulas from the previous section are exactly what make this approximation possible.</p>
 
@@ -375,23 +375,23 @@
     <example xml:id="ex-binom-normal-approximation">
       <title>A Binomial Model That Looks Nearly Normal</title>
       <p>Let <m>X\sim B(20,0.5)</m>. Then</p>
-      <md>
+      <p><md>
         np=20(0.5)=10
         \qquad\text{and}\qquad
         \sqrt{np(1-p)}=\sqrt{20(0.5)(0.5)}=\sqrt{5}\approx 2.236.
-      </md>
+      </md></p>
       <p>Since <m>np=10</m> and <m>n(1-p)=10</m>, the rule of thumb is satisfied. So <m>X</m> should be approximated reasonably well by the normal model</p>
-      <md>
+      <p><md>
         N(10,\sqrt{5}).
-      </md>
+      </md></p>
       <p><xref ref="fig-binom-normal-approximation"/> overlays a histogram-style plot of the binomial probabilities with the matching normal curve. The bars rise toward the middle and then fall in a nearly symmetric way, which is exactly the shape we want before using a normal curve as an approximation.</p>
     </example>
 
     <figure xml:id="fig-binom-normal-approximation">
       <caption>The binomial distribution <m>B(20,0.5)</m> and the normal curve <m>N(10,\sqrt{5})</m></caption>
       <image width="82%" margins="9%">
-        <shortdescription>A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red bell-shaped curve over them. The curve is centered at 10 and closely follows the overall shape of the bars.</shortdescription>
-        <description>The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.</description>
+        <shortdescription>A probability plot with light bars for the binomial distribution B(20,0.5) at the integers 0 through 20 and a smooth red.</shortdescription>
+        <description><p>The graphic compares two models on the same axes. Light shaded bars show the probabilities for the binomial distribution B(20,0.5) at each whole-number value from 0 through 20, with the tallest bars near 10 and shorter bars toward 0 and 20. A smooth red bell-shaped curve for the normal distribution N(10,square root of 5) is drawn on top. The red curve is centered at 10 and tracks the height pattern of the binomial bars closely, showing why the normal model is a good visual approximation here.</p></description>
         <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
@@ -435,10 +435,10 @@
 
     <exercise xml:id="binom-inline-ex-4">
       <p>For each binomial model below, decide whether a normal approximation is reasonable. If it is, write the matching normal model.</p>
-      <ol>
+      <p><ol>
         <li><p><m>X\sim B(40,0.3)</m></p></li>
         <li><p><m>Y\sim B(15,0.1)</m></p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch8-normal-preview">
@@ -464,43 +464,29 @@
     </activity>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch8-exercises">
 
-    <p>The binomial distribution models a very common kind of random process: repeated independent trials with the same success probability. Because of that, it shows up all over statistics, quality control, polling, biology, and the social sciences. It also gives us a first glimpse of why bell-shaped normal curves will matter in the next chapter.</p>
-
-    <ul>
-      <li><p>A binomial random variable counts the number of successes in <m>n</m> independent Bernoulli trials.</p></li>
-      <li><p>The binomial setting requires a fixed number of trials, two outcomes per trial, independence, and a constant success probability <m>p</m>.</p></li>
-      <li><p>The probability formula is <m>P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}</m>.</p></li>
-      <li><p>The binomial coefficient <m>\binom{n}{k}</m> counts the number of ways to place <m>k</m> successes among <m>n</m> trials.</p></li>
-      <li><p>The CDF is <m>F_X(k)=P(X\le k)</m>, and it helps with “at most,” “at least,” and interval probabilities.</p></li>
-      <li><p>For <m>X\sim B(n,p)</m>, the mean is <m>np</m>, the variance is <m>np(1-p)</m>, and the standard deviation is <m>\sqrt{np(1-p)}</m>.</p></li>
-      <li><p>When <m>np\ge 5</m> and <m>n(1-p)\ge 5</m>, the binomial distribution is often close enough to a normal model with the same mean and standard deviation: <m>N(np,\sqrt{np(1-p)})</m>.</p></li>
-    </ul>
-
-    <p>Once you can recognize a binomial situation, most calculations reduce to choosing the right value of <m>n</m>, the right value of <m>p</m>, and the right way to phrase the event you want. The normal approximation is the bridge from this chapter to the next one, where that bell-shaped model becomes a major tool.</p>
-  </conclusion>
-
-  <exercises xml:id="ch8-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch8-ex-1">
       <p>Decide whether each setting is binomial. If it is, state <m>n</m> and <m>p</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>A fair coin is flipped 12 times and the number of heads is counted.</p></li>
         <li><p>Four cards are drawn without replacement from a deck and the number of aces is counted.</p></li>
         <li><p>A machine fills 15 bottles, and the number of bottles that pass inspection is counted, assuming the probability of passing stays the same from bottle to bottle.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-2">
       <p>Let <m>X\sim B(8,0.4)</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>P(X=3)</m>.</p></li>
         <li><p>Find <m>P(X=0)</m>.</p></li>
         <li><p>Find <m>P(X\ge 1)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-3">
@@ -509,11 +495,11 @@
 
     <exercise xml:id="ch8-ex-4">
       <p>A quiz has 10 true-false questions, and a student guesses on every question. Let <m>X</m> be the number answered correctly.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>P(X\le 3)</m>.</p></li>
         <li><p>Find <m>P(X\ge 8)</m>.</p></li>
         <li><p>Find <m>P(4\le X\le 7)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-5">
@@ -522,33 +508,51 @@
 
     <exercise xml:id="ch8-ex-6">
       <p>In a certain town, 18% of households have a dog. Suppose 20 households are selected at random, and let <m>X</m> be the number that have a dog.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>P(X=5)</m>.</p></li>
         <li><p>Find <m>P(X\le 2)</m>.</p></li>
         <li><p>What is the expected number of selected households that have a dog?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-7">
       <p>For each binomial model below, decide whether a normal approximation is reasonable. Explain your decision using <m>np</m> and <m>n(1-p)</m>.</p>
-      <ol>
+      <p><ol>
         <li><p><m>B(12,0.2)</m></p></li>
         <li><p><m>B(30,0.4)</m></p></li>
         <li><p><m>B(50,0.95)</m></p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-8">
       <p>Let <m>X\sim B(40,0.3)</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Show that a normal approximation is reasonable.</p></li>
         <li><p>Find the mean and standard deviation of <m>X</m>.</p></li>
         <li><p>Write the matching normal model.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch8-ex-9">
       <p>Explain why <m>B(20,0.5)</m> should be approximated better by a normal curve than <m>B(20,0.1)</m>, even though both models have the same value of <m>n</m>. In your explanation, discuss both the rule of thumb and the shape of the distribution.</p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>The binomial distribution models a very common kind of random process: repeated independent trials with the same success probability. Because of that, it shows up all over statistics, quality control, polling, biology, and the social sciences. It also gives us a first glimpse of why bell-shaped normal curves will matter in the next chapter.</p>
+
+    <p><ul>
+      <li><p>A binomial random variable counts the number of successes in <m>n</m> independent Bernoulli trials.</p></li>
+      <li><p>The binomial setting requires a fixed number of trials, two outcomes per trial, independence, and a constant success probability <m>p</m>.</p></li>
+      <li><p>The probability formula is <m>P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}</m>.</p></li>
+      <li><p>The binomial coefficient <m>\binom{n}{k}</m> counts the number of ways to place <m>k</m> successes among <m>n</m> trials.</p></li>
+      <li><p>The CDF is <m>F_X(k)=P(X\le k)</m>, and it helps with <q>at most,</q> <q>at least,</q> and interval probabilities.</p></li>
+      <li><p>For <m>X\sim B(n,p)</m>, the mean is <m>np</m>, the variance is <m>np(1-p)</m>, and the standard deviation is <m>\sqrt{np(1-p)}</m>.</p></li>
+      <li><p>When <m>np\ge 5</m> and <m>n(1-p)\ge 5</m>, the binomial distribution is often close enough to a normal model with the same mean and standard deviation: <m>N(np,\sqrt{np(1-p)})</m>.</p></li>
+    </ul></p>
+
+    <p>Once you can recognize a binomial situation, most calculations reduce to choosing the right value of <m>n</m>, the right value of <m>p</m>, and the right way to phrase the event you want. The normal approximation is the bridge from this chapter to the next one, where that bell-shaped model becomes a major tool.</p>
+  </conclusion>
 </chapter>

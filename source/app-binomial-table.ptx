@@ -3,13 +3,11 @@
 <appendix xml:id="app-binomial-table">
   <title>Binomial Distribution</title>
 
-  <p>This appendix gives a compact <term>binomial table<idx><h>appendices</h><h>binomial table</h></idx></term> of exact probabilities <m>P(X=k)</m> for <m>X\sim B(n,p)</m>, with <m>n</m> from 1 to 10 and several common values of <m>p</m>. If <m>p&gt;0.5</m>, use the symmetry relation <m>P_p(X=k)=P_{1-p}(X=n-k)</m>.</p>
+  <p>This appendix gives a compact <term>binomial table</term><idx><h>appendices</h><h>binomial table</h></idx> of exact probabilities <m>P(X=k)</m> for <m>X\sim B(n,p)</m>, with <m>n</m> from 1 to 10 and several common values of <m>p</m>. If <m>p&gt;0.5</m>, use the symmetry relation <m>P_p(X=k)=P_{1-p}(X=n-k)</m>.</p>
   <p>Each table lists probabilities rounded to four decimal places. To make the print version easier to read, each value of <m>p</m> is split into a lower-<m>k</m> table and an upper-<m>k</m> table. For larger values of <m>n</m> or for parameters not shown here, use technology.</p>
 
-  <section xml:id="sec-binomial-table-p01">
-    <title>Success Probability 0.10</title>
-
-    <table xml:id="tbl-binomial-p01-low">
+  <p><em>Success Probability 0.10</em></p>
+<table xml:id="tbl-binomial-p01-low">
       <title>Exact probabilities for <m>X\sim B(n,0.10)</m> with <m>k=0,1,2,3,4,5</m></title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -167,12 +165,10 @@
         </row>
       </tabular>
     </table>
-  </section>
 
-  <section xml:id="sec-binomial-table-p02">
-    <title>Success Probability 0.20</title>
 
-    <table xml:id="tbl-binomial-p02-low">
+  <p><em>Success Probability 0.20</em></p>
+<table xml:id="tbl-binomial-p02-low">
       <title>Exact probabilities for <m>X\sim B(n,0.20)</m> with <m>k=0,1,2,3,4,5</m></title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -330,12 +326,10 @@
         </row>
       </tabular>
     </table>
-  </section>
 
-  <section xml:id="sec-binomial-table-p03">
-    <title>Success Probability 0.30</title>
 
-    <table xml:id="tbl-binomial-p03-low">
+  <p><em>Success Probability 0.30</em></p>
+<table xml:id="tbl-binomial-p03-low">
       <title>Exact probabilities for <m>X\sim B(n,0.30)</m> with <m>k=0,1,2,3,4,5</m></title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -493,12 +487,10 @@
         </row>
       </tabular>
     </table>
-  </section>
 
-  <section xml:id="sec-binomial-table-p04">
-    <title>Success Probability 0.40</title>
 
-    <table xml:id="tbl-binomial-p04-low">
+  <p><em>Success Probability 0.40</em></p>
+<table xml:id="tbl-binomial-p04-low">
       <title>Exact probabilities for <m>X\sim B(n,0.40)</m> with <m>k=0,1,2,3,4,5</m></title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -656,12 +648,10 @@
         </row>
       </tabular>
     </table>
-  </section>
 
-  <section xml:id="sec-binomial-table-p05">
-    <title>Success Probability 0.50</title>
 
-    <table xml:id="tbl-binomial-p05-low">
+  <p><em>Success Probability 0.50</em></p>
+<table xml:id="tbl-binomial-p05-low">
       <title>Exact probabilities for <m>X\sim B(n,0.50)</m> with <m>k=0,1,2,3,4,5</m></title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -819,6 +809,6 @@
         </row>
       </tabular>
     </table>
-  </section>
+
 
 </appendix>

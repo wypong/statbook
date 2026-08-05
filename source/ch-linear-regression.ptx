@@ -9,12 +9,12 @@
     students who study more hours tend to earn higher exam scores? Do larger
     apartments usually cost more rent? Does a car with more mileage usually
     sell for less?</p> <p>Questions like these lead to <term>two-variable
-    statistics<idx><h>data</h><h>two-variable statistics</h></idx></term>. In
+    statistics</term><idx><h>data</h><h>two-variable statistics</h></idx>. In
     this chapter we look at how to display paired data with a
-    <term>scatterplot<idx><h>graphs</h><h>scatterplot</h></idx></term>,
+    <term>scatterplot</term><idx><h>graphs</h><h>scatterplot</h></idx>,
     how to describe the direction and strength of a linear relationship,
     and how to model that relationship with a <term>linear regression
-    line<idx><h>regression</h><h>linear regression line</h></idx></term>.</p>
+    line</term><idx><h>regression</h><h>linear regression line</h></idx>.</p>
   </introduction>
 
   <section xml:id="sec-scatterplots-correlation">
@@ -22,9 +22,9 @@
 
     <p>When each observation comes as a pair of numbers, we often label the two
     variables <m>x</m> and <m>y</m>. Usually <m>x</m> is the <term>independent
-    variable<idx><h>regression</h><h>independent variable</h></idx></term> and
-    <m>y</m> is the <term>dependent variable<idx><h>regression</h><h>dependent
-    variable</h></idx></term>. That means we use <m>x</m> to help explain
+    variable</term><idx><h>regression</h><h>independent variable</h></idx> and
+    <m>y</m> is the <term>dependent variable</term><idx><h>regression</h><h>dependent
+    variable</h></idx>. That means we use <m>x</m> to help explain
     or predict <m>y</m>.</p>
 
     <p>A scatterplot places each data pair <m>(x,y)</m> as a point in the
@@ -62,14 +62,12 @@
     <figure xml:id="fig-study-hours-scatter">
       <caption>Scatterplot of study hours and exam scores</caption>
       <image width="70%" margins="15%">
-        <shortdescription>A scatterplot with eight points that rise from lower
-        left to upper right, showing a positive linear trend between study
-        hours and exam score.</shortdescription> <description>The horizontal
+        <shortdescription>A scatterplot with eight points that rise from lower left to upper right, showing a positive linear trend between study.</shortdescription> <description><p>The horizontal
         axis is labeled Hours studied and runs from 0 to 9. The vertical
         axis is labeled Exam score and runs from 50 to 95. The plotted points
         are approximately at (1,58), (2,62), (3,67), (4,71), (5,76), (6,79),
         (7,85), and (8,88). The points form a fairly tight upward pattern,
-        indicating a positive linear relationship.</description> <latex-image>
+        indicating a positive linear relationship.</p></description> <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
               width=9.2cm, height=6.1cm, xmin=0, xmax=9, ymin=50,
@@ -89,22 +87,22 @@
 
     <p>The scatterplot in <xref ref="fig-study-hours-scatter"/> shows an upward
     trend. As study time increases, exam score also tends to increase. That is
-    an example of a <term>positive association<idx><h>regression</h><h>positive
-    association</h></idx></term>.</p>
+    an example of a <term>positive association</term><idx><h>regression</h><h>positive
+    association</h></idx>.</p>
 
     <p>In general, a scatterplot may suggest one of three broad patterns.</p>
 
-    <ul>
-      <li><p><term>Positive correlation<idx><h>regression</h><h>positive correlation</h></idx></term>: larger <m>x</m> values tend to go with larger <m>y</m> values.</p></li>
-      <li><p><term>Negative correlation<idx><h>regression</h><h>negative correlation</h></idx></term>: larger <m>x</m> values tend to go with smaller <m>y</m> values.</p></li>
-      <li><p><term>No clear correlation<idx><h>regression</h><h>no correlation</h></idx></term>: the points do not show a clear upward or downward trend.</p></li>
-    </ul>
+    <p><ul>
+      <li><p><term>Positive correlation</term><idx><h>regression</h><h>positive correlation</h></idx>: larger <m>x</m> values tend to go with larger <m>y</m> values.</p></li>
+      <li><p><term>Negative correlation</term><idx><h>regression</h><h>negative correlation</h></idx>: larger <m>x</m> values tend to go with smaller <m>y</m> values.</p></li>
+      <li><p><term>No clear correlation</term><idx><h>regression</h><h>no correlation</h></idx>: the points do not show a clear upward or downward trend.</p></li>
+    </ul></p>
 
     <p>A useful visual trick is to mark the point <m>(\bar{x},\bar{y})</m>,
     where <m>\bar{x}</m> is the mean of the <m>x</m>-values and <m>\bar{y}</m>
     is the mean of the <m>y</m>-values. The vertical line through
     <m>\bar{x}</m> and the horizontal line through <m>\bar{y}</m> form a
-    <term>mean cross<idx><h>regression</h><h>mean cross</h></idx></term>.</p>
+    <term>mean cross</term><idx><h>regression</h><h>mean cross</h></idx>.</p>
 
     <p>If most of the points lie in the first and third quadrants relative to
     that cross, then the variables tend to increase together, which suggests
@@ -117,12 +115,7 @@
     <figure xml:id="fig-mean-cross-cases">
       <caption>Using the mean cross to read the direction of correlation</caption>
       <image width="92%" margins="4%">
-        <shortdescription>Three small scatterplots side by side. In the first,
-        most points lie in the first and third quadrants relative to the mean
-        cross, showing positive correlation. In the second, most points lie
-        in the second and fourth quadrants, showing negative correlation. In
-        the third, the points are spread around all four quadrants, showing
-        little or no correlation.</shortdescription> <description>The figure
+        <shortdescription>Three small scatterplots side by side.</shortdescription> <description><p>The figure
         contains three scatterplots. Each has a vertical dashed line at x-bar
         and a horizontal dashed line at y-bar, forming a mean cross. In the
         left panel, labeled Positive correlation, the points cluster from
@@ -131,7 +124,7 @@
         the points cluster from upper left to lower right, mainly in quadrants
         two and four. In the right panel, labeled Little or no correlation,
         the points are scattered around all four quadrants with no clear
-        linear direction.</description> <latex-image>
+        linear direction.</p></description> <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
               at={(0cm,0cm)},
@@ -211,28 +204,43 @@
     see why positive correlation puts many points in quadrants one and three,
     while negative correlation puts many points in quadrants two and four.</p>
 
-    <p>The <term>correlation coefficient<idx><h>regression</h><h>correlation
-    coefficient</h></idx></term>, written <m>r</m>, measures the strength
+    <p>The <term>correlation coefficient</term><idx><h>regression</h><h>correlation
+    coefficient</h></idx>, written <m>r</m>, measures the strength
     and direction of a linear relationship. Its value always satisfies</p>
 
-    <md>
+    <p><md>
       -1 \le r \le 1.
-    </md>
+    </md></p>
 
     <p>The sign of <m>r</m> gives the direction, and the size of <m>|r|</m> gives the strength.</p>
 
-    <ul>
+    <p><ul>
       <li><p>If <m>r&gt;0</m>, the linear relationship is positive.</p></li>
       <li><p>If <m>r&lt;0</m>, the linear relationship is negative.</p></li>
       <li><p>If <m>r</m> is close to 0, there is little or no linear relationship.</p></li>
       <li><p>If <m>|r|</m> is close to 1, the points lie close to a line and the linear relationship is strong.</p></li>
-    </ul>
+    </ul></p>
 
     <p>One common formula for <m>r</m> is</p>
 
-    <md>
-      r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum (y-\bar{y})^2}}.
-    </md>
+    <p><md>
+      r=\frac{\sum (x-\bar{x})(y-\bar{y})}{\sqrt{\sum (x-\bar{x})^2}\sqrt{\sum
+      (y-\bar{y})^2}}.
+    </md></p>
+
+    <p>The quality</p>
+    <p><md>
+        \cov(x,y) = \frac{\sum (x-\bar{x})(y-\bar{y}}{n}
+    </md></p>
+    <p>
+       is called the <term>covariance</term> of <m>x</m> and <m>y</m>. Note
+       that, <m>\cov(x,x) = \var(x)</m> and a little algebra shows that the
+       correlation coefficient of <m>x</m> and <m>y</m> can also be expressed
+       as
+    </p>
+    <p><md>
+        r = \frac{\cov{x,y}}{\sigma_x}{\sigma_y}.
+    </md></p>
 
     <p>In practice, technology usually computes <m>r</m> for us. What matters
     most in an introductory course is the interpretation. Correlation tells
@@ -358,27 +366,27 @@
   <section xml:id="sec-regression-line">
     <title>Regression Lines and Prediction</title>
 
-    <p>A <term>linear relation<idx><h>regression</h><h>linear relation</h></idx></term> has the form</p>
+    <p>A <term>linear relation</term><idx><h>regression</h><h>linear relation</h></idx> has the form</p>
 
-    <md>
+    <p><md>
       y=ax+b,
-    </md>
+    </md></p>
 
-    <p>where <m>a</m> is the <term>slope<idx><h>regression</h><h>slope</h></idx></term> and <m>b</m> is the <term>y-intercept<idx><h>regression</h><h>y-intercept</h></idx></term>. If <m>a&gt;0</m>, the line goes up as <m>x</m> increases. If <m>a&lt;0</m>, the line goes down as <m>x</m> increases.</p>
+    <p>where <m>a</m> is the <term>slope</term><idx><h>regression</h><h>slope</h></idx> and <m>b</m> is the <term>y-intercept</term><idx><h>regression</h><h>y-intercept</h></idx>. If <m>a&gt;0</m>, the line goes up as <m>x</m> increases. If <m>a&lt;0</m>, the line goes down as <m>x</m> increases.</p>
 
-    <p>In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the <term>best-fit line<idx><h>regression</h><h>best-fit line</h></idx></term> or <term>regression line<idx><h>regression</h><h>regression line</h></idx></term>. Its equation is often written</p>
+    <p>In real data, the points usually do not lie exactly on a line. Instead we choose a line that fits the pattern as well as possible. That line is called the <term>best-fit line</term><idx><h>regression</h><h>best-fit line</h></idx> or <term>regression line</term><idx><h>regression</h><h>regression line</h></idx>. Its equation is often written</p>
 
-    <md>
+    <p><md>
       \hat{y}=a+bx.
-    </md>
+    </md></p>
 
     <p>Here <m>\hat{y}</m> is the predicted value of <m>y</m> for a given value of <m>x</m>.</p>
 
     <figure xml:id="fig-study-hours-regression">
       <caption>Scatterplot with a regression line</caption>
       <image width="76%" margins="12%">
-        <shortdescription>A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the points.</shortdescription>
-        <description>The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.</description>
+        <shortdescription>A scatterplot of study hours and exam scores together with an upward sloping line that passes through the middle of the.</shortdescription>
+        <description><p>The graphic shows the same eight data points as the previous scatterplot. A straight line rises from left to right through the center of the cloud of points. The line represents a regression model that predicts higher scores for larger numbers of study hours.</p></description>
         <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
@@ -415,13 +423,13 @@
     <example xml:id="ex-regression-prediction">
       <title>Using a Regression Equation</title>
       <p>Suppose a regression line for study hours and exam score is</p>
-      <md>
+      <p><md>
         \hat{y}=53.5+4.4x.
-      </md>
+      </md></p>
       <p>If a student studies for 5 hours, the predicted exam score is</p>
-      <md>
+      <p><md>
         \hat{y}=53.5+4.4(5)=75.5.
-      </md>
+      </md></p>
       <p>So the model predicts a score of about 76.</p>
     </example>
 
@@ -439,9 +447,9 @@
     <p>Regression is helpful for prediction, but it
     should be used with care. Predicting for an <m>x</m>
     value inside the range of the observed data is called
-    <term>interpolation<idx><h>regression</h><h>interpolation</h></idx></term>.
+    <term>interpolation</term><idx><h>regression</h><h>interpolation</h></idx>.
     Predicting far outside the observed range is called
-    <term>extrapolation<idx><h>regression</h><h>extrapolation</h></idx></term>,
+    <term>extrapolation</term><idx><h>regression</h><h>extrapolation</h></idx>,
     and that is usually much less reliable.</p>
 
     <example xml:id="ex-extrapolation-warning">
@@ -525,57 +533,30 @@
     </activity>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch5-exercises">
 
-    <p>This chapter introduced linear regression through two-variable
-    data. The first step is to display paired data with a scatterplot. The
-    next step is to describe whether the pattern is positive, negative, weak,
-    or strong. Finally, we can use a regression line to summarize the linear
-    trend and make predictions.</p>
-
-    <ul>
-      <li><p>Two-variable statistics studies pairs of observations
-      <m>(x,y)</m>.</p></li> <li><p>A scatterplot is the standard graph
-      for paired numerical data.</p></li> <li><p>Positive correlation means
-      larger <m>x</m> values tend to go with larger <m>y</m> values. Negative
-      correlation means larger <m>x</m> values tend to go with smaller <m>y</m>
-      values.</p></li> <li><p>The correlation coefficient <m>r</m> measures
-      the direction and strength of a linear relationship.</p></li> <li><p>The
-      value of <m>r</m> always lies between <m>-1</m> and <m>1</m>.</p></li>
-      <li><p>A regression line has the form <m>\hat{y}=a+bx</m> and is used
-      to model and predict <m>y</m> from <m>x</m>.</p></li> <li><p>The
-      slope describes how the predicted value changes when <m>x</m>
-      increases by 1 unit.</p></li> <li><p>Interpolation is usually safer
-      than extrapolation.</p></li>
-    </ul>
-
-    <p>Linear regression is one of the simplest modeling tools in statistics,
-    but it is also one of the most useful. It helps us move from description
-    to prediction, while reminding us to look carefully at the data before
-    trusting a formula.</p>
-  </conclusion>
-
-  <exercises xml:id="ch5-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch5-ex-1">
       <p>State whether each situation involves one-variable data or two-variable data.</p>
-      <ol>
+      <p><ol>
         <li><p>The heights of 20 students</p></li>
         <li><p>The heights and weights of 20 students</p></li>
         <li><p>The daily high temperatures in a city for one month</p></li>
         <li><p>The number of hours studied and the final exam scores for a class</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch5-ex-2">
       <p>For each pair of variables, decide which one is more naturally treated as the independent variable and which one is more naturally treated as the dependent variable.</p>
-      <ol>
+      <p><ol>
         <li><p>Hours worked and weekly pay</p></li>
         <li><p>Outdoor temperature and electricity used for air conditioning</p></li>
         <li><p>Age of a used car and its selling price</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch5-ex-3">
@@ -606,24 +587,24 @@
     </exercise>
 
     <exercise xml:id="ch5-ex-8">
-      <p>A regression line is given by</p> <md>
+      <p>A regression line is given by</p> <p><md>
         \hat{y}=12+3.5x.
-      </md> <p>Find the predicted value of <m>y</m> when <m>x=4</m>.</p>
+      </md></p> <p>Find the predicted value of <m>y</m> when <m>x=4</m>.</p>
     </exercise>
 
     <exercise xml:id="ch5-ex-9">
-      <p>A regression equation is</p> <md>
+      <p>A regression equation is</p> <p><md>
         \hat{y}=85-2.1x.
-      </md> <p>What is the slope? What does it mean in context if <m>x</m>
+      </md></p> <p>What is the slope? What does it mean in context if <m>x</m>
       is age of a car in years and <m>y</m> is selling price in thousands
       of dollars?</p>
     </exercise>
 
     <exercise xml:id="ch5-ex-10">
       <p>A regression equation for predicting quiz score from hours of review
-      is</p> <md>
+      is</p> <p><md>
         \hat{y}=48+6x.
-      </md> <p>Use the equation to predict the quiz score for a student who
+      </md></p> <p>Use the equation to predict the quiz score for a student who
       reviews for 5 hours.</p>
     </exercise>
 
@@ -635,5 +616,36 @@
       <p>A data set has a strong positive correlation. Does that prove that
       changes in <m>x</m> cause changes in <m>y</m>? Explain briefly.</p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>This chapter introduced linear regression through two-variable
+    data. The first step is to display paired data with a scatterplot. The
+    next step is to describe whether the pattern is positive, negative, weak,
+    or strong. Finally, we can use a regression line to summarize the linear
+    trend and make predictions.</p>
+
+    <p><ul>
+      <li><p>Two-variable statistics studies pairs of observations
+      <m>(x,y)</m>.</p></li> <li><p>A scatterplot is the standard graph
+      for paired numerical data.</p></li> <li><p>Positive correlation means
+      larger <m>x</m> values tend to go with larger <m>y</m> values. Negative
+      correlation means larger <m>x</m> values tend to go with smaller <m>y</m>
+      values.</p></li> <li><p>The correlation coefficient <m>r</m> measures
+      the direction and strength of a linear relationship.</p></li> <li><p>The
+      value of <m>r</m> always lies between <m>-1</m> and <m>1</m>.</p></li>
+      <li><p>A regression line has the form <m>\hat{y}=a+bx</m> and is used
+      to model and predict <m>y</m> from <m>x</m>.</p></li> <li><p>The
+      slope describes how the predicted value changes when <m>x</m>
+      increases by 1 unit.</p></li> <li><p>Interpolation is usually safer
+      than extrapolation.</p></li>
+    </ul></p>
+
+    <p>Linear regression is one of the simplest modeling tools in statistics,
+    but it is also one of the most useful. It helps us move from description
+    to prediction, while reminding us to look carefully at the data before
+    trusting a formula.</p>
+  </conclusion>
 </chapter>

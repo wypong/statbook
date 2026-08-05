@@ -5,6 +5,7 @@
 <!-- settings. -->
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
   <document-id>elementarystatistics</document-id>
+  <directories external="../assets"/>
   <blurb shelf="AP Computer Science">A straightforward introduction to elementary statistics built around data, examples, and practice.</blurb>
 
 

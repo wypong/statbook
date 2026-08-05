@@ -5,57 +5,57 @@
 
   <introduction>
     <p>Up to this point, we have mostly summarized data that has already been collected. Probability asks a different question: what might happen before the data is observed? If we flip a coin, draw a card, or count the number of customers who arrive in the next hour, we do not know the outcome in advance, but we can still talk sensibly about the possible outcomes and how likely they are.</p>
-    <p>In this chapter we build the basic language of <term>probability<idx><h>probability</h><h>basic probability</h></idx></term>. We begin with sample spaces and events, then study the main probability rules, and finally look at conditional probability, contingency tables, and independence.</p>
+    <p>In this chapter we build the basic language of <term>probability</term><idx><h>probability</h><h>basic probability</h></idx>. We begin with sample spaces and events, then study the main probability rules, and finally look at conditional probability, contingency tables, and independence.</p>
   </introduction>
 
   <section xml:id="sec-sample-spaces-events">
     <title>Sample Spaces and Events</title>
 
-    <p>A <term>random experiment<idx><h>probability</h><h>random experiment</h></idx></term> is a process with a known collection of possible outcomes, but the outcome of one trial is not known ahead of time. Flipping a coin, rolling a die, and selecting a student at random are all random experiments.</p>
+    <p>A <term>random experiment</term><idx><h>probability</h><h>random experiment</h></idx> is a process with a known collection of possible outcomes, but the outcome of one trial is not known ahead of time. Flipping a coin, rolling a die, and selecting a student at random are all random experiments.</p>
 
-    <p>The set of all possible outcomes is called the <term>sample space<idx><h>probability</h><h>sample space</h></idx></term>, usually written <m>S</m>. An <term>event<idx><h>probability</h><h>event</h></idx></term> is a subset of the sample space.</p>
+    <p>The set of all possible outcomes is called the <term>sample space</term><idx><h>probability</h><h>sample space</h></idx>, usually written <m>S</m>. An <term>event</term><idx><h>probability</h><h>event</h></idx> is a subset of the sample space.</p>
 
     <example xml:id="ex-sample-space-die">
       <title>A Sample Space for a Die Roll</title>
       <p>If a fair six-sided die is rolled once, then the sample space is</p>
-      <md>
+      <p><md>
         S=\{1,2,3,4,5,6\}.
-      </md>
-      <p>The event “an even number occurs” is</p>
-      <md>
+      </md></p>
+      <p>The event <q>an even number occurs</q> is</p>
+      <p><md>
         E=\{2,4,6\},
-      </md>
-      <p>and the event “a number greater than 4 occurs” is</p>
-      <md>
+      </md></p>
+      <p>and the event <q>a number greater than 4 occurs</q> is</p>
+      <p><md>
         G=\{5,6\}.
-      </md>
+      </md></p>
     </example>
 
     <p>Once we treat events as sets, we can use ordinary set operations.</p>
 
-    <p>The <term>complement<idx><h>probability</h><h>complement of an event</h></idx></term> of an event <m>A</m>, written <m>A^c</m>, consists of all outcomes in the sample space that are not in <m>A</m>.</p>
+    <p>The <term>complement</term><idx><h>probability</h><h>complement of an event</h></idx> of an event <m>A</m>, written <m>A^c</m>, consists of all outcomes in the sample space that are not in <m>A</m>.</p>
 
-    <p>The <term>union<idx><h>probability</h><h>union of events</h></idx></term> <m>A\cup B</m> consists of outcomes that are in <m>A</m> or in <m>B</m> or in both. The <term>intersection<idx><h>probability</h><h>intersection of events</h></idx></term> <m>A\cap B</m> consists of outcomes that are in both <m>A</m> and <m>B</m>.</p>
+    <p>The <term>union</term><idx><h>probability</h><h>union of events</h></idx> <m>A\cup B</m> consists of outcomes that are in <m>A</m> or in <m>B</m> or in both. The <term>intersection</term><idx><h>probability</h><h>intersection of events</h></idx> <m>A\cap B</m> consists of outcomes that are in both <m>A</m> and <m>B</m>.</p>
 
     <example xml:id="ex-coin-set-operations">
       <title>Set Operations with Two Coin Flips</title>
       <p>If a coin is flipped twice, then the sample space is</p>
-      <md>
+      <p><md>
         S=\{HH,HT,TH,TT\}.
-      </md>
-      <p>Let <m>A</m> be the event “exactly one head occurs,” so <m>A=\{HT,TH\}</m>. Let <m>B</m> be the event “the first flip is a head,” so <m>B=\{HH,HT\}</m>.</p>
+      </md></p>
+      <p>Let <m>A</m> be the event <q>exactly one head occurs,</q> so <m>A=\{HT,TH\}</m>. Let <m>B</m> be the event <q>the first flip is a head,</q> so <m>B=\{HH,HT\}</m>.</p>
       <p>Then</p>
-      <md>
+      <p><md>
         A^c=\{HH,TT\},\qquad A\cup B=\{HH,HT,TH\},\qquad A\cap B=\{HT\}.
-      </md>
+      </md></p>
     </example>
 
-    <p>Two events are <term>mutually exclusive<idx><h>probability</h><h>mutually exclusive events</h></idx></term> if they cannot happen at the same time. In set language, that means their intersection is empty.</p>
+    <p>Two events are <term>mutually exclusive</term><idx><h>probability</h><h>mutually exclusive events</h></idx> if they cannot happen at the same time. In set language, that means their intersection is empty.</p>
 
     <example xml:id="ex-mutually-exclusive-die">
       <title>Mutually Exclusive Events</title>
-      <p>When a die is rolled, the event “the outcome is 2” and the event “the outcome is 5” are mutually exclusive, because no single roll can be both 2 and 5.</p>
-      <p>On the other hand, the events “the outcome is even” and “the outcome is greater than 3” are not mutually exclusive, because 4 and 6 belong to both events.</p>
+      <p>When a die is rolled, the event <q>the outcome is 2</q> and the event <q>the outcome is 5</q> are mutually exclusive, because no single roll can be both 2 and 5.</p>
+      <p>On the other hand, the events <q>the outcome is even</q> and <q>the outcome is greater than 3</q> are not mutually exclusive, because 4 and 6 belong to both events.</p>
     </example>
 
     <activity xml:id="act-ch6-sample-spaces-events">
@@ -65,17 +65,17 @@
       </introduction>
       <task>
         <statement>
-          <p>Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event “the number is at least 4.”</p>
+          <p>Write the sample space for one roll of a fair six-sided die. Then list the outcomes for the event <q>the number is at least 4.</q></p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>Write the sample space for one coin flip and list the outcomes for the event “heads occurs.” Then do the same for the event “tails occurs.”</p>
+          <p>Write the sample space for one coin flip and list the outcomes for the event <q>heads occurs.</q> Then do the same for the event <q>tails occurs.</q></p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>For two coin flips, write the event “exactly one head occurs” as a set of outcomes.</p>
+          <p>For two coin flips, write the event <q>exactly one head occurs</q> as a set of outcomes.</p>
         </statement>
       </task>
     </activity>
@@ -87,17 +87,17 @@
       </introduction>
       <task>
         <statement>
-          <p>Using the sample space for one die roll, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Write <m>A^c</m>, <m>A\cup B</m>, and <m>A\cap B</m>.</p>
+          <p>Using the sample space for one die roll, let <m>A</m> be the event <q>the outcome is even</q> and let <m>B</m> be the event <q>the outcome is greater than 3.</q> Write <m>A^c</m>, <m>A\cup B</m>, and <m>A\cap B</m>.</p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>For two coin flips, let <m>A</m> be the event “the first flip is a head” and let <m>B</m> be the event “exactly one head occurs.” Find <m>A\cap B</m>.</p>
+          <p>For two coin flips, let <m>A</m> be the event <q>the first flip is a head</q> and let <m>B</m> be the event <q>exactly one head occurs.</q> Find <m>A\cap B</m>.</p>
         </statement>
       </task>
       <task>
         <statement>
-          <p>Decide whether the events “the number is 1” and “the number is 6” are mutually exclusive. Explain your answer.</p>
+          <p>Decide whether the events <q>the number is 1</q> and <q>the number is 6</q> are mutually exclusive. Explain your answer.</p>
         </statement>
       </task>
     </activity>
@@ -106,47 +106,47 @@
   <section xml:id="sec-probability-rules">
     <title>Probability Rules</title>
 
-    <p>A <term>probability law<idx><h>probability</h><h>probability law</h></idx></term> assigns a number <m>P(A)</m> to each event <m>A</m>. The number <m>P(A)</m> measures the chance that the outcome lies in <m>A</m>.</p>
+    <p>A <term>probability law</term><idx><h>probability</h><h>probability law</h></idx> assigns a number <m>P(A)</m> to each event <m>A</m>. The number <m>P(A)</m> measures the chance that the outcome lies in <m>A</m>.</p>
 
     <p>Every probability law satisfies three basic facts.</p>
 
-    <ul>
+    <p><ul>
       <li><p><m>P(A)\ge 0</m> for every event <m>A</m>.</p></li>
       <li><p><m>P(S)=1</m>.</p></li>
       <li><p>If <m>A</m> and <m>B</m> are mutually exclusive, then <m>P(A\cup B)=P(A)+P(B)</m>.</p></li>
-    </ul>
+    </ul></p>
 
     <p>From these facts we get several rules that are used all the time:</p>
 
-    <md>
+    <p><md>
       0\le P(A)\le 1,
       \qquad
       P(A^c)=1-P(A),
       \qquad
       P(A\cup B)=P(A)+P(B)-P(A\cap B).
-    </md>
+    </md></p>
 
     <example xml:id="ex-fair-die-probability">
       <title>Probability with Equally Likely Outcomes</title>
       <p>When a fair die is rolled, all six outcomes are equally likely. If <m>A=\{2,4,6\}</m>, then</p>
-      <md>
+      <p><md>
         P(A)=\frac{3}{6}=\frac{1}{2}.
-      </md>
+      </md></p>
       <p>If <m>B=\{5,6\}</m>, then</p>
-      <md>
+      <p><md>
         P(B)=\frac{2}{6}=\frac{1}{3}.
-      </md>
+      </md></p>
       <p>Since <m>A\cap B=\{6\}</m>, we have</p>
-      <md>
+      <p><md>
         P(A\cup B)=\frac{3}{6}+\frac{2}{6}-\frac{1}{6}=\frac{4}{6}=\frac{2}{3}.
-      </md>
+      </md></p>
     </example>
 
     <p>When the individual outcomes are <em>equally likely</em>, the probability of an event is</p>
 
-    <md>
+    <p><md>
       P(A)=\frac{|A|}{|S|}.
-    </md>
+    </md></p>
 
     <p>That shortcut is useful, but it only works in equally likely situations. A loaded die is a good reminder that counting outcomes is not always enough.</p>
 
@@ -179,29 +179,29 @@
       </tabular>
     </table>
 
-    <p>Let <m>A=\{1,3,5\}</m> be the event “an odd outcome occurs,” and let <m>B=\{3,4,5\}</m>.</p>
+    <p>Let <m>A=\{1,3,5\}</m> be the event <q>an odd outcome occurs,</q> and let <m>B=\{3,4,5\}</m>.</p>
 
     <p>Then</p>
 
-    <md>
+    <p><md>
       P(A)=P(1)+P(3)+P(5)=\frac{2}{5}+\frac{1}{15}+\frac{1}{5}=\frac{2}{3},
-    </md>
+    </md></p>
 
-    <md>
+    <p><md>
       P(B)=P(3)+P(4)+P(5)=\frac{1}{15}+\frac{1}{15}+\frac{1}{5}=\frac{1}{3},
-    </md>
+    </md></p>
 
     <p>and since <m>A\cap B=\{3,5\}</m>,</p>
 
-    <md>
+    <p><md>
       P(A\cap B)=\frac{1}{15}+\frac{1}{5}=\frac{4}{15}.
-    </md>
+    </md></p>
 
     <p>Therefore</p>
 
-    <md>
+    <p><md>
       P(A\cup B)=P(A)+P(B)-P(A\cap B)=\frac{2}{3}+\frac{1}{3}-\frac{4}{15}=\frac{11}{15}.
-    </md>
+    </md></p>
 
     <p>Notice what happens here: the event <m>\{3,5\}</m> contains two outcomes, but its probability is not <m>2/6</m>. That is why the formula <m>|A|/|S|</m> cannot be used unless the outcomes are equally likely.</p>
 
@@ -212,7 +212,7 @@
       </introduction>
       <task>
         <statement>
-          <p>For a fair die, let <m>A</m> be the event “the outcome is prime” and let <m>B</m> be the event “the outcome is odd.” Find <m>P(A)</m>, <m>P(B)</m>, <m>P(A\cap B)</m>, and <m>P(A\cup B)</m>.</p>
+          <p>For a fair die, let <m>A</m> be the event <q>the outcome is prime</q> and let <m>B</m> be the event <q>the outcome is odd.</q> Find <m>P(A)</m>, <m>P(B)</m>, <m>P(A\cap B)</m>, and <m>P(A\cup B)</m>.</p>
         </statement>
       </task>
       <task>
@@ -222,7 +222,7 @@
       </task>
       <task>
         <statement>
-          <p>Using the same table, find the complement of the event “rolling a 1 or a 2.” Then explain why the complement rule is useful here.</p>
+          <p>Using the same table, find the complement of the event <q>rolling a 1 or a 2.</q> Then explain why the complement rule is useful here.</p>
         </statement>
       </task>
     </activity>
@@ -254,7 +254,7 @@
     <title>Conditional Probability and Independence</title>
 
     <introduction>
-      <p>Sometimes the probability of an event changes once we learn extra information. That idea leads to <term>conditional probability<idx><h>probability</h><h>conditional probability</h></idx></term>. In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.</p>
+      <p>Sometimes the probability of an event changes once we learn extra information. That idea leads to <term>conditional probability</term><idx><h>probability</h><h>conditional probability</h></idx>. In this section we will compute conditional probabilities directly, organize them with contingency tables, and use them to decide whether two events are independent.</p>
     </introduction>
 
     <subsection xml:id="subsec-conditional-probability-formula">
@@ -262,31 +262,31 @@
 
       <p>The probability of <m>B</m> given <m>A</m> is written <m>P(B\mid A)</m>. It means the probability that the outcome is in <m>B</m> once we already know the outcome is in <m>A</m>. If <m>P(A)\ne 0</m>, then</p>
 
-      <md>
+      <p><md>
         P(B\mid A)=\frac{P(A\cap B)}{P(A)}.
-      </md>
+      </md></p>
 
-      <p>This formula can be rearranged into the <term>multiplication rule<idx><h>probability</h><h>multiplication rule</h></idx></term>:</p>
+      <p>This formula can be rearranged into the <term>multiplication rule</term><idx><h>probability</h><h>multiplication rule</h></idx>:</p>
 
-      <md>
+      <p><md>
         P(A\cap B)=P(B\mid A)P(A).
-      </md>
+      </md></p>
 
       <example xml:id="ex-conditional-die">
         <title>Conditional Probability on a Die Roll</title>
-        <p>Suppose a fair die is rolled. Let <m>A=\{1,3,5\}</m> be the event “the outcome is odd,” and let <m>B=\{3,4,5\}</m>.</p>
+        <p>Suppose a fair die is rolled. Let <m>A=\{1,3,5\}</m> be the event <q>the outcome is odd,</q> and let <m>B=\{3,4,5\}</m>.</p>
         <p>Without extra information,</p>
-        <md>
+        <p><md>
           P(B)=\frac{3}{6}=\frac{1}{2}.
-        </md>
+        </md></p>
         <p>But if we know the outcome is in <m>A</m>, then only 1, 3, and 5 are still possible. Among those three odd outcomes, two are in <m>B</m>. So</p>
-        <md>
+        <p><md>
           P(B\mid A)=\frac{2}{3}.
-        </md>
+        </md></p>
         <p>Using the formula gives the same answer:</p>
-        <md>
+        <p><md>
           P(B\mid A)=\frac{P(A\cap B)}{P(A)}=\frac{2/6}{3/6}=\frac{2}{3}.
-        </md>
+        </md></p>
       </example>
 
       <activity xml:id="act-ch6-conditional-die">
@@ -296,7 +296,7 @@
         </introduction>
         <task>
           <statement>
-            <p>Let <m>A</m> be the event “the outcome is odd” and let <m>B</m> be the event “the outcome is greater than 2.” Find <m>P(B\mid A)</m>.</p>
+            <p>Let <m>A</m> be the event <q>the outcome is odd</q> and let <m>B</m> be the event <q>the outcome is greater than 2.</q> Find <m>P(B\mid A)</m>.</p>
           </statement>
         </task>
         <task>
@@ -337,44 +337,44 @@
     <subsection xml:id="subsec-independence">
       <title>Independence</title>
 
-      <p>Two events <m>A</m> and <m>B</m> are <term>independent<idx><h>probability</h><h>independent events</h></idx></term> if knowing that one occurred does not change the probability of the other. In symbols, independence means</p>
+      <p>Two events <m>A</m> and <m>B</m> are <term>independent</term><idx><h>probability</h><h>independent events</h></idx> if knowing that one occurred does not change the probability of the other. In symbols, independence means</p>
 
-      <md>
+      <p><md>
         P(B\mid A)=P(B),
-      </md>
+      </md></p>
 
       <p>which is equivalent to</p>
 
-      <md>
+      <p><md>
         P(A\cap B)=P(A)P(B).
-      </md>
+      </md></p>
 
       <example xml:id="ex-independent-die">
         <title>Checking Independence</title>
-        <p>Let <m>A=\{1,3,5\}</m> be the event “the die shows an odd number,” and let <m>B=\{1,2,3,4\}</m> be the event “the die shows a number at most 4.”</p>
+        <p>Let <m>A=\{1,3,5\}</m> be the event <q>the die shows an odd number,</q> and let <m>B=\{1,2,3,4\}</m> be the event <q>the die shows a number at most 4.</q></p>
         <p>Then</p>
-        <md>
+        <p><md>
           P(A)=\frac{3}{6}=\frac{1}{2}
           \qquad\text{and}\qquad
           P(B)=\frac{4}{6}=\frac{2}{3}.
-        </md>
+        </md></p>
         <p>The intersection is <m>A\cap B=\{1,3\}</m>, so</p>
-        <md>
+        <p><md>
           P(A\cap B)=\frac{2}{6}=\frac{1}{3}.
-        </md>
+        </md></p>
         <p>Because</p>
-        <md>
+        <p><md>
           P(A)P(B)=\frac{1}{2}\cdot\frac{2}{3}=\frac{1}{3}=P(A\cap B),
-        </md>
+        </md></p>
         <p>the events are independent.</p>
       </example>
 
       <p>It is important not to mix up independence and mutual exclusivity. They are different ideas.</p>
 
-      <ul>
+      <p><ul>
         <li><p>Mutually exclusive events cannot happen together.</p></li>
         <li><p>Independent events can happen together, but one does not affect the probability of the other.</p></li>
-      </ul>
+      </ul></p>
 
       <p>If two events have positive probability and are mutually exclusive, then they cannot be independent, because their intersection has probability 0 while the product <m>P(A)P(B)</m> is positive.</p>
 
@@ -385,12 +385,12 @@
         </introduction>
         <task>
           <statement>
-            <p>For a fair die, let <m>A</m> be the event “the outcome is even” and let <m>B</m> be the event “the outcome is greater than 3.” Decide whether the events are independent.</p>
+            <p>For a fair die, let <m>A</m> be the event <q>the outcome is even</q> and let <m>B</m> be the event <q>the outcome is greater than 3.</q> Decide whether the events are independent.</p>
           </statement>
         </task>
         <task>
           <statement>
-            <p>For the same die, let <m>C</m> be the event “the outcome is 1” and let <m>D</m> be the event “the outcome is 6.” Decide whether the events are mutually exclusive.</p>
+            <p>For the same die, let <m>C</m> be the event <q>the outcome is 1</q> and let <m>D</m> be the event <q>the outcome is 6.</q> Decide whether the events are mutually exclusive.</p>
           </statement>
         </task>
         <task>
@@ -404,9 +404,9 @@
     <subsection xml:id="subsec-contingency-tables">
       <title>Contingency Tables</title>
 
-      <p>A <term>contingency table<idx><h>tables</h><h>contingency table</h></idx></term>, also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.</p>
+      <p>A <term>contingency table</term><idx><h>tables</h><h>contingency table</h></idx>, also called a two-way table, organizes counts for two categorical variables at the same time. It is one of the most useful ways to compute conditional probabilities from real data.</p>
 
-      <p>The counts inside the table are <term>joint frequencies<idx><h>tables</h><h>joint frequency</h></idx></term> because each count belongs to a combination of two categories. The totals along the edges are <term>marginal totals<idx><h>tables</h><h>marginal total</h></idx></term>. The grand total is the total number of observations.</p>
+      <p>The counts inside the table are <term>joint frequencies</term><idx><h>tables</h><h>joint frequency</h></idx> because each count belongs to a combination of two categories. The totals along the edges are <term>marginal totals</term><idx><h>tables</h><h>marginal total</h></idx>. The grand total is the total number of observations.</p>
 
       <example xml:id="ex-contingency-table-commute">
         <title>Conditional Probability from a Contingency Table</title>
@@ -443,25 +443,25 @@
         </tabular>
       </table>
 
-      <p>Let <m>L</m> be the event “the commute is at least 30 minutes” and let <m>T</m> be the event “the student uses public transportation.” From the table,</p>
+      <p>Let <m>L</m> be the event <q>the commute is at least 30 minutes</q> and let <m>T</m> be the event <q>the student uses public transportation.</q> From the table,</p>
 
-      <md>
+      <p><md>
         P(L)=\frac{40}{80},\qquad
         P(T)=\frac{30}{80},\qquad
         P(L\cap T)=\frac{18}{80}.
-      </md>
+      </md></p>
 
       <p>To find <m>P(T\mid L)</m>, restrict attention to the row for commutes at least 30 minutes. Out of those 40 students, 18 use public transportation, so</p>
 
-      <md>
+      <p><md>
         P(T\mid L)=\frac{18}{40}=0.45.
-      </md>
+      </md></p>
 
       <p>To find <m>P(L\mid T)</m>, restrict attention to the column for public transportation. Out of those 30 students, 18 have commutes at least 30 minutes, so</p>
 
-      <md>
+      <p><md>
         P(L\mid T)=\frac{18}{30}=0.60.
-      </md>
+      </md></p>
 
       <p>This is a good reminder that <m>P(T\mid L)</m> and <m>P(L\mid T)</m> usually answer different questions. The condition tells us which row or column becomes the new total.</p>
 
@@ -491,81 +491,65 @@
     </subsection>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch6-exercises">
 
-    <p>This chapter introduced the basic language of probability. Once we can describe events as sets, the main probability rules become much easier to organize.</p>
-
-    <ul>
-      <li><p>A sample space is the set of all possible outcomes of a random experiment.</p></li>
-      <li><p>An event is a subset of the sample space.</p></li>
-      <li><p>Complements, unions, and intersections of events behave like ordinary set operations.</p></li>
-      <li><p>For equally likely outcomes, <m>P(A)=|A|/|S|</m>.</p></li>
-      <li><p>In general, <m>P(A^c)=1-P(A)</m> and <m>P(A\cup B)=P(A)+P(B)-P(A\cap B)</m>.</p></li>
-      <li><p>Conditional probability is given by <m>P(B\mid A)=P(A\cap B)/P(A)</m>.</p></li>
-      <li><p>A contingency table organizes joint frequencies and marginal totals, which makes it easier to compute conditional probabilities from categorical data.</p></li>
-      <li><p>Independent events satisfy <m>P(A\cap B)=P(A)P(B)</m>.</p></li>
-      <li><p>Mutually exclusive and independent are not the same thing.</p></li>
-    </ul>
-
-    <p>Probability will become even more useful once we attach numbers to outcomes and study random variables. That is our next step. In the next chapter, we will turn outcomes into numerical variables and use probability to model how those values behave.</p>
-  </conclusion>
-
-  <exercises xml:id="ch6-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch6-ex-1">
       <p>A fair die is rolled once. Let <m>A=\{2,4,6\}</m> and <m>B=\{4,5,6\}</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>A^c</m>.</p></li>
         <li><p>Find <m>A\cup B</m>.</p></li>
         <li><p>Find <m>A\cap B</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-2">
       <p>A coin is flipped twice.</p>
-      <ol>
+      <p><ol>
         <li><p>Write the sample space.</p></li>
-        <li><p>Let <m>A</m> be the event “at least one head occurs.” List the outcomes in <m>A</m>.</p></li>
-        <li><p>Let <m>B</m> be the event “the second flip is tails.” List the outcomes in <m>B</m>.</p></li>
-      </ol>
+        <li><p>Let <m>A</m> be the event <q>at least one head occurs.</q> List the outcomes in <m>A</m>.</p></li>
+        <li><p>Let <m>B</m> be the event <q>the second flip is tails.</q> List the outcomes in <m>B</m>.</p></li>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-3">
       <p>A fair die is rolled once. Find the probability of each event.</p>
-      <ol>
+      <p><ol>
         <li><p>The outcome is prime.</p></li>
         <li><p>The outcome is less than 5.</p></li>
         <li><p>The outcome is even or greater than 4.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-4">
       <p>Suppose <m>P(A)=0.42</m>, <m>P(B)=0.37</m>, and <m>P(A\cap B)=0.15</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Find <m>P(A\cup B)</m>.</p></li>
         <li><p>Find <m>P(A^c)</m>.</p></li>
         <li><p>Find <m>P(B\mid A)</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-5">
       <p>Use <xref ref="tbl-loaded-die"/>.</p>
-      <ol>
+      <p><ol>
         <li><p>Find the probability of rolling a number at least 4.</p></li>
         <li><p>Find the probability of rolling an even number.</p></li>
         <li><p>Find the probability of rolling a number that is even or at least 4.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-6">
-      <p>A card is drawn from a standard deck of 52 cards. Let <m>A</m> be the event “the card is a heart” and let <m>B</m> be the event “the card is a face card.”</p>
-      <ol>
+      <p>A card is drawn from a standard deck of 52 cards. Let <m>A</m> be the event <q>the card is a heart</q> and let <m>B</m> be the event <q>the card is a face card.</q></p>
+      <p><ol>
         <li><p>Find <m>P(A)</m>, <m>P(B)</m>, and <m>P(A\cap B)</m>.</p></li>
         <li><p>Find <m>P(B\mid A)</m>.</p></li>
         <li><p>Are <m>A</m> and <m>B</m> independent? Explain.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch6-ex-7">
@@ -603,11 +587,31 @@
           </row>
         </tabular>
       </table>
-      <ol>
+      <p><ol>
         <li><p>Find the probability that a randomly selected student is taking an online class.</p></li>
         <li><p>Find the probability that a randomly selected student is taking an online class, given that the student works at least 10 hours per week.</p></li>
         <li><p>Based on your answers, do working at least 10 hours per week and taking an online class appear independent? Explain.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>This chapter introduced the basic language of probability. Once we can describe events as sets, the main probability rules become much easier to organize.</p>
+
+    <p><ul>
+      <li><p>A sample space is the set of all possible outcomes of a random experiment.</p></li>
+      <li><p>An event is a subset of the sample space.</p></li>
+      <li><p>Complements, unions, and intersections of events behave like ordinary set operations.</p></li>
+      <li><p>For equally likely outcomes, <m>P(A)=|A|/|S|</m>.</p></li>
+      <li><p>In general, <m>P(A^c)=1-P(A)</m> and <m>P(A\cup B)=P(A)+P(B)-P(A\cap B)</m>.</p></li>
+      <li><p>Conditional probability is given by <m>P(B\mid A)=P(A\cap B)/P(A)</m>.</p></li>
+      <li><p>A contingency table organizes joint frequencies and marginal totals, which makes it easier to compute conditional probabilities from categorical data.</p></li>
+      <li><p>Independent events satisfy <m>P(A\cap B)=P(A)P(B)</m>.</p></li>
+      <li><p>Mutually exclusive and independent are not the same thing.</p></li>
+    </ul></p>
+
+    <p>Probability will become even more useful once we attach numbers to outcomes and study random variables. That is our next step. In the next chapter, we will turn outcomes into numerical variables and use probability to model how those values behave.</p>
+  </conclusion>
 </chapter>

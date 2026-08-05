@@ -4,7 +4,7 @@
   <title>Hypothesis Testing</title>
 
   <introduction>
-    <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test<idx><h>inference</h><h>hypothesis test</h></idx></term> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
+    <p>A confidence interval asks which parameter values are plausible. A <term>hypothesis test</term><idx><h>inference</h><h>hypothesis test</h></idx> asks a different question: does the sample provide strong enough evidence against a particular claim?</p>
     <p>This chapter introduces the basic logic of testing a population mean, a difference of two population means, a mean paired difference, a population proportion, the independence of two categorical variables, and a population variance. We set up null and alternative hypotheses, compute a test statistic, and decide whether the data are strong enough to reject the null hypothesis. Along the way we also address the two classic mistakes in testing: Type I and Type II errors.</p>
     <p>As in the confidence-interval chapter, proportion tests lean on the same normal approximation that comes from the binomial model. Tests about categorical tables and variance use chi-square distributions, but for different reasons: one comes from many cell counts varying together, while the other comes from sampling a normal population. So this chapter ties together the ideas from estimation and the earlier probability chapters.</p>
   </introduction>
@@ -15,59 +15,59 @@
 
     <p>A hypothesis test begins with two competing statements.</p>
 
-    <ul>
-      <li><p>The <term>null hypothesis<idx><h>inference</h><h>null hypothesis</h></idx></term>, written <m>H_0</m>, is the claim we test against.</p></li>
-      <li><p>The <term>alternative hypothesis<idx><h>inference</h><h>alternative hypothesis</h></idx></term>, written <m>H_a</m>, is what we will support if the data give enough evidence against <m>H_0</m>.</p></li>
-    </ul>
+    <p><ul>
+      <li><p>The <term>null hypothesis</term><idx><h>inference</h><h>null hypothesis</h></idx>, written <m>H_0</m>, is the claim we test against.</p></li>
+      <li><p>The <term>alternative hypothesis</term><idx><h>inference</h><h>alternative hypothesis</h></idx>, written <m>H_a</m>, is what we will support if the data give enough evidence against <m>H_0</m>.</p></li>
+    </ul></p>
 
     <p>For tests about a population mean, the null hypothesis usually has the form</p>
 
-    <md>
+    <p><md>
       H_0:\mu=\mu_0.
-    </md>
+    </md></p>
 
     <p>The alternative can take one of three common forms:</p>
 
-    <md>
+    <p><md>
       H_a:\mu&lt;\mu_0,\qquad
       H_a:\mu&gt;\mu_0,\qquad
       H_a:\mu\ne\mu_0.
-    </md>
+    </md></p>
 
     <p>These correspond to a left-tailed test, a right-tailed test, and a two-tailed test.</p>
 
-    <p>The next ingredient is the <term>test statistic<idx><h>inference</h><h>test statistic</h></idx></term>, a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use</p>
+    <p>The next ingredient is the <term>test statistic</term><idx><h>inference</h><h>test statistic</h></idx>, a number computed from the sample that measures how far the sample result is from the null value. For one-sample tests of a mean, we use</p>
 
-    <md>
+    <p><md>
       z=\frac{\overline{x}-\mu_0}{\sigma/\sqrt{n}}
       \qquad\text{or}\qquad
       t=\frac{\overline{x}-\mu_0}{s/\sqrt{n}},
-    </md>
+    </md></p>
 
     <p>depending on whether a z-test or t-test is appropriate.</p>
 
-    <p>The <term>significance level<idx><h>inference</h><h>significance level</h></idx></term>, written <m>\alpha</m>, is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.</p>
+    <p>The <term>significance level</term><idx><h>inference</h><h>significance level</h></idx>, written <m>\alpha</m>, is the cutoff we use for deciding whether the evidence is strong enough. Common choices are 0.10, 0.05, and 0.01.</p>
 
-    <p>One way to make the decision is by using a <term>p-value<idx><h>inference</h><h>p-value</h></idx></term>. The p-value is the probability, assuming <m>H_0</m> is true, of getting a test statistic at least as extreme as the one observed.</p>
+    <p>One way to make the decision is by using a <term>p-value</term><idx><h>inference</h><h>p-value</h></idx>. The p-value is the probability, assuming <m>H_0</m> is true, of getting a test statistic at least as extreme as the one observed.</p>
 
     <p>The smaller the p-value, the stronger the evidence against <m>H_0</m>. The decision rule is simple:</p>
 
-    <ul>
+    <p><ul>
       <li><p>If the p-value is less than <m>\alpha</m>, reject <m>H_0</m>.</p></li>
       <li><p>If the p-value is at least <m>\alpha</m>, fail to reject <m>H_0</m>.</p></li>
-    </ul>
+    </ul></p>
 
-    <p>Notice the wording. We say <em>fail to reject</em>, not “accept <m>H_0</m>.” A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.</p>
+    <p>Notice the wording. We say <em>fail to reject</em>, not <q>accept <m>H_0</m>.</q> A nonsignificant result does not prove the null hypothesis is true; it only says the sample did not provide enough evidence against it.</p>
 
     <example xml:id="ex-battery-setup">
       <title>Setting Up a Test</title>
       <p>A manufacturer claims that its batteries last 22 hours on average. A buyer suspects the mean lifetime is actually lower than 22 hours. The hypotheses are</p>
-      <md>
+      <p><md>
         H_0:\mu=22
         \qquad\text{and}\qquad
         H_a:\mu&lt;22.
-      </md>
-      <p>Because the alternative says “less than,” this is a left-tailed test.</p>
+      </md></p>
+      <p>Because the alternative says <q>less than,</q> this is a left-tailed test.</p>
     </example>
 
     <activity xml:id="act-ch11-hypothesis-claims">
@@ -120,10 +120,10 @@
 
     <p>Any hypothesis test can make two different kinds of mistakes.</p>
 
-    <ul>
-      <li><p>A <term>Type I error<idx><h>inference</h><h>Type I error</h></idx></term> happens when we reject <m>H_0</m> even though <m>H_0</m> is actually true.</p></li>
-      <li><p>A <term>Type II error<idx><h>inference</h><h>Type II error</h></idx></term> happens when we fail to reject <m>H_0</m> even though <m>H_0</m> is actually false.</p></li>
-    </ul>
+    <p><ul>
+      <li><p>A <term>Type I error</term><idx><h>inference</h><h>Type I error</h></idx> happens when we reject <m>H_0</m> even though <m>H_0</m> is actually true.</p></li>
+      <li><p>A <term>Type II error</term><idx><h>inference</h><h>Type II error</h></idx> happens when we fail to reject <m>H_0</m> even though <m>H_0</m> is actually false.</p></li>
+    </ul></p>
 
     <table xml:id="tbl-type1-type2">
       <title>Possible decisions in a hypothesis test</title>
@@ -148,44 +148,44 @@
 
     <p>The significance level <m>\alpha</m> is the probability of a Type I error:</p>
 
-    <md>
+    <p><md>
       \alpha=P(\text{Type I error}).
-    </md>
+    </md></p>
 
     <p>That is why choosing a smaller significance level makes the test more cautious about rejecting the null hypothesis.</p>
 
     <example xml:id="ex-type-errors-batteries">
       <title>Reading the Errors in Context</title>
       <p>Return to the battery example with</p>
-      <md>
+      <p><md>
         H_0:\mu=22,\qquad H_a:\mu&lt;22.
-      </md>
+      </md></p>
       <p>In context:</p>
-      <ul>
+      <p><ul>
         <li><p>A Type I error means we conclude the mean battery life is less than 22 hours when in fact the true mean is really 22 hours.</p></li>
         <li><p>A Type II error means we fail to detect a drop in battery life and keep the 22-hour claim even though the true mean is actually less than 22 hours.</p></li>
-      </ul>
+      </ul></p>
     </example>
 
     <p>The two error types pull in opposite directions. If we make <m>\alpha</m> smaller, Type I errors become less likely, but it usually becomes harder to reject <m>H_0</m>, so Type II errors can become more likely unless we also increase the sample size.</p>
 
     <p>The probability of a Type II error is often written <m>\beta</m>. The quantity</p>
 
-    <md>
+    <p><md>
       1-\beta
-    </md>
+    </md></p>
 
-    <p>is called the <term>power<idx><h>inference</h><h>power of a test</h></idx></term> of the test. Power is the probability that the test successfully detects a false null hypothesis.</p>
+    <p>is called the <term>power</term><idx><h>inference</h><h>power of a test</h></idx> of the test. Power is the probability that the test successfully detects a false null hypothesis.</p>
 
     <p>In practice, larger samples improve power. With more data, the test statistic has a better chance to separate real effects from ordinary random variation.</p>
 
     <exercise xml:id="ht-inline-ex-1">
       <p>A school tests whether the mean math score has increased from 70 points. The hypotheses are <m>H_0:\mu=70</m> and <m>H_a:\mu&gt;70</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Describe a Type I error in context.</p></li>
         <li><p>Describe a Type II error in context.</p></li>
         <li><p>Which error would the school want to avoid more strongly if a new program is very expensive?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch11-error-detective">
@@ -238,33 +238,33 @@
 
     <p>For a one-sample test of a mean, the test statistic depends on the setting:</p>
 
-    <ul>
+    <p><ul>
       <li><p>Use a z-test when the population standard deviation is known, or when the sample is large enough that using <m>s</m> in its place is reasonable.</p></li>
       <li><p>Use a t-test when the sample is small, the population is approximately normal, and the population standard deviation is unknown.</p></li>
-    </ul>
+    </ul></p>
 
     <p>To see why the decision rule makes sense, it helps to focus on one
     concrete case first: a right-tailed z-test. Suppose we want to test</p>
 
-    <md>
+    <p><md>
       H_0:\mu=\mu_0
       \qquad\text{versus}\qquad
       H_a:\mu&gt;\mu_0.
-    </md>
+    </md></p>
 
     <p>Assume the population standard deviation <m>\sigma</m> is known, so the
     test statistic is</p>
 
-    <md>
+    <p><md>
       Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}.
-    </md>
+    </md></p>
 
     <p>If <m>H_0</m> is true, then the sample mean is centered at
     <m>\mu_0</m>, so</p>
 
-    <md>
+    <p><md>
       Z\sim N(0,1).
-    </md>
+    </md></p>
 
     <p>That tells us what ordinary sampling variation looks like when the null
     hypothesis is true. Values of <m>Z</m> near 0 are routine. Moderately
@@ -275,24 +275,24 @@
     statistics. If the alternative says <m>\mu&gt;\mu_0</m>, then evidence
     against <m>H_0</m> should come from a sample mean that is unusually high,
     not from one that is low or merely a little above <m>\mu_0</m>. The word
-    “large” here means large relative to the null distribution, or in more
+    <q>large</q> here means large relative to the null distribution, or in more
     practical language, many standard errors above <m>\mu_0</m>.</p>
 
     <p>At significance level <m>\alpha</m>, we agree in advance to reject
     <m>H_0</m> only when the observed statistic lands in the most extreme
     right-tail area <m>\alpha</m> of the null distribution. That cutoff is the
-    <term>critical value<idx><h>inference</h><h>critical
-    value</h></idx></term> <m>z_{\alpha}</m>, defined by</p>
+    <term>critical value</term><idx><h>inference</h><h>critical
+    value</h></idx> <m>z_{\alpha}</m>, defined by</p>
 
-    <md>
+    <p><md>
       P(Z&gt;z_{\alpha})=\alpha.
-    </md>
+    </md></p>
 
     <p>So the rejection rule for a right-tailed z-test is</p>
 
-    <md>
+    <p><md>
       \text{reject }H_0 \text{ if } z&gt;z_{\alpha}.
-    </md>
+    </md></p>
 
     <p>This rule is sensible for two reasons. First, it rejects only when the
     sample mean is unusually large under <m>H_0</m>. Second, if
@@ -303,8 +303,8 @@
     <figure xml:id="fig-right-tailed-z-critical-region">
       <caption>The rejection region for a right-tailed z-test</caption>
       <image width="74%" margins="13%">
-        <shortdescription>A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection region of size alpha.</shortdescription>
-        <description>The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.</description>
+        <shortdescription>A standard normal curve with a dashed vertical line at z-alpha and the area to the right shaded to show the rejection.</shortdescription>
+        <description><p>The graphic shows the standard normal density curve centered at 0. A dashed vertical line marks the cutoff z-alpha to the right of the center. The entire area under the curve to the right of that cutoff is shaded and labeled alpha. This shaded right tail is the rejection region for a right-tailed z-test at significance level alpha.</p></description>
         <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
@@ -359,26 +359,26 @@
       greater than 40 hours. Assume the population standard deviation is known
       to be 8 hours, and a random sample of <m>n=64</m> students gives sample
       mean <m>\overline{x}=42</m>. We test</p>
-      <md>
+      <p><md>
         H_0:\mu=40
         \qquad\text{versus}\qquad
         H_a:\mu&gt;40
-      </md>
+      </md></p>
       <p>at significance level <m>\alpha=0.05</m>.</p>
 
       <p>If <m>H_0</m> is true, then</p>
 
-      <md>
+      <p><md>
         Z=\frac{\overline{X}-40}{8/\sqrt{64}}
         =\frac{\overline{X}-40}{1}
         \sim N(0,1).
-      </md>
+      </md></p>
 
       <p>The observed test statistic is</p>
 
-      <md>
+      <p><md>
         z=\frac{42-40}{8/\sqrt{64}}=2.
-      </md>
+      </md></p>
 
       <p>Using the critical-value method, the right-tailed cutoff is
       <m>z_{0.05}=1.645</m>. Since <m>2&gt;1.645</m>, the observed statistic
@@ -387,13 +387,13 @@
       <m>H_0</m>.</p>
 
       <p>Now look at the same decision through the p-value method. The
-      <term>p-value<idx><h>inference</h><h>p-value</h></idx></term> is the
+      <term>p-value</term><idx><h>inference</h><h>p-value</h></idx> is the
       probability, assuming <m>H_0</m> is true, of getting a test statistic at
       least as large as the one observed:</p>
 
-      <md>
+      <p><md>
         \text{p-value}=P(Z\ge 2)\approx 0.0228.
-      </md>
+      </md></p>
 
       <p>This means that if the true mean really were 40, then a sample mean
       this high or higher would occur only about 2.28% of the time. Since
@@ -404,8 +404,8 @@
     <figure xml:id="fig-right-tailed-z-pvalue">
       <caption>The p-value is the tail area beyond the observed statistic</caption>
       <image width="76%" margins="12%">
-        <shortdescription>A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs. The tail beyond z-alpha is lightly shaded for alpha, and the smaller tail beyond z-obs is darkly shaded for the p-value.</shortdescription>
-        <description>The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.</description>
+        <shortdescription>A standard normal curve with dashed lines at z-alpha and at a larger observed value z-obs.</shortdescription>
+        <description><p>The graphic shows the standard normal density curve centered at 0. A dashed line marks z-alpha to the right of the center and a second dashed line farther right marks the observed statistic z-obs. The tail to the right of z-alpha is shaded lightly and represents alpha. The smaller tail to the right of z-obs is shaded more darkly and represents the p-value. Because the darker area is contained inside the lighter area, the picture shows that p-value less than alpha exactly when z-obs is beyond z-alpha.</p></description>
         <latex-image>
           \begin{tikzpicture}
             \begin{axis}[
@@ -472,26 +472,26 @@
     method says the same thing as the critical-value method. In a right-tailed
     z-test, if the observed statistic is <m>z_{\text{obs}}</m>, then</p>
 
-    <md>
+    <p><md>
       \text{p-value}=P(Z\ge z_{\text{obs}}).
-    </md>
+    </md></p>
 
     <p>The farther to the right <m>z_{\text{obs}}</m> is, the smaller this
     tail area becomes. Therefore, for a right-tailed test,</p>
 
-    <md>
+    <p><md>
       z_{\text{obs}}&gt;z_{\alpha}
       \qquad\Longleftrightarrow\qquad
       P(Z\ge z_{\text{obs}})&lt;P(Z\ge z_{\alpha})=\alpha.
-    </md>
+    </md></p>
 
     <p>So the two rules are really the same comparison written in two
     different ways:</p>
 
-    <ul>
+    <p><ul>
       <li><p>The critical-value method compares the observed statistic with a cutoff chosen in advance.</p></li>
       <li><p>The p-value method compares the observed tail area with the significance level <m>\alpha</m>.</p></li>
-    </ul>
+    </ul></p>
 
     <p>Both methods ask the same question: if <m>H_0</m> were true, would this
     sample result be so far out in the right tail that it should count as
@@ -500,36 +500,36 @@
     <example xml:id="ex-battery-test">
       <title>A Left-Tailed Test for Battery Life</title>
       <p>A sample of 50 batteries has mean lifetime <m>\overline{x}=21.8</m> hours and sample standard deviation <m>s=0.9</m> hours. Test</p>
-      <md>
+      <p><md>
         H_0:\mu=22
         \qquad\text{versus}\qquad
         H_a:\mu&lt;22
-      </md>
+      </md></p>
       <p>at significance level <m>\alpha=0.10</m>.</p>
       <p>Because the sample is large, we use the z statistic</p>
-      <md>
+      <p><md>
         z=\frac{21.8-22}{0.9/\sqrt{50}}\approx -1.57.
-      </md>
+      </md></p>
       <p>The p-value is</p>
-      <md>
+      <p><md>
         P(Z\le -1.57)\approx 0.0582.
-      </md>
+      </md></p>
       <p>Since <m>0.0582&lt;0.10</m>, we reject <m>H_0</m>. At the 10% significance level, the sample gives enough evidence to conclude that the mean battery life is less than 22 hours.</p>
     </example>
 
     <example xml:id="ex-distance-t-test">
       <title>A Two-Tailed T-Test</title>
       <p>Ten participants estimate a target distance that is actually 2.5 feet. The sample results have mean <m>\overline{x}=2.3</m> and sample standard deviation <m>s=0.2449</m>. We test</p>
-      <md>
+      <p><md>
         H_0:\mu=2.5
         \qquad\text{versus}\qquad
         H_a:\mu\ne 2.5
-      </md>
+      </md></p>
       <p>at the 5% significance level.</p>
       <p>Because the sample is small and <m>\sigma</m> is unknown, we use a t-test with <m>df=9</m>:</p>
-      <md>
+      <p><md>
         t=\frac{2.3-2.5}{0.2449/\sqrt{10}}\approx -2.582.
-      </md>
+      </md></p>
       <p>For a two-tailed test with <m>\alpha=0.05</m> and <m>df=9</m>, the critical values are about <m>\pm 2.262</m>. Since <m>-2.582</m> falls beyond the left critical value, we reject <m>H_0</m>. The data suggest that the true mean estimate differs from 2.5 feet.</p>
     </example>
 
@@ -541,11 +541,11 @@
     <exercise xml:id="ht-inline-ex-2">
       <p>Consider a right-tailed z-test with significance level
       <m>\alpha=0.05</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>If the observed statistic is <m>z=1.20</m>, is it in the rejection region?</p></li>
         <li><p>Without computing an exact p-value, explain whether the p-value is greater than or less than 0.05.</p></li>
         <li><p>What decision should be made about <m>H_0</m>?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch11-run-the-test">
@@ -599,31 +599,31 @@
     <introduction>
     <p>Many questions compare two population means rather than one. For example, we might compare the mean exam score for two teaching methods, the mean wait time at two clinics, or the mean amount spent by two groups of customers.</p>
 
-    <p>Let <m>\mu_1</m> and <m>\mu_2</m> be the two population means. The parameter we care about is the <term>difference of means<idx><h>inference</h><h>difference of means</h></idx></term></p>
+    <p>Let <m>\mu_1</m> and <m>\mu_2</m> be the two population means. The parameter we care about is the <term>difference of means</term><idx><h>inference</h><h>difference of means</h></idx></p>
 
-    <md>
+    <p><md>
       \mu_1-\mu_2.
-    </md>
+    </md></p>
 
     <p>The natural estimate of this difference is</p>
 
-    <md>
+    <p><md>
       \overline{x}_1-\overline{x}_2.
-    </md>
+    </md></p>
 
     <p>So a typical null hypothesis is</p>
 
-    <md>
+    <p><md>
       H_0:\mu_1-\mu_2=0,
-    </md>
+    </md></p>
 
     <p>which says the two population means are equal. The alternative can be left-tailed, right-tailed, or two-tailed:</p>
 
-    <md>
+    <p><md>
       H_a:\mu_1-\mu_2&lt;0,\qquad
       H_a:\mu_1-\mu_2&gt;0,\qquad
       H_a:\mu_1-\mu_2\ne 0.
-    </md>
+    </md></p>
     </introduction>
 
     <subsection xml:id="subsec-two-sample-large-samples">
@@ -631,63 +631,63 @@
 
     <p>To see where the test statistic comes from, start with the sampling distributions of the two sample means. For large samples, the CLT gives</p>
 
-    <md>
+    <p><md>
       \overline{X}_1\sim N\left(\mu_1,\frac{\sigma_1}{\sqrt{n_1}}\right)
       \qquad\text{and}\qquad
       \overline{X}_2\sim N\left(\mu_2,\frac{\sigma_2}{\sqrt{n_2}}\right)
-    </md>
+    </md></p>
 
     <p>approximately. Here the second input in <m>N(\mu,\sigma)</m> is the standard deviation, so the variances are <m>\sigma_1^2/n_1</m> and <m>\sigma_2^2/n_2</m>.</p>
 
     <p>Now use two facts from earlier chapters. First, sums and differences of independent normal random variables are normal. Second, from <xref ref="sec-cdf-expected-value"/>, expectation is linear and variances add for independent random variables. Therefore the difference</p>
 
-    <md>
+    <p><md>
       \overline{X}_1-\overline{X}_2
-    </md>
+    </md></p>
 
     <p>is approximately normal. Its mean is</p>
 
-    <md alignment="align">
+    <p><md alignment="align">
       <mrow>\E(\overline{X}_1-\overline{X}_2)&amp;=\E(\overline{X}_1)+\E(-\overline{X}_2)</mrow>
       <mrow>&amp;=\E(\overline{X}_1)-\E(\overline{X}_2)</mrow>
       <mrow>&amp;=\mu_1-\mu_2.</mrow>
-    </md>
+    </md></p>
 
     <p>Because the two samples are independent, the variance is</p>
 
-    <md alignment="align">
+    <p><md alignment="align">
       <mrow>\var(\overline{X}_1-\overline{X}_2)&amp;=\var(\overline{X}_1)+\var(-\overline{X}_2)</mrow>
       <mrow>&amp;=\var(\overline{X}_1)+\var(\overline{X}_2)</mrow>
       <mrow>&amp;=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}.</mrow>
-    </md>
+    </md></p>
 
     <p>So, for large independent samples, the difference is approximately</p>
 
-    <md>
+    <p><md>
       \overline{X}_1-\overline{X}_2
       \sim
       N\left(\mu_1-\mu_2,\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}\right)
-    </md>
+    </md></p>
 
     <p>approximately. This is the key reason the standard error for a difference of sample means is</p>
 
-    <md>
+    <p><md>
       \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}.
-    </md>
+    </md></p>
 
-    <p>In practice, the population standard deviations <m>\sigma_1</m> and <m>\sigma_2</m> are usually unknown. For large samples, we estimate them with <m>s_1</m> and <m>s_2</m>. That gives the large-sample <term>two-sample z-test<idx><h>inference</h><h>two-sample z-test</h></idx></term> statistic</p>
+    <p>In practice, the population standard deviations <m>\sigma_1</m> and <m>\sigma_2</m> are usually unknown. For large samples, we estimate them with <m>s_1</m> and <m>s_2</m>. That gives the large-sample <term>two-sample z-test</term><idx><h>inference</h><h>two-sample z-test</h></idx> statistic</p>
 
-    <md>
+    <p><md>
       z=\frac{(\overline{x}_1-\overline{x}_2)-D_0}
       {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}},
-    </md>
+    </md></p>
 
     <p>where <m>D_0</m> is the difference claimed by the null hypothesis. For the common null hypothesis <m>H_0:\mu_1-\mu_2=0</m>, this becomes</p>
 
-    <md>
+    <p><md>
       z=\frac{\overline{x}_1-\overline{x}_2}
       {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}.
-    </md>
+    </md></p>
 
     <table xml:id="tbl-two-sample-mean-test-pieces">
       <title>Pieces of a large-sample two-sample mean test</title>
@@ -723,41 +723,41 @@
       <title>Comparing Two Teaching Methods</title>
       <p>A department compares exam scores from two large independent classes. Method 1 has <m>n_1=64</m>, <m>\overline{x}_1=78</m>, and <m>s_1=10</m>. Method 2 has <m>n_2=49</m>, <m>\overline{x}_2=74</m>, and <m>s_2=9</m>. Test whether Method 1 has the higher mean score:</p>
 
-      <md>
+      <p><md>
         H_0:\mu_1-\mu_2=0
         \qquad\text{versus}\qquad
         H_a:\mu_1-\mu_2&gt;0.
-      </md>
+      </md></p>
 
       <p>The estimated standard error is</p>
 
-      <md>
+      <p><md>
         \sqrt{\frac{10^2}{64}+\frac{9^2}{49}}
         \approx 1.79.
-      </md>
+      </md></p>
 
       <p>The observed difference is <m>78-74=4</m>, so</p>
 
-      <md>
+      <p><md>
         z=\frac{4-0}{1.79}\approx 2.23.
-      </md>
+      </md></p>
 
       <p>For a right-tailed test, the p-value is</p>
 
-      <md>
+      <p><md>
         P(Z\ge 2.23)\approx 0.0129.
-      </md>
+      </md></p>
 
       <p>At the 5% significance level, <m>0.0129&lt;0.05</m>, so we reject <m>H_0</m>. The sample gives evidence that Method 1 has the higher population mean exam score.</p>
     </example>
 
     <exercise xml:id="ht-inline-ex-two-sample-means">
       <p>Two independent large samples give <m>n_1=50</m>, <m>\overline{x}_1=32.4</m>, <m>s_1=6.0</m>, and <m>n_2=60</m>, <m>\overline{x}_2=30.1</m>, <m>s_2=5.5</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
         <li><p>For <m>H_0:\mu_1-\mu_2=0</m>, compute the z statistic.</p></li>
         <li><p>For <m>H_a:\mu_1-\mu_2&gt;0</m>, decide whether the result is significant at <m>\alpha=0.05</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
     </subsection>
 
@@ -766,43 +766,43 @@
 
       <p>When one or both samples are small, the same basic comparison is still natural:</p>
 
-      <md>
+      <p><md>
         \text{observed difference} - \text{null difference}.
-      </md>
+      </md></p>
 
       <p>So the numerator stays</p>
 
-      <md>
+      <p><md>
         (\overline{x}_1-\overline{x}_2)-D_0.
-      </md>
+      </md></p>
 
       <p>The standard error idea also stays the same. The spread of <m>\overline{X}_1-\overline{X}_2</m> comes from the spread of both sample means, so we still use</p>
 
-      <md>
+      <p><md>
         \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}.
-      </md>
+      </md></p>
 
       <p>The difference is the reference distribution. With large samples, replacing <m>\sigma_1</m> and <m>\sigma_2</m> by <m>s_1</m> and <m>s_2</m> barely changes the shape, so a standard normal model works well. With small samples, that extra uncertainty matters more. The test statistic</p>
 
-      <md>
+      <p><md>
         t=\frac{(\overline{x}_1-\overline{x}_2)-D_0}
         {\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
-      </md>
+      </md></p>
 
       <p>is compared with a t distribution instead of a standard normal distribution.</p>
 
       <p>There is one complication: this statistic does not usually have a t distribution with a simple degree of freedom like <m>n_1+n_2-2</m>. Because the denominator uses two separate sample variances, the degrees of freedom are estimated. A common choice is the Welch approximation:</p>
 
-      <md>
+      <p><md>
         df\approx
         \frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}
         {\frac{\left(s_1^2/n_1\right)^2}{n_1-1}
         +\frac{\left(s_2^2/n_2\right)^2}{n_2-1}}.
-      </md>
+      </md></p>
 
       <p>This formula looks unpleasant, but its purpose is reasonable: it adjusts the t curve for the fact that two sample standard deviations are being estimated, possibly from samples of different sizes and different spreads. In practice, technology usually computes the degrees of freedom. The important idea is that small samples need a t reference curve because the estimated standard error is less stable.</p>
 
-      <p>This method is often called <term>Welch's two-sample t-test<idx><h>inference</h><h>Welch's two-sample t-test</h></idx></term>. It is a good default because it does not require us to assume the two population variances are equal.</p>
+      <p>This method is often called <term>Welch's two-sample t-test</term><idx><h>inference</h><h>Welch's two-sample t-test</h></idx>. It is a good default because it does not require us to assume the two population variances are equal.</p>
 
       <p>The conditions are stricter than in the large-sample case. The samples should be random or otherwise representative, the two samples should be independent of each other, and each population distribution should be approximately normal or at least not strongly skewed with serious outliers. For very small samples, the normality condition matters a lot.</p>
 
@@ -810,41 +810,41 @@
         <title>Comparing Two Small Samples</title>
         <p>A tutor compares quiz scores from two small independent groups. Group 1 has <m>n_1=12</m>, <m>\overline{x}_1=84</m>, and <m>s_1=6</m>. Group 2 has <m>n_2=10</m>, <m>\overline{x}_2=79</m>, and <m>s_2=7</m>. Test whether the first group has the higher population mean score:</p>
 
-        <md>
+        <p><md>
           H_0:\mu_1-\mu_2=0
           \qquad\text{versus}\qquad
           H_a:\mu_1-\mu_2&gt;0.
-        </md>
+        </md></p>
 
         <p>The estimated standard error is</p>
 
-        <md>
+        <p><md>
           \sqrt{\frac{6^2}{12}+\frac{7^2}{10}}
           =\sqrt{7.9}\approx 2.81.
-        </md>
+        </md></p>
 
         <p>The test statistic is</p>
 
-        <md>
+        <p><md>
           t=\frac{(84-79)-0}{2.81}\approx 1.78.
-        </md>
+        </md></p>
 
         <p>Using the Welch formula gives about <m>df=18</m>. For a right-tailed test, technology gives</p>
 
-        <md>
+        <p><md>
           \text{p-value}\approx P(T\ge 1.78)\approx 0.046.
-        </md>
+        </md></p>
 
         <p>At the 5% significance level, this is just small enough to reject <m>H_0</m>. The sample gives some evidence that the first group has the higher population mean score, assuming the small-sample conditions are reasonable.</p>
       </example>
 
       <exercise xml:id="ht-inline-ex-two-sample-small-t">
         <p>Two independent small samples give <m>n_1=9</m>, <m>\overline{x}_1=42.1</m>, <m>s_1=4.2</m>, and <m>n_2=11</m>, <m>\overline{x}_2=38.7</m>, <m>s_2=5.1</m>.</p>
-        <ol>
+        <p><ol>
           <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
           <li><p>For <m>H_0:\mu_1-\mu_2=0</m>, compute the t statistic.</p></li>
           <li><p>Why should this statistic be compared with a t distribution rather than a standard normal distribution?</p></li>
-        </ol>
+        </ol></p>
       </exercise>
     </subsection>
 
@@ -879,25 +879,25 @@
     <title>Paired-Sample Tests for a Mean Difference</title>
 
     <introduction>
-      <p>Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are <term>paired data<idx><h>inference</h><h>paired data</h></idx></term>, and treating the two columns as independent samples would throw away useful information.</p>
+      <p>Sometimes two measurements are linked before the data are collected. A person may be measured before and after a treatment, a student may take two versions of a test, or two similar subjects may be matched into a pair. In cases like these, the observations are <term>paired data</term><idx><h>inference</h><h>paired data</h></idx>, and treating the two columns as independent samples would throw away useful information.</p>
 
       <p>The fix is simple: subtract within each pair first. If the paired observations are</p>
 
-      <md>
+      <p><md>
         (x_1,y_1), (x_2,y_2),\ldots,(x_n,y_n),
-      </md>
+      </md></p>
 
       <p>define the individual differences</p>
 
-      <md>
+      <p><md>
         d_i=x_i-y_i.
-      </md>
+      </md></p>
 
       <p>Now the parameter is the population mean difference <m>\mu_d</m>. The usual null hypothesis is</p>
 
-      <md>
+      <p><md>
         H_0:\mu_d=0,
-      </md>
+      </md></p>
 
       <p>which says there is no average difference between the two paired measurements. More generally, we may test <m>H_0:\mu_d=d_0</m>.</p>
     </introduction>
@@ -907,24 +907,24 @@
 
       <p>Once we form the differences, this is just a one-sample problem. The sample mean of the differences is</p>
 
-      <md>
+      <p><md>
         \overline{d}=\frac{d_1+d_2+\cdots+d_n}{n},
-      </md>
+      </md></p>
 
       <p>and the sample standard deviation of the differences is <m>s_d</m>. For large <m>n</m>, the CLT says that <m>\overline{D}</m> is approximately normal with mean <m>\mu_d</m> and standard deviation <m>\sigma_d/\sqrt{n}</m>. Since <m>\sigma_d</m> is usually unknown, we estimate it with <m>s_d</m>.</p>
 
       <p>That gives the large-sample paired z statistic</p>
 
-      <md>
+      <p><md>
         z=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
-      </md>
+      </md></p>
 
       <p>For the common null hypothesis <m>H_0:\mu_d=0</m>, this becomes</p>
 
-      <md>
+      <p><md>
         z=\frac{\overline{d}}{s_d/\sqrt{n}}
         =\frac{\overline{d}\sqrt{n}}{s_d}.
-      </md>
+      </md></p>
 
       <p>This formula has the same shape as every other test statistic in this chapter: observed estimate minus null value, divided by its estimated standard error. The only new step is that the observed estimate is the mean of the within-pair differences, not the difference between two independent sample means.</p>
 
@@ -932,28 +932,28 @@
         <title>A Large-Sample Paired Test</title>
         <p>A transit planner records commute times for 40 riders before and after a route change. For each rider, let <m>d=\text{before}-\text{after}</m>, so positive differences mean the commute became shorter. The sample has <m>\overline{d}=3.2</m> minutes and <m>s_d=9.0</m> minutes. Test whether the route change reduced average commute time:</p>
 
-        <md>
+        <p><md>
           H_0:\mu_d=0
           \qquad\text{versus}\qquad
           H_a:\mu_d&gt;0.
-        </md>
+        </md></p>
 
         <p>Because the sample of differences is large, we use</p>
 
-        <md>
+        <p><md>
           z=\frac{3.2-0}{9.0/\sqrt{40}}\approx 2.25.
-        </md>
+        </md></p>
 
         <p>The right-tailed p-value is <m>P(Z\ge 2.25)\approx 0.0122</m>. At the 5% significance level, we reject <m>H_0</m>. The paired data give evidence that the route change reduced the mean commute time.</p>
       </example>
 
       <exercise xml:id="ht-inline-ex-paired-large">
         <p>A large paired sample has <m>n=50</m>, <m>\overline{d}=1.8</m>, and <m>s_d=6.5</m>. Test <m>H_0:\mu_d=0</m> against <m>H_a:\mu_d&gt;0</m>.</p>
-        <ol>
+        <p><ol>
           <li><p>Compute the estimated standard error of <m>\overline{d}</m>.</p></li>
           <li><p>Compute the z statistic.</p></li>
           <li><p>State whether the result is significant at <m>\alpha=0.05</m>.</p></li>
-        </ol>
+        </ol></p>
       </exercise>
     </subsection>
 
@@ -962,23 +962,23 @@
 
       <p>For small paired samples, we still subtract within each pair and test the mean of the differences. The statistic is</p>
 
-      <md>
+      <p><md>
         t=\frac{\overline{d}-d_0}{s_d/\sqrt{n}}.
-      </md>
+      </md></p>
 
       <p>For <m>H_0:\mu_d=0</m>, this is</p>
 
-      <md>
+      <p><md>
         t=\frac{\overline{d}\sqrt{n}}{s_d}.
-      </md>
+      </md></p>
 
       <p>The reason for the t distribution is the same as in a one-sample t-test. With a small sample, <m>s_d</m> is a noisy estimate of the true standard deviation of the differences, so the standardized statistic has heavier tails than the standard normal curve. Since there are <m>n</m> differences, the degrees of freedom are</p>
 
-      <md>
+      <p><md>
         df=n-1.
-      </md>
+      </md></p>
 
-      <p>This is called a <term>paired-sample t-test<idx><h>inference</h><h>paired-sample t-test</h></idx></term>. It is not a two-sample t-test. After forming the differences, we have one sample: <m>d_1,\ldots,d_n</m>.</p>
+      <p>This is called a <term>paired-sample t-test</term><idx><h>inference</h><h>paired-sample t-test</h></idx>. It is not a two-sample t-test. After forming the differences, we have one sample: <m>d_1,\ldots,d_n</m>.</p>
 
       <p>The conditions are that the pairs are randomly selected or otherwise representative, the pairs are independent of each other, and the distribution of differences is approximately normal. For larger samples, the CLT makes the normality condition less strict. For small samples, strong skewness or serious outliers in the differences can make the paired t-test unreliable.</p>
 
@@ -986,28 +986,28 @@
         <title>A Small-Sample Paired T-Test</title>
         <p>A class records systolic blood pressure for 10 volunteers before and after a relaxation exercise. Let <m>d=\text{before}-\text{after}</m>, so positive differences mean blood pressure decreased. The differences have <m>\overline{d}=4.6</m> and <m>s_d=5.8</m>. Test whether the exercise lowers the mean blood pressure:</p>
 
-        <md>
+        <p><md>
           H_0:\mu_d=0
           \qquad\text{versus}\qquad
           H_a:\mu_d&gt;0.
-        </md>
+        </md></p>
 
         <p>The test statistic is</p>
 
-        <md>
+        <p><md>
           t=\frac{4.6-0}{5.8/\sqrt{10}}\approx 2.51.
-        </md>
+        </md></p>
 
         <p>There are <m>df=10-1=9</m> degrees of freedom. For a right-tailed test, technology gives a p-value of about <m>0.017</m>. At the 5% significance level, we reject <m>H_0</m>. The sample gives evidence that the exercise lowers mean systolic blood pressure, assuming the differences are reasonably close to normal.</p>
       </example>
 
       <exercise xml:id="ht-inline-ex-paired-small">
         <p>For a small paired study, the differences have <m>n=12</m>, <m>\overline{d}=-2.4</m>, and <m>s_d=3.6</m>.</p>
-        <ol>
+        <p><ol>
           <li><p>Compute the paired t statistic for <m>H_0:\mu_d=0</m>.</p></li>
           <li><p>Find the degrees of freedom.</p></li>
           <li><p>If the alternative is <m>H_a:\mu_d&lt;0</m>, explain what a negative t statistic means in context.</p></li>
-        </ol>
+        </ol></p>
       </exercise>
     </subsection>
 
@@ -1058,33 +1058,33 @@
     <p>To test a claim about a population proportion, we begin with
     hypotheses such as</p>
 
-    <md>
+    <p><md>
       H_0:p=p_0
       \qquad\text{and}\qquad
       H_a:p&lt;p_0,\quad p&gt;p_0,\quad\text{or}\quad p\ne p_0.
-    </md>
+    </md></p>
 
     <p>Under the null hypothesis, the sample proportion is approximately
     normal with mean <m>p_0</m> and standard deviation</p>
 
-    <md>
+    <p><md>
       \sqrt{\frac{p_0(1-p_0)}{n}},
-    </md>
+    </md></p>
 
     <p>provided the expected counts under <m>H_0</m> are both at least about
     5:</p>
 
-    <md>
+    <p><md>
       np_0\ge 5
       \qquad\text{and}\qquad
       n(1-p_0)\ge 5.
-    </md>
+    </md></p>
 
-    <p>That leads to the <term>one-proportion z-test<idx><h>inference</h><h>one-proportion z-test</h></idx></term> statistic</p>
+    <p>That leads to the <term>one-proportion z-test</term><idx><h>inference</h><h>one-proportion z-test</h></idx> statistic</p>
 
-    <md>
+    <p><md>
       z=\frac{\widehat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}.
-    </md>
+    </md></p>
 
     <p>This looks a lot like the z-interval from
     <xref ref="sec-confidence-intervals-proportion"/>, but there is an
@@ -1095,11 +1095,11 @@
 
     <p>Once the z statistic is computed, the rest is familiar:</p>
 
-    <ul>
+    <p><ul>
       <li><p>For <m>H_a:p&lt;p_0</m>, use the left-tail p-value <m>P(Z\le z)</m>.</p></li>
       <li><p>For <m>H_a:p&gt;p_0</m>, use the right-tail p-value <m>P(Z\ge z)</m>.</p></li>
       <li><p>For <m>H_a:p\ne p_0</m>, use the two-tail p-value <m>2P(Z\ge |z|)</m>.</p></li>
-    </ul>
+    </ul></p>
 
     <p>As before, reject <m>H_0</m> when the p-value is less than the chosen
     significance level <m>\alpha</m>.</p>
@@ -1113,37 +1113,37 @@
 
       <p>Let <m>p</m> be the population proportion of defective bulbs. Then</p>
 
-      <md>
+      <p><md>
         H_0:p=0.04
         \qquad\text{and}\qquad
         H_a:p&gt;0.04.
-      </md>
+      </md></p>
 
       <p>The sample proportion is</p>
 
-      <md>
+      <p><md>
         \widehat{p}=\frac{18}{250}=0.072.
-      </md>
+      </md></p>
 
       <p>The large-sample conditions under the null are satisfied because</p>
 
-      <md>
+      <p><md>
         np_0=250(0.04)=10
         \qquad\text{and}\qquad
         n(1-p_0)=250(0.96)=240.
-      </md>
+      </md></p>
 
       <p>So the test statistic is</p>
 
-      <md>
+      <p><md>
         z=\frac{0.072-0.04}{\sqrt{0.04(0.96)/250}}\approx 2.58.
-      </md>
+      </md></p>
 
       <p>Because this is a right-tailed test, the p-value is</p>
 
-      <md>
+      <p><md>
         P(Z\ge 2.58)\approx 0.0049.
-      </md>
+      </md></p>
 
       <p>Since <m>0.0049&lt;0.05</m>, we reject <m>H_0</m>. The sample gives
       strong evidence that the defect rate is greater than 4%.</p>
@@ -1153,43 +1153,43 @@
       <title>Testing a Claimed Support Level</title>
       <p>A college newspaper reports that 60% of students support a new
       parking plan. A random sample of 200 students finds that 108 support
-      the plan. Test the newspaper’s claim at the 5% significance level.</p>
+      the plan. Test the newspaper's claim at the 5% significance level.</p>
 
       <p>Let <m>p</m> be the true proportion of all students who support the
       plan. Since we want to know whether the reported value is off in either
       direction, we test</p>
 
-      <md>
+      <p><md>
         H_0:p=0.60
         \qquad\text{and}\qquad
         H_a:p\ne 0.60.
-      </md>
+      </md></p>
 
       <p>The sample proportion is</p>
 
-      <md>
+      <p><md>
         \widehat{p}=\frac{108}{200}=0.54.
-      </md>
+      </md></p>
 
       <p>The null-model counts are</p>
 
-      <md>
+      <p><md>
         np_0=200(0.60)=120
         \qquad\text{and}\qquad
         n(1-p_0)=200(0.40)=80,
-      </md>
+      </md></p>
 
       <p>so the normal approximation is reasonable. The test statistic is</p>
 
-      <md>
+      <p><md>
         z=\frac{0.54-0.60}{\sqrt{0.60(0.40)/200}}\approx -1.73.
-      </md>
+      </md></p>
 
       <p>For a two-tailed test, the p-value is</p>
 
-      <md>
+      <p><md>
         2P(Z\ge 1.73)\approx 0.0836.
-      </md>
+      </md></p>
 
       <p>Since <m>0.0836&gt;0.05</m>, we fail to reject <m>H_0</m>. At the 5%
       level, the sample does not give enough evidence to conclude that the
@@ -1206,11 +1206,11 @@
       <p>A random sample of 160 customers finds that 68 used a self-checkout
       lane. Test <m>H_0:p=0.50</m> against <m>H_a:p&lt;0.50</m> at the 5%
       significance level.</p>
-      <ol>
+      <p><ol>
         <li><p>Compute the sample proportion.</p></li>
         <li><p>Check the large-sample conditions under the null hypothesis.</p></li>
         <li><p>Find the z statistic and state the conclusion.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch11-proportion-test-builder">
@@ -1267,39 +1267,39 @@
     different from <m>P(T)</m> in a sample, the sample table shows some
     departure from independence.</p>
 
-    <p>A <term>chi-square test of independence<idx><h>inference</h><h>chi-square test of independence</h></idx></term> asks the next statistical question: is the departure large enough to count as evidence that the two categorical variables are associated in the population, or could it reasonably be explained by random sampling variation?</p>
+    <p>A <term>chi-square test of independence</term><idx><h>inference</h><h>chi-square test of independence</h></idx> asks the next statistical question: is the departure large enough to count as evidence that the two categorical variables are associated in the population, or could it reasonably be explained by random sampling variation?</p>
 
     <p>The data are organized in an <m>r</m>-by-<m>c</m>
-    <term>two-way contingency table<idx><h>inference</h><h>two-way contingency table</h></idx></term>. The hypotheses are always about the two categorical variables, not about a single cell.</p>
+    <term>two-way contingency table</term><idx><h>inference</h><h>two-way contingency table</h></idx>. The hypotheses are always about the two categorical variables, not about a single cell.</p>
 
-    <md>
+    <p><md>
       H_0:\text{ the two categorical variables are independent}
-    </md>
-    <md>
+    </md></p>
+    <p><md>
       H_a:\text{ the two categorical variables are not independent}.
-    </md>
+    </md></p>
 
     <p>Under the null hypothesis, the probability of landing in row <m>i</m>
     and column <m>j</m> should factor just like the independence rule from
     probability:</p>
 
-    <md>
+    <p><md>
       P(\text{row }i\text{ and column }j)
       =
       P(\text{row }i)P(\text{column }j).
-    </md>
+    </md></p>
 
     <p>That rule tells us what count we should expect in each cell if the row
     and column variables are independent. If the observed count in cell
     <m>(i,j)</m> is <m>O_{ij}</m>, then the expected count under independence
     is</p>
 
-    <md>
+    <p><md>
       E_{ij}
       =
       \frac{(\text{row }i\text{ total})(\text{column }j\text{ total})}
       {\text{grand total}}.
-    </md>
+    </md></p>
 
     <p>The formula is just the independence rule written with sample
     proportions. The row proportion estimates <m>P(\text{row }i)</m>, the
@@ -1310,12 +1310,12 @@
     <p>The test statistic adds the standardized squared departures from the
     expected counts:</p>
 
-    <md>
+    <p><md>
       \chi^2_{\text{obs}}
       =
       \sum_{i=1}^{r}\sum_{j=1}^{c}
       \frac{(O_{ij}-E_{ij})^2}{E_{ij}}.
-    </md>
+    </md></p>
 
     <p>Large values of <m>\chi^2_{\text{obs}}</m> mean that the observed
     table is far from the table we would expect under independence. Because
@@ -1329,19 +1329,19 @@
 
     <p>The usual conditions are:</p>
 
-    <ul>
+    <p><ul>
       <li><p>The data come from a random sample or a randomized experiment, or at least from a process that is reasonable to treat as representative.</p></li>
       <li><p>Each observation contributes to exactly one cell of the table.</p></li>
       <li><p>The observations are independent of each other.</p></li>
       <li><p>The expected cell counts are not too small. A common rule of thumb is that every expected count should be at least 5.</p></li>
-    </ul>
+    </ul></p>
 
     <p>Why are the degrees of freedom <m>(r-1)(c-1)</m>? The degrees of
     freedom for the chi-square test of independence are</p>
 
-    <md>
+    <p><md>
       df=(r-1)(c-1).
-    </md>
+    </md></p>
 
     <p>Here is the idea. A table with <m>r</m> rows and <m>c</m> columns has
       <m>rc</m> cell counts. But the counts cannot all vary freely once the
@@ -1354,18 +1354,18 @@
       to 1. The <m>c</m> column probabilities have only <m>c-1</m> free
       choices for the same reason. So the independence model uses</p>
 
-    <md>
+    <p><md>
       (r-1)+(c-1)
-    </md>
+    </md></p>
 
     <p>free probability choices. The departures from independence are what
     remain after those row and column effects have been accounted for:</p>
 
-    <md alignment="align">
+    <p><md alignment="align">
       <mrow>df&amp;=(rc-1)-\big((r-1)+(c-1)\big)</mrow>
       <mrow>&amp;=rc-r-c+1</mrow>
       <mrow>&amp;=(r-1)(c-1).</mrow>
-    </md>
+    </md></p>
 
     <p>There is also a hands-on way to see the same count. If the row totals
     and column totals are fixed, then the cells in the first <m>r-1</m>
@@ -1401,9 +1401,9 @@
     departures. That is the practical reason the chi-square distribution
     appears:</p>
 
-    <md>
+    <p><md>
       \chi^2_{\text{obs}}\approx \chi^2[(r-1)(c-1)]
-    </md>
+    </md></p>
 
     <p>when <m>H_0</m> is true and the expected counts are large enough.</p>
 
@@ -1450,35 +1450,35 @@
       example, the expected count for students with commutes at least 30
       minutes who use public transit is</p>
 
-      <md>
+      <p><md>
         E=\frac{(40)(30)}{80}=15.
-      </md>
+      </md></p>
 
       <p>We test</p>
 
-      <md>
+      <p><md>
         H_0:\text{ commute length and public transportation use are independent}
-      </md>
-      <md>
+      </md></p>
+      <p><md>
         H_a:\text{ commute length and public transportation use are not independent}.
-      </md>
+      </md></p>
 
       <p>The test statistic is</p>
 
-      <md alignment="align">
+      <p><md alignment="align">
         <mrow>\chi^2_{\text{obs}}
         &amp;=\frac{(18-15)^2}{15}
         +\frac{(22-25)^2}{25}
         +\frac{(12-15)^2}{15}
         +\frac{(28-25)^2}{25}</mrow>
         <mrow>&amp;=1.92.</mrow>
-      </md>
+      </md></p>
 
       <p>There are <m>r=2</m> rows and <m>c=2</m> columns, so</p>
 
-      <md>
+      <p><md>
         df=(2-1)(2-1)=1.
-      </md>
+      </md></p>
 
       <p>Using a chi-square distribution with 1 degree of freedom, the
       right-tail p-value is about 0.166. At the 5% significance level, we
@@ -1544,24 +1544,24 @@
       the population of students like these. The expected counts for each row
       are the same because each row total is 50:</p>
 
-      <md>
+      <p><md>
         \frac{50(75)}{150}=25,\qquad
         \frac{50(56)}{150}\approx 18.67,\qquad
         \frac{50(19)}{150}\approx 6.33.
-      </md>
+      </md></p>
 
       <p>All expected counts are at least 5, so the chi-square approximation
       is reasonable. The test statistic is</p>
 
-      <md>
+      <p><md>
         \chi^2_{\text{obs}}\approx 24.17.
-      </md>
+      </md></p>
 
       <p>The table has <m>r=3</m> rows and <m>c=3</m> columns, so</p>
 
-      <md>
+      <p><md>
         df=(3-1)(3-1)=4.
-      </md>
+      </md></p>
 
       <p>For <m>W\sim \chi^2[4]</m>, the p-value
       <m>P(W\ge 24.17)</m> is less than 0.001. We reject <m>H_0</m>. The
@@ -1611,12 +1611,12 @@
         </tabular>
       </table>
 
-      <ol>
+      <p><ol>
         <li><p>Write the null and alternative hypotheses for a chi-square test of independence.</p></li>
         <li><p>Find the expected count for the cell "Works 20+ hours" and "Online."</p></li>
         <li><p>Find the degrees of freedom.</p></li>
         <li><p>Explain what a large chi-square statistic would mean in this context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch11-chi-square-table-builder">
@@ -1660,28 +1660,28 @@
     <p>If a claim is written in terms of standard deviation, we can square
     both sides and test variance instead. So</p>
 
-    <md>
+    <p><md>
       H_0:\sigma=\sigma_0
       \qquad\Longleftrightarrow\qquad
       H_0:\sigma^2=\sigma_0^2.
-    </md>
+    </md></p>
 
     <p>The alternative can again be left-tailed, right-tailed, or
     two-tailed:</p>
 
-    <md>
+    <p><md>
       H_a:\sigma^2&lt;\sigma_0^2,\qquad
       H_a:\sigma^2&gt;\sigma_0^2,\qquad
       H_a:\sigma^2\ne \sigma_0^2.
-    </md>
+    </md></p>
 
     <p>These tests require careful assumptions.</p>
 
-    <ul>
+    <p><ul>
       <li><p>The data should come from a random sample or a similarly independent process.</p></li>
       <li><p>The observations should be independent.</p></li>
       <li><p>The population should be normal. This is the crucial assumption.</p></li>
-    </ul>
+    </ul></p>
 
     <p>That last condition matters much more here than it does for tests
     about a mean. A large sample by itself does not justify the chi-square
@@ -1691,29 +1691,29 @@
     <p>From <xref ref="sec-confidence-intervals-variance"/>, if
     <m>H_0:\sigma^2=\sigma_0^2</m> is true and the population is normal, then</p>
 
-    <md>
+    <p><md>
       \chi^2=\frac{(n-1)S^2}{\sigma_0^2}\sim \chi^2_{n-1}.
-    </md>
+    </md></p>
 
     <p>This gives the <term>chi-square test for a population
-    variance<idx><h>inference</h><h>chi-square test for variance</h></idx></term>.
+    variance</term><idx><h>inference</h><h>chi-square test for variance</h></idx>.
     The interpretation is straightforward:</p>
 
-    <ul>
+    <p><ul>
       <li><p>If the sample variance <m>s^2</m> is much larger than the null value <m>\sigma_0^2</m>, then the observed chi-square statistic will be large.</p></li>
       <li><p>If the sample variance <m>s^2</m> is much smaller than the null value <m>\sigma_0^2</m>, then the observed chi-square statistic will be small.</p></li>
-    </ul>
+    </ul></p>
 
     <p>So the tail of the test matches the direction of the alternative.</p>
 
     <p>Let <m>W\sim \chi^2[n-1]</m> when <m>H_0</m> is true, and let
     <m>\chi^2_{\text{obs}}</m> be the observed test statistic.</p>
 
-    <ul>
+    <p><ul>
       <li><p>For <m>H_a:\sigma^2&gt;\sigma_0^2</m>, use the right-tail p-value <m>P(W\ge \chi^2_{\text{obs}})</m>.</p></li>
       <li><p>For <m>H_a:\sigma^2&lt;\sigma_0^2</m>, use the left-tail p-value <m>P(W\le \chi^2_{\text{obs}})</m>.</p></li>
       <li><p>For <m>H_a:\sigma^2\ne \sigma_0^2</m>, reject at significance level <m>\alpha</m> when <m>\chi^2_{\text{obs}}&lt;\chi^2_{1-\alpha/2}[n-1]</m> or <m>\chi^2_{\text{obs}}&gt;\chi^2_{\alpha/2}[n-1]</m>. Because the chi-square distribution is not symmetric, technology is often the easiest way to find a two-sided p-value.</p></li>
-    </ul>
+    </ul></p>
 
     <example xml:id="ex-variance-test-deliveries">
       <title>Testing Whether Delivery Times Have Become More Variable</title>
@@ -1726,26 +1726,26 @@
       <p>Let <m>\sigma</m> be the population standard deviation of delivery
       times. Then</p>
 
-      <md>
+      <p><md>
         H_0:\sigma=2
         \qquad\text{and}\qquad
         H_a:\sigma&gt;2.
-      </md>
+      </md></p>
 
       <p>Equivalently, we are testing <m>H_0:\sigma^2=4</m> against
       <m>H_a:\sigma^2&gt;4</m>. Because the population is assumed normal, we
       use the chi-square statistic with <m>df=16-1=15</m>:</p>
 
-      <md>
+      <p><md>
         \chi^2=\frac{(16-1)(2.9)^2}{2^2}=31.5375\approx 31.54.
-      </md>
+      </md></p>
 
       <p>If <m>H_0</m> is true, then <m>W\sim \chi^2[15]</m>. Since this is a
       right-tailed test, the p-value is</p>
 
-      <md>
+      <p><md>
         P(W\ge 31.54)\approx 0.0074.
-      </md>
+      </md></p>
 
       <p>Because <m>0.0074&lt;0.05</m>, we reject <m>H_0</m>. The sample gives
       strong evidence that delivery times vary more than the claimed
@@ -1762,36 +1762,36 @@
 
       <p>We test</p>
 
-      <md>
+      <p><md>
         H_0:\sigma=1.2
         \qquad\text{and}\qquad
         H_a:\sigma\ne 1.2.
-      </md>
+      </md></p>
 
       <p>Equivalently, <m>H_0:\sigma^2=1.44</m> and
       <m>H_a:\sigma^2\ne 1.44</m>. The test statistic has
       <m>df=12-1=11</m>:</p>
 
-      <md>
+      <p><md>
         \chi^2=\frac{(12-1)(1.8)^2}{(1.2)^2}=24.75.
-      </md>
+      </md></p>
 
       <p>For a two-tailed test with <m>\alpha=0.05</m> and
       <m>df=11</m>, the rejection region is</p>
 
-      <md>
+      <p><md>
         \chi^2&lt;\chi^2_{0.975}[11]
         \qquad\text{or}\qquad
         \chi^2&gt;\chi^2_{0.025}[11].
-      </md>
+      </md></p>
 
       <p>From <xref ref="app-chi-square-table"/>,</p>
 
-      <md>
+      <p><md>
         \chi^2_{0.975}[11]\approx 3.816
         \qquad\text{and}\qquad
         \chi^2_{0.025}[11]\approx 21.920.
-      </md>
+      </md></p>
 
       <p>Since <m>24.75&gt;21.920</m>, the observed statistic falls in the
       rejection region, so we reject <m>H_0</m>. The data suggest that the
@@ -1810,11 +1810,11 @@
       <p>Assume a normal population. A random sample of size 12 has sample
       standard deviation <m>s=2.0</m>. Test <m>H_0:\sigma=3</m> against
       <m>H_a:\sigma&lt;3</m> at the 10% significance level.</p>
-      <ol>
+      <p><ol>
         <li><p>Find the degrees of freedom.</p></li>
         <li><p>Compute the chi-square test statistic.</p></li>
         <li><p>Find the p-value and state the conclusion.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <activity xml:id="act-ch11-variance-test-builder">
@@ -1862,146 +1862,120 @@
     </activity>
   </section>
 
-  <conclusion>
-    <title>Summary</title>
+  <section xml:id="sec-ch11-exercises">
 
-    <p>Hypothesis testing is the formal side of statistical decision-making.</p>
-
-    <ul>
-      <li><p>The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.</p></li>
-      <li><p>A p-value measures how surprising the sample would be if the null hypothesis were true.</p></li>
-      <li><p>Reject <m>H_0</m> when the p-value is smaller than the significance level <m>\alpha</m>.</p></li>
-      <li><p>For a right-tailed z-test, rejecting when <m>z&gt;z_{\alpha}</m> is equivalent to rejecting when the p-value is less than <m>\alpha</m>.</p></li>
-      <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
-      <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
-      <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
-      <li><p>For large independent samples, <m>\overline{X}_1-\overline{X}_2</m> is approximately normal with mean <m>\mu_1-\mu_2</m> and variance <m>\sigma_1^2/n_1+\sigma_2^2/n_2</m>.</p></li>
-      <li><p>A large-sample two-sample z-test for <m>H_0:\mu_1-\mu_2=D_0</m> uses <m>z=((\overline{x}_1-\overline{x}_2)-D_0)/\sqrt{s_1^2/n_1+s_2^2/n_2}</m>.</p></li>
-      <li><p>For small independent samples, the same standardized difference is compared with a t distribution, often using Welch's approximate degrees of freedom.</p></li>
-      <li><p>For paired data, first form differences <m>d_i=x_i-y_i</m>, then test the mean difference <m>\mu_d</m> as a one-sample mean problem.</p></li>
-      <li><p>A paired-sample t-test uses <m>t=(\overline{d}-d_0)/(s_d/\sqrt{n})</m> with <m>df=n-1</m>; when <m>d_0=0</m>, this is <m>t=\overline{d}\sqrt{n}/s_d</m>.</p></li>
-      <li><p>A one-proportion z-test uses <m>z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}</m> when the expected numbers of successes and failures under <m>H_0</m> are large enough.</p></li>
-      <li><p>Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.</p></li>
-      <li><p>A chi-square test of independence compares observed counts in a two-way table with expected counts found from the row total, column total, and grand total.</p></li>
-      <li><p>The chi-square test statistic <m>\sum (O-E)^2/E</m> is large when the observed table is far from what independence predicts.</p></li>
-      <li><p>For an <m>r</m>-by-<m>c</m> contingency table, the degrees of freedom for the chi-square test of independence are <m>(r-1)(c-1)</m>.</p></li>
-      <li><p>A chi-square test for variance uses <m>\chi^2=(n-1)s^2/\sigma_0^2</m> when the population is normal.</p></li>
-      <li><p>Tests for variance and standard deviation are closely tied to the matching chi-square confidence interval, and normality of the population is the key assumption.</p></li>
-    </ul>
-
-    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests, chi-square tests of independence, and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.</p>
-  </conclusion>
-
-  <exercises xml:id="ch11-exercises">
     <title>Exercises</title>
+
+
+
 
     <exercise xml:id="ch11-ex-1">
       <p>For each pair of hypotheses below, state whether the test is left-tailed, right-tailed, or two-tailed.</p>
-      <ol>
+      <p><ol>
         <li><p><m>H_0:\mu=18</m>, <m>H_a:\mu&gt;18</m></p></li>
         <li><p><m>H_0:\mu=45</m>, <m>H_a:\mu&lt;45</m></p></li>
         <li><p><m>H_0:\mu=100</m>, <m>H_a:\mu\ne 100</m></p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-2">
       <p>A company claims its cereal boxes contain 16 ounces on average. A quality-control manager tests <m>H_0:\mu=16</m> against <m>H_a:\mu\ne 16</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Describe a Type I error in context.</p></li>
         <li><p>Describe a Type II error in context.</p></li>
         <li><p>What does it mean if the test uses <m>\alpha=0.05</m>?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-3">
       <p>A sample of size 64 has mean <m>\overline{x}=29.4</m> and sample standard deviation <m>s=3.2</m>. Test <m>H_0:\mu=30</m> against <m>H_a:\mu&lt;30</m> at the 5% significance level.</p>
-      <ol>
+      <p><ol>
         <li><p>Compute the test statistic.</p></li>
         <li><p>State whether the test is a z-test or a t-test.</p></li>
         <li><p>Would you reject <m>H_0</m> or fail to reject <m>H_0</m>?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-4">
-      <p>Why is “fail to reject <m>H_0</m>” a better phrase than “accept <m>H_0</m>”?</p>
+      <p>Why is <q>fail to reject <m>H_0</m></q> a better phrase than <q>accept <m>H_0</m></q>?</p>
     </exercise>
 
     <exercise xml:id="ch11-ex-5">
       <p>Consider a right-tailed z-test of <m>H_0:\mu=\mu_0</m> versus
       <m>H_a:\mu&gt;\mu_0</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Explain why large positive z-values count as evidence against <m>H_0</m>.</p></li>
         <li><p>Explain why the rejection region has the form <m>z&gt;z_{\alpha}</m>.</p></li>
         <li><p>Explain why the rule <m>z&gt;z_{\alpha}</m> is equivalent to the rule p-value <m>&lt;\alpha</m>.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-12">
       <p>Two independent large samples give <m>n_1=80</m>, <m>\overline{x}_1=15.2</m>, <m>s_1=4.0</m>, and <m>n_2=75</m>, <m>\overline{x}_2=13.9</m>, <m>s_2=3.5</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Write the hypotheses for testing whether the first population mean is greater than the second.</p></li>
         <li><p>Compute the estimated standard error of <m>\overline{x}_1-\overline{x}_2</m>.</p></li>
         <li><p>Compute the z statistic for <m>H_0:\mu_1-\mu_2=0</m>.</p></li>
         <li><p>State the conclusion at the 5% significance level.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-13">
       <p>Explain why, for large independent samples, the statistic <m>\overline{X}_1-\overline{X}_2</m> is approximately normal with variance <m>\sigma_1^2/n_1+\sigma_2^2/n_2</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Which theorem explains why each sample mean is approximately normal?</p></li>
         <li><p>Why is the mean of the difference <m>\mu_1-\mu_2</m>?</p></li>
         <li><p>Why do the variances add instead of subtract?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-14">
       <p>Two independent small samples give <m>n_1=8</m>, <m>\overline{x}_1=27.5</m>, <m>s_1=3.4</m>, and <m>n_2=10</m>, <m>\overline{x}_2=24.9</m>, <m>s_2=4.1</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>Write hypotheses for testing whether the first population mean is greater than the second.</p></li>
         <li><p>Compute the estimated standard error and the two-sample t statistic.</p></li>
         <li><p>Explain why a t distribution is used instead of the standard normal distribution.</p></li>
         <li><p>State the small-sample conditions that should be checked before trusting the test.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-15">
       <p>A study records resting heart rate for 36 students before and after a four-week exercise program. Let <m>d=\text{before}-\text{after}</m>. The sample of differences has <m>\overline{d}=2.6</m> beats per minute and <m>s_d=7.8</m> beats per minute.</p>
-      <ol>
+      <p><ol>
         <li><p>Explain why this is a paired-sample problem.</p></li>
         <li><p>Write hypotheses for testing whether the program lowers mean resting heart rate.</p></li>
         <li><p>Compute the large-sample paired z statistic.</p></li>
         <li><p>At <m>\alpha=0.05</m>, state the conclusion in context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-16">
       <p>Eight students take a short skills test before and after a workshop. Let <m>d=\text{after}-\text{before}</m>. The differences have <m>\overline{d}=5.5</m> points and <m>s_d=6.2</m> points.</p>
-      <ol>
+      <p><ol>
         <li><p>Write hypotheses for testing whether the workshop improves the mean score.</p></li>
         <li><p>Compute the paired t statistic.</p></li>
         <li><p>Find the degrees of freedom.</p></li>
         <li><p>State the condition about the distribution of differences that matters most for this small sample.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-6">
       <p>A city claims that 45% of residents use public transportation at least once per week. In a random sample of 220 residents, 117 say they do.</p>
-      <ol>
+      <p><ol>
         <li><p>Write the hypotheses for testing whether the true proportion is greater than 45%.</p></li>
         <li><p>Check the large-sample conditions under the null hypothesis.</p></li>
         <li><p>Compute the z statistic.</p></li>
         <li><p>At <m>\alpha=0.05</m>, state the conclusion in context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-7">
       <p>A school board says that 70% of parents support a calendar change. A random sample of 180 parents finds support from 117 of them.</p>
-      <ol>
+      <p><ol>
         <li><p>Test <m>H_0:p=0.70</m> against <m>H_a:p\ne 0.70</m> at the 10% significance level.</p></li>
         <li><p>Compute the p-value.</p></li>
         <li><p>Would the conclusion change at the 5% significance level?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-8">
@@ -2047,12 +2021,12 @@
         </tabular>
       </table>
 
-      <ol>
+      <p><ol>
         <li><p>Write the null and alternative hypotheses for testing whether class standing and preferred study drink are independent.</p></li>
         <li><p>Find all expected counts under independence.</p></li>
         <li><p>Compute the chi-square test statistic.</p></li>
         <li><p>Find the degrees of freedom and state the conclusion at the 5% significance level.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-18">
@@ -2094,33 +2068,33 @@
         </tabular>
       </table>
 
-      <ol>
+      <p><ol>
         <li><p>What are <m>r</m> and <m>c</m> for this table?</p></li>
         <li><p>Find the degrees of freedom for a chi-square test of independence.</p></li>
         <li><p>Find the expected count for the "On campus" and "Before noon" cell.</p></li>
         <li><p>State the expected-count condition and check it for this table.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-19">
       <p>Explain why the degrees of freedom for a chi-square test of independence in an <m>r</m>-by-<m>c</m> table are <m>(r-1)(c-1)</m>.</p>
-      <ol>
+      <p><ol>
         <li><p>How many cell probabilities are free before assuming independence, once the probabilities must add to 1?</p></li>
         <li><p>How many free row and column probability choices are used by the independence model?</p></li>
         <li><p>Subtract these quantities and simplify.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-9">
       <p>Assume a normal manufacturing process is supposed to have standard
       deviation 5 units. A random sample of 20 items gives sample standard
       deviation <m>s=6.5</m> units.</p>
-      <ol>
+      <p><ol>
         <li><p>Test <m>H_0:\sigma=5</m> against <m>H_a:\sigma&gt;5</m> at the 5% significance level.</p></li>
         <li><p>Compute the chi-square test statistic.</p></li>
         <li><p>State the p-value or compare with an appropriate critical value.</p></li>
         <li><p>Write the conclusion in context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-10">
@@ -2128,22 +2102,52 @@
       The process is supposed to have standard deviation 1.2 millimeters. A
       random sample of 18 items gives sample standard deviation
       <m>s=1.6</m> millimeters.</p>
-      <ol>
+      <p><ol>
         <li><p>Test <m>H_0:\sigma=1.2</m> against <m>H_a:\sigma\ne 1.2</m> at the 5% significance level.</p></li>
         <li><p>Find the degrees of freedom and the chi-square test statistic.</p></li>
         <li><p>Use two-tailed critical values to decide whether to reject <m>H_0</m>.</p></li>
         <li><p>State the conclusion in context.</p></li>
-      </ol>
+      </ol></p>
     </exercise>
 
     <exercise xml:id="ch11-ex-11">
       <p>State the assumptions for using a chi-square test for a population
       variance or standard deviation.</p>
-      <ol>
+      <p><ol>
         <li><p>Why is normality the crucial assumption?</p></li>
         <li><p>Why does a large sample not rescue this method in the same way the CLT helps tests about a mean?</p></li>
         <li><p>How is this test connected to the confidence interval in <xref ref="sec-confidence-intervals-variance"/>?</p></li>
-      </ol>
+      </ol></p>
     </exercise>
-  </exercises>
+
+
+  </section>
+
+  <conclusion>
+    <p>Hypothesis testing is the formal side of statistical decision-making.</p>
+
+    <p><ul>
+      <li><p>The null hypothesis is the claim being tested, and the alternative is the claim supported when the evidence is strong enough.</p></li>
+      <li><p>A p-value measures how surprising the sample would be if the null hypothesis were true.</p></li>
+      <li><p>Reject <m>H_0</m> when the p-value is smaller than the significance level <m>\alpha</m>.</p></li>
+      <li><p>For a right-tailed z-test, rejecting when <m>z&gt;z_{\alpha}</m> is equivalent to rejecting when the p-value is less than <m>\alpha</m>.</p></li>
+      <li><p>A Type I error rejects a true null hypothesis, while a Type II error fails to reject a false null hypothesis.</p></li>
+      <li><p>The significance level controls the Type I error rate, and larger samples generally improve power.</p></li>
+      <li><p>Z-tests and t-tests are the main tools for one-sample tests of a mean.</p></li>
+      <li><p>For large independent samples, <m>\overline{X}_1-\overline{X}_2</m> is approximately normal with mean <m>\mu_1-\mu_2</m> and variance <m>\sigma_1^2/n_1+\sigma_2^2/n_2</m>.</p></li>
+      <li><p>A large-sample two-sample z-test for <m>H_0:\mu_1-\mu_2=D_0</m> uses <m>z=((\overline{x}_1-\overline{x}_2)-D_0)/\sqrt{s_1^2/n_1+s_2^2/n_2}</m>.</p></li>
+      <li><p>For small independent samples, the same standardized difference is compared with a t distribution, often using Welch's approximate degrees of freedom.</p></li>
+      <li><p>For paired data, first form differences <m>d_i=x_i-y_i</m>, then test the mean difference <m>\mu_d</m> as a one-sample mean problem.</p></li>
+      <li><p>A paired-sample t-test uses <m>t=(\overline{d}-d_0)/(s_d/\sqrt{n})</m> with <m>df=n-1</m>; when <m>d_0=0</m>, this is <m>t=\overline{d}\sqrt{n}/s_d</m>.</p></li>
+      <li><p>A one-proportion z-test uses <m>z=(\widehat{p}-p_0)/\sqrt{p_0(1-p_0)/n}</m> when the expected numbers of successes and failures under <m>H_0</m> are large enough.</p></li>
+      <li><p>Tests for proportions are closely tied to confidence intervals and to the normal approximation of a binomial model.</p></li>
+      <li><p>A chi-square test of independence compares observed counts in a two-way table with expected counts found from the row total, column total, and grand total.</p></li>
+      <li><p>The chi-square test statistic <m>\sum (O-E)^2/E</m> is large when the observed table is far from what independence predicts.</p></li>
+      <li><p>For an <m>r</m>-by-<m>c</m> contingency table, the degrees of freedom for the chi-square test of independence are <m>(r-1)(c-1)</m>.</p></li>
+      <li><p>A chi-square test for variance uses <m>\chi^2=(n-1)s^2/\sigma_0^2</m> when the population is normal.</p></li>
+      <li><p>Tests for variance and standard deviation are closely tied to the matching chi-square confidence interval, and normality of the population is the key assumption.</p></li>
+    </ul></p>
+
+    <p>As with confidence intervals, good statistical reasoning is not just about plugging numbers into formulas. The setup, the assumptions, and the interpretation in context matter just as much as the calculation. That is especially true for proportion tests, chi-square tests of independence, and variance tests, where the binomial and chi-square models are doing the heavy lifting behind the scenes.</p>
+  </conclusion>
 </chapter>

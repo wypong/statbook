@@ -3,13 +3,11 @@
 <appendix xml:id="app-f-table">
   <title>The F Distribution</title>
 
-  <p>This appendix gives right-tail critical values for the <term>F distribution<idx><h>appendices</h><h>F table</h></idx></term>. Each entry <m>F_\alpha(d_1,d_2)</m> satisfies <m>P(F&gt;F_\alpha)=\alpha</m>, where <m>d_1</m> is the numerator degrees of freedom and <m>d_2</m> is the denominator degrees of freedom.</p>
+  <p>This appendix gives right-tail critical values for the <term>F distribution</term><idx><h>appendices</h><h>F table</h></idx>. Each entry <m>F_\alpha(d_1,d_2)</m> satisfies <m>P(F&gt;F_\alpha)=\alpha</m>, where <m>d_1</m> is the numerator degrees of freedom and <m>d_2</m> is the denominator degrees of freedom.</p>
   <p>Because the full <m>F</m> table is large, the values are split into smaller tables by significance level and numerator degrees of freedom.</p>
 
-  <section xml:id="sec-f-alpha-005">
-    <title>Right-Tail Area 0.05</title>
-
-    <table xml:id="tbl-f-alpha-005-g1a" landscape="yes">
+  <p><em>Right-Tail Area 0.05</em></p>
+<table xml:id="tbl-f-alpha-005-g1a" landscape="yes">
       <title>Critical values for <m>\alpha=0.05</m> with numerator degrees of freedom <m>d_1</m> equal to 1, 2, 3, 4, 5</title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -567,12 +565,10 @@
       </tabular>
     </table>
 
-  </section>
 
-  <section xml:id="sec-f-alpha-001">
-    <title>Right-Tail Area 0.01</title>
 
-    <table xml:id="tbl-f-alpha-001-g1a" landscape="yes">
+  <p><em>Right-Tail Area 0.01</em></p>
+<table xml:id="tbl-f-alpha-001-g1a" landscape="yes">
       <title>Critical values for <m>\alpha=0.01</m> with numerator degrees of freedom <m>d_1</m> equal to 1, 2, 3, 4, 5</title>
       <tabular halign="center">
         <row header="yes" bottom="minor">
@@ -1130,6 +1126,6 @@
       </tabular>
     </table>
 
-  </section>
+
 
 </appendix>
