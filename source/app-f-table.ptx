@@ -341,7 +341,7 @@
 
     <table xml:id="tbl-f-alpha-005-g2" landscape="yes">
       <title>Critical values for <m>\alpha=0.05</m> with numerator degrees of freedom <m>d_1</m> equal to 12, 15, 20, 24, 30, 40, 60, 120</title>
-      <tabular halign="center">
+      <tabular width="100%" halign="center">
         <row header="yes" bottom="minor">
           <cell><m>d_2 \backslash d_1</m></cell>
           <cell>12</cell>
@@ -902,7 +902,7 @@
 
     <table xml:id="tbl-f-alpha-001-g2" landscape="yes">
       <title>Critical values for <m>\alpha=0.01</m> with numerator degrees of freedom <m>d_1</m> equal to 12, 15, 20, 24, 30, 40, 60, 120</title>
-      <tabular halign="center">
+      <tabular width="100%" halign="center">
         <row header="yes" bottom="minor">
           <cell><m>d_2 \backslash d_1</m></cell>
           <cell>12</cell>
